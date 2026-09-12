@@ -170,13 +170,13 @@ def contract(
     return roles
 
 
-BASELINE = "the baseline"
-ONE_CHANGE = "one change from Prime"
-COMBINED = "everything preferred, together"
+DEFAULT = "default"
 
-# A shortlist, not an exploration. Prime is the agreed baseline; each of the
-# next three changes exactly one thing that was picked out as better, so the
-# comparison is honest. The last one combines all three.
+# Fmind is what shipped. It came from a shortlist that changed one thing at a
+# time from a baseline called Prime; the three changes that were kept are the
+# ones encoded below. The rejected candidates are recorded in the README rather
+# than kept as code, since re-solving them would not reproduce their hexes
+# anyway - the palettes under palettes/ are the source of truth, not this file.
 LANES = {
     "variable": (141.0, 148.0), "string": (141.0, 149.0),
     "function": (141.0, 148.0), "keyword": (142.0, 149.0),
@@ -191,35 +191,9 @@ SIGNAL_REDS = {
 
 POLICIES = [
     Policy(
-        "prime", "Prime", BASELINE,
-        "The agreed baseline. Faintly green-black ground, amber on numbers and "
-        "constants, fourteen roles at Prime's level of contrast - not pushed to "
-        "the gamut edge the way Burn and Forge were.",
-        "#040d07", contract(), seed=7,
-    ),
-    Policy(
-        "prime-ink", "Prime Ink", ONE_CHANGE,
-        "Prime on Void's pure black ground, with the amber pair kept. Void dropped "
-        "amber for green and lost the signal that numbers and constants carry; "
-        "this takes the ground without paying that price.",
-        "#000000", contract(), seed=11,
-    ),
-    Policy(
-        "prime-lanes", "Prime Lanes", ONE_CHANGE,
-        "Prime with the warm and cool lanes: primaries run warm, their relatives "
-        "run cool, so kinship reads as a shift in temperature.",
-        "#040d07", contract(role_hues=LANES), seed=13,
-    ),
-    Policy(
-        "prime-signal", "Prime Signal", ONE_CHANGE,
-        "Prime with Signal's red pair - a hotter error and a properly orange "
-        "warning, rather than the softer reds Arc carries.",
-        "#040d07", contract(bands=SIGNAL_REDS), seed=17,
-    ),
-    Policy(
-        "prime-max", "Prime Max", COMBINED,
-        "All three preferred changes at once: the pure black ground, the warm and "
-        "cool lanes, and the hotter red pair, with amber kept throughout.",
+        "fmind", "Fmind", DEFAULT,
+        "The default. Pure black ground, warm primaries with cool relatives, a hot "
+        "red pair for errors and warnings, and amber kept on numbers and constants.",
         "#000000", contract(role_hues=LANES, bands=SIGNAL_REDS), seed=19,
     ),
 ]
@@ -384,7 +358,7 @@ def main() -> int:
 
     results = [build(p) for p in POLICIES]
 
-    for family in (BASELINE, ONE_CHANGE, COMBINED):
+    for family in (DEFAULT,):
         rows = sorted(
             (r for r in results if r["policy"].family == family), key=lambda r: -r["slack"]
         )

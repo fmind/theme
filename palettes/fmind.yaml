@@ -1,9 +1,11 @@
 # Palette source of truth. Regenerate tool files with: uv run render.py
 # Designed by explore.py against the contract in palette.py.
-name: "Prime Max"
-family: "everything preferred, together"
+name: "Fmind"
+family: "default"
 description: >-
-  All three preferred changes at once: the pure black ground, the warm and cool lanes, and the hotter red pair, with amber kept throughout.
+  The default. Pure black ground, warm primaries with cool relatives, a hot red
+  pair for errors and warnings, and amber kept on numbers and constants. Green
+  carries every syntax role; red and amber are the only colours that are not green.
 ground: "#000000"
 text: "#56ff40"
 cursor: "#3afdb5"

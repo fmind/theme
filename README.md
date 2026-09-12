@@ -48,72 +48,59 @@ Weighting matters more than it sounds. A flat threshold over-constrains the rare
 
 One trap worth recording: measure the **rounded hex**, not the continuous OKLCh value you optimised. Quantising to 8 bits per channel costs up to ~0.03 of distance, which is enough to flip a marginal palette from pass to fail between design and render. `explore.py` evaluates separation on the shipped hex and keeps a `SAFETY_MARGIN` on top.
 
-## Fourteen roles, not six
+## The theme
 
-A terminal has sixteen slots and most themes spend six of them, generating the bright half as mechanical lightenings of the normal half.
-That wastes six addressable colours, and it produces a palette that cannot tell a parameter from a local or a builtin from a user function — which is why `contrast(fg, bg)` rendered as one undifferentiated green.
+**Fmind** is the default across every application. One palette, `palettes/fmind.yaml`, rendered into `out/<tool>/fmind` for each tool that takes one.
 
-Under the old model those two roles measured **0.050 apart**. Designed as roles in their own right, the same sixteen slots carry fourteen meanings:
+| | |
+| --- | --- |
+| ground | `#000000` — pure black |
+| body text | `#56ff40` — neon green, OKLab chroma 0.264 |
+| green share | 67% of the chromatic slots |
+| body contrast | 15.8:1 |
+| least saturated role | 0.148 |
+| tightest role pair | `keyword/builtin` at 0.113, with 0.007 to spare |
 
-| primary | slot | its relative | slot |
-| --- | --- | --- | --- |
-| `variable` | fg | `parameter` | 12 |
-| `string` | 2 | `escape` | 10 |
-| `number` | 3 | `constant` | 11 |
-| `function` | 4 | `property` | 14 |
-| `keyword` | 5 | `builtin` | 13 |
-| `error` | 1 | `warning` | 9 |
-| `type` | 6 | | |
-| `comment` | 8 | | |
+### The fourteen roles
 
-A secondary role is a relative of its primary and may sit closer to it than to anything else — that kinship is information, not a defect. It may never be identical.
+| role | colour | L | C | hue |
+| --- | --- | --- | --- | --- |
+| `variable` | `#56ff40` | 0.879 | 0.264 | 142 |
+| `error` | `#fb002a` | 0.622 | 0.252 | 25 |
+| `string` | `#d5fcd5` | 0.953 | 0.066 | 145 |
+| `number` | `#e3a92a` | 0.769 | 0.148 | 82 |
+| `function` | `#008b00` | 0.552 | 0.188 | 142 |
+| `keyword` | `#83dd81` | 0.819 | 0.153 | 144 |
+| `type` | `#00ca00` | 0.727 | 0.247 | 142 |
+| `comment` | `#24682c` | 0.459 | 0.115 | 145 |
+| `warning` | `#ff692e` | 0.701 | 0.196 | 40 |
+| `escape` | `#3afdb5` | 0.885 | 0.180 | 162 |
+| `constant` | `#ffd449` | 0.883 | 0.157 | 91 |
+| `parameter` | `#00b470` | 0.678 | 0.159 | 158 |
+| `builtin` | `#01c08b` | 0.716 | 0.151 | 165 |
+| `property` | `#56ebb2` | 0.846 | 0.151 | 164 |
 
-The two axes do different work: **lightness** carries the ramp from dead code up to the live line, and **chroma** separates a role from its own relative at the same height. A parameter is a dimmer green at nearly the height of a local; a builtin is a dimmer green beside a keyword.
+Green carries every syntax role. Red is reserved for errors and warnings, amber for numbers and constants — those four slots are the only colours in the palette that are not green.
 
-## The matrix ramp
+### Why fourteen and not six
 
-Every palette is anchored on the film's own four stops rather than on a designer's taste:
+A terminal has sixteen slots and most themes spend six, generating the bright half as mechanical lightenings of the normal half. That wastes six addressable colours and leaves a palette that cannot tell a parameter from a local or a builtin from a user function. Measured under this contract, those two roles sat **0.050 apart** — indistinguishable.
 
-```text
-deep trail  #003b00  L 0.305  C 0.104   -> comment
-mid trail   #008f11  L 0.564  C 0.187   -> function
-body        #00ff41  L 0.869  C 0.278   -> variable, the neon default text
-leading     #ccffcc  L 0.952  C 0.086   -> string, the bright head of the rain
-```
+Each secondary role is a relative of one primary: `parameter` of `variable`, `property` of `type`, `builtin` of `keyword`, `escape` of `string`, `constant` of `number`, `warning` of `error`. Kinship is information; identity is a defect.
 
-`MIN_BODY_CHROMA` in `palette.py` holds body text at 0.18 or above, so no future variant can drift back to the pale green-white that measured 0.031.
+The two axes do different work. **Lightness** carries the ramp from dead code up to the live line. **Hue** separates a role from its own relative — primaries run warm, relatives run cool. Chroma does neither, because using it for separation is what makes a palette pastel.
 
-## The variants
+### How it was chosen
 
-Five ship. `prime` is the baseline, three change exactly one thing about it, and `prime-max` takes all three at once — it is the variant [`fmind/dot`](https://github.com/fmind/dot) deploys.
+Fmind is `prime-max` from a five-candidate shortlist, renamed. The shortlist changed one thing at a time from a baseline, and the three changes that were kept are:
 
-| variant | ground | neon | min chroma | separation | slack | idea |
-| --- | --- | --- | --- | --- | --- | --- |
-| `prime` | `#040d07` | 0.278 | 0.146 | 0.110 | 0.006 | The agreed baseline. Faintly green-black ground, amber on numbers and constants, fourteen roles at Prime's level of contrast — not pushed to the gamut edge the way Burn and Forge were. |
-| `prime-ink` | `#000000` | 0.262 | 0.146 | 0.091 | 0.005 | Prime on Void's pure black ground, with the amber pair kept. Void dropped amber for green and lost the signal that numbers and constants carry; this takes the ground without paying that price. |
-| `prime-lanes` | `#040d07` | 0.293 | 0.148 | 0.110 | 0.006 | Prime with the warm and cool lanes: primaries run warm, their relatives run cool, so kinship reads as a shift in temperature. |
-| `prime-signal` | `#040d07` | 0.275 | 0.150 | 0.110 | 0.005 | Prime with Signal's red pair — a hotter error and a properly orange warning, rather than the softer reds Arc carries. |
-| `prime-max` | `#000000` | 0.264 | 0.148 | 0.113 | 0.007 | All three preferred changes at once: the pure black ground, the warm and cool lanes, and the hotter red pair, with amber kept throughout. |
-
-Every variant holds green at 67% of the sixteen slots. `slack` is what the tightest pair has left over its separation requirement, so it is the number that says how close a variant came to being refused.
-
-Burn, Forge, Void, Arc and Strata are earlier explorations the descriptions still measure against. They were dropped once Prime settled; `explore.py` builds only the five.
-
-## No role may go pastel
-
-The first fourteen-role attempt separated each secondary from its primary by dropping the secondary's chroma. It passed every check and produced exactly the washed-out colours it was meant to avoid:
-
-| role | then | now |
+| change | kept | why |
 | --- | --- | --- |
-| `parameter` | `#73a07f` 0.069 | `#06b67b` 0.152 |
-| `builtin` | `#76ac87` 0.079 | `#35bf79` 0.155 |
-| `property` | `#9cdeb1` 0.092 | `#8af5a6` 0.148 |
-| `constant` | `#fad48e` 0.098 | `#ffd448` 0.158 |
-| `warning` | `#ff958c` 0.129 | `#f27c57` 0.154 |
-
-Low chroma *is* pastel, so buying separation with it is self-defeating. `MIN_ROLE_CHROMA = 0.14` now forbids it, and separation has to come from lightness and hue instead — which is where it belonged. With chroma pinned near the top of the gamut, hue becomes the solver's only slack, so the ten green roles fan out across 17-22° of the window rather than collapsing towards grey.
-
-`string` and `comment` are exempt for reasons of physics rather than taste: `string` sits near L 0.95 where the sRGB green gamut has no chroma left, and `comment` is deliberately recessive.
+| pure black ground | yes | from a candidate that also dropped amber; the ground was wanted, the amber loss was not |
+| warm primaries, cool relatives | yes | kinship reads as temperature rather than as washing out |
+| hotter red and orange pair | yes | preferred over the softer reds of the alternative |
+| deeper green ground | no | too green |
+| gamut-edge chroma | no | contrast preferred at the baseline level |
 
 ## Bold yes, italic no
 
@@ -152,13 +139,14 @@ Generated files are meant to be referenced, not pasted, wherever the tool allows
 | delta | `out/delta/<variant>.gitconfig` | `[include] path = …`, or paste into the `[delta]` section |
 | k9s | `out/k9s/<variant>.yaml` | Copy into `~/.config/k9s/skins/`, then set `skin:` |
 | gh-dash | `out/gh-dash/<variant>.yml` | Merge the `theme:` block into `~/.config/gh-dash/config.yml` |
+| Neovim | `out/nvim/colors/<variant>.lua` | Copy into `~/.config/nvim/colors/`, then `colorscheme fmind` |
 
 fish is where the role mapping becomes explicit rather than implied, since it names its own roles: `command` takes the function slot, `quote` takes strings, `redirection` and `option` take types.
 
 Tools that read the terminal's own 16 ANSI colours need no file and pick the palette up for free: `bat` (`--theme=ansi`), `lsd`, lazygit, lazydocker, bottom, atuin, yazi, fzf, fastfetch.
 Keeping them on ANSI is deliberate — it means one Ghostty line reskins them.
 
-Neovim is the one holdout. A 16-colour palette under treesitter is materially worse than a real colorscheme, so it needs a Lua theme rather than a generated config; that is not built yet.
+Neovim gets a real colorscheme rather than a sixteen-colour fallback, and it is where the fourteen roles pay off most: treesitter distinguishes captures a terminal never can — a call from its arguments, a builtin from a user function, an attribute from the object it hangs off. The generated file sets treesitter captures, LSP semantic tokens, diagnostics and diff groups, and never sets italic. It drops into `colors/` on the runtimepath, so no plugin is needed.
 
 ## Adding a tool
 

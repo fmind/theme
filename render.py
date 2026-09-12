@@ -241,7 +241,158 @@ def gh_dash(p: Palette) -> tuple[str, str]:
     )
 
 
-RENDERERS = (ghostty, zellij, fish, starship, delta, k9s, gh_dash)
+def neovim(p: Palette) -> tuple[str, str]:
+    """A real colorscheme, not a sixteen-colour fallback.
+
+    Neovim is the one place the fourteen-role palette pays off fully, because
+    treesitter distinguishes captures a terminal never can: a call from its
+    arguments, a builtin from a user function, an attribute from the object it
+    hangs off. Everywhere else those roles have to share an ANSI slot.
+
+    Drops into `colors/` on the runtimepath, so `colorscheme fmind` finds it
+    with no plugin. Italic is never set: FiraCode has no italic face.
+    """
+    a = p.ansi
+    r = {role: p.role(role) for role in (
+        "variable", "parameter", "property", "function", "builtin", "keyword",
+        "type", "string", "escape", "number", "constant", "comment",
+        "error", "warning",
+    )}
+    sel = mix(p.ground, a["green"], 0.20)
+    line = mix(p.ground, a["green"], 0.10)
+    gutter = mix(p.ground, a["bright_white"], 0.22)
+
+    groups: list[tuple[str, str]] = [
+        # editor chrome
+        ("Normal", f'{{ fg = "{p.text}", bg = "{p.ground}" }}'),
+        ("NormalFloat", f'{{ fg = "{p.text}", bg = "{line}" }}'),
+        ("FloatBorder", f'{{ fg = "{r["comment"]}", bg = "{line}" }}'),
+        ("CursorLine", f'{{ bg = "{line}" }}'),
+        ("CursorLineNr", f'{{ fg = "{r["variable"]}", bold = true }}'),
+        ("LineNr", f'{{ fg = "{gutter}" }}'),
+        ("Visual", f'{{ bg = "{sel}" }}'),
+        ("Search", f'{{ fg = "{p.ground}", bg = "{r["number"]}" }}'),
+        ("IncSearch", f'{{ fg = "{p.ground}", bg = "{r["warning"]}" }}'),
+        ("MatchParen", f'{{ fg = "{r["warning"]}", bold = true }}'),
+        ("Pmenu", f'{{ fg = "{p.text}", bg = "{line}" }}'),
+        ("PmenuSel", f'{{ bg = "{sel}", bold = true }}'),
+        ("StatusLine", f'{{ fg = "{p.text}", bg = "{line}" }}'),
+        ("WinSeparator", f'{{ fg = "{r["comment"]}" }}'),
+        ("Whitespace", f'{{ fg = "{gutter}" }}'),
+        ("Folded", f'{{ fg = "{r["comment"]}", bg = "{line}" }}'),
+        ("Title", f'{{ fg = "{r["function"]}", bold = true }}'),
+        ("Directory", f'{{ fg = "{r["function"]}" }}'),
+        ("Cursor", f'{{ fg = "{p.ground}", bg = "{p.cursor}" }}'),
+        # the fourteen roles, on the legacy groups first
+        ("Comment", f'{{ fg = "{r["comment"]}" }}'),
+        ("Identifier", f'{{ fg = "{r["variable"]}" }}'),
+        ("Function", f'{{ fg = "{r["function"]}", bold = true }}'),
+        ("Statement", f'{{ fg = "{r["keyword"]}", bold = true }}'),
+        ("Keyword", f'{{ fg = "{r["keyword"]}", bold = true }}'),
+        ("Conditional", f'{{ fg = "{r["keyword"]}", bold = true }}'),
+        ("Repeat", f'{{ fg = "{r["keyword"]}", bold = true }}'),
+        ("Operator", f'{{ fg = "{r["variable"]}" }}'),
+        ("Type", f'{{ fg = "{r["type"]}" }}'),
+        ("String", f'{{ fg = "{r["string"]}" }}'),
+        ("Character", f'{{ fg = "{r["string"]}" }}'),
+        ("Number", f'{{ fg = "{r["number"]}" }}'),
+        ("Float", f'{{ fg = "{r["number"]}" }}'),
+        ("Boolean", f'{{ fg = "{r["constant"]}" }}'),
+        ("Constant", f'{{ fg = "{r["constant"]}" }}'),
+        ("Special", f'{{ fg = "{r["escape"]}" }}'),
+        ("PreProc", f'{{ fg = "{r["builtin"]}" }}'),
+        ("Error", f'{{ fg = "{r["error"]}", bold = true }}'),
+        ("ErrorMsg", f'{{ fg = "{r["error"]}", bold = true }}'),
+        ("WarningMsg", f'{{ fg = "{r["warning"]}" }}'),
+        ("Todo", f'{{ fg = "{p.ground}", bg = "{r["warning"]}", bold = true }}'),
+        # treesitter captures: the reason this file exists
+        ("@variable", f'{{ fg = "{r["variable"]}" }}'),
+        ("@variable.parameter", f'{{ fg = "{r["parameter"]}" }}'),
+        ("@variable.member", f'{{ fg = "{r["property"]}" }}'),
+        ("@property", f'{{ fg = "{r["property"]}" }}'),
+        ("@field", f'{{ fg = "{r["property"]}" }}'),
+        ("@function", f'{{ fg = "{r["function"]}", bold = true }}'),
+        ("@function.call", f'{{ fg = "{r["function"]}", bold = true }}'),
+        ("@function.method", f'{{ fg = "{r["function"]}", bold = true }}'),
+        ("@function.method.call", f'{{ fg = "{r["function"]}", bold = true }}'),
+        ("@function.builtin", f'{{ fg = "{r["builtin"]}" }}'),
+        ("@constructor", f'{{ fg = "{r["type"]}" }}'),
+        ("@keyword", f'{{ fg = "{r["keyword"]}", bold = true }}'),
+        ("@keyword.function", f'{{ fg = "{r["keyword"]}", bold = true }}'),
+        ("@keyword.return", f'{{ fg = "{r["keyword"]}", bold = true }}'),
+        ("@keyword.import", f'{{ fg = "{r["keyword"]}", bold = true }}'),
+        ("@keyword.operator", f'{{ fg = "{r["keyword"]}", bold = true }}'),
+        ("@keyword.exception", f'{{ fg = "{r["error"]}", bold = true }}'),
+        ("@type", f'{{ fg = "{r["type"]}" }}'),
+        ("@type.builtin", f'{{ fg = "{r["type"]}" }}'),
+        ("@module", f'{{ fg = "{r["property"]}" }}'),
+        ("@string", f'{{ fg = "{r["string"]}" }}'),
+        ("@string.escape", f'{{ fg = "{r["escape"]}" }}'),
+        ("@string.special", f'{{ fg = "{r["escape"]}" }}'),
+        ("@number", f'{{ fg = "{r["number"]}" }}'),
+        ("@boolean", f'{{ fg = "{r["constant"]}" }}'),
+        ("@constant", f'{{ fg = "{r["constant"]}" }}'),
+        ("@constant.builtin", f'{{ fg = "{r["constant"]}" }}'),
+        ("@comment", f'{{ fg = "{r["comment"]}" }}'),
+        ("@comment.error", f'{{ fg = "{r["error"]}", bold = true }}'),
+        ("@comment.warning", f'{{ fg = "{r["warning"]}" }}'),
+        ("@punctuation.bracket", f'{{ fg = "{r["variable"]}" }}'),
+        ("@punctuation.delimiter", f'{{ fg = "{r["variable"]}" }}'),
+        ("@operator", f'{{ fg = "{r["variable"]}" }}'),
+        ("@attribute", f'{{ fg = "{r["builtin"]}" }}'),
+        # LSP semantic tokens follow the same split
+        ("@lsp.type.parameter", f'{{ fg = "{r["parameter"]}" }}'),
+        ("@lsp.type.property", f'{{ fg = "{r["property"]}" }}'),
+        ("@lsp.type.variable", f'{{ fg = "{r["variable"]}" }}'),
+        ("@lsp.type.class", f'{{ fg = "{r["type"]}" }}'),
+        ("@lsp.type.function", f'{{ fg = "{r["function"]}", bold = true }}'),
+        ("@lsp.type.method", f'{{ fg = "{r["function"]}", bold = true }}'),
+        ("@lsp.type.keyword", f'{{ fg = "{r["keyword"]}", bold = true }}'),
+        # diagnostics and diffs
+        ("DiagnosticError", f'{{ fg = "{r["error"]}" }}'),
+        ("DiagnosticWarn", f'{{ fg = "{r["warning"]}" }}'),
+        ("DiagnosticInfo", f'{{ fg = "{r["type"]}" }}'),
+        ("DiagnosticHint", f'{{ fg = "{r["property"]}" }}'),
+        ("DiagnosticOk", f'{{ fg = "{r["string"]}" }}'),
+        ("DiagnosticUnderlineError", f'{{ sp = "{r["error"]}", undercurl = true }}'),
+        ("DiagnosticUnderlineWarn", f'{{ sp = "{r["warning"]}", undercurl = true }}'),
+        ("DiffAdd", f'{{ bg = "{mix(p.ground, a["green"], 0.18)}" }}'),
+        ("DiffDelete", f'{{ bg = "{mix(p.ground, a["red"], 0.20)}" }}'),
+        ("DiffChange", f'{{ bg = "{mix(p.ground, a["yellow"], 0.14)}" }}'),
+        ("DiffText", f'{{ bg = "{mix(p.ground, a["yellow"], 0.30)}" }}'),
+        ("Added", f'{{ fg = "{r["string"]}" }}'),
+        ("Removed", f'{{ fg = "{r["error"]}" }}'),
+        ("Changed", f'{{ fg = "{r["number"]}" }}'),
+    ]
+
+    body = "\n".join(f'  ["{name}"] = {spec},' for name, spec in groups)
+    terminal = "\n".join(
+        f'vim.g.terminal_color_{i} = "{p.slot(i)}"' for i in range(16)
+    )
+    return f"nvim/colors/{p.slug}.lua", (
+        f"-- {p.name} — generated by render.py, do not edit\n"
+        f"-- source: palettes/{p.source.name}\n"
+        "--\n"
+        "-- Drop into colors/ on the runtimepath, then `colorscheme "
+        f"{p.slug}`.\n"
+        "-- Italic is never set: FiraCode ships no italic face, so it would be\n"
+        "-- synthesised by slanting upright glyphs.\n\n"
+        'vim.cmd("highlight clear")\n'
+        'if vim.fn.exists("syntax_on") == 1 then vim.cmd("syntax reset") end\n'
+        "vim.o.termguicolors = true\n"
+        "vim.o.background = \"dark\"\n"
+        f'vim.g.colors_name = "{p.slug}"\n\n'
+        f"{terminal}\n\n"
+        "local groups = {\n"
+        f"{body}\n"
+        "}\n\n"
+        "for name, spec in pairs(groups) do\n"
+        "  vim.api.nvim_set_hl(0, name, spec)\n"
+        "end\n"
+    )
+
+
+RENDERERS = (ghostty, zellij, fish, starship, delta, k9s, gh_dash, neovim)
 
 
 def main() -> int:
