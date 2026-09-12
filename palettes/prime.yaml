@@ -1,0 +1,53 @@
+# Palette source of truth. Regenerate tool files with: uv run render.py
+# Designed by explore.py against the contract in palette.py.
+name: "Prime"
+family: "the baseline"
+description: >-
+  The agreed baseline. Faintly green-black ground, amber on numbers and constants, fourteen roles at Prime's level of contrast - not pushed to the gamut edge the way Burn and Forge were.
+ground: "#040d07"
+text: "#3cfe2e"
+cursor: "#65fda4"
+ansi:
+  black: "#223d27"
+  red: "#fc2b3a"
+  green: "#cefddc"
+  yellow: "#e3a92e"
+  blue: "#008f16"
+  magenta: "#78f8b1"
+  cyan: "#02dc81"
+  white: "#d5e2d7"
+  bright_black: "#006a39"
+  bright_red: "#f27c57"
+  bright_green: "#65fda4"
+  bright_yellow: "#ffd448"
+  bright_blue: "#06b67b"
+  bright_magenta: "#35bf79"
+  bright_cyan: "#8af5a6"
+  bright_white: "#f2f9f3"
+
+# Which syntax role each slot carries, and where it landed.
+roles:
+  variable: "#3cfe2e"  # text, hue 142, chroma 0.278
+  error: "#fc2b3a"  # red, hue 24, chroma 0.238
+  string: "#cefddc"  # green, hue 154, chroma 0.065
+  number: "#e3a92e"  # yellow, hue 81, chroma 0.146
+  function: "#008f16"  # blue, hue 144, chroma 0.185
+  keyword: "#78f8b1"  # magenta, hue 157, chroma 0.152
+  type: "#02dc81"  # cyan, hue 155, chroma 0.193
+  comment: "#006a39"  # bright_black, hue 154, chroma 0.115
+  warning: "#f27c57"  # bright_red, hue 38, chroma 0.154
+  escape: "#65fda4"  # bright_green, hue 154, chroma 0.18
+  constant: "#ffd448"  # bright_yellow, hue 91, chroma 0.158
+  parameter: "#06b67b"  # bright_blue, hue 161, chroma 0.152
+  builtin: "#35bf79"  # bright_magenta, hue 156, chroma 0.155
+  property: "#8af5a6"  # bright_cyan, hue 151, chroma 0.148
+
+measured:
+  green_share: 67
+  text_contrast: 14.5
+  accent_floor: 4.6
+  neon: 0.278
+  min_chroma: 0.146
+  min_separation: 0.11
+  tightest_pair: "keyword/type"
+  slack: 0.006

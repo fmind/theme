@@ -1,0 +1,53 @@
+# Palette source of truth. Regenerate tool files with: uv run render.py
+# Designed by explore.py against the contract in palette.py.
+name: "Prime Max"
+family: "everything preferred, together"
+description: >-
+  All three preferred changes at once: the pure black ground, the warm and cool lanes, and the hotter red pair, with amber kept throughout.
+ground: "#000000"
+text: "#56ff40"
+cursor: "#3afdb5"
+ansi:
+  black: "#223d27"
+  red: "#fb002a"
+  green: "#d5fcd5"
+  yellow: "#e3a92a"
+  blue: "#008b00"
+  magenta: "#83dd81"
+  cyan: "#00ca00"
+  white: "#d5e2d7"
+  bright_black: "#24682c"
+  bright_red: "#ff692e"
+  bright_green: "#3afdb5"
+  bright_yellow: "#ffd449"
+  bright_blue: "#00b470"
+  bright_magenta: "#01c08b"
+  bright_cyan: "#56ebb2"
+  bright_white: "#f2f9f3"
+
+# Which syntax role each slot carries, and where it landed.
+roles:
+  variable: "#56ff40"  # text, hue 142, chroma 0.264
+  error: "#fb002a"  # red, hue 25, chroma 0.252
+  string: "#d5fcd5"  # green, hue 145, chroma 0.066
+  number: "#e3a92a"  # yellow, hue 82, chroma 0.148
+  function: "#008b00"  # blue, hue 142, chroma 0.188
+  keyword: "#83dd81"  # magenta, hue 144, chroma 0.153
+  type: "#00ca00"  # cyan, hue 142, chroma 0.247
+  comment: "#24682c"  # bright_black, hue 145, chroma 0.115
+  warning: "#ff692e"  # bright_red, hue 40, chroma 0.196
+  escape: "#3afdb5"  # bright_green, hue 162, chroma 0.18
+  constant: "#ffd449"  # bright_yellow, hue 91, chroma 0.157
+  parameter: "#00b470"  # bright_blue, hue 158, chroma 0.159
+  builtin: "#01c08b"  # bright_magenta, hue 165, chroma 0.151
+  property: "#56ebb2"  # bright_cyan, hue 164, chroma 0.151
+
+measured:
+  green_share: 67
+  text_contrast: 15.8
+  accent_floor: 4.7
+  neon: 0.264
+  min_chroma: 0.148
+  min_separation: 0.113
+  tightest_pair: "keyword/builtin"
+  slack: 0.007

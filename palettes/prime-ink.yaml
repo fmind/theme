@@ -1,0 +1,53 @@
+# Palette source of truth. Regenerate tool files with: uv run render.py
+# Designed by explore.py against the contract in palette.py.
+name: "Prime Ink"
+family: "one change from Prime"
+description: >-
+  Prime on Void's pure black ground, with the amber pair kept. Void dropped amber for green and lost the signal that numbers and constants carry; this takes the ground without paying that price.
+ground: "#000000"
+text: "#15fb54"
+cursor: "#63fca3"
+ansi:
+  black: "#223d27"
+  red: "#f8363d"
+  green: "#cefddc"
+  yellow: "#e3a819"
+  blue: "#00873f"
+  magenta: "#60ebae"
+  cyan: "#00c912"
+  white: "#d5e2d7"
+  bright_black: "#006a39"
+  bright_red: "#ff8d69"
+  bright_green: "#63fca3"
+  bright_yellow: "#ffd054"
+  bright_blue: "#29b371"
+  bright_magenta: "#1dc170"
+  bright_cyan: "#67edb1"
+  bright_white: "#f2f9f3"
+
+# Which syntax role each slot carries, and where it landed.
+roles:
+  variable: "#15fb54"  # text, hue 146, chroma 0.262
+  error: "#f8363d"  # red, hue 25, chroma 0.228
+  string: "#cefddc"  # green, hue 154, chroma 0.065
+  number: "#e3a819"  # yellow, hue 82, chroma 0.153
+  function: "#00873f"  # blue, hue 151, chroma 0.148
+  keyword: "#60ebae"  # magenta, hue 162, chroma 0.15
+  type: "#00c912"  # cyan, hue 143, chroma 0.243
+  comment: "#006a39"  # bright_black, hue 154, chroma 0.115
+  warning: "#ff8d69"  # bright_red, hue 38, chroma 0.147
+  escape: "#63fca3"  # bright_green, hue 155, chroma 0.18
+  constant: "#ffd054"  # bright_yellow, hue 88, chroma 0.148
+  parameter: "#29b371"  # bright_blue, hue 157, chroma 0.151
+  builtin: "#1dc170"  # bright_magenta, hue 155, chroma 0.172
+  property: "#67edb1"  # bright_cyan, hue 161, chroma 0.146
+
+measured:
+  green_share: 67
+  text_contrast: 15.0
+  accent_floor: 4.5
+  neon: 0.262
+  min_chroma: 0.146
+  min_separation: 0.091
+  tightest_pair: "function/parameter"
+  slack: 0.005
