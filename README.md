@@ -18,7 +18,7 @@ Nothing in Ghostty's 395 built-in themes occupies that space — they are either
 ```bash
 uv run render.py             # validate and render every palette
 uv run render.py --check     # validate only, write nothing
-uv run render.py split-base  # just one variant
+uv run render.py prime-max   # just one variant
 uv run explore.py            # design the variant set again
 uv run explore.py --dry-run  # report the design pass without writing
 ```
@@ -83,25 +83,21 @@ leading     #ccffcc  L 0.952  C 0.086   -> string, the bright head of the rain
 
 `MIN_BODY_CHROMA` in `palette.py` holds body text at 0.18 or above, so no future variant can drift back to the pale green-white that measured 0.031.
 
-### Matrix core
+## The variants
 
-| variant | neon | min chroma | green | separation | idea |
-| --- | --- | --- | --- | --- | --- |
-| `matrix-burn` | 0.295 | 0.148 | 67% | 0.115 | Prime driven to the edge of the gamut at every height - the most saturated fourteen-role palette that still separates. |
-| `matrix-forge` | 0.279 | 0.145 | 67% | 0.102 | The secondary roles pushed hardest of all, so a parameter and a builtin carry as much colour as the primaries they belong to. |
-| `matrix-prime` | 0.278 | 0.146 | 67% | 0.110 | Prime with the pastels gone. |
-| `matrix-void` | 0.270 | 0.147 | 83% | 0.084 | Pure black, and no amber at all - numbers and constants are saturated greens too, leaving red as the only colour that is not green. |
-| `matrix-strata` | 0.257 | 0.148 | 67% | 0.109 | The lightness ladder stretched as far as the gamut allows, so fourteen saturated roles read as one clean gradient from dead code to live line. |
+Five ship. `prime` is the baseline, three change exactly one thing about it, and `prime-max` takes all three at once — it is the variant [`fmind/dot`](https://github.com/fmind/dot) deploys.
 
-### Matrix, balanced
+| variant | ground | neon | min chroma | separation | slack | idea |
+| --- | --- | --- | --- | --- | --- | --- |
+| `prime` | `#040d07` | 0.278 | 0.146 | 0.110 | 0.006 | The agreed baseline. Faintly green-black ground, amber on numbers and constants, fourteen roles at Prime's level of contrast — not pushed to the gamut edge the way Burn and Forge were. |
+| `prime-ink` | `#000000` | 0.262 | 0.146 | 0.091 | 0.005 | Prime on Void's pure black ground, with the amber pair kept. Void dropped amber for green and lost the signal that numbers and constants carry; this takes the ground without paying that price. |
+| `prime-lanes` | `#040d07` | 0.293 | 0.148 | 0.110 | 0.006 | Prime with the warm and cool lanes: primaries run warm, their relatives run cool, so kinship reads as a shift in temperature. |
+| `prime-signal` | `#040d07` | 0.275 | 0.150 | 0.110 | 0.005 | Prime with Signal's red pair — a hotter error and a properly orange warning, rather than the softer reds Arc carries. |
+| `prime-max` | `#000000` | 0.264 | 0.148 | 0.113 | 0.007 | All three preferred changes at once: the pure black ground, the warm and cool lanes, and the hotter red pair, with amber kept throughout. |
 
-| variant | neon | min chroma | green | separation | idea |
-| --- | --- | --- | --- | --- | --- |
-| `matrix-amber` | 0.277 | 0.147 | 67% | 0.110 | The amber pair taken to the top of its gamut, so a number and a named constant burn like the greens instead of sitting behind them. |
-| `matrix-deep` | 0.274 | 0.147 | 67% | 0.114 | A ground with real green in it, so the tube reads as lit from behind and the darker rungs have somewhere to sit. |
-| `matrix-lanes` | 0.268 | 0.146 | 67% | 0.111 | Primaries run warm and their relatives run cool, so kinship reads as a shift in temperature rather than a loss of colour. |
-| `matrix-signal` | 0.264 | 0.147 | 67% | 0.110 | The red pair taken neon: an error and a warning as saturated as the greens they interrupt, rather than the salmon pink they were. |
-| `matrix-arc` | 0.251 | 0.148 | 67% | 0.109 | The roles sweep the whole green window in order, so hue itself becomes the gradient and two roles at the same height are never the same green. |
+Every variant holds green at 67% of the sixteen slots. `slack` is what the tightest pair has left over its separation requirement, so it is the number that says how close a variant came to being refused.
+
+Burn, Forge, Void, Arc and Strata are earlier explorations the descriptions still measure against. They were dropped once Prime settled; `explore.py` builds only the five.
 
 ## No role may go pastel
 

@@ -10,7 +10,7 @@ generated, so edit the YAML and re-run; never edit out/ by hand.
 
     uv run render.py            # render every palette
     uv run render.py --check    # validate only, write nothing
-    uv run render.py rain-clear # render one palette
+    uv run render.py prime-max  # render one palette
 
 The readability contract lives in palette.py and is shared with explore.py, so
 what gets designed and what gets shipped cannot drift apart. A palette that
