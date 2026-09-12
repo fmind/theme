@@ -18,7 +18,7 @@ Nothing in Ghostty's 395 built-in themes occupies that space — they are either
 ```bash
 uv run render.py             # validate and render every palette
 uv run render.py --check     # validate only, write nothing
-uv run render.py prime-max   # just one variant
+uv run render.py fmind       # just one variant
 uv run explore.py            # design the variant set again
 uv run explore.py --dry-run  # report the design pass without writing
 ```
