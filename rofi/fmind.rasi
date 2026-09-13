@@ -1,0 +1,44 @@
+/* https://davatorium.github.io/rofi/current/rofi-theme.5/ */
+* {
+    background-color: #ffffff;
+    text-color: #202124;
+    border-color: #9aa0a6;
+}
+window {
+    background-color: #ffffff;
+    border-color: #174ea6;
+}
+inputbar, message {
+    background-color: #f1f3f4;
+    text-color: #202124;
+}
+prompt {
+    text-color: #174ea6;
+}
+entry {
+    placeholder-color: #595d62;
+}
+element normal.normal, element alternate.normal {
+    background-color: #ffffff;
+    text-color: #202124;
+}
+element normal.active, element alternate.active {
+    background-color: #ceead6;
+    text-color: #0d652d;
+}
+element normal.urgent, element alternate.urgent {
+    background-color: #fad2cf;
+    text-color: #a50e0e;
+}
+element selected.normal, element selected.active, element selected.urgent {
+    background-color: #d2e3fc;
+    text-color: #202124;
+}
+element-text, element-icon {
+    background-color: inherit;
+    text-color: inherit;
+}
+button selected {
+    background-color: #d2e3fc;
+    text-color: #202124;
+}

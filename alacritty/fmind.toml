@@ -1,0 +1,64 @@
+# https://alacritty.org/config-alacritty.html#colors
+[colors.primary]
+background = "#ffffff"
+foreground = "#202124"
+dim_foreground = "#595d62"
+bright_foreground = "#202124"
+
+[colors.cursor]
+text = "#202124"
+cursor = "#4285f4"
+
+[colors.vi_mode_cursor]
+text = "#202124"
+cursor = "#fbbc04"
+
+[colors.selection]
+text = "#202124"
+background = "#d2e3fc"
+
+[colors.search.matches]
+foreground = "#202124"
+background = "#feefc3"
+
+[colors.search.focused_match]
+foreground = "#202124"
+background = "#fbbc04"
+
+[colors.hints.start]
+foreground = "#202124"
+background = "#fbbc04"
+
+[colors.hints.end]
+foreground = "#202124"
+background = "#d2e3fc"
+
+[colors.normal]
+black = "#202124"
+red = "#a50e0e"
+green = "#0d652d"
+yellow = "#934900"
+blue = "#174ea6"
+magenta = "#681da8"
+cyan = "#00636d"
+white = "#202124"
+
+[colors.bright]
+black = "#595d62"
+red = "#a50e0e"
+green = "#0d652d"
+yellow = "#934900"
+blue = "#174ea6"
+magenta = "#681da8"
+cyan = "#00636d"
+white = "#202124"
+
+[colors.dim]
+black = "#595d62"
+red = "#a50e0e"
+green = "#0d652d"
+yellow = "#934900"
+blue = "#174ea6"
+magenta = "#681da8"
+cyan = "#00636d"
+white = "#595d62"

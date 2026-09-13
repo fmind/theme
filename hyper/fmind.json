@@ -1,0 +1,26 @@
+{
+  "foregroundColor": "#202124",
+  "backgroundColor": "#ffffff",
+  "cursorColor": "#4285f4",
+  "cursorAccentColor": "#202124",
+  "selectionColor": "#d2e3fc",
+  "borderColor": "#9aa0a6",
+  "colors": {
+    "black": "#202124",
+    "red": "#a50e0e",
+    "green": "#0d652d",
+    "yellow": "#934900",
+    "blue": "#174ea6",
+    "magenta": "#681da8",
+    "cyan": "#00636d",
+    "white": "#202124",
+    "lightBlack": "#595d62",
+    "lightRed": "#a50e0e",
+    "lightGreen": "#0d652d",
+    "lightYellow": "#934900",
+    "lightBlue": "#174ea6",
+    "lightMagenta": "#681da8",
+    "lightCyan": "#00636d",
+    "lightWhite": "#202124"
+  }
+}

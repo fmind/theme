@@ -1,0 +1,22 @@
+# https://mintty.github.io/mintty.1.html#CONFIGURATION
+ForegroundColour=32,33,36
+BackgroundColour=255,255,255
+CursorColour=66,133,244
+HighlightBackgroundColour=210,227,252
+HighlightForegroundColour=32,33,36
+Black=32,33,36
+Red=165,14,14
+Green=13,101,45
+Yellow=147,73,0
+Blue=23,78,166
+Magenta=104,29,168
+Cyan=0,99,109
+White=32,33,36
+BoldBlack=89,93,98
+BoldRed=165,14,14
+BoldGreen=13,101,45
+BoldYellow=147,73,0
+BoldBlue=23,78,166
+BoldMagenta=104,29,168
+BoldCyan=0,99,109
+BoldWhite=32,33,36

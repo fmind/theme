@@ -1,0 +1,94 @@
+# https://docs.helix-editor.com/themes.html
+"attribute" = "purple"
+"type" = "purple"
+"constructor" = "purple"
+"constant" = "orange"
+"constant.character.escape" = "blue"
+"string" = "green"
+"comment" = "muted"
+"variable" = "text"
+"variable.builtin" = "purple"
+"label" = "blue"
+"punctuation" = "text"
+"keyword" = { fg = "blue", modifiers = ["bold"] }
+"operator" = "text"
+"function" = "blue"
+"function.builtin" = "purple"
+"tag" = "blue"
+"namespace" = "purple"
+"special" = "teal"
+"markup.heading" = { fg = "blue", modifiers = ["bold"] }
+"markup.list" = "blue"
+"markup.bold" = { fg = "text", modifiers = ["bold"] }
+"markup.italic" = "purple"
+"markup.strikethrough" = { fg = "muted", modifiers = ["crossed_out"] }
+"markup.link" = "blue"
+"markup.link.url" = { fg = "blue", modifiers = ["underlined"] }
+"markup.quote" = "green"
+"markup.raw" = "blue"
+"diff.plus" = { fg = "green", bg = "added" }
+"diff.minus" = { fg = "red", bg = "deleted" }
+"diff.delta" = { fg = "orange", bg = "changed" }
+"ui.background" = { fg = "text", bg = "white" }
+"ui.text" = "text"
+"ui.text.focus" = { fg = "blue", modifiers = ["bold"] }
+"ui.text.inactive" = "muted"
+"ui.text.info" = "teal"
+"ui.cursor" = { fg = "text", bg = "selection" }
+"ui.cursor.primary" = { fg = "text", bg = "cursor" }
+"ui.cursor.match" = { fg = "text", bg = "yellow", modifiers = ["bold"] }
+"ui.cursorline.primary" = { bg = "panel" }
+"ui.cursorline.secondary" = { bg = "panel" }
+"ui.selection" = { bg = "selection" }
+"ui.selection.primary" = { bg = "selection" }
+"ui.linenr" = "muted"
+"ui.linenr.selected" = { fg = "blue", modifiers = ["bold"] }
+"ui.statusline" = { fg = "text", bg = "panel" }
+"ui.statusline.inactive" = { fg = "muted", bg = "panel" }
+"ui.statusline.normal" = { fg = "text", bg = "cursor", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "text", bg = "added", modifiers = ["bold"] }
+"ui.statusline.select" = { fg = "text", bg = "yellow", modifiers = ["bold"] }
+"ui.statusline.separator" = "border"
+"ui.popup" = { fg = "text", bg = "panel" }
+"ui.popup.info" = { fg = "text", bg = "panel" }
+"ui.window" = "border"
+"ui.help" = { fg = "text", bg = "panel" }
+"ui.menu" = { fg = "text", bg = "panel" }
+"ui.menu.selected" = { fg = "text", bg = "selection", modifiers = ["bold"] }
+"ui.menu.scroll" = { fg = "muted", bg = "panel" }
+"ui.highlight" = { bg = "changed" }
+"ui.highlight.frameline" = { bg = "changed" }
+"ui.virtual" = "muted"
+"ui.virtual.indent-guide" = "border"
+"ui.virtual.ruler" = { bg = "panel" }
+"ui.virtual.inlay-hint" = { fg = "muted", bg = "panel" }
+"ui.virtual.jump-label" = { fg = "text", bg = "yellow", modifiers = ["bold"] }
+"warning" = "orange"
+"error" = "red"
+"info" = "teal"
+"hint" = "muted"
+"diagnostic.warning" = { underline = { color = "orange", style = "curl" } }
+"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.info" = { underline = { color = "teal", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "muted", style = "curl" } }
+"diagnostic.unnecessary" = { fg = "muted" }
+"diagnostic.deprecated" = { modifiers = ["crossed_out"] }
+
+[palette]
+white = "#ffffff"
+text = "#202124"
+muted = "#595d62"
+border = "#9aa0a6"
+blue = "#174ea6"
+red = "#a50e0e"
+green = "#0d652d"
+orange = "#934900"
+purple = "#681da8"
+teal = "#00636d"
+cursor = "#4285f4"
+yellow = "#fbbc04"
+panel = "#f1f3f4"
+selection = "#d2e3fc"
+added = "#ceead6"
+deleted = "#fad2cf"
+changed = "#feefc3"

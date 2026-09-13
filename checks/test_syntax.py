@@ -129,6 +129,46 @@ class SyntaxTests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(result.stderr, "", "Neovim emitted diagnostics")
 
+    def test_vimscript_port_loads_native_highlights(self):
+        script = self.directory / "vim-port.lua"
+        script.write_text("""local root = os.getenv('FMIND_THEME_ROOT')
+vim.cmd('syntax on')
+vim.cmd('source ' .. vim.fn.fnameescape(root .. '/vim/fmind.vim'))
+vim.cmd('edit ' .. vim.fn.fnameescape(root .. '/checks/samples/sample.py'))
+vim.cmd('setfiletype python')
+local styles = {}
+for _, name in ipairs({'Normal', 'Comment', 'String', 'Number', 'Function', 'Type', 'Visual', 'DiffAdd'}) do
+    styles[name] = vim.api.nvim_get_hl(0, {name = name, link = false})
+end
+styles.colors_name = vim.g.colors_name
+styles.ansi = vim.g.terminal_ansi_colors
+io.write(vim.json.encode(styles))
+""")
+        result = subprocess.run(
+            ["nvim", "--headless", "-u", "NONE", "-i", "NONE", "-l", str(script)],
+            env=self.env,
+            capture_output=True,
+            text=True,
+            timeout=30,
+            check=False,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(result.stderr, "")
+        styles = json.loads(result.stdout)
+        self.assertEqual(styles["colors_name"], "fmind")
+        self.assertEqual(styles["ansi"], list(PALETTE["ansi"].values()))
+        for name, role in (
+            ("Comment", "comment"),
+            ("String", "string"),
+            ("Number", "number"),
+            ("Function", "function"),
+            ("Type", "type"),
+        ):
+            self.assertEqual(styles[name]["fg"], int(PALETTE["roles"][role][1:], 16))
+        self.assertEqual(styles["Normal"]["bg"], int(PALETTE["ground"][1:], 16))
+        self.assertEqual(styles["Visual"]["bg"], int(PALETTE["surfaces"]["selection"][1:], 16))
+        self.assertEqual(styles["DiffAdd"]["bg"], int(PALETTE["surfaces"]["plus"][1:], 16))
+
     def test_neovim_treesitter(self):
         self.check_neovim("treesitter")
 

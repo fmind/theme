@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://gnome.pages.gitlab.gnome.org/gtksourceview/gtksourceview5/style-reference.html -->
+<style-scheme id="fmind" _name="Fmind" version="1.0">
+  <author>Fmind</author>
+  <_description>Readable light colors for code and selections.</_description>
+  <style name="text" foreground="#202124" background="#ffffff" />
+  <style name="selection" foreground="#202124" background="#d2e3fc" />
+  <style name="selection-unfocused" foreground="#202124" background="#d2e3fc" />
+  <style name="current-line" background="#f1f3f4" />
+  <style name="line-numbers" foreground="#595d62" background="#ffffff" />
+  <style name="current-line-number" foreground="#174ea6" background="#f1f3f4" />
+  <style name="cursor" foreground="#4285f4" />
+  <style name="secondary-cursor" foreground="#174ea6" />
+  <style name="search-match" foreground="#202124" background="#feefc3" />
+  <style name="bracket-match" foreground="#202124" background="#feefc3" />
+  <style name="bracket-mismatch" foreground="#a50e0e" background="#fad2cf" />
+  <style name="right-margin" foreground="#9aa0a6" background="#f1f3f4" />
+  <style name="draw-spaces" foreground="#9aa0a6" />
+  <style name="def:comment" foreground="#595d62" italic="false" />
+  <style name="def:doc-comment" foreground="#595d62" italic="false" />
+  <style name="def:keyword" foreground="#174ea6" italic="false" bold="true" />
+  <style name="def:type" foreground="#681da8" italic="false" />
+  <style name="def:function" foreground="#174ea6" italic="false" />
+  <style name="def:identifier" foreground="#202124" italic="false" />
+  <style name="def:string" foreground="#0d652d" italic="false" />
+  <style name="def:character" foreground="#0d652d" italic="false" />
+  <style name="def:special-char" foreground="#174ea6" italic="false" />
+  <style name="def:number" foreground="#934900" italic="false" />
+  <style name="def:floating-point" foreground="#934900" italic="false" />
+  <style name="def:decimal" foreground="#934900" italic="false" />
+  <style name="def:base-n-integer" foreground="#934900" italic="false" />
+  <style name="def:boolean" foreground="#934900" italic="false" />
+  <style name="def:constant" foreground="#934900" italic="false" />
+  <style name="def:statement" foreground="#174ea6" italic="false" bold="true" />
+  <style name="def:operator" foreground="#202124" italic="false" />
+  <style name="def:preprocessor" foreground="#681da8" italic="false" />
+  <style name="def:error" foreground="#a50e0e" italic="false" />
+  <style name="def:warning" foreground="#934900" italic="false" />
+  <style name="def:note" foreground="#00636d" italic="false" />
+  <style name="def:underlined" foreground="#174ea6" italic="false" />
+</style-scheme>

@@ -12,6 +12,11 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 PALETTE = yaml.safe_load((ROOT / "checks/palette.yaml").read_text())
+APPS = sorted(
+    p
+    for p in ROOT.iterdir()
+    if p.is_dir() and not p.name.startswith(".") and p.name not in {"checks", "screenshots", "__pycache__"}
+)
 
 
 def contrast(a: str, b: str) -> float:
@@ -49,30 +54,8 @@ class ThemeTests(unittest.TestCase):
             self.assertEqual(color, PALETTE["roles"][rule["name"]])
 
     def test_native_files_use_documented_palette(self):
-        apps = [
-            "atuin",
-            "bat",
-            "bottom",
-            "delta",
-            "fastfetch",
-            "fish",
-            "fzf",
-            "gh-dash",
-            "ghostty",
-            "k9s",
-            "lazydocker",
-            "lazygit",
-            "lsd",
-            "lualine",
-            "nvim",
-            "opencode",
-            "ptpython",
-            "starship",
-            "yazi",
-            "zellij",
-        ]
-        for app in apps:
-            for path in (ROOT / app).rglob("*"):
+        for app in APPS:
+            for path in app.rglob("*"):
                 if not path.is_file() or "__pycache__" in path.parts:
                     continue
                 colors = re.findall(r"(?i)(?<![\w])#?([0-9a-f]{6})(?![\w])", path.read_text())
@@ -104,6 +87,8 @@ class ThemeTests(unittest.TestCase):
 
     def test_readme_palette_and_local_links(self):
         readme = (ROOT / "README.md").read_text()
+        for app in APPS:
+            self.assertIn(f"]({app.name}/", readme, f"Missing installation entry for {app.name}")
         for color in PALETTE["official"] + PALETTE["custom"]:
             self.assertIn(color.lower(), readme.lower())
         for target in re.findall(r"\]\(([^)]+)\)", readme):

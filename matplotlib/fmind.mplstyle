@@ -1,0 +1,28 @@
+# https://matplotlib.org/stable/users/explain/customizing.html
+# Hex colors omit the hash because mplstyle treats it as a comment marker.
+figure.facecolor: ffffff
+figure.edgecolor: ffffff
+axes.facecolor: ffffff
+axes.edgecolor: 595d62
+axes.labelcolor: 202124
+axes.titlecolor: 174ea6
+text.color: 202124
+xtick.color: 595d62
+ytick.color: 595d62
+grid.color: 9aa0a6
+grid.alpha: 1.0
+grid.linewidth: 0.5
+axes.grid: True
+axes.axisbelow: True
+axes.spines.top: False
+axes.spines.right: False
+axes.prop_cycle: cycler('color', ['174ea6', 'a50e0e', '0d652d', '934900', '681da8', '00636d'])
+lines.linewidth: 2.0
+patch.edgecolor: ffffff
+legend.facecolor: f1f3f4
+legend.edgecolor: 9aa0a6
+legend.framealpha: 1.0
+savefig.facecolor: ffffff
+savefig.edgecolor: ffffff
+font.family: sans-serif
+font.sans-serif: Google Sans, DejaVu Sans

@@ -1,0 +1,14 @@
+# https://gitlab.gnome.org/GNOME/gnome-terminal/-/blob/master/src/org.gnome.Terminal.gschema.xml
+[/]
+use-theme-colors=false
+background-color='#ffffff'
+foreground-color='#202124'
+bold-color-same-as-fg=true
+bold-is-bright=true
+cursor-colors-set=true
+cursor-background-color='#4285f4'
+cursor-foreground-color='#202124'
+highlight-colors-set=true
+highlight-background-color='#d2e3fc'
+highlight-foreground-color='#202124'
+palette=['#202124', '#a50e0e', '#0d652d', '#934900', '#174ea6', '#681da8', '#00636d', '#202124', '#595d62', '#a50e0e', '#0d652d', '#934900', '#174ea6', '#681da8', '#00636d', '#202124']

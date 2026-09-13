@@ -1,0 +1,45 @@
+# https://wezterm.org/config/appearance.html#defining-your-own-color-schemes
+[metadata]
+name = "fmind"
+author = "Fmind"
+
+[colors]
+foreground = "#202124"
+background = "#ffffff"
+cursor_bg = "#4285f4"
+cursor_fg = "#202124"
+cursor_border = "#4285f4"
+selection_fg = "#202124"
+selection_bg = "#d2e3fc"
+scrollbar_thumb = "#9aa0a6"
+split = "#9aa0a6"
+ansi = ["#202124", "#a50e0e", "#0d652d", "#934900", "#174ea6", "#681da8", "#00636d", "#202124"]
+brights = ["#595d62", "#a50e0e", "#0d652d", "#934900", "#174ea6", "#681da8", "#00636d", "#202124"]
+
+[colors.tab_bar]
+background = "#f1f3f4"
+inactive_tab_edge = "#9aa0a6"
+
+[colors.tab_bar.active_tab]
+fg_color = "#202124"
+bg_color = "#fbbc04"
+intensity = "Bold"
+italic = false
+
+[colors.tab_bar.inactive_tab]
+fg_color = "#595d62"
+bg_color = "#f1f3f4"
+italic = false
+
+[colors.tab_bar.inactive_tab_hover]
+fg_color = "#202124"
+bg_color = "#d2e3fc"
+italic = false
+
+[colors.tab_bar.new_tab]
+fg_color = "#174ea6"
+bg_color = "#f1f3f4"
+
+[colors.tab_bar.new_tab_hover]
+fg_color = "#202124"
+bg_color = "#d2e3fc"

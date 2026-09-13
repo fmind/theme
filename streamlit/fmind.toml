@@ -1,0 +1,13 @@
+# https://docs.streamlit.io/develop/concepts/configuration/theming
+[theme]
+base = "light"
+primaryColor = "#174ea6"
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f1f3f4"
+textColor = "#202124"
+linkColor = "#174ea6"
+codeBackgroundColor = "#f1f3f4"
+codeTextColor = "#202124"
+borderColor = "#9aa0a6"
+showWidgetBorder = true
+chartCategoricalColors = ["#174ea6", "#a50e0e", "#0d652d", "#934900", "#681da8", "#00636d"]

@@ -5,7 +5,12 @@ version = "1.0.0"
 requires-python = ">=3.14"
 
 [dependency-groups]
-dev = ["pyyaml>=6.0.3", "prompt-toolkit>=3.0.53"]
+dev = [
+    "pyyaml>=6.0.3",
+    "prompt-toolkit>=3.0.53",
+    "configobj>=5.0.9",
+    "tinycss2>=1.5.1",
+]
 
 [tool.uv]
 package = false

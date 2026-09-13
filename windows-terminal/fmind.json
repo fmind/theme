@@ -1,0 +1,23 @@
+{
+  "name": "fmind",
+  "background": "#ffffff",
+  "foreground": "#202124",
+  "cursorColor": "#4285f4",
+  "selectionBackground": "#d2e3fc",
+  "black": "#202124",
+  "red": "#a50e0e",
+  "green": "#0d652d",
+  "yellow": "#934900",
+  "blue": "#174ea6",
+  "purple": "#681da8",
+  "cyan": "#00636d",
+  "white": "#202124",
+  "brightBlack": "#595d62",
+  "brightRed": "#a50e0e",
+  "brightGreen": "#0d652d",
+  "brightYellow": "#934900",
+  "brightBlue": "#174ea6",
+  "brightPurple": "#681da8",
+  "brightCyan": "#00636d",
+  "brightWhite": "#202124"
+}

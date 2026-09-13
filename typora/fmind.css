@@ -1,0 +1,70 @@
+/* https://theme.typora.io/doc/Write-Custom-Theme/ */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #202124;
+    --select-text-bg-color: #d2e3fc;
+    --select-text-font-color: #202124;
+    --monospace: "Google Sans Code", monospace;
+    --side-bar-bg-color: #f1f3f4;
+    --active-file-bg-color: #d2e3fc;
+    --active-file-text-color: #202124;
+    --active-file-border-color: #174ea6;
+    --item-hover-bg-color: #d2e3fc;
+    --item-hover-text-color: #202124;
+    --primary-color: #174ea6;
+    --primary-btn-border-color: #174ea6;
+    --primary-btn-text-color: #ffffff;
+    --window-border: 1px solid #9aa0a6;
+    --search-select-bg-color: #feefc3;
+    --search-select-text-color: #202124;
+}
+body {
+    font-family: "Google Sans", sans-serif;
+    color: #202124;
+    background: #ffffff;
+}
+#write h1, #write h2, #write h3,
+#write h4, #write h5, #write h6,
+a {
+    color: #174ea6;
+}
+blockquote {
+    color: #595d62;
+    background: #f1f3f4;
+    border-left: 3px solid #0d652d;
+}
+code, pre, .md-fences {
+    color: #202124;
+    background: #f1f3f4;
+    font-family: "Google Sans Code", monospace;
+}
+table th {
+    color: #174ea6;
+    background: #f1f3f4;
+}
+table th, table td {
+    border: 1px solid #9aa0a6;
+}
+mark {
+    color: #202124;
+    background: #feefc3;
+}
+em {
+    color: #681da8;
+    font-style: normal;
+}
+.cm-s-inner .cm-comment { color: #595d62; font-style: normal; }
+.cm-s-inner .cm-keyword { color: #174ea6; font-weight: bold; }
+.cm-s-inner .cm-def { color: #174ea6; }
+.cm-s-inner .cm-string, .cm-s-inner .cm-string-2 { color: #0d652d; }
+.cm-s-inner .cm-number, .cm-s-inner .cm-atom { color: #934900; }
+.cm-s-inner .cm-variable, .cm-s-inner .cm-variable-2,
+.cm-s-inner .cm-property, .cm-s-inner .cm-operator { color: #202124; }
+.cm-s-inner .cm-builtin, .cm-s-inner .cm-type { color: #681da8; }
+.cm-s-inner .cm-tag { color: #174ea6; }
+.cm-s-inner .cm-attribute { color: #681da8; }
+.cm-s-inner .cm-error { color: #a50e0e; background: #fad2cf; }
+.CodeMirror-selected { background: #d2e3fc; }
+.CodeMirror-activeline-background { background: #f1f3f4; }
+.CodeMirror-linenumber { color: #595d62; }
+.CodeMirror-cursor { border-left-color: #4285f4; }

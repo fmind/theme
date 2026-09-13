@@ -1,0 +1,11 @@
+# https://docs.xfce.org/apps/xfce4-terminal/advanced
+[Scheme]
+Name=fmind
+ColorForeground=#202124
+ColorBackground=#ffffff
+ColorCursor=#4285f4
+ColorSelection=#d2e3fc
+ColorSelectionUseDefault=FALSE
+ColorBold=#202124
+ColorBoldUseDefault=FALSE
+ColorPalette=#202124;#a50e0e;#0d652d;#934900;#174ea6;#681da8;#00636d;#202124;#595d62;#a50e0e;#0d652d;#934900;#174ea6;#681da8;#00636d;#202124

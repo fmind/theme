@@ -1,0 +1,46 @@
+/* https://github.com/Alexays/Waybar/wiki/Styling */
+window#waybar {
+    background: #f1f3f4;
+    color: #202124;
+    font-family: "Google Sans", sans-serif;
+}
+tooltip {
+    background: #ffffff;
+    color: #202124;
+    border: 1px solid #9aa0a6;
+}
+tooltip label {
+    color: #202124;
+}
+#workspaces button {
+    background: #f1f3f4;
+    color: #595d62;
+    border: none;
+    box-shadow: none;
+    text-shadow: none;
+}
+#workspaces button:hover,
+#workspaces button.focused,
+#workspaces button.active {
+    background: #d2e3fc;
+    color: #202124;
+}
+#workspaces button.urgent,
+#battery.critical:not(.charging) {
+    background: #fad2cf;
+    color: #a50e0e;
+}
+#battery.warning:not(.charging) {
+    background: #feefc3;
+    color: #934900;
+}
+#battery.charging,
+#battery.plugged {
+    background: #ceead6;
+    color: #0d652d;
+}
+#network.disconnected,
+#pulseaudio.muted,
+#wireplumber.muted {
+    color: #595d62;
+}
