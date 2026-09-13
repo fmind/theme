@@ -1,0 +1,7 @@
+# Docs: https://github.com/jesseduffield/lazydocker/blob/master/docs/Config.md
+gui:
+  theme:
+    activeBorderColor: ["#174ea6", bold]
+    inactiveBorderColor: ["#595d62"]
+    selectedLineBgColor: ["#d2e3fc"]
+    optionsTextColor: ["#174ea6"]

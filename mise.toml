@@ -1,0 +1,35 @@
+# https://mise.jdx.dev/configuration.html
+[tools]
+python = "3.13"
+uv = "latest"
+neovim = "latest"
+bat = "latest"
+tree-sitter = "latest"
+ruff = "latest"
+fish = "latest"
+
+[task_config]
+dir = "{{config_root}}"
+
+[tasks.install]
+alias = "i"
+description = "Install validation dependencies and isolated syntax parsers"
+run = ["uv sync --locked", "uv run --locked checks/setup.py"]
+
+[tasks.format]
+alias = "f"
+run = "ruff format ."
+
+[tasks.check]
+alias = "c"
+run = [
+  "ruff check .",
+  "ruff format --check .",
+  "fish --no-config --no-execute fish/fmind.fish",
+  "git config --file delta/fmind.gitconfig --list",
+  "uv run --locked python -m unittest discover -s checks -q",
+]
+
+[tasks.screenshots]
+description = "Record two screenshots from synthetic inputs (requires VHS and Chromium)"
+run = "uv run --locked screenshots/capture.py"

@@ -1,0 +1,84 @@
+# https://partnermarketinghub.withgoogle.com/brands/google-news/visual-identity/color-palette/
+# Expected colours for regression checks; app files are edited directly.
+name: "fmind"
+description: >-
+  Google colours with supporting accents on white: charcoal content, blue control flow, green strings,
+  orange literals, red errors, and purple types; teal supplies information and ANSI cyan.
+ground: &white "#ffffff"
+text: &text "#202124"
+cursor: "#4285f4"
+gutter: "#9aa0a6"
+# Secondary syntax shares colours deliberately; structure supplies the detail.
+roles:
+  variable: *text
+  error: &red "#a50e0e"
+  string: &green "#0d652d"
+  number: &orange "#934900"
+  function: &blue "#174ea6"
+  keyword: *blue
+  type: &purple "#681da8"
+  punctuation: &punctuation "#202124"
+  comment: &comment "#595d62"
+  warning: *orange
+  escape: *blue
+  constant: *orange
+  parameter: *text
+  builtin: *purple
+  property: *text
+# Supporting purple and teal keep ANSI magenta/cyan distinct.
+# White slots use dark foregrounds for this light terminal.
+ansi:
+  black: *text
+  red: *red
+  green: *green
+  yellow: *orange
+  blue: *blue
+  magenta: *purple
+  cyan: &teal "#00636d"
+  white: *punctuation
+  bright_black: *comment
+  bright_red: *red
+  bright_green: *green
+  bright_yellow: *orange
+  bright_blue: *blue
+  bright_magenta: *purple
+  bright_cyan: *teal
+  bright_white: *text
+accents:
+  orange: "#e37400"
+  yellow: "#fbbc04"
+surfaces:
+  line: "#f1f3f4"
+  panel: "#f1f3f4"
+  plus: "#ceead6"
+  minus: "#fad2cf"
+  change: "#feefc3"
+  selection: "#d2e3fc"
+  plus_emph: "#ceead6"
+  minus_emph: "#fad2cf"
+  change_emph: "#fbbc04"
+  heading1: *white
+  heading2: *white
+# Exact Google News hex values (the source page has inconsistent RGB labels).
+official:
+  - "#174ea6"
+  - "#a50e0e"
+  - "#e37400"
+  - "#0d652d"
+  - "#4285f4"
+  - "#ea4335"
+  - "#fbbc04"
+  - "#34a853"
+  - "#d2e3fc"
+  - "#fad2cf"
+  - "#feefc3"
+  - "#ceead6"
+  - "#f1f3f4"
+  - "#9aa0a6"
+  - "#202124"
+custom:
+  - "#ffffff" # white canvas
+  - "#681da8" # purple: types, builtins, emphasis and ANSI magenta
+  - "#00636d" # teal: ANSI cyan
+  - "#595d62" # dark grey: comments and muted text
+  - "#934900" # dark orange: numbers, constants and warnings

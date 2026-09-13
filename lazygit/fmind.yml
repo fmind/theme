@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
+# Docs: https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
+# Merge gui.theme into ~/.config/lazygit/config.yml.
+gui:
+  theme:
+    activeBorderColor: [blue, bold]
+    inactiveBorderColor: ["#9aa0a6"]
+    searchingActiveBorderColor: [yellow, bold]
+    optionsTextColor: [blue]
+    selectedLineBgColor: ["#d2e3fc"]
+    cherryPickedCommitFgColor: ["#0d652d"]
+    cherryPickedCommitBgColor: ["#ceead6"]
+    markedBaseCommitFgColor: ["#174ea6"]
+    markedBaseCommitBgColor: ["#feefc3"]
+    unstagedChangesColor: [red]
