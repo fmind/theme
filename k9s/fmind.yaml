@@ -12,35 +12,35 @@ k9s:
     sectionColor: "#56ff40"
   dialog:
     fgColor: "#56ff40"
-    bgColor: "#000000"
-    buttonFgColor: "#000000"
-    buttonBgColor: "#d4fed2"
-    buttonFocusFgColor: "#000000"
-    buttonFocusBgColor: "#ce9402"
+    bgColor: "#080b08"
+    buttonFgColor: "#080b08"
+    buttonBgColor: "#35ab24"
+    buttonFocusFgColor: "#080b08"
+    buttonFocusBgColor: "#ff7800"
   frame:
     border:
-      fgColor: "#6c776a"
+      fgColor: "#7e8a7b"
       focusColor: "#26fed9"
     menu:
       fgColor: "#56ff40"
-      keyColor: "#ce9402"
-      numKeyColor: "#ce9402"
+      keyColor: "#ff7800"
+      numKeyColor: "#ff7800"
     crumbs:
-      fgColor: "#000000"
-      bgColor: "#d4fed2"
+      fgColor: "#080b08"
+      bgColor: "#35ab24"
       activeBgColor: "#26fed9"
     status:
       newColor: "#2ad7f5"
       modifyColor: "#35ab24"
       deleteColor: "#f63a4b"
-      portForwardColor: "#d4fed2"
+      portForwardColor: "#35ab24"
       activeColor: "#26fed9"
-      pendingColor: "#ce9402"
+      pendingColor: "#ff7800"
       errorColor: "#f63a4b"
     title:
       fgColor: "#26fed9"
       bgColor: default
-      highlightColor: "#ce9402"
+      highlightColor: "#ff7800"
   views:
     table:
       fgColor: "#56ff40"
@@ -48,4 +48,4 @@ k9s:
       header:
         fgColor: "#2ad7f5"
         bgColor: default
-        sorterColor: "#ce9402"
+        sorterColor: "#ff7800"

@@ -2,28 +2,29 @@
 # Every value here is measured against the contract in palette.py.
 name: "fmind"
 description: >-
-  Neon green body on black. Green carries what you wrote, three cool tiers carry
-  what the language knows, amber holds the literals, and one violet holds the
-  keyword. Comments are grey and delimiters bone, so the two things you do not
-  read recede out of the green entirely.
-ground: "#000000"
+  Neon green body on a ground just off black. Green carries what you wrote, three
+  cool tiers carry what the language knows, orange holds the numbers and one
+  violet holds the keyword. Strings are a plain white so prose reads as prose,
+  and the two things you do not read genuinely recede: comments stay grey and
+  delimiters go quiet chalk, so the body is the brightest thing on the line.
+ground: "#080b08"
 text: "#56ff40"
 cursor: "#26fed9"
 ansi:
   black: "#243c29"
   red: "#f63a4b"
-  green: "#d4fed2"
-  yellow: "#ce9402"
+  green: "#d6d8d6"
+  yellow: "#ff7800"
   blue: "#35ab24"
-  magenta: "#d395fb"
+  magenta: "#9578ff"
   cyan: "#2ad7f5"
-  white: "#a4a9a1"
-  bright_black: "#6c776a"
-  bright_red: "#f69579"
+  white: "#a1a6a0"
+  bright_black: "#7e8a7b"
+  bright_red: "#faa77b"
   bright_green: "#26fed9"
-  bright_yellow: "#f6bf46"
+  bright_yellow: "#f8cc28"
   bright_blue: "#029fd7"
-  bright_magenta: "#d045ee"
+  bright_magenta: "#e784f6"
   bright_cyan: "#17bfa6"
   bright_white: "#f1f8f2"
 
@@ -31,16 +32,16 @@ ansi:
 roles:
   variable: "#56ff40"  # text, hue 142, chroma 0.264
   error: "#f63a4b"  # red, hue 22, chroma 0.222
-  string: "#d4fed2"  # green, hue 144, chroma 0.073
-  number: "#ce9402"  # yellow, hue 80, chroma 0.145
+  string: "#d6d8d6"  # green, hue 146, chroma 0.003
+  number: "#ff7800"  # yellow, hue 50, chroma 0.191
   function: "#35ab24"  # blue, hue 141, chroma 0.198
-  keyword: "#d395fb"  # magenta, hue 311, chroma 0.154
+  keyword: "#9578ff"  # magenta, hue 290, chroma 0.193
   type: "#2ad7f5"  # cyan, hue 213, chroma 0.135
-  punctuation: "#a4a9a1"  # white, hue 133, chroma 0.013
-  comment: "#6c776a"  # bright_black, hue 141, chroma 0.024
-  warning: "#f69579"  # bright_red, hue 37, chroma 0.124
+  punctuation: "#a1a6a0"  # white, hue 141, chroma 0.010
+  comment: "#7e8a7b"  # bright_black, hue 139, chroma 0.026
+  warning: "#faa77b"  # bright_red, hue 48, chroma 0.115
   escape: "#26fed9"  # bright_green, hue 177, chroma 0.161
-  constant: "#f6bf46"  # bright_yellow, hue 83, chroma 0.147
+  constant: "#f8cc28"  # bright_yellow, hue 92, chroma 0.168
   parameter: "#029fd7"  # bright_blue, hue 233, chroma 0.136
-  builtin: "#d045ee"  # bright_magenta, hue 320, chroma 0.256
+  builtin: "#e784f6"  # bright_magenta, hue 322, chroma 0.186
   property: "#17bfa6"  # bright_cyan, hue 179, chroma 0.129

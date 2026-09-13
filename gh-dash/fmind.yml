@@ -6,7 +6,7 @@ theme:
   colors:
     primary: "#26fed9"
     secondary: "#2ad7f5"
-    faint: "#6c776a"
-    warning: "#ce9402"
+    faint: "#7e8a7b"
+    warning: "#ff7800"
     error: "#f63a4b"
-    success: "#d4fed2"
+    success: "#35ab24"

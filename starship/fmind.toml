@@ -6,10 +6,10 @@ palette = "fmind"
 
 [palettes.fmind]
 text = "#56ff40"
-green = "#d4fed2"
+green = "#d6d8d6"
 bright_green = "#26fed9"
 red = "#f63a4b"
-orange = "#ce9402"
+orange = "#ff7800"
 blue = "#35ab24"
 cyan = "#2ad7f5"
-gray = "#6c776a"
+gray = "#7e8a7b"

@@ -4,10 +4,10 @@
 
 [delta]
     syntax-theme = "ansi"
-    minus-style = syntax "#43080e"
-    minus-emph-style = syntax "#540d13"
-    plus-style = syntax "#1a211a"
-    plus-emph-style = syntax "#222b22"
-    hunk-header-style = "#6c776a"
+    minus-style = syntax "#451113"
+    minus-emph-style = syntax "#551418"
+    plus-style = syntax "#092821"
+    plus-emph-style = syntax "#0a3229"
+    hunk-header-style = "#7e8a7b"
     file-style = "#26fed9"
-    line-numbers-zero-style = "#6c776a"
+    line-numbers-zero-style = "#7e8a7b"

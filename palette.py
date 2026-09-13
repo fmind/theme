@@ -3,11 +3,21 @@
 render.py imports this and refuses to render a palette that misses any of it,
 so a source file and the theme files it produces are measured by one rule.
 
-Readability here is two independent things, and a green theme needs both checked:
+Readability here is several independent things, and a green theme needs each one
+checked:
 
   contrast    can the colour be seen against the ground (WCAG 2.1)
   separation  can two colours that mean different things be told apart (OKLab)
   saturation  is the colour as vivid as its own hue allows (OKLab, gamut-relative)
+  glare       is the colour quiet enough to read for eight hours (WCAG, ceilings)
+
+The last one is the one every contrast check gets backwards. WCAG has a floor and
+no ceiling, so "more contrast" always scores better and a palette optimised
+against it walks straight to a maximum nobody can sit in front of all day: pure
+black behind a saturated body green, five of fifteen roles above 13.7:1, and the
+two roles carrying the most glyphs - `string` and `punctuation` - the loudest of
+the lot. Legibility and fatigue are not the same measurement. CONTRAST_BOUNDS
+therefore caps as well as floors, and the ground is required to sit off zero.
 
 The second is the one a conventional theme gets for free and a green theme does
 not. When five of eight roles share a hue, contrast alone will happily approve a
@@ -168,12 +178,26 @@ CHROMA_FLOOR = 0.085
 # deliberately recessive, and `punctuation` is a neutral on purpose.
 CHROMA_EXEMPT: frozenset[str] = frozenset({"string", "comment", "punctuation"})
 
-# Contrast bounds against the ground. Comments are capped as well as floored: a
-# "dim" colour as bright as body text is not dim.
+# Contrast bounds against the ground. Ceilings matter as much as floors, and for
+# two different reasons.
+#
+# `comment` is capped because a "dim" colour as bright as body text is not dim.
+# `string` and `punctuation` are capped because of glare. Contrast is the check
+# that reads as free - more is always better - and it is not: the roles that
+# carry the most glyphs are the ones whose loudness you pay for all day, and
+# those two carry more than any other. An earlier revision put `string` at
+# 19.7:1, the brightest role in the palette, on every docstring and every line of
+# markdown prose; `punctuation` sat at L 0.873 against a body at L 0.879, so the
+# brackets and commas - the densest glyphs on a Python line - were the same
+# lightness as the identifiers they enclose and nothing receded.
+#
+# With both capped, three roles clear 14:1 instead of five, which is what gives
+# the eye a brightness hierarchy to skim by instead of leaving hue to do all of
+# the work.
 CONTRAST_BOUNDS: dict[str, tuple[float, float]] = {
     "variable": (9.0, 21.0),
     "error": (5.0, 21.0),
-    "string": (5.0, 21.0),
+    "string": (5.0, 15.0),
     "number": (5.0, 21.0),
     "function": (4.5, 21.0),
     "keyword": (5.0, 21.0),
@@ -185,22 +209,45 @@ CONTRAST_BOUNDS: dict[str, tuple[float, float]] = {
     "parameter": (4.5, 21.0),
     "builtin": (5.0, 21.0),
     "property": (5.0, 21.0),
-    "punctuation": (6.0, 16.0),
+    "punctuation": (6.0, 9.5),
 }
+
+# The ground is never pure black.
+#
+# WCAG says #000000 maximises every contrast ratio in the palette and stops
+# there, because it models legibility and not fatigue. A saturated body green at
+# L 0.88 against a zero ground blooms - the glyph edges halate, worse with
+# astigmatism, and the eye re-accommodates on every saccade between the terminal
+# and anything else on the screen. Lifting the ground by a few thousandths of a
+# luminance costs about a point of contrast and removes the hard edge.
+#
+# It is also what makes the second grounds work. `line` sits 0.006 above the
+# ground; against a ground of exactly zero there is nothing below it to pull
+# from, and the whole ladder is squeezed into the bottom of the range.
+MIN_GROUND_LUMINANCE = 0.0015
+MAX_GROUND_LUMINANCE = 0.0120
 
 # A theme ships more than one ground. A diff row, the current line, a panel and
 # a selection are all the ground with a little of one slot pulled into it, and
 # every one of them has text on top: delta paints full syntax onto a diff row,
 # so checking body text alone is not enough.
 #
-# They are named by target luminance rather than by mix weight, because the mix
-# happens in linear light and the slots do not start from the same place. A 0.18
-# blend toward this palette's near-white `green` lands at luminance 0.161 - an
-# added line brighter than most themes' body text, with body text at 3.7:1 on
-# top of it - while the same 0.18 toward `red` lands at 0.041. One luminance for
-# every surface means a plus row and a minus row sit the same distance off the
-# ground and only the hue tells them apart, which is the whole point of a diff.
-SURFACE_LEVEL: dict[str, float] = {
+# They are named by how far they sit *above the ground* rather than by mix
+# weight, because the mix happens in linear light and the slots do not start from
+# the same place. A 0.18 blend toward this palette's near-white `green` lands at
+# luminance 0.161 - an added line brighter than most themes' body text, with body
+# text at 3.7:1 on top of it - while the same 0.18 toward `red` lands at 0.041.
+# One lift for every surface means a plus row and a minus row sit the same
+# distance off the ground and only the hue tells them apart, which is the whole
+# point of a diff.
+#
+# A lift, not an absolute luminance. These were absolute while the ground was
+# #000000, where the two are the same number and the difference never showed.
+# The moment the ground lifts off zero they stop being the same: `line` at an
+# absolute 0.006 sits 0.003 above a lifted ground instead of 0.006, and the
+# current line quietly halves. What the surface means is "this far off whatever
+# the ground is", so that is what it stores.
+SURFACE_LIFT: dict[str, float] = {
     "line": 0.006,       # the line the cursor is on; must not read as highlighted
     "panel": 0.010,      # sidebars, completion menus, toolbars
     "plus": 0.014,       # an added line
@@ -210,20 +257,35 @@ SURFACE_LEVEL: dict[str, float] = {
     "plus_emph": 0.022,  # the changed run inside an added line
     "minus_emph": 0.022,
     "change_emph": 0.022,
+    # A markdown heading bar is a ground like any other, and it has the heading
+    # sitting on it. Only the top two levels get one: below that the colour
+    # ladder carries the level on its own, and a bar on every line is noise.
+    "heading1": 0.022,
+    "heading2": 0.013,
 }
 
-# What the slot is pulled from. `bright_white` is the neutral: a selection or a
-# current line should not pick a side.
+# What the slot is pulled from. `bright_white` is the neutral: a selection, a
+# current line and a heading bar should not pick a side.
+#
+# The added row is pulled from `bright_green` rather than from `green`, because
+# `green` is the slot `string` occupies and a palette is free to spend it on a
+# near-white - a docstring that reads as prose is a legitimate choice. When it
+# does, an added row pulled from that slot lands neutral and a diff loses the
+# one thing it has to get right. `bright_green` carries `escape`, which is green
+# in every palette this contract admits, so a plus row is green whatever slot 2
+# is spent on.
 SURFACE_SLOT: dict[str, str] = {
     "line": "bright_white",
     "panel": "green",
-    "plus": "green",
+    "plus": "bright_green",
     "minus": "red",
     "change": "yellow",
     "selection": "green",
-    "plus_emph": "green",
+    "plus_emph": "bright_green",
     "minus_emph": "red",
     "change_emph": "yellow",
+    "heading1": "bright_white",
+    "heading2": "bright_white",
 }
 
 # Body text has to clear the same 9:1 it clears against the ground. The other
@@ -432,14 +494,15 @@ def mix(a: str, b: str, weight: float) -> str:
 
 
 def surface(palette: Palette, name: str) -> str:
-    """The named second ground, solved for its target luminance.
+    """The named second ground, solved for its lift above the ground.
 
     mix() blends in linear light and luminance is linear in those channels, so
-    the weight that lands on a given luminance is exact rather than searched.
+    the weight that lands a surface exactly SURFACE_LIFT[name] above the ground
+    is computed rather than searched.
     """
     ground = luminance(palette.ground)
     slot = luminance(palette.ansi[SURFACE_SLOT[name]])
-    weight = (SURFACE_LEVEL[name] - ground) / (slot - ground)
+    weight = SURFACE_LIFT[name] / (slot - ground)
     return mix(palette.ground, palette.ansi[SURFACE_SLOT[name]], weight)
 
 
@@ -500,6 +563,19 @@ def audit(palette: Palette) -> list[str]:
     """Every way this palette would be hard to read. Empty means it ships."""
     problems: list[str] = []
 
+    ground = luminance(palette.ground)
+    if ground < MIN_GROUND_LUMINANCE:
+        problems.append(
+            f"ground {palette.ground} has luminance {ground:.4f}, want at least "
+            f"{MIN_GROUND_LUMINANCE} — a saturated body on a zero ground halates, and the "
+            f"second grounds have nothing to sit above"
+        )
+    elif ground > MAX_GROUND_LUMINANCE:
+        problems.append(
+            f"ground {palette.ground} has luminance {ground:.4f}, want at most "
+            f"{MAX_GROUND_LUMINANCE} — it stops reading as a phosphor tube"
+        )
+
     for role, (floor, ceiling) in CONTRAST_BOUNDS.items():
         colour = palette.role(role)
         slot = SLOT_OF[role]
@@ -537,7 +613,7 @@ def audit(palette: Palette) -> list[str]:
     # The grounds that are not the ground. Unchecked, these are where a palette
     # that passes everything above still ships an unreadable added line.
     body_floor = CONTRAST_BOUNDS["variable"][0]
-    for name in SURFACE_LEVEL:
+    for name in SURFACE_LIFT:
         ground = surface(palette, name)
         got = contrast(palette.text, ground)
         if got < body_floor:

@@ -1,65 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="560" height="422" role="img" aria-label="fmind roles">
-  <rect width="100%" height="100%" fill="#000000"/>
+  <rect width="100%" height="100%" fill="#080b08"/>
   <g font-family="FiraCode Nerd Font Mono, Fira Code, DejaVu Sans Mono, monospace" font-size="13">
     <rect x="16.0" y="20" width="70" height="17" rx="2" fill="#56ff40"/>
     <text x="98.0" y="33" fill="#56ff40">variable</text>
-    <text x="246.0" y="33" fill="#a4a9a1">#56ff40</text>
-    <text x="356.0" y="33" fill="#6c776a">foreground</text>
+    <text x="246.0" y="33" fill="#a1a6a0">#56ff40</text>
+    <text x="356.0" y="33" fill="#7e8a7b">foreground</text>
     <rect x="16.0" y="46" width="70" height="17" rx="2" fill="#f63a4b"/>
     <text x="98.0" y="59" fill="#56ff40">error</text>
-    <text x="246.0" y="59" fill="#a4a9a1">#f63a4b</text>
-    <text x="356.0" y="59" fill="#6c776a">1 red</text>
-    <rect x="16.0" y="72" width="70" height="17" rx="2" fill="#d4fed2"/>
+    <text x="246.0" y="59" fill="#a1a6a0">#f63a4b</text>
+    <text x="356.0" y="59" fill="#7e8a7b">1 red</text>
+    <rect x="16.0" y="72" width="70" height="17" rx="2" fill="#d6d8d6"/>
     <text x="98.0" y="85" fill="#56ff40">string</text>
-    <text x="246.0" y="85" fill="#a4a9a1">#d4fed2</text>
-    <text x="356.0" y="85" fill="#6c776a">2 green</text>
-    <rect x="16.0" y="98" width="70" height="17" rx="2" fill="#ce9402"/>
+    <text x="246.0" y="85" fill="#a1a6a0">#d6d8d6</text>
+    <text x="356.0" y="85" fill="#7e8a7b">2 green</text>
+    <rect x="16.0" y="98" width="70" height="17" rx="2" fill="#ff7800"/>
     <text x="98.0" y="111" fill="#56ff40">number</text>
-    <text x="246.0" y="111" fill="#a4a9a1">#ce9402</text>
-    <text x="356.0" y="111" fill="#6c776a">3 yellow</text>
+    <text x="246.0" y="111" fill="#a1a6a0">#ff7800</text>
+    <text x="356.0" y="111" fill="#7e8a7b">3 yellow</text>
     <rect x="16.0" y="124" width="70" height="17" rx="2" fill="#35ab24"/>
     <text x="98.0" y="137" fill="#56ff40">function</text>
-    <text x="246.0" y="137" fill="#a4a9a1">#35ab24</text>
-    <text x="356.0" y="137" fill="#6c776a">4 blue</text>
-    <rect x="16.0" y="150" width="70" height="17" rx="2" fill="#d395fb"/>
+    <text x="246.0" y="137" fill="#a1a6a0">#35ab24</text>
+    <text x="356.0" y="137" fill="#7e8a7b">4 blue</text>
+    <rect x="16.0" y="150" width="70" height="17" rx="2" fill="#9578ff"/>
     <text x="98.0" y="163" fill="#56ff40">keyword</text>
-    <text x="246.0" y="163" fill="#a4a9a1">#d395fb</text>
-    <text x="356.0" y="163" fill="#6c776a">5 magenta</text>
+    <text x="246.0" y="163" fill="#a1a6a0">#9578ff</text>
+    <text x="356.0" y="163" fill="#7e8a7b">5 magenta</text>
     <rect x="16.0" y="176" width="70" height="17" rx="2" fill="#2ad7f5"/>
     <text x="98.0" y="189" fill="#56ff40">type</text>
-    <text x="246.0" y="189" fill="#a4a9a1">#2ad7f5</text>
-    <text x="356.0" y="189" fill="#6c776a">6 cyan</text>
-    <rect x="16.0" y="202" width="70" height="17" rx="2" fill="#a4a9a1"/>
+    <text x="246.0" y="189" fill="#a1a6a0">#2ad7f5</text>
+    <text x="356.0" y="189" fill="#7e8a7b">6 cyan</text>
+    <rect x="16.0" y="202" width="70" height="17" rx="2" fill="#a1a6a0"/>
     <text x="98.0" y="215" fill="#56ff40">punctuation</text>
-    <text x="246.0" y="215" fill="#a4a9a1">#a4a9a1</text>
-    <text x="356.0" y="215" fill="#6c776a">7 white</text>
-    <rect x="16.0" y="228" width="70" height="17" rx="2" fill="#6c776a"/>
+    <text x="246.0" y="215" fill="#a1a6a0">#a1a6a0</text>
+    <text x="356.0" y="215" fill="#7e8a7b">7 white</text>
+    <rect x="16.0" y="228" width="70" height="17" rx="2" fill="#7e8a7b"/>
     <text x="98.0" y="241" fill="#56ff40">comment</text>
-    <text x="246.0" y="241" fill="#a4a9a1">#6c776a</text>
-    <text x="356.0" y="241" fill="#6c776a">8 bright black</text>
-    <rect x="16.0" y="254" width="70" height="17" rx="2" fill="#f69579"/>
+    <text x="246.0" y="241" fill="#a1a6a0">#7e8a7b</text>
+    <text x="356.0" y="241" fill="#7e8a7b">8 bright black</text>
+    <rect x="16.0" y="254" width="70" height="17" rx="2" fill="#faa77b"/>
     <text x="98.0" y="267" fill="#56ff40">warning</text>
-    <text x="246.0" y="267" fill="#a4a9a1">#f69579</text>
-    <text x="356.0" y="267" fill="#6c776a">9 bright red</text>
+    <text x="246.0" y="267" fill="#a1a6a0">#faa77b</text>
+    <text x="356.0" y="267" fill="#7e8a7b">9 bright red</text>
     <rect x="16.0" y="280" width="70" height="17" rx="2" fill="#26fed9"/>
     <text x="98.0" y="293" fill="#56ff40">escape</text>
-    <text x="246.0" y="293" fill="#a4a9a1">#26fed9</text>
-    <text x="356.0" y="293" fill="#6c776a">10 bright green</text>
-    <rect x="16.0" y="306" width="70" height="17" rx="2" fill="#f6bf46"/>
+    <text x="246.0" y="293" fill="#a1a6a0">#26fed9</text>
+    <text x="356.0" y="293" fill="#7e8a7b">10 bright green</text>
+    <rect x="16.0" y="306" width="70" height="17" rx="2" fill="#f8cc28"/>
     <text x="98.0" y="319" fill="#56ff40">constant</text>
-    <text x="246.0" y="319" fill="#a4a9a1">#f6bf46</text>
-    <text x="356.0" y="319" fill="#6c776a">11 bright yellow</text>
+    <text x="246.0" y="319" fill="#a1a6a0">#f8cc28</text>
+    <text x="356.0" y="319" fill="#7e8a7b">11 bright yellow</text>
     <rect x="16.0" y="332" width="70" height="17" rx="2" fill="#029fd7"/>
     <text x="98.0" y="345" fill="#56ff40">parameter</text>
-    <text x="246.0" y="345" fill="#a4a9a1">#029fd7</text>
-    <text x="356.0" y="345" fill="#6c776a">12 bright blue</text>
-    <rect x="16.0" y="358" width="70" height="17" rx="2" fill="#d045ee"/>
+    <text x="246.0" y="345" fill="#a1a6a0">#029fd7</text>
+    <text x="356.0" y="345" fill="#7e8a7b">12 bright blue</text>
+    <rect x="16.0" y="358" width="70" height="17" rx="2" fill="#e784f6"/>
     <text x="98.0" y="371" fill="#56ff40">builtin</text>
-    <text x="246.0" y="371" fill="#a4a9a1">#d045ee</text>
-    <text x="356.0" y="371" fill="#6c776a">13 bright magenta</text>
+    <text x="246.0" y="371" fill="#a1a6a0">#e784f6</text>
+    <text x="356.0" y="371" fill="#7e8a7b">13 bright magenta</text>
     <rect x="16.0" y="384" width="70" height="17" rx="2" fill="#17bfa6"/>
     <text x="98.0" y="397" fill="#56ff40">property</text>
-    <text x="246.0" y="397" fill="#a4a9a1">#17bfa6</text>
-    <text x="356.0" y="397" fill="#6c776a">14 bright cyan</text>
+    <text x="246.0" y="397" fill="#a1a6a0">#17bfa6</text>
+    <text x="356.0" y="397" fill="#7e8a7b">14 bright cyan</text>
   </g>
 </svg>

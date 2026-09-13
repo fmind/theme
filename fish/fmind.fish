@@ -5,29 +5,29 @@
 set -g fish_color_normal 56ff40  # variable
 set -g fish_color_command 35ab24 --bold  # function
 set -g fish_color_param 029fd7  # parameter
-set -g fish_color_option d045ee  # builtin
-set -g fish_color_keyword d395fb --bold  # keyword
-set -g fish_color_quote d4fed2  # string
+set -g fish_color_option e784f6  # builtin
+set -g fish_color_keyword 9578ff --bold  # keyword
+set -g fish_color_quote d6d8d6  # string
 set -g fish_color_escape 26fed9  # escape
 set -g fish_color_redirection 2ad7f5  # type
 set -g fish_color_operator 17bfa6  # property
-set -g fish_color_end f6bf46  # constant
+set -g fish_color_end f8cc28  # constant
 set -g fish_color_error f63a4b --bold  # error
-set -g fish_color_comment 6c776a  # comment
-set -g fish_color_autosuggestion 6c776a  # comment
-set -g fish_color_cancel f69579  # warning
+set -g fish_color_comment 7e8a7b  # comment
+set -g fish_color_autosuggestion 7e8a7b  # comment
+set -g fish_color_cancel faa77b  # warning
 set -g fish_color_cwd 56ff40  # variable
 set -g fish_color_cwd_root f63a4b --bold  # error
 set -g fish_color_user 17bfa6  # property
 set -g fish_color_host 2ad7f5  # type
-set -g fish_color_host_remote ce9402  # number
-set -g fish_color_selection --background=222b22
-set -g fish_color_search_match --background=222b22
+set -g fish_color_host_remote ff7800  # number
+set -g fish_color_selection --background=2b2c2b
+set -g fish_color_search_match --background=2b2c2b
 set -g fish_color_valid_path --underline
 
 # Completion pager
-set -g fish_pager_color_progress 6c776a
+set -g fish_pager_color_progress 7e8a7b
 set -g fish_pager_color_prefix 2ad7f5 --bold
 set -g fish_pager_color_completion 56ff40
-set -g fish_pager_color_description 6c776a
-set -g fish_pager_color_selected_background --background=222b22
+set -g fish_pager_color_description 7e8a7b
+set -g fish_pager_color_selected_background --background=2b2c2b
