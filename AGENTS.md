@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Fmind is a light theme. See [README.md](README.md) for installation and [checks/README.md](checks/README.md) for validation.
+Fmind is a light theme. See [README.md](README.md) for installation and maintenance.
 
 - Edit native theme files directly. Keep palette expectations, README and palette SVG aligned.
 - Keep text contrast at least 4.5:1 on backgrounds, selections, diffs and filled labels.

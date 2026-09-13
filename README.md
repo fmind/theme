@@ -43,7 +43,7 @@ Font recommendation: **GoogleSansCode Nerd Font Mono**. Font installation and se
 | --- | --- |
 | ![Neovim and Fish in Zellij, including search and selected code](screenshots/zellij.png) | ![Markdown syntax in Neovim](screenshots/markdown.png) |
 
-Two real application captures, using synthetic examples and VHS. [Validation and capture instructions](checks/README.md).
+Two real application captures, using synthetic examples and VHS. See Maintenance below to refresh them.
 
 ## Install
 
@@ -88,5 +88,24 @@ repl.use_ui_colorscheme("fmind")
 ```
 
 Named ANSI colors follow the terminal palette; use the matching Ghostty theme. Both normal and bright slots use readable dark foregrounds, including the slots named white. Apps that use ANSI colors as backgrounds or define their own colors may need app-specific settings; a terminal palette cannot control every rendered color.
+
+## Maintenance
+
+Install [mise](https://mise.jdx.dev/) and a C compiler, then run:
+
+```sh
+mise trust
+mise install
+mise run install
+mise run check
+```
+
+Python uses 3.14; other tools track `latest` in `mise.toml`. `mise.lock` and `uv.lock` record resolved versions. Python dependencies and Ruff settings live in `pyproject.toml`. Run `mise run format` to format Python.
+
+Setup downloads pinned Neovim parsers into `.cache/syntax/`. The gate runs 15 tests covering native file syntax, Neovim and bat highlighting, palette consistency and text contrast. App configuration stays isolated; live services are never contacted. CI runs the same setup and checks. Parsing an app's files does not verify all its runtime states.
+
+Edit native themes directly and keep `checks/palette.yaml`, `checks/syntax.yaml`, this README and `screenshots/palette.svg` aligned. Fixtures cover nine languages. Known parser limits: bat leaves YAML fences plain and cannot draw strikethrough; Tree-sitter treats quoted TOML keys as strings. Use Neovim's `:Inspect` and `:InspectTree` to diagnose highlighting.
+
+After visual changes, `mise run screenshots` refreshes the two PNGs using synthetic inputs and a temporary home. It requires setup above, VHS, ttyd, FFmpeg, Zellij, Fontconfig, GoogleSansCode Nerd Font Mono and Chromium. Set `VHS_CHROME_PATH` to Chromium, or install Playwright Chromium in its default cache.
 
 Maintained alongside [fmind/dot](https://github.com/fmind/dot). [MIT license](LICENSE).

@@ -1,6 +1,6 @@
 # https://mise.jdx.dev/configuration.html
 [tools]
-python = "3.13"
+python = "3.14"
 uv = "latest"
 neovim = "latest"
 bat = "latest"

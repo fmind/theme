@@ -2,7 +2,7 @@
 [project]
 name = "fmind-theme"
 version = "0.0.0"
-requires-python = ">=3.13,<3.14"
+requires-python = ">=3.14,<3.15"
 
 [dependency-groups]
 dev = ["pyyaml==6.0.3", "prompt-toolkit==3.0.53"]
@@ -12,4 +12,4 @@ package = false
 
 [tool.ruff]
 line-length = 120
-target-version = "py313"
+target-version = "py314"
