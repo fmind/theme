@@ -293,6 +293,83 @@ SURFACE_SLOT: dict[str, str] = {
 # holding every role to 4.5:1 leaves a diff background too faint to see.
 SURFACE_ROLE_FLOOR = 3.0
 
+# The gutter: line numbers, listchars, indent guides. Every glyph that is not
+# content and not a comment.
+#
+# This was the one foreground the renderers mixed by hand, and it drifted into
+# exactly the collision the contract exists to catch: at a 0.22 blend it landed
+# on #7a7e7b, 0.036 from `comment` at #7e8a7b. A line number the same colour as
+# a comment is two kinds of information wearing one colour, and nothing measured
+# it because the mix happened in render.py rather than here.
+#
+# Stored as a lift for the same reason the surfaces are: what it means is "this
+# far off whatever the ground is", and pulling from `bright_white` keeps it
+# neutral so it does not read as a dim comment of its own.
+GUTTER_LIFT = 0.130
+GUTTER_SLOT = "bright_white"
+
+# The chrome accent quartet. A status bar labels four kinds of thing - a key to
+# press, a count, a name, an overflow - and hands them to whatever the tool
+# calls emphasis_0..3. They therefore need the same separation as two syntax
+# roles sitting side by side, which the first quartet did not have: `type`,
+# `escape` and `property` are all cool, and escape/property measured 0.175 while
+# type/escape measured 0.127 and type/property 0.119. Two of the four accents
+# were the same teal, so a bar that looked like it carried four kinds of
+# information carried three.
+#
+# The green is last because that is the index a status bar spends on the key you
+# actually press. Zellij's bottom bar reads emphasis_3 for `Ctrl g`, and before
+# this the bar had no green anywhere in base mode: `ribbon_selected` is the only
+# green entry and it never appears there.
+EMPHASIS: tuple[str, ...] = ("number", "type", "builtin", "variable")
+
+# What a tool means by "added", "ok", "modified" or "deleted".
+#
+# A palette is free to spend slot 2 on a near-white `string`, and this one does -
+# a docstring that reads as prose is the point. The cost is that every consumer
+# asking for "green" gets a white, and the ones that mean *added* or *ok* by it
+# get a white too. The README states the fix, and four of this repo's own
+# renderers still got it wrong: the Neovim `Added` group, opencode's `success`
+# and `diffAdded`, and ptpython's `generic.inserted` all painted an added line
+# in a chroma-0.003 white while the removed line stayed red. A diff whose plus
+# row has no hue has lost the one thing it has to get right.
+#
+# Naming it here means a renderer asks for the meaning and cannot reach the
+# wrong slot by remembering the rule wrongly.
+SEMANTIC: dict[str, str] = {
+    "added": "escape",     # green in any palette this contract admits
+    "ok": "function",      # the green that is not the body colour
+    "modified": "number",
+    "deleted": "error",
+}
+
+# The six markdown heading levels.
+#
+# Markdown is the one filetype where the palette is the whole interface, and six
+# levels need six colours rather than six weights of one. Which six is a
+# contract question, not a render detail: the first ladder put `property` at
+# level five, 0.119 from the `type` at level two and 0.121 from the
+# `punctuation` at level six, and both went unmeasured because the ladder lived
+# in render.py.
+#
+# Adjacent levels hold BASE_SEPARATION and every pair holds the floor, and
+# prominence never rises as the level descends. `comment`, `warning` and `error`
+# are not admissible: a heading must not borrow a recessive or a signal role.
+HEADING_LADDER: tuple[str, ...] = (
+    "variable",   # body green, with a bar
+    "constant",   # amber, with a bar
+    "type",       # cyan
+    "number",     # orange
+    "keyword",    # violet
+    "function",   # the darker green
+)
+
+# `punctuation` is deliberately not in the ladder. Chalk carries the bullets,
+# the quote bars and the table rules in the same buffer, so a level-six heading
+# painted chalk was indistinguishable from a table row - and it collided with
+# both of its neighbours besides, at 0.119 from `type` and 0.121 from itself one
+# level down.
+
 # Bold is the one axis that costs no colour, and FiraCode ships a real Bold
 # face while shipping no italic at all - so bold carries what hue cannot.
 # Applied to the roles you scan for rather than read through.
@@ -506,6 +583,48 @@ def surface(palette: Palette, name: str) -> str:
     return mix(palette.ground, palette.ansi[SURFACE_SLOT[name]], weight)
 
 
+def recede(colour: str, ground: str, target: float) -> str:
+    """Pull `colour` toward `ground` until it sits at exactly `target` contrast.
+
+    A second tier of the same meaning - a staged hunk against an unstaged one -
+    needs to keep its hue and lose its urgency, and the amount to lose is a
+    contrast, not a blend weight. gitsigns makes exactly this mistake: it dims
+    the three sign colours by a flat 30% to derive its staged tier, which landed
+    staged-delete at 1.9:1 and staged-change at 2.4:1, under the floor every
+    other role in this palette has to clear. Same glyph, same column, invisible.
+
+    Solved rather than searched, because contrast is monotonic in the blend:
+    luminance is linear in the channels mix() interpolates.
+    """
+    lo, hi = luminance(ground), luminance(colour)
+    want = target * (lo + 0.05) - 0.05
+    if not lo < want < hi:
+        return colour
+    return mix(ground, colour, (want - lo) / (hi - lo))
+
+
+# What a second tier of the same meaning is held to.
+#
+# The number is decided by `deleted`, which is the tightest of the three: `error`
+# already sits at 5.30:1, so there is very little room between it and the floor,
+# and a target of 4.0 leaves its receded tier only 0.076 away - under the
+# separation floor, which is to say invisible as a distinction. At 3.5 the three
+# tiers sit 0.399, 0.201 and 0.110 from their first tiers and all still clear the
+# 3:1 a surface gives a role.
+RECEDED_CONTRAST = 3.5
+
+
+def gutter(palette: Palette) -> str:
+    """The non-content foreground: line numbers, listchars, indent guides.
+
+    Solved for its lift like a surface, and audited like a role, because it is
+    read against the ground and has to stay clear of `comment`.
+    """
+    ground = luminance(palette.ground)
+    slot = luminance(palette.ansi[GUTTER_SLOT])
+    return mix(palette.ground, palette.ansi[GUTTER_SLOT], GUTTER_LIFT / (slot - ground))
+
+
 # ------------------------------------------------------------------- the object
 
 
@@ -534,6 +653,30 @@ class Palette:
     def surface(self, name: str) -> str:
         """A second ground: a diff row, a panel, the current line, a selection."""
         return surface(self, name)
+
+    @property
+    def gutter(self) -> str:
+        """Line numbers, listchars, indent guides: present but not content."""
+        return gutter(self)
+
+    def semantic(self, meaning: str) -> str:
+        """The colour for `added`, `ok`, `modified` or `deleted`.
+
+        Always this rather than a slot by name: slot 2 is a legitimate place for
+        a near-white `string`, and reaching for it because it is called "green"
+        is how four renderers came to paint an added line without hue.
+        """
+        return self.role(SEMANTIC[meaning])
+
+    @property
+    def emphasis(self) -> tuple[str, ...]:
+        """The chrome accent quartet, in the order tools index it."""
+        return tuple(self.role(role) for role in EMPHASIS)
+
+    @property
+    def headings(self) -> tuple[str, ...]:
+        """The six markdown heading colours, level one first."""
+        return tuple(self.role(role) for role in HEADING_LADDER)
 
 
 def load(path: Path) -> Palette:
@@ -636,6 +779,70 @@ def audit(palette: Palette) -> list[str]:
             problems.append(
                 f"{a} and {b} are {got:.3f} apart, want {want:.3f} "
                 f"(they sit side by side often)"
+            )
+
+    # The gutter is read against the ground like a role, and it is the one
+    # foreground a renderer used to mix by hand - which is how it ended up
+    # 0.036 from `comment`.
+    edge = gutter(palette)
+    got = contrast(edge, palette.ground)
+    if got < SURFACE_ROLE_FLOOR:
+        problems.append(
+            f"the gutter {edge} is {got:.1f}:1 against the ground, want "
+            f"{SURFACE_ROLE_FLOOR} — a line number you cannot read is not dim, it is gone"
+        )
+    got = separation(edge, palette.role("comment"))
+    if got < SEPARATION_FLOOR:
+        problems.append(
+            f"the gutter {edge} is {got:.3f} from comment, want {SEPARATION_FLOOR} — "
+            f"a line number the same colour as a comment is two meanings in one colour"
+        )
+
+    # A receded tier has to stay readable and stay distinguishable from the tier
+    # it recedes from, or it is not a tier.
+    for meaning in SEMANTIC:
+        first = palette.semantic(meaning)
+        second = recede(first, palette.ground, RECEDED_CONTRAST)
+        got = contrast(second, palette.ground)
+        if got < SURFACE_ROLE_FLOOR:
+            problems.append(
+                f"the receded {meaning} {second} is {got:.1f}:1 against the ground, "
+                f"want {SURFACE_ROLE_FLOOR}"
+            )
+        got = separation(first, second)
+        if got < SEPARATION_FLOOR:
+            problems.append(
+                f"{meaning} and its receded tier are {got:.3f} apart, want "
+                f"{SEPARATION_FLOOR} — lower RECEDED_CONTRAST or the two tiers are one"
+            )
+
+    # The chrome accents and the heading ladder are sets of colours that appear
+    # together, so they are held to the same distances as adjacent syntax roles.
+    for a, b in itertools.combinations(EMPHASIS, 2):
+        got = separation(palette.role(a), palette.role(b))
+        if got < BASE_SEPARATION:
+            problems.append(
+                f"emphasis accents {a} and {b} are {got:.3f} apart, want "
+                f"{BASE_SEPARATION} — a status bar shows all four at once"
+            )
+
+    for level, (a, b) in enumerate(itertools.pairwise(HEADING_LADDER), start=1):
+        got = separation(palette.role(a), palette.role(b))
+        if got < BASE_SEPARATION:
+            problems.append(
+                f"heading {level} ({a}) and {level + 1} ({b}) are {got:.3f} apart, "
+                f"want {BASE_SEPARATION} — consecutive levels nest"
+            )
+        if lightness(palette.role(b)) > lightness(palette.role(a)) + 0.005:
+            problems.append(
+                f"heading {level + 1} ({b}) is lighter than heading {level} ({a}) — "
+                f"prominence has to fall as the level descends"
+            )
+    for a, b in itertools.combinations(HEADING_LADDER, 2):
+        got = separation(palette.role(a), palette.role(b))
+        if got < SEPARATION_FLOOR:
+            problems.append(
+                f"headings {a} and {b} are {got:.3f} apart, want {SEPARATION_FLOOR}"
             )
 
     return problems

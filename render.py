@@ -28,7 +28,10 @@ from pathlib import Path
 from palette import (
     ANSI,
     BOLD_ROLES,
+    HEADING_LADDER,
+    RECEDED_CONTRAST,
     ROLES,
+    SEMANTIC,
     SLOT_OF,
     Palette,
     PaletteError,
@@ -37,8 +40,8 @@ from palette import (
     lightness,
     load,
     measure,
-    mix,
     oklch_hex,
+    recede,
 )
 
 ROOT = Path(__file__).parent
@@ -99,14 +102,21 @@ def zellij(p: Palette) -> tuple[str, str]:
     `frame_unselected` is emitted rather than left out. Zellij falls back to
     `frame_selected` for both, so an unfocused pane is framed exactly like the
     focused one and the frame stops answering the only question it is there for.
+
+    The bottom bar had no green in it at all. `ribbon_selected` is the only green
+    entry and in base mode it never appears there - it is the active tab, at the
+    top. What the status bar actually paints is eight mode names from
+    `ribbon_unselected` and eight key chips from `emphasis_3`, so that index is
+    where the body green belongs.
     """
     r = {role: p.role(role) for role in ROLES}
     panel, selection = p.surface("panel"), p.surface("selection")
 
-    # One emphasis quartet for everything that is read rather than filled. Zellij
-    # spends these on keybinding hints, so they are the four accents that stay
-    # legible small: warm first, then the three cool tiers.
-    accents = (r["number"], r["type"], r["escape"], r["property"])
+    # One emphasis quartet for everything that is read rather than filled, from
+    # the contract rather than picked here: two of the four used to be the same
+    # teal, and the bottom bar spends emphasis_3 on the key you press, so that
+    # index is where the green goes.
+    accents = p.emphasis
 
     def block(name: str, base: str, background: str | None, emphasis=accents) -> str:
         rows = [f'            base "{base}"']
@@ -125,8 +135,11 @@ def zellij(p: Palette) -> tuple[str, str]:
         # the status bar and anything else that is plain text
         block("text_unselected", r["punctuation"], p.ground),
         block("text_selected", p.text, selection),
-        # tabs and mode chips: the selected one is the only lit thing up there
-        block("ribbon_unselected", r["comment"], panel),
+        # tabs and mode chips: the selected one is the only lit thing up there.
+        # The unselected ribbon carries the eight mode names along the bottom
+        # bar, which is a row of labels you scan rather than prose you read
+        # through - `comment` put them at 4.6:1 on the panel, so they are chalk.
+        block("ribbon_unselected", r["punctuation"], panel),
         block("ribbon_selected", p.text, selection),
         # pane frames: focused is green, unfocused recedes, highlight is the
         # orange Zellij already uses for renaming and searching
@@ -419,7 +432,9 @@ def opencode(p: Palette) -> tuple[str, str]:
         "accent": "keyword",
         "error": "error",
         "warning": "warning",
-        "success": "string",
+        # `success` and `diffAdded` used to point at `string`, which is a white
+        # here: opencode's own version of the slot-2 trap. SEMANTIC names them.
+        "success": SEMANTIC["ok"],
         "info": "type",
         "text": "variable",
         "textMuted": "comment",
@@ -429,7 +444,7 @@ def opencode(p: Palette) -> tuple[str, str]:
         "border": "comment",
         "borderActive": "escape",
         "borderSubtle": "element",
-        "diffAdded": "string",
+        "diffAdded": SEMANTIC["added"],
         "diffRemoved": "error",
         "diffContext": "comment",
         "diffHunkHeader": "comment",
@@ -441,18 +456,24 @@ def opencode(p: Palette) -> tuple[str, str]:
         "diffLineNumber": "comment",
         "diffAddedLineNumberBg": "addedGutter",
         "diffRemovedLineNumberBg": "removedGutter",
+        # Markdown is the same filetype in both tools, so it is painted the same
+        # way as the colorscheme paints it: a heading at level one, inline code in
+        # `escape`, chalk on the bullets and the rules. It used to disagree on all
+        # three - a white inline code, violet bullets, an amber strong - which
+        # makes a document look like a different document depending on which
+        # window it is in.
         "markdownText": "variable",
-        "markdownHeading": "function",
-        "markdownLink": "type",
-        "markdownLinkText": "property",
-        "markdownCode": "string",
+        "markdownHeading": HEADING_LADDER[0],
+        "markdownLink": "parameter",
+        "markdownLinkText": "parameter",
+        "markdownCode": "escape",
         "markdownCodeBlock": "variable",
-        "markdownBlockQuote": "comment",
-        "markdownEmph": "number",
-        "markdownStrong": "constant",
+        "markdownBlockQuote": "punctuation",
+        "markdownEmph": "property",
+        "markdownStrong": "variable",
         "markdownHorizontalRule": "comment",
-        "markdownListItem": "keyword",
-        "markdownListEnumeration": "keyword",
+        "markdownListItem": "punctuation",
+        "markdownListEnumeration": "punctuation",
         "markdownImage": "builtin",
         "markdownImageText": "property",
         "syntaxComment": "comment",
@@ -483,6 +504,7 @@ def ptpython(p: Palette) -> tuple[str, str]:
     though no pygments theme is involved.
     """
     r = {role: p.role(role) for role in ROLES}
+    semantic = {meaning: p.semantic(meaning) for meaning in SEMANTIC}
     bold = {role: f"bold {r[role]}" for role in BOLD_ROLES}
     panel = p.surface("panel")
     selected = p.surface("selection")
@@ -519,8 +541,11 @@ def ptpython(p: Palette) -> tuple[str, str]:
         "pygments.literal.string.interpol": r["escape"],
         "pygments.literal.string.regex": r["escape"],
         "pygments.literal.number": r["number"],
-        "pygments.generic.deleted": r["error"],
-        "pygments.generic.inserted": r["string"],
+        # Same trap as the Neovim `Added` group: an inserted line asked for
+        # `string`, which is a white here, so a diff in the REPL had a red
+        # removed line and a colourless added one.
+        "pygments.generic.deleted": semantic["deleted"],
+        "pygments.generic.inserted": semantic["added"],
         "pygments.generic.error": bold["error"],
         "pygments.generic.heading": bold["function"],
         "pygments.generic.subheading": bold["keyword"],
@@ -603,6 +628,76 @@ def ptpython(p: Palette) -> tuple[str, str]:
     )
 
 
+def lualine(p: Palette) -> tuple[str, str]:
+    """The Neovim statusline, which the colorscheme cannot reach.
+
+    lualine on `theme = "auto"` - LazyVim's default - derives a theme from the
+    colorscheme rather than reading it, and what it derives here is wrong in
+    three ways at once. The normal-mode chip is the background of `PmenuSel`,
+    so the mode you are in almost all the time was the only one with no colour:
+    #7b7f7b on #2f302f, 3.3:1, grey on grey. The insert chip is the foreground of
+    `String`, which in this palette is a near-white, lightened another 10% to
+    #ebedeb - 16.8:1, brighter than any role the contract admits, because `string`
+    is capped at 15:1 for exactly this reason. And every colour it passes through
+    gets that 10% brightener, so the section grounds land on #080c08 and #1f221f:
+    one and two hex off the real ground and panel, which reads as a seam.
+
+    It is also avoidable. `auto` looks for `lua/lualine/themes/<colors_name>.lua`
+    on the runtimepath before it derives anything, and sorts a file under the
+    user's config directory first, so this file replaces the derivation with no
+    plugin configuration at all.
+
+    The mode is carried by the chip's *text* on the selection surface rather than
+    by a lit block, which is the same decision the Zellij ribbons make: a bar that
+    paints a filled rectangle at 16:1 for the whole session is the loudest thing
+    on the screen and it is chrome.
+    """
+    panel, sel = p.surface("panel"), p.surface("selection")
+    r = {role: p.role(role) for role in ROLES}
+
+    # One role per mode, all six at least 0.162 apart: the chip has to answer
+    # "which mode" from the corner of the eye, not on inspection.
+    modes = {
+        "normal": p.text,
+        "insert": r["escape"],
+        "visual": r["keyword"],
+        "replace": r["error"],
+        "command": r["constant"],
+        "terminal": r["parameter"],
+    }
+
+    def section(mode: str) -> str:
+        return (
+            f"  {mode} = {{\n"
+            f"    a = {{ bg = ground.sel, fg = \"{modes[mode]}\", gui = 'bold' }},\n"
+            f"    b = {{ bg = ground.panel, fg = \"{r['punctuation']}\" }},\n"
+            f"    c = {{ bg = ground.panel, fg = \"{r['comment']}\" }},\n"
+            f"  }},"
+        )
+
+    body = "\n".join(section(mode) for mode in modes)
+    return f"lualine/{p.slug}.lua", (
+        f"-- {p.name} — generated by render.py, do not edit\n"
+        f"-- source: palettes/{p.source.name}\n"
+        "--\n"
+        "-- Drop into lua/lualine/themes/ under the Neovim config directory. lualine's\n"
+        "-- `auto` theme loads this by vim.g.colors_name before it derives anything,\n"
+        "-- so nothing has to be configured for it to take effect.\n\n"
+        "local ground = {\n"
+        f'  panel = "{panel}",\n'
+        f'  sel = "{sel}",\n'
+        "}\n\n"
+        "return {\n"
+        f"{body}\n"
+        "  inactive = {\n"
+        f'    a = {{ bg = ground.panel, fg = "{r["comment"]}", gui = \'bold\' }},\n'
+        f'    b = {{ bg = ground.panel, fg = "{r["comment"]}" }},\n'
+        f'    c = {{ bg = ground.panel, fg = "{r["comment"]}" }},\n'
+        "  },\n"
+        "}\n"
+    )
+
+
 def neovim(p: Palette) -> tuple[str, str]:
     """A real colorscheme, not a sixteen-colour fallback.
 
@@ -614,12 +709,22 @@ def neovim(p: Palette) -> tuple[str, str]:
     Drops into `colors/` on the runtimepath, so `colorscheme fmind` finds it
     with no plugin. Italic is never set: FiraCode has no italic face.
     """
-    a = p.ansi
     r = {role: p.role(role) for role in ROLES}
+    semantic = {meaning: p.semantic(meaning) for meaning in SEMANTIC}
+    staged = {
+        meaning: recede(colour, p.ground, RECEDED_CONTRAST)
+        for meaning, colour in semantic.items()
+    }
     sel = p.surface("selection")
     line = p.surface("line")
     panel = p.surface("panel")
-    gutter = mix(p.ground, a["bright_white"], 0.22)
+    gutter = p.gutter
+    # Bold down to level four, where the ladder crosses into the darker roles and
+    # weight stops being the thing that says "heading".
+    heading_specs = [
+        f'{{ fg = "{c}", bold = true }}' if n < 4 else f'{{ fg = "{c}" }}'
+        for n, c in enumerate(p.headings)
+    ]
 
     groups: list[tuple[str, str]] = [
         # editor chrome
@@ -645,6 +750,41 @@ def neovim(p: Palette) -> tuple[str, str]:
         ("Title", f'{{ fg = "{r["function"]}", bold = true }}'),
         ("Directory", f'{{ fg = "{r["function"]}" }}'),
         ("Cursor", f'{{ fg = "{p.ground}", bg = "{p.cursor}" }}'),
+        # Everything below here Neovim otherwise answers itself, in the slate
+        # blues of its own default palette. `highlight clear` does not clear
+        # them, it restores them, so a group left out is not inherited from
+        # `Normal` - it is set to #4f5258 or #8cf8f7 and stays there.
+        #
+        # `NonText` is the expensive one: twenty-seven groups across four
+        # plugins link at it, so one missing line put Copilot's ghost text, the
+        # LSP inlay hints, the blame virtual text and the directory half of
+        # every picker row at 2.5:1 in a hue no window in this contract admits.
+        ("NonText", f'{{ fg = "{gutter}" }}'),
+        ("EndOfBuffer", f'{{ fg = "{gutter}" }}'),
+        ("Conceal", f'{{ fg = "{gutter}" }}'),
+        ("SpecialKey", f'{{ fg = "{gutter}" }}'),
+        ("CurSearch", f'{{ fg = "{p.ground}", bg = "{r["constant"]}" }}'),
+        ("Substitute", f'{{ fg = "{p.ground}", bg = "{r["warning"]}" }}'),
+        ("ModeMsg", f'{{ fg = "{r["punctuation"]}" }}'),
+        ("MoreMsg", f'{{ fg = "{r["property"]}" }}'),
+        ("Question", f'{{ fg = "{r["property"]}" }}'),
+        ("QuickFixLine", f'{{ bg = "{sel}" }}'),
+        ("MsgArea", f'{{ fg = "{p.text}" }}'),
+        ("StatusLineNC", f'{{ fg = "{r["comment"]}", bg = "{panel}" }}'),
+        ("TabLine", f'{{ fg = "{r["comment"]}", bg = "{panel}" }}'),
+        ("TabLineSel", f'{{ fg = "{p.text}", bg = "{sel}", bold = true }}'),
+        ("TabLineFill", f'{{ bg = "{p.ground}" }}'),
+        ("WinBar", f'{{ fg = "{r["punctuation"]}", bg = "{p.ground}", bold = true }}'),
+        ("WinBarNC", f'{{ fg = "{r["comment"]}", bg = "{p.ground}" }}'),
+        ("FloatShadow", f'{{ bg = "{p.slot(0)}", blend = 80 }}'),
+        ("FloatShadowThrough", f'{{ bg = "{p.slot(0)}", blend = 100 }}'),
+        ("PmenuSbar", f'{{ bg = "{panel}" }}'),
+        ("PmenuThumb", f'{{ bg = "{sel}" }}'),
+        ("WildMenu", f'{{ fg = "{p.text}", bg = "{sel}", bold = true }}'),
+        ("SpellBad", f'{{ sp = "{r["error"]}", undercurl = true }}'),
+        ("SpellCap", f'{{ sp = "{r["warning"]}", undercurl = true }}'),
+        ("SpellRare", f'{{ sp = "{r["builtin"]}", undercurl = true }}'),
+        ("SpellLocal", f'{{ sp = "{r["property"]}", undercurl = true }}'),
         # the fourteen roles, on the legacy groups first
         ("Comment", f'{{ fg = "{r["comment"]}" }}'),
         ("Identifier", f'{{ fg = "{r["variable"]}" }}'),
@@ -702,13 +842,22 @@ def neovim(p: Palette) -> tuple[str, str]:
         ("@punctuation.bracket", f'{{ fg = "{r["punctuation"]}" }}'),
         ("@punctuation.delimiter", f'{{ fg = "{r["punctuation"]}" }}'),
         ("@punctuation.special", f'{{ fg = "{r["escape"]}" }}'),
+        # `escape` is right for a `\n` inside a string and wrong for markdown,
+        # where the same capture covers every table pipe and every `>` quote
+        # marker - putting a 15.3:1 teal on the frame of a table whose rows are
+        # deliberately chalk. The filetype gets the chalk.
+        ("@punctuation.special.markdown", f'{{ fg = "{r["punctuation"]}" }}'),
+        ("@punctuation.special.markdown_inline", f'{{ fg = "{r["punctuation"]}" }}'),
         ("@operator", f'{{ fg = "{r["punctuation"]}" }}'),
         ("@attribute", f'{{ fg = "{r["builtin"]}" }}'),
         # markdown, where the palette is the whole interface
         #
-        # Six heading levels get six colours rather than six weights of one,
-        # descending in prominence: body green, then the cool tiers, then the
-        # violet, then the amber, then bone. Only the top two get a bar.
+        # Six heading levels get six colours rather than six weights of one, and
+        # which six is HEADING_LADDER's decision so the set is measured: the
+        # earlier ladder put a teal at level five, 0.119 from the cyan at level
+        # two and 0.121 from the chalk at level six, and ended on the same chalk
+        # that paints the bullets and the table rules in the same buffer. Only
+        # the top two levels get a bar.
         #
         # Both `@markup.heading.N` and its `.markdown` variant are set, because
         # render-markdown links RenderMarkdownH1 straight at the `.markdown`
@@ -716,20 +865,10 @@ def neovim(p: Palette) -> tuple[str, str]:
         # the treesitter fallback chain does not apply to a plain link.
         *[
             (f"@markup.heading.{n}{suffix}", spec)
-            for n, spec in enumerate(
-                (
-                    f'{{ fg = "{r["variable"]}", bold = true }}',
-                    f'{{ fg = "{r["type"]}", bold = true }}',
-                    f'{{ fg = "{r["keyword"]}", bold = true }}',
-                    f'{{ fg = "{r["constant"]}", bold = true }}',
-                    f'{{ fg = "{r["property"]}" }}',
-                    f'{{ fg = "{r["punctuation"]}" }}',
-                ),
-                start=1,
-            )
+            for n, spec in enumerate(heading_specs, start=1)
             for suffix in ("", ".markdown")
         ],
-        ("@markup.heading", f'{{ fg = "{r["variable"]}", bold = true }}'),
+        ("@markup.heading", heading_specs[0]),
         ("@markup.strong", f'{{ fg = "{r["variable"]}", bold = true }}'),
         # No italic face exists, so emphasis is carried by hue instead of slant.
         ("@markup.italic", f'{{ fg = "{r["property"]}" }}'),
@@ -753,12 +892,7 @@ def neovim(p: Palette) -> tuple[str, str]:
         ("@label", f'{{ fg = "{r["property"]}" }}'),
         ("@conceal", f'{{ fg = "{r["comment"]}" }}'),
         # the same ladder for a buffer with no parser attached
-        ("markdownH1", f'{{ fg = "{r["variable"]}", bold = true }}'),
-        ("markdownH2", f'{{ fg = "{r["type"]}", bold = true }}'),
-        ("markdownH3", f'{{ fg = "{r["keyword"]}", bold = true }}'),
-        ("markdownH4", f'{{ fg = "{r["constant"]}", bold = true }}'),
-        ("markdownH5", f'{{ fg = "{r["property"]}" }}'),
-        ("markdownH6", f'{{ fg = "{r["punctuation"]}" }}'),
+        *[(f"markdownH{n}", spec) for n, spec in enumerate(heading_specs, start=1)],
         ("markdownCode", f'{{ fg = "{r["escape"]}" }}'),
         ("markdownCodeBlock", f'{{ fg = "{p.text}" }}'),
         ("markdownLinkText", f'{{ fg = "{r["parameter"]}", underline = true }}'),
@@ -816,13 +950,87 @@ def neovim(p: Palette) -> tuple[str, str]:
         ("DiagnosticOk", f'{{ fg = "{r["function"]}" }}'),
         ("DiagnosticUnderlineError", f'{{ sp = "{r["error"]}", undercurl = true }}'),
         ("DiagnosticUnderlineWarn", f'{{ sp = "{r["warning"]}", undercurl = true }}'),
+        ("DiagnosticUnderlineInfo", f'{{ sp = "{r["type"]}", undercurl = true }}'),
+        ("DiagnosticUnderlineHint", f'{{ sp = "{r["property"]}", undercurl = true }}'),
+        ("DiagnosticUnderlineOk", f'{{ sp = "{semantic["ok"]}", undercurl = true }}'),
+        ("DiagnosticDeprecated", f'{{ sp = "{r["comment"]}", strikethrough = true }}'),
+        ("DiagnosticUnnecessary", f'{{ fg = "{r["comment"]}" }}'),
         ("DiffAdd", f'{{ bg = "{p.surface("plus")}" }}'),
         ("DiffDelete", f'{{ bg = "{p.surface("minus")}" }}'),
         ("DiffChange", f'{{ bg = "{p.surface("change")}" }}'),
         ("DiffText", f'{{ bg = "{p.surface("change_emph")}" }}'),
-        ("Added", f'{{ fg = "{r["string"]}" }}'),
-        ("Removed", f'{{ fg = "{r["error"]}" }}'),
-        ("Changed", f'{{ fg = "{r["number"]}" }}'),
+        # `Added` is the group that says *this line is new*, and it used to be
+        # `string` - a chroma-0.003 white, because slot 2 is spent on a near-white
+        # in this palette. A plus row with no hue next to a red minus row has lost
+        # the one distinction a diff exists to make, and it did not stop there:
+        # gitsigns derives its staged tier by dimming these, and a dimmed white
+        # is #6b6c6b, so staged-added arrived as neutral grey. p.semantic() is
+        # the only way to ask for this colour.
+        ("Added", f'{{ fg = "{semantic["added"]}" }}'),
+        ("Removed", f'{{ fg = "{semantic["deleted"]}" }}'),
+        ("Changed", f'{{ fg = "{semantic["modified"]}" }}'),
+        # gitsigns is set outright rather than left to link at the three above,
+        # because the sign column is where the plus, the tilde and the minus are
+        # read side by side all day, and because `GitSignsAdd` is also the group
+        # lualine's diff component reads for its own counter.
+        ("GitSignsCurrentLineBlame", f'{{ fg = "{r["comment"]}" }}'),
+        # The staged tier. LazyVim gives staged and unstaged hunks the same sign
+        # glyph, so colour is the only thing that separates them - and gitsigns
+        # derives the staged colours by dimming the unstaged ones a flat 30%,
+        # which put staged-delete at 1.9:1 and staged-change at 2.4:1. recede()
+        # solves for a contrast instead of guessing a weight, so the hue survives
+        # and the tier stays above the floor.
+        #
+        # The `Nr` and `Cul` variants are spelled out because gitsigns derives
+        # those from its own colours rather than from the base group, so setting
+        # only `GitSignsStagedAdd` leaves the number column and the cursor line
+        # still wearing the flat dim.
+        *[
+            (f"GitSigns{tier}{group}{variant}", f'{{ fg = "{table[meaning]}" }}')
+            for tier, table in (("", semantic), ("Staged", staged))
+            for group, meaning in (
+                ("Add", "added"), ("Change", "modified"), ("Changedelete", "modified"),
+                ("Delete", "deleted"), ("Topdelete", "deleted"),
+                ("Untracked", "added"),
+            )
+            for variant in ("", "Nr", "Cul")
+        ],
+        # lualine looks these up first and falls back to #90ee90, #f0e130 and
+        # #ff0038 - its own colours, not the palette's - when they are unset.
+        ("LuaLineDiffAdd", f'{{ fg = "{semantic["added"]}" }}'),
+        ("LuaLineDiffChange", f'{{ fg = "{semantic["modified"]}" }}'),
+        ("LuaLineDiffDelete", f'{{ fg = "{semantic["deleted"]}" }}'),
+        # Recessive by intent, but recessive is `comment`, not Neovim's slate.
+        ("LspInlayHint", f'{{ fg = "{r["comment"]}" }}'),
+        ("LspCodeLens", f'{{ fg = "{r["comment"]}" }}'),
+        ("LspCodeLensSeparator", f'{{ fg = "{gutter}" }}'),
+        ("BlinkCmpGhostText", f'{{ fg = "{r["comment"]}" }}'),
+        ("BlinkCmpLabelDeprecated", f'{{ fg = "{r["comment"]}", strikethrough = true }}'),
+        ("BlinkCmpLabelMatch", f'{{ fg = "{r["escape"]}", bold = true }}'),
+        ("SnacksPickerDir", f'{{ fg = "{r["comment"]}" }}'),
+        ("SnacksPickerDimmed", f'{{ fg = "{r["comment"]}" }}'),
+        ("SnacksPickerBufFlags", f'{{ fg = "{gutter}" }}'),
+        ("SnacksPickerGitStatusAdded", f'{{ fg = "{semantic["added"]}" }}'),
+        ("SnacksPickerGitStatusUntracked", f'{{ fg = "{r["property"]}" }}'),
+        ("SnacksIndent", f'{{ fg = "{gutter}" }}'),
+        ("SnacksIndentScope", f'{{ fg = "{r["comment"]}" }}'),
+        # todo-comments derives PERF and TEST from `Identifier`, which is the body
+        # colour - so two of the six keywords arrived painted as plain code, and
+        # as each other. Six keywords, six roles.
+        *[
+            spec
+            for keyword, role in (
+                ("FIX", "error"), ("TODO", "type"), ("HACK", "warning"),
+                ("WARN", "constant"), ("PERF", "builtin"), ("NOTE", "property"),
+                ("TEST", "parameter"),
+            )
+            for spec in (
+                (f"TodoFg{keyword}", f'{{ fg = "{r[role]}" }}'),
+                (f"TodoBg{keyword}",
+                 f'{{ fg = "{p.ground}", bg = "{r[role]}", bold = true }}'),
+                (f"TodoSign{keyword}", f'{{ fg = "{r[role]}" }}'),
+            )
+        ],
         # mini.icons, which paints the file icon on every LazyVim buffer tab.
         # Left unset, its nine groups link at groups that mean something else:
         # Yellow and Orange both land on DiagnosticWarn, so a Python tab wore
@@ -837,6 +1045,33 @@ def neovim(p: Palette) -> tuple[str, str]:
         ("MiniIconsPurple", f'{{ fg = "{r["keyword"]}" }}'),
         ("MiniIconsRed", f'{{ fg = "{r["error"]}" }}'),
         ("MiniIconsYellow", f'{{ fg = "{r["constant"]}" }}'),
+        ("OkMsg", f'{{ fg = "{semantic["ok"]}" }}'),
+        ("VenvSelectActiveVenv", f'{{ fg = "{r["property"]}" }}'),
+        # neotest invents all eleven of its own, and two of them collide with
+        # each other: a directory, a file and a skipped test were one #00f1f5,
+        # and a failed test was #f70067 - hue 9, a pink that is not the palette's
+        # red but is close enough to be mistaken for it.
+        ("NeotestPassed", f'{{ fg = "{semantic["ok"]}" }}'),
+        ("NeotestFailed", f'{{ fg = "{r["error"]}" }}'),
+        ("NeotestRunning", f'{{ fg = "{r["constant"]}" }}'),
+        ("NeotestWatching", f'{{ fg = "{r["escape"]}" }}'),
+        ("NeotestSkipped", f'{{ fg = "{r["comment"]}" }}'),
+        ("NeotestUnknown", f'{{ fg = "{r["comment"]}" }}'),
+        ("NeotestMarked", f'{{ fg = "{r["number"]}", bold = true }}'),
+        ("NeotestTarget", f'{{ fg = "{r["keyword"]}" }}'),
+        ("NeotestNamespace", f'{{ fg = "{r["type"]}" }}'),
+        ("NeotestFile", f'{{ fg = "{r["property"]}" }}'),
+        ("NeotestDir", f'{{ fg = "{r["function"]}" }}'),
+        ("NeotestAdapterName", f'{{ fg = "{r["builtin"]}" }}'),
+        ("NeotestWinSelect", f'{{ fg = "{r["parameter"]}", bold = true }}'),
+        ("NeotestExpandMarker", f'{{ fg = "{gutter}" }}'),
+        ("NeotestIndent", f'{{ fg = "{gutter}" }}'),
+        # grug-far derives the rest of its window from the theme and gets these
+        # three from nowhere: an add indicator at 2.4:1, and one #d1242f for both
+        # *changed* and *removed*.
+        ("GrugFarResultsAddIndicator", f'{{ fg = "{semantic["added"]}" }}'),
+        ("GrugFarResultsChangeIndicator", f'{{ fg = "{semantic["modified"]}" }}'),
+        ("GrugFarResultsRemoveIndicator", f'{{ fg = "{semantic["deleted"]}" }}'),
     ]
 
     body = "\n".join(f'  ["{name}"] = {spec},' for name, spec in groups)
@@ -1000,6 +1235,7 @@ SLOT_LABEL = {
 # Every tool that takes a palette, and then the README images. Kept apart so
 # the run reports how many tools were themed rather than counting pictures.
 TOOLS = (ghostty, zellij, fish, fzf, starship, delta, k9s, gh_dash, opencode,
+         lualine,
          ptpython, neovim)
 PREVIEWS = (preview_code, preview_shell, preview_palette)
 RENDERERS = TOOLS + PREVIEWS

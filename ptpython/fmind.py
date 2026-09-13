@@ -44,7 +44,7 @@ CODE: dict[str, str] = {
     "pygments.literal.string.regex": "#26fed9",
     "pygments.literal.number": "#ff7800",
     "pygments.generic.deleted": "#f63a4b",
-    "pygments.generic.inserted": "#d6d8d6",
+    "pygments.generic.inserted": "#26fed9",
     "pygments.generic.error": "bold #f63a4b",
     "pygments.generic.heading": "bold #35ab24",
     "pygments.generic.subheading": "bold #9578ff",

@@ -12,107 +12,107 @@ themes {
             background "#080b08"
             emphasis_0 "#ff7800"
             emphasis_1 "#2ad7f5"
-            emphasis_2 "#26fed9"
-            emphasis_3 "#17bfa6"
+            emphasis_2 "#e784f6"
+            emphasis_3 "#56ff40"
         }
         text_selected {
             base "#56ff40"
             background "#2b2c2b"
             emphasis_0 "#ff7800"
             emphasis_1 "#2ad7f5"
-            emphasis_2 "#26fed9"
-            emphasis_3 "#17bfa6"
+            emphasis_2 "#e784f6"
+            emphasis_3 "#56ff40"
         }
         ribbon_unselected {
-            base "#7e8a7b"
+            base "#a1a6a0"
             background "#1d1f1d"
             emphasis_0 "#ff7800"
             emphasis_1 "#2ad7f5"
-            emphasis_2 "#26fed9"
-            emphasis_3 "#17bfa6"
+            emphasis_2 "#e784f6"
+            emphasis_3 "#56ff40"
         }
         ribbon_selected {
             base "#56ff40"
             background "#2b2c2b"
             emphasis_0 "#ff7800"
             emphasis_1 "#2ad7f5"
-            emphasis_2 "#26fed9"
-            emphasis_3 "#17bfa6"
+            emphasis_2 "#e784f6"
+            emphasis_3 "#56ff40"
         }
         frame_unselected {
             base "#7e8a7b"
             emphasis_0 "#ff7800"
             emphasis_1 "#2ad7f5"
-            emphasis_2 "#26fed9"
-            emphasis_3 "#17bfa6"
+            emphasis_2 "#e784f6"
+            emphasis_3 "#56ff40"
         }
         frame_selected {
             base "#35ab24"
             emphasis_0 "#ff7800"
             emphasis_1 "#2ad7f5"
-            emphasis_2 "#26fed9"
-            emphasis_3 "#17bfa6"
+            emphasis_2 "#e784f6"
+            emphasis_3 "#56ff40"
         }
         frame_highlight {
             base "#ff7800"
             emphasis_0 "#ff7800"
             emphasis_1 "#2ad7f5"
-            emphasis_2 "#26fed9"
-            emphasis_3 "#17bfa6"
+            emphasis_2 "#e784f6"
+            emphasis_3 "#56ff40"
         }
         table_title {
             base "#26fed9"
             background "#1d1f1d"
             emphasis_0 "#ff7800"
             emphasis_1 "#2ad7f5"
-            emphasis_2 "#26fed9"
-            emphasis_3 "#17bfa6"
+            emphasis_2 "#e784f6"
+            emphasis_3 "#56ff40"
         }
         table_cell_unselected {
             base "#a1a6a0"
             background "#080b08"
             emphasis_0 "#ff7800"
             emphasis_1 "#2ad7f5"
-            emphasis_2 "#26fed9"
-            emphasis_3 "#17bfa6"
+            emphasis_2 "#e784f6"
+            emphasis_3 "#56ff40"
         }
         table_cell_selected {
             base "#56ff40"
             background "#2b2c2b"
             emphasis_0 "#ff7800"
             emphasis_1 "#2ad7f5"
-            emphasis_2 "#26fed9"
-            emphasis_3 "#17bfa6"
+            emphasis_2 "#e784f6"
+            emphasis_3 "#56ff40"
         }
         list_unselected {
             base "#a1a6a0"
             background "#080b08"
             emphasis_0 "#ff7800"
             emphasis_1 "#2ad7f5"
-            emphasis_2 "#26fed9"
-            emphasis_3 "#17bfa6"
+            emphasis_2 "#e784f6"
+            emphasis_3 "#56ff40"
         }
         list_selected {
             base "#56ff40"
             background "#2b2c2b"
             emphasis_0 "#ff7800"
             emphasis_1 "#2ad7f5"
-            emphasis_2 "#26fed9"
-            emphasis_3 "#17bfa6"
+            emphasis_2 "#e784f6"
+            emphasis_3 "#56ff40"
         }
         exit_code_success {
             base "#35ab24"
             emphasis_0 "#ff7800"
             emphasis_1 "#2ad7f5"
-            emphasis_2 "#26fed9"
-            emphasis_3 "#17bfa6"
+            emphasis_2 "#e784f6"
+            emphasis_3 "#56ff40"
         }
         exit_code_error {
             base "#f63a4b"
             emphasis_0 "#ff7800"
             emphasis_1 "#2ad7f5"
-            emphasis_2 "#26fed9"
-            emphasis_3 "#17bfa6"
+            emphasis_2 "#e784f6"
+            emphasis_3 "#56ff40"
         }
         multiplayer_user_colors {
             player_1 "#9578ff"
