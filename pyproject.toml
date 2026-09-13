@@ -1,11 +1,11 @@
 # https://docs.astral.sh/uv/concepts/projects/config/
 [project]
 name = "fmind-theme"
-version = "0.0.0"
-requires-python = ">=3.14,<3.15"
+version = "1.0.0"
+requires-python = ">=3.14"
 
 [dependency-groups]
-dev = ["pyyaml==6.0.3", "prompt-toolkit==3.0.53"]
+dev = ["pyyaml>=6.0.3", "prompt-toolkit>=3.0.53"]
 
 [tool.uv]
 package = false

@@ -1,10 +1,10 @@
 version = 1
 revision = 3
-requires-python = "==3.14.*"
+requires-python = ">=3.14"
 
 [[package]]
 name = "fmind-theme"
-version = "0.0.0"
+version = "1.0.0"
 source = { virtual = "." }
 
 [package.dev-dependencies]
@@ -17,8 +17,8 @@ dev = [
 
 [package.metadata.requires-dev]
 dev = [
-    { name = "prompt-toolkit", specifier = "==3.0.53" },
-    { name = "pyyaml", specifier = "==6.0.3" },
+    { name = "prompt-toolkit", specifier = ">=3.0.53" },
+    { name = "pyyaml", specifier = ">=6.0.3" },
 ]
 
 [[package]]
