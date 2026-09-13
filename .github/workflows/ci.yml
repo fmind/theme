@@ -23,13 +23,14 @@ jobs:
           persist-credentials: false
       - name: Install uv
         uses: astral-sh/setup-uv@bec219d24cd3e171d82865faccec33120bb574f4 # v10.1.0
-      # Re-render rather than only validating. out/ is fetched directly by
-      # chezmoi externals, so a palette edited without re-running the renderer
-      # would ship stale colours to every machine that pulls this repo. Rendering
-      # also runs the readability contract, which exits non-zero on a bad palette.
+      # Re-render rather than only validating. The tool folders are fetched
+      # directly by chezmoi externals, so a palette edited without re-running the
+      # renderer would ship stale colours to every machine that pulls this repo.
+      # Rendering also runs the readability contract, which exits non-zero on a
+      # palette that would be hard to read.
       - name: Render every palette
         run: uv run render.py
-      - name: Verify out/ matches palettes/
+      - name: Verify generated files match palettes/
         run: |
           status="$(git status --porcelain)"
           printf '%s\n' "$status"

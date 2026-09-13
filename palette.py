@@ -1,20 +1,24 @@
-"""The palette contract, shared by render.py and explore.py.
+"""The palette contract: what makes a phosphor palette readable, and the maths.
 
-Colour maths plus the one definition of what makes a phosphor palette readable.
-Both scripts import this so they cannot drift apart: explore.py designs against
-these thresholds and render.py refuses to ship anything that misses them.
+render.py imports this and refuses to render a palette that misses any of it,
+so a source file and the theme files it produces are measured by one rule.
 
 Readability here is two independent things, and a green theme needs both checked:
 
   contrast    can the colour be seen against the ground (WCAG 2.1)
   separation  can two colours that mean different things be told apart (OKLab)
+  saturation  is the colour as vivid as its own hue allows (OKLab, gamut-relative)
 
 The second is the one a conventional theme gets for free and a green theme does
 not. When five of eight roles share a hue, contrast alone will happily approve a
 palette in which strings, functions and body text are one indistinguishable wash.
 Separation is required per pair and weighted by how often the two roles actually
 sit next to each other, because a flat threshold over-constrains the rare pairs
-and under-constrains the ones you read on every line.
+and under-constrains the ones you read on every line. On top of that weighting
+sits SEPARATION_FLOOR, which every pair must clear whether or not it is named:
+an earlier revision weighted 35 of the 105 pairs and left `parameter` 0.043 from
+`builtin`, which is two colours the eye cannot separate at 13px sitting next to
+each other on every call with arguments.
 """
 
 from __future__ import annotations
@@ -35,7 +39,13 @@ import yaml
 # lightenings of 1-6 wastes six addressable colours and leaves a palette that
 # cannot tell a parameter from a local, or a builtin from a user function - the
 # reason `contrast(fg, bg)` came out as one undifferentiated green. Designed as
-# roles in their own right, the same sixteen slots carry fourteen meanings.
+# roles in their own right, the same sixteen slots carry fifteen meanings.
+#
+# Slot 7 is the fifteenth. It used to hold an off-white that no syntax role
+# reached, while brackets, commas and operators were painted with the body
+# colour - putting the loudest colour in the palette on the most frequent glyphs
+# on the line. It now carries `punctuation`, a bone white the delimiters recede
+# into.
 SLOT_OF: dict[str, str] = {
     # primary: the eight every tool paints
     "variable": "text",
@@ -45,6 +55,7 @@ SLOT_OF: dict[str, str] = {
     "function": "blue",           # 4
     "keyword": "magenta",         # 5
     "type": "cyan",               # 6
+    "punctuation": "white",       # 7   brackets, commas, operators
     "comment": "bright_black",    # 8
     # secondary: the bright half, each a relative of one primary
     "warning": "bright_red",      # 9
@@ -56,16 +67,10 @@ SLOT_OF: dict[str, str] = {
 }
 ROLES: list[str] = list(SLOT_OF)
 
-# A secondary role is a relative of its primary, so it may sit closer - that
-# kinship is information, not a defect. It still may never be identical.
-KIN: dict[str, str] = {
-    "warning": "error",
-    "escape": "string",
-    "constant": "number",
-    "parameter": "variable",
-    "builtin": "keyword",
-    "property": "type",
-}
+# Each secondary role is a relative of one primary - warning of error, escape of
+# string, constant of number, parameter of variable, builtin of keyword, property
+# of type. That kinship is information, so a relative may sit closer to its own
+# primary than to anything else. It may never be identical to it.
 
 # 1.0 means "adjacent on nearly every line, needs the full distance".
 PAIR_WEIGHT: dict[tuple[str, str], float] = {
@@ -109,9 +114,22 @@ PAIR_WEIGHT: dict[tuple[str, str], float] = {
     ("string", "escape"): 0.85,
     ("error", "warning"): 0.80,
     ("comment", "parameter"): 0.60,
+    # the delimiters sit against everything they enclose
+    ("variable", "punctuation"): 0.90,
+    ("punctuation", "string"): 0.80,
+    ("punctuation", "function"): 0.75,
+    ("punctuation", "property"): 0.70,
+    ("punctuation", "keyword"): 0.70,
+    ("punctuation", "number"): 0.70,
+    ("punctuation", "parameter"): 0.70,
+    ("punctuation", "comment"): 0.60,
 }
 PAIRS: list[tuple[str, str]] = list(PAIR_WEIGHT)
 BASE_SEPARATION = 0.130
+
+# What every pair must clear, named above or not. Roughly the distance the eye
+# needs to call two colours different in 13px monospace.
+SEPARATION_FLOOR = 0.085
 
 # Body text must actually read as neon green, not as white with a green note.
 #
@@ -136,11 +154,19 @@ MIN_BODY_CHROMA = 0.18
 # washed-out colours it was meant to avoid. Separation has to come from
 # lightness and hue instead, leaving chroma free to stay saturated.
 #
-# Two roles are exempt, for reasons of physics rather than taste: `string` sits
-# near L 0.95 where the sRGB green gamut simply has no chroma left, and
-# `comment` is deliberately dark and recessive.
-MIN_ROLE_CHROMA = 0.14
-CHROMA_EXEMPT: frozenset[str] = frozenset({"string", "comment"})
+# The threshold is a fraction of what sRGB has at that hue, not an absolute.
+# A flat floor is a green-specific number wearing a general name: the gamut
+# gives hue 145 a ceiling of 0.268 and hue 205 only 0.144, so "chroma >= 0.14"
+# reads as "no hue but green" - which is how this palette came to have only one.
+# Measured as a fraction of the ceiling, a teal at 0.13 is fully saturated teal
+# while a green at 0.13 is a washed-out green, which is what the eye agrees with.
+MIN_SATURATION = 0.78
+CHROMA_FLOOR = 0.085
+
+# Three roles are exempt, for reasons of physics rather than taste: `string`
+# sits near L 0.95 where the green gamut has no chroma left, `comment` is
+# deliberately recessive, and `punctuation` is a neutral on purpose.
+CHROMA_EXEMPT: frozenset[str] = frozenset({"string", "comment", "punctuation"})
 
 # Contrast bounds against the ground. Comments are capped as well as floored: a
 # "dim" colour as bright as body text is not dim.
@@ -159,7 +185,51 @@ CONTRAST_BOUNDS: dict[str, tuple[float, float]] = {
     "parameter": (4.5, 21.0),
     "builtin": (5.0, 21.0),
     "property": (5.0, 21.0),
+    "punctuation": (6.0, 16.0),
 }
+
+# A theme ships more than one ground. A diff row, the current line, a panel and
+# a selection are all the ground with a little of one slot pulled into it, and
+# every one of them has text on top: delta paints full syntax onto a diff row,
+# so checking body text alone is not enough.
+#
+# They are named by target luminance rather than by mix weight, because the mix
+# happens in linear light and the slots do not start from the same place. A 0.18
+# blend toward this palette's near-white `green` lands at luminance 0.161 - an
+# added line brighter than most themes' body text, with body text at 3.7:1 on
+# top of it - while the same 0.18 toward `red` lands at 0.041. One luminance for
+# every surface means a plus row and a minus row sit the same distance off the
+# ground and only the hue tells them apart, which is the whole point of a diff.
+SURFACE_LEVEL: dict[str, float] = {
+    "line": 0.006,       # the line the cursor is on; must not read as highlighted
+    "panel": 0.010,      # sidebars, completion menus, toolbars
+    "plus": 0.014,       # an added line
+    "minus": 0.014,      # a removed line
+    "change": 0.014,     # a changed line
+    "selection": 0.022,  # selected text, and the row a picker is on
+    "plus_emph": 0.022,  # the changed run inside an added line
+    "minus_emph": 0.022,
+    "change_emph": 0.022,
+}
+
+# What the slot is pulled from. `bright_white` is the neutral: a selection or a
+# current line should not pick a side.
+SURFACE_SLOT: dict[str, str] = {
+    "line": "bright_white",
+    "panel": "green",
+    "plus": "green",
+    "minus": "red",
+    "change": "yellow",
+    "selection": "green",
+    "plus_emph": "green",
+    "minus_emph": "red",
+    "change_emph": "yellow",
+}
+
+# Body text has to clear the same 9:1 it clears against the ground. The other
+# roles drop to 3:1: a surface is where you read one line, not a whole file, and
+# holding every role to 4.5:1 leaves a diff background too faint to see.
+SURFACE_ROLE_FLOOR = 3.0
 
 # Bold is the one axis that costs no colour, and FiraCode ships a real Bold
 # face while shipping no italic at all - so bold carries what hue cannot.
@@ -168,21 +238,36 @@ BOLD_ROLES: frozenset[str] = frozenset({"function", "keyword", "error"})
 
 # Hue windows that still read as a phosphor tube.
 #
-# The admissible set is narrow and was settled by trying the alternatives:
-#   lime (108-132)   sour, and it drags the whole palette yellow
-#   jade (172-196)   reads as teal and breaks the immersion
-#   copper (40-62)   too close to amber to earn a slot of its own
-#   amber on keywords   makes `def` and `if` look like warnings
-#   cool blue        anachronistic beside green; a CRT never came in it
+# Green carries the body and the code you wrote. Three cool tiers carry what the
+# language knows, and each is usable only where sRGB still has chroma for it:
 #
-# What survives: green carries every syntax role, red is reserved for errors,
-# and amber appears only on numbers. Bone-white is admissible as a *lightness*
-# move rather than a hue - a green so pale it reads white.
-# Floor raised from 136: at the chroma a matrix body text needs, hue 138
-# renders as #6fff1a - visibly the lime that was already rejected.
-GREEN = (141.0, 168.0)
+#   teal   172-195   the only cool hue with chroma left above L 0.85
+#   cyan   195-215   thinnest of the three; fine mid-ladder
+#   ice    214-240   richer than cyan at L 0.70, gone by L 0.85
+#
+# Amber holds the literals, red and orange the signals, and one violet holds
+# `keyword` alone. Violet is the exception that earned itself: with keyword,
+# type and variable all green, the keyword sat 0.126 from the nearer of the
+# other two and the three were routinely misread. Moving it out of green took
+# that to 0.430 - a larger gain than any other single change measured.
+#
+# What was tried and rejected:
+#   lime (108-136)      sour, and it drags the whole palette yellow
+#   amber on keywords   makes `def` and `if` look like warnings
+#   copper as an accent the warm side is already spent: error, warning and the
+#                       two literals occupy 16-95, leaving room for two roles
+#   violet on more than `keyword`  stops reading as a green theme
+#
+# Bone-white is admissible as a *lightness* move rather than a hue: the
+# delimiters and the comment are neutrals, and carry no hue at all.
+GREEN = (137.0, 170.0)
+TEAL = (172.0, 195.0)
+CYAN = (195.0, 215.0)
+ICE = (214.0, 240.0)
+VIOLET = (300.0, 322.0)
 AMBER = (68.0, 95.0)
 RED = (16.0, 34.0)
+ORANGE = (34.0, 50.0)
 
 ANSI: list[str] = [
     "black", "red", "green", "yellow", "blue", "magenta", "cyan", "white",
@@ -192,9 +277,9 @@ ANSI: list[str] = [
 
 
 def required_separation(a: str, b: str) -> float:
-    """Distance this pair of roles must keep. 0.0 if they never collide."""
+    """Distance this pair of roles must keep. Never below the floor."""
     weight = PAIR_WEIGHT.get((a, b)) or PAIR_WEIGHT.get((b, a))
-    return BASE_SEPARATION * weight if weight else 0.0
+    return max(SEPARATION_FLOOR, BASE_SEPARATION * weight if weight else 0.0)
 
 
 class PaletteError(Exception):
@@ -297,6 +382,32 @@ def in_gamut(L: float, C: float, h: float) -> bool:
     return all(-0.0015 <= c <= 1.0015 for c in oklch_to_linear(L, C, h))
 
 
+_CEILING: dict[tuple[int, int], float] = {}
+
+
+def max_chroma(L: float, h: float) -> float:
+    """The most chroma sRGB has at this lightness and hue.
+
+    What "saturated" means depends entirely on where you are standing: this is
+    0.268 at hue 145 and 0.144 at hue 205, which is why the contract measures a
+    fraction of it rather than an absolute.
+    """
+    key = (round(L * 200), round(h) % 360)
+    if key not in _CEILING:
+        lo, hi = 0.0, 0.40
+        for _ in range(18):
+            mid = (lo + hi) / 2
+            lo, hi = (mid, hi) if in_gamut(L, mid, h) else (lo, mid)
+        _CEILING[key] = lo
+    return _CEILING[key]
+
+
+def saturation(colour: str) -> float:
+    """Chroma as a fraction of what this hue and lightness allow."""
+    ceiling = max_chroma(lightness(colour), hue(colour))
+    return chroma(colour) / ceiling if ceiling else 0.0
+
+
 def oklch_hex(L: float, C: float, h: float) -> str:
     r, g, b = (round(_from_linear(c) * 255) for c in oklch_to_linear(L, C, h))
     return f"#{r:02x}{g:02x}{b:02x}"
@@ -320,6 +431,18 @@ def mix(a: str, b: str, weight: float) -> str:
     return "#{:02x}{:02x}{:02x}".format(*out)
 
 
+def surface(palette: Palette, name: str) -> str:
+    """The named second ground, solved for its target luminance.
+
+    mix() blends in linear light and luminance is linear in those channels, so
+    the weight that lands on a given luminance is exact rather than searched.
+    """
+    ground = luminance(palette.ground)
+    slot = luminance(palette.ansi[SURFACE_SLOT[name]])
+    weight = (SURFACE_LEVEL[name] - ground) / (slot - ground)
+    return mix(palette.ground, palette.ansi[SURFACE_SLOT[name]], weight)
+
+
 # ------------------------------------------------------------------- the object
 
 
@@ -332,9 +455,6 @@ class Palette:
     cursor: str
     ansi: dict[str, str]
     source: Path
-    # A reference palette is kept for comparison and expected to fail the audit.
-    # It is reported and skipped, and never fails a run.
-    reference: bool = False
 
     @property
     def slug(self) -> str:
@@ -347,6 +467,10 @@ class Palette:
         """The colour this syntax role is painted with."""
         slot = SLOT_OF[name]
         return self.text if slot == "text" else self.ansi[slot]
+
+    def surface(self, name: str) -> str:
+        """A second ground: a diff row, a panel, the current line, a selection."""
+        return surface(self, name)
 
 
 def load(path: Path) -> Palette:
@@ -369,7 +493,6 @@ def load(path: Path) -> Palette:
         cursor=raw["cursor"],
         ansi=dict(raw["ansi"]),
         source=path,
-        reference=bool(raw.get("reference", False)),
     )
 
 
@@ -401,19 +524,37 @@ def audit(palette: Palette) -> list[str]:
         )
 
     for role in ROLES:
-        if role in CHROMA_EXEMPT or role == "variable":
+        if role in CHROMA_EXEMPT:
             continue
-        got = chroma(palette.role(role))
-        if got < MIN_ROLE_CHROMA:
+        colour = palette.role(role)
+        want = max(CHROMA_FLOOR, MIN_SATURATION * max_chroma(lightness(colour), hue(colour)))
+        if chroma(colour) < want:
             problems.append(
-                f"{role} has chroma {got:.3f}, want {MIN_ROLE_CHROMA} — it reads pastel, "
-                f"which is what separating by chroma instead of lightness costs"
+                f"{role} has chroma {chroma(colour):.3f}, which is {saturation(colour):.0%} of "
+                f"what hue {hue(colour):.0f} allows — want {MIN_SATURATION:.0%}, or it reads pastel"
             )
 
+    # The grounds that are not the ground. Unchecked, these are where a palette
+    # that passes everything above still ships an unreadable added line.
+    body_floor = CONTRAST_BOUNDS["variable"][0]
+    for name in SURFACE_LEVEL:
+        ground = surface(palette, name)
+        got = contrast(palette.text, ground)
+        if got < body_floor:
+            problems.append(
+                f"body text is {got:.1f}:1 on the {name} surface {ground}, want {body_floor}"
+            )
+        for role in ROLES:
+            got = contrast(palette.role(role), ground)
+            if got < SURFACE_ROLE_FLOOR:
+                problems.append(
+                    f"{role} is {got:.1f}:1 on the {name} surface {ground}, "
+                    f"want {SURFACE_ROLE_FLOOR}"
+                )
+
+    # Every pair, not only the ones PAIR_WEIGHT happens to name.
     for a, b in itertools.combinations(ROLES, 2):
         want = required_separation(a, b)
-        if not want:
-            continue
         got = separation(palette.role(a), palette.role(b))
         if got < want:
             problems.append(
@@ -422,6 +563,12 @@ def audit(palette: Palette) -> list[str]:
             )
 
     return problems
+
+
+def hue_families(palette: Palette) -> int:
+    """How many distinct hue clusters the palette spends. Neutrals do not count."""
+    hues = sorted(hue(palette.role(r)) for r in ROLES if chroma(palette.role(r)) >= 0.045)
+    return 1 + sum(1 for a, b in zip(hues, hues[1:], strict=False) if b - a > 18.0)
 
 
 def measure(palette: Palette) -> dict[str, object]:
@@ -433,7 +580,7 @@ def measure(palette: Palette) -> dict[str, object]:
     ]
     scored = [
         (a, b, separation(palette.role(a), palette.role(b)) - required_separation(a, b))
-        for a, b in PAIRS
+        for a, b in itertools.combinations(ROLES, 2)
     ]
     a, b, slack = min(scored, key=lambda row: row[2])
     return {
@@ -445,19 +592,13 @@ def measure(palette: Palette) -> dict[str, object]:
             for k in ("red", "green", "yellow", "blue", "magenta", "cyan")
         ), 1),
         "neon": round(chroma(palette.text), 3),
-        "pastel_roles": sum(
-            1 for r in ROLES
-            if r not in CHROMA_EXEMPT and chroma(palette.role(r)) < MIN_ROLE_CHROMA
-        ),
-        "min_chroma": round(min(
-            chroma(palette.role(r)) for r in ROLES if r not in CHROMA_EXEMPT
-        ), 3),
-        "green_chroma": round(
-            sum(chroma(palette.role(r)) for r in ROLES if is_green(palette.role(r)))
-            / max(1, sum(1 for r in ROLES if is_green(palette.role(r)))), 3
-        ),
+        "min_saturation": round(min(
+            saturation(palette.role(r)) for r in ROLES if r not in CHROMA_EXEMPT
+        ), 2),
+        "hue_families": hue_families(palette),
         "min_separation": round(min(
-            separation(palette.role(x), palette.role(y)) for x, y in PAIRS
+            separation(palette.role(x), palette.role(y))
+            for x, y in itertools.combinations(ROLES, 2)
         ), 3),
         "tightest_pair": f"{a}/{b}",
         "slack": round(slack, 3),
