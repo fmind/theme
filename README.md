@@ -6,36 +6,34 @@ A light theme for everyday terminal work. One folder per app, native theme files
 
 ![Fmind colors and their roles](screenshots/palette.svg)
 
-The complete palette contains 20 colors, including the supporting custom shades. Every color is listed below, whether it colors syntax, interface elements or backgrounds.
-
-All currently appear in at least one integration; a dash means no assigned role in that column. Colors without any use should remain listed as **Unused**.
+All 20 colors are used. A dash means no role in that column.
 
 | Color | Hex | Syntax and text | Interface and backgrounds |
 | --- | --- | --- | --- |
 | White | `#FFFFFF` | Label text on dark fills | Main background |
-| Light gray | `#F1F3F4` | — | Panels, cursor line, menus and neutral diff lines |
-| Gray | `#9AA0A6` | bat gutter numbers | Borders, scrollbar accents and deprecated-code marks |
-| Dark gray (custom) | `#595D62` | Comments, line numbers and secondary text | Inactive labels and muted indicators; ANSI bright black |
-| Charcoal | `#202124` | Body text, variables, parameters, properties, operators and punctuation | Label text on bright fills; ANSI black and white slots |
-| Dark blue | `#174EA6` | Keywords, functions, calls, escapes, configuration keys, inline code and primary headings | Navigation, links, focus indicators and staged-change signs; ANSI blue |
-| Medium blue | `#4285F4` | — | Cursor, incremental search, blue labels, tabs and marked-file indicators |
-| Light blue | `#D2E3FC` | — | Selections, selected rows and completion items |
-| Dark red | `#A50E0E` | Errors, exceptions and deleted text | Failure indicators, deletion signs and error-badge fills; ANSI red |
-| Medium red | `#EA4335` | — | Cut-file markers, spelling-error and diagnostic-error underlines |
-| Light red | `#FAD2CF` | — | Deleted-line and deleted-word backgrounds |
-| Dark orange (custom) | `#934900` | Numbers, constants, booleans and warning text | Modified-change signs and attention indicators; ANSI yellow |
-| Orange | `#E37400` | — | Search and warning-label fills, selected-file markers and warning underlines |
-| Yellow | `#FBBC04` | — | Active tabs, current search match, changed words and focused controls |
-| Light yellow | `#FEEFC3` | — | Changed-line and marked-base-commit backgrounds |
-| Dark green | `#0D652D` | Strings, characters, added text and secondary headings | Success indicators, addition signs and executable files; ANSI green |
-| Medium green | `#34A853` | — | Insert/select-mode labels, copied-file markers and success underlines |
-| Light green | `#CEEAD6` | — | Added-line, added-word and cherry-picked-commit backgrounds |
-| Purple (custom) | `#681DA8` | Types, classes, builtins, decorators, attributes and emphasis | Secondary accents and type-related labels; ANSI magenta |
-| Teal (custom) | `#00636D` | Informational diagnostics | Informational messages and cyan icons; ANSI cyan |
+| Light gray | `#F1F3F4` | — | Panels, cursor line and neutral diffs |
+| Gray | `#9AA0A6` | bat gutter numbers | Borders and scrollbar |
+| Dark gray (custom) | `#595D62` | Comments and secondary text | Muted labels; ANSI bright black |
+| Charcoal | `#202124` | Body text, variables and punctuation | Labels on bright fills; ANSI black/white |
+| Dark blue | `#174EA6` | Keywords, functions, keys and headings | Navigation and links; ANSI blue |
+| Medium blue | `#4285F4` | — | Cursor, tabs and label fills |
+| Light blue | `#D2E3FC` | — | Selections and completions |
+| Dark red | `#A50E0E` | Errors and deleted text | Failures and deletions; ANSI red |
+| Medium red | `#EA4335` | — | Cut markers and error underlines |
+| Light red | `#FAD2CF` | — | Deletion backgrounds |
+| Dark orange (custom) | `#934900` | Numbers, constants and warnings | Changes and attention; ANSI yellow |
+| Orange | `#E37400` | — | Search and warning accents |
+| Yellow | `#FBBC04` | — | Active tabs, search matches and changed words |
+| Light yellow | `#FEEFC3` | — | Change backgrounds |
+| Dark green | `#0D652D` | Strings and added text | Success, additions and executables; ANSI green |
+| Medium green | `#34A853` | — | Mode labels, copy markers and success accents |
+| Light green | `#CEEAD6` | — | Addition backgrounds |
+| Purple (custom) | `#681DA8` | Types, builtins, decorators and emphasis | Secondary accents; ANSI magenta |
+| Teal (custom) | `#00636D` | Informational diagnostics | Information and icons; ANSI cyan |
 
-Dark shades carry text; bright shades carry fills and accents. Syntax and comments meet 4.5:1 on white, panels, selections and diff backgrounds. Filled labels use charcoal or white text according to their background. Staged Git signs keep the change’s color and add bold. Color is reinforced by labels, signs and typography.
+Dark shades carry text; bright shades carry fills and accents. Syntax and comments meet 4.5:1 on white, panels, selections and diffs. Bold distinguishes staged Git signs.
 
-Font recommendation: **GoogleSansCode Nerd Font Mono**. Font installation and selection belong to the terminal configuration. Text stays upright; bold marks structural emphasis.
+Recommended terminal font: **GoogleSansCode Nerd Font Mono**. Text stays upright; bold adds emphasis.
 
 ## Screenshots
 
@@ -43,11 +41,11 @@ Font recommendation: **GoogleSansCode Nerd Font Mono**. Font installation and se
 | --- | --- |
 | ![Neovim and Fish in Zellij, including search and selected code](screenshots/zellij.png) | ![Markdown syntax in Neovim](screenshots/markdown.png) |
 
-Two real application captures, using synthetic examples and VHS. See Maintenance below to refresh them.
+Captured with VHS using synthetic examples.
 
 ## Install
 
-Use a truecolor terminal with a light background. Paths below use `~/.config`; respect each app’s configured directory or `XDG_CONFIG_HOME`. Merge fragments into existing configuration instead of replacing unrelated settings.
+Use a truecolor terminal with a light background. Paths are relative to `~/.config` or your app's configured directory. Merge fragments into existing settings.
 
 | Tool | Theme file | Installation |
 | --- | --- | --- |
@@ -87,7 +85,9 @@ repl.use_code_colorscheme("fmind")
 repl.use_ui_colorscheme("fmind")
 ```
 
-Named ANSI colors follow the terminal palette; use the matching Ghostty theme. Both normal and bright slots use readable dark foregrounds, including the slots named white. Apps that use ANSI colors as backgrounds or define their own colors may need app-specific settings; a terminal palette cannot control every rendered color.
+Use the matching Ghostty theme for ANSI colors. Normal and bright slots use dark foregrounds, including slots named white.
+
+Apps with their own colors or ANSI backgrounds may need additional settings.
 
 ## Maintenance
 
@@ -100,12 +100,12 @@ mise run install
 mise run check
 ```
 
-Python uses 3.14; other tools track `latest` in `mise.toml`. `mise.lock` and `uv.lock` record resolved versions. Python dependencies and Ruff settings live in `pyproject.toml`. Run `mise run format` to format Python.
+Tools are configured in `mise.toml`; Python dependencies and Ruff in `pyproject.toml`. Lockfiles record resolved versions. Use `mise run format` for Python formatting.
 
-Setup downloads pinned Neovim parsers into `.cache/syntax/`. The gate runs 15 tests covering native file syntax, Neovim and bat highlighting, palette consistency and text contrast. App configuration stays isolated; live services are never contacted. CI runs the same setup and checks. Parsing an app's files does not verify all its runtime states.
+Setup downloads pinned parsers to `.cache/syntax/`. Checks cover file syntax, highlighting, palette consistency and contrast. CI uses the same commands with isolated app configuration. Live services and untested app states remain outside the checks.
 
-Edit native themes directly and keep `checks/palette.yaml`, `checks/syntax.yaml`, this README and `screenshots/palette.svg` aligned. Fixtures cover nine languages. Known parser limits: bat leaves YAML fences plain and cannot draw strikethrough; Tree-sitter treats quoted TOML keys as strings. Use Neovim's `:Inspect` and `:InspectTree` to diagnose highlighting.
+Edit native themes directly; update the expectations in `checks/`, palette table and SVG together. To diagnose highlighting, use Neovim's `:Inspect` or `:InspectTree`. Known limits: bat leaves YAML fences plain and omits strikethrough; Tree-sitter treats quoted TOML keys as strings.
 
-After visual changes, `mise run screenshots` refreshes the two PNGs using synthetic inputs and a temporary home. It requires setup above, VHS, ttyd, FFmpeg, Zellij, Fontconfig, GoogleSansCode Nerd Font Mono and Chromium. Set `VHS_CHROME_PATH` to Chromium, or install Playwright Chromium in its default cache.
+Refresh the two PNGs with `mise run screenshots`. This requires setup above, VHS, ttyd, FFmpeg, Zellij, Fontconfig, the recommended font and Chromium. Set `VHS_CHROME_PATH`, or use Playwright Chromium from its default cache.
 
 Maintained alongside [fmind/dot](https://github.com/fmind/dot). [MIT license](LICENSE).
