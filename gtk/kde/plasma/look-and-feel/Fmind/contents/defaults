@@ -23,3 +23,6 @@ theme=__aurorae__svg__Fmind
 [ksplashrc][KSplash]
 Theme=Fmind
 Engine=KSplashQML
+
+[kcminputrc][Mouse]
+cursorTheme=Fmind

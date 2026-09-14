@@ -68,6 +68,10 @@ class ThemeTests(unittest.TestCase):
         for path in sorted(source_files):
             if path.relative_to(ROOT).parts[0] not in app_names or not path.is_file():
                 continue
+            if path.parent == ROOT / "gtk/kde/cursors/Fmind/cursors":
+                # Xcursor files contain ARGB pixels, decoded by cursor tests.
+                self.assertEqual(path.read_bytes()[:4], b"Xcur", path)
+                continue
             if path.suffix == ".png":
                 # Native package previews are raster captures; their source QML
                 # is checked below and their PNG structure in package tests.

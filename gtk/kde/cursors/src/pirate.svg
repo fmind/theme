@@ -1,0 +1,4 @@
+<!-- https://www.w3.org/TR/SVG2/ -->
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+<circle cx="16" cy="13" r="10" fill="#ffffff" stroke="#ffffff" stroke-width="4"/><circle cx="16" cy="13" r="9" fill="#ffffff" stroke="#202124" stroke-width="2"/><path d="M11 18 V23 H21 V18" fill="#ffffff" stroke="#202124" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="12" cy="12" r="2" fill="#202124" stroke="#202124" stroke-width="0"/><circle cx="20" cy="12" r="2" fill="#202124" stroke="#202124" stroke-width="0"/><path d="M16 15 L14 18 H18 Z" fill="#202124" stroke="#202124" stroke-width="0" stroke-linejoin="round" stroke-linecap="round"/><path d="M6 25 L26 29 M6 29 L26 25" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><path d="M6 25 L26 29 M6 29 L26 25" fill="none" stroke="#202124" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

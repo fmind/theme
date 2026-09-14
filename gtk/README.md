@@ -36,7 +36,7 @@ Native style resolution was checked with Cinnamon 5.6.8 and with the stable 6.6.
 
 ## KDE components and global theme
 
-The package also includes [KDE application colors, a Plasma desktop style, Aurorae decorations, Kvantum widgets and a global theme with a startup splash](kde/README.md). Install them in KDE's color-scheme, Plasma-style, Aurorae, Kvantum and look-and-feel directories as described in that guide; the GTK theme directory is not a KDE installation location. The [KDE checklist](kde/README.md#bundle-checklist) tracks the remaining session-screen, cursor and SDDM companions.
+The package also includes [KDE application colors, a Plasma desktop style, Aurorae decorations, Kvantum widgets, cursors and a global theme with a startup splash](kde/README.md). Install them in KDE's color-scheme, Plasma-style, Aurorae, Kvantum, cursor and look-and-feel directories as described in that guide; the GTK theme directory is not a KDE installation location. The [KDE checklist](kde/README.md#bundle-checklist) tracks the remaining session-screen and SDDM companions.
 
 ## Window decorations
 
@@ -64,7 +64,7 @@ The [free Dracula GTK repository](https://github.com/dracula/gtk) also contains 
 - [ ] Application-specific widget refinements for the apps in the reference bundle.
 - [x] [GNOME Shell](gnome-shell/gnome-shell.css), with [legacy image controls](gnome-shell/legacy.css).
 - [x] [Cinnamon](cinnamon/cinnamon.css).
-- [ ] [Complete KDE bundle](kde/README.md#bundle-checklist); color scheme, Plasma style, Aurorae decorations, Kvantum widgets, global theme and startup splash are available, with other companions pending.
+- [ ] [Complete KDE bundle](kde/README.md#bundle-checklist); color scheme, Plasma style, Aurorae decorations, Kvantum widgets, cursors, global theme and startup splash are available, with other companions pending.
 - [x] [Metacity](metacity-1/metacity-theme-3.xml).
 - [x] [Xfwm](xfwm4/themerc), including HiDPI and extra-HiDPI decorations.
 - [ ] Unity.

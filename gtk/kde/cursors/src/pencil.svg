@@ -1,0 +1,4 @@
+<!-- https://www.w3.org/TR/SVG2/ -->
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+<path d="M5 27 L7 20 L23 4 Q25 2 28 5 Q30 7 28 9 L12 25 Z" fill="#ffffff" stroke="#202124" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><path d="M9 20 L13 24 M22 6 L26 10" fill="none" stroke="#ffffff" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/><path d="M9 20 L13 24 M22 6 L26 10" fill="none" stroke="#174ea6" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><path d="M5 27 L7 22 L10 25 Z" fill="#202124" stroke="#202124" stroke-width="0" stroke-linejoin="round" stroke-linecap="round"/>
+</svg>

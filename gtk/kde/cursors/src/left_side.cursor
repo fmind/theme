@@ -1,0 +1,7 @@
+# https://xorg.freedesktop.org/archive/X11R7.5/doc/man/man1/xcursorgen.1.html
+24 3 12 24/left_side.png 50
+32 4 16 32/left_side.png 50
+36 4 18 36/left_side.png 50
+48 6 24 48/left_side.png 50
+64 8 32 64/left_side.png 50
+96 12 48 96/left_side.png 50

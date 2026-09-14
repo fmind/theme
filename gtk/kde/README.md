@@ -1,6 +1,6 @@
 # Fmind KDE
 
-KDE application colors, a Plasma desktop style, Aurorae window decorations, Kvantum widgets and a global theme with a startup splash. Ordinary surfaces stay white, selections are pale and semantic text remains readable. Components can be selected separately or together through the global theme. The remaining KDE components of the free Dracula GTK bundle are listed below.
+KDE application colors, a Plasma desktop style, Aurorae window decorations, Kvantum widgets, native cursors and a global theme with a startup splash. Ordinary surfaces stay white, selections are pale and semantic text remains readable. Components can be selected separately or together through the global theme. The remaining KDE components of the free Dracula GTK bundle are listed below.
 
 ## Color scheme
 
@@ -40,13 +40,17 @@ Native testing used Kvantum 1.0.7 and Qt 5.15.8 under isolated Xvfb at 100%, 150
 
 ## Global theme and startup splash
 
-Install the Fmind color scheme, Plasma style, Aurorae decorations and Kvantum theme using the sections above. Install Google Sans and Google Sans Code, then select Fmind in Kvantum Manager. The global theme selects the Kvantum widget engine; KDE does not use this package to change Kvantum Manager's active theme.
+Install the Fmind color scheme, Plasma style, Aurorae decorations, Kvantum theme and cursors using this guide. Install Google Sans and Google Sans Code, then select Fmind in Kvantum Manager. The global theme selects the Kvantum widget engine; KDE does not use this package to change Kvantum Manager's active theme.
 
-Copy the complete [plasma/look-and-feel/Fmind/](plasma/look-and-feel/Fmind/) directory to `~/.local/share/plasma/look-and-feel/Fmind/`, preserving its metadata, defaults, colors, QML and previews. Select Fmind in System Settings → Global Theme and apply the available appearance components. The package selects Fmind colors, Plasma style, Aurorae decorations, fonts and startup splash, plus the Kvantum widget engine. It contains no desktop layout, wallpaper, icon or cursor selection and no remote package dependencies. Install its companion packages before applying it.
+Copy the complete [plasma/look-and-feel/Fmind/](plasma/look-and-feel/Fmind/) directory to `~/.local/share/plasma/look-and-feel/Fmind/`, preserving its metadata, defaults, colors, QML and previews. Select Fmind in System Settings → Global Theme and apply the available appearance components. The package selects Fmind colors, Plasma style, Aurorae decorations, cursors, fonts and startup splash, plus the Kvantum widget engine. It contains no desktop layout, wallpaper or icon selection and no remote package dependencies. Install its companion packages before applying it.
 
 The same package supports the Plasma 5 and 6 look-and-feel formats. To use only its startup screen, select Fmind in System Settings → Splash Screen. The splash shows dark text and a blue activity marker on white; the marker follows Plasma's stage changes without estimating a completion percentage. Its [package preview](plasma/look-and-feel/Fmind/contents/previews/preview.png) is a native rendering of the splash, not a screenshot of an entire desktop.
 
 KDE Frameworks 5.103 loads the package and defaults, and Plasma 5.27.5 completes its native KSplash test without warnings. The splash also renders in both Qt 5.15.8 and Qt 6.4.2 at multiple viewport sizes and scale factors. Full Global Theme application in a desktop session, a Plasma 6 package loader and the Plasma 6 KSplash process remain unverified. See [coverage](../../COVERAGE.md) for the tested boundaries.
+
+## Cursor theme
+
+Copy the complete [cursors/Fmind/](cursors/Fmind/) directory to `~/.local/share/icons/Fmind/`, preserving its symbolic links, then select Fmind in System Settings → Cursors. The package includes 113 names at six sizes, with twelve-frame wait/progress animations. See the [cursor guide](cursors/README.md) for coverage, toolkit aliases, installation alternatives and native compilation instructions.
 
 ## Bundle checklist
 
@@ -58,7 +62,7 @@ The [free Dracula KDE directory](https://github.com/dracula/gtk/tree/master/kde)
 - [x] Kvantum widget theme.
 - [x] Global themes and splash screens for Plasma 5 and 6.
 - [ ] Plasma 5 lock-screen, logout and OSD components from the reference bundle.
-- [ ] Cursor theme.
+- [x] Cursor theme.
 - [ ] SDDM login-screen theme.
 
 The parent GTK catalog entry remains pending until its full bundle is implemented and checked. See [coverage](../../COVERAGE.md) for the exact native evidence and remaining runtime boundaries.

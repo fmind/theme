@@ -1,0 +1,7 @@
+# https://xorg.freedesktop.org/archive/X11R7.5/doc/man/man1/xcursorgen.1.html
+24 12 12 24/cell.png 50
+32 16 16 32/cell.png 50
+36 18 18 36/cell.png 50
+48 24 24 48/cell.png 50
+64 32 32 64/cell.png 50
+96 48 48 96/cell.png 50

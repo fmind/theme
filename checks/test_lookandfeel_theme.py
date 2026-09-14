@@ -35,6 +35,8 @@ class LookAndFeelTests(unittest.TestCase):
         self.assertEqual(defaults["ksplashrc][KSplash"]["Theme"], THEME.name)
         self.assertEqual(defaults["ksplashrc][KSplash"]["Engine"], "KSplashQML")
         self.assertTrue((THEME / "contents/splash/Splash.qml").is_file())
+        cursor = defaults["kcminputrc][Mouse"]["cursorTheme"]
+        self.assertTrue((KDE / "cursors" / cursor / "cursors/default").is_file())
         self.assertEqual((THEME / "contents/colors").read_bytes(), (KDE / "color-schemes/Fmind.colors").read_bytes())
 
     def test_font_defaults_cover_ui_monospace_and_titles(self):
