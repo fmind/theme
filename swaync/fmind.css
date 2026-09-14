@@ -1,0 +1,136 @@
+/* https://github.com/ErikReider/SwayNotificationCenter/tree/main/data/style */
+/* Import after the application's installed style.css; retain its layout rules. */
+/* SwayNotificationCenter 0.12.6 uses GTK 4.16+ native CSS variables. */
+:root {
+    --cc-bg: #ffffff;
+    --noti-border-color: #9aa0a6;
+    /* The app passes this tuple to rgba(), rather than using it as a color. */
+    --noti-bg: 255, 255, 255;
+    --noti-bg-alpha: 1;
+    --noti-bg-darker: #ffffff;
+    --noti-bg-alt: #ffffff;
+    --noti-bg-hover: #f1f3f4;
+    --noti-bg-focus: #d2e3fc;
+    --noti-close-bg: #ffffff;
+    --noti-close-bg-hover: #f1f3f4;
+    --text-color: #202124;
+    --text-color-disabled: #595d62;
+    --bg-selected: #d2e3fc;
+    --notification-shadow: none;
+    --mpris-album-art-overlay: #ffffff;
+    --mpris-button-hover: #d2e3fc;
+    --mpris-album-art-shadow: none;
+}
+* {
+    font-family: "Google Sans", sans-serif;
+    color: #202124;
+    text-shadow: none;
+}
+.control-center, .notification,
+.notification-row .notification-background .notification,
+.notification-group.collapsed .notification-row .notification,
+.widget, .per-app-volume, .widget-calendar .calendar-container calendar {
+    background: #ffffff;
+    color: #202124;
+    border-color: #9aa0a6;
+    box-shadow: none;
+}
+.notification-row .notification-background .notification.low { border-color: #9aa0a6; }
+.notification-row .notification-background .notification.normal { border-color: #174ea6; }
+.notification-row .notification-background .notification.critical { border-color: #a50e0e; }
+.notification .notification-content .summary,
+.notification .notification-content .body,
+.notification-group .notification-group-headers .notification-group-header,
+.notification-group .notification-group-headers .notification-group-icon,
+.widget-dnd label, .widget-calendar .calendar-container .day-label,
+.widget-calendar .calendar-container .date-label { color: #202124; opacity: 1; }
+.notification .notification-content .time,
+.control-center .control-center-list-placeholder { color: #595d62; opacity: 1; }
+.notification .notification-content .text-box label { filter: none; }
+.notification .notification-content .body a { color: #174ea6; }
+.notification .notification-content .body a:visited { color: #681da8; }
+.notification-row:focus, .notification-group:focus { background: #d2e3fc; }
+.notification-group.collapsed.not-expanded { opacity: 1; }
+.notification-group.collapsed:hover .notification-row:not(:only-child) .notification {
+    background: #f1f3f4;
+}
+.notification-default-action,
+.notification-row .notification-background .notification .notification-default-action,
+.notification-alt-actions { background: transparent; color: #202124; }
+button, .close-button,
+.notification-row .notification-background .close-button,
+.notification-action > button,
+.notification .inline-reply .inline-reply-button {
+    background: #ffffff;
+    color: #202124;
+    border-color: #9aa0a6;
+    box-shadow: none;
+    text-shadow: none;
+}
+button:hover, .close-button:hover,
+.notification-row .notification-background .close-button:hover,
+.notification-action > button:hover,
+.notification .inline-reply .inline-reply-button:hover,
+.notification-row .notification-background .notification .notification-default-action:hover,
+.control-center .control-center-list .notification .notification-default-action:hover,
+.control-center .control-center-list .notification .notification-action:hover {
+    background: #f1f3f4;
+    color: #174ea6;
+}
+button:checked, button:active,
+.widget-buttons-grid flowboxchild > button.toggle:checked,
+.notification-action > button:active {
+    background: #d2e3fc;
+    color: #174ea6;
+    border-color: #174ea6;
+}
+button:focus, entry:focus { outline-color: #174ea6; border-color: #174ea6; }
+button:disabled, button:disabled label, button:disabled image,
+.notification .inline-reply .inline-reply-button:disabled {
+    background: #ffffff;
+    color: #595d62;
+    opacity: 1;
+}
+entry, .notification .inline-reply .inline-reply-entry {
+    background: #ffffff;
+    color: #202124;
+    caret-color: #174ea6;
+    border-color: #9aa0a6;
+    box-shadow: none;
+}
+entry selection, calendar:selected,
+.widget-calendar .calendar-container calendar:selected {
+    background: #d2e3fc;
+    color: #174ea6;
+}
+switch { background: #ffffff; border-color: #9aa0a6; color: #595d62; }
+switch:checked { background: #d2e3fc; border-color: #174ea6; color: #174ea6; }
+switch slider { background: #595d62; border-color: #595d62; box-shadow: none; }
+switch:checked slider { background: #174ea6; border-color: #174ea6; }
+scale trough, progressbar trough { background: #d2e3fc; border-color: #9aa0a6; }
+scale highlight, scale slider, progressbar progress {
+    background: #174ea6;
+    border-color: #174ea6;
+    box-shadow: none;
+}
+scale:disabled, scale:disabled label { color: #595d62; opacity: 1; }
+scrollbar { background: #ffffff; }
+scrollbar slider { background: #9aa0a6; }
+tooltip, tooltip label, popover contents, popover modelbutton {
+    background: #ffffff;
+    color: #202124;
+    border-color: #9aa0a6;
+    box-shadow: none;
+}
+popover modelbutton:hover { background: #d2e3fc; color: #174ea6; }
+.widget-mpris .widget-mpris-player { background: #ffffff; box-shadow: none; }
+/* An opaque overlay separates text from arbitrary album artwork. */
+.widget-mpris .widget-mpris-player .mpris-overlay { background: #ffffff; color: #202124; }
+.widget-mpris .widget-mpris-player .mpris-overlay button:hover,
+.widget-mpris .widget-mpris-player .mpris-overlay > box > button:hover {
+    background: #d2e3fc;
+    color: #174ea6;
+}
+.widget-mpris-title { color: #202124; }
+.widget-mpris-subtitle { color: #595d62; }
+.widget-mpris .widget-mpris-player .mpris-overlay .widget-mpris-album-art { box-shadow: none; }

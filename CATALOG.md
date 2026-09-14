@@ -70,13 +70,13 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [Termux](https://draculatheme.com/termux) | Port shipped | [termux](termux/) |
 | [Alfred](https://draculatheme.com/alfred) | Pending | — |
 | [Telegram Android](https://draculatheme.com/telegram-android) | Pending | — |
-| [wofi](https://draculatheme.com/wofi) | Pending | — |
+| [wofi](https://draculatheme.com/wofi) | Port shipped | [wofi](wofi/) |
 | [JupyterLab](https://draculatheme.com/jupyterlab) | Pending | — |
 | [GitHub Pages](https://draculatheme.com/gh-pages) | Pending | — |
 | [LibreOffice](https://draculatheme.com/libreoffice) | Pending | — |
 | [Arduino IDE](https://draculatheme.com/arduino-ide) | Pending | — |
 | [Midnight Commander](https://draculatheme.com/midnight-commander) | Pending | — |
-| [Hyprland](https://draculatheme.com/hyprland) | Pending | — |
+| [Hyprland](https://draculatheme.com/hyprland) | Port shipped | [hyprland](hyprland/) |
 | [Kate](https://draculatheme.com/kate) | Port shipped | [kate](kate/) |
 | [Godot](https://draculatheme.com/godot) | Pending | — |
 | [Sequel Pro](https://draculatheme.com/sequel-pro) | Pending | — |
@@ -112,7 +112,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [Mousepad](https://draculatheme.com/mousepad) | Pending | — |
 | [Tilix](https://draculatheme.com/tilix) | Port shipped | [tilix](tilix/) |
 | [Vivado](https://draculatheme.com/vivado) | Pending | — |
-| [bspwm](https://draculatheme.com/bspwm) | Pending | — |
+| [bspwm](https://draculatheme.com/bspwm) | Port shipped | [bspwm](bspwm/) |
 | [Marp](https://draculatheme.com/marp) | Pending | — |
 | [Git](https://draculatheme.com/git) | Pending | — |
 | [DOOM Emacs](https://draculatheme.com/doom-emacs) | Pending | — |
@@ -168,7 +168,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [PL/SQL Developer](https://draculatheme.com/plsql-developer) | Pending | — |
 | [Inkscape](https://draculatheme.com/inkscape) | Pending | — |
 | [Textual](https://draculatheme.com/textual) | Pending | — |
-| [Swaylock](https://draculatheme.com/swaylock) | Pending | — |
+| [Swaylock](https://draculatheme.com/swaylock) | Port shipped | [swaylock](swaylock/) |
 | [Roam Research](https://draculatheme.com/roam-research) | Pending | — |
 | [Discourse](https://draculatheme.com/discourse) | Pending | — |
 | [Sumatra PDF](https://draculatheme.com/sumatra-pdf) | Pending | — |
@@ -176,7 +176,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [macOS Color Picker](https://draculatheme.com/macos-color-picker) | Pending | — |
 | [Plank](https://draculatheme.com/plank) | Pending | — |
 | [Quiver](https://draculatheme.com/quiver) | Pending | — |
-| [Polybar](https://draculatheme.com/polybar) | Pending | — |
+| [Polybar](https://draculatheme.com/polybar) | Port shipped | [polybar](polybar/) |
 | [Micro](https://draculatheme.com/micro) | Port shipped | [micro](micro/) |
 | [Nextcloud](https://draculatheme.com/nextcloud) | Pending | — |
 | [Unreal Engine](https://draculatheme.com/unreal-engine) | Pending | — |
@@ -189,7 +189,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [TiddlyWiki](https://draculatheme.com/tiddlywiki) | Pending | — |
 | [Nylas N1](https://draculatheme.com/nylas-n1) | Pending | — |
 | [FZF](https://draculatheme.com/fzf) | Port shipped | [fzf](fzf/) |
-| [fuzzel](https://draculatheme.com/fuzzel) | Pending | — |
+| [fuzzel](https://draculatheme.com/fuzzel) | Port shipped | [fuzzel](fuzzel/) |
 | [Bear](https://draculatheme.com/bear) | Pending | — |
 | [Beyond Compare 4](https://draculatheme.com/beyond-compare-4) | Pending | — |
 | [Discord Bot Maker](https://draculatheme.com/discordbotmaker) | Pending | — |
@@ -272,7 +272,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [ChatGPT](https://draculatheme.com/chatgpt) | Pending | — |
 | [Mako](https://draculatheme.com/mako) | Pending | — |
 | [foot](https://draculatheme.com/foot) | Port shipped | [foot](foot/) |
-| [Dmenu](https://draculatheme.com/dmenu) | Pending | — |
+| [Dmenu](https://draculatheme.com/dmenu) | Port shipped | [dmenu](dmenu/) |
 | [Flarum](https://draculatheme.com/flarum) | Pending | — |
 | [Visual Basic 6](https://draculatheme.com/visual-basic-6) | Pending | — |
 | [Nyxt](https://draculatheme.com/nyxt) | Pending | — |
@@ -460,7 +460,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [FocusWriter](https://draculatheme.com/focuswriter) | Pending | — |
 | [alphai-tui](https://draculatheme.com/alphai-tui) | Pending | — |
 | [Dash](https://draculatheme.com/dash) | Pending | — |
-| [WOB](https://draculatheme.com/WOB) | Pending | — |
+| [WOB](https://draculatheme.com/WOB) | Port shipped | [wob](wob/) |
 | [Telegram macOS](https://draculatheme.com/telegram-macos) | Pending | — |
 | [xdbg](https://draculatheme.com/xdbg) | Pending | — |
 | [Forgejo](https://draculatheme.com/forgejo) | Pending | — |
@@ -468,13 +468,13 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [Kagi](https://draculatheme.com/kagi) | Pending | — |
 | [Telegram X](https://draculatheme.com/telegram-x) | Pending | — |
 | [DeepSeek](https://draculatheme.com/deepseek) | Pending | — |
-| [Swaync](https://draculatheme.com/swaync) | Pending | — |
+| [Swaync](https://draculatheme.com/swaync) | Port shipped | [swaync](swaync/) |
 | [Miniflux](https://draculatheme.com/miniflux) | Pending | — |
 | [Starlight](https://draculatheme.com/astro-starlight) | Pending | — |
 | [Snappy Driver Installer Origin](https://draculatheme.com/snappy-driver-installer-origin) | Pending | — |
 | [Neiki's Editor](https://draculatheme.com/neiki-editor) | Pending | — |
 | [StationView](https://draculatheme.com/stationview) | Pending | — |
-| [SwayOSD](https://draculatheme.com/swayosd) | Pending | — |
+| [SwayOSD](https://draculatheme.com/swayosd) | Port shipped | [swayosd](swayosd/) |
 | [Neiki's Page Editor](https://draculatheme.com/neiki-page-editor) | Pending | — |
 | [PeerTube](https://draculatheme.com/peertube) | Pending | — |
 | [Wiremix](https://draculatheme.com/wiremix) | Pending | — |
