@@ -1,0 +1,466 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="160" viewBox="0 0 160 160">
+  <g id="normal-center">
+    <rect x="8" y="8" width="32" height="32" fill="#ffffff" />
+  </g>
+  <g id="normal-top">
+    <rect x="8" y="0" width="32" height="8" fill="#ffffff" />
+    <rect x="8" y="0" width="32" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="normal-bottom">
+    <rect x="8" y="40" width="32" height="8" fill="#ffffff" />
+    <rect x="8" y="47" width="32" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="normal-left">
+    <rect x="0" y="8" width="8" height="32" fill="#ffffff" />
+    <rect x="0" y="8" width="1" height="32" fill="#9aa0a6" />
+  </g>
+  <g id="normal-right">
+    <rect x="40" y="8" width="8" height="32" fill="#ffffff" />
+    <rect x="47" y="8" width="1" height="32" fill="#9aa0a6" />
+  </g>
+  <g id="normal-topleft">
+    <rect x="0" y="0" width="8" height="8" fill="#ffffff" />
+    <rect x="0" y="0" width="8" height="1" fill="#9aa0a6" />
+    <rect x="0" y="0" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="normal-topright">
+    <rect x="40" y="0" width="8" height="8" fill="#ffffff" />
+    <rect x="40" y="0" width="8" height="1" fill="#9aa0a6" />
+    <rect x="47" y="0" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="normal-bottomleft">
+    <rect x="0" y="40" width="8" height="8" fill="#ffffff" />
+    <rect x="0" y="47" width="8" height="1" fill="#9aa0a6" />
+    <rect x="0" y="40" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="normal-bottomright">
+    <rect x="40" y="40" width="8" height="8" fill="#ffffff" />
+    <rect x="40" y="47" width="8" height="1" fill="#9aa0a6" />
+    <rect x="47" y="40" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="hover-center">
+    <rect x="8" y="8" width="32" height="32" fill="#f1f3f4" />
+  </g>
+  <g id="hover-top">
+    <rect x="8" y="0" width="32" height="8" fill="#f1f3f4" />
+    <rect x="8" y="0" width="32" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="hover-bottom">
+    <rect x="8" y="40" width="32" height="8" fill="#f1f3f4" />
+    <rect x="8" y="47" width="32" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="hover-left">
+    <rect x="0" y="8" width="8" height="32" fill="#f1f3f4" />
+    <rect x="0" y="8" width="1" height="32" fill="#9aa0a6" />
+  </g>
+  <g id="hover-right">
+    <rect x="40" y="8" width="8" height="32" fill="#f1f3f4" />
+    <rect x="47" y="8" width="1" height="32" fill="#9aa0a6" />
+  </g>
+  <g id="hover-topleft">
+    <rect x="0" y="0" width="8" height="8" fill="#f1f3f4" />
+    <rect x="0" y="0" width="8" height="1" fill="#9aa0a6" />
+    <rect x="0" y="0" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="hover-topright">
+    <rect x="40" y="0" width="8" height="8" fill="#f1f3f4" />
+    <rect x="40" y="0" width="8" height="1" fill="#9aa0a6" />
+    <rect x="47" y="0" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="hover-bottomleft">
+    <rect x="0" y="40" width="8" height="8" fill="#f1f3f4" />
+    <rect x="0" y="47" width="8" height="1" fill="#9aa0a6" />
+    <rect x="0" y="40" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="hover-bottomright">
+    <rect x="40" y="40" width="8" height="8" fill="#f1f3f4" />
+    <rect x="40" y="47" width="8" height="1" fill="#9aa0a6" />
+    <rect x="47" y="40" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="focus-center">
+    <rect x="8" y="8" width="32" height="32" fill="#d2e3fc" />
+  </g>
+  <g id="focus-top">
+    <rect x="8" y="0" width="32" height="8" fill="#d2e3fc" />
+    <rect x="8" y="0" width="32" height="1" fill="#174ea6" />
+  </g>
+  <g id="focus-bottom">
+    <rect x="8" y="40" width="32" height="8" fill="#d2e3fc" />
+    <rect x="8" y="47" width="32" height="1" fill="#174ea6" />
+  </g>
+  <g id="focus-left">
+    <rect x="0" y="8" width="8" height="32" fill="#d2e3fc" />
+    <rect x="0" y="8" width="1" height="32" fill="#174ea6" />
+  </g>
+  <g id="focus-right">
+    <rect x="40" y="8" width="8" height="32" fill="#d2e3fc" />
+    <rect x="47" y="8" width="1" height="32" fill="#174ea6" />
+  </g>
+  <g id="focus-topleft">
+    <rect x="0" y="0" width="8" height="8" fill="#d2e3fc" />
+    <rect x="0" y="0" width="8" height="1" fill="#174ea6" />
+    <rect x="0" y="0" width="1" height="8" fill="#174ea6" />
+  </g>
+  <g id="focus-topright">
+    <rect x="40" y="0" width="8" height="8" fill="#d2e3fc" />
+    <rect x="40" y="0" width="8" height="1" fill="#174ea6" />
+    <rect x="47" y="0" width="1" height="8" fill="#174ea6" />
+  </g>
+  <g id="focus-bottomleft">
+    <rect x="0" y="40" width="8" height="8" fill="#d2e3fc" />
+    <rect x="0" y="47" width="8" height="1" fill="#174ea6" />
+    <rect x="0" y="40" width="1" height="8" fill="#174ea6" />
+  </g>
+  <g id="focus-bottomright">
+    <rect x="40" y="40" width="8" height="8" fill="#d2e3fc" />
+    <rect x="40" y="47" width="8" height="1" fill="#174ea6" />
+    <rect x="47" y="40" width="1" height="8" fill="#174ea6" />
+  </g>
+  <g id="attention-center">
+    <rect x="8" y="8" width="32" height="32" fill="#feefc3" />
+  </g>
+  <g id="attention-top">
+    <rect x="8" y="0" width="32" height="8" fill="#feefc3" />
+    <rect x="8" y="0" width="32" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="attention-bottom">
+    <rect x="8" y="40" width="32" height="8" fill="#feefc3" />
+    <rect x="8" y="47" width="32" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="attention-left">
+    <rect x="0" y="8" width="8" height="32" fill="#feefc3" />
+    <rect x="0" y="8" width="1" height="32" fill="#9aa0a6" />
+  </g>
+  <g id="attention-right">
+    <rect x="40" y="8" width="8" height="32" fill="#feefc3" />
+    <rect x="47" y="8" width="1" height="32" fill="#9aa0a6" />
+  </g>
+  <g id="attention-topleft">
+    <rect x="0" y="0" width="8" height="8" fill="#feefc3" />
+    <rect x="0" y="0" width="8" height="1" fill="#9aa0a6" />
+    <rect x="0" y="0" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="attention-topright">
+    <rect x="40" y="0" width="8" height="8" fill="#feefc3" />
+    <rect x="40" y="0" width="8" height="1" fill="#9aa0a6" />
+    <rect x="47" y="0" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="attention-bottomleft">
+    <rect x="0" y="40" width="8" height="8" fill="#feefc3" />
+    <rect x="0" y="47" width="8" height="1" fill="#9aa0a6" />
+    <rect x="0" y="40" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="attention-bottomright">
+    <rect x="40" y="40" width="8" height="8" fill="#feefc3" />
+    <rect x="40" y="47" width="8" height="1" fill="#9aa0a6" />
+    <rect x="47" y="40" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="minimized-center">
+    <rect x="8" y="8" width="32" height="32" fill="#ffffff" />
+  </g>
+  <g id="minimized-top">
+    <rect x="8" y="0" width="32" height="8" fill="#ffffff" />
+    <rect x="8" y="0" width="32" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="minimized-bottom">
+    <rect x="8" y="40" width="32" height="8" fill="#ffffff" />
+    <rect x="8" y="47" width="32" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="minimized-left">
+    <rect x="0" y="8" width="8" height="32" fill="#ffffff" />
+    <rect x="0" y="8" width="1" height="32" fill="#9aa0a6" />
+  </g>
+  <g id="minimized-right">
+    <rect x="40" y="8" width="8" height="32" fill="#ffffff" />
+    <rect x="47" y="8" width="1" height="32" fill="#9aa0a6" />
+  </g>
+  <g id="minimized-topleft">
+    <rect x="0" y="0" width="8" height="8" fill="#ffffff" />
+    <rect x="0" y="0" width="8" height="1" fill="#9aa0a6" />
+    <rect x="0" y="0" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="minimized-topright">
+    <rect x="40" y="0" width="8" height="8" fill="#ffffff" />
+    <rect x="40" y="0" width="8" height="1" fill="#9aa0a6" />
+    <rect x="47" y="0" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="minimized-bottomleft">
+    <rect x="0" y="40" width="8" height="8" fill="#ffffff" />
+    <rect x="0" y="47" width="8" height="1" fill="#9aa0a6" />
+    <rect x="0" y="40" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="minimized-bottomright">
+    <rect x="40" y="40" width="8" height="8" fill="#ffffff" />
+    <rect x="40" y="47" width="8" height="1" fill="#9aa0a6" />
+    <rect x="47" y="40" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="progress-center">
+    <rect x="8" y="8" width="32" height="32" fill="#ceead6" />
+  </g>
+  <g id="progress-top">
+    <rect x="8" y="0" width="32" height="8" fill="#ceead6" />
+    <rect x="8" y="0" width="32" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="progress-bottom">
+    <rect x="8" y="40" width="32" height="8" fill="#ceead6" />
+    <rect x="8" y="47" width="32" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="progress-left">
+    <rect x="0" y="8" width="8" height="32" fill="#ceead6" />
+    <rect x="0" y="8" width="1" height="32" fill="#9aa0a6" />
+  </g>
+  <g id="progress-right">
+    <rect x="40" y="8" width="8" height="32" fill="#ceead6" />
+    <rect x="47" y="8" width="1" height="32" fill="#9aa0a6" />
+  </g>
+  <g id="progress-topleft">
+    <rect x="0" y="0" width="8" height="8" fill="#ceead6" />
+    <rect x="0" y="0" width="8" height="1" fill="#9aa0a6" />
+    <rect x="0" y="0" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="progress-topright">
+    <rect x="40" y="0" width="8" height="8" fill="#ceead6" />
+    <rect x="40" y="0" width="8" height="1" fill="#9aa0a6" />
+    <rect x="47" y="0" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="progress-bottomleft">
+    <rect x="0" y="40" width="8" height="8" fill="#ceead6" />
+    <rect x="0" y="47" width="8" height="1" fill="#9aa0a6" />
+    <rect x="0" y="40" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="progress-bottomright">
+    <rect x="40" y="40" width="8" height="8" fill="#ceead6" />
+    <rect x="40" y="47" width="8" height="1" fill="#9aa0a6" />
+    <rect x="47" y="40" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <use id="center" xlink:href="#normal-center" />
+  <use id="top" xlink:href="#normal-top" />
+  <use id="bottom" xlink:href="#normal-bottom" />
+  <use id="left" xlink:href="#normal-left" />
+  <use id="right" xlink:href="#normal-right" />
+  <use id="topleft" xlink:href="#normal-topleft" />
+  <use id="topright" xlink:href="#normal-topright" />
+  <use id="bottomleft" xlink:href="#normal-bottomleft" />
+  <use id="bottomright" xlink:href="#normal-bottomright" />
+  <use id="north-normal-center" xlink:href="#normal-center" />
+  <use id="north-normal-top" xlink:href="#normal-top" />
+  <use id="north-normal-bottom" xlink:href="#normal-bottom" />
+  <use id="north-normal-left" xlink:href="#normal-left" />
+  <use id="north-normal-right" xlink:href="#normal-right" />
+  <use id="north-normal-topleft" xlink:href="#normal-topleft" />
+  <use id="north-normal-topright" xlink:href="#normal-topright" />
+  <use id="north-normal-bottomleft" xlink:href="#normal-bottomleft" />
+  <use id="north-normal-bottomright" xlink:href="#normal-bottomright" />
+  <use id="north-hover-center" xlink:href="#hover-center" />
+  <use id="north-hover-top" xlink:href="#hover-top" />
+  <use id="north-hover-bottom" xlink:href="#hover-bottom" />
+  <use id="north-hover-left" xlink:href="#hover-left" />
+  <use id="north-hover-right" xlink:href="#hover-right" />
+  <use id="north-hover-topleft" xlink:href="#hover-topleft" />
+  <use id="north-hover-topright" xlink:href="#hover-topright" />
+  <use id="north-hover-bottomleft" xlink:href="#hover-bottomleft" />
+  <use id="north-hover-bottomright" xlink:href="#hover-bottomright" />
+  <use id="north-focus-center" xlink:href="#focus-center" />
+  <use id="north-focus-top" xlink:href="#focus-top" />
+  <use id="north-focus-bottom" xlink:href="#focus-bottom" />
+  <use id="north-focus-left" xlink:href="#focus-left" />
+  <use id="north-focus-right" xlink:href="#focus-right" />
+  <use id="north-focus-topleft" xlink:href="#focus-topleft" />
+  <use id="north-focus-topright" xlink:href="#focus-topright" />
+  <use id="north-focus-bottomleft" xlink:href="#focus-bottomleft" />
+  <use id="north-focus-bottomright" xlink:href="#focus-bottomright" />
+  <use id="north-attention-center" xlink:href="#attention-center" />
+  <use id="north-attention-top" xlink:href="#attention-top" />
+  <use id="north-attention-bottom" xlink:href="#attention-bottom" />
+  <use id="north-attention-left" xlink:href="#attention-left" />
+  <use id="north-attention-right" xlink:href="#attention-right" />
+  <use id="north-attention-topleft" xlink:href="#attention-topleft" />
+  <use id="north-attention-topright" xlink:href="#attention-topright" />
+  <use id="north-attention-bottomleft" xlink:href="#attention-bottomleft" />
+  <use id="north-attention-bottomright" xlink:href="#attention-bottomright" />
+  <use id="north-minimized-center" xlink:href="#minimized-center" />
+  <use id="north-minimized-top" xlink:href="#minimized-top" />
+  <use id="north-minimized-bottom" xlink:href="#minimized-bottom" />
+  <use id="north-minimized-left" xlink:href="#minimized-left" />
+  <use id="north-minimized-right" xlink:href="#minimized-right" />
+  <use id="north-minimized-topleft" xlink:href="#minimized-topleft" />
+  <use id="north-minimized-topright" xlink:href="#minimized-topright" />
+  <use id="north-minimized-bottomleft" xlink:href="#minimized-bottomleft" />
+  <use id="north-minimized-bottomright" xlink:href="#minimized-bottomright" />
+  <use id="north-progress-center" xlink:href="#progress-center" />
+  <use id="north-progress-top" xlink:href="#progress-top" />
+  <use id="north-progress-bottom" xlink:href="#progress-bottom" />
+  <use id="north-progress-left" xlink:href="#progress-left" />
+  <use id="north-progress-right" xlink:href="#progress-right" />
+  <use id="north-progress-topleft" xlink:href="#progress-topleft" />
+  <use id="north-progress-topright" xlink:href="#progress-topright" />
+  <use id="north-progress-bottomleft" xlink:href="#progress-bottomleft" />
+  <use id="north-progress-bottomright" xlink:href="#progress-bottomright" />
+  <use id="south-normal-center" xlink:href="#normal-center" />
+  <use id="south-normal-top" xlink:href="#normal-top" />
+  <use id="south-normal-bottom" xlink:href="#normal-bottom" />
+  <use id="south-normal-left" xlink:href="#normal-left" />
+  <use id="south-normal-right" xlink:href="#normal-right" />
+  <use id="south-normal-topleft" xlink:href="#normal-topleft" />
+  <use id="south-normal-topright" xlink:href="#normal-topright" />
+  <use id="south-normal-bottomleft" xlink:href="#normal-bottomleft" />
+  <use id="south-normal-bottomright" xlink:href="#normal-bottomright" />
+  <use id="south-hover-center" xlink:href="#hover-center" />
+  <use id="south-hover-top" xlink:href="#hover-top" />
+  <use id="south-hover-bottom" xlink:href="#hover-bottom" />
+  <use id="south-hover-left" xlink:href="#hover-left" />
+  <use id="south-hover-right" xlink:href="#hover-right" />
+  <use id="south-hover-topleft" xlink:href="#hover-topleft" />
+  <use id="south-hover-topright" xlink:href="#hover-topright" />
+  <use id="south-hover-bottomleft" xlink:href="#hover-bottomleft" />
+  <use id="south-hover-bottomright" xlink:href="#hover-bottomright" />
+  <use id="south-focus-center" xlink:href="#focus-center" />
+  <use id="south-focus-top" xlink:href="#focus-top" />
+  <use id="south-focus-bottom" xlink:href="#focus-bottom" />
+  <use id="south-focus-left" xlink:href="#focus-left" />
+  <use id="south-focus-right" xlink:href="#focus-right" />
+  <use id="south-focus-topleft" xlink:href="#focus-topleft" />
+  <use id="south-focus-topright" xlink:href="#focus-topright" />
+  <use id="south-focus-bottomleft" xlink:href="#focus-bottomleft" />
+  <use id="south-focus-bottomright" xlink:href="#focus-bottomright" />
+  <use id="south-attention-center" xlink:href="#attention-center" />
+  <use id="south-attention-top" xlink:href="#attention-top" />
+  <use id="south-attention-bottom" xlink:href="#attention-bottom" />
+  <use id="south-attention-left" xlink:href="#attention-left" />
+  <use id="south-attention-right" xlink:href="#attention-right" />
+  <use id="south-attention-topleft" xlink:href="#attention-topleft" />
+  <use id="south-attention-topright" xlink:href="#attention-topright" />
+  <use id="south-attention-bottomleft" xlink:href="#attention-bottomleft" />
+  <use id="south-attention-bottomright" xlink:href="#attention-bottomright" />
+  <use id="south-minimized-center" xlink:href="#minimized-center" />
+  <use id="south-minimized-top" xlink:href="#minimized-top" />
+  <use id="south-minimized-bottom" xlink:href="#minimized-bottom" />
+  <use id="south-minimized-left" xlink:href="#minimized-left" />
+  <use id="south-minimized-right" xlink:href="#minimized-right" />
+  <use id="south-minimized-topleft" xlink:href="#minimized-topleft" />
+  <use id="south-minimized-topright" xlink:href="#minimized-topright" />
+  <use id="south-minimized-bottomleft" xlink:href="#minimized-bottomleft" />
+  <use id="south-minimized-bottomright" xlink:href="#minimized-bottomright" />
+  <use id="south-progress-center" xlink:href="#progress-center" />
+  <use id="south-progress-top" xlink:href="#progress-top" />
+  <use id="south-progress-bottom" xlink:href="#progress-bottom" />
+  <use id="south-progress-left" xlink:href="#progress-left" />
+  <use id="south-progress-right" xlink:href="#progress-right" />
+  <use id="south-progress-topleft" xlink:href="#progress-topleft" />
+  <use id="south-progress-topright" xlink:href="#progress-topright" />
+  <use id="south-progress-bottomleft" xlink:href="#progress-bottomleft" />
+  <use id="south-progress-bottomright" xlink:href="#progress-bottomright" />
+  <use id="east-normal-center" xlink:href="#normal-center" />
+  <use id="east-normal-top" xlink:href="#normal-top" />
+  <use id="east-normal-bottom" xlink:href="#normal-bottom" />
+  <use id="east-normal-left" xlink:href="#normal-left" />
+  <use id="east-normal-right" xlink:href="#normal-right" />
+  <use id="east-normal-topleft" xlink:href="#normal-topleft" />
+  <use id="east-normal-topright" xlink:href="#normal-topright" />
+  <use id="east-normal-bottomleft" xlink:href="#normal-bottomleft" />
+  <use id="east-normal-bottomright" xlink:href="#normal-bottomright" />
+  <use id="east-hover-center" xlink:href="#hover-center" />
+  <use id="east-hover-top" xlink:href="#hover-top" />
+  <use id="east-hover-bottom" xlink:href="#hover-bottom" />
+  <use id="east-hover-left" xlink:href="#hover-left" />
+  <use id="east-hover-right" xlink:href="#hover-right" />
+  <use id="east-hover-topleft" xlink:href="#hover-topleft" />
+  <use id="east-hover-topright" xlink:href="#hover-topright" />
+  <use id="east-hover-bottomleft" xlink:href="#hover-bottomleft" />
+  <use id="east-hover-bottomright" xlink:href="#hover-bottomright" />
+  <use id="east-focus-center" xlink:href="#focus-center" />
+  <use id="east-focus-top" xlink:href="#focus-top" />
+  <use id="east-focus-bottom" xlink:href="#focus-bottom" />
+  <use id="east-focus-left" xlink:href="#focus-left" />
+  <use id="east-focus-right" xlink:href="#focus-right" />
+  <use id="east-focus-topleft" xlink:href="#focus-topleft" />
+  <use id="east-focus-topright" xlink:href="#focus-topright" />
+  <use id="east-focus-bottomleft" xlink:href="#focus-bottomleft" />
+  <use id="east-focus-bottomright" xlink:href="#focus-bottomright" />
+  <use id="east-attention-center" xlink:href="#attention-center" />
+  <use id="east-attention-top" xlink:href="#attention-top" />
+  <use id="east-attention-bottom" xlink:href="#attention-bottom" />
+  <use id="east-attention-left" xlink:href="#attention-left" />
+  <use id="east-attention-right" xlink:href="#attention-right" />
+  <use id="east-attention-topleft" xlink:href="#attention-topleft" />
+  <use id="east-attention-topright" xlink:href="#attention-topright" />
+  <use id="east-attention-bottomleft" xlink:href="#attention-bottomleft" />
+  <use id="east-attention-bottomright" xlink:href="#attention-bottomright" />
+  <use id="east-minimized-center" xlink:href="#minimized-center" />
+  <use id="east-minimized-top" xlink:href="#minimized-top" />
+  <use id="east-minimized-bottom" xlink:href="#minimized-bottom" />
+  <use id="east-minimized-left" xlink:href="#minimized-left" />
+  <use id="east-minimized-right" xlink:href="#minimized-right" />
+  <use id="east-minimized-topleft" xlink:href="#minimized-topleft" />
+  <use id="east-minimized-topright" xlink:href="#minimized-topright" />
+  <use id="east-minimized-bottomleft" xlink:href="#minimized-bottomleft" />
+  <use id="east-minimized-bottomright" xlink:href="#minimized-bottomright" />
+  <use id="east-progress-center" xlink:href="#progress-center" />
+  <use id="east-progress-top" xlink:href="#progress-top" />
+  <use id="east-progress-bottom" xlink:href="#progress-bottom" />
+  <use id="east-progress-left" xlink:href="#progress-left" />
+  <use id="east-progress-right" xlink:href="#progress-right" />
+  <use id="east-progress-topleft" xlink:href="#progress-topleft" />
+  <use id="east-progress-topright" xlink:href="#progress-topright" />
+  <use id="east-progress-bottomleft" xlink:href="#progress-bottomleft" />
+  <use id="east-progress-bottomright" xlink:href="#progress-bottomright" />
+  <use id="west-normal-center" xlink:href="#normal-center" />
+  <use id="west-normal-top" xlink:href="#normal-top" />
+  <use id="west-normal-bottom" xlink:href="#normal-bottom" />
+  <use id="west-normal-left" xlink:href="#normal-left" />
+  <use id="west-normal-right" xlink:href="#normal-right" />
+  <use id="west-normal-topleft" xlink:href="#normal-topleft" />
+  <use id="west-normal-topright" xlink:href="#normal-topright" />
+  <use id="west-normal-bottomleft" xlink:href="#normal-bottomleft" />
+  <use id="west-normal-bottomright" xlink:href="#normal-bottomright" />
+  <use id="west-hover-center" xlink:href="#hover-center" />
+  <use id="west-hover-top" xlink:href="#hover-top" />
+  <use id="west-hover-bottom" xlink:href="#hover-bottom" />
+  <use id="west-hover-left" xlink:href="#hover-left" />
+  <use id="west-hover-right" xlink:href="#hover-right" />
+  <use id="west-hover-topleft" xlink:href="#hover-topleft" />
+  <use id="west-hover-topright" xlink:href="#hover-topright" />
+  <use id="west-hover-bottomleft" xlink:href="#hover-bottomleft" />
+  <use id="west-hover-bottomright" xlink:href="#hover-bottomright" />
+  <use id="west-focus-center" xlink:href="#focus-center" />
+  <use id="west-focus-top" xlink:href="#focus-top" />
+  <use id="west-focus-bottom" xlink:href="#focus-bottom" />
+  <use id="west-focus-left" xlink:href="#focus-left" />
+  <use id="west-focus-right" xlink:href="#focus-right" />
+  <use id="west-focus-topleft" xlink:href="#focus-topleft" />
+  <use id="west-focus-topright" xlink:href="#focus-topright" />
+  <use id="west-focus-bottomleft" xlink:href="#focus-bottomleft" />
+  <use id="west-focus-bottomright" xlink:href="#focus-bottomright" />
+  <use id="west-attention-center" xlink:href="#attention-center" />
+  <use id="west-attention-top" xlink:href="#attention-top" />
+  <use id="west-attention-bottom" xlink:href="#attention-bottom" />
+  <use id="west-attention-left" xlink:href="#attention-left" />
+  <use id="west-attention-right" xlink:href="#attention-right" />
+  <use id="west-attention-topleft" xlink:href="#attention-topleft" />
+  <use id="west-attention-topright" xlink:href="#attention-topright" />
+  <use id="west-attention-bottomleft" xlink:href="#attention-bottomleft" />
+  <use id="west-attention-bottomright" xlink:href="#attention-bottomright" />
+  <use id="west-minimized-center" xlink:href="#minimized-center" />
+  <use id="west-minimized-top" xlink:href="#minimized-top" />
+  <use id="west-minimized-bottom" xlink:href="#minimized-bottom" />
+  <use id="west-minimized-left" xlink:href="#minimized-left" />
+  <use id="west-minimized-right" xlink:href="#minimized-right" />
+  <use id="west-minimized-topleft" xlink:href="#minimized-topleft" />
+  <use id="west-minimized-topright" xlink:href="#minimized-topright" />
+  <use id="west-minimized-bottomleft" xlink:href="#minimized-bottomleft" />
+  <use id="west-minimized-bottomright" xlink:href="#minimized-bottomright" />
+  <use id="west-progress-center" xlink:href="#progress-center" />
+  <use id="west-progress-top" xlink:href="#progress-top" />
+  <use id="west-progress-bottom" xlink:href="#progress-bottom" />
+  <use id="west-progress-left" xlink:href="#progress-left" />
+  <use id="west-progress-right" xlink:href="#progress-right" />
+  <use id="west-progress-topleft" xlink:href="#progress-topleft" />
+  <use id="west-progress-topright" xlink:href="#progress-topright" />
+  <use id="west-progress-bottomleft" xlink:href="#progress-bottomleft" />
+  <use id="west-progress-bottomright" xlink:href="#progress-bottomright" />
+  <rect id="hint-top-margin" x="100" y="100" width="1" height="8" fill="#202124" />
+  <rect id="hint-bottom-margin" x="100" y="100" width="1" height="8" fill="#202124" />
+  <rect id="hint-left-margin" x="100" y="100" width="8" height="1" fill="#202124" />
+  <rect id="hint-right-margin" x="100" y="100" width="8" height="1" fill="#202124" />
+  <rect id="hint-stretch-borders" x="110" y="110" width="1" height="1" fill="#202124" />
+</svg>

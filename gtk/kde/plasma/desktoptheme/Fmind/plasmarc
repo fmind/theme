@@ -1,0 +1,13 @@
+# https://develop.kde.org/docs/plasma/theme/theme-details/
+
+[Settings]
+FallbackTheme=default
+
+[AdaptiveTransparency]
+enabled=false
+
+[BlurBehindEffect]
+enabled=false
+
+[ContrastEffect]
+enabled=false

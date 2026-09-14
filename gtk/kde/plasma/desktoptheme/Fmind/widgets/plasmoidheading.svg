@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="160" viewBox="0 0 160 160">
+  <g id="center">
+    <rect x="8" y="8" width="32" height="32" fill="#ffffff" />
+  </g>
+  <g id="top">
+    <rect x="8" y="0" width="32" height="8" fill="#ffffff" />
+    <rect x="8" y="0" width="32" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="bottom">
+    <rect x="8" y="40" width="32" height="8" fill="#ffffff" />
+    <rect x="8" y="47" width="32" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="left">
+    <rect x="0" y="8" width="8" height="32" fill="#ffffff" />
+    <rect x="0" y="8" width="1" height="32" fill="#9aa0a6" />
+  </g>
+  <g id="right">
+    <rect x="40" y="8" width="8" height="32" fill="#ffffff" />
+    <rect x="47" y="8" width="1" height="32" fill="#9aa0a6" />
+  </g>
+  <g id="topleft">
+    <rect x="0" y="0" width="8" height="8" fill="#ffffff" />
+    <rect x="0" y="0" width="8" height="1" fill="#9aa0a6" />
+    <rect x="0" y="0" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="topright">
+    <rect x="40" y="0" width="8" height="8" fill="#ffffff" />
+    <rect x="40" y="0" width="8" height="1" fill="#9aa0a6" />
+    <rect x="47" y="0" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="bottomleft">
+    <rect x="0" y="40" width="8" height="8" fill="#ffffff" />
+    <rect x="0" y="47" width="8" height="1" fill="#9aa0a6" />
+    <rect x="0" y="40" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="bottomright">
+    <rect x="40" y="40" width="8" height="8" fill="#ffffff" />
+    <rect x="40" y="47" width="8" height="1" fill="#9aa0a6" />
+    <rect x="47" y="40" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <rect id="hint-top-margin" x="100" y="100" width="1" height="8" fill="#202124" />
+  <rect id="hint-bottom-margin" x="100" y="100" width="1" height="8" fill="#202124" />
+  <rect id="hint-left-margin" x="100" y="100" width="8" height="1" fill="#202124" />
+  <rect id="hint-right-margin" x="100" y="100" width="8" height="1" fill="#202124" />
+  <rect id="hint-stretch-borders" x="110" y="110" width="1" height="1" fill="#202124" />
+  <use id="north-center" xlink:href="#center" />
+  <use id="north-top" xlink:href="#top" />
+  <use id="north-bottom" xlink:href="#bottom" />
+  <use id="north-left" xlink:href="#left" />
+  <use id="north-right" xlink:href="#right" />
+  <use id="north-topleft" xlink:href="#topleft" />
+  <use id="north-topright" xlink:href="#topright" />
+  <use id="north-bottomleft" xlink:href="#bottomleft" />
+  <use id="north-bottomright" xlink:href="#bottomright" />
+  <use id="south-center" xlink:href="#center" />
+  <use id="south-top" xlink:href="#top" />
+  <use id="south-bottom" xlink:href="#bottom" />
+  <use id="south-left" xlink:href="#left" />
+  <use id="south-right" xlink:href="#right" />
+  <use id="south-topleft" xlink:href="#topleft" />
+  <use id="south-topright" xlink:href="#topright" />
+  <use id="south-bottomleft" xlink:href="#bottomleft" />
+  <use id="south-bottomright" xlink:href="#bottomright" />
+  <use id="east-center" xlink:href="#center" />
+  <use id="east-top" xlink:href="#top" />
+  <use id="east-bottom" xlink:href="#bottom" />
+  <use id="east-left" xlink:href="#left" />
+  <use id="east-right" xlink:href="#right" />
+  <use id="east-topleft" xlink:href="#topleft" />
+  <use id="east-topright" xlink:href="#topright" />
+  <use id="east-bottomleft" xlink:href="#bottomleft" />
+  <use id="east-bottomright" xlink:href="#bottomright" />
+  <use id="west-center" xlink:href="#center" />
+  <use id="west-top" xlink:href="#top" />
+  <use id="west-bottom" xlink:href="#bottom" />
+  <use id="west-left" xlink:href="#left" />
+  <use id="west-right" xlink:href="#right" />
+  <use id="west-topleft" xlink:href="#topleft" />
+  <use id="west-topright" xlink:href="#topright" />
+  <use id="west-bottomleft" xlink:href="#bottomleft" />
+  <use id="west-bottomright" xlink:href="#bottomright" />
+  <use id="header-center" xlink:href="#center" />
+  <use id="header-top" xlink:href="#top" />
+  <use id="header-bottom" xlink:href="#bottom" />
+  <use id="header-left" xlink:href="#left" />
+  <use id="header-right" xlink:href="#right" />
+  <use id="header-topleft" xlink:href="#topleft" />
+  <use id="header-topright" xlink:href="#topright" />
+  <use id="header-bottomleft" xlink:href="#bottomleft" />
+  <use id="header-bottomright" xlink:href="#bottomright" />
+  <use id="footer-center" xlink:href="#center" />
+  <use id="footer-top" xlink:href="#top" />
+  <use id="footer-bottom" xlink:href="#bottom" />
+  <use id="footer-left" xlink:href="#left" />
+  <use id="footer-right" xlink:href="#right" />
+  <use id="footer-topleft" xlink:href="#topleft" />
+  <use id="footer-topright" xlink:href="#topright" />
+  <use id="footer-bottomleft" xlink:href="#bottomleft" />
+  <use id="footer-bottomright" xlink:href="#bottomright" />
+  <use id="raised-center" xlink:href="#center" />
+  <use id="raised-top" xlink:href="#top" />
+  <use id="raised-bottom" xlink:href="#bottom" />
+  <use id="raised-left" xlink:href="#left" />
+  <use id="raised-right" xlink:href="#right" />
+  <use id="raised-topleft" xlink:href="#topleft" />
+  <use id="raised-topright" xlink:href="#topright" />
+  <use id="raised-bottomleft" xlink:href="#bottomleft" />
+  <use id="raised-bottomright" xlink:href="#bottomright" />
+  <use id="sunken-center" xlink:href="#center" />
+  <use id="sunken-top" xlink:href="#top" />
+  <use id="sunken-bottom" xlink:href="#bottom" />
+  <use id="sunken-left" xlink:href="#left" />
+  <use id="sunken-right" xlink:href="#right" />
+  <use id="sunken-topleft" xlink:href="#topleft" />
+  <use id="sunken-topright" xlink:href="#topright" />
+  <use id="sunken-bottomleft" xlink:href="#bottomleft" />
+  <use id="sunken-bottomright" xlink:href="#bottomright" />
+  <use id="mask-center" xlink:href="#center" />
+  <use id="mask-top" xlink:href="#top" />
+  <use id="mask-bottom" xlink:href="#bottom" />
+  <use id="mask-left" xlink:href="#left" />
+  <use id="mask-right" xlink:href="#right" />
+  <use id="mask-topleft" xlink:href="#topleft" />
+  <use id="mask-topright" xlink:href="#topright" />
+  <use id="mask-bottomleft" xlink:href="#bottomleft" />
+  <use id="mask-bottomright" xlink:href="#bottomright" />
+</svg>

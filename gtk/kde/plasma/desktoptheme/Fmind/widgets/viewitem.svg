@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="160" viewBox="0 0 160 160">
+  <g id="normal-center">
+    <rect x="8" y="8" width="32" height="32" fill="#ffffff" />
+  </g>
+  <g id="normal-top">
+    <rect x="8" y="0" width="32" height="8" fill="#ffffff" />
+    <rect x="8" y="0" width="32" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="normal-bottom">
+    <rect x="8" y="40" width="32" height="8" fill="#ffffff" />
+    <rect x="8" y="47" width="32" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="normal-left">
+    <rect x="0" y="8" width="8" height="32" fill="#ffffff" />
+    <rect x="0" y="8" width="1" height="32" fill="#9aa0a6" />
+  </g>
+  <g id="normal-right">
+    <rect x="40" y="8" width="8" height="32" fill="#ffffff" />
+    <rect x="47" y="8" width="1" height="32" fill="#9aa0a6" />
+  </g>
+  <g id="normal-topleft">
+    <rect x="0" y="0" width="8" height="8" fill="#ffffff" />
+    <rect x="0" y="0" width="8" height="1" fill="#9aa0a6" />
+    <rect x="0" y="0" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="normal-topright">
+    <rect x="40" y="0" width="8" height="8" fill="#ffffff" />
+    <rect x="40" y="0" width="8" height="1" fill="#9aa0a6" />
+    <rect x="47" y="0" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="normal-bottomleft">
+    <rect x="0" y="40" width="8" height="8" fill="#ffffff" />
+    <rect x="0" y="47" width="8" height="1" fill="#9aa0a6" />
+    <rect x="0" y="40" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="normal-bottomright">
+    <rect x="40" y="40" width="8" height="8" fill="#ffffff" />
+    <rect x="40" y="47" width="8" height="1" fill="#9aa0a6" />
+    <rect x="47" y="40" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="hover-center">
+    <rect x="8" y="8" width="32" height="32" fill="#f1f3f4" />
+  </g>
+  <g id="hover-top">
+    <rect x="8" y="0" width="32" height="8" fill="#f1f3f4" />
+    <rect x="8" y="0" width="32" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="hover-bottom">
+    <rect x="8" y="40" width="32" height="8" fill="#f1f3f4" />
+    <rect x="8" y="47" width="32" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="hover-left">
+    <rect x="0" y="8" width="8" height="32" fill="#f1f3f4" />
+    <rect x="0" y="8" width="1" height="32" fill="#9aa0a6" />
+  </g>
+  <g id="hover-right">
+    <rect x="40" y="8" width="8" height="32" fill="#f1f3f4" />
+    <rect x="47" y="8" width="1" height="32" fill="#9aa0a6" />
+  </g>
+  <g id="hover-topleft">
+    <rect x="0" y="0" width="8" height="8" fill="#f1f3f4" />
+    <rect x="0" y="0" width="8" height="1" fill="#9aa0a6" />
+    <rect x="0" y="0" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="hover-topright">
+    <rect x="40" y="0" width="8" height="8" fill="#f1f3f4" />
+    <rect x="40" y="0" width="8" height="1" fill="#9aa0a6" />
+    <rect x="47" y="0" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="hover-bottomleft">
+    <rect x="0" y="40" width="8" height="8" fill="#f1f3f4" />
+    <rect x="0" y="47" width="8" height="1" fill="#9aa0a6" />
+    <rect x="0" y="40" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="hover-bottomright">
+    <rect x="40" y="40" width="8" height="8" fill="#f1f3f4" />
+    <rect x="40" y="47" width="8" height="1" fill="#9aa0a6" />
+    <rect x="47" y="40" width="1" height="8" fill="#9aa0a6" />
+  </g>
+  <g id="selected-center">
+    <rect x="8" y="8" width="32" height="32" fill="#d2e3fc" />
+  </g>
+  <g id="selected-top">
+    <rect x="8" y="0" width="32" height="8" fill="#d2e3fc" />
+    <rect x="8" y="0" width="32" height="1" fill="#174ea6" />
+  </g>
+  <g id="selected-bottom">
+    <rect x="8" y="40" width="32" height="8" fill="#d2e3fc" />
+    <rect x="8" y="47" width="32" height="1" fill="#174ea6" />
+  </g>
+  <g id="selected-left">
+    <rect x="0" y="8" width="8" height="32" fill="#d2e3fc" />
+    <rect x="0" y="8" width="1" height="32" fill="#174ea6" />
+  </g>
+  <g id="selected-right">
+    <rect x="40" y="8" width="8" height="32" fill="#d2e3fc" />
+    <rect x="47" y="8" width="1" height="32" fill="#174ea6" />
+  </g>
+  <g id="selected-topleft">
+    <rect x="0" y="0" width="8" height="8" fill="#d2e3fc" />
+    <rect x="0" y="0" width="8" height="1" fill="#174ea6" />
+    <rect x="0" y="0" width="1" height="8" fill="#174ea6" />
+  </g>
+  <g id="selected-topright">
+    <rect x="40" y="0" width="8" height="8" fill="#d2e3fc" />
+    <rect x="40" y="0" width="8" height="1" fill="#174ea6" />
+    <rect x="47" y="0" width="1" height="8" fill="#174ea6" />
+  </g>
+  <g id="selected-bottomleft">
+    <rect x="0" y="40" width="8" height="8" fill="#d2e3fc" />
+    <rect x="0" y="47" width="8" height="1" fill="#174ea6" />
+    <rect x="0" y="40" width="1" height="8" fill="#174ea6" />
+  </g>
+  <g id="selected-bottomright">
+    <rect x="40" y="40" width="8" height="8" fill="#d2e3fc" />
+    <rect x="40" y="47" width="8" height="1" fill="#174ea6" />
+    <rect x="47" y="40" width="1" height="8" fill="#174ea6" />
+  </g>
+  <g id="selected+hover-center">
+    <rect x="8" y="8" width="32" height="32" fill="#d2e3fc" />
+  </g>
+  <g id="selected+hover-top">
+    <rect x="8" y="0" width="32" height="8" fill="#d2e3fc" />
+    <rect x="8" y="0" width="32" height="1" fill="#174ea6" />
+  </g>
+  <g id="selected+hover-bottom">
+    <rect x="8" y="40" width="32" height="8" fill="#d2e3fc" />
+    <rect x="8" y="47" width="32" height="1" fill="#174ea6" />
+  </g>
+  <g id="selected+hover-left">
+    <rect x="0" y="8" width="8" height="32" fill="#d2e3fc" />
+    <rect x="0" y="8" width="1" height="32" fill="#174ea6" />
+  </g>
+  <g id="selected+hover-right">
+    <rect x="40" y="8" width="8" height="32" fill="#d2e3fc" />
+    <rect x="47" y="8" width="1" height="32" fill="#174ea6" />
+  </g>
+  <g id="selected+hover-topleft">
+    <rect x="0" y="0" width="8" height="8" fill="#d2e3fc" />
+    <rect x="0" y="0" width="8" height="1" fill="#174ea6" />
+    <rect x="0" y="0" width="1" height="8" fill="#174ea6" />
+  </g>
+  <g id="selected+hover-topright">
+    <rect x="40" y="0" width="8" height="8" fill="#d2e3fc" />
+    <rect x="40" y="0" width="8" height="1" fill="#174ea6" />
+    <rect x="47" y="0" width="1" height="8" fill="#174ea6" />
+  </g>
+  <g id="selected+hover-bottomleft">
+    <rect x="0" y="40" width="8" height="8" fill="#d2e3fc" />
+    <rect x="0" y="47" width="8" height="1" fill="#174ea6" />
+    <rect x="0" y="40" width="1" height="8" fill="#174ea6" />
+  </g>
+  <g id="selected+hover-bottomright">
+    <rect x="40" y="40" width="8" height="8" fill="#d2e3fc" />
+    <rect x="40" y="47" width="8" height="1" fill="#174ea6" />
+    <rect x="47" y="40" width="1" height="8" fill="#174ea6" />
+  </g>
+  <use id="center" xlink:href="#normal-center" />
+  <use id="top" xlink:href="#normal-top" />
+  <use id="bottom" xlink:href="#normal-bottom" />
+  <use id="left" xlink:href="#normal-left" />
+  <use id="right" xlink:href="#normal-right" />
+  <use id="topleft" xlink:href="#normal-topleft" />
+  <use id="topright" xlink:href="#normal-topright" />
+  <use id="bottomleft" xlink:href="#normal-bottomleft" />
+  <use id="bottomright" xlink:href="#normal-bottomright" />
+  <rect id="hint-top-margin" x="100" y="100" width="1" height="8" fill="#202124" />
+  <rect id="hint-bottom-margin" x="100" y="100" width="1" height="8" fill="#202124" />
+  <rect id="hint-left-margin" x="100" y="100" width="8" height="1" fill="#202124" />
+  <rect id="hint-right-margin" x="100" y="100" width="8" height="1" fill="#202124" />
+  <rect id="hint-stretch-borders" x="110" y="110" width="1" height="1" fill="#202124" />
+</svg>
