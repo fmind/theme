@@ -1,0 +1,9 @@
+# https://github.com/elementary/terminal/blob/main/src/Themes.vala
+[/]
+theme='custom'
+follow-system-style=false
+prefer-dark-style=false
+background='#ffffff'
+foreground='#202124'
+cursor-color='#174ea6'
+palette='#202124:#a50e0e:#0d652d:#934900:#174ea6:#681da8:#00636d:#202124:#595d62:#a50e0e:#0d652d:#934900:#174ea6:#681da8:#00636d:#202124'

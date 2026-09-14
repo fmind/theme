@@ -1,0 +1,29 @@
+{
+  "Name": "Fmind",
+  "Author": "Médéric Hurier",
+  "Colors": {
+    "Foreground": "#202124",
+    "Background": "#ffffff",
+    "Cursor": "#174ea6",
+    "CursorAccent": "#ffffff",
+    "Selection": "#d2e3fc",
+    "SelectionForeground": "#202124",
+    "SelectionBackground": "#d2e3fc",
+    "Black": "#202124",
+    "Red": "#a50e0e",
+    "Green": "#0d652d",
+    "Yellow": "#934900",
+    "Blue": "#174ea6",
+    "Magenta": "#681da8",
+    "Cyan": "#00636d",
+    "White": "#202124",
+    "BrightBlack": "#595d62",
+    "BrightRed": "#a50e0e",
+    "BrightGreen": "#0d652d",
+    "BrightYellow": "#934900",
+    "BrightBlue": "#174ea6",
+    "BrightMagenta": "#681da8",
+    "BrightCyan": "#00636d",
+    "BrightWhite": "#202124"
+  }
+}

@@ -1,0 +1,130 @@
+/* https://github.com/kingToolbox/WindTerm */
+/* Icon selectors adapted from dracula/windterm; see LICENSE. */
+.nobrush, .frame-outer, .frame-inner {
+	fill: none;
+}
+
+/*** pixmaps ***/
+
+.breadcrumb .brush {
+	fill: #595d62;
+}
+.breadcrumb .pen {
+	fill: none;
+	stroke: #595d62;
+	stroke-width: 25.8739
+}
+
+.pixmap .brush {
+	fill: #595d62;
+}
+.pixmap .pen {
+	fill: none;
+	stroke: #595d62;
+	stroke-width: 25.8739;
+}
+
+.tabbar .brush {
+	fill: #595d62;
+}
+
+.tabbar .pen {
+	fill: none;
+	stroke: #595d62;
+	stroke-width: 25.8739
+}
+
+#filerPane      		.brush { fill: #174ea6; }
+#logo					.brush { fill: #174ea6; }
+#monoLogo				.brush { fill: #595d62; }
+#outlinePane    		.brush { fill: #174ea6; }
+#outputPane     		.brush { fill: #174ea6; }
+#projectPane    		.brush { fill: #174ea6; }
+#senderPane     		.brush { fill: #174ea6; }
+#sessionPane    		.brush { fill: #174ea6; }
+#start          		.brush { fill: #0d652d; }
+#stop           		.brush { fill: #a50e0e; }
+#transferPane   		.brush { fill: #174ea6; }
+
+#colorDarkCyan			.brush { fill-opacity: 0.88; fill: #174ea6; }
+#colorDeepPink			.brush { fill-opacity: 0.88; fill: #174ea6; }
+#colorForestGreen		.brush { fill-opacity: 0.88; fill: #174ea6; }
+#colorGoldenrod			.brush { fill-opacity: 0.88; fill: #174ea6; }
+#colorIndianRed			.brush { fill-opacity: 0.88; fill: #174ea6; }
+#colorMediumOrchid		.brush { fill-opacity: 0.88; fill: #174ea6; }
+#colorMediumSlateBlue	.brush { fill-opacity: 0.88; fill: #174ea6; }
+#colorOlive				.brush { fill-opacity: 0.88; fill: #174ea6; }
+#colorRed				.brush { fill-opacity: 0.88; fill: #174ea6; }
+#colorRoyalBlue			.brush { fill-opacity: 0.88; fill: #174ea6; }
+#colorSteelBlue			.brush { fill-opacity: 0.88; fill: #174ea6; }
+#colorTeal				.brush { fill-opacity: 0.88; fill: #174ea6; }
+
+/*** symbols ***/
+
+.symbol {
+	font-family: "Google Sans";
+	font-size: 255.212px;
+	font-weight: normal;
+	fill: #174ea6;
+	stroke: #174ea6;
+	stroke-width: 2.96615;
+}
+
+#a .frame-outer, #A .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#b .frame-outer, #B .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#c .frame-outer, #C .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#d .frame-outer, #D .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#e .frame-outer, #E .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#f .frame-outer, #F .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#g .frame-outer, #G .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#h .frame-outer, #H .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#i .frame-outer, #I .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#j .frame-outer, #J .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#k .frame-outer, #K .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#l .frame-outer, #L .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#m .frame-outer, #M .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#n .frame-outer, #N .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#o .frame-outer, #O .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#p .frame-outer, #P .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#q .frame-outer, #Q .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#r .frame-outer, #R .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#s .frame-outer, #S .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#t .frame-outer, #T .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#u .frame-outer, #U .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#v .frame-outer, #V .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#w .frame-outer, #W .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#x .frame-outer, #X .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#y .frame-outer, #Y .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#z .frame-outer, #Z .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#num0 .frame-outer, #Num0 .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#num1 .frame-outer, #Num1 .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#num2 .frame-outer, #Num2 .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#num3 .frame-outer, #Num3 .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#num4 .frame-outer, #Num4 .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#num5 .frame-outer, #Num5 .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#num6 .frame-outer, #Num6 .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#num7 .frame-outer, #Num7 .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#num8 .frame-outer, #Num8 .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#num9 .frame-outer, #Num9 .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#and .frame-outer,      #And .frame-inner      { stroke: #174ea6; fill: #174ea6; }
+#angles .frame-outer,   #Angles .frame-inner   { stroke: #174ea6; fill: #174ea6; }
+#asterisk .frame-outer, #Asterisk .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#at .frame-outer,       #At .frame-inner       { stroke: #174ea6; fill: #174ea6; }
+#braces .frame-outer,   #Braces .frame-inner   { stroke: #174ea6; fill: #174ea6; }
+#brackets .frame-outer, #Brackets .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#dollar .frame-outer,   #Dollar .frame-inner   { stroke: #174ea6; fill: #174ea6; }
+#dot .frame-outer,      #Dot .frame-inner      { stroke: #174ea6; fill: #174ea6; }
+#equal .frame-outer,    #Equal .frame-inner    { stroke: #174ea6; fill: #174ea6; }
+#exclamation .frame-outer, #Exclamation .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#minus .frame-outer,    #Minus .frame-inner    { stroke: #174ea6; fill: #174ea6; }
+#parenthesis .frame-outer, #Parenthesis .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#percent .frame-outer,  #Percent .frame-inner  { stroke: #174ea6; fill: #174ea6; }
+#plus .frame-outer,     #Plus .frame-inner     { stroke: #174ea6; fill: #174ea6; }
+#plus .frame-outer,     #Plus .frame-inner     { stroke: #174ea6; fill: #174ea6; }
+#pound .frame-outer,    #Pound .frame-inner    { stroke: #174ea6; fill: #174ea6; }
+#power .frame-outer,    #Power .frame-inner    { stroke: #174ea6; fill: #174ea6; }
+#question .frame-outer, #Question .frame-inner { stroke: #174ea6; fill: #174ea6; }
+#quotes .frame-outer,   #Quotes .frame-inner   { stroke: #174ea6; fill: #174ea6; }
+#slash .frame-outer,    #Slash .frame-inner    { stroke: #174ea6; fill: #174ea6; }
+#snippet .frame-outer,  #Snippet .frame-inner  { stroke: #174ea6; fill: #174ea6; }
+#label .symbol,         #Label .symbol         { stroke: #174ea6; fill: #174ea6; }

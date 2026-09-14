@@ -1,6 +1,6 @@
 # fmind/theme
 
-A light theme for everyday code and terminal work, with 84 app integrations. One folder per app, native theme files, no generator.
+A light theme for everyday code and terminal work, with 93 app integrations. One folder per app, native theme files, no generator.
 
 ## Palette
 
@@ -57,6 +57,7 @@ Use a truecolor terminal with a light background. Paths are relative to `~/.conf
 | btop | [fmind.theme](btop/fmind.theme) | Copy to `btop/themes/fmind.theme`; select `fmind` in Options or set `color_theme = "fmind"` in `btop/btop.conf`. |
 | Chrome | [manifest.json](chrome/manifest.json) | Open `chrome://extensions`, enable Developer mode, choose Load unpacked, and select `chrome/`. Styles browser chrome and the new-tab page, not websites. |
 | ConEmu | [fmind.xml](conemu/fmind.xml) | Save a custom Fmind scheme in Settings → Features → Colors, then close ConEmu. In `ConEmu.xml`, replace that saved `PaletteN` key’s values with this file’s values, retaining its `PaletteN` key name. Reopen and select Fmind. Slot 15 is reserved for the white canvas; ANSI bright-white text needs an app override. |
+| COSMIC Terminal | [fmind.ron](cosmic-terminal/fmind.ron) | Choose Light application appearance, then View → Color schemes → Import and select the RON file. Select Fmind for your light terminal profile. Includes explicit white background and normal, bright and dim palettes. |
 | delta | [fmind.gitconfig](delta/fmind.gitconfig) | Include from Git configuration; install the bat theme first. |
 | dmenu | [fmind.h](dmenu/fmind.h) | Copy beside dmenu’s `config.h`; replace its complete `colors` definition with `#include "fmind.h"`, then rebuild dmenu with your normal build procedure. Choose Google Sans through its `fonts` setting. Includes normal, selected and output schemes. |
 | Dunst | [fmind.conf](dunst/fmind.conf) | Merge into `dunst/dunstrc`, then reload Dunst. Includes all three urgency levels. |
@@ -64,6 +65,7 @@ Use a truecolor terminal with a light background. Paths are relative to `~/.conf
 | Fastfetch | [fmind.json](fastfetch/fmind.json) | Merge `display.color` into `fastfetch/config.jsonc`. |
 | Firefox | [manifest.json](firefox/manifest.json) | For local testing, use `about:debugging` → This Firefox → Load Temporary Add-on and select the manifest. Lasts until restart; permanent installation requires Mozilla signing. Styles browser UI, not websites. |
 | Fish | [fmind.fish](fish/fmind.fish) | Copy to `fish/conf.d/fmind.fish`. |
+| Fluent Terminal | [fmind.flutecolors](fluent-terminal/fmind.flutecolors) | Settings → Themes → Import; choose the file and select Fmind. Set the application appearance to Light. |
 | foot | [fmind.ini](foot/fmind.ini) | For foot 1.28+, copy to `foot/themes/fmind.ini`; add `include=~/.config/foot/themes/fmind.ini` before any section in `foot/foot.ini`. The fragment selects the light palette. |
 | Fuzzel | [fmind.ini](fuzzel/fmind.ini) | Copy to `fuzzel/fmind.ini`; add `include=~/.config/fuzzel/fmind.ini` before any section in `fuzzel/fuzzel.ini`, or merge the `[colors]` section. Set `font=Google Sans` in the default section if desired. Covers all twelve color roles with opaque RGBA values. |
 | fzf | [fmind.conf](fzf/fmind.conf) | Set `FZF_DEFAULT_OPTS_FILE` to this file’s absolute path. |
@@ -87,6 +89,7 @@ Use a truecolor terminal with a light background. Paths are relative to `~/.conf
 | LazyGit | [fmind.yml](lazygit/fmind.yml) | Merge `gui.theme` into the config directory shown by `lazygit --print-config-dir`. |
 | lsd | [fmind.yaml](lsd/fmind.yaml) | Copy to `lsd/colors.yaml`; set `color.theme: custom` in `lsd/config.yaml`. |
 | lualine | [fmind.lua](lualine/fmind.lua) | Copy to `nvim/lua/lualine/themes/fmind.lua`; select `fmind` or `auto`. |
+| LXTerminal | [fmind.conf](lxterminal/fmind.conf) | Close LXTerminal; merge the `[general]` entries into `lxterminal/lxterminal.conf`, preserving your shortcuts and other settings. Reopen. Uses the Custom palette and disables brightening bold text. |
 | Matplotlib | [fmind.mplstyle](matplotlib/fmind.mplstyle) | Use `plt.style.use("/path/to/fmind.mplstyle")`, or copy to `stylelib/` under `matplotlib.get_configdir()` and use `plt.style.use("fmind")`. |
 | Micro | [fmind.micro](micro/fmind.micro) | Copy to `micro/colorschemes/fmind.micro`; run `set colorscheme fmind` in the Ctrl-E command prompt. Requires truecolor. |
 | Mintty | [fmind.minttyrc](mintty/fmind.minttyrc) | Merge into `~/.minttyrc` or load the file with `mintty -C /path/to/fmind.minttyrc`. |
@@ -95,15 +98,18 @@ Use a truecolor terminal with a light background. Paths are relative to `~/.conf
 | Notepad++ | [fmind.xml](notepad-plus-plus/fmind.xml) | Copy to `%APPDATA%\Notepad++\themes\` (or the portable installation’s `themes/`); restart, then Settings → Style Configurator → Fmind. Use light mode; disable Global override colors so lexer styles apply. Covers 60 lexers, editor decorations and tabs. |
 | Obsidian | [theme.css](obsidian/theme.css), [manifest.json](obsidian/manifest.json) | Copy both into your vault’s `.obsidian/themes/Fmind/`; select Fmind and the Light base color scheme in Appearance. |
 | OpenCode | [fmind.json](opencode/fmind.json) | Copy to `opencode/themes/fmind.json`; select `fmind` through `/theme`. |
+| Pantheon Terminal | [fmind.dconf](pantheon-terminal/fmind.dconf) | Import only the terminal appearance keys using the scoped command below. Selects the Custom palette, light UI and explicit colors; system-style following is disabled so it cannot replace the palette. |
 | Polybar | [fmind.ini](polybar/fmind.ini) | Copy to `polybar/fmind.ini`; add `include-file = ~/.config/polybar/fmind.ini` at the top of your Polybar config. Use `${colors.background}` and `${colors.foreground}` in each bar, and the other named colors in modules. Merge with an existing `[colors]` section instead of defining it twice. |
 | PowerShell | [fmind.ps1](powershell/fmind.ps1) | Dot-source from `$PROFILE`: `. "/path/to/fmind.ps1"`. Requires PowerShell 7, PSReadLine 2.2+, and a matching truecolor terminal. Colors the interactive input line and suggestions. |
 | ptpython | [fmind.py](ptpython/fmind.py) | Load `CODE` and `UI` in `config.py`; register and select them as shown below. |
 | Pygments | [fmind.py](pygments/fmind.py) | Copy the module into your Python project and pass `FmindStyle` to `HtmlFormatter`, as shown below. Requires Pygments; no changes to installed Pygments files. |
 | Qt Creator | [editor](qtcreator/fmind.xml), [UI](qtcreator/fmind.creatortheme) | Copy the editor file into `styles/` and the UI file into `themes/` under your Qt Creator user resource directory (paths below). In Preferences, select Fmind under Environment → Interface and Text Editor → Font & Colors; restart. Targets Qt Creator 20.0.1. |
+| QTerminal | [fmind.colorscheme](qterminal/fmind.colorscheme) | Copy to `~/.local/share/qterminal/color-schemes/` (`$XDG_DATA_HOME/qterminal/color-schemes/` if set); restart, then File → Preferences → Appearance → Color scheme → fmind. Older versions also search `qterminal/color-schemes/` beside their config file. |
 | Rio | [fmind.toml](rio/fmind.toml) | Copy to `rio/themes/fmind.toml`; set `theme = "fmind"` in `rio/config.toml`. On macOS use `~/Library/Application Support/rio/`. |
 | Rofi | [fmind.rasi](rofi/fmind.rasi) | Copy to `rofi/fmind.rasi`; use `rofi -show drun -theme ~/.config/rofi/fmind.rasi`. Colors inherit the standard layout. |
 | RStudio | [fmind.rstheme](rstudio/fmind.rstheme) | Tools → Global Options → Appearance → Add, choose the file, and Apply. Use the Modern global theme. Includes Ace syntax, selections, diagnostics, diffs, completion and documented UI selectors. |
 | Spyder | [fmind.ini](spyder/fmind.ini) | For Spyder 6.1, create a custom Fmind syntax theme in Preferences → Appearance, then merge this fragment into that theme’s saved settings as detailed below. Select the Light interface theme. |
+| st | [fmind.h](st/fmind.h) | Copy beside st’s `config.h`; replace its `colorname` array and the four `defaultfg`, `defaultbg`, `defaultcs`, `defaultrcs` definitions with `#include "fmind.h"`. Rebuild using your normal st procedure. Slots 16–255 remain st’s native extended palette. |
 | Starship | [fmind.toml](starship/fmind.toml) | Merge the palette and `palette = "fmind"` into `starship.toml`. Module styles select palette names. |
 | Streamlit | [fmind.toml](streamlit/fmind.toml) | Merge `[theme]` into your project’s `.streamlit/config.toml`. Uses current Streamlit theming, including chart colors. |
 | Sublime Text | [fmind.sublime-color-scheme](sublime-text/fmind.sublime-color-scheme) | Use Preferences → Browse Packages; copy into `User/`, then choose `fmind` with Select Color Scheme. This styles editor content; the UI theme is separate. |
@@ -112,10 +118,12 @@ Use a truecolor terminal with a light background. Paths are relative to `~/.conf
 | SwayOSD | [fmind.css](swayosd/fmind.css) | Copy to `swayosd/style.css`, then restart your SwayOSD server through your existing session setup. Includes continuous and segmented indicators, labels and disabled states. |
 | Terminal.app | [fmind.terminal](terminal-app/fmind.terminal) | On macOS, Settings → Profiles → action menu → Import; select the file and choose Fmind. Set the profile as Default for new windows if desired. Font choice remains in the profile settings. |
 | Terminator | [fmind.conf](terminator/fmind.conf) | Merge the `[[fmind]]` profile under `[profiles]` in `terminator/config`; select that profile in Preferences. |
+| Termite | [fmind.conf](termite/fmind.conf) | Merge `[colors]` and `[hints]` into `termite/config`; restart Termite. Includes link-hint labels. Termite is archived upstream; this targets its final native configuration. |
 | Termux | [colors.properties](termux/colors.properties) | Copy to `~/.termux/colors.properties`; run `termux-reload-settings`. |
 | TextMate | [fmind.tmTheme](textmate/fmind.tmTheme) | Open the file with TextMate 2 to install; select Fmind in Preferences → Fonts & Colors. Includes a light theme identity, editor colors, syntax and diff scopes. |
 | Tilix | [fmind.json](tilix/fmind.json) | Copy to `tilix/schemes/fmind.json`; restart Tilix and choose Fmind in the profile’s Color settings. |
 | tmux | [fmind.conf](tmux/fmind.conf) | Copy to `tmux/fmind.conf`; add `source-file ~/.config/tmux/fmind.conf` to your tmux config. Reload the config to apply. |
+| tym | [theme.lua](tym/theme.lua) | Copy to `tym/theme.lua` and restart tym. Includes window background, selection, cursor, bold text and all ANSI slots. |
 | Typora | [fmind.css](typora/fmind.css) | Preferences → Appearance → Open Theme Folder; copy the CSS, restart Typora, and select Fmind. |
 | Vim | [fmind.vim](vim/fmind.vim) | Copy to `~/.vim/colors/fmind.vim`; use `set termguicolors` and `colorscheme fmind` in `.vimrc`. Also works in GUI Vim. |
 | VS Code | [theme](vscode/fmind-color-theme.json), [manifest](vscode/package.json) | Copy the whole `vscode/` folder to `~/.vscode/extensions/fmind-theme-1.0.0/`, reload VS Code, then select `fmind` in Preferences: Color Theme. |
@@ -123,6 +131,7 @@ Use a truecolor terminal with a light background. Paths are relative to `~/.conf
 | Waybar | [fmind.css](waybar/fmind.css) | Copy to `waybar/fmind.css`; import with `@import "fmind.css";` in `waybar/style.css` before your layout rules. |
 | WezTerm | [fmind.toml](wezterm/fmind.toml) | Copy to `wezterm/colors/fmind.toml`; set `config.color_scheme = "fmind"` in `wezterm.lua`. |
 | Windows Terminal | [fmind.json](windows-terminal/fmind.json) | Append this object to the `schemes` array in Settings → Open JSON file; set `"colorScheme": "fmind"` on the desired profile. |
+| WindTerm | [UI](windterm/gui.theme), [icons](windterm/icon.theme), [syntax and terminal](windterm/scheme.theme) | In your portable WindTerm directory, create `global/themes/fmind/` and copy the three `.theme` files there. Restart; open the command palette (`Alt+;`), find the theme command, and select fmind. Targets 2.7.0; references its bundled default and dige-white icons. Keep those bundled themes. |
 | WOB | [fmind.ini](wob/fmind.ini) | Merge the six root-level color settings into `wob/wob.ini`, or launch your existing WOB pipeline with `wob --config /path/to/fmind.ini`. Includes overflow colors; geometry and bindings remain in your configuration. |
 | Wofi | [fmind.css](wofi/fmind.css) | Copy to `wofi/style.css`, or pass `--style /path/to/fmind.css` to Wofi. Includes input, rows, selection, hover and scrollbar styles. Disable `allow_markup` when displaying externally colored Pango markup to preserve these text colors. |
 | Xcode | [fmind.xccolortheme](xcode/fmind.xccolortheme) | Copy to `~/Library/Developer/Xcode/UserData/FontAndColorThemes/`; restart Xcode, then Settings → Themes → Fmind. Install Google Sans and Google Sans Code for the specified fonts. Covers editor, console and documentation markup; use a light macOS appearance for the remaining UI. |
@@ -133,6 +142,14 @@ Use a truecolor terminal with a light background. Paths are relative to `~/.conf
 | Zed | [fmind.json](zed/fmind.json) | Copy to `zed/themes/fmind.json`; choose `fmind` with `theme selector: toggle`. |
 | Zellij | [fmind.kdl](zellij/fmind.kdl) | Copy to `zellij/themes/fmind.kdl`; set `theme "fmind"`. Uses named styles (0.41+). |
 | zsh-syntax-highlighting | [fmind.zsh](zsh-syntax-highlighting/fmind.zsh) | Source after the plugin in `.zshrc`. Use a truecolor terminal and the matching terminal palette. Does not replace your prompt. |
+
+For Pantheon Terminal (elementary Terminal), import this fragment into its appearance settings only:
+
+```sh
+dconf load /io/elementary/terminal/settings/ < /path/to/pantheon-terminal/fmind.dconf
+```
+
+The file sets only colors and appearance controls. It preserves your shell, keybindings, window state and other settings. For QTerminal, LXTerminal, Termite, st and tym, select **GoogleSansCode Nerd Font Mono** through the application’s font setting; the color fragments do not change existing font sizes.
 
 For SwayNotificationCenter 0.12.6 (GTK 4.16+), keep its installed layout and import Fmind afterward. On the standard Linux installation, `~/.config/swaync/style.css` contains:
 

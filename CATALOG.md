@@ -102,7 +102,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [Gitk](https://draculatheme.com/gitk) | Pending | — |
 | [Qutebrowser](https://draculatheme.com/qutebrowser) | Pending | — |
 | [Figma](https://draculatheme.com/figma) | Pending | — |
-| [Fluent Terminal](https://draculatheme.com/fluent-terminal) | Pending | — |
+| [Fluent Terminal](https://draculatheme.com/fluent-terminal) | Port shipped | [fluent-terminal](fluent-terminal/) |
 | [Wox](https://draculatheme.com/wox) | Pending | — |
 | [Files](https://draculatheme.com/files) | Pending | — |
 | [MetaTrader 5](https://draculatheme.com/metatrader5) | Pending | — |
@@ -197,7 +197,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [LightPaper](https://draculatheme.com/lightpaper) | Pending | — |
 | [Javadoc](https://draculatheme.com/javadoc) | Pending | — |
 | [Spacemacs](https://draculatheme.com/spacemacs) | Pending | — |
-| [Termite](https://draculatheme.com/termite) | Pending | — |
+| [Termite](https://draculatheme.com/termite) | Port shipped | [termite](termite/) |
 | [FlorisBoard](https://draculatheme.com/florisboard) | Pending | — |
 | [TTY](https://draculatheme.com/tty) | Pending | — |
 | [Google Calendar](https://draculatheme.com/google-calendar) | Pending | — |
@@ -215,9 +215,9 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [Zellij](https://draculatheme.com/zellij) | Port shipped | [zellij](zellij/) |
 | [Arduino Pro IDE](https://draculatheme.com/arduino-pro-ide) | Pending | — |
 | [Powerlevel10k for Oh My Posh](https://draculatheme.com/p10k-oh-my-posh) | Pending | — |
-| [WindTerm](https://draculatheme.com/windterm) | Pending | — |
+| [WindTerm](https://draculatheme.com/windterm) | Port shipped | [windterm](windterm/) |
 | [Clone Hero](https://draculatheme.com/clone-hero) | Pending | — |
-| [LXTerminal](https://draculatheme.com/lxterminal) | Pending | — |
+| [LXTerminal](https://draculatheme.com/lxterminal) | Port shipped | [lxterminal](lxterminal/) |
 | [LazyGit](https://draculatheme.com/lazygit) | Port shipped | [lazygit](lazygit/) |
 | [GitKraken](https://draculatheme.com/gitkraken) | Pending | — |
 | [CopyQ](https://draculatheme.com/copyq) | Pending | — |
@@ -231,14 +231,14 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [Sketch](https://draculatheme.com/sketch) | Pending | — |
 | [KDiff3](https://draculatheme.com/kdiff3) | Pending | — |
 | [MusicBee](https://draculatheme.com/musicbee) | Pending | — |
-| [Cosmic Terminal](https://draculatheme.com/cosmic-terminal) | Pending | — |
+| [Cosmic Terminal](https://draculatheme.com/cosmic-terminal) | Port shipped | [cosmic-terminal](cosmic-terminal/) |
 | [Scrivener](https://draculatheme.com/scrivener) | Pending | — |
 | [LiteIDE](https://draculatheme.com/liteide) | Pending | — |
 | [Homepage](https://draculatheme.com/homepage-app) | Pending | — |
 | [Yazi](https://draculatheme.com/yazi) | Port shipped | [yazi](yazi/) |
 | [LTSpice](https://draculatheme.com/ltspice) | Pending | — |
 | [eM Client](https://draculatheme.com/em-client) | Pending | — |
-| [Qterminal](https://draculatheme.com/qterminal) | Pending | — |
+| [Qterminal](https://draculatheme.com/qterminal) | Port shipped | [qterminal](qterminal/) |
 | [Nova](https://draculatheme.com/nova) | Pending | — |
 | [Beamer](https://draculatheme.com/beamer) | Pending | — |
 | [Pandoc](https://draculatheme.com/pandoc) | Pending | — |
@@ -267,7 +267,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [Ditto](https://draculatheme.com/ditto) | Pending | — |
 | [SideNotes](https://draculatheme.com/sidenotes) | Pending | — |
 | [bemenu](https://draculatheme.com/bemenu) | Pending | — |
-| [Pantheon Terminal](https://draculatheme.com/pantheon-terminal) | Pending | — |
+| [Pantheon Terminal](https://draculatheme.com/pantheon-terminal) | Port shipped | [pantheon-terminal](pantheon-terminal/) |
 | [The Lounge](https://draculatheme.com/thelounge) | Pending | — |
 | [ChatGPT](https://draculatheme.com/chatgpt) | Pending | — |
 | [Mako](https://draculatheme.com/mako) | Pending | — |
@@ -351,7 +351,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [Funkwhale](https://draculatheme.com/funkwhale) | Pending | — |
 | [Lichess](https://draculatheme.com/lichess) | Pending | — |
 | [PolyMC](https://draculatheme.com/polymc) | Pending | — |
-| [st](https://draculatheme.com/st) | Pending | — |
+| [st](https://draculatheme.com/st) | Port shipped | [st](st/) |
 | [FreeTube](https://draculatheme.com/freetube) | Pending | — |
 | [PsychoPy](https://draculatheme.com/psychopy) | Pending | — |
 | [BTCPay Server](https://draculatheme.com/btcpay-server) | Pending | — |
@@ -377,7 +377,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [Fluxbox](https://draculatheme.com/fluxbox) | Pending | — |
 | [Gemini](https://draculatheme.com/gemini) | Pending | — |
 | [Yakuake](https://draculatheme.com/yakuake) | Pending | — |
-| [tym](https://draculatheme.com/tym) | Pending | — |
+| [tym](https://draculatheme.com/tym) | Port shipped | [tym](tym/) |
 | [Dracula CSS](https://draculatheme.com/dracula-css) | Pending | — |
 | [apt](https://draculatheme.com/apt) | Pending | — |
 | [omg.lol](https://draculatheme.com/omglol) | Pending | — |
