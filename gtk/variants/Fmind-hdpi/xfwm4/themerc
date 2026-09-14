@@ -1,0 +1,23 @@
+# https://wiki.xfce.org/howto/xfwm4_theme
+active_text_color=#202124
+inactive_text_color=#595d62
+active_text_shadow_color=#ffffff
+inactive_text_shadow_color=#ffffff
+active_border_color=#174ea6
+inactive_border_color=#9aa0a6
+active_color_1=#ffffff
+active_color_2=#ffffff
+inactive_color_1=#ffffff
+inactive_color_2=#ffffff
+title_font=Google Sans Bold 10
+title_shadow_active=false
+title_shadow_inactive=false
+full_width_title=true
+title_horizontal_offset=8
+title_vertical_offset_active=0
+title_vertical_offset_inactive=0
+button_offset=4
+button_spacing=4
+maximized_offset=4
+frame_border_top=2
+show_app_icon=false

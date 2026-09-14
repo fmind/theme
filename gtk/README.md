@@ -1,6 +1,6 @@
 # Fmind GTK
 
-Native GTK 2, GTK 3.20+ and GTK 4 widget themes. Windows, editors, panels and popovers are white; selections and semantic feedback use pale fills. Google Sans is the UI font and Google Sans Code is the monospace font. Missing fonts use the system fallback.
+Native GTK 2, GTK 3.20+ and GTK 4 widget themes, with Metacity and Xfwm window decorations. Windows, editors, panels and popovers are white; selections and semantic feedback use pale fills. Google Sans is the UI font and Google Sans Code is the monospace font. Missing fonts use the system fallback.
 
 ## Install
 
@@ -10,7 +10,22 @@ For an isolated GTK 3 or GTK 4 application preview, use `GTK_THEME=Fmind applica
 
 Fmind is exclusively light. The `gtk-dark.css` entry points deliberately load the same light palette. GTK 3 uses its built-in Adwaita resource for geometry and symbolic assets; GTK 4 uses its built-in Default resource. GTK 2 uses its built-in drawing engine. No copied third-party base styles, external rendering engines or downloaded image assets are needed.
 
-The theme includes buttons, suggested/destructive actions, entries, selection, checks, radios, switches, menus, popovers, tooltips, tabs, lists, scrollbars, scales, progress and semantic messages, with disabled and backdrop states. It exports GTK 3's named theme colors for applications that draw custom controls. Applications can override system themes; libadwaita applications are not covered by installing this package. GTK versions older than 3.20 use a different selector model and remain pending.
+The theme includes buttons, suggested/destructive actions, entries, selection, checks, radios, switches, menus, popovers, tooltips, tabs, lists, scrollbars, scales, progress and semantic messages, with disabled and backdrop states. It exports GTK 3's named theme colors for applications that draw custom controls. Applications can override system themes; libadwaita applications are not covered by installing this package. GTK 3 versions older than 3.20 use a different selector model and remain pending.
+
+## Window decorations
+
+For Xfwm, the normal [decoration theme](xfwm4/themerc) is included when you copy this directory to `~/.themes/Fmind/`. Select Fmind under Xfce Settings → Window Manager → Style. Your button layout and title alignment remain configurable in Xfce. The menu button uses a consistent Fmind glyph instead of an application icon.
+
+For a display requiring larger decorations, copy the entire `variants/Fmind-hdpi/` directory beside `~/.themes/Fmind/` as `~/.themes/Fmind-hdpi/`, or use `variants/Fmind-xhdpi/` as `~/.themes/Fmind-xhdpi/`. Select the corresponding name in Window Manager. The [HiDPI](variants/Fmind-hdpi/xfwm4/themerc) and [extra-HiDPI](variants/Fmind-xhdpi/xfwm4/themerc) variants use twice and three times the normal pixel dimensions. Text uses your desktop DPI with Google Sans Bold 10; choose the variant that matches that scale. Each variant includes all 24 frame pieces and 36 button assets: focused, unfocused, hover and pressed, with distinct toggled stick, shade and maximize controls. The XPM files are maintained directly and require no asset build step.
+
+For Metacity 3.46+, copy this complete package to `~/.local/share/themes/Fmind/`, preserving the [theme XML](metacity-1/metacity-theme-3.xml) in its `metacity-1/` subdirectory. Metacity searches the XDG data locations instead of `~/.themes/`. If you set `XDG_DATA_HOME`, use its `themes/Fmind/` directory. Select the native Metacity theme type and name in your desktop's configuration UI, or run these commands after installing:
+
+```sh
+gsettings set org.gnome.metacity.theme name Fmind
+gsettings set org.gnome.metacity.theme type metacity
+```
+
+The Metacity XML draws vector controls and covers normal, dialog, modal, utility, menu and border-only windows; focus, all resize permissions, maximize, shade, left/right tiling and their shaded combinations. Maximized windows use a distinct restore glyph. It defines menu, minimize, maximize, close, shade/unshade, above/unabove and stick/unstick controls for engines exposing them. Metacity 3.46's public renderer displays the first four controls; other engines and control layouts need separate runtime verification. Set the title font to Google Sans through your desktop's font settings. This is a Metacity XML theme, not a GNOME Shell or Mutter shell theme.
 
 ## Full bundle checklist
 
@@ -24,8 +39,8 @@ The [free Dracula GTK repository](https://github.com/dracula/gtk) also contains 
 - [ ] GNOME Shell.
 - [ ] Cinnamon.
 - [ ] KDE Plasma, Aurorae and Kvantum.
-- [ ] Metacity.
-- [ ] Xfwm, including HiDPI decorations.
+- [x] [Metacity](metacity-1/metacity-theme-3.xml).
+- [x] [Xfwm](xfwm4/themerc), including HiDPI and extra-HiDPI decorations.
 - [ ] Unity.
 
 The shared color layer is maintained directly. The built-in base theme can evolve with GTK; the tested toolkit versions and validation limits are recorded in [coverage](../COVERAGE.md).

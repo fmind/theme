@@ -35,7 +35,7 @@ class GtkPortTests(unittest.TestCase):
         index = configparser.ConfigParser()
         index.read(GTK / "index.theme")
         self.assertEqual(index["X-GNOME-Metatheme"]["GtkTheme"], "Fmind")
-        self.assertNotIn("MetacityTheme", index["X-GNOME-Metatheme"])
+        self.assertEqual(index["X-GNOME-Metatheme"]["MetacityTheme"], "Fmind")
         expected_resources = {
             "gtk-3.0": "resource:///org/gtk/libgtk/theme/Adwaita/gtk.css",
             "gtk-4.0": "resource:///org/gtk/libgtk/theme/Default/gtk.css",

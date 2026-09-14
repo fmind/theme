@@ -6,3 +6,4 @@ Comment=A white GTK widget theme with readable semantic colors
 
 [X-GNOME-Metatheme]
 GtkTheme=Fmind
+MetacityTheme=Fmind
