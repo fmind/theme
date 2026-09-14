@@ -1,6 +1,6 @@
 # Fmind GTK
 
-Native GTK 2, GTK 3.20+ and GTK 4 widget themes, with Metacity and Xfwm window decorations. Windows, editors, panels and popovers are white; selections and semantic feedback use pale fills. Google Sans is the UI font and Google Sans Code is the monospace font. Missing fonts use the system fallback.
+Native GTK 2, GTK 3.20+ and GTK 4 widget themes, with a Cinnamon desktop theme and Metacity and Xfwm window decorations. Windows, editors, panels and popovers are white; selections and semantic feedback use pale fills. Google Sans is the UI font and Google Sans Code is the monospace font. Missing fonts use the system fallback.
 
 ## Install
 
@@ -11,6 +11,16 @@ For an isolated GTK 3 or GTK 4 application preview, use `GTK_THEME=Fmind applica
 Fmind is exclusively light. The `gtk-dark.css` entry points deliberately load the same light palette. GTK 3 uses its built-in Adwaita resource for geometry and symbolic assets; GTK 4 uses its built-in Default resource. GTK 2 uses its built-in drawing engine. No copied third-party base styles, external rendering engines or downloaded image assets are needed.
 
 The theme includes buttons, suggested/destructive actions, entries, selection, checks, radios, switches, menus, popovers, tooltips, tabs, lists, scrollbars, scales, progress and semantic messages, with disabled and backdrop states. It exports GTK 3's named theme colors for applications that draw custom controls. Applications can override system themes; libadwaita applications are not covered by installing this package. GTK 3 versions older than 3.20 use a different selector model and remain pending.
+
+## Cinnamon desktop
+
+The [Cinnamon stylesheet](cinnamon/cinnamon.css) is included when you copy this entire package to `~/.themes/Fmind/`. In Cinnamon System Settings → Themes, choose Fmind for Desktop. The Applications and Window borders choices are separate; select the GTK and Metacity components where your desktop supports them. No settings are changed by this package.
+
+Cinnamon imports its installed base at `/usr/share/cinnamon/theme/cinnamon.css` for native geometry, then applies Fmind colors and its own vector controls. That installed file is required. If your distribution installs Cinnamon under another prefix, adjust the first import in the copied Fmind stylesheet to the actual base file. Keep the `cinnamon/assets/` directory beside the stylesheet. The system stylesheet and its assets are reused locally, not bundled or downloaded by Fmind.
+
+The color layer covers horizontal and vertical panels, applets and window lists, menus and search, calendar and events, entries, dialogs, notifications, sound controls and meters, workspace overview and expo, switchers, desklets, virtual keyboards, tooltips and Looking Glass. Normal text surfaces are opaque white; hover, focus, selection, attention and destructive actions retain distinct feedback. Checkboxes, radio buttons and toggles have distinct off/on glyphs; workspace actions, close controls and the hot corner use local SVGs. Looking Glass uses Google Sans Code.
+
+Native style resolution was checked with Cinnamon 5.6.8 and with the stable 6.6.9 base stylesheet compiled from upstream SCSS. Both checks used the 5.6.8 St engine; a full Cinnamon desktop session, the 6.6 runtime, screen-locker integration and arbitrary third-party applets remain unverified. See [coverage](../COVERAGE.md) for the exact evidence boundary.
 
 ## Window decorations
 
@@ -37,7 +47,7 @@ The [free Dracula GTK repository](https://github.com/dracula/gtk) also contains 
 - [ ] GTK 3 before 3.20.
 - [ ] Application-specific widget refinements for the apps in the reference bundle.
 - [ ] GNOME Shell.
-- [ ] Cinnamon.
+- [x] [Cinnamon](cinnamon/cinnamon.css).
 - [ ] KDE Plasma, Aurorae and Kvantum.
 - [x] [Metacity](metacity-1/metacity-theme-3.xml).
 - [x] [Xfwm](xfwm4/themerc), including HiDPI and extra-HiDPI decorations.

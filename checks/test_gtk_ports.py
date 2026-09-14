@@ -53,6 +53,9 @@ class GtkPortTests(unittest.TestCase):
             self.assertEqual(tinycss2.serialize(dark[0].prelude).strip(), 'url("gtk.css")')
         for path in GTK.rglob("*.css"):
             for target in re.findall(r'@import url\("([^"\n]+)"\)', path.read_text()):
+                if path == GTK / "cinnamon/cinnamon.css" and target == "/usr/share/cinnamon/theme/cinnamon.css":
+                    # Cinnamon supplies the native layout; its runtime is optional in the offline gate.
+                    continue
                 if not target.startswith("resource:"):
                     self.assertTrue((path.parent / target).is_file(), (path, target))
 
