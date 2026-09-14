@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://doc.qt.io/qtcreator/creator-configuring.html -->
+<style-scheme version="1.0" name="Fmind">
+  <!-- Style identifiers adapted from dracula/qtcreator (MIT; see LICENSE). -->
+  <style name="Text" foreground="#202124" background="#ffffff" />
+  <style name="Link" foreground="#174ea6" />
+  <style name="Selection" foreground="#202124" background="#d2e3fc" />
+  <style name="LineNumber" foreground="#595d62" background="#ffffff" />
+  <style name="SearchResult" foreground="#202124" background="#feefc3" />
+  <style name="SearchScope" foreground="#202124" background="#feefc3" />
+  <style name="Parentheses" foreground="#202124" background="#d2e3fc" />
+  <style name="ParenthesesMismatch" foreground="#a50e0e" background="#fad2cf" />
+  <style name="AutoComplete" foreground="#202124" background="#d2e3fc" />
+  <style name="CurrentLine" foreground="#202124" background="#f1f3f4" />
+  <style name="CurrentLineNumber" foreground="#202124" />
+  <style name="Occurrences" foreground="#202124" background="#d2e3fc" />
+  <style name="Occurrences.Unused" foreground="#595d62" />
+  <style name="Occurrences.Rename" foreground="#202124" background="#d2e3fc" />
+  <style name="Number" foreground="#934900" />
+  <style name="String" foreground="#0d652d" />
+  <style name="Type" foreground="#681da8" />
+  <style name="Local" foreground="#202124" />
+  <style name="Parameter" foreground="#202124" />
+  <style name="Global" foreground="#202124" />
+  <style name="Field" foreground="#202124" />
+  <style name="Static" foreground="#202124" />
+  <style name="VirtualMethod" foreground="#174ea6" />
+  <style name="Function" foreground="#174ea6" />
+  <style name="Keyword" foreground="#174ea6" bold="true" />
+  <style name="PrimitiveType" foreground="#681da8" />
+  <style name="Operator" foreground="#202124" />
+  <style name="Overloaded Operator" foreground="#202124" />
+  <style name="Punctuation" foreground="#202124" />
+  <style name="Preprocessor" foreground="#681da8" />
+  <style name="Label" foreground="#202124" />
+  <style name="Comment" foreground="#595d62" />
+  <style name="Doxygen.Comment" foreground="#595d62" />
+  <style name="Doxygen.Tag" foreground="#174ea6" />
+  <style name="VisualWhitespace" foreground="#9aa0a6" />
+  <style name="QmlLocalId" foreground="#202124" />
+  <style name="QmlExternalId" foreground="#202124" />
+  <style name="QmlTypeId" foreground="#681da8" />
+  <style name="QmlRootObjectProperty" foreground="#202124" />
+  <style name="QmlScopeObjectProperty" foreground="#202124" />
+  <style name="QmlExternalObjectProperty" foreground="#202124" />
+  <style name="JsScopeVar" foreground="#202124" />
+  <style name="JsImportVar" foreground="#202124" />
+  <style name="JsGlobalVar" foreground="#202124" />
+  <style name="QmlStateName" foreground="#202124" />
+  <style name="Binding" foreground="#174ea6" />
+  <style name="DisabledCode" foreground="#595d62" />
+  <style name="AddedLine" foreground="#0d652d" background="#ceead6" />
+  <style name="RemovedLine" foreground="#a50e0e" background="#fad2cf" />
+  <style name="DiffFile" foreground="#202124" />
+  <style name="DiffLocation" foreground="#202124" background="#feefc3" />
+  <style name="DiffFileLine" foreground="#202124" background="#feefc3" />
+  <style name="DiffContextLine" foreground="#202124" background="#feefc3" />
+  <style name="DiffSourceLine" foreground="#a50e0e" background="#fad2cf" />
+  <style name="DiffSourceChar" foreground="#a50e0e" background="#fad2cf" />
+  <style name="DiffDestLine" foreground="#0d652d" background="#ceead6" />
+  <style name="DiffDestChar" foreground="#0d652d" background="#ceead6" />
+  <style name="LogChangeLine" foreground="#a50e0e" background="#fad2cf" />
+  <style name="Warning" foreground="#202124" underlineColor="#934900" underlineStyle="WaveUnderline" />
+  <style name="WarningContext" foreground="#202124" underlineColor="#934900" underlineStyle="DotLine" />
+  <style name="Error" foreground="#202124" underlineColor="#a50e0e" underlineStyle="WaveUnderline" />
+  <style name="ErrorContext" foreground="#202124" underlineColor="#a50e0e" underlineStyle="DotLine" />
+  <style name="Declaration" foreground="#202124" bold="true" />
+  <style name="FunctionDefinition" foreground="#174ea6" bold="true" />
+  <style name="OutputArgument" foreground="#202124" />
+  <style name="StaticMember" foreground="#934900" />
+</style-scheme>

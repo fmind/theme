@@ -1,6 +1,6 @@
 # fmind/theme
 
-A light theme for everyday code and terminal work, with 69 app integrations. One folder per app, native theme files, no generator.
+A light theme for everyday code and terminal work, with 74 app integrations. One folder per app, native theme files, no generator.
 
 ## Palette
 
@@ -88,19 +88,24 @@ Use a truecolor terminal with a light background. Paths are relative to `~/.conf
 | Mintty | [fmind.minttyrc](mintty/fmind.minttyrc) | Merge into `~/.minttyrc` or load the file with `mintty -C /path/to/fmind.minttyrc`. |
 | MobaXterm | [fmind.ini](mobaxterm/fmind.ini) | Close MobaXterm; merge `[Colors]` into `MobaXterm.ini` (its location is shown in Settings → Configuration → General). Reopen. Per-session color settings can override global colors. |
 | Neovim | [fmind.lua](nvim/colors/fmind.lua) | Copy to `nvim/colors/fmind.lua`; use `colorscheme fmind`. |
+| Notepad++ | [fmind.xml](notepad-plus-plus/fmind.xml) | Copy to `%APPDATA%\Notepad++\themes\` (or the portable installation’s `themes/`); restart, then Settings → Style Configurator → Fmind. Use light mode; disable Global override colors so lexer styles apply. Covers 60 lexers, editor decorations and tabs. |
 | Obsidian | [theme.css](obsidian/theme.css), [manifest.json](obsidian/manifest.json) | Copy both into your vault’s `.obsidian/themes/Fmind/`; select Fmind and the Light base color scheme in Appearance. |
 | OpenCode | [fmind.json](opencode/fmind.json) | Copy to `opencode/themes/fmind.json`; select `fmind` through `/theme`. |
 | PowerShell | [fmind.ps1](powershell/fmind.ps1) | Dot-source from `$PROFILE`: `. "/path/to/fmind.ps1"`. Requires PowerShell 7, PSReadLine 2.2+, and a matching truecolor terminal. Colors the interactive input line and suggestions. |
 | ptpython | [fmind.py](ptpython/fmind.py) | Load `CODE` and `UI` in `config.py`; register and select them as shown below. |
 | Pygments | [fmind.py](pygments/fmind.py) | Copy the module into your Python project and pass `FmindStyle` to `HtmlFormatter`, as shown below. Requires Pygments; no changes to installed Pygments files. |
+| Qt Creator | [editor](qtcreator/fmind.xml), [UI](qtcreator/fmind.creatortheme) | Copy the editor file into `styles/` and the UI file into `themes/` under your Qt Creator user resource directory (paths below). In Preferences, select Fmind under Environment → Interface and Text Editor → Font & Colors; restart. Targets Qt Creator 20.0.1. |
 | Rio | [fmind.toml](rio/fmind.toml) | Copy to `rio/themes/fmind.toml`; set `theme = "fmind"` in `rio/config.toml`. On macOS use `~/Library/Application Support/rio/`. |
 | Rofi | [fmind.rasi](rofi/fmind.rasi) | Copy to `rofi/fmind.rasi`; use `rofi -show drun -theme ~/.config/rofi/fmind.rasi`. Colors inherit the standard layout. |
+| RStudio | [fmind.rstheme](rstudio/fmind.rstheme) | Tools → Global Options → Appearance → Add, choose the file, and Apply. Use the Modern global theme. Includes Ace syntax, selections, diagnostics, diffs, completion and documented UI selectors. |
+| Spyder | [fmind.ini](spyder/fmind.ini) | For Spyder 6.1, create a custom Fmind syntax theme in Preferences → Appearance, then merge this fragment into that theme’s saved settings as detailed below. Select the Light interface theme. |
 | Starship | [fmind.toml](starship/fmind.toml) | Merge the palette and `palette = "fmind"` into `starship.toml`. Module styles select palette names. |
 | Streamlit | [fmind.toml](streamlit/fmind.toml) | Merge `[theme]` into your project’s `.streamlit/config.toml`. Uses current Streamlit theming, including chart colors. |
 | Sublime Text | [fmind.sublime-color-scheme](sublime-text/fmind.sublime-color-scheme) | Use Preferences → Browse Packages; copy into `User/`, then choose `fmind` with Select Color Scheme. This styles editor content; the UI theme is separate. |
 | Terminal.app | [fmind.terminal](terminal-app/fmind.terminal) | On macOS, Settings → Profiles → action menu → Import; select the file and choose Fmind. Set the profile as Default for new windows if desired. Font choice remains in the profile settings. |
 | Terminator | [fmind.conf](terminator/fmind.conf) | Merge the `[[fmind]]` profile under `[profiles]` in `terminator/config`; select that profile in Preferences. |
 | Termux | [colors.properties](termux/colors.properties) | Copy to `~/.termux/colors.properties`; run `termux-reload-settings`. |
+| TextMate | [fmind.tmTheme](textmate/fmind.tmTheme) | Open the file with TextMate 2 to install; select Fmind in Preferences → Fonts & Colors. Includes a light theme identity, editor colors, syntax and diff scopes. |
 | Tilix | [fmind.json](tilix/fmind.json) | Copy to `tilix/schemes/fmind.json`; restart Tilix and choose Fmind in the profile’s Color settings. |
 | tmux | [fmind.conf](tmux/fmind.conf) | Copy to `tmux/fmind.conf`; add `source-file ~/.config/tmux/fmind.conf` to your tmux config. Reload the config to apply. |
 | Typora | [fmind.css](typora/fmind.css) | Preferences → Appearance → Open Theme Folder; copy the CSS, restart Typora, and select Fmind. |
@@ -124,6 +129,10 @@ For GNOME Terminal, create or select a profile in Preferences and copy its UUID 
 ```sh
 dconf load /org/gnome/terminal/legacy/profiles:/:<profile-uuid>/ < /path/to/gnome-terminal/fmind.dconf
 ```
+
+For Qt Creator, the user resource directory is `~/.config/QtProject/qtcreator/` on Linux and macOS, and `%APPDATA%\QtProject\qtcreator\` on Windows. Custom settings paths can change this location. The UI file is self-contained and does not need Dracula files or copies of installed Qt themes. Select Google Sans for interface text and Google Sans Code for editor text where the application exposes font settings.
+
+For Spyder 6.1, create a new syntax highlighting theme named Fmind through Preferences → Appearance and apply it, then close Spyder. Use `spyder --paths` to locate its configuration directory and open `spyder.ini`. Under `[appearance]`, find the entry `custom-N/name = Fmind`. Replace `custom-0` in this repository’s fragment with that exact `custom-N` identifier, then replace only that theme’s entries in the existing section. Preserve `custom_names` and other themes. Reopen Spyder, select Fmind, and select the Light interface theme. This avoids collisions with existing custom schemes; it does not replace the application’s UI stylesheet.
 
 For ptpython, put `fmind.py` beside `config.py` and add this to `configure(repl)`:
 
@@ -159,7 +168,7 @@ Use one of the matching terminal themes for ANSI colors. Normal and bright slots
 
 Apps with their own colors or ANSI backgrounds may need additional settings. Keep opacity at 100% for the documented contrast. The terminal palettes cover 16 ANSI slots; applications can still request their own 256-color or truecolor values.
 
-Coverage prioritizes terminals, editors and everyday terminal tools, informed by the [free Dracula app catalog](https://draculatheme.com/). See [coverage and remaining gaps](COVERAGE.md) and the [complete catalog checklist](CATALOG.md); this is not full catalog parity. Ports use Fmind’s palette and each app’s native format. Format references are linked at the top of comment-capable files; see also the [VS Code theme guide](https://code.visualstudio.com/api/extension-guides/color-theme), [Windows Terminal scheme reference](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes), and the schema in the Zed file.
+Coverage prioritizes terminals, editors and everyday terminal tools, informed by the [free Dracula app catalog](https://draculatheme.com/). See [coverage and remaining gaps](COVERAGE.md) and the [complete catalog checklist](CATALOG.md); this is not full catalog parity. Ports use Fmind’s palette and each app’s native format. Notepad++ and Qt Creator editor definitions adapt MIT-licensed free Dracula files; their original license notices are included in each folder. Format references are linked at the top of comment-capable files; see also the [VS Code theme guide](https://code.visualstudio.com/api/extension-guides/color-theme), [Windows Terminal scheme reference](https://learn.microsoft.com/en-us/windows/terminal/customize-settings/color-schemes), and the schema in the Zed file.
 
 ## Maintenance
 

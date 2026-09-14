@@ -1,0 +1,343 @@
+/* https://docs.posit.co/ide/user/ide/guide/ui/appearance.html */
+/* rs-theme-name: Fmind */
+/* rs-theme-is-dark: FALSE */
+.ace_editor, .rstudio-themes-flat.ace_editor_theme, .rstudio-themes-flat .ace_editor_theme {
+  color: #202124;
+  background-color: #ffffff;
+}
+
+.ace_gutter {
+  color: #595d62;
+  background-color: #ffffff;
+}
+
+.ace_gutter-active-line, .ace_marker-layer .ace_active-line {
+  background-color: #f1f3f4;
+}
+
+.ace_cursor {
+  color: #174ea6;
+}
+
+.ace_marker-layer .ace_selection, .ace_selection.ace_start {
+  background-color: #d2e3fc;
+}
+
+.ace_marker-layer .ace_step, .ace_marker-layer .ace_active-debug-line, .ace_marker-layer .ace_active_debug_line {
+  background-color: #ceead6;
+}
+
+.ace_marker-layer .ace_selected-word, .ace_marker-layer .ace_find_line {
+  background-color: #feefc3;
+  border: 1px solid #934900;
+}
+
+.ace_marker-layer .ace_bracket {
+  background-color: #d2e3fc;
+  border: 1px solid #174ea6;
+}
+
+.ace_print-margin {
+  background-color: #9aa0a6;
+  width: 1px;
+}
+
+.ace_invisible {
+  color: #595d62;
+}
+
+.ace_indent-guide {
+  border-right: 1px solid #9aa0a6;
+  background-image: none;
+}
+
+.ace_fold {
+  color: #202124;
+  background-color: #d2e3fc;
+  border-color: #174ea6;
+}
+
+.ace_keyword, .ace_storage, .ace_entity.ace_name.ace_function, .ace_support.ace_function {
+  color: #174ea6;
+}
+
+.ace_keyword {
+  font-weight: bold;
+}
+
+.ace_keyword.ace_operator, .ace_punctuation, .ace_paren, .ace_variable, .ace_identifier {
+  color: #202124;
+}
+
+.ace_constant, .ace_constant.ace_language, .ace_constant.ace_numeric, .ace_support.ace_constant {
+  color: #934900;
+}
+
+.ace_storage.ace_type, .ace_support.ace_type, .ace_support.ace_class, .ace_entity.ace_name.ace_type {
+  color: #681da8;
+}
+
+.ace_string, .ace_constant.ace_character {
+  color: #0d652d;
+}
+
+.ace_comment {
+  color: #595d62;
+  font-style: normal;
+}
+
+.ace_invalid, .ace_invalid.ace_deprecated {
+  color: #a50e0e;
+  background-color: #fad2cf;
+}
+
+.ace_console_error {
+  color: #a50e0e;
+}
+
+.ace_meta.ace_tag, .ace_entity.ace_name.ace_tag, .ace_markup.ace_heading, .ace_heading {
+  color: #174ea6;
+  font-weight: bold;
+}
+
+.ace_entity.ace_other.ace_attribute-name {
+  color: #202124;
+}
+
+.ace_markup.ace_href {
+  color: #174ea6;
+  text-decoration: underline;
+}
+
+.ace_markup.ace_list {
+  color: #174ea6;
+}
+
+.ace_markup.ace_bold {
+  color: #202124;
+  font-weight: bold;
+}
+
+.ace_markup.ace_italic {
+  color: #681da8;
+  font-style: normal;
+}
+
+.ace_diff.ace_inserted {
+  color: #0d652d;
+  background-color: #ceead6;
+}
+
+.ace_diff.ace_deleted {
+  color: #a50e0e;
+  background-color: #fad2cf;
+}
+
+.ace_paren_color_0 {
+  color: #174ea6;
+}
+
+.ace_paren_color_1 {
+  color: #681da8;
+}
+
+.ace_paren_color_2 {
+  color: #00636d;
+}
+
+.ace_paren_color_3 {
+  color: #934900;
+}
+
+.ace_paren_color_4 {
+  color: #0d652d;
+}
+
+.ace_paren_color_5 {
+  color: #a50e0e;
+}
+
+.ace_paren_color_6 {
+  color: #202124;
+}
+
+.rstheme_center, .rstheme_content, .rstheme_toolbarWrapper, .rstheme_multiPodUtilityTabArea {
+  color: #202124;
+  background-color: #ffffff;
+}
+
+.rstheme_tabLayoutCenter, .rstheme_toolbar {
+  color: #202124;
+  background-color: #ffffff;
+}
+
+.themedPopupPanel, .ace_autocomplete {
+  color: #202124;
+  background-color: #ffffff;
+  border: 1px solid #9aa0a6;
+}
+
+.ace_autocomplete .ace_marker-layer .ace_active-line {
+  background-color: #d2e3fc;
+}
+
+.ace_autocomplete .ace_completion-highlight {
+  color: #174ea6;
+  font-weight: bold;
+}
+
+.ace_autocomplete .ace_completion-meta {
+  color: #595d62;
+}
+
+.rstheme_secondaryText {
+  color: #595d62;
+}
+
+.rstheme_selected {
+  color: #202124;
+  background-color: #d2e3fc;
+}
+
+.rstheme_border {
+  border-color: #9aa0a6;
+}
+
+.dataGridHeader {
+  color: #202124;
+  background-color: #ffffff;
+  border-bottom: 1px solid #9aa0a6;
+}
+
+.terminal {
+  color: #202124;
+  background-color: #ffffff;
+}
+
+.terminal .xtermColor0 {
+  color: #202124;
+}
+
+.terminal .xtermBgColor0 {
+  background-color: #202124;
+}
+
+.terminal .xtermColor1 {
+  color: #a50e0e;
+}
+
+.terminal .xtermBgColor1 {
+  background-color: #a50e0e;
+}
+
+.terminal .xtermColor2 {
+  color: #0d652d;
+}
+
+.terminal .xtermBgColor2 {
+  background-color: #0d652d;
+}
+
+.terminal .xtermColor3 {
+  color: #934900;
+}
+
+.terminal .xtermBgColor3 {
+  background-color: #934900;
+}
+
+.terminal .xtermColor4 {
+  color: #174ea6;
+}
+
+.terminal .xtermBgColor4 {
+  background-color: #174ea6;
+}
+
+.terminal .xtermColor5 {
+  color: #681da8;
+}
+
+.terminal .xtermBgColor5 {
+  background-color: #681da8;
+}
+
+.terminal .xtermColor6 {
+  color: #00636d;
+}
+
+.terminal .xtermBgColor6 {
+  background-color: #00636d;
+}
+
+.terminal .xtermColor7 {
+  color: #202124;
+}
+
+.terminal .xtermBgColor7 {
+  background-color: #202124;
+}
+
+.terminal .xtermColor8 {
+  color: #595d62;
+}
+
+.terminal .xtermBgColor8 {
+  background-color: #595d62;
+}
+
+.terminal .xtermColor9 {
+  color: #a50e0e;
+}
+
+.terminal .xtermBgColor9 {
+  background-color: #a50e0e;
+}
+
+.terminal .xtermColor10 {
+  color: #0d652d;
+}
+
+.terminal .xtermBgColor10 {
+  background-color: #0d652d;
+}
+
+.terminal .xtermColor11 {
+  color: #934900;
+}
+
+.terminal .xtermBgColor11 {
+  background-color: #934900;
+}
+
+.terminal .xtermColor12 {
+  color: #174ea6;
+}
+
+.terminal .xtermBgColor12 {
+  background-color: #174ea6;
+}
+
+.terminal .xtermColor13 {
+  color: #681da8;
+}
+
+.terminal .xtermBgColor13 {
+  background-color: #681da8;
+}
+
+.terminal .xtermColor14 {
+  color: #00636d;
+}
+
+.terminal .xtermBgColor14 {
+  background-color: #00636d;
+}
+
+.terminal .xtermColor15 {
+  color: #202124;
+}
+
+.terminal .xtermBgColor15 {
+  background-color: #202124;
+}
