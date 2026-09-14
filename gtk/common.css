@@ -1,0 +1,302 @@
+/* https://docs.gtk.org/gtk3/css-properties.html */
+/* Shared GTK 3.20+ / GTK 4 color layer. Native themes supply sizing and assets. */
+* {
+  font-family: "Google Sans";
+  font-style: normal;
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+  background-image: none;
+  box-shadow: none;
+  outline-color: #174ea6;
+}
+
+.background, .background:backdrop,
+.view, .view:backdrop, .view:disabled, .view:disabled:backdrop,
+viewport, textview text, textview text:backdrop, textview text:disabled,
+headerbar, headerbar:backdrop, toolbar, .toolbar, statusbar,
+menubar, menu, menu:backdrop, popover, popover contents,
+notebook, notebook > stack, notebook > header, notebook > header:backdrop,
+list, treeview.view, iconview, calendar, .sidebar, .sidebar:backdrop,
+.content-view, .content-view:backdrop, .frame, .osd, .osd:backdrop {
+  color: #202124;
+  background-image: none;
+  background-color: #ffffff;
+}
+
+label, label:backdrop, image, image:backdrop {
+  color: inherit;
+}
+.dim-label, .subtitle, .placeholder {
+  color: #595d62;
+  opacity: 1;
+}
+scale value, scale value:backdrop, progressbar text, progressbar text:backdrop {
+  color: #595d62;
+}
+*:disabled, *:disabled:backdrop {
+  color: #595d62;
+  opacity: 1;
+}
+separator, separator:backdrop {
+  background-image: none;
+  background-color: #9aa0a6;
+}
+frame > border, .frame, scrolledwindow, headerbar, notebook > header {
+  border-color: #9aa0a6;
+}
+
+button, button:backdrop, .osd button, .osd button:backdrop,
+entry, entry:backdrop, spinbutton, spinbutton:backdrop,
+combobox button, combobox button:backdrop {
+  color: #202124;
+  background-image: none;
+  background-color: #ffffff;
+  border-color: #9aa0a6;
+  box-shadow: none;
+}
+
+button:hover, .osd button:hover, combobox button:hover,
+row:hover, modelbutton:hover, menuitem:hover, calendar.highlight {
+  color: #202124;
+  background-image: none;
+  background-color: #f1f3f4;
+}
+
+button:active, button:checked, button:checked:hover,
+button:checked:backdrop, .osd button:checked, combobox button:checked,
+notebook > header > tabs > tab:checked,
+notebook > header > tabs > tab:checked:backdrop {
+  color: #202124;
+  background-image: none;
+  background-color: #d2e3fc;
+  border-color: #174ea6;
+}
+
+button:disabled, button:disabled:backdrop, .osd button:disabled,
+entry:disabled, entry:disabled:backdrop,
+spinbutton:disabled, spinbutton:disabled:backdrop,
+combobox button:disabled, combobox button:disabled:backdrop {
+  color: #595d62;
+  background-image: none;
+  background-color: #ffffff;
+  border-color: #9aa0a6;
+  opacity: 1;
+}
+
+button.suggested-action, button.suggested-action:hover,
+button.suggested-action:active, button.suggested-action:checked,
+button.suggested-action:backdrop,
+button.suggested-action:hover:active, button.suggested-action:hover:checked,
+button.suggested-action:backdrop:active, button.suggested-action:backdrop:checked {
+  color: #ffffff;
+  background-image: none;
+  background-color: #174ea6;
+  border-color: #174ea6;
+}
+button.destructive-action, button.destructive-action:hover,
+button.destructive-action:active, button.destructive-action:checked,
+button.destructive-action:backdrop,
+button.destructive-action:hover:active, button.destructive-action:hover:checked,
+button.destructive-action:backdrop:active, button.destructive-action:backdrop:checked {
+  color: #ffffff;
+  background-image: none;
+  background-color: #a50e0e;
+  border-color: #a50e0e;
+}
+button.suggested-action:disabled, button.suggested-action:disabled:backdrop,
+button.suggested-action:disabled:active, button.suggested-action:disabled:checked,
+button.suggested-action:disabled:backdrop:active, button.suggested-action:disabled:backdrop:checked,
+button.destructive-action:disabled, button.destructive-action:disabled:backdrop,
+button.destructive-action:disabled:active, button.destructive-action:disabled:checked,
+button.destructive-action:disabled:backdrop:active, button.destructive-action:disabled:backdrop:checked,
+button:disabled:checked, button:disabled:active,
+button:disabled:backdrop:checked, button:disabled:backdrop:active {
+  color: #595d62;
+  background-image: none;
+  background-color: #ffffff;
+  border-color: #9aa0a6;
+}
+
+button:focus, entry:focus, spinbutton:focus, combobox button:focus {
+  border-color: #174ea6;
+  outline-color: #174ea6;
+  outline-style: solid;
+  outline-width: 1px;
+  outline-offset: -3px;
+}
+entry.error, entry.error:focus {
+  color: #a50e0e;
+  background-image: none;
+  background-color: #fad2cf;
+  border-color: #a50e0e;
+}
+entry.warning, entry.warning:focus {
+  color: #934900;
+  background-image: none;
+  background-color: #feefc3;
+  border-color: #934900;
+}
+entry progress, progressbar progress, scale highlight {
+  color: #ffffff;
+  background-image: none;
+  background-color: #174ea6;
+  border-color: #174ea6;
+}
+
+selection, selection:backdrop,
+entry selection, entry selection:backdrop, entry text selection,
+textview text selection, textview text selection:backdrop,
+label selection, label selection:backdrop,
+row:selected, row:selected:hover, row:selected:backdrop,
+treeview.view:selected, treeview.view:selected:hover, treeview.view:selected:backdrop,
+iconview:selected, iconview:selected:backdrop,
+flowboxchild:selected, flowboxchild:selected:backdrop {
+  color: #202124;
+  background-image: none;
+  background-color: #d2e3fc;
+}
+row:selected label, row:selected image {
+  color: inherit;
+}
+row.activatable:hover {
+  color: #202124;
+  background-image: none;
+  background-color: #f1f3f4;
+}
+row.activatable:selected:hover {
+  color: #202124;
+  background-image: none;
+  background-color: #d2e3fc;
+}
+
+*:link, button:link, label:link {
+  color: #174ea6;
+}
+*:visited, button:visited, label:visited {
+  color: #681da8;
+}
+button:link, button:visited {
+  background-image: none;
+  background-color: transparent;
+}
+
+check, radio, switch, switch slider,
+check:backdrop, radio:backdrop, switch:backdrop, switch:backdrop slider {
+  color: #202124;
+  background-image: none;
+  background-color: #ffffff;
+  border-color: #9aa0a6;
+}
+check:checked, check:indeterminate, radio:checked, radio:indeterminate,
+check:checked:hover, radio:checked:hover,
+check:checked:backdrop, radio:checked:backdrop,
+switch:checked, switch:checked:backdrop {
+  color: #174ea6;
+  background-image: none;
+  background-color: #d2e3fc;
+  border-color: #174ea6;
+}
+check:disabled, radio:disabled, switch:disabled,
+check:disabled:backdrop, radio:disabled:backdrop, switch:disabled:backdrop {
+  color: #595d62;
+  background-image: none;
+  background-color: #f1f3f4;
+  border-color: #9aa0a6;
+}
+switch slider, switch:checked slider, switch:disabled slider {
+  color: #202124;
+  background-image: none;
+  background-color: #ffffff;
+  border-color: #595d62;
+}
+
+scale trough, progressbar trough, levelbar trough,
+scale trough:backdrop, progressbar trough:backdrop,
+scrollbar, scrollbar:backdrop, scrollbar trough, scrollbar trough:backdrop {
+  color: #202124;
+  background-image: none;
+  background-color: #ffffff;
+  border-color: #9aa0a6;
+}
+scale slider, scale slider:backdrop, scrollbar slider, scrollbar slider:backdrop {
+  background-image: none;
+  background-color: #9aa0a6;
+  border-color: #595d62;
+}
+scale slider:hover, scale slider:active, scrollbar slider:hover, scrollbar slider:active {
+  background-image: none;
+  background-color: #595d62;
+}
+scale highlight:disabled, progressbar progress:disabled {
+  background-image: none;
+  background-color: #595d62;
+}
+levelbar block.filled {
+  background-image: none;
+  background-color: #0d652d;
+  border-color: #0d652d;
+}
+levelbar block.low {
+  background-image: none;
+  background-color: #934900;
+  border-color: #934900;
+}
+levelbar block.empty {
+  background-image: none;
+  background-color: #ffffff;
+  border-color: #9aa0a6;
+}
+
+notebook > header > tabs > tab, notebook > header > tabs > tab:backdrop {
+  color: #595d62;
+  background-image: none;
+  background-color: #ffffff;
+}
+notebook > header > tabs > tab:hover {
+  color: #202124;
+  background-image: none;
+  background-color: #f1f3f4;
+}
+/* Keep this after normal tabs: native state specificity is equal. */
+notebook > header > tabs > tab:checked,
+notebook > header > tabs > tab:checked:backdrop {
+  color: #202124;
+  background-image: none;
+  background-color: #d2e3fc;
+}
+
+tooltip, tooltip.background, tooltip label,
+popover, popover.background, popover contents, popover arrow {
+  color: #202124;
+  background-image: none;
+  background-color: #ffffff;
+  border-color: #9aa0a6;
+}
+infobar.info, .info {
+  color: #00636d;
+  background-image: none;
+  background-color: #d2e3fc;
+}
+infobar.question, .question {
+  color: #681da8;
+  background-image: none;
+  background-color: #d2e3fc;
+}
+infobar.warning, .warning {
+  color: #934900;
+  background-image: none;
+  background-color: #feefc3;
+}
+infobar.error, .error {
+  color: #a50e0e;
+  background-image: none;
+  background-color: #fad2cf;
+}
+.success {
+  color: #0d652d;
+  background-image: none;
+  background-color: #ceead6;
+}
+textview.monospace, textview.monospace text, .monospace, .monospace * {
+  font-family: "Google Sans Code";
+}

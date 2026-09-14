@@ -1,0 +1,61 @@
+/* https://docs.gtk.org/gtk3/css-overview.html */
+/* Keep native geometry and symbolic assets; only our color layer is shipped. */
+@import url("resource:///org/gtk/libgtk/theme/Adwaita/gtk.css");
+@import url("../common.css");
+
+/* Public GTK 3 names used by applications drawing their own controls. */
+@define-color theme_fg_color #202124;
+@define-color theme_text_color #202124;
+@define-color theme_bg_color #ffffff;
+@define-color theme_base_color #ffffff;
+@define-color theme_selected_bg_color #d2e3fc;
+@define-color theme_selected_fg_color #202124;
+@define-color insensitive_fg_color #595d62;
+@define-color insensitive_bg_color #ffffff;
+@define-color insensitive_base_color #ffffff;
+@define-color theme_unfocused_fg_color #202124;
+@define-color theme_unfocused_text_color #202124;
+@define-color theme_unfocused_bg_color #ffffff;
+@define-color theme_unfocused_base_color #ffffff;
+@define-color theme_unfocused_selected_bg_color #d2e3fc;
+@define-color theme_unfocused_selected_fg_color #202124;
+@define-color unfocused_insensitive_color #595d62;
+@define-color borders #9aa0a6;
+@define-color unfocused_borders #9aa0a6;
+@define-color warning_color #934900;
+@define-color error_color #a50e0e;
+@define-color success_color #0d652d;
+@define-color content_view_bg #ffffff;
+@define-color text_view_bg #ffffff;
+@define-color wm_title #202124;
+@define-color wm_unfocused_title #595d62;
+@define-color wm_highlight #ffffff;
+@define-color wm_bg_a #ffffff;
+@define-color wm_bg_b #ffffff;
+@define-color wm_shadow #9aa0a6;
+@define-color wm_border #9aa0a6;
+@define-color wm_button_hover_color_a #f1f3f4;
+@define-color wm_button_hover_color_b #f1f3f4;
+@define-color wm_button_active_color_a #d2e3fc;
+@define-color wm_button_active_color_b #d2e3fc;
+@define-color wm_button_active_color_c #d2e3fc;
+
+* {
+  -gtk-icon-effect: none;
+}
+entry {
+  caret-color: #174ea6;
+}
+textview text {
+  caret-color: #174ea6;
+}
+menu, .csd.popup, .csd decoration {
+  background-color: #ffffff;
+}
+treeview.view header button {
+  color: #202124;
+  background-color: #ffffff;
+}
+treeview.view header button:hover {
+  background-color: #f1f3f4;
+}

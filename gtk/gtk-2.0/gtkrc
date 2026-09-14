@@ -1,0 +1,60 @@
+# https://docs.gtk.org/gtk3/migrating-themes.html
+# Built-in GTK 2 drawing engine; no Murrine or pixmap module required.
+gtk-color-scheme = "fg_color:#202124\nbg_color:#ffffff\ntext_color:#202124\nbase_color:#ffffff\nselected_fg_color:#202124\nselected_bg_color:#d2e3fc\ntooltip_fg_color:#202124\ntooltip_bg_color:#ffffff"
+
+style "fmind-default" {
+  font_name = "Google Sans 10"
+  xthickness = 2
+  ythickness = 2
+  fg[NORMAL] = "#202124"
+  fg[PRELIGHT] = "#202124"
+  fg[ACTIVE] = "#202124"
+  fg[SELECTED] = "#202124"
+  fg[INSENSITIVE] = "#595d62"
+  text[NORMAL] = "#202124"
+  text[PRELIGHT] = "#202124"
+  text[ACTIVE] = "#202124"
+  text[SELECTED] = "#202124"
+  text[INSENSITIVE] = "#595d62"
+  bg[NORMAL] = "#ffffff"
+  bg[PRELIGHT] = "#f1f3f4"
+  bg[ACTIVE] = "#d2e3fc"
+  bg[SELECTED] = "#d2e3fc"
+  bg[INSENSITIVE] = "#ffffff"
+  base[NORMAL] = "#ffffff"
+  base[PRELIGHT] = "#f1f3f4"
+  base[ACTIVE] = "#d2e3fc"
+  base[SELECTED] = "#d2e3fc"
+  base[INSENSITIVE] = "#ffffff"
+  GtkWidget::focus-line-width = 1
+  GtkWidget::focus-padding = 1
+  GtkWidget::link-color = "#174ea6"
+  GtkWidget::visited-link-color = "#681da8"
+  GtkWidget::cursor-color = "#174ea6"
+  GtkWidget::secondary-cursor-color = "#595d62"
+  GtkEntry::inner-border = { 3, 3, 3, 3 }
+  GtkButton::default-border = { 1, 1, 1, 1 }
+  GtkRange::trough-border = 1
+  GtkRange::slider-width = 14
+  GtkCheckButton::indicator-size = 14
+  engine "" {}
+}
+class "GtkWidget" style "fmind-default"
+
+style "fmind-tooltip" = "fmind-default" {
+  bg[NORMAL] = "#ffffff"
+  fg[NORMAL] = "#202124"
+}
+widget "gtk-tooltip*" style "fmind-tooltip"
+
+style "fmind-menu-item" = "fmind-default" {
+  bg[PRELIGHT] = "#d2e3fc"
+  fg[PRELIGHT] = "#202124"
+}
+class "GtkMenuItem" style "fmind-menu-item"
+
+style "fmind-progress" = "fmind-default" {
+  bg[PRELIGHT] = "#174ea6"
+  fg[PRELIGHT] = "#ffffff"
+}
+class "GtkProgressBar" style "fmind-progress"

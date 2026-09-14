@@ -1,0 +1,49 @@
+/* https://docs.gtk.org/gtk4/css-overview.html */
+@import url("resource:///org/gtk/libgtk/theme/Default/gtk.css");
+@import url("../common.css");
+
+* {
+  -gtk-icon-filter: none;
+}
+entry text, textview text {
+  caret-color: #174ea6;
+}
+popover > contents, popover > arrow {
+  background-color: #ffffff;
+}
+columnview, columnview > listview, listview, gridview {
+  color: #202124;
+  background-color: #ffffff;
+}
+columnview header button {
+  color: #202124;
+  background-color: #ffffff;
+}
+columnview header button:hover {
+  background-color: #f1f3f4;
+}
+
+/* GTK 4 inserts range nodes and uses more-specific trough child selectors. */
+progressbar > trough > progress, scale > trough > highlight {
+  background-color: #174ea6;
+  background-image: none;
+  border-color: #174ea6;
+}
+progressbar > trough > progress:disabled, scale > trough > highlight:disabled {
+  background-color: #595d62;
+  border-color: #595d62;
+}
+scale > trough > slider, scale > trough > slider:hover, scale > trough > slider:active,
+scrollbar > range > trough > slider, scrollbar > range > trough > slider:hover {
+  background-color: #9aa0a6;
+  background-image: none;
+  border-color: #595d62;
+}
+scrollbar > range > trough > slider:hover:active {
+  background-color: #595d62;
+}
+scale > trough:disabled, scale > trough > fill, scale > trough > fill:disabled,
+progressbar > trough:disabled {
+  background-color: #ffffff;
+  border-color: #9aa0a6;
+}
