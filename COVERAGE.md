@@ -1,6 +1,6 @@
 # App coverage
 
-Fmind provides 99 native integrations. The [free Dracula catalog](https://draculatheme.com/) listed 472 themes when reviewed on 2026-09-14. Its entries include applications, plugins, website styles, platforms, wallpapers and hardware; that count is not directly comparable to app folders. No Dracula Pro assets were used.
+Fmind provides 103 native integrations. The [free Dracula catalog](https://draculatheme.com/) listed 472 themes when reviewed on 2026-09-14. Its entries include applications, plugins, website styles, platforms, wallpapers and hardware; that count is not directly comparable to app folders. No Dracula Pro assets were used.
 
 The [README](README.md) lists every shipped file and its installation instructions. Ports use Fmind’s light palette, with dark text, pale highlighted surfaces and bright accents. Dracula is the coverage reference. Notepad++ lexer definitions and Qt Creator editor definitions are adapted from MIT-licensed free Dracula ports, with their notices retained alongside the files; all ports use Fmind’s palette. WindTerm’s UI layout, icon selectors and native scope definitions are adapted from its MIT-licensed free Dracula port, with its notice retained in `windterm/LICENSE`.
 
@@ -27,7 +27,7 @@ Full Dracula parity is not claimed. These areas remain required work toward full
 | --- | --- | --- |
 | Other major IDEs | Visual Studio, Arduino IDE and Arduino Pro IDE | Native platform validation and language-specific coverage. |
 | More terminals | NewTerm2, SecureCRT and mRemoteNG | Native profile formats and import validation. |
-| Python and data IDEs | JupyterLab, Jupyter Notebook, Thonny, MATLAB | Application-specific extensions or settings and runtime checks. |
+| Python and data IDEs | Broader runtime and platform checks for the shipped Jupyter, Thonny and MATLAB ports | Continue realistic notebook, debugger, output and platform validation. |
 | Full desktop themes | GTK, Qt and KDE | Widget-state coverage and broader desktop testing. The current fragments do not substitute for these. |
 | Productivity and communication | Slack, Telegram, Raycast, Alfred, Logseq, Thunderbird | App-specific import formats, supported customization boundaries and ongoing UI maintenance. |
 | Creative and specialist tools | Blender, Godot, GIMP, Inkscape, KiCad | Domain-specific colors and representative native fixtures. |
@@ -54,3 +54,11 @@ The IDE batch adds NetBeans’ 27 MIME profiles and shared settings (549 color e
 All 30 NetBeans color documents also validate offline against its native Fonts and Colors 1.1 DTD. Code::Blocks’ stored style-name sets match all 62 lexers in the official 25.03 source archive, and Atom’s stylesheet compiles with Less 4.9.1. These checks do not run the target IDEs or Atom’s embedded Less version.
 
 These are native editor/theme packages with structural, language-role and contrast checks. Light application appearance remains a separate setting where the application separates UI and syntax themes. Full target-IDE rendering, plugin interactions and native imports remain unverified; a passing format check does not establish those outcomes. Visual Studio and both Arduino catalog entries remain pending.
+
+JupyterLab and Notebook 7 share a native Fmind extension with all 221 variables in JupyterLab 4.6.3’s native light-theme API. A separate classic Notebook/NbClassic stylesheet covers the dashboard, cells, syntax, output, forms and dialogs. Thonny adds 35 UI styles and 104 syntax/ANSI tags using its native plugin API and Enhanced Clam layouts. MATLAB includes the R2025a+ MathWorks JSON format with all 15 additional language sections and legacy Schemer preferences; the import excludes indentation policy.
+
+The Jupyter wheel uses the current Jupyter builder and shares the host apputils service rather than bundling it. Its build dependency override pins sanitize-html 2.17.7 because apputils currently requires an affected older range; the built extension contains only the theme registration and CSS. This does not update or validate the host Jupyter application’s dependencies. The upstream exenv-es6 package remains deprecated in the build dependency graph.
+
+Native checks for this batch: both Python wheels build and install in an isolated environment. JupyterLab 4.6.3 discovers the extension, selects Fmind, renders a white notebook canvas with Fmind syntax, and restores the native font when the theme unloads. Notebook 7.6.2 also selects Fmind through Settings → Theme and renders the white notebook canvas; its pre-existing startup errors are retained below. NbClassic 1.3.3 loads the separate stylesheet, with the syntax cascade verified in Chromium. Thonny 5.0.0 registers Fmind through its Workbench API; Tk 9.0.4 loads the inherited widget layouts, all 35 UI style overrides and all 104 syntax/ANSI tags. MATLAB’s 116 leaf preferences match the MathWorks template after omitting indentation settings. MATLAB import/rendering and full Thonny workbench/debugger behavior remain unverified.
+
+The repository gate is warning-free, but the complete native campaign is not: Thonny 5.0.0 emits two Python 3.14 SyntaxWarnings from upstream `codeview.py` return statements inside finally blocks, and NbClassic uses a deprecated Jupyter Server extension-discovery function. Notebook 7.6.2 also reports startup errors (`Cannot read properties of undefined (reading schema)` and an unregistered `filebrowser:open-path` command) before selecting Fmind in this mixed Jupyter environment. These retained upstream/runtime gaps prevent a claim that the entire native campaign is green.

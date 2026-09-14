@@ -1,0 +1,110 @@
+/* https://nbclassic.readthedocs.io/en/latest/custom_css.html */
+/* Fmind for classic Notebook 6 and NbClassic. */
+body, #header, #site, #notebook, #notebook-container, #maintoolbar,
+#menubar, .navbar, .navbar-default, .navbar-collapse, .panel, .panel-body,
+.panel-default > .panel-heading, .list_container, .list_header, .list_item,
+.modal-content, .modal-header, .modal-body, .modal-footer,
+.notification_widget, .ui-widget-content, .ui-widget-header {
+  color: #202124;
+  background: #ffffff;
+  border-color: #9aa0a6;
+  box-shadow: none;
+}
+body, button, input, select, textarea, .navbar, .dropdown-menu {
+  font-family: "Google Sans", sans-serif;
+}
+a, a:hover, a:focus, .navbar-default .navbar-nav > li > a,
+.navbar-default .navbar-brand { color: #174ea6; }
+a:visited { color: #681da8; }
+.text-muted, .checkpoint_status, .autosave_status, #kernel_indicator,
+#modal_indicator, .list_item .item_modified, .list_item .item_size { color: #595d62; }
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus,
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
+.dropdown-menu > .active > a, .dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus, .list_item:hover, .list_item.selected {
+  color: #174ea6;
+  background: #d2e3fc;
+}
+.dropdown-menu, .dropdown-menu > li > a { color: #202124; background: #ffffff; }
+.dropdown-menu .divider { background: #9aa0a6; }
+.dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus { color: #595d62; background: #ffffff; }
+.btn, .btn-default { color: #202124; background: #ffffff; border-color: #9aa0a6; }
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active {
+  color: #174ea6; background: #d2e3fc; border-color: #174ea6;
+}
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active,
+.btn-info, .btn-info:hover, .btn-info:focus { color: #ffffff; background: #174ea6; border-color: #174ea6; }
+.btn-success, .btn-success:hover, .btn-success:focus { color: #ffffff; background: #0d652d; border-color: #0d652d; }
+.btn-danger, .btn-danger:hover, .btn-danger:focus { color: #ffffff; background: #a50e0e; border-color: #a50e0e; }
+.btn-warning, .btn-warning:hover, .btn-warning:focus { color: #ffffff; background: #934900; border-color: #934900; }
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn { opacity: 1; color: #595d62; background: #ffffff; }
+.form-control, .form-control[readonly], select, textarea, input {
+  color: #202124; background: #ffffff; border-color: #9aa0a6;
+}
+.form-control:focus, select:focus, textarea:focus, input:focus {
+  border-color: #174ea6; box-shadow: 0 0 0 1px #174ea6;
+}
+.form-control::placeholder, input::placeholder, textarea::placeholder { color: #595d62; opacity: 1; }
+input[type=checkbox], input[type=radio] { accent-color: #174ea6; }
+.cell, .cell.unselected, .cell.selected, .input_area, .output_area,
+.output_wrapper, .output_subarea, .text_cell, .rendered_html { color: #202124; background: #ffffff; }
+.input_area { border: 1px solid #9aa0a6; }
+div.cell.selected { border-color: #174ea6; }
+.edit_mode div.cell.selected { border-color: #0d652d; }
+div.cell.selected:before { background: #174ea6; }
+.edit_mode div.cell.selected:before { background: #0d652d; }
+.prompt, .input_prompt { color: #174ea6; }
+.output_prompt { color: #934900; }
+.prompt, pre, code, kbd, samp, .CodeMirror, .output_area pre, .output_subarea pre {
+  font-family: "Google Sans Code", monospace;
+}
+pre, code, kbd, samp, .rendered_html pre, .rendered_html code { color: #202124; background: #ffffff; }
+.output_stderr, .output_stderr pre { color: #a50e0e; background: #fad2cf; }
+.output_error, .error { color: #a50e0e; }
+.rendered_html h1, .rendered_html h2, .rendered_html h3,
+.rendered_html h4, .rendered_html h5, .rendered_html h6 { color: #174ea6; }
+.rendered_html blockquote { color: #681da8; background: #ffffff; border-color: #9aa0a6; }
+.rendered_html table, .rendered_html th, .rendered_html td,
+.table > thead > tr > th, .table > tbody > tr > td { color: #202124; background: #ffffff; border-color: #9aa0a6; }
+.rendered_html tr:hover td, .table-hover > tbody > tr:hover > td { background: #f1f3f4; }
+.alert-info, .label-info { color: #174ea6; background: #d2e3fc; border-color: #174ea6; }
+.alert-success, .label-success { color: #0d652d; background: #ceead6; border-color: #0d652d; }
+.alert-warning, .label-warning { color: #934900; background: #feefc3; border-color: #934900; }
+.alert-danger, .label-danger { color: #a50e0e; background: #fad2cf; border-color: #a50e0e; }
+.label-default, .badge { color: #202124; background: #f1f3f4; }
+.label-primary, .progress-bar { color: #ffffff; background: #174ea6; }
+.progress { background: #f1f3f4; }
+.tooltip-inner, .popover, .popover-title, .popover-content,
+#tooltip, .tooltiptext, .completions, .CodeMirror-hints {
+  color: #202124; background: #ffffff; border-color: #9aa0a6;
+}
+.completions select option:checked, .CodeMirror-hint-active { color: #174ea6; background: #d2e3fc; }
+.CodeMirror, .cm-s-ipython.CodeMirror, .CodeMirror-gutters { color: #202124; background: #ffffff; }
+.CodeMirror-gutters { border-color: #9aa0a6; }
+.CodeMirror-linenumber { color: #595d62; }
+.CodeMirror-cursor { border-left-color: #174ea6; }
+.CodeMirror-selected, .CodeMirror-focused .CodeMirror-selected { background: #d2e3fc; }
+.CodeMirror-activeline-background { background: #f1f3f4; }
+.CodeMirror.cm-s-ipython .cm-keyword, .CodeMirror.cm-s-ipython .cm-def, .CodeMirror.cm-s-ipython .cm-tag { color: #174ea6; }
+.CodeMirror.cm-s-ipython .cm-atom, .CodeMirror.cm-s-ipython .cm-number { color: #934900; }
+.CodeMirror.cm-s-ipython .cm-builtin, .CodeMirror.cm-s-ipython .cm-variable-3, .CodeMirror.cm-s-ipython .cm-meta { color: #681da8; }
+.CodeMirror.cm-s-ipython .cm-string, .CodeMirror.cm-s-ipython .cm-string-2 { color: #0d652d; }
+.CodeMirror.cm-s-ipython .cm-comment { color: #595d62; font-style: normal; }
+.CodeMirror.cm-s-ipython .cm-variable, .CodeMirror.cm-s-ipython .cm-variable-2, .CodeMirror.cm-s-ipython .cm-property,
+.CodeMirror.cm-s-ipython .cm-operator, .CodeMirror.cm-s-ipython .cm-punctuation, .CodeMirror.cm-s-ipython .cm-attribute,
+.CodeMirror.cm-s-ipython .cm-bracket { color: #202124; }
+.CodeMirror.cm-s-ipython .cm-error { color: #a50e0e; background: #fad2cf; }
+.CodeMirror.cm-s-ipython .cm-header, .CodeMirror.cm-s-ipython .cm-link { color: #174ea6; }
+.CodeMirror.cm-s-ipython .cm-quote { color: #681da8; }
+.CodeMirror.cm-s-ipython .cm-positive { color: #0d652d; background: #ceead6; }
+.CodeMirror.cm-s-ipython .cm-negative { color: #a50e0e; background: #fad2cf; }
+.CodeMirror .CodeMirror-matchingbracket { color: #174ea6; background: #d2e3fc; }
+.CodeMirror .CodeMirror-nonmatchingbracket { color: #a50e0e; background: #fad2cf; }
+.CodeMirror-searching { color: #202124; background: #feefc3; }
+::selection { color: #202124; background: #d2e3fc; }
+
+/* Notebook writes transient status colors inline; preserve readable status text. */
+.notification_widget { color: #202124 !important; background-color: #d2e3fc !important; }

@@ -2,3 +2,7 @@
 .ruff_cache/
 .venv/
 __pycache__/
+jupyterlab/node_modules/
+jupyterlab/jupyterlab_fmind/labextension/
+jupyterlab/dist/
+thonny/dist/

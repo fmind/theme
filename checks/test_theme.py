@@ -4,6 +4,7 @@ import json
 import plistlib
 import re
 import runpy
+import subprocess
 import tomllib
 import unittest
 from pathlib import Path
@@ -54,15 +55,24 @@ class ThemeTests(unittest.TestCase):
             self.assertEqual(color, PALETTE["roles"][rule["name"]])
 
     def test_native_files_use_documented_palette(self):
-        for app in APPS:
-            for path in app.rglob("*"):
-                if not path.is_file() or "__pycache__" in path.parts:
-                    continue
-                colors = re.findall(r"(?i)(?<![\w])#?([0-9a-f]{6})(?![\w])", path.read_text())
-                with self.subTest(path=path.relative_to(ROOT)):
-                    self.assertLessEqual(
-                        {f"#{c.lower()}" for c in colors}, set(PALETTE["official"] + PALETTE["custom"])
-                    )
+        # Package builds create bundles, wheels and dependency trees beside the
+        # native source. Check tracked and new source, honoring ignored artifacts.
+        source_files = {
+            ROOT / path
+            for path in subprocess.check_output(
+                ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z"], cwd=ROOT, text=True
+            ).split("\0")
+            if path
+        }
+        app_names = {app.name for app in APPS}
+        for path in sorted(source_files):
+            if path.relative_to(ROOT).parts[0] not in app_names or not path.is_file():
+                continue
+            # Signed decimal native colors (for example MATLAB's C-920588)
+            # have dedicated decoders; a minus sign cannot prefix a hex color.
+            colors = re.findall(r"(?i)(?<![\w-])#?([0-9a-f]{6})(?![\w])", path.read_text())
+            with self.subTest(path=path.relative_to(ROOT)):
+                self.assertLessEqual({f"#{c.lower()}" for c in colors}, set(PALETTE["official"] + PALETTE["custom"]))
 
     def test_terminal_slots_and_navigation(self):
         content = (ROOT / "ghostty/fmind").read_text()

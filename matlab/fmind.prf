@@ -1,0 +1,25 @@
+# https://github.com/scottclowe/matlab-schemer
+# Fmind legacy MATLAB editor colors; signed opaque Java RGB values.
+ColorsUseSystem=Bfalse
+ColorsUseMLintAutoFixBackground=Btrue
+Editor.VariableHighlighting.Automatic=Btrue
+Editor.NonlocalVariableHighlighting=Btrue
+Editorhighlight-caret-row-boolean=Btrue
+ColorsText=C-14671580
+ColorsBackground=C-1
+Colors_M_Keywords=C-15249754
+Colors_M_Comments=C-10920606
+Colors_M_Strings=C-15899347
+Colors_M_UnterminatedStrings=C-5960178
+Colors_M_SystemCommands=C-15249754
+Colors_M_Errors=C-5960178
+Colors_HTML_HTMLLinks=C-15249754
+Color_CmdWinWarnings=C-7124736
+Color_CmdWinErrors=C-5960178
+Colors_M_Warnings=C-7124736
+ColorsMLintAutoFixBackground=C-69693
+Editor.VariableHighlighting.Color=C-2956292
+Editor.NonlocalVariableHighlighting.TextColor=C-14671580
+Editorhighlight-lines=C-920588
+Editorhighlight-caret-row-boolean-color=C-920588
+EditorRightTextLimitLineColor=C-6643546

@@ -1,0 +1,32 @@
+# https://jupyterlab.readthedocs.io/en/stable/extension/extension_dev.html#packaging-information
+[build-system]
+requires = ["hatchling>=1.27,<2", "hatch-jupyter-builder==0.9.1", "jupyter-builder==1.2.3"]
+build-backend = "hatchling.build"
+
+[project]
+name = "jupyterlab-fmind"
+version = "1.0.0"
+description = "Fmind light theme for JupyterLab and Notebook 7"
+requires-python = ">=3.10"
+dependencies = ["jupyterlab>=4.6.3,<5"]
+license = "BSD-3-Clause"
+license-files = ["LICENSE"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["jupyterlab_fmind"]
+artifacts = ["jupyterlab_fmind/labextension"]
+
+[tool.hatch.build.targets.wheel.shared-data]
+"jupyterlab_fmind/labextension" = "share/jupyter/labextensions/jupyterlab-fmind"
+"install.json" = "share/jupyter/labextensions/jupyterlab-fmind/install.json"
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "style", "jupyterlab_fmind", "package.json", "package-lock.json", "install.json", "pyproject.toml", "README.md", "LICENSE"]
+
+[tool.hatch.build.hooks.jupyter-builder]
+build-function = "hatch_jupyter_builder.npm_builder"
+ensured-targets = ["jupyterlab_fmind/labextension/package.json"]
+
+[tool.hatch.build.hooks.jupyter-builder.build-kwargs]
+build_cmd = "build"
+npm = ["npm"]

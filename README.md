@@ -1,6 +1,6 @@
 # fmind/theme
 
-A light theme for everyday code and terminal work, with 99 app integrations. One folder per app, native theme files, no generator.
+A light theme for everyday code and terminal work, with 103 app integrations. One folder per app, native theme files, no generator.
 
 ## Palette
 
@@ -86,6 +86,8 @@ Use a truecolor terminal with a light background. Paths are relative to `~/.conf
 | IDLE | [fmind.cfg](idle/fmind.cfg) | With IDLE closed, merge the `[Fmind]` section into `~/.idlerc/config-highlight.cfg`. Reopen, then Options → Configure IDLE → Highlights → Custom Theme → Fmind. Restart to update the cursor. |
 | iTerm2 | [fmind.itermcolors](iterm2/fmind.itermcolors) | Import through Settings → Profiles → Colors → Color Presets, then select `fmind`. |
 | JetBrains | [fmind.icls](jetbrains/fmind.icls) | Settings → Editor → Color Scheme → gear menu → Import Scheme. Select `fmind` and a light IDE appearance. Covers language defaults, editor and console; not a UI plugin. |
+| Jupyter Notebook | [installation](jupyter-notebook/README.md), [classic CSS](jupyter-notebook/custom.css) | Notebook 7 uses the JupyterLab Fmind extension. For Notebook 6 or NbClassic, copy the CSS to `custom/custom.css` under `jupyter --config-dir`, preserving existing customizations. |
+| JupyterLab | [package and installation](jupyterlab/README.md), [theme CSS](jupyterlab/style/index.css) | Build and install the wheel into the Jupyter environment, restart, then Settings → Theme → Fmind. Native JupyterLab 4.6+ theme with notebook, editor, output and UI coverage. |
 | k9s | [fmind.yaml](k9s/fmind.yaml) | Copy to the skins directory shown by `k9s info`; select `k9s.ui.skin: fmind` in its config. |
 | Kate | [fmind.theme](kate/fmind.theme) | Settings → Configure Kate → Color Themes → Import. Select Fmind. Also usable by KSyntaxHighlighting applications. |
 | Kitty | [fmind.conf](kitty/fmind.conf) | Copy to `kitty/themes/fmind.conf`; add `include themes/fmind.conf` to `kitty/kitty.conf`. |
@@ -95,6 +97,7 @@ Use a truecolor terminal with a light background. Paths are relative to `~/.conf
 | lsd | [fmind.yaml](lsd/fmind.yaml) | Copy to `lsd/colors.yaml`; set `color.theme: custom` in `lsd/config.yaml`. |
 | lualine | [fmind.lua](lualine/fmind.lua) | Copy to `nvim/lua/lualine/themes/fmind.lua`; select `fmind` or `auto`. |
 | LXTerminal | [fmind.conf](lxterminal/fmind.conf) | Close LXTerminal; merge the `[general]` entries into `lxterminal/lxterminal.conf`, preserving your shortcuts and other settings. Reopen. Uses the Custom palette and disables brightening bold text. |
+| MATLAB | [current JSON](matlab/fmind.json), [legacy preferences](matlab/fmind.prf), [installation](matlab/README.md) | R2025a+ uses MathWorks Color Theme Extensions and `import_scheme`. Older releases use MATLAB Schemer. Covers MATLAB and 15 additional language sections in the current format. |
 | Matplotlib | [fmind.mplstyle](matplotlib/fmind.mplstyle) | Use `plt.style.use("/path/to/fmind.mplstyle")`, or copy to `stylelib/` under `matplotlib.get_configdir()` and use `plt.style.use("fmind")`. |
 | Micro | [fmind.micro](micro/fmind.micro) | Copy to `micro/colorschemes/fmind.micro`; run `set colorscheme fmind` in the Ctrl-E command prompt. Requires truecolor. |
 | Mintty | [fmind.minttyrc](mintty/fmind.minttyrc) | Merge into `~/.minttyrc` or load the file with `mintty -C /path/to/fmind.minttyrc`. |
@@ -127,6 +130,7 @@ Use a truecolor terminal with a light background. Paths are relative to `~/.conf
 | Termite | [fmind.conf](termite/fmind.conf) | Merge `[colors]` and `[hints]` into `termite/config`; restart Termite. Includes link-hint labels. Termite is archived upstream; this targets its final native configuration. |
 | Termux | [colors.properties](termux/colors.properties) | Copy to `~/.termux/colors.properties`; run `termux-reload-settings`. |
 | TextMate | [fmind.tmTheme](textmate/fmind.tmTheme) | Open the file with TextMate 2 to install; select Fmind in Preferences → Fonts & Colors. Includes a light theme identity, editor colors, syntax and diff scopes. |
+| Thonny | [plugin and installation](thonny/README.md) | Build the wheel; Tools → Manage plug-ins → Install from local file. Restart and select Fmind for both UI and syntax under Theme & Font. Includes editor, shell, debugger, search and widget states. |
 | Tilix | [fmind.json](tilix/fmind.json) | Copy to `tilix/schemes/fmind.json`; restart Tilix and choose Fmind in the profile’s Color settings. |
 | tmux | [fmind.conf](tmux/fmind.conf) | Copy to `tmux/fmind.conf`; add `source-file ~/.config/tmux/fmind.conf` to your tmux config. Reload the config to apply. |
 | tym | [theme.lua](tym/theme.lua) | Copy to `tym/theme.lua` and restart tym. Includes window background, selection, cursor, bold text and all ANSI slots. |

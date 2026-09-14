@@ -71,7 +71,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [Alfred](https://draculatheme.com/alfred) | Pending | — |
 | [Telegram Android](https://draculatheme.com/telegram-android) | Pending | — |
 | [wofi](https://draculatheme.com/wofi) | Port shipped | [wofi](wofi/) |
-| [JupyterLab](https://draculatheme.com/jupyterlab) | Pending | — |
+| [JupyterLab](https://draculatheme.com/jupyterlab) | Port shipped | [jupyterlab](jupyterlab/) |
 | [GitHub Pages](https://draculatheme.com/gh-pages) | Pending | — |
 | [LibreOffice](https://draculatheme.com/libreoffice) | Pending | — |
 | [Arduino IDE](https://draculatheme.com/arduino-ide) | Pending | — |
@@ -108,7 +108,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [MetaTrader 5](https://draculatheme.com/metatrader5) | Pending | — |
 | [Mutt](https://draculatheme.com/mutt) | Pending | — |
 | [Microsoft Edge](https://draculatheme.com/microsoft-edge) | Pending | — |
-| [Thonny](https://draculatheme.com/thonny) | Pending | — |
+| [Thonny](https://draculatheme.com/thonny) | Port shipped | [thonny](thonny/) |
 | [Mousepad](https://draculatheme.com/mousepad) | Pending | — |
 | [Tilix](https://draculatheme.com/tilix) | Port shipped | [tilix](tilix/) |
 | [Vivado](https://draculatheme.com/vivado) | Pending | — |
@@ -140,7 +140,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [WezTerm](https://draculatheme.com/wezterm) | Port shipped | [wezterm](wezterm/) |
 | [BBEdit](https://draculatheme.com/bbedit) | Pending | — |
 | [Thunderbird](https://draculatheme.com/thunderbird) | Pending | — |
-| [MATLAB](https://draculatheme.com/matlab) | Pending | — |
+| [MATLAB](https://draculatheme.com/matlab) | Port shipped | [matlab](matlab/) |
 | [Logseq](https://draculatheme.com/logseq) | Pending | — |
 | [Warp](https://draculatheme.com/warp) | Port shipped | [warp](warp/) |
 | [Ulysses](https://draculatheme.com/ulysses) | Pending | — |
@@ -224,7 +224,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [GIMP](https://draculatheme.com/gimp) | Pending | — |
 | [MetaEditor](https://draculatheme.com/metaeditor) | Pending | — |
 | [iSH](https://draculatheme.com/ish) | Pending | — |
-| [Jupyter Notebook](https://draculatheme.com/jupyter-notebook) | Pending | — |
+| [Jupyter Notebook](https://draculatheme.com/jupyter-notebook) | Port shipped | [jupyter-notebook](jupyter-notebook/) |
 | [PowerShell ISE](https://draculatheme.com/powershell-ise) | Pending | — |
 | [i3lock-color](https://draculatheme.com/i3lock-color) | Pending | — |
 | [Cava](https://draculatheme.com/cava) | Pending | — |
