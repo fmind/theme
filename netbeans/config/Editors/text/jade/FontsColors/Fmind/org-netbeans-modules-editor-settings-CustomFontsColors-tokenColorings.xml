@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://netbeans.apache.org/ ; native Fonts & Colors, adapted from dracula/netbeans (MIT). -->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor foreColor="ff202124" name="block-name" />
+    <fontcolor default="default" name="expression-delimiter" foreColor="ff202124">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor foreColor="ff202124" name="mixin-name" />
+    <fontcolor default="default" name="code-delimiter" foreColor="ff202124" />
+    <fontcolor default="markup-element" name="html-tag" foreColor="ff174ea6" />
+    <fontcolor default="default" name="separator" foreColor="ff595d62" />
+    <fontcolor bgColor="ffffffff" default="default" name="javascript-embedded" foreColor="ff202124" />
+    <fontcolor foreColor="ff202124" name="filter" />
+    <fontcolor default="markup-attribute" name="html-attribute" foreColor="ff202124" />
+    <fontcolor default="comment" name="unbuffered-comment" foreColor="ff595d62" />
+    <fontcolor foreColor="ff681da8" name="css-class" />
+    <fontcolor default="default" foreColor="ff202124" name="sgml-declaration" />
+    <fontcolor bgColor="ffffffff" default="default" name="plain-text" foreColor="ff202124" />
+    <fontcolor default="default" name="filter-text" foreColor="ff202124" />
+    <fontcolor default="default" name="plain-text-delimiter" foreColor="ff202124" />
+    <fontcolor default="comment" name="comment" foreColor="ff595d62" />
+    <fontcolor default="default" name="text" foreColor="ff202124" />
+    <fontcolor foreColor="ff202124" name="css-id" />
+    <fontcolor default="keyword" name="keyword" foreColor="ff174ea6">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor foreColor="ff202124" name="file-path" />
+    <fontcolor bgColor="ffffffff" default="default" name="css-embedded" foreColor="ff202124" />
+</fontscolors>

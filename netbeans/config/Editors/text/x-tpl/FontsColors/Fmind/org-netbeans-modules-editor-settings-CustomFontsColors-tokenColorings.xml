@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://netbeans.apache.org/ ; native Fonts & Colors, adapted from dracula/netbeans (MIT). -->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor default="smarty" foreColor="ff202124" name="argument" />
+    <fontcolor default="smarty" name="other" foreColor="ff202124" />
+    <fontcolor default="smarty" foreColor="ff202124" name="config_variable" />
+    <fontcolor default="smarty" foreColor="ff0d652d" name="string" />
+    <fontcolor default="smarty" foreColor="ff202124" name="smarty_delimiter">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="smarty" foreColor="ff174ea6" name="smarty_function">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="smarty" foreColor="ff202124" name="argument_value" />
+    <fontcolor name="error" waveUnderlined="ffa50e0e" foreColor="ffa50e0e" bgColor="fffad2cf" />
+    <fontcolor default="smarty" foreColor="ff202124" name="php_variable" />
+    <fontcolor default="smarty" foreColor="ff202124" name="smarty_operator" />
+    <fontcolor default="smarty" foreColor="ff202124" name="variable_modifier" />
+    <fontcolor default="smarty" foreColor="ff595d62" name="comment" />
+    <fontcolor default="smarty" foreColor="ff202124" name="pipe">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor bgColor="ffffffff" default="default" name="smarty" foreColor="ff202124" />
+    <fontcolor default="smarty" name="whitespace" foreColor="ff595d62" />
+</fontscolors>

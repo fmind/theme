@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://netbeans.apache.org/ ; native Fonts & Colors, adapted from dracula/netbeans (MIT). -->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor default="number" name="number" foreColor="ff934900" />
+    <fontcolor default="separator" foreColor="ff202124" name="flag" />
+    <fontcolor default="keyword" foreColor="ff174ea6" name="tagparam" />
+    <fontcolor default="string" name="string" foreColor="ff0d652d" />
+    <fontcolor default="keyword" foreColor="ff174ea6" name="directiveparam" />
+    <fontcolor default="identifier" name="variable" foreColor="ff202124" />
+    <fontcolor default="comment" name="comment" foreColor="ff595d62" />
+    <fontcolor default="keyword" foreColor="ff174ea6" name="tag" />
+    <fontcolor default="error" name="error" foreColor="ffa50e0e" bgColor="fffad2cf" />
+    <fontcolor default="whitespace" name="whitespace" foreColor="ff595d62" />
+    <fontcolor default="keyword" name="directive" foreColor="ff174ea6">
+        <font style="bold" />
+    </fontcolor>
+</fontscolors>

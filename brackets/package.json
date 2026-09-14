@@ -1,0 +1,12 @@
+{
+  "name": "fmind-theme",
+  "title": "Fmind",
+  "description": "Fmind light editor theme for Brackets",
+  "version": "1.0.0",
+  "author": "Médéric Hurier",
+  "homepage": "https://github.com/fmind/theme",
+  "keywords": ["theme", "light"],
+  "license": "MIT",
+  "engines": { "brackets": ">=1.0.0" },
+  "theme": { "file": "theme.css", "dark": false }
+}

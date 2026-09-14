@@ -25,7 +25,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [Terminal.app](https://draculatheme.com/terminal-app) | Port shipped | [terminal-app](terminal-app/) |
 | [Gnome Terminal](https://draculatheme.com/gnome-terminal) | Port shipped | [gnome-terminal](gnome-terminal/) |
 | [Visual Studio](https://draculatheme.com/visual-studio) | Pending | — |
-| [Netbeans](https://draculatheme.com/netbeans) | Pending | — |
+| [Netbeans](https://draculatheme.com/netbeans) | Port shipped | [netbeans](netbeans/) |
 | [GTK](https://draculatheme.com/gtk) | Pending | — |
 | [JetBrains](https://draculatheme.com/jetbrains) | Port shipped | [jetbrains](jetbrains/) |
 | [Sublime](https://draculatheme.com/sublime) | Port shipped | [sublime-text](sublime-text/) |
@@ -35,9 +35,9 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [Telegram](https://draculatheme.com/telegram) | Pending | — |
 | [Oracle SQL Developer](https://draculatheme.com/oracle-sql-developer) | Pending | — |
 | [Emacs](https://draculatheme.com/emacs) | Port shipped | [emacs](emacs/) |
-| [Eclipse](https://draculatheme.com/eclipse) | Pending | — |
+| [Eclipse](https://draculatheme.com/eclipse) | Port shipped | [eclipse](eclipse/) |
 | [PowerShell](https://draculatheme.com/powershell) | Port shipped | [powershell](powershell/) |
-| [Atom](https://draculatheme.com/atom) | Pending | — |
+| [Atom](https://draculatheme.com/atom) | Port shipped | [atom](atom/) |
 | [tmux](https://draculatheme.com/tmux) | Port shipped | [tmux](tmux/) |
 | [Firefox](https://draculatheme.com/firefox) | Port shipped | [firefox](firefox/) |
 | [Qt Creator](https://draculatheme.com/qtcreator) | Port shipped | [qtcreator](qtcreator/) |
@@ -45,18 +45,18 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [Alacritty](https://draculatheme.com/alacritty) | Port shipped | [alacritty](alacritty/) |
 | [Konsole](https://draculatheme.com/konsole) | Port shipped | [konsole](konsole/) |
 | [BetterDiscord](https://draculatheme.com/betterdiscord) | Pending | — |
-| [Code::Blocks](https://draculatheme.com/codeblocks) | Pending | — |
+| [Code::Blocks](https://draculatheme.com/codeblocks) | Port shipped | [codeblocks](codeblocks/) |
 | [Gedit](https://draculatheme.com/gedit) | Port shipped | [gedit](gedit/) |
 | [Steam](https://draculatheme.com/steam) | Pending | — |
 | [ConEmu](https://draculatheme.com/conemu) | Port shipped | [conemu](conemu/) |
 | [i3](https://draculatheme.com/i3) | Port shipped | [i3](i3/) |
 | [Kitty](https://draculatheme.com/kitty) | Port shipped | [kitty](kitty/) |
 | [Insomnia](https://draculatheme.com/insomnia) | Pending | — |
-| [Brackets](https://draculatheme.com/brackets) | Pending | — |
+| [Brackets](https://draculatheme.com/brackets) | Port shipped | [brackets](brackets/) |
 | [Xresources](https://draculatheme.com/xresources) | Port shipped | [xresources](xresources/) |
 | [MobaXterm](https://draculatheme.com/mobaxterm) | Port shipped | [mobaxterm](mobaxterm/) |
 | [Powerlevel10k](https://draculatheme.com/powerlevel10k) | Pending | — |
-| [Dev-C++](https://draculatheme.com/dev-cpp) | Pending | — |
+| [Dev-C++](https://draculatheme.com/dev-cpp) | Port shipped | [dev-cpp](dev-cpp/) |
 | [Vivaldi](https://draculatheme.com/vivaldi) | Pending | — |
 | [rofi](https://draculatheme.com/rofi) | Port shipped | [rofi](rofi/) |
 | [Mintty](https://draculatheme.com/mintty) | Port shipped | [mintty](mintty/) |

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://netbeans.apache.org/ ; native Fonts & Colors, adapted from dracula/netbeans (MIT). -->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor bgColor="ffd2e3fc" name="mark-occurrences" foreColor="ff202124" />
+    <fontcolor foreColor="ff202124" name="identifier" />
+    <fontcolor default="field" foreColor="ff202124" name="markup-attribute" />
+    <fontcolor default="identifier" foreColor="ff174ea6" name="method" />
+    <fontcolor foreColor="ff0d652d" name="string" />
+    <fontcolor default="keyword" foreColor="ff174ea6" name="markup-element" />
+    <fontcolor default="string" foreColor="ff0d652d" name="markup-attribute-value" />
+    <fontcolor name="error" waveUnderlined="ffa50e0e" foreColor="ffa50e0e" bgColor="fffad2cf" />
+    <fontcolor default="default" name="entity-reference" foreColor="ff202124" />
+    <fontcolor foreColor="ff595d62" name="separator" />
+    <fontcolor foreColor="ff202124" name="operator" />
+    <fontcolor foreColor="ff174ea6" name="url" underline="ff174ea6" />
+    <fontcolor foreColor="ff934900" name="number" />
+    <fontcolor bgColor="ffffffff" foreColor="ff202124" name="default">
+        <font name="Google Sans Code" size="14" />
+    </fontcolor>
+    <fontcolor default="identifier" foreColor="ff202124" name="field" />
+    <fontcolor foreColor="ff0d652d" name="char" />
+    <fontcolor bgColor="ffffffff" name="warning" waveUnderlined="ff934900" foreColor="ff934900" />
+    <fontcolor foreColor="ff595d62" name="comment" />
+    <fontcolor foreColor="ff174ea6" name="keyword" />
+    <fontcolor foreColor="ff595d62" name="whitespace" />
+</fontscolors>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://netbeans.apache.org/ ; native Fonts & Colors, adapted from dracula/netbeans (MIT). -->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor default="whitespace" name="xml-ws" foreColor="ff202124" />
+    <fontcolor default="operator" name="xml-operator" foreColor="ff202124" />
+    <fontcolor default="entity-reference" name="xml-ref" foreColor="ff202124" />
+    <fontcolor default="default" foreColor="ff202124" name="xml-pi-start">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="default" foreColor="ff202124" name="xml-value" />
+    <fontcolor default="markup-element" name="xml-tag" foreColor="ff174ea6" />
+    <fontcolor default="default" foreColor="ff681da8" name="xml-doctype">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="default" name="xml-text" foreColor="ff202124" />
+    <fontcolor default="default" foreColor="ff202124" name="xml-cdata-section" />
+    <fontcolor default="error" name="xml-error" foreColor="ffa50e0e" />
+    <fontcolor default="default" foreColor="ff202124" name="xml-pi-end">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="default" foreColor="ff202124" name="pi-content" />
+    <fontcolor default="default" foreColor="ff202124" name="xml-pi-target">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="comment" name="xml-comment" foreColor="ff595d62" />
+    <fontcolor default="default" foreColor="ff202124" name="pi-end">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="markup-attribute" name="xml-attribute" foreColor="ff202124" />
+    <fontcolor default="whitespace" name="xml-EOL" foreColor="ff202124" />
+    <fontcolor default="default" foreColor="ff202124" name="xml-pi-content" />
+</fontscolors>

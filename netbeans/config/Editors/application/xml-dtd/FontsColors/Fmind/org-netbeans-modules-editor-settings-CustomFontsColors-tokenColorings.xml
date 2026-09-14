@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://netbeans.apache.org/ ; native Fonts & Colors, adapted from dracula/netbeans (MIT). -->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor default="whitespace" name="dtd-ws" foreColor="ff202124" />
+    <fontcolor default="entity-reference" name="dtd-ref" foreColor="ff202124" />
+    <fontcolor default="operator" foreColor="ff202124" name="dtd-symbol" />
+    <fontcolor default="default" name="dtd-plain" foreColor="ff202124" />
+    <fontcolor default="error" name="dtd-error" foreColor="ffa50e0e" />
+    <fontcolor default="plain" name="dtd-processing" foreColor="ff202124" />
+    <fontcolor default="whitespace" name="dtd-eol" foreColor="ff202124" />
+    <fontcolor default="keyword" foreColor="ff174ea6" name="dtd-keyword" />
+    <fontcolor default="default" name="dtd-target" foreColor="ff202124" />
+    <fontcolor default="comment" name="dtd-comment" foreColor="ff595d62" />
+    <fontcolor default="keyword" name="dtd-declaration" foreColor="ff174ea6" />
+    <fontcolor default="entity-reference" name="dtd-character" foreColor="ff0d652d" />
+    <fontcolor default="operator" name="dtd-operator" foreColor="ff202124" />
+    <fontcolor default="identifier" name="dtd-name" foreColor="ff202124" />
+    <fontcolor default="string" name="dtd-string" foreColor="ff0d652d" />
+</fontscolors>

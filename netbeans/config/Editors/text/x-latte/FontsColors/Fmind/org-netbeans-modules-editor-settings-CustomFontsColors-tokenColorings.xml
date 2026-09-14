@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://netbeans.apache.org/ ; native Fonts & Colors, adapted from dracula/netbeans (MIT). -->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor default="number" foreColor="ff934900" name="latte-markup-number" />
+    <fontcolor default="identifier" name="latte-markup-symbol" foreColor="ff202124" />
+    <fontcolor default="error" name="latte-error" foreColor="ffa50e0e" />
+    <fontcolor foreColor="ff202124" name="latte-delimiter">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="identifier" name="latte-markup-cast" foreColor="ff202124" />
+    <fontcolor foreColor="ff202124" name="latte-markup-variable" />
+    <fontcolor default="string" name="latte-markup-string" foreColor="ff0d652d" />
+    <fontcolor default="keyword" name="latte-markup-keyword" foreColor="ff174ea6" />
+    <fontcolor default="comment" name="latte-comment" foreColor="ff595d62" />
+    <fontcolor default="identifier" foreColor="ff202124" name="latte-markup-macro">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="separator" foreColor="ff0d652d" name="latte-markup-char" />
+    <fontcolor default="whitespace" name="latte-markup-whitespace" foreColor="ff595d62" />
+</fontscolors>

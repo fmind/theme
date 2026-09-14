@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://netbeans.apache.org/ ; native Fonts & Colors, adapted from dracula/netbeans (MIT). -->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor default="comment" name="comments" foreColor="ff595d62" />
+    <fontcolor default="identifier" name="identifiers" foreColor="ff202124" />
+    <fontcolor default="number" name="numbers" foreColor="ff934900" />
+    <fontcolor foreColor="ff681da8" name="mod-class">
+        <font style="plain" />
+    </fontcolor>
+    <fontcolor foreColor="ff174ea6" name="mod-method" />
+    <fontcolor default="separator" name="braces" foreColor="ff202124" />
+    <fontcolor foreColor="ff202124" name="mod-private">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="string" name="uris" foreColor="ff0d652d" />
+    <fontcolor foreColor="ff202124" name="at_rule_symbol" />
+    <fontcolor foreColor="ff202124" name="mod-custom3">
+        <font style="plain" />
+    </fontcolor>
+    <fontcolor default="string" name="strings" foreColor="ff0d652d" />
+    <fontcolor name="mod-custom2" foreColor="ff174ea6">
+        <font style="plain" />
+    </fontcolor>
+    <fontcolor default="operator" name="operators" foreColor="ff202124" />
+    <fontcolor name="mod-custom1" foreColor="ff202124" />
+    <fontcolor default="number" name="hashes" foreColor="ff934900" />
+    <fontcolor foreColor="ff202124" name="mod-local-variable" />
+    <fontcolor name="mod-constructor" foreColor="ff202124">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="separator" name="separators" foreColor="ff595d62" />
+    <fontcolor default="default" foreColor="ff202124" name="others" />
+    <fontcolor default="default" name="whitespaces" foreColor="ff595d62" />
+</fontscolors>

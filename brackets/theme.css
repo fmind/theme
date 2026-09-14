@@ -1,0 +1,53 @@
+/* https://github.com/brackets-cont/brackets/wiki/Creating-Themes */
+.CodeMirror, .CodeMirror-scroll, .CodeMirror-gutters,
+#not-editor, #image-holder {
+  background: #ffffff;
+  color: #202124;
+}
+.CodeMirror { font-family: "Google Sans Code", monospace; }
+.CodeMirror-gutters { border-right: 1px solid #9aa0a6; }
+.CodeMirror-linenumber, .CodeMirror-guttermarker-subtle { color: #595d62; }
+.CodeMirror-guttermarker { color: #174ea6; }
+.CodeMirror-cursor { border-left: 2px solid #174ea6; }
+.CodeMirror div.CodeMirror-selected,
+.CodeMirror-focused div.CodeMirror-selected { background: #d2e3fc; }
+.CodeMirror .CodeMirror-activeline-background,
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt { background: #f1f3f4; }
+.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt { color: #595d62; }
+.CodeMirror .cm-comment { color: #595d62; }
+.CodeMirror .cm-keyword, .CodeMirror .cm-def,
+.CodeMirror .cm-tag, .CodeMirror .cm-attribute, .CodeMirror .cm-link { color: #174ea6; }
+.CodeMirror .cm-atom, .CodeMirror .cm-number { color: #934900; }
+.CodeMirror .cm-string, .CodeMirror .cm-string-2 { color: #0d652d; }
+.CodeMirror .cm-string.cm-property { color: #174ea6; }
+.CodeMirror .cm-builtin, .CodeMirror .cm-variable-3, .CodeMirror .cm-type { color: #681da8; }
+.CodeMirror .cm-meta { color: #00636d; }
+.CodeMirror .cm-property, .CodeMirror .cm-variable, .CodeMirror .cm-variable-2,
+.CodeMirror .cm-operator, .CodeMirror .cm-bracket, .CodeMirror .cm-qualifier { color: #202124; }
+.CodeMirror .cm-error { color: #a50e0e; background: #fad2cf; }
+.CodeMirror .cm-header { color: #174ea6; font-weight: bold; }
+.CodeMirror .cm-quote { color: #681da8; }
+.CodeMirror .cm-strong { font-weight: bold; }
+.CodeMirror .cm-em { color: #681da8; }
+.CodeMirror .cm-link { text-decoration: underline; }
+.CodeMirror .cm-positive { color: #0d652d; background: #ceead6; }
+.CodeMirror .cm-negative { color: #a50e0e; background: #fad2cf; }
+.CodeMirror .CodeMirror-matchingbracket,
+.CodeMirror .CodeMirror-matchingtag { color: #174ea6; background: #d2e3fc; text-decoration: underline; }
+.CodeMirror .CodeMirror-nonmatchingbracket { color: #a50e0e; background: #fad2cf; }
+.CodeMirror .CodeMirror-searching,
+.CodeMirror .searching { color: #202124; background: #feefc3; }
+.CodeMirror .CodeMirror-searching.searching-current-match { outline: 1px solid #934900; }
+.CodeMirror-foldgutter, .CodeMirror-foldgutter-blank,
+.CodeMirror-foldgutter-folded, .CodeMirror-foldgutter-open { color: #595d62; }
+.CodeMirror-foldmarker { color: #595d62; background: #f1f3f4; border: 1px solid #9aa0a6; }
+.CodeMirror-hints { color: #202124; background: #ffffff; border: 1px solid #9aa0a6; }
+.CodeMirror-hints .CodeMirror-hint-active { color: #174ea6; background: #d2e3fc; }
+.CodeMirror-vscrollbar { background: #ffffff; }
+.CodeMirror .cm-dk-whitespace-space::before,
+.CodeMirror .cm-dk-whitespace-tab::before,
+.CodeMirror .cm-dk-whitespace-leading-space::before,
+.CodeMirror .cm-dk-whitespace-leading-tab::before,
+.CodeMirror .cm-dk-whitespace-trailing-space::before,
+.CodeMirror .cm-dk-whitespace-trailing-tab::before { background: #9aa0a6; }
+.CodeMirror.cm-keymap-fat-cursor div.CodeMirror-cursor { background: #d2e3fc; }

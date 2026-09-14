@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://netbeans.apache.org/ ; native Fonts & Colors, adapted from dracula/netbeans (MIT). -->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor default="constant" name="constant" foreColor="ff934900">
+        <font style="plain" />
+    </fontcolor>
+    <fontcolor default="string" name="string" foreColor="ff0d652d" />
+    <fontcolor name="mod-class" foreColor="ff681da8" />
+    <fontcolor name="mod-unused" waveUnderlined="ff595d62" foreColor="ff595d62" />
+    <fontcolor default="operator" name="operator" foreColor="ff202124" />
+    <fontcolor default="number" name="number" foreColor="ff934900" />
+    <fontcolor default="separator" foreColor="ff202124" name="phpopenclose">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor name="mod-deprecated" strikeThrough="ff202124" foreColor="ff202124" />
+    <fontcolor default="method" name="mod-custom1" foreColor="ff202124" />
+    <fontcolor default="comment" name="mod-annotation-type" foreColor="ff681da8">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="inferred" name="inferred" foreColor="ff202124" />
+    <fontcolor default="comment" name="phpdockeyword" foreColor="ff174ea6">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="keyword" name="keyword" foreColor="ff174ea6">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="identifier" name="identifier" foreColor="ff202124" />
+    <fontcolor default="field" name="mod-field" foreColor="ff202124" />
+    <fontcolor default="comment" foreColor="ff174ea6" name="htmltag">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="method" foreColor="ff174ea6" name="mod-method" />
+    <fontcolor default="separator" name="separator" foreColor="ff595d62" />
+    <fontcolor name="heredocdelimiter" foreColor="ff0d652d" />
+    <fontcolor default="uncovered" name="uncovered" foreColor="ff202124" />
+    <fontcolor name="mod-static" foreColor="ff202124">
+        <font style="plain" />
+    </fontcolor>
+    <fontcolor default="covered" name="covered" foreColor="ff202124" />
+    <fontcolor foreColor="ff202124" name="variable" />
+    <fontcolor default="comment" name="comment" foreColor="ff595d62" />
+    <fontcolor default="partial" name="partial" foreColor="ff202124" />
+    <fontcolor default="comment" name="commentline" foreColor="ff595d62" />
+</fontscolors>

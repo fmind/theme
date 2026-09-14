@@ -1,0 +1,22 @@
+; https://github.com/Embarcadero/Dev-Cpp/blob/master/Source/EditorOptFrm.pas
+[Editor.Custom]
+Assembler=$00242120, $00ffffff, 0, 0, 0
+Character=$002d650d, $00ffffff, 0, 0, 0
+Comment=$00625d59, $00ffffff, 0, 0, 0
+Float=$00004993, $00ffffff, 0, 0, 0
+Hexadecimal=$00004993, $00ffffff, 0, 0, 0
+Identifier=$00242120, $00ffffff, 0, 0, 0
+Illegal Char=$000e0ea5, $00cfd2fa, 0, 0, 0
+Number=$00004993, $00ffffff, 0, 0, 0
+Octal=$00004993, $00ffffff, 0, 0, 0
+Preprocessor=$00a64e17, $00ffffff, 0, 0, 0
+Reserved Word=$00a64e17, $00ffffff, 0, 1, 0
+Space=$00242120, $00ffffff, 0, 0, 0
+String=$002d650d, $00ffffff, 0, 0, 0
+Symbol=$00242120, $00ffffff, 0, 0, 0
+Selected text=$00242120, $00fce3d2
+Gutter=$00625d59, $00ffffff
+Breakpoints=$000e0ea5, $00cfd2fa
+Error line=$000e0ea5, $00cfd2fa
+Active breakpoints=$00a64e17, $00fce3d2
+Folding lines=$00625d59, $00ffffff

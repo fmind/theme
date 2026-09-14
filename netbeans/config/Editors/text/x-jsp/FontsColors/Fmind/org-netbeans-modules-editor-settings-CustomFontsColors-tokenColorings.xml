@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://netbeans.apache.org/ ; native Fonts & Colors, adapted from dracula/netbeans (MIT). -->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor bgColor="ffffffff" default="default" name="expression-language" foreColor="ff202124" />
+    <fontcolor default="default" name="symbol" foreColor="ff202124" />
+    <fontcolor default="default" foreColor="ff0d652d" name="attribute-value" />
+    <fontcolor bgColor="ffffffff" default="default" name="scriptlet" foreColor="ff202124" />
+    <fontcolor default="default" foreColor="ff174ea6" name="tag-directive">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="default" name="attribute-name" foreColor="ff202124" />
+    <fontcolor default="default" foreColor="ff174ea6" name="endtag">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor bgColor="ffffffff" default="default" name="scriptlet-delimiter" foreColor="ff202124" />
+    <fontcolor default="default" foreColor="ff595d62" name="comment" />
+    <fontcolor default="default" foreColor="ffa50e0e" name="error" bgColor="fffad2cf">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="default" name="jsp-whitespace" foreColor="ff595d62">
+        <font style="bold" />
+    </fontcolor>
+</fontscolors>

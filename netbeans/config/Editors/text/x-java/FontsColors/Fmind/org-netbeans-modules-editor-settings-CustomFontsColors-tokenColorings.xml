@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://netbeans.apache.org/ ; native Fonts & Colors, adapted from dracula/netbeans (MIT). -->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor name="mod-abstract" foreColor="ff202124" />
+    <fontcolor default="string" name="string" foreColor="ff0d652d" />
+    <fontcolor default="comment" foreColor="ff595d62" name="javadoc-identifier" />
+    <fontcolor name="mod-public" foreColor="ff202124" />
+    <fontcolor default="identifier" name="mod-class" foreColor="ff681da8" />
+    <fontcolor foreColor="ff595d62" name="mod-unused" waveUnderlined="ff595d62" />
+    <fontcolor default="identifier" name="mod-interface-declaration" foreColor="ff681da8">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="method" foreColor="ff174ea6" name="mod-method-declaration" />
+    <fontcolor default="identifier" name="mod-module-declaration" foreColor="ff202124">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="operator" name="operator" foreColor="ff202124" />
+    <fontcolor default="keyword" name="keyword-directive" foreColor="ff174ea6" />
+    <fontcolor default="keyword" name="literal" foreColor="ff934900" />
+    <fontcolor default="number" name="number" foreColor="ff934900" />
+    <fontcolor default="char" name="character" foreColor="ff0d652d" />
+    <fontcolor default="identifier" foreColor="ff202124" name="mod-parameter" />
+    <fontcolor name="mod-deprecated" strikeThrough="ff202124" foreColor="ff202124" />
+    <fontcolor default="comment" name="javadoc-first-sentence" foreColor="ff595d62" />
+    <fontcolor default="identifier" foreColor="ff681da8" name="mod-annotation-type" />
+    <fontcolor default="string" foreColor="ff0d652d" name="string-escape" />
+    <fontcolor default="string" name="string-escape-invalid" waveUnderlined="ffa50e0e" foreColor="ffa50e0e" />
+    <fontcolor default="keyword" name="keyword" foreColor="ff174ea6" />
+    <fontcolor default="identifier" foreColor="ff202124" name="mod-local-variable" />
+    <fontcolor default="identifier" name="identifier" foreColor="ff202124" />
+    <fontcolor default="field" name="mod-field" foreColor="ff202124" />
+    <fontcolor default="keyword" name="mod-keyword" foreColor="ff174ea6" />
+    <fontcolor default="comment" name="javadoc-tag" foreColor="ff595d62">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="method" foreColor="ff174ea6" name="mod-method" />
+    <fontcolor default="identifier" name="mod-interface" foreColor="ff681da8" />
+    <fontcolor default="identifier" foreColor="ff681da8" name="mod-annotation-type-declaration">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor name="mod-protected" foreColor="ff202124" />
+    <fontcolor default="identifier" name="mod-constructor-declaration" foreColor="ff202124" />
+    <fontcolor default="comment" foreColor="ff174ea6" name="html-tag">
+        <font style="plain" />
+    </fontcolor>
+    <fontcolor default="separator" name="separator" foreColor="ff595d62" />
+    <fontcolor default="character" name="character-escape-invalid" foreColor="ffa50e0e">
+        <font style="plain" />
+    </fontcolor>
+    <fontcolor default="identifier" name="mod-enum" foreColor="ff681da8" />
+    <fontcolor default="identifier" foreColor="ff202124" name="mod-local-variable-declaration" />
+    <fontcolor default="identifier" foreColor="ff202124" name="mod-parameter-declaration" />
+    <fontcolor name="mod-private" foreColor="ff202124" />
+    <fontcolor name="mod-static" foreColor="ff202124">
+        <font style="plain" />
+    </fontcolor>
+    <fontcolor default="identifier" name="mod-enum-declaration" foreColor="ff681da8" />
+    <fontcolor default="character" name="character-escape" foreColor="ff0d652d">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="identifier" name="mod-class-declaration" foreColor="ff681da8" />
+    <fontcolor name="mod-package-private" foreColor="ff202124" />
+    <fontcolor default="comment" name="comment" foreColor="ff595d62" />
+    <fontcolor default="whitespace" name="whitespace" foreColor="ff595d62" />
+    <fontcolor default="identifier" name="mod-module" foreColor="ff202124" />
+    <fontcolor default="identifier" name="mod-constructor" foreColor="ff202124" />
+    <fontcolor default="field" name="mod-field-declaration" foreColor="ff202124" />
+</fontscolors>

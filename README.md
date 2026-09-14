@@ -1,6 +1,6 @@
 # fmind/theme
 
-A light theme for everyday code and terminal work, with 93 app integrations. One folder per app, native theme files, no generator.
+A light theme for everyday code and terminal work, with 99 app integrations. One folder per app, native theme files, no generator.
 
 ## Palette
 
@@ -50,17 +50,22 @@ Use a truecolor terminal with a light background. Paths are relative to `~/.conf
 | Tool | Theme file | Installation |
 | --- | --- | --- |
 | Alacritty | [fmind.toml](alacritty/fmind.toml) | Copy to `alacritty/themes/fmind.toml`; add it to `[general] import = ["~/.config/alacritty/themes/fmind.toml"]`. |
+| Atom | [package](atom/package.json), [styles](atom/styles/base.less) | Copy the `atom/` directory to `~/.atom/packages/fmind-syntax/`; reload Atom, then Settings → Themes → Syntax Theme → Fmind. Use a light UI theme. Targets Atom 1.13–1.60; Atom is archived upstream. |
 | Atuin | [fmind.toml](atuin/fmind.toml) | Copy to `atuin/themes/fmind.toml`; set `[theme] name = "fmind"` in `atuin/config.toml`. |
 | bat | [fmind.tmTheme](bat/fmind.tmTheme) | Copy to the `themes/` directory under `bat --config-dir`; run `bat cache --build`, then select `--theme=fmind`. |
 | bottom | [fmind.toml](bottom/fmind.toml) | Merge `[styles]` and its sections into `bottom/bottom.toml`. |
+| Brackets | [package](brackets/package.json), [theme.css](brackets/theme.css) | Help → Show Extensions Folder; copy `brackets/` into its `user/fmind-theme/` directory. Restart, then View → Themes → Fmind. Includes CodeMirror syntax, selections, search, matching brackets and completion styles. |
 | bspwm | [fmind.sh](bspwm/fmind.sh) | Copy to `bspwm/fmind.sh`; source with `. "$HOME/.config/bspwm/fmind.sh"` near the end of `bspwmrc`. Colors window borders and preselection feedback. |
 | btop | [fmind.theme](btop/fmind.theme) | Copy to `btop/themes/fmind.theme`; select `fmind` in Options or set `color_theme = "fmind"` in `btop/btop.conf`. |
 | Chrome | [manifest.json](chrome/manifest.json) | Open `chrome://extensions`, enable Developer mode, choose Load unpacked, and select `chrome/`. Styles browser chrome and the new-tab page, not websites. |
+| Code::Blocks | [fmind.conf](codeblocks/fmind.conf) | Close Code::Blocks; open its `cb_share_config` utility with this file as source and your `default.conf` as destination. Select only `editor → colour_sets → fmind`, Transfer and Save. Reopen, then Settings → Editor → Syntax highlighting → Colour theme → Fmind. Covers 62 lexers from 25.03; import details below. |
 | ConEmu | [fmind.xml](conemu/fmind.xml) | Save a custom Fmind scheme in Settings → Features → Colors, then close ConEmu. In `ConEmu.xml`, replace that saved `PaletteN` key’s values with this file’s values, retaining its `PaletteN` key name. Reopen and select Fmind. Slot 15 is reserved for the white canvas; ANSI bright-white text needs an app override. |
 | COSMIC Terminal | [fmind.ron](cosmic-terminal/fmind.ron) | Choose Light application appearance, then View → Color schemes → Import and select the RON file. Select Fmind for your light terminal profile. Includes explicit white background and normal, bright and dim palettes. |
 | delta | [fmind.gitconfig](delta/fmind.gitconfig) | Include from Git configuration; install the bat theme first. |
+| Dev-C++ | [Fmind.syntax](dev-cpp/Fmind.syntax) | Copy to your Dev-C++ configuration directory (normally `%APPDATA%\Dev-Cpp`, or the portable configuration directory). Restart, then Tools → Editor Options → Colors → Fmind. Uses native Windows BGR colors for C/C++, gutter, selection, breakpoints and error lines. |
 | dmenu | [fmind.h](dmenu/fmind.h) | Copy beside dmenu’s `config.h`; replace its complete `colors` definition with `#include "fmind.h"`, then rebuild dmenu with your normal build procedure. Choose Google Sans through its `fonts` setting. Includes normal, selected and output schemes. |
 | Dunst | [fmind.conf](dunst/fmind.conf) | Merge into `dunst/dunstrc`, then reload Dunst. Includes all three urgency levels. |
+| Eclipse | [preferences](eclipse/fmind.epf), [theme XML](eclipse/fmind.xml) | Select the Light workbench theme, then File → Import → General → Preferences and choose `fmind.epf`; restart. Covers core editors, JDT, CDT, Ant, debug console and PyDev. If using Eclipse Color Theme or DevStyle, import `fmind.xml` in that plugin’s Color Theme panel and select Fmind. |
 | Emacs | [fmind-theme.el](emacs/fmind-theme.el) | Copy to `~/.emacs.d/themes/`, add that directory to `custom-theme-load-path`, then use `M-x load-theme` → `fmind`. |
 | Fastfetch | [fmind.json](fastfetch/fmind.json) | Merge `display.color` into `fastfetch/config.jsonc`. |
 | Firefox | [manifest.json](firefox/manifest.json) | For local testing, use `about:debugging` → This Firefox → Load Temporary Add-on and select the manifest. Lasts until restart; permanent installation requires Mozilla signing. Styles browser UI, not websites. |
@@ -95,6 +100,7 @@ Use a truecolor terminal with a light background. Paths are relative to `~/.conf
 | Mintty | [fmind.minttyrc](mintty/fmind.minttyrc) | Merge into `~/.minttyrc` or load the file with `mintty -C /path/to/fmind.minttyrc`. |
 | MobaXterm | [fmind.ini](mobaxterm/fmind.ini) | Close MobaXterm; merge `[Colors]` into `MobaXterm.ini` (its location is shown in Settings → Configuration → General). Reopen. Per-session color settings can override global colors. |
 | Neovim | [fmind.lua](nvim/colors/fmind.lua) | Copy to `nvim/colors/fmind.lua`; use `colorscheme fmind`. |
+| NetBeans | [installation and profile](netbeans/README.md) | Build the native import ZIP from the supplied configuration tree, then Tools → Options → Fonts & Colors → Import → Fmind. Includes 27 MIME profiles, shared styles, editor highlights and debugger annotations. Use a light look and feel. |
 | Notepad++ | [fmind.xml](notepad-plus-plus/fmind.xml) | Copy to `%APPDATA%\Notepad++\themes\` (or the portable installation’s `themes/`); restart, then Settings → Style Configurator → Fmind. Use light mode; disable Global override colors so lexer styles apply. Covers 60 lexers, editor decorations and tabs. |
 | Obsidian | [theme.css](obsidian/theme.css), [manifest.json](obsidian/manifest.json) | Copy both into your vault’s `.obsidian/themes/Fmind/`; select Fmind and the Light base color scheme in Appearance. |
 | OpenCode | [fmind.json](opencode/fmind.json) | Copy to `opencode/themes/fmind.json`; select `fmind` through `/theme`. |
@@ -142,6 +148,8 @@ Use a truecolor terminal with a light background. Paths are relative to `~/.conf
 | Zed | [fmind.json](zed/fmind.json) | Copy to `zed/themes/fmind.json`; choose `fmind` with `theme selector: toggle`. |
 | Zellij | [fmind.kdl](zellij/fmind.kdl) | Copy to `zellij/themes/fmind.kdl`; set `theme "fmind"`. Uses named styles (0.41+). |
 | zsh-syntax-highlighting | [fmind.zsh](zsh-syntax-highlighting/fmind.zsh) | Source after the plugin in `.zshrc`. Use a truecolor terminal and the matching terminal palette. Does not replace your prompt. |
+
+For Code::Blocks, locate your existing `default.conf` in `%APPDATA%\CodeBlocks\` on Windows or `~/.config/codeblocks/` on Linux. `cb_share_config` may be packaged separately by your distribution. Transfer only the Fmind color-set branch; the file contains no compiler, debugger, shortcut or keyword settings. The source definitions match Code::Blocks 25.03; older releases can have different style lists. Use the application's editor font setting for Google Sans Code.
 
 For Pantheon Terminal (elementary Terminal), import this fragment into its appearance settings only:
 

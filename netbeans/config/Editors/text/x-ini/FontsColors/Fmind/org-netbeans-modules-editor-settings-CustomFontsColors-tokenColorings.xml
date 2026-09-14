@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://netbeans.apache.org/ ; native Fonts & Colors, adapted from dracula/netbeans (MIT). -->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor foreColor="ff202124" name="equals" />
+    <fontcolor foreColor="ff595d62" name="comment" />
+    <fontcolor foreColor="ff202124" name="section" />
+    <fontcolor default="error" name="error" foreColor="ffa50e0e" bgColor="fffad2cf" />
+    <fontcolor foreColor="ff202124" name="section_delim">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor name="whitespace" foreColor="ff595d62" />
+    <fontcolor foreColor="ff202124" name="value" />
+    <fontcolor foreColor="ff202124" name="key" />
+</fontscolors>

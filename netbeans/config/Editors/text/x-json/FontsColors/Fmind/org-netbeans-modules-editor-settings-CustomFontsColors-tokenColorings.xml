@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://netbeans.apache.org/ ; native Fonts & Colors, adapted from dracula/netbeans (MIT). -->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor default="identifier" name="identifier" foreColor="ff202124" />
+    <fontcolor default="field" name="mod-field" foreColor="ff202124" />
+    <fontcolor default="comment" foreColor="ff595d62" name="COMMENT_HTML">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="number" name="constant" foreColor="ff934900" />
+    <fontcolor default="string" name="string" foreColor="ff0d652d" />
+    <fontcolor foreColor="ff202124" name="mod-global" />
+    <fontcolor foreColor="ff681da8" name="mod-class">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor foreColor="ff174ea6" name="mod-method">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="comment" name="comment-line" foreColor="ff595d62" />
+    <fontcolor name="mod-unused" waveUnderlined="ff595d62" foreColor="ff595d62" />
+    <fontcolor default="error" name="error" foreColor="ffa50e0e" bgColor="fffad2cf" />
+    <fontcolor default="separator" name="separator" foreColor="ff595d62" />
+    <fontcolor default="comment" name="COMMENT" foreColor="ff595d62" />
+    <fontcolor default="operator" name="operator" foreColor="ff202124" />
+    <fontcolor default="identifier" name="mod-local-variable-declaration" foreColor="ff202124" />
+    <fontcolor default="regexp" foreColor="ff681da8" name="mod-regexp" />
+    <fontcolor default="keyword" name="mod-custom2" foreColor="ff174ea6" />
+    <fontcolor foreColor="ff202124" name="mod-custom1">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="comment" name="COMMENT_KEYWORD" foreColor="ff595d62">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="keyword" name="keyword" foreColor="ff174ea6" />
+    <fontcolor default="whitespace" name="whitespace" foreColor="ff595d62" />
+    <fontcolor default="identifier" name="mod-local-variable" foreColor="ff202124" />
+</fontscolors>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://netbeans.apache.org/ ; native Fonts & Colors, adapted from dracula/netbeans (MIT). -->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor default="error" name="twig_other" foreColor="ff202124" />
+    <fontcolor foreColor="ff202124" name="twig_block_delimiter">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="identifier" name="twig_name" foreColor="ff202124" />
+    <fontcolor foreColor="ff202124" name="twig_interpolation" />
+    <fontcolor default="keyword" foreColor="ff202124" name="twig_punctuation" />
+    <fontcolor foreColor="ff202124" name="twig_var_delimiter">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="comment" name="twig_comment" foreColor="ff595d62" />
+    <fontcolor default="string" foreColor="ff0d652d" name="twig_string" />
+    <fontcolor default="keyword" foreColor="ff202124" name="twig_operator" />
+    <fontcolor default="number" name="twig_number" foreColor="ff934900" />
+    <fontcolor default="keyword" foreColor="ff174ea6" name="twig_tag" />
+</fontscolors>

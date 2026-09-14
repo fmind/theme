@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://netbeans.apache.org/ ; native Fonts & Colors, adapted from dracula/netbeans (MIT). -->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor default="comment" name="block-comment" foreColor="ff595d62" />
+    <fontcolor default="markup-attribute" foreColor="ff202124" name="argument" />
+    <fontcolor name="mod-method" foreColor="ff174ea6">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor name="mod-class" waveUnderlined="ff681da8" foreColor="ff681da8" />
+    <fontcolor default="default" name="el-delimiter" foreColor="ff202124" />
+    <fontcolor default="error" name="error" foreColor="ffa50e0e" bgColor="fffad2cf" />
+    <fontcolor default="default" name="javascript-embedded" foreColor="ff202124" />
+    <fontcolor default="argument" foreColor="ff202124" name="operator" />
+    <fontcolor default="entity-reference" foreColor="ff0d652d" name="character">
+        <font style="plain" />
+    </fontcolor>
+    <fontcolor default="comment" name="sgml-comment" foreColor="ff595d62" />
+    <fontcolor default="default" foreColor="ff202124" name="sgml-declaration" />
+    <fontcolor default="default" foreColor="ff202124" name="el-content" />
+    <fontcolor default="default" name="xml-pi" foreColor="ff202124" />
+    <fontcolor default="markup-element" foreColor="ff174ea6" name="tag" />
+    <fontcolor default="default" foreColor="ff202124" name="text" />
+    <fontcolor default="whitespace" name="ws" foreColor="ff202124" />
+    <fontcolor default="markup-attribute" name="mod-constructor" foreColor="ff202124">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="markup-attribute-value" foreColor="ff202124" name="value" />
+    <fontcolor default="default" name="css-embedded" foreColor="ff202124" />
+</fontscolors>

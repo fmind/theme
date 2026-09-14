@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- https://netbeans.apache.org/ ; native Fonts & Colors, adapted from dracula/netbeans (MIT). -->
+<!DOCTYPE fontscolors PUBLIC "-//NetBeans//DTD Editor Fonts and Colors settings 1.1//EN" "http://www.netbeans.org/dtds/EditorFontsColors-1_1.dtd">
+<fontscolors>
+    <fontcolor default="operator" name="keyword.operator" foreColor="ff174ea6" />
+    <fontcolor default="keyword" name="support.constant" foreColor="ff934900" />
+    <fontcolor default="string" name="string" foreColor="ff0d652d" />
+    <fontcolor default="number" name="constant.numeric" foreColor="ff934900" />
+    <fontcolor default="char" name="constant.character" foreColor="ff0d652d" />
+    <fontcolor default="identifier" name="constant.other" foreColor="ff934900" />
+    <fontcolor name="markup.underline" underline="ff202124" foreColor="ff202124" />
+    <fontcolor default="keyword" name="storage" foreColor="ff174ea6" />
+    <fontcolor default="keyword" name="constant.language" foreColor="ff934900" />
+    <fontcolor default="identifier" name="markup.bold" foreColor="ff202124">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="keyword" name="variable.language" foreColor="ff174ea6" />
+    <fontcolor default="error" name="invalid" foreColor="ffa50e0e" />
+    <fontcolor default="identifier" name="markup.heading" foreColor="ff174ea6">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="comment" name="comment" foreColor="ff595d62" />
+    <fontcolor default="char" name="constant.character.escape" foreColor="ff0d652d">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="keyword" name="keyword" foreColor="ff174ea6" />
+    <fontcolor default="method" name="support.function" foreColor="ff174ea6" />
+    <fontcolor default="method" name="entity.name.function" foreColor="ff174ea6">
+        <font style="bold" />
+    </fontcolor>
+    <fontcolor default="identifier" name="markup.italic" foreColor="ff202124">
+        <font style="plain" />
+    </fontcolor>
+</fontscolors>
