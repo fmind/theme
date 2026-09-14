@@ -2,6 +2,8 @@
 
 A light theme for everyday code and terminal work, with 104 app integrations. One folder per app, native theme files, no generator.
 
+See [TODO.md](TODO.md) for the remaining catalog work and the unfinished SDDM checkpoint.
+
 ## Palette
 
 ![Fmind colors and their roles](screenshots/palette.svg)
