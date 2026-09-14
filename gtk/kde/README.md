@@ -1,6 +1,6 @@
 # Fmind KDE
 
-A KDE color scheme and Plasma desktop style with white surfaces, pale selections and readable semantic text. The application color scheme and the Plasma style are separate choices. This package contains the first KDE components of the free Dracula GTK bundle; the remaining components are listed below.
+KDE application colors, a Plasma desktop style and Aurorae window decorations with white surfaces, pale selections and readable semantic text. Each component is selected separately. The remaining KDE components of the free Dracula GTK bundle are listed below.
 
 ## Color scheme
 
@@ -18,13 +18,23 @@ Fmind supplies opaque backgrounds for panels, dialogs, widgets, tooltips, toolba
 
 The package uses the current JSON metadata format and native FrameSvg format. KDE Frameworks 5.103 was used for native loading, color evaluation and rendering. A Plasma 6/KSvg runtime, a complete Plasma desktop session, third-party widgets and arbitrary widget-style combinations remain unverified. Installing the style does not apply a desktop layout, change wallpapers or configure authentication.
 
+## Aurorae window decorations
+
+Copy the complete [aurorae/Fmind/](aurorae/Fmind/) directory to `~/.local/share/aurorae/themes/Fmind/`, preserving the `Fmind` folder name, [Fmindrc](aurorae/Fmind/Fmindrc), metadata and SVG files. Select Fmind in System Settings → Window Decorations. Choose Google Sans as the window-title font in the system font settings. Button order and button/border sizes remain configurable through KDE.
+
+The frame stays white in active, inactive and maximized states. Title text and disabled controls remain readable. Close, minimize, maximize/restore, all-desktops, keep-above, keep-below, shade, help, application-menu and window-menu assets have explicit active, inactive, hover, pressed and disabled states. Toggle buttons retain a pale blue pressed fill; shade also reverses its arrow. Close uses a pale red hover/pressed fill. The menu SVGs are available to newer Aurorae engines; older engines render their native application icon instead. A control still depends on the application and window manager exposing that action.
+
+The top and side margins disappear when maximized so controls reach the screen edges. One pixel remains below maximized buttons to accommodate Aurorae's integer rounding at larger button sizes. The theme draws square, opaque frames without shadows or blur. Its native SVG format and installation paths follow [KDE's Aurorae documentation](https://develop.kde.org/docs/plasma/aurorae/).
+
+Native loading, frame/button rendering and all Aurorae border/button size combinations were checked with KWin 5.27.5 sources, KDE Frameworks 5.103 and Qt 5.15.8. A full KWin/X11 session stopped on an upstream QML module-registration warning before window interaction could be verified. Plasma 6/KSvg remains unverified. See [coverage](../../COVERAGE.md) for the exact successful checks and retained session failure.
+
 ## Bundle checklist
 
 The [free Dracula KDE directory](https://github.com/dracula/gtk/tree/master/kde) includes additional independent packages. Its blue/purple and translucent/solid variants are coverage references; Fmind uses one consistent light palette and opaque ordinary surfaces.
 
 - [x] KDE application color scheme.
 - [x] Plasma desktop style, including opaque backgrounds and state assets.
-- [ ] Aurorae window decorations.
+- [x] Aurorae window decorations.
 - [ ] Kvantum widget theme.
 - [ ] Global themes and splash screens for Plasma 5 and 6.
 - [ ] Plasma 5 lock-screen, logout and OSD components from the reference bundle.

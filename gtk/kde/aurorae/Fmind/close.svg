@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="28" viewBox="0 0 28 28">
+  <g id="active-center">
+    <rect width="28" height="28" fill="#ffffff" />
+    <path d="M9 9L19 19M19 9L9 19" fill="none" stroke="#202124" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <g id="inactive-center">
+    <rect width="28" height="28" fill="#ffffff" />
+    <path d="M9 9L19 19M19 9L9 19" fill="none" stroke="#595d62" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <g id="hover-center">
+    <rect width="28" height="28" fill="#fad2cf" />
+    <path d="M9 9L19 19M19 9L9 19" fill="none" stroke="#a50e0e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <g id="hover-inactive-center">
+    <rect width="28" height="28" fill="#fad2cf" />
+    <path d="M9 9L19 19M19 9L9 19" fill="none" stroke="#a50e0e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <g id="pressed-center">
+    <rect width="28" height="28" fill="#fad2cf" />
+    <path d="M9 9L19 19M19 9L9 19" fill="none" stroke="#a50e0e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <g id="pressed-inactive-center">
+    <rect width="28" height="28" fill="#fad2cf" />
+    <path d="M9 9L19 19M19 9L9 19" fill="none" stroke="#a50e0e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <g id="deactivated-center">
+    <rect width="28" height="28" fill="#ffffff" />
+    <path d="M9 9L19 19M19 9L9 19" fill="none" stroke="#595d62" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+  <g id="deactivated-inactive-center">
+    <rect width="28" height="28" fill="#ffffff" />
+    <path d="M9 9L19 19M19 9L9 19" fill="none" stroke="#595d62" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

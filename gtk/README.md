@@ -34,9 +34,9 @@ The color layer covers horizontal and vertical panels, applets and window lists,
 
 Native style resolution was checked with Cinnamon 5.6.8 and with the stable 6.6.9 base stylesheet compiled from upstream SCSS. Both checks used the 5.6.8 St engine; a full Cinnamon desktop session, the 6.6 runtime, screen-locker integration and arbitrary third-party applets remain unverified. See [coverage](../COVERAGE.md) for the exact evidence boundary.
 
-## KDE color scheme and Plasma style
+## KDE colors, Plasma style and Aurorae
 
-The package also includes a [KDE application color scheme and Plasma desktop style](kde/README.md). Install them in KDE's color-scheme and Plasma-style directories as described in that guide; the GTK theme directory is not a KDE installation location. The [KDE checklist](kde/README.md#bundle-checklist) tracks Aurorae, Kvantum, global themes, cursors and SDDM separately.
+The package also includes [KDE application colors, a Plasma desktop style and Aurorae window decorations](kde/README.md). Install them in KDE's color-scheme, Plasma-style and Aurorae directories as described in that guide; the GTK theme directory is not a KDE installation location. The [KDE checklist](kde/README.md#bundle-checklist) tracks the remaining Kvantum, global-theme, cursor and SDDM companions.
 
 ## Window decorations
 
@@ -64,7 +64,7 @@ The [free Dracula GTK repository](https://github.com/dracula/gtk) also contains 
 - [ ] Application-specific widget refinements for the apps in the reference bundle.
 - [x] [GNOME Shell](gnome-shell/gnome-shell.css), with [legacy image controls](gnome-shell/legacy.css).
 - [x] [Cinnamon](cinnamon/cinnamon.css).
-- [ ] [Complete KDE bundle](kde/README.md#bundle-checklist); color scheme and Plasma style are available, with other companions pending.
+- [ ] [Complete KDE bundle](kde/README.md#bundle-checklist); color scheme, Plasma style and Aurorae decorations are available, with other companions pending.
 - [x] [Metacity](metacity-1/metacity-theme-3.xml).
 - [x] [Xfwm](xfwm4/themerc), including HiDPI and extra-HiDPI decorations.
 - [ ] Unity.

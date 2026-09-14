@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="128" height="128" viewBox="0 0 128 128">
+  <g id="decoration-center">
+    <rect x="4" y="36" width="64" height="64" fill="#ffffff" />
+  </g>
+  <g id="decoration-top">
+    <rect x="4" y="0" width="64" height="36" fill="#ffffff" />
+    <rect x="4" y="0" width="64" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="decoration-bottom">
+    <rect x="4" y="100" width="64" height="4" fill="#ffffff" />
+    <rect x="4" y="103" width="64" height="1" fill="#9aa0a6" />
+  </g>
+  <g id="decoration-left">
+    <rect x="0" y="36" width="4" height="64" fill="#ffffff" />
+    <rect x="0" y="36" width="1" height="64" fill="#9aa0a6" />
+  </g>
+  <g id="decoration-right">
+    <rect x="68" y="36" width="4" height="64" fill="#ffffff" />
+    <rect x="71" y="36" width="1" height="64" fill="#9aa0a6" />
+  </g>
+  <g id="decoration-topleft">
+    <rect x="0" y="0" width="4" height="36" fill="#ffffff" />
+    <rect x="0" y="0" width="4" height="1" fill="#9aa0a6" />
+    <rect x="0" y="0" width="1" height="36" fill="#9aa0a6" />
+  </g>
+  <g id="decoration-topright">
+    <rect x="68" y="0" width="4" height="36" fill="#ffffff" />
+    <rect x="68" y="0" width="4" height="1" fill="#9aa0a6" />
+    <rect x="71" y="0" width="1" height="36" fill="#9aa0a6" />
+  </g>
+  <g id="decoration-bottomleft">
+    <rect x="0" y="100" width="4" height="4" fill="#ffffff" />
+    <rect x="0" y="103" width="4" height="1" fill="#9aa0a6" />
+    <rect x="0" y="100" width="1" height="4" fill="#9aa0a6" />
+  </g>
+  <g id="decoration-bottomright">
+    <rect x="68" y="100" width="4" height="4" fill="#ffffff" />
+    <rect x="68" y="103" width="4" height="1" fill="#9aa0a6" />
+    <rect x="71" y="100" width="1" height="4" fill="#9aa0a6" />
+  </g>
+  <use id="decoration-inactive-center" xlink:href="#decoration-center" />
+  <use id="decoration-inactive-top" xlink:href="#decoration-top" />
+  <use id="decoration-inactive-bottom" xlink:href="#decoration-bottom" />
+  <use id="decoration-inactive-left" xlink:href="#decoration-left" />
+  <use id="decoration-inactive-right" xlink:href="#decoration-right" />
+  <use id="decoration-inactive-topleft" xlink:href="#decoration-topleft" />
+  <use id="decoration-inactive-topright" xlink:href="#decoration-topright" />
+  <use id="decoration-inactive-bottomleft" xlink:href="#decoration-bottomleft" />
+  <use id="decoration-inactive-bottomright" xlink:href="#decoration-bottomright" />
+  <use id="decoration-opaque-center" xlink:href="#decoration-center" />
+  <use id="decoration-opaque-top" xlink:href="#decoration-top" />
+  <use id="decoration-opaque-bottom" xlink:href="#decoration-bottom" />
+  <use id="decoration-opaque-left" xlink:href="#decoration-left" />
+  <use id="decoration-opaque-right" xlink:href="#decoration-right" />
+  <use id="decoration-opaque-topleft" xlink:href="#decoration-topleft" />
+  <use id="decoration-opaque-topright" xlink:href="#decoration-topright" />
+  <use id="decoration-opaque-bottomleft" xlink:href="#decoration-bottomleft" />
+  <use id="decoration-opaque-bottomright" xlink:href="#decoration-bottomright" />
+  <use id="decoration-opaque-inactive-center" xlink:href="#decoration-center" />
+  <use id="decoration-opaque-inactive-top" xlink:href="#decoration-top" />
+  <use id="decoration-opaque-inactive-bottom" xlink:href="#decoration-bottom" />
+  <use id="decoration-opaque-inactive-left" xlink:href="#decoration-left" />
+  <use id="decoration-opaque-inactive-right" xlink:href="#decoration-right" />
+  <use id="decoration-opaque-inactive-topleft" xlink:href="#decoration-topleft" />
+  <use id="decoration-opaque-inactive-topright" xlink:href="#decoration-topright" />
+  <use id="decoration-opaque-inactive-bottomleft" xlink:href="#decoration-bottomleft" />
+  <use id="decoration-opaque-inactive-bottomright" xlink:href="#decoration-bottomright" />
+  <use id="decoration-maximized-center" xlink:href="#decoration-center" />
+  <use id="decoration-maximized-inactive-center" xlink:href="#decoration-center" />
+  <use id="decoration-maximized-opaque-center" xlink:href="#decoration-center" />
+  <use id="decoration-maximized-opaque-inactive-center" xlink:href="#decoration-center" />
+  <rect id="hint-stretch-borders" x="110" y="110" width="1" height="1" fill="#ffffff" />
+</svg>

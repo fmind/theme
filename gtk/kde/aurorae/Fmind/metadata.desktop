@@ -1,0 +1,9 @@
+# https://develop.kde.org/docs/plasma/aurorae/
+[Desktop Entry]
+Name=Fmind
+Comment=White window frames with readable Fmind controls
+X-KDE-PluginInfo-Name=Fmind
+X-KDE-PluginInfo-Author=Médéric Hurier
+X-KDE-PluginInfo-Website=https://github.com/fmind/theme
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=MIT
