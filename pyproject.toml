@@ -10,6 +10,7 @@ dev = [
     "prompt-toolkit>=3.0.53",
     "configobj>=5.0.9",
     "tinycss2>=1.5.1",
+    "pygments>=2.19",
 ]
 
 [tool.uv]

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- https://developer.apple.com/documentation/xcode/customizing-the-appearance-of-source-code -->
+<plist version="1.0">
+<dict>
+	<key>DVTFontAndColorVersion</key>
+	<integer>1</integer>
+	<key>DVTConsoleDebuggerInputTextFont</key>
+	<string>GoogleSansCode-Regular - 13.0</string>
+	<key>DVTConsoleDebuggerOutputTextFont</key>
+	<string>GoogleSansCode-Regular - 13.0</string>
+	<key>DVTConsoleDebuggerPromptTextFont</key>
+	<string>GoogleSansCode-Regular - 13.0</string>
+	<key>DVTConsoleExectuableInputTextFont</key>
+	<string>GoogleSansCode-Regular - 13.0</string>
+	<key>DVTConsoleExectuableOutputTextFont</key>
+	<string>GoogleSansCode-Regular - 13.0</string>
+	<key>DVTMarkupTextCodeFont</key>
+	<string>GoogleSansCode-Regular - 13.0</string>
+	<key>DVTMarkupTextEmphasisFont</key>
+	<string>GoogleSans-Regular - 13.0</string>
+	<key>DVTMarkupTextLinkFont</key>
+	<string>GoogleSans-Regular - 13.0</string>
+	<key>DVTMarkupTextNormalFont</key>
+	<string>GoogleSans-Regular - 13.0</string>
+	<key>DVTMarkupTextOtherHeadingFont</key>
+	<string>GoogleSans-Regular - 13.0</string>
+	<key>DVTMarkupTextPrimaryHeadingFont</key>
+	<string>GoogleSans-Regular - 13.0</string>
+	<key>DVTMarkupTextSecondaryHeadingFont</key>
+	<string>GoogleSans-Regular - 13.0</string>
+	<key>DVTMarkupTextStrongFont</key>
+	<string>GoogleSans-Regular - 13.0</string>
+	<key>DVTSourceTextBackground</key>
+	<string>1.000000000 1.000000000 1.000000000 1</string>
+	<key>DVTSourceTextCurrentLineHighlightColor</key>
+	<string>0.945098039 0.952941176 0.956862745 1</string>
+	<key>DVTSourceTextSelectionColor</key>
+	<string>0.823529412 0.890196078 0.988235294 1</string>
+	<key>DVTSourceTextInsertionPointColor</key>
+	<string>0.090196078 0.305882353 0.650980392 1</string>
+	<key>DVTSourceTextInvisiblesColor</key>
+	<string>0.603921569 0.627450980 0.650980392 1</string>
+	<key>DVTSourceTextBlockDimBackgroundColor</key>
+	<string>0.945098039 0.952941176 0.956862745 1</string>
+	<key>DVTConsoleTextBackgroundColor</key>
+	<string>1.000000000 1.000000000 1.000000000 1</string>
+	<key>DVTConsoleTextSelectionColor</key>
+	<string>0.823529412 0.890196078 0.988235294 1</string>
+	<key>DVTConsoleTextInsertionPointColor</key>
+	<string>0.090196078 0.305882353 0.650980392 1</string>
+	<key>DVTDebuggerInstructionPointerColor</key>
+	<string>0.807843137 0.917647059 0.839215686 1</string>
+	<key>DVTConsoleDebuggerInputTextColor</key>
+	<string>0.125490196 0.129411765 0.141176471 1</string>
+	<key>DVTConsoleDebuggerOutputTextColor</key>
+	<string>0.125490196 0.129411765 0.141176471 1</string>
+	<key>DVTConsoleDebuggerPromptTextColor</key>
+	<string>0.090196078 0.305882353 0.650980392 1</string>
+	<key>DVTConsoleExectuableInputTextColor</key>
+	<string>0.125490196 0.129411765 0.141176471 1</string>
+	<key>DVTConsoleExectuableOutputTextColor</key>
+	<string>0.125490196 0.129411765 0.141176471 1</string>
+	<key>DVTMarkupTextBackgroundColor</key>
+	<string>1.000000000 1.000000000 1.000000000 1</string>
+	<key>DVTMarkupTextBorderColor</key>
+	<string>0.603921569 0.627450980 0.650980392 1</string>
+	<key>DVTMarkupTextEmphasisColor</key>
+	<string>0.407843137 0.113725490 0.658823529 1</string>
+	<key>DVTMarkupTextInlineCodeColor</key>
+	<string>0.125490196 0.129411765 0.141176471 1</string>
+	<key>DVTMarkupTextLinkColor</key>
+	<string>0.090196078 0.305882353 0.650980392 1</string>
+	<key>DVTMarkupTextNormalColor</key>
+	<string>0.125490196 0.129411765 0.141176471 1</string>
+	<key>DVTMarkupTextOtherHeadingColor</key>
+	<string>0.090196078 0.305882353 0.650980392 1</string>
+	<key>DVTMarkupTextPrimaryHeadingColor</key>
+	<string>0.090196078 0.305882353 0.650980392 1</string>
+	<key>DVTMarkupTextSecondaryHeadingColor</key>
+	<string>0.090196078 0.305882353 0.650980392 1</string>
+	<key>DVTMarkupTextStrongColor</key>
+	<string>0.125490196 0.129411765 0.141176471 1</string>
+	<key>DVTScrollbarMarkerAnalyzerColor</key>
+	<string>0.000000000 0.388235294 0.427450980 1</string>
+	<key>DVTScrollbarMarkerBreakpointColor</key>
+	<string>0.090196078 0.305882353 0.650980392 1</string>
+	<key>DVTScrollbarMarkerDiffColor</key>
+	<string>0.576470588 0.286274510 0.000000000 1</string>
+	<key>DVTScrollbarMarkerDiffConflictColor</key>
+	<string>0.647058824 0.054901961 0.054901961 1</string>
+	<key>DVTScrollbarMarkerErrorColor</key>
+	<string>0.647058824 0.054901961 0.054901961 1</string>
+	<key>DVTScrollbarMarkerRuntimeIssueColor</key>
+	<string>0.407843137 0.113725490 0.658823529 1</string>
+	<key>DVTScrollbarMarkerWarningColor</key>
+	<string>0.576470588 0.286274510 0.000000000 1</string>
+	<key>DVTSourceTextSyntaxColors</key>
+	<dict>
+		<key>xcode.syntax.attribute</key>
+		<string>0.407843137 0.113725490 0.658823529 1</string>
+		<key>xcode.syntax.character</key>
+		<string>0.050980392 0.396078431 0.176470588 1</string>
+		<key>xcode.syntax.comment</key>
+		<string>0.349019608 0.364705882 0.384313725 1</string>
+		<key>xcode.syntax.comment.doc</key>
+		<string>0.349019608 0.364705882 0.384313725 1</string>
+		<key>xcode.syntax.comment.doc.keyword</key>
+		<string>0.349019608 0.364705882 0.384313725 1</string>
+		<key>xcode.syntax.declaration.other</key>
+		<string>0.090196078 0.305882353 0.650980392 1</string>
+		<key>xcode.syntax.declaration.type</key>
+		<string>0.407843137 0.113725490 0.658823529 1</string>
+		<key>xcode.syntax.keyword</key>
+		<string>0.090196078 0.305882353 0.650980392 1</string>
+		<key>xcode.syntax.mark</key>
+		<string>0.090196078 0.305882353 0.650980392 1</string>
+		<key>xcode.syntax.markup.code</key>
+		<string>0.125490196 0.129411765 0.141176471 1</string>
+		<key>xcode.syntax.number</key>
+		<string>0.576470588 0.286274510 0.000000000 1</string>
+		<key>xcode.syntax.plain</key>
+		<string>0.125490196 0.129411765 0.141176471 1</string>
+		<key>xcode.syntax.preprocessor</key>
+		<string>0.407843137 0.113725490 0.658823529 1</string>
+		<key>xcode.syntax.string</key>
+		<string>0.050980392 0.396078431 0.176470588 1</string>
+		<key>xcode.syntax.url</key>
+		<string>0.090196078 0.305882353 0.650980392 1</string>
+		<key>xcode.syntax.identifier.class</key>
+		<string>0.407843137 0.113725490 0.658823529 1</string>
+		<key>xcode.syntax.identifier.class.system</key>
+		<string>0.407843137 0.113725490 0.658823529 1</string>
+		<key>xcode.syntax.identifier.constant</key>
+		<string>0.576470588 0.286274510 0.000000000 1</string>
+		<key>xcode.syntax.identifier.constant.system</key>
+		<string>0.576470588 0.286274510 0.000000000 1</string>
+		<key>xcode.syntax.identifier.function</key>
+		<string>0.090196078 0.305882353 0.650980392 1</string>
+		<key>xcode.syntax.identifier.function.system</key>
+		<string>0.090196078 0.305882353 0.650980392 1</string>
+		<key>xcode.syntax.identifier.macro</key>
+		<string>0.407843137 0.113725490 0.658823529 1</string>
+		<key>xcode.syntax.identifier.macro.system</key>
+		<string>0.407843137 0.113725490 0.658823529 1</string>
+		<key>xcode.syntax.identifier.type</key>
+		<string>0.407843137 0.113725490 0.658823529 1</string>
+		<key>xcode.syntax.identifier.type.system</key>
+		<string>0.407843137 0.113725490 0.658823529 1</string>
+		<key>xcode.syntax.identifier.variable</key>
+		<string>0.125490196 0.129411765 0.141176471 1</string>
+		<key>xcode.syntax.identifier.variable.system</key>
+		<string>0.125490196 0.129411765 0.141176471 1</string>
+	</dict>
+	<key>DVTSourceTextSyntaxFonts</key>
+	<dict>
+		<key>xcode.syntax.attribute</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.character</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.comment</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.comment.doc</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.comment.doc.keyword</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.declaration.other</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.declaration.type</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.keyword</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.mark</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.markup.code</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.number</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.plain</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.preprocessor</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.string</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.url</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.identifier.class</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.identifier.class.system</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.identifier.constant</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.identifier.constant.system</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.identifier.function</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.identifier.function.system</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.identifier.macro</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.identifier.macro.system</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.identifier.type</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.identifier.type.system</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.identifier.variable</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+		<key>xcode.syntax.identifier.variable.system</key>
+		<string>GoogleSansCode-Regular - 13.0</string>
+	</dict>
+</dict>
+</plist>

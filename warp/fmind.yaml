@@ -1,0 +1,26 @@
+# https://docs.warp.dev/terminal/appearance/custom-themes
+name: Fmind
+accent: '#174ea6'
+cursor: '#4285f4'
+background: '#ffffff'
+foreground: '#202124'
+details: lighter
+terminal_colors:
+  normal:
+    black: '#202124'
+    red: '#a50e0e'
+    green: '#0d652d'
+    yellow: '#934900'
+    blue: '#174ea6'
+    magenta: '#681da8'
+    cyan: '#00636d'
+    white: '#202124'
+  bright:
+    black: '#595d62'
+    red: '#a50e0e'
+    green: '#0d652d'
+    yellow: '#934900'
+    blue: '#174ea6'
+    magenta: '#681da8'
+    cyan: '#00636d'
+    white: '#202124'
