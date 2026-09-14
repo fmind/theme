@@ -1,0 +1,39 @@
+/* https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/main/data/theme */
+/* GNOME 47+ draws switches and checks with native child actors. */
+@import url("common.css");
+
+.check-box StBin,
+.check-box:focus StBin {
+  background-image: none !important;
+  background-color: #ffffff !important;
+  box-shadow: none !important;
+}
+.check-box StIcon,
+.check-box:hover StIcon,
+.check-box:active StIcon {
+  color: transparent !important;
+  background-color: #ffffff !important;
+  border-color: #595d62 !important;
+}
+.check-box:checked StIcon,
+.check-box:checked:hover StIcon,
+.check-box:checked:active StIcon {
+  color: #202124 !important;
+  background-color: #d2e3fc !important;
+  border-color: #174ea6 !important;
+}
+.check-box:focus StBin {
+  box-shadow: inset 0 0 0 2px #174ea6 !important;
+}
+.toggle-switch {
+  background-image: none !important;
+  border: 1px solid #595d62 !important;
+}
+.toggle-switch .handle {
+  color: #ffffff !important;
+  background-color: #595d62 !important;
+}
+.toggle-switch:checked .handle {
+  color: #ffffff !important;
+  background-color: #174ea6 !important;
+}

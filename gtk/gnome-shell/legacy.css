@@ -1,0 +1,29 @@
+/* https://gitlab.gnome.org/GNOME/gnome-shell/-/tree/46.0/data/theme */
+/* Copy this file over gnome-shell.css for GNOME 43–46's image controls. */
+@import url("common.css");
+
+.check-box StBin,
+.check-box:hover StBin,
+.check-box:focus StBin {
+  width: 20px !important;
+  height: 20px !important;
+  background-image: url("../cinnamon/assets/checkbox-off.svg") !important;
+}
+.check-box:checked StBin,
+.check-box:checked:hover StBin,
+.check-box:checked:focus StBin {
+  background-image: url("../cinnamon/assets/checkbox-on.svg") !important;
+}
+.toggle-switch,
+.toggle-switch-us,
+.toggle-switch-intl {
+  width: 46px !important;
+  height: 26px !important;
+  background-size: contain !important;
+  background-image: url("../cinnamon/assets/toggle-off.svg") !important;
+}
+.toggle-switch:checked,
+.toggle-switch-us:checked,
+.toggle-switch-intl:checked {
+  background-image: url("../cinnamon/assets/toggle-on.svg") !important;
+}

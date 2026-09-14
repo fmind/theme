@@ -69,7 +69,7 @@ class GtkPortTests(unittest.TestCase):
                 if fg.startswith("#") and bg.startswith("#"):
                     label = (path.name, tinycss2.serialize(rule.prelude).strip())
                     self.assertGreaterEqual(contrast(fg, bg), 4.5, label)
-                    if path.name == "common.css":
+                    if path == GTK / "common.css":
                         self.assertEqual(values["background-image"], "none", label)
 
     def test_semantic_and_disabled_checked_button_contract(self):

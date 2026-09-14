@@ -1,6 +1,6 @@
 # Fmind GTK
 
-Native GTK 2, GTK 3.20+ and GTK 4 widget themes, with a Cinnamon desktop theme and Metacity and Xfwm window decorations. Windows, editors, panels and popovers are white; selections and semantic feedback use pale fills. Google Sans is the UI font and Google Sans Code is the monospace font. Missing fonts use the system fallback.
+Native GTK 2, GTK 3.20+ and GTK 4 widget themes, with GNOME Shell and Cinnamon desktop themes and Metacity and Xfwm window decorations. Windows, editors, panels and popovers are white; selections and semantic feedback use pale fills. Google Sans is the UI font and Google Sans Code is the monospace font. Missing fonts use the system fallback.
 
 ## Install
 
@@ -11,6 +11,18 @@ For an isolated GTK 3 or GTK 4 application preview, use `GTK_THEME=Fmind applica
 Fmind is exclusively light. The `gtk-dark.css` entry points deliberately load the same light palette. GTK 3 uses its built-in Adwaita resource for geometry and symbolic assets; GTK 4 uses its built-in Default resource. GTK 2 uses its built-in drawing engine. No copied third-party base styles, external rendering engines or downloaded image assets are needed.
 
 The theme includes buttons, suggested/destructive actions, entries, selection, checks, radios, switches, menus, popovers, tooltips, tabs, lists, scrollbars, scales, progress and semantic messages, with disabled and backdrop states. It exports GTK 3's named theme colors for applications that draw custom controls. Applications can override system themes; libadwaita applications are not covered by installing this package. GTK 3 versions older than 3.20 use a different selector model and remain pending.
+
+## GNOME Shell
+
+Copy this complete GTK package to `~/.themes/Fmind/` or `~/.local/share/themes/Fmind/`. Keep the [shell entry point](gnome-shell/gnome-shell.css), [shared shell colors](gnome-shell/common.css), shell assets and Cinnamon assets in their existing relative locations. The shell reuses the package's vector controls; copying only `gnome-shell/` is insufficient.
+
+Enable the official [User Themes extension](https://extensions.gnome.org/extension/19/user-themes/) version matching your GNOME release, then select Fmind through your shell theme chooser. Changing the GTK application theme alone does not select a shell theme. This package does not install extensions or change settings automatically.
+
+The default entry targets GNOME 47+, whose native switches have moving handles and optional accessibility status symbols. For GNOME 43–46, replace `gnome-shell/gnome-shell.css` in your installed copy with [legacy.css](gnome-shell/legacy.css), keeping the filename `gnome-shell.css`. The legacy entry supplies explicit off/on checkbox and switch images. Both entries load the same color layer and remain light regardless of GNOME's light/dark preference.
+
+GNOME supplies its installed default beneath the user stylesheet, so Fmind keeps native layout and geometry without an absolute resource import or a bundled third-party base theme. Fmind sets fixed palette priority for imported color rules and preserves St's grouped-selector ordering. Panels, overview and dash, application grid, search, calendar, notifications, quick settings, dialogs, entries, keyboards, switchers, screenshot controls, workspace feedback and Looking Glass are covered. Ordinary text surfaces are white; screenshot masks and selection previews preserve transparency so the selected content stays visible. Looking Glass uses Google Sans Code.
+
+The legacy entry was checked using St 43.9 and Mutter 43.8. The modern entry was checked against GNOME 50.4's released light and dark stylesheets using that same native engine. A complete GNOME 50 runtime, intermediate versions, third-party extensions and lock-screen behavior remain unverified. Older selectors from the free reference are retained, but pre-43 shells have not been validated. This user theme does not install a GDM login-screen theme. See [coverage](../COVERAGE.md) for native rendering evidence and limits.
 
 ## Cinnamon desktop
 
@@ -46,7 +58,7 @@ The [free Dracula GTK repository](https://github.com/dracula/gtk) also contains 
 - [x] [GTK 4 widgets](gtk-4.0/gtk.css).
 - [ ] GTK 3 before 3.20.
 - [ ] Application-specific widget refinements for the apps in the reference bundle.
-- [ ] GNOME Shell.
+- [x] [GNOME Shell](gnome-shell/gnome-shell.css), with [legacy image controls](gnome-shell/legacy.css).
 - [x] [Cinnamon](cinnamon/cinnamon.css).
 - [ ] KDE Plasma, Aurorae and Kvantum.
 - [x] [Metacity](metacity-1/metacity-theme-3.xml).
