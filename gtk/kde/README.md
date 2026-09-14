@@ -1,6 +1,6 @@
 # Fmind KDE
 
-KDE application colors, a Plasma desktop style, Aurorae window decorations and a Kvantum widget theme with white surfaces, pale selections and readable semantic text. Each component is selected separately. The remaining KDE components of the free Dracula GTK bundle are listed below.
+KDE application colors, a Plasma desktop style, Aurorae window decorations, Kvantum widgets and a global theme with a startup splash. Ordinary surfaces stay white, selections are pale and semantic text remains readable. Components can be selected separately or together through the global theme. The remaining KDE components of the free Dracula GTK bundle are listed below.
 
 ## Color scheme
 
@@ -38,6 +38,16 @@ The theme covers buttons, entries, combos, spin boxes, checks/radios, tabs, menu
 
 Native testing used Kvantum 1.0.7 and Qt 5.15.8 under isolated Xvfb at 100%, 150% and 200% scaling in both layout directions. Palette checks, control-state renders and widget state changes pass. SVG tracing confirms that the exercised controls use Fmind's assets. Qt 6, a complete KDE/LXQt session and every application-specific rendering path remain unverified. See [coverage](../../COVERAGE.md) for the exact checks and fixes.
 
+## Global theme and startup splash
+
+Install the Fmind color scheme, Plasma style, Aurorae decorations and Kvantum theme using the sections above. Install Google Sans and Google Sans Code, then select Fmind in Kvantum Manager. The global theme selects the Kvantum widget engine; KDE does not use this package to change Kvantum Manager's active theme.
+
+Copy the complete [plasma/look-and-feel/Fmind/](plasma/look-and-feel/Fmind/) directory to `~/.local/share/plasma/look-and-feel/Fmind/`, preserving its metadata, defaults, colors, QML and previews. Select Fmind in System Settings → Global Theme and apply the available appearance components. The package selects Fmind colors, Plasma style, Aurorae decorations, fonts and startup splash, plus the Kvantum widget engine. It contains no desktop layout, wallpaper, icon or cursor selection and no remote package dependencies. Install its companion packages before applying it.
+
+The same package supports the Plasma 5 and 6 look-and-feel formats. To use only its startup screen, select Fmind in System Settings → Splash Screen. The splash shows dark text and a blue activity marker on white; the marker follows Plasma's stage changes without estimating a completion percentage. Its [package preview](plasma/look-and-feel/Fmind/contents/previews/preview.png) is a native rendering of the splash, not a screenshot of an entire desktop.
+
+KDE Frameworks 5.103 loads the package and defaults, and Plasma 5.27.5 completes its native KSplash test without warnings. The splash also renders in both Qt 5.15.8 and Qt 6.4.2 at multiple viewport sizes and scale factors. Full Global Theme application in a desktop session, a Plasma 6 package loader and the Plasma 6 KSplash process remain unverified. See [coverage](../../COVERAGE.md) for the tested boundaries.
+
 ## Bundle checklist
 
 The [free Dracula KDE directory](https://github.com/dracula/gtk/tree/master/kde) includes additional independent packages. Its blue/purple and translucent/solid variants are coverage references; Fmind uses one consistent light palette and opaque ordinary surfaces.
@@ -46,7 +56,7 @@ The [free Dracula KDE directory](https://github.com/dracula/gtk/tree/master/kde)
 - [x] Plasma desktop style, including opaque backgrounds and state assets.
 - [x] Aurorae window decorations.
 - [x] Kvantum widget theme.
-- [ ] Global themes and splash screens for Plasma 5 and 6.
+- [x] Global themes and splash screens for Plasma 5 and 6.
 - [ ] Plasma 5 lock-screen, logout and OSD components from the reference bundle.
 - [ ] Cursor theme.
 - [ ] SDDM login-screen theme.
@@ -55,4 +65,4 @@ The parent GTK catalog entry remains pending until its full bundle is implemente
 
 ## Maintenance
 
-Edit the native files directly. Keep the color groups in the application scheme and Plasma `colors` file aligned; the Plasma copy intentionally omits application color-effect groups. Keep Kvantum’s bundled `Fmind.colors` copy identical to the KDE application scheme. Update the Plasma package metadata version when changing its SVGs so Plasma can invalidate its cached assets. Checks isolate their configuration and caches, and never install themes into a user profile.
+Edit the native files directly. Keep the color groups in the application scheme and Plasma `colors` file aligned; the Plasma copy intentionally omits application color-effect groups. Keep Kvantum’s bundled `Fmind.colors` and the global theme’s `contents/colors` identical to the KDE application scheme. Refresh the global theme’s splash preview from a native QML render when its appearance changes. Update the Plasma package metadata version when changing its SVGs so Plasma can invalidate its cached assets. Checks isolate their configuration and caches, and never install themes into a user profile.

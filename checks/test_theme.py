@@ -68,6 +68,11 @@ class ThemeTests(unittest.TestCase):
         for path in sorted(source_files):
             if path.relative_to(ROOT).parts[0] not in app_names or not path.is_file():
                 continue
+            if path.suffix == ".png":
+                # Native package previews are raster captures; their source QML
+                # is checked below and their PNG structure in package tests.
+                self.assertEqual(path.read_bytes()[:8], b"\x89PNG\r\n\x1a\n", path)
+                continue
             # Signed decimal native colors (for example MATLAB's C-920588)
             # have dedicated decoders; a minus sign cannot prefix a hex color.
             colors = re.findall(r"(?i)(?<![\w-])#?([0-9a-f]{6})(?![\w])", path.read_text())

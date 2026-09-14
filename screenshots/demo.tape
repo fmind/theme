@@ -37,3 +37,5 @@ Type 'gg'
 Show
 Sleep 1s
 Screenshot markdown.png
+# VHS captures the next frame; keep recording after the final request.
+Sleep 500ms

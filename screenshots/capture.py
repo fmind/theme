@@ -161,7 +161,9 @@ printf '\\nSynthetic local demonstration\\n'
             source = work / name
             if not source.is_file():
                 raise RuntimeError(f"VHS did not produce {name}")
-            shutil.copyfile(source, ROOT / "screenshots" / name)
+        # Validate both outputs before replacing either retained screenshot.
+        for name in ("zellij.png", "markdown.png"):
+            shutil.copyfile(work / name, ROOT / "screenshots" / name)
         print("Captured code with search/selection, and Markdown")
 
 

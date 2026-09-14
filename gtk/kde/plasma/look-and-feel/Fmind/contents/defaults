@@ -1,0 +1,25 @@
+# https://userbase.kde.org/Plasma/Create_a_Global_Theme_Package
+[kdeglobals][KDE]
+widgetStyle=kvantum
+
+[kdeglobals][General]
+ColorScheme=Fmind
+font=Google Sans,10,-1,5,50,0,0,0,0,0
+fixed=Google Sans Code,10,-1,5,50,0,0,0,0,0
+smallestReadableFont=Google Sans,9,-1,5,50,0,0,0,0,0
+toolBarFont=Google Sans,10,-1,5,50,0,0,0,0,0
+menuFont=Google Sans,10,-1,5,50,0,0,0,0,0
+
+[kdeglobals][WM]
+activeFont=Google Sans,10,-1,5,50,0,0,0,0,0
+
+[plasmarc][Theme]
+name=Fmind
+
+[kwinrc][org.kde.kdecoration2]
+library=org.kde.kwin.aurorae
+theme=__aurorae__svg__Fmind
+
+[ksplashrc][KSplash]
+Theme=Fmind
+Engine=KSplashQML

@@ -26,7 +26,7 @@ Update the relevant row in each app batch. The snapshot is a fixed scope baselin
 | [Gnome Terminal](https://draculatheme.com/gnome-terminal) | Port shipped | [gnome-terminal](gnome-terminal/) |
 | [Visual Studio](https://draculatheme.com/visual-studio) | Pending | — |
 | [Netbeans](https://draculatheme.com/netbeans) | Port shipped | [netbeans](netbeans/) |
-| [GTK](https://draculatheme.com/gtk) | Pending | [GTK, shell/KDE styles, Kvantum and decorations; companion checklist](gtk/README.md#full-bundle-checklist) |
+| [GTK](https://draculatheme.com/gtk) | Pending | [GTK, shell/KDE styles, global theme and companions; checklist](gtk/README.md#full-bundle-checklist) |
 | [JetBrains](https://draculatheme.com/jetbrains) | Port shipped | [jetbrains](jetbrains/) |
 | [Sublime](https://draculatheme.com/sublime) | Port shipped | [sublime-text](sublime-text/) |
 | [Windows Terminal](https://draculatheme.com/windows-terminal) | Port shipped | [windows-terminal](windows-terminal/) |
