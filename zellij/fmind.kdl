@@ -1,6 +1,6 @@
 // https://zellij.dev/documentation/themes
 //
-// Blue tiles on light-grey chrome keep shortcut separators visible.
+// Pale blue separates inactive tiles from chrome; yellow identifies active tiles.
 
 themes {
     fmind {
@@ -22,7 +22,7 @@ themes {
         }
         ribbon_unselected {
             base "#202124"
-            background "#4285f4"
+            background "#d2e3fc"
             emphasis_0 "#202124"
             emphasis_1 "#202124"
             emphasis_2 "#202124"

@@ -1,0 +1,110 @@
+/**
+ * Fmind theme for PrismJS
+ * https://prismjs.com
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #202124;
+	background: #ffffff;
+	font-family: "Google Sans Code", monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+	tab-size: 4;
+	hyphens: none;
+}
+
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+	border: 1px solid #f1f3f4;
+	border-radius: 4px;
+}
+
+:not(pre) > code[class*="language-"] {
+	padding: .1em .3em;
+	border-radius: .3em;
+	white-space: normal;
+	background: #f1f3f4;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: #595d62;
+	font-style: italic;
+}
+
+.token.punctuation {
+	color: #595d62;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #a50e0e;
+}
+
+.token.boolean,
+.token.number {
+	color: #934900;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #0d652d;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #174ea6;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #174ea6;
+}
+
+.token.function,
+.token.class-name {
+	color: #174ea6;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #681da8;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}

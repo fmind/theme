@@ -1,0 +1,15 @@
+/* Fmind theme for LDoc */
+body {
+  background: #ffffff;
+  color: #202124;
+}
+a {
+  color: #174ea6;
+}
+#navigation {
+  background: #f1f3f4;
+}
+pre, code {
+  background: #f1f3f4;
+  color: #202124;
+}

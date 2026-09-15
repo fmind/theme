@@ -70,6 +70,7 @@ def main() -> None:
         for source in (ROOT / "checks/samples").glob("sample.*"):
             shutil.copyfile(source, work / source.name)
         (config / "bat/config").write_text('--theme="fmind"\n--paging=never\n')
+        (work / "preview.py").write_text("# Numbered preview\ncount = 42\nmessage = 'Ready'\nprint(message)\n")
         (work / "config.kdl").write_text('theme "fmind"\npane_frames true\ndefault_shell "fish"\n')
         (work / "shell.fish").write_text("""source ~/.config/fish/conf.d/theme.fish
 function fish_prompt
@@ -84,6 +85,7 @@ set_color green
 printf '✓ Readable selections\\n✓ Visible pane frames\\n✓ Google-inspired colours\\n'
 set_color normal
 printf '\\nSynthetic local demonstration\\n'
+bat --style=numbers --color=always preview.py
 """)
         (work / "layout.kdl").write_text("""layout {
     default_tab_template {

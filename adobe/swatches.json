@@ -1,0 +1,25 @@
+{
+  "name": "Fmind",
+  "swatches": [
+    { "name": "White", "hex": "#ffffff" },
+    { "name": "Light Gray", "hex": "#f1f3f4" },
+    { "name": "Gray", "hex": "#9aa0a6" },
+    { "name": "Dark Gray", "hex": "#595d62" },
+    { "name": "Charcoal", "hex": "#202124" },
+    { "name": "Dark Blue", "hex": "#174ea6" },
+    { "name": "Medium Blue", "hex": "#4285f4" },
+    { "name": "Light Blue", "hex": "#d2e3fc" },
+    { "name": "Dark Red", "hex": "#a50e0e" },
+    { "name": "Medium Red", "hex": "#ea4335" },
+    { "name": "Light Red", "hex": "#fad2cf" },
+    { "name": "Dark Orange", "hex": "#934900" },
+    { "name": "Orange", "hex": "#e37400" },
+    { "name": "Yellow", "hex": "#fbbc04" },
+    { "name": "Light Yellow", "hex": "#feefc3" },
+    { "name": "Dark Green", "hex": "#0d652d" },
+    { "name": "Medium Green", "hex": "#34a853" },
+    { "name": "Light Green", "hex": "#ceead6" },
+    { "name": "Purple", "hex": "#681da8" },
+    { "name": "Teal", "hex": "#00636d" }
+  ]
+}

@@ -77,8 +77,32 @@ class ThemeTests(unittest.TestCase):
                 # is checked below and their PNG structure in package tests.
                 self.assertEqual(path.read_bytes()[:8], b"\x89PNG\r\n\x1a\n", path)
                 continue
-            # Signed decimal native colors (for example MATLAB's C-920588)
-            # have dedicated decoders; a minus sign cannot prefix a hex color.
+            if path == ROOT / "adobe/Fmind.ase":
+                # Every named RGB block is decoded by test_adobe_swatches.
+                self.assertEqual(path.read_bytes()[:4], b"ASEF", path)
+                continue
+            if (
+                path.suffix == ".tpl"
+                or path.parent.name
+                in (
+                    "plsql-developer",
+                    "unreal-engine",
+                    "editplus",
+                    "beyond-compare-4",
+                    "wolfram-notebooks",
+                    "metaeditor",
+                    "ltspice",
+                    "delphi",
+                    "solidworks",
+                    "visual-basic-6",
+                    "texshop",
+                )
+                or "mindnode" in str(path)
+            ):
+                # MetaTrader 5, PL/SQL Developer, MindNode, Unreal Engine, EditPlus, Beyond Compare, MetaEditor,
+                # LTSpice, Delphi, SolidWorks, Visual Basic 6 and TeXShop store custom registry/binary/COLORREF formats;
+                # decoded and checked by dedicated catalog port tests.
+                continue
             colors = re.findall(r"(?i)(?<![\w-])#?([0-9a-f]{6})(?![\w])", path.read_text())
             with self.subTest(path=path.relative_to(ROOT)):
                 self.assertLessEqual({f"#{c.lower()}" for c in colors}, set(PALETTE["official"] + PALETTE["custom"]))
@@ -93,7 +117,7 @@ class ThemeTests(unittest.TestCase):
             re.findall(r'terminal_color_\d+ = "(#[\da-f]{6})"', nvim),
             [color for _, color in slots],
         )
-        self.assertRegex(content, r"(?m)^minimum-contrast = 1$")
+        self.assertRegex(content, r"(?m)^minimum-contrast = 4\.5$")
         self.assertGreaterEqual(contrast(PALETTE["text"], PALETTE["ground"]), 9)
         self.assertGreaterEqual(contrast(PALETTE["text"], PALETTE["surfaces"]["selection"]), 9)
 

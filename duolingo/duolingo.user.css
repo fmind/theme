@@ -1,0 +1,17 @@
+/* ==UserStyle==
+@name           Fmind Duolingo
+@namespace      github.com/fmind/theme
+@version        1.0.0
+@description    Fmind theme for Duolingo
+@author         Médéric Hurier
+==/UserStyle== */
+
+@-moz-document domain("duolingo.com") {
+  body {
+    background-color: #ffffff !important;
+    color: #202124 !important;
+  }
+  a {
+    color: #174ea6 !important;
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Fmind",
+  "identifier": "com.fmind.theme",
+  "fontSize": 11,
+  "backgroundColor": {
+    "hexValue": "ffffff",
+    "alpha": 1,
+    "version": 3
+  },
+  "textColor": {
+    "hexValue": "202124",
+    "alpha": 1,
+    "version": 3
+  },
+  "addedColor": {
+    "hexValue": "0d652d",
+    "version": 3,
+    "alpha": 1
+  },
+  "deletedColor": {
+    "hexValue": "a50e0e",
+    "version": 3,
+    "alpha": 1
+  }
+}

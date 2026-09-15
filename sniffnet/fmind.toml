@@ -1,0 +1,10 @@
+# Fmind theme for Sniffnet
+[palette]
+primary = "#174ea6"
+secondary = "#00636d"
+outgoing = "#0d652d"
+starred = "#fbbc04"
+text_headers = "#202124"
+text_body = "#202124"
+round_borders = "#9aa0a6"
+round_containers = "#f1f3f4"

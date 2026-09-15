@@ -1,0 +1,5 @@
+name: Fmind
+parent: classic
+windowBackground: #ffffff
+windowForeground: #202124
+accent: #174ea6

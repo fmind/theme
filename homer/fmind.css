@@ -1,0 +1,12 @@
+/* Homer Fmind light dashboard theme */
+
+:root {
+  --background: #ffffff;
+  --card-background: #f1f3f4;
+  --text: #202124;
+  --text-header: #202124;
+  --text-title: #174ea6;
+  --text-subtitle: #595d62;
+  --card-shadow: none;
+  --link-hover: #174ea6;
+}

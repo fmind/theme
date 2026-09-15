@@ -1,0 +1,11 @@
+# Fmind color scheme for LightPaper
+editor
+background: ffffff
+foreground: 202124
+caret: 4285f4
+
+editor-selection
+background: d2e3fc
+
+H1
+foreground: 174ea6

@@ -1,0 +1,9 @@
+/* Fmind theme for Signal Desktop */
+:root {
+  --color-surface: #ffffff;
+  --color-surface-secondary: #f1f3f4;
+  --color-text: #202124;
+  --color-text-secondary: #595d62;
+  --color-accent: #174ea6;
+  --color-border: #9aa0a6;
+}

@@ -7,7 +7,8 @@ background-opacity = 1
 selection-background = #d2e3fc
 selection-foreground = #202124
 # Text slots use dark shades; bright slots retain the same readable foregrounds.
-minimum-contrast = 1
+# Adjust otherwise unreadable ANSI foreground/background combinations.
+minimum-contrast = 4.5
 palette = 0=#202124
 palette = 1=#a50e0e
 palette = 2=#0d652d

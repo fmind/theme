@@ -1,0 +1,26 @@
+<key name="Colors">
+  <key name="Fmind">
+    <value name="TextColorIdx" type="hex" data="10"/>
+    <value name="BackColorIdx" type="hex" data="1e"/>
+    <value name="PopTextColorIdx" type="hex" data="10"/>
+    <value name="PopBackColorIdx" type="hex" data="1e"/>
+    <value name="ColorTable00" type="dword" data="00242120"/>
+    <value name="ColorTable01" type="dword" data="000e0ea5"/>
+    <value name="ColorTable02" type="dword" data="002d650d"/>
+    <value name="ColorTable03" type="dword" data="00004993"/>
+    <value name="ColorTable04" type="dword" data="00a64e17"/>
+    <value name="ColorTable05" type="dword" data="00a81d68"/>
+    <value name="ColorTable06" type="dword" data="006d6300"/>
+    <value name="ColorTable07" type="dword" data="00625d59"/>
+    <value name="ColorTable08" type="dword" data="00625d59"/>
+    <value name="ColorTable09" type="dword" data="000e0ea5"/>
+    <value name="ColorTable10" type="dword" data="002d650d"/>
+    <value name="ColorTable11" type="dword" data="00004993"/>
+    <value name="ColorTable12" type="dword" data="00a64e17"/>
+    <value name="ColorTable13" type="dword" data="00a81d68"/>
+    <value name="ColorTable14" type="dword" data="006d6300"/>
+    <value name="ColorTable15" type="dword" data="00242120"/>
+    <value name="ColorTable16" type="dword" data="00242120"/>
+    <value name="ColorTable30" type="dword" data="00ffffff"/>
+  </key>
+</key>

@@ -1,0 +1,11 @@
+{
+  "name": "Fmind",
+  "author": "M\u00e9d\u00e9ric Hurier",
+  "theme": {
+    "backgroundColor": "#ffffff",
+    "textColor": "#202124",
+    "accentColor": "#174ea6",
+    "selectionColor": "#d2e3fc",
+    "subtextColor": "#595d62"
+  }
+}

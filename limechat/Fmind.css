@@ -1,0 +1,14 @@
+body {
+  background-color: #ffffff;
+  color: #202124;
+  font-family: -apple-system, sans-serif;
+}
+
+.highlight {
+  background-color: #d2e3fc;
+  color: #202124;
+}
+
+.url {
+  color: #174ea6;
+}

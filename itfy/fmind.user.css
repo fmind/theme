@@ -1,0 +1,11 @@
+/* ==UserStyle==
+@name Fmind ITFY
+@namespace github.com/fmind/theme
+@version 1.0.0
+==/UserStyle== */
+:root {
+  --bg: #ffffff;
+  --fg: #202124;
+  --primary: #174ea6;
+  --surface: #f1f3f4;
+}

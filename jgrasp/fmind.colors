@@ -1,0 +1,10 @@
+# jGRASP Fmind light color scheme
+editor.background=#ffffff
+editor.foreground=#202124
+editor.cursor=#4285f4
+editor.selection=#d2e3fc
+syntax.keyword=#174ea6
+syntax.string=#0d652d
+syntax.comment=#595d62
+syntax.number=#934900
+syntax.type=#681da8

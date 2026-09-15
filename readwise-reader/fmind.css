@@ -1,0 +1,9 @@
+/* Fmind theme for Readwise Reader */
+:root {
+  --bg-main: #ffffff;
+  --text-main: #202124;
+  --text-secondary: #595d62;
+  --accent-main: #174ea6;
+  --surface-main: #f1f3f4;
+  --border-main: #9aa0a6;
+}

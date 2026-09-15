@@ -1,0 +1,14 @@
+{
+  "identifier": "org.fmind.theme.fmind",
+  "name": "Fmind",
+  "content_type": "SN|Theme",
+  "area": "themes",
+  "version": "1.0.0",
+  "description": "Fmind light theme for Standard Notes",
+  "url": "https://raw.githubusercontent.com/fmind/theme/main/standard-notes/dist/fmind.css",
+  "dock_icon": {
+    "type": "circle",
+    "background_color": "#174ea6",
+    "border_color": "#ffffff"
+  }
+}

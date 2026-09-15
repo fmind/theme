@@ -1,0 +1,16 @@
+:root {
+  --primary: #174ea6;
+  --text-norm: #202124;
+  --text-weak: #595d62;
+  --background-norm: #ffffff;
+  --background-weak: #f1f3f4;
+  --border-norm: #f1f3f4;
+  --signal-success: #0d652d;
+  --signal-danger: #a50e0e;
+  --signal-warning: #934900;
+}
+
+body {
+  background-color: var(--background-norm);
+  color: var(--text-norm);
+}

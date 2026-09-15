@@ -7,7 +7,7 @@ description: >-
 ground: &white "#ffffff"
 text: &text "#202124"
 cursor: "#4285f4"
-gutter: "#9aa0a6"
+gutter: "#595d62"
 # Secondary syntax shares colours deliberately; structure supplies the detail.
 roles:
   variable: *text
@@ -54,6 +54,9 @@ surfaces:
   minus: "#fad2cf"
   change: "#feefc3"
   selection: "#d2e3fc"
+  search: "#feefc3"
+  search_current: "#fbbc04"
+  ribbon_inactive: "#d2e3fc"
   plus_emph: "#ceead6"
   minus_emph: "#fad2cf"
   change_emph: "#fbbc04"

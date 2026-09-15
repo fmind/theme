@@ -1,0 +1,27 @@
+body {
+  background-color: #ffffff;
+  color: #202124;
+  font-family: "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #174ea6;
+  border-bottom: 1px solid #f1f3f4;
+}
+a {
+  color: #174ea6;
+}
+code, pre {
+  font-family: "Google Sans Code", monospace;
+  background-color: #f1f3f4;
+  color: #202124;
+}
+blockquote {
+  border-left: 4px solid #174ea6;
+  color: #595d62;
+  background-color: #f1f3f4;
+}
+hr {
+  border: 0;
+  border-top: 1px solid #9aa0a6;
+}

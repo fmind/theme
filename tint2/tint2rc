@@ -1,0 +1,16 @@
+# Fmind tint2 theme
+background_color = #ffffff 100
+border_color = #f1f3f4 100
+panel_background_id = 0
+
+# Taskbar
+taskbar_background_id = 0
+task_active_background_id = 0
+task_text_color = #202124 100
+task_active_text_color = #174ea6 100
+task_iconified_text_color = #595d62 100
+
+# Clock
+time1_font = Google Sans 10
+time1_format = %H:%M
+clock_font_color = #202124 100

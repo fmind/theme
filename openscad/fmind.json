@@ -1,0 +1,10 @@
+{
+  "name": "Fmind",
+  "background": "#ffffff",
+  "text": "#202124",
+  "keyword": "#174ea6",
+  "number": "#934900",
+  "string": "#0d652d",
+  "comment": "#595d62",
+  "selection": "#d2e3fc"
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>background</key>
+	<string>#ffffff</string>
+	<key>text</key>
+	<string>#202124</string>
+	<key>selection</key>
+	<string>#d2e3fc</string>
+	<key>cursor</key>
+	<string>#4285f4</string>
+	<key>comments</key>
+	<string>#595d62</string>
+	<key>keywords</key>
+	<string>#174ea6</string>
+	<key>strings</key>
+	<string>#0d652d</string>
+	<key>numbers</key>
+	<string>#934900</string>
+	<key>functions</key>
+	<string>#174ea6</string>
+	<key>variables</key>
+	<string>#202124</string>
+	<key>types</key>
+	<string>#681da8</string>
+</dict>
+</plist>

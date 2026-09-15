@@ -1,0 +1,11 @@
+/* Ulauncher Fmind Light Theme */
+
+@define-color bg_color #ffffff;
+@define-color text_color #202124;
+@define-color selected_bg_color #d2e3fc;
+@define-color selected_text_color #202124;
+@define-color border_color #9aa0a6;
+@define-color input_color #202124;
+@define-color input_bg #ffffff;
+@define-color app_result_color #202124;
+@define-color app_desc_color #595d62;

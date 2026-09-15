@@ -1,0 +1,29 @@
+body {
+  color: #202124;
+  background-color: #ffffff;
+  font-family: "Google Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+a {
+  color: #174ea6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #202124;
+}
+
+code, pre {
+  font-family: "Google Sans Code", monospace;
+  background-color: #f1f3f4;
+  color: #202124;
+}
+
+blockquote {
+  color: #595d62;
+  border-left: 4px solid #9aa0a6;
+}

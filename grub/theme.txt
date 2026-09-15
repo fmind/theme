@@ -1,0 +1,29 @@
+# GRUB 2 Fmind light theme
+title-text: ""
+desktop-color: "#ffffff"
+desktop-image: ""
+terminal-font: "Google Sans Regular 16"
+terminal-box: ""
+
++ boot_menu {
+  left = 20%
+  top = 30%
+  width = 60%
+  height = 50%
+  item_color = "#202124"
+  selected_item_color = "#174ea6"
+  item_height = 32
+  item_spacing = 8
+}
+
++ progress_bar {
+  id = "__timeout__"
+  left = 20%
+  top = 85%
+  width = 60%
+  height = 16
+  text_color = "#202124"
+  bg_color = "#f1f3f4"
+  fg_color = "#174ea6"
+  border_color = "#9aa0a6"
+}

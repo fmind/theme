@@ -1,0 +1,9 @@
+name Fmind
+
+button_normal             #f1f3f4
+button_hover              #d2e3fc
+button_pressed            #ceead6
+button_text               #202124
+window_background         #ffffff
+window_title              #174ea6
+window_border             #f1f3f4

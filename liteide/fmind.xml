@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme version="1.0" name="Fmind">
+  <style name="Text" foreground="#202124" background="#ffffff"/>
+  <style name="Extra" foreground="#595d62" background="#ffffff"/>
+  <style name="Selection" background="#d2e3fc"/>
+  <style name="CurrentLine" background="#f1f3f4"/>
+  <style name="IndentLine" foreground="#f1f3f4"/>
+  <style name="Keyword" foreground="#174ea6"/>
+  <style name="DataType" foreground="#174ea6"/>
+  <style name="Decimal" foreground="#174ea6"/>
+  <style name="String" foreground="#0d652d"/>
+  <style name="Comment" foreground="#595d62"/>
+</style-scheme>

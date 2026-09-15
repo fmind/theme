@@ -1,0 +1,11 @@
+name: Fmind
+description: Light theme for Drafts
+author: Fmind
+isDark: false
+colors:
+  editor:
+    foreground: "#202124"
+    background: "#ffffff"
+    heading: "#174ea6"
+    comment: "#595d62"
+    selection: "#d2e3fc"

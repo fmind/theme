@@ -1,0 +1,10 @@
+{
+  "name": "Fmind",
+  "colors": {
+    "background": "#ffffff",
+    "foreground": "#202124",
+    "accent": "#174ea6",
+    "selection": "#d2e3fc",
+    "border": "#9aa0a6"
+  }
+}

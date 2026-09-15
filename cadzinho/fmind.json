@@ -1,0 +1,9 @@
+{
+  "name": "Fmind",
+  "background": "#ffffff",
+  "foreground": "#202124",
+  "grid": "#f1f3f4",
+  "cursor": "#174ea6",
+  "selection": "#d2e3fc",
+  "snap": "#0d652d"
+}

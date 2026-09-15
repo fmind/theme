@@ -1,0 +1,12 @@
+{
+  "name": "Fmind",
+  "author": "M\u00e9d\u00e9ric Hurier",
+  "appearance": "light",
+  "colors": {
+    "background": "#ffffff",
+    "text": "#202124",
+    "accent": "#174ea6",
+    "surface": "#f1f3f4",
+    "selection": "#d2e3fc"
+  }
+}

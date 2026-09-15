@@ -1,0 +1,15 @@
+{
+  "light": {
+    "palette": {
+      "Base": "#ffffff",
+      "Text": "#202124",
+      "Window": "#ffffff",
+      "WindowText": "#202124",
+      "Button": "#f1f3f4",
+      "ButtonText": "#202124",
+      "Highlight": "#d2e3fc",
+      "HighlightedText": "#202124",
+      "Link": "#174ea6"
+    }
+  }
+}

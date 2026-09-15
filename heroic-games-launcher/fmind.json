@@ -1,0 +1,12 @@
+{
+  "name": "Fmind",
+  "colors": {
+    "background": "#ffffff",
+    "navbarBackground": "#f1f3f4",
+    "primary": "#174ea6",
+    "body": "#202124",
+    "text": "#202124",
+    "accent": "#174ea6",
+    "cardBackground": "#f1f3f4"
+  }
+}

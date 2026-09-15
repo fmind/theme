@@ -1,0 +1,11 @@
+{
+  "name": "Fmind",
+  "colors": {
+    "windowBackground": "#ffffff",
+    "windowForeground": "#202124",
+    "windowMuted": "#595d62",
+    "accent": "#174ea6",
+    "selection": "#d2e3fc",
+    "surface": "#f1f3f4"
+  }
+}

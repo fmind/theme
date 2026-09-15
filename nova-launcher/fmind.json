@@ -1,0 +1,15 @@
+{
+  "theme": "Fmind",
+  "author": "Médéric Hurier",
+  "colors": {
+    "background": "#ffffff",
+    "card_background": "#f1f3f4",
+    "primary_text": "#202124",
+    "secondary_text": "#595d62",
+    "accent": "#174ea6",
+    "folder_background": "#ffffff",
+    "dock_background": "#f1f3f4",
+    "search_bar_background": "#f1f3f4",
+    "search_bar_text": "#202124"
+  }
+}

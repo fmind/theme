@@ -1,0 +1,29 @@
+/**
+ * @name Fmind
+ * @description A crisp light theme for Discord using the Fmind color palette.
+ * @author Fmind
+ * @version 1.0.0
+ * @source https://github.com/fmind/theme
+ */
+
+:root {
+  --background-primary: #ffffff;
+  --background-secondary: #f1f3f4;
+  --background-secondary-alt: #ffffff;
+  --background-tertiary: #f1f3f4;
+  --background-floating: #ffffff;
+  --channeltextarea-background: #ffffff;
+  --text-normal: #202124;
+  --text-muted: #595d62;
+  --text-link: #174ea6;
+  --header-primary: #202124;
+  --header-secondary: #595d62;
+  --interactive-normal: #202124;
+  --interactive-hover: #174ea6;
+  --interactive-active: #174ea6;
+  --interactive-muted: #9aa0a6;
+  --brand-experiment: #174ea6;
+  --status-positive: #0d652d;
+  --status-warning: #934900;
+  --status-danger: #a50e0e;
+}

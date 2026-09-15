@@ -1,0 +1,8 @@
+/* Fmind theme for PeerTube */
+:root {
+  --mainColor: #174ea6;
+  --mainBackgroundColor: #ffffff;
+  --menuBackgroundColor: #f1f3f4;
+  --mainForegroundColor: #202124;
+  --subForegroundColor: #595d62;
+}

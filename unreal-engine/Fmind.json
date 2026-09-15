@@ -1,0 +1,24 @@
+{
+	"Version": 1,
+	"Id": "C874A66B47C72150F0FEAEAA702D4718",
+	"DisplayName": "Fmind",
+	"Colors":
+	{
+		"EStyleColor::Black": "(R=0.012983,G=0.013658,B=0.015996,A=1.000000)",
+		"EStyleColor::Background": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+		"EStyleColor::Title": "(R=0.012983,G=0.013658,B=0.015996,A=1.000000)",
+		"EStyleColor::WindowBorder": "(R=0.693872,G=0.708376,B=0.737911,A=1.000000)",
+		"EStyleColor::Foldout": "(R=0.012983,G=0.013658,B=0.015996,A=1.000000)",
+		"EStyleColor::Input": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+		"EStyleColor::InputOutline": "(R=0.693872,G=0.708376,B=0.737911,A=1.000000)",
+		"EStyleColor::Recessed": "(R=0.887923,G=0.904661,B=0.913098,A=1.000000)",
+		"EStyleColor::Panel": "(R=0.887923,G=0.904661,B=0.913098,A=1.000000)",
+		"EStyleColor::Header": "(R=0.887923,G=0.904661,B=0.913098,A=1.000000)",
+		"EStyleColor::Dropdown": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+		"EStyleColor::Foreground": "(R=0.012983,G=0.013658,B=0.015996,A=1.000000)",
+		"EStyleColor::ForegroundInverted": "(R=1.000000,G=1.000000,B=1.000000,A=1.000000)",
+		"EStyleColor::ForegroundHeader": "(R=0.012983,G=0.013658,B=0.015996,A=1.000000)",
+		"EStyleColor::Highlight": "(R=0.007499,G=0.076185,B=0.386429,A=1.000000)",
+		"EStyleColor::Primary": "(R=0.007499,G=0.076185,B=0.386429,A=1.000000)"
+	}
+}

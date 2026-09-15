@@ -1,0 +1,17 @@
+/* ==UserStyle==
+@name           Fmind CodePen
+@namespace      github.com/fmind/theme
+@version        1.0.0
+@description    Fmind theme for CodePen
+@author         Médéric Hurier
+==/UserStyle== */
+
+@-moz-document domain("codepen.io") {
+  body {
+    background-color: #ffffff !important;
+    color: #202124 !important;
+  }
+  header {
+    background-color: #f1f3f4 !important;
+  }
+}

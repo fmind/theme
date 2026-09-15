@@ -1,0 +1,30 @@
+/* Fmind theme for Roam Research */
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #202124;
+  --header-color: #174ea6;
+  --link-color: #174ea6;
+  --highlight-color: #d2e3fc;
+  --border-color: #f1f3f4;
+  --panel-color: #f1f3f4;
+  --muted-color: #595d62;
+}
+
+body, .roam-body-main {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.roam-topbar {
+  background-color: var(--panel-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.rm-page-ref {
+  color: var(--link-color);
+}
+
+.rm-highlight {
+  background-color: var(--highlight-color);
+}

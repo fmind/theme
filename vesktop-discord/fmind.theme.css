@@ -1,0 +1,21 @@
+/**
+ * @name Fmind
+ * @author Médéric Hurier
+ * @description Fmind light theme for Vesktop / Discord
+ * @version 1.0.0
+ */
+
+:root {
+  --background-primary: #ffffff;
+  --background-secondary: #f1f3f4;
+  --background-tertiary: #ffffff;
+  --channeltextarea-background: #f1f3f4;
+  --text-normal: #202124;
+  --text-muted: #595d62;
+  --accent-color: #174ea6;
+  --brand-experiment: #174ea6;
+  --interactive-normal: #202124;
+  --interactive-hover: #174ea6;
+  --interactive-active: #174ea6;
+  --background-modifier-selected: #d2e3fc;
+}

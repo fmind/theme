@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Theme Name="Fmind">
+  <Colors>
+    <Color Name="Background" Value="#ffffff"/>
+    <Color Name="Foreground" Value="#202124"/>
+    <Color Name="Primary" Value="#174ea6"/>
+    <Color Name="Secondary" Value="#f1f3f4"/>
+    <Color Name="Border" Value="#9aa0a6"/>
+  </Colors>
+</Theme>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ableton MajorVersion="5" MinorVersion="11.0_434" SchemaChangeCount="4" Creator="Ableton Live 11.0">
+  <SkinManager>
+    <ControlBackground Value="#ffffff" />
+    <ControlForeground Value="#202124" />
+    <SurfaceArea Value="#f1f3f4" />
+    <SelectionBackground Value="#d2e3fc" />
+    <SelectionForeground Value="#202124" />
+    <AccentColor Value="#174ea6" />
+  </SkinManager>
+</Ableton>

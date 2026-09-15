@@ -1,0 +1,9 @@
+/* Fmind theme for DeepSeek web */
+:root {
+  --ds-bg: #ffffff;
+  --ds-surface: #f1f3f4;
+  --ds-text: #202124;
+  --ds-secondary: #595d62;
+  --ds-primary: #174ea6;
+  --ds-border: #9aa0a6;
+}

@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #174ea6;
+  --secondary-color: #595d62;
+  --body-bg: #ffffff;
+  --text-color: #202124;
+  --heading-color: #202124;
+  --muted-color: #595d62;
+  --control-bg: #f1f3f4;
+  --control-color: #202124;
+}
+
+body {
+  background-color: var(--body-bg);
+  color: var(--text-color);
+}

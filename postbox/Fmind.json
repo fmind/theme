@@ -1,0 +1,8 @@
+[
+  {
+    "key": "fmindTheme",
+    "name": "Fmind",
+    "extra": "light,color",
+    "body": "\n--toolbar-top: #ffffff;\n--toolbar-bottom: #f1f3f4;\n--toolbar-inactive: #f1f3f4;\n--toolbar-tab-active: #d2e3fc;\n--toolbar-tab-inactive: #f1f3f4;\n--toolbar-button-default: #202124;\n--toolbar-button-active: #174ea6;\n--toolbar-text: #202124;\n--toolbar-border: #f1f3f4;\n"
+  }
+]

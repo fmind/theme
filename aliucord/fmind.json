@@ -1,0 +1,24 @@
+{
+  "name": "Fmind",
+  "description": "Fmind light theme for Aliucord",
+  "author": "Médéric Hurier",
+  "version": "1.0.0",
+  "color_palette": {
+    "background_primary": "#ffffff",
+    "background_secondary": "#f1f3f4",
+    "background_secondary_alt": "#f1f3f4",
+    "background_tertiary": "#f1f3f4",
+    "background_floating": "#ffffff",
+    "background_mobile_primary": "#ffffff",
+    "background_mobile_secondary": "#f1f3f4",
+    "channeltextarea_background": "#f1f3f4",
+    "text_normal": "#202124",
+    "text_muted": "#595d62",
+    "interactive_normal": "#202124",
+    "interactive_hover": "#174ea6",
+    "interactive_active": "#174ea6",
+    "interactive_muted": "#9aa0a6",
+    "brand": "#174ea6",
+    "brand_new": "#174ea6"
+  }
+}

@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="960" height="400" viewBox="0 0 960 400" role="img" aria-labelledby="title desc">
 <title id="title">Fmind palette: colors and their roles</title>
-<desc id="desc">Background: #FFFFFF; Panels: #F1F3F4; Body / punctuation: #202124; Comments (custom): #595D62; Borders: #9AA0A6; Keywords / calls: #174EA6; Strings / success: #0D652D; Errors / deletions: #A50E0E; Literals (custom): #934900; Types (custom): #681DA8; Information (custom): #00636D; Blue fill / cursor: #4285F4; Green fill: #34A853; Cut marker: #EA4335; Search fill: #E37400; Active / changed word: #FBBC04; Selection: #D2E3FC; Added background: #CEEAD6; Deleted background: #FAD2CF; Changed background: #FEEFC3</desc>
+<desc id="desc">Background: #FFFFFF; Panels: #F1F3F4; Body / punctuation: #202124; Muted text / controls: #595D62; Decorative borders: #9AA0A6; Keywords / calls: #174EA6; Strings / success: #0D652D; Errors / deletions: #A50E0E; Literals (custom): #934900; Types (custom): #681DA8; Information (custom): #00636D; Blue fill / cursor: #4285F4; Green fill: #34A853; Cut marker: #EA4335; Warning accent: #E37400; Active / current match: #FBBC04; Selection: #D2E3FC; Added background: #CEEAD6; Deleted background: #FAD2CF; Change / search: #FEEFC3</desc>
 <rect width="960" height="400" fill="#ffffff"/>
 <rect x="12" y="16" width="40" height="48" fill="#FFFFFF" stroke="#9AA0A6"/>
 <text x="64" y="33" fill="#202124" font-family="Google Sans, sans-serif" font-size="15">Background</text>
@@ -12,10 +12,10 @@
 <text x="544" y="33" fill="#202124" font-family="Google Sans, sans-serif" font-size="15">Body / punctuation</text>
 <text x="544" y="55" fill="#202124" font-family="Google Sans Code, monospace" font-size="14">#202124</text>
 <rect x="732" y="16" width="40" height="48" fill="#595D62" stroke="#9AA0A6"/>
-<text x="784" y="33" fill="#202124" font-family="Google Sans, sans-serif" font-size="15">Comments (custom)</text>
+<text x="784" y="33" fill="#202124" font-family="Google Sans, sans-serif" font-size="15">Muted text / controls</text>
 <text x="784" y="55" fill="#202124" font-family="Google Sans Code, monospace" font-size="14">#595D62</text>
 <rect x="12" y="96" width="40" height="48" fill="#9AA0A6" stroke="#9AA0A6"/>
-<text x="64" y="113" fill="#202124" font-family="Google Sans, sans-serif" font-size="15">Borders</text>
+<text x="64" y="113" fill="#202124" font-family="Google Sans, sans-serif" font-size="15">Decorative borders</text>
 <text x="64" y="135" fill="#202124" font-family="Google Sans Code, monospace" font-size="14">#9AA0A6</text>
 <rect x="252" y="96" width="40" height="48" fill="#174EA6" stroke="#9AA0A6"/>
 <text x="304" y="113" fill="#202124" font-family="Google Sans, sans-serif" font-size="15">Keywords / calls</text>
@@ -45,10 +45,10 @@
 <text x="304" y="273" fill="#202124" font-family="Google Sans, sans-serif" font-size="15">Cut marker</text>
 <text x="304" y="295" fill="#202124" font-family="Google Sans Code, monospace" font-size="14">#EA4335</text>
 <rect x="492" y="256" width="40" height="48" fill="#E37400" stroke="#9AA0A6"/>
-<text x="544" y="273" fill="#202124" font-family="Google Sans, sans-serif" font-size="15">Search fill</text>
+<text x="544" y="273" fill="#202124" font-family="Google Sans, sans-serif" font-size="15">Warning accent</text>
 <text x="544" y="295" fill="#202124" font-family="Google Sans Code, monospace" font-size="14">#E37400</text>
 <rect x="732" y="256" width="40" height="48" fill="#FBBC04" stroke="#9AA0A6"/>
-<text x="784" y="273" fill="#202124" font-family="Google Sans, sans-serif" font-size="15">Active / changed word</text>
+<text x="784" y="273" fill="#202124" font-family="Google Sans, sans-serif" font-size="15">Active / current match</text>
 <text x="784" y="295" fill="#202124" font-family="Google Sans Code, monospace" font-size="14">#FBBC04</text>
 <rect x="12" y="336" width="40" height="48" fill="#D2E3FC" stroke="#9AA0A6"/>
 <text x="64" y="353" fill="#202124" font-family="Google Sans, sans-serif" font-size="15">Selection</text>
@@ -60,6 +60,6 @@
 <text x="544" y="353" fill="#202124" font-family="Google Sans, sans-serif" font-size="15">Deleted background</text>
 <text x="544" y="375" fill="#202124" font-family="Google Sans Code, monospace" font-size="14">#FAD2CF</text>
 <rect x="732" y="336" width="40" height="48" fill="#FEEFC3" stroke="#9AA0A6"/>
-<text x="784" y="353" fill="#202124" font-family="Google Sans, sans-serif" font-size="15">Changed background</text>
+<text x="784" y="353" fill="#202124" font-family="Google Sans, sans-serif" font-size="15">Change / search</text>
 <text x="784" y="375" fill="#202124" font-family="Google Sans Code, monospace" font-size="14">#FEEFC3</text>
 </svg>

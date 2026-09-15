@@ -1,0 +1,16 @@
+:root {
+  --fmind-bg: #ffffff;
+  --fmind-panel: #f1f3f4;
+  --fmind-fg: #202124;
+  --fmind-border: #9aa0a6;
+  --fmind-comment: #595d62;
+  --fmind-blue: #174ea6;
+  --fmind-cyan: #00636d;
+  --fmind-green: #0d652d;
+  --fmind-orange: #934900;
+  --fmind-pink: #a50e0e;
+  --fmind-purple: #681da8;
+  --fmind-red: #a50e0e;
+  --fmind-yellow: #fbbc04;
+  --fmind-selection: #d2e3fc;
+}

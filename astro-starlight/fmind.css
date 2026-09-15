@@ -1,0 +1,10 @@
+:root[data-theme="light"] {
+  --sl-color-accent: #174ea6;
+  --sl-color-bg: #ffffff;
+  --sl-color-bg-nav: #f1f3f4;
+  --sl-color-white: #202124;
+  --sl-color-gray-1: #595d62;
+  --sl-color-gray-5: #f1f3f4;
+  --sl-color-gray-6: #ffffff;
+  --sl-color-hairline: #9aa0a6;
+}

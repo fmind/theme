@@ -1,0 +1,17 @@
+/* ==UserStyle==
+@name           Fmind ChatGPT
+@namespace      github.com/fmind/theme
+@version        1.0.0
+@description    Fmind light theme for ChatGPT
+@author         Médéric Hurier
+==/UserStyle== */
+
+@-moz-document domain("chatgpt.com"), domain("chat.openai.com") {
+  :root {
+    --main-surface-primary: #ffffff;
+    --main-surface-secondary: #f1f3f4;
+    --text-primary: #202124;
+    --text-secondary: #595d62;
+    --brand-primary: #174ea6;
+  }
+}

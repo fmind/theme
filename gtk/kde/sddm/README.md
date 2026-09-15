@@ -1,6 +1,6 @@
 # Fmind SDDM
 
-Implementation checkpoint: native greeter and final keyboard-dismissal validation remain unfinished. See [TODO.md](../../../TODO.md#resume-the-sddm-checkpoint-first) before treating this component as complete.
+Implementation checkpoint: native greeter and final keyboard-dismissal validation remain unfinished. See [TODO.md](../../../TODO.md#existing-desktop-checkpoint-secondary-priority) before treating this component as complete.
 
 A white SDDM login screen with user selection or manual usernames, password entry, desktop sessions, keyboard layouts, Caps Lock feedback, a clock, confirmed sleep/restart/shutdown actions, an on-screen keyboard and optional battery status. Authentication and session launch use SDDM's supplied interfaces. Empty passwords reach SDDM so the system's authentication policy decides whether they are valid.
 

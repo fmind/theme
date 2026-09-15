@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "base": "day",
+  "colors": {
+    "accent": "#174ea6",
+    "background": "#ffffff",
+    "navigation": "#ffffff",
+    "navigationText": "#202124",
+    "incomingBubble": "#f1f3f4",
+    "incomingText": "#202124",
+    "outgoingBubble": "#d2e3fc",
+    "outgoingText": "#202124"
+  }
+}

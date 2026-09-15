@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Produced by Beyond Compare 4 from Scooter Software -->
+<BCColors Version="2" MinVersion="2">
+	<TBcColors>
+		<ThemeMode Value="tmLight"/>
+	</TBcColors>
+	<TDirColors>
+		<BGColor Value="$FFFFFF"/>
+		<CenterGradient Value="True"/>
+		<ColoredFolders Value="True"/>
+		<DarkBGColor Value="$FFFFFF"/>
+	</TDirColors>
+</BCColors>

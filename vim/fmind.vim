@@ -49,13 +49,13 @@ highlight EndOfBuffer guifg=#595d62 guibg=#ffffff gui=NONE cterm=NONE
 highlight Visual guifg=NONE guibg=#d2e3fc gui=NONE cterm=NONE
 highlight VisualNOS guifg=NONE guibg=#d2e3fc gui=NONE cterm=NONE
 highlight Search guifg=#202124 guibg=#feefc3 gui=NONE cterm=NONE
-highlight IncSearch guifg=#202124 guibg=#fbbc04 gui=NONE cterm=NONE
-highlight CurSearch guifg=#202124 guibg=#fbbc04 gui=NONE cterm=NONE
+highlight IncSearch guifg=#202124 guibg=#fbbc04 gui=bold cterm=bold
+highlight CurSearch guifg=#202124 guibg=#fbbc04 gui=bold cterm=bold
 highlight MatchParen guifg=#202124 guibg=#feefc3 gui=NONE cterm=NONE
 highlight Pmenu guifg=#202124 guibg=#f1f3f4 gui=NONE cterm=NONE
 highlight PmenuSel guifg=#202124 guibg=#d2e3fc gui=NONE cterm=NONE
 highlight PmenuSbar guifg=NONE guibg=#f1f3f4 gui=NONE cterm=NONE
-highlight PmenuThumb guifg=NONE guibg=#9aa0a6 gui=NONE cterm=NONE
+highlight PmenuThumb guifg=NONE guibg=#595d62 gui=NONE cterm=NONE
 highlight StatusLine guifg=#202124 guibg=#d2e3fc gui=bold cterm=bold
 highlight StatusLineNC guifg=#595d62 guibg=#f1f3f4 gui=NONE cterm=NONE
 highlight StatusLineTerm guifg=#202124 guibg=#d2e3fc gui=NONE cterm=NONE

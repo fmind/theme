@@ -1,0 +1,16 @@
+/* Fmind theme for MkDocs Material / MkDocs */
+
+:root {
+  --md-primary-fg-color: #174ea6;
+  --md-primary-bg-color: #ffffff;
+  --md-default-fg-color: #202124;
+  --md-default-bg-color: #ffffff;
+  --md-code-fg-color: #202124;
+  --md-code-bg-color: #f1f3f4;
+  --md-code-hl-color: #d2e3fc;
+}
+
+body {
+  background-color: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+}

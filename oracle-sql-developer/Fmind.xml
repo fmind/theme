@@ -1,0 +1,13 @@
+<Item>
+   <Key>Fmind</Key>
+   <Value class="java.util.ArrayList">
+      <Item class="oracle.ide.ceditor.options.S2Style" name="base-plain-style" usepfg="false" frgb="-14671580" usepbg="false" brgb="-1" usepfont="false" font="0"/>
+      <Item class="oracle.ide.ceditor.options.S2Style" name="base-comment-style" usepfg="false" frgb="-10920606" usepbg="false" brgb="-1" usepfont="true" font="0"/>
+      <Item class="oracle.ide.ceditor.options.S2Style" name="base-keyword-style" usepfg="false" frgb="-15249754" usepbg="false" brgb="-1" usepfont="false" font="0"/>
+      <Item class="oracle.ide.ceditor.options.S2Style" name="base-string-style" usepfg="false" frgb="-15899347" usepbg="false" brgb="-1" usepfont="true" font="0"/>
+      <Item class="oracle.ide.ceditor.options.S2Style" name="base-number-style" usepfg="false" frgb="-7124736" usepbg="false" brgb="-1" usepfont="true" font="0"/>
+      <Item class="oracle.ide.ceditor.options.S2Style" name="base-identifier-style" usepfg="false" frgb="-14671580" usepbg="false" brgb="-1" usepfont="true" font="0"/>
+      <Item class="oracle.ide.ceditor.options.S2Style" name="base-operator-style" usepfg="false" frgb="-14671580" usepbg="false" brgb="-1" usepfont="true" font="0"/>
+      <Item class="oracle.ide.ceditor.options.S2Style" name="base-error-style" usepfg="false" frgb="-5960178" usepbg="false" brgb="-1" usepfont="true" font="0"/>
+   </Value>
+</Item>

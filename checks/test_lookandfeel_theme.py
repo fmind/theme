@@ -57,6 +57,24 @@ class LookAndFeelTests(unittest.TestCase):
             self.assertEqual(struct.unpack(">II", data[16:24]), (960, 540))
             self.assertIn(b"IEND", data[-12:])
 
+    def test_session_screens_and_osd_components(self):
+        lock = (THEME / "contents/lockscreen/LockScreen.qml").read_text()
+        self.assertIn('color: "#ffffff"', lock)
+        self.assertIn('font.family: "Google Sans"', lock)
+        self.assertIn("TextInput.Password", lock)
+        self.assertIn("Qt.ImhHiddenText", lock)
+
+        logout = (THEME / "contents/logout/Logout.qml").read_text()
+        self.assertIn('color: "#ffffff"', logout)
+        self.assertIn('font.family: "Google Sans"', logout)
+        for action in ("Suspend", "Restart", "Shut Down", "Log Out", "Cancel"):
+            self.assertIn(action, logout)
+
+        osd = (THEME / "contents/osd/Osd.qml").read_text()
+        self.assertIn('color: "#ffffff"', osd)
+        self.assertIn('font.family: "Google Sans"', osd)
+        self.assertIn("osdProgress", osd)
+
 
 if __name__ == "__main__":
     unittest.main()

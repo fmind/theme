@@ -47,11 +47,12 @@ frame > border, .frame, scrolledwindow, headerbar, notebook > header {
 
 button, button:backdrop, .osd button, .osd button:backdrop,
 entry, entry:backdrop, spinbutton, spinbutton:backdrop,
+spinbutton:not(.vertical), spinbutton:not(.vertical):backdrop,
 combobox button, combobox button:backdrop {
   color: #202124;
   background-image: none;
   background-color: #ffffff;
-  border-color: #9aa0a6;
+  border-color: #595d62;
   box-shadow: none;
 }
 
@@ -60,6 +61,7 @@ row:hover, modelbutton:hover, menuitem:hover, calendar.highlight {
   color: #202124;
   background-image: none;
   background-color: #f1f3f4;
+  border-color: #595d62;
 }
 
 button:active, button:checked, button:checked:hover,
@@ -117,12 +119,16 @@ button:disabled:backdrop:checked, button:disabled:backdrop:active {
   border-color: #9aa0a6;
 }
 
-button:focus, entry:focus, spinbutton:focus, combobox button:focus {
+button:focus, entry:focus, spinbutton:focus, spinbutton:not(.vertical):focus, combobox button:focus {
   border-color: #174ea6;
   outline-color: #174ea6;
   outline-style: solid;
   outline-width: 1px;
   outline-offset: -3px;
+}
+/* The inset keyboard focus ring must contrast with semantic button fills. */
+button.suggested-action:focus:not(:disabled), button.destructive-action:focus:not(:disabled) {
+  outline-color: #ffffff;
 }
 entry.error, entry.error:focus {
   color: #a50e0e;
@@ -180,23 +186,23 @@ button:link, button:visited {
   background-color: transparent;
 }
 
-check, radio, switch, switch slider,
-check:backdrop, radio:backdrop, switch:backdrop, switch:backdrop slider {
+check, radio, switch, switch slider, GtkSwitch,
+check:backdrop, radio:backdrop, switch:backdrop, switch:backdrop slider, GtkSwitch:backdrop {
   color: #202124;
   background-image: none;
   background-color: #ffffff;
-  border-color: #9aa0a6;
+  border-color: #595d62;
 }
 check:checked, check:indeterminate, radio:checked, radio:indeterminate,
 check:checked:hover, radio:checked:hover,
 check:checked:backdrop, radio:checked:backdrop,
-switch:checked, switch:checked:backdrop {
+switch:checked, switch:checked:backdrop, GtkSwitch:active {
   color: #174ea6;
   background-image: none;
   background-color: #d2e3fc;
   border-color: #174ea6;
 }
-check:disabled, radio:disabled, switch:disabled,
+check:disabled, radio:disabled, switch:disabled, GtkSwitch:disabled,
 check:disabled:backdrop, radio:disabled:backdrop, switch:disabled:backdrop {
   color: #595d62;
   background-image: none;
@@ -216,16 +222,16 @@ scrollbar, scrollbar:backdrop, scrollbar trough, scrollbar trough:backdrop {
   color: #202124;
   background-image: none;
   background-color: #ffffff;
-  border-color: #9aa0a6;
+  border-color: #595d62;
 }
 scale slider, scale slider:backdrop, scrollbar slider, scrollbar slider:backdrop {
   background-image: none;
-  background-color: #9aa0a6;
+  background-color: #595d62;
   border-color: #595d62;
 }
 scale slider:hover, scale slider:active, scrollbar slider:hover, scrollbar slider:active {
   background-image: none;
-  background-color: #595d62;
+  background-color: #174ea6;
 }
 scale highlight:disabled, progressbar progress:disabled {
   background-image: none;
@@ -299,4 +305,57 @@ infobar.error, .error {
 }
 textview.monospace, textview.monospace text, .monospace, .monospace * {
   font-family: "Google Sans Code";
+}
+
+/* GTK 3 pre-3.20 widget compatibility */
+GtkWindow, .window,
+.button, GtkButton,
+.entry, GtkEntry,
+GtkTextView, GtkTreeView, GtkTreeView.view,
+GtkMenuBar, GtkMenu, GtkToolbar, GtkHeaderBar,
+GtkNotebook, GtkStatusbar, GtkPopover, GtkScrolledWindow {
+  color: #202124;
+  background-image: none;
+  background-color: #ffffff;
+}
+.button:hover, GtkButton:hover {
+  color: #202124;
+  background-image: none;
+  background-color: #f1f3f4;
+}
+.button:active, GtkButton:active, .button:checked, GtkButton:checked {
+  color: #202124;
+  background-image: none;
+  background-color: #d2e3fc;
+}
+.button:disabled, GtkButton:disabled {
+  color: #595d62;
+  background-image: none;
+  background-color: #ffffff;
+}
+
+/* Application-specific GTK refinements */
+.nemo-window, .nemo-window .view,
+ThunarWindow, .thunar, .thunar .view,
+CajaNavigationWindow, .caja-side-pane .view,
+.geary-main-window, .conversation-frame,
+.granite-demo, .dynamic-notebook,
+.xfce4-panel, XfceNotifyWindow,
+.mate-panel-menu-bar, .budgie-panel, .budgie-popover,
+#lightdm-user-pass, .lightdm,
+UnityDecoration, UnityPanelWidget, .unity-force-quit {
+  color: #202124;
+  background-image: none;
+  background-color: #ffffff;
+}
+.nemo-places-sidebar, .thunar .sidebar, .caja-side-pane, .source-list {
+  color: #202124;
+  background-image: none;
+  background-color: #f1f3f4;
+}
+.nemo-places-sidebar:selected, .thunar .sidebar:selected,
+.caja-side-pane:selected, .source-list:selected {
+  color: #202124;
+  background-image: none;
+  background-color: #d2e3fc;
 }

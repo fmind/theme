@@ -1,0 +1,14 @@
+{
+  "name": "Fmind",
+  "label": "Fmind Light",
+  "authors": ["Médéric Hurier"],
+  "is_night": false,
+  "stylesheet": {
+    "background": "#ffffff",
+    "foreground": "#202124",
+    "accent": "#174ea6",
+    "key_background": "#f1f3f4",
+    "key_foreground": "#202124",
+    "key_pressed": "#d2e3fc"
+  }
+}

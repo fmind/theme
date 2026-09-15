@@ -1,0 +1,24 @@
+# Fmind theme for tlrc (tldr client)
+
+[style.title]
+color = "blue"
+bold = true
+
+[style.description]
+color = "black"
+
+[style.bullet]
+color = "bright_black"
+
+[style.example]
+color = "green"
+
+[style.url]
+color = "blue"
+underline = true
+
+[style.inline_code]
+color = "red"
+
+[style.placeholder]
+color = "cyan"

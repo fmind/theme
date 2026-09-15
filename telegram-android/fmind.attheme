@@ -1,0 +1,17 @@
+windowBackgroundWhite=#ffffff
+windowBackgroundWhiteBlackText=#202124
+windowBackgroundWhiteGrayText=#595d62
+windowBackgroundWhiteLinkText=#174ea6
+actionBarDefault=#ffffff
+actionBarDefaultTitle=#202124
+actionBarDefaultIcon=#202124
+chat_messagePanelBackground=#ffffff
+chat_messagePanelText=#202124
+chat_messagePanelHint=#595d62
+chat_messagePanelSend=#174ea6
+chat_inBubble=#f1f3f4
+chat_inText=#202124
+chat_inTimeText=#595d62
+chat_outBubble=#d2e3fc
+chat_outText=#202124
+chat_outTimeText=#595d62

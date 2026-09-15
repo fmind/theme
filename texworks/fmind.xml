@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TeXworks-syntax-rules>
+  <rule name="Comment" color="#595d62" italic="true"/>
+  <rule name="Control Sequence" color="#174ea6" bold="true"/>
+  <rule name="Special" color="#934900"/>
+  <rule name="Argument" color="#0d652d"/>
+</TeXworks-syntax-rules>

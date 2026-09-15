@@ -1,0 +1,12 @@
+{
+  "name": "Fmind",
+  "userInputBackgroundColor": "#ffffff",
+  "userInputTextColor": "#202124",
+  "searchResultsBackgroundColor": "#ffffff",
+  "searchResultsItemActiveBackgroundColor": "#d2e3fc",
+  "searchResultsItemActiveTextColor": "#202124",
+  "searchResultsItemNameTextColor": "#202124",
+  "searchResultsItemDescriptionTextColor": "#595d62",
+  "scrollbarBackgroundColor": "#f1f3f4",
+  "scrollbarForegroundColor": "#595d62"
+}

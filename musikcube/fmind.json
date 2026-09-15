@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "name": "Fmind",
+  "colors": {
+    "background": "#ffffff",
+    "foreground": "#202124",
+    "selection": "#d2e3fc",
+    "accent": "#174ea6",
+    "disabled": "#595d62",
+    "error": "#a50e0e"
+  }
+}

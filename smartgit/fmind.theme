@@ -1,0 +1,17 @@
+# Fmind theme for SmartGit
+preferredEditorTheme=light
+
+background1=#ffffff
+background1_win=#ffffff
+background1_osx=#ffffff
+foreground1=#202124
+foreground1_osx=#202124
+background2=#f1f3f4
+background2_win=#f1f3f4
+background2_osx=#f1f3f4
+foreground2=#202124
+foreground2_win=#202124
+foreground2_osx=#202124
+
+selection.background=#d2e3fc
+selection.foreground=#202124

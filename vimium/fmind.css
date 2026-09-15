@@ -1,0 +1,64 @@
+/* Vimium Fmind Light Theme */
+
+#vomnibar {
+  background-color: #ffffff;
+  border: 1px solid #9aa0a6;
+}
+
+#vomnibar input {
+  color: #202124;
+  background-color: #ffffff;
+  border: 1px solid #d2e3fc;
+}
+
+#vomnibar .vomnibarSearchArea {
+  background-color: #ffffff;
+  border-bottom: 1px solid #f1f3f4;
+}
+
+#vomnibar ul {
+  background-color: #ffffff;
+}
+
+#vomnibar li {
+  border-bottom: 1px solid #f1f3f4;
+}
+
+#vomnibar li .vomnibarTitle {
+  color: #202124;
+}
+
+#vomnibar li .vomnibarUrl {
+  color: #174ea6;
+}
+
+#vomnibar li .vomnibarMatch {
+  color: #934900;
+  font-weight: bold;
+}
+
+#vomnibar li.vomnibarSelected {
+  background-color: #d2e3fc;
+}
+
+div.vimiumReset.vimiumHUD {
+  background-color: #f1f3f4;
+  border: 1px solid #9aa0a6;
+  color: #202124;
+}
+
+div.vimiumReset.vimiumHUD span#hud-find-input,
+div.vimiumReset.vimiumHUD span#hud-match-count {
+  color: #174ea6;
+}
+
+div.vimiumReset.vimiumHintMarker,
+div.vimiumReset.vimiumNormalHintMarker {
+  background-color: #feefc3;
+  border: 1px solid #e37400;
+}
+
+div.vimiumReset.vimiumHintMarker span {
+  color: #202124;
+  font-weight: bold;
+}

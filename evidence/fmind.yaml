@@ -1,0 +1,6 @@
+appearance:
+  theme: light
+  primary: "#174ea6"
+  background: "#ffffff"
+  surface: "#f1f3f4"
+  text: "#202124"

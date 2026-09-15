@@ -1,0 +1,12 @@
+title: $:/palettes/Fmind
+name: Fmind
+tags: $:/tags/Palette
+description: Fmind light palette
+
+background: #ffffff
+foreground: #202124
+page-background: #ffffff
+sidebar-background: #f1f3f4
+primary: #174ea6
+muted-foreground: #595d62
+selection-background: #d2e3fc

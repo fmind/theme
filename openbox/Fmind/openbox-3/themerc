@@ -1,0 +1,31 @@
+# Openbox Fmind Light Theme
+
+# Menu
+menu.border.width: 1
+menu.border.color: #f1f3f4
+menu.separator.color: #f1f3f4
+
+menu.title.bg: flat solid
+menu.title.bg.color: #f1f3f4
+menu.title.text.color: #174ea6
+menu.title.text.justify: Center
+
+menu.items.bg: flat solid
+menu.items.bg.color: #ffffff
+menu.items.text.color: #202124
+
+menu.items.active.bg: flat solid
+menu.items.active.bg.color: #d2e3fc
+menu.items.active.text.color: #202124
+
+# Window
+window.active.border.color: #174ea6
+window.inactive.border.color: #f1f3f4
+
+window.active.title.bg: flat solid
+window.active.title.bg.color: #ffffff
+window.active.label.text.color: #202124
+
+window.inactive.title.bg: flat solid
+window.inactive.title.bg.color: #f1f3f4
+window.inactive.label.text.color: #595d62

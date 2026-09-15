@@ -1,0 +1,15 @@
+/* Fmind theme for Nitter */
+:root {
+  --bg: #ffffff;
+  --fg: #202124;
+  --accent: #174ea6;
+  --panel: #f1f3f4;
+  --border: #9aa0a6;
+}
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+}
+a {
+  color: var(--accent);
+}

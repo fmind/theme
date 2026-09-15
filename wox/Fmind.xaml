@@ -1,0 +1,9 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <SolidColorBrush x:Key="BaseBackground" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="BaseText" Color="#202124"/>
+    <SolidColorBrush x:Key="ItemSubText" Color="#595D62"/>
+    <SolidColorBrush x:Key="ItemSelectBackground" Color="#D2E3FC"/>
+    <SolidColorBrush x:Key="ItemSelectText" Color="#202124"/>
+    <SolidColorBrush x:Key="Border" Color="#9AA0A6"/>
+</ResourceDictionary>

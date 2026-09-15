@@ -1,0 +1,15 @@
+# Fmind style for Fluxbox
+window.title.focus.color: #ffffff
+window.title.unfocus.color: #f1f3f4
+window.label.focus.textColor: #202124
+window.label.unfocus.textColor: #595d62
+window.handle.focus.color: #ffffff
+window.grip.focus.color: #174ea6
+toolbar.color: #ffffff
+toolbar.textColor: #202124
+menu.title.color: #f1f3f4
+menu.title.textColor: #174ea6
+menu.frame.color: #ffffff
+menu.frame.textColor: #202124
+menu.hilite.color: #d2e3fc
+menu.hilite.textColor: #202124

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ooo:color-table xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svg="http://www.w3.org/2000/svg" xmlns:ooo="http://openoffice.org/2004/office">
+  <draw:color draw:name="White" draw:color="#ffffff"/>
+  <draw:color draw:name="Light Gray" draw:color="#f1f3f4"/>
+  <draw:color draw:name="Gray" draw:color="#9aa0a6"/>
+  <draw:color draw:name="Dark Gray" draw:color="#595d62"/>
+  <draw:color draw:name="Charcoal" draw:color="#202124"/>
+  <draw:color draw:name="Dark Blue" draw:color="#174ea6"/>
+  <draw:color draw:name="Medium Blue" draw:color="#4285f4"/>
+  <draw:color draw:name="Light Blue" draw:color="#d2e3fc"/>
+  <draw:color draw:name="Dark Red" draw:color="#a50e0e"/>
+  <draw:color draw:name="Medium Red" draw:color="#ea4335"/>
+  <draw:color draw:name="Light Red" draw:color="#fad2cf"/>
+  <draw:color draw:name="Dark Orange" draw:color="#934900"/>
+  <draw:color draw:name="Orange" draw:color="#e37400"/>
+  <draw:color draw:name="Yellow" draw:color="#fbbc04"/>
+  <draw:color draw:name="Light Yellow" draw:color="#feefc3"/>
+  <draw:color draw:name="Dark Green" draw:color="#0d652d"/>
+  <draw:color draw:name="Medium Green" draw:color="#34a853"/>
+  <draw:color draw:name="Light Green" draw:color="#ceead6"/>
+  <draw:color draw:name="Purple" draw:color="#681da8"/>
+  <draw:color draw:name="Teal" draw:color="#00636d"/>
+</ooo:color-table>

@@ -1,0 +1,23 @@
+# Fmind theme for presenterm
+default:
+  colors:
+    foreground: "#202124"
+    background: "#ffffff"
+headings:
+  h1:
+    colors:
+      foreground: "#174ea6"
+  h2:
+    colors:
+      foreground: "#174ea6"
+  h3:
+    colors:
+      foreground: "#174ea6"
+code:
+  colors:
+    foreground: "#202124"
+    background: "#f1f3f4"
+intro_slide:
+  title:
+    colors:
+      foreground: "#174ea6"

@@ -1,0 +1,14 @@
+{
+  "name": "Fmind",
+  "color": {
+    "background": "#ffffff",
+    "foreground": "#202124",
+    "wordHighlight": "#feefc3",
+    "lineHighlight": "#f1f3f4",
+    "keyword": "#174ea6",
+    "function": "#174ea6",
+    "comment": "#595d62",
+    "string": "#0d652d",
+    "number": "#934900"
+  }
+}

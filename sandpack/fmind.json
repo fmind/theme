@@ -1,0 +1,34 @@
+{
+  "colors": {
+    "surface1": "#ffffff",
+    "surface2": "#f1f3f4",
+    "surface3": "#d2e3fc",
+    "clickable": "#595d62",
+    "base": "#202124",
+    "disabled": "#9aa0a6",
+    "hover": "#174ea6",
+    "accent": "#174ea6",
+    "error": "#a50e0e",
+    "errorSurface": "#fad2cf"
+  },
+  "syntax": {
+    "plain": "#202124",
+    "comment": {
+      "color": "#595d62",
+      "fontStyle": "italic"
+    },
+    "keyword": "#174ea6",
+    "definition": "#174ea6",
+    "punctuation": "#202124",
+    "property": "#174ea6",
+    "tag": "#174ea6",
+    "static": "#934900",
+    "string": "#0d652d"
+  },
+  "font": {
+    "body": "Google Sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+    "mono": "'Google Sans Code', 'Fira Mono', monospace",
+    "size": "14px",
+    "lineHeight": "20px"
+  }
+}

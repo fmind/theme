@@ -1,0 +1,45 @@
+/* ==UserStyle==
+@name           Hacker News Fmind
+@namespace      github.com/fmind/theme
+@version        1.0.0
+@description    Clean light theme for Hacker News
+==/UserStyle== */
+
+@-moz-document domain("news.ycombinator.com") {
+  body {
+    background-color: #ffffff !important;
+    color: #202124 !important;
+  }
+
+  #hnmain {
+    background-color: #ffffff !important;
+  }
+
+  .hnname a {
+    color: #174ea6 !important;
+  }
+
+  table.itemlist, td.title, .title a {
+    color: #202124 !important;
+  }
+
+  .title a:visited {
+    color: #595d62 !important;
+  }
+
+  .subtext, .subtext a {
+    color: #595d62 !important;
+  }
+
+  .comment {
+    color: #202124 !important;
+  }
+
+  .c00 {
+    color: #202124 !important;
+  }
+
+  .pagetop, .pagetop a {
+    color: #202124 !important;
+  }
+}

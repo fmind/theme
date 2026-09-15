@@ -1,0 +1,36 @@
+{
+  "compatibleVersion": "2.0",
+  "pluginVersion": "2.14",
+  "colors": [
+    {
+      "red": 1.0,
+      "green": 1.0,
+      "blue": 1.0,
+      "alpha": 1.0
+    },
+    {
+      "red": 0.125,
+      "green": 0.129,
+      "blue": 0.141,
+      "alpha": 1.0
+    },
+    {
+      "red": 0.09,
+      "green": 0.306,
+      "blue": 0.651,
+      "alpha": 1.0
+    },
+    {
+      "red": 0.051,
+      "green": 0.396,
+      "blue": 0.176,
+      "alpha": 1.0
+    },
+    {
+      "red": 0.647,
+      "green": 0.055,
+      "blue": 0.055,
+      "alpha": 1.0
+    }
+  ]
+}

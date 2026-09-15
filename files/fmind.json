@@ -1,0 +1,13 @@
+{
+  "name": "Fmind",
+  "author": "Fmind",
+  "theme": {
+    "Primary": "#174ea6",
+    "Background": "#ffffff",
+    "Surface": "#f1f3f4",
+    "Foreground": "#202124",
+    "SecondaryForeground": "#595d62",
+    "Border": "#9aa0a6",
+    "Selected": "#d2e3fc"
+  }
+}

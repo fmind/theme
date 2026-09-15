@@ -1,0 +1,41 @@
+{
+  "mainWindow": {
+    "divider": {
+      "topColor": "#f1f3f4",
+      "middleColor": "#f1f3f4",
+      "bottomColor": "#f1f3f4"
+    }
+  },
+  "sidebar": {
+    "topBar": {
+      "backgroundColor": "#f1f3f4",
+      "bottomBorderColor": "#f1f3f4",
+      "segmentedControl": {
+        "tintColor": "#174ea6",
+        "borderWidth": 1
+      }
+    },
+    "body": {
+      "backgroundColor": "#f1f3f4",
+      "selectedRowBackgroundColor": "#d2e3fc",
+      "textColor": "#202124",
+      "selectedTextColor": "#202124"
+    }
+  },
+  "noteList": {
+    "topBar": {
+      "backgroundColor": "#f1f3f4",
+      "bottomBorderColor": "#f1f3f4"
+    },
+    "body": {
+      "backgroundColor": "#ffffff",
+      "selectedRowBackgroundColor": "#d2e3fc",
+      "textColor": "#202124",
+      "selectedTextColor": "#202124"
+    }
+  },
+  "editor": {
+    "backgroundColor": "#ffffff",
+    "textColor": "#202124"
+  }
+}

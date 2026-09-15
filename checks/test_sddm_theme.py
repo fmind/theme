@@ -49,7 +49,20 @@ class SddmThemeTests(unittest.TestCase):
         for foreground in ("#202124", "#595d62", "#174ea6", "#a50e0e"):
             for background in ("#ffffff", "#d2e3fc"):
                 self.assertGreaterEqual(contrast(foreground, background), 4.5, (foreground, background))
-        self.assertGreaterEqual(contrast("#934900", "#ffffff"), 4.5)
+            self.assertGreaterEqual(contrast("#934900", "#ffffff"), 4.5)
+
+    def test_keyboard_dismissal_and_login_contracts(self):
+        main = (THEME / "Main.qml").read_text()
+        self.assertIn("ignoreUnknownSignals: true", main)
+        self.assertIn("onLoaded: item.hidden.connect(function() { root.showKeyboard = false; })", main)
+        self.assertIn("onShowKeyboardChanged: if (!showKeyboard) scroll.contentY = 0", main)
+        self.assertIn("echoMode: TextInput.Password", main)
+        self.assertIn("Qt.ImhHiddenText | Qt.ImhSensitiveData | Qt.ImhNoPredictiveText", main)
+        self.assertIn("password.clear()", main)
+        for name in ("VirtualKeyboard.qml", "VirtualKeyboard6.qml"):
+            source = (THEME / name).read_text()
+            self.assertIn("signal hidden()", source)
+            self.assertIn("else if (root.activated) root.hidden();", source)
 
 
 if __name__ == "__main__":

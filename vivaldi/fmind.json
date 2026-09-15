@@ -1,0 +1,15 @@
+{
+  "theme": {
+    "name": "Fmind",
+    "accent": "#174ea6",
+    "background": "#ffffff",
+    "foreground": "#202124",
+    "highlight": "#d2e3fc",
+    "accentOnWindow": false,
+    "colorAccentBg": false,
+    "colorTabs": false,
+    "radius": 4,
+    "transparency": 100
+  },
+  "version": 1
+}

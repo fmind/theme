@@ -1,0 +1,13 @@
+QWidget {
+  background-color: #ffffff;
+  color: #202124;
+}
+QPushButton {
+  background-color: #f1f3f4;
+  color: #202124;
+  border: 1px solid #9aa0a6;
+}
+QTabBar::tab:selected {
+  background-color: #d2e3fc;
+  color: #174ea6;
+}

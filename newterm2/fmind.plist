@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>name</key>
+  <string>Fmind</string>
+  <key>background</key>
+  <string>#ffffff</string>
+  <key>foreground</key>
+  <string>#202124</string>
+  <key>cursor</key>
+  <string>#4285f4</string>
+</dict>
+</plist>

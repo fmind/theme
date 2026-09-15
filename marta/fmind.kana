@@ -1,0 +1,10 @@
+{
+  "name": "Fmind",
+  "environment": {
+    "textColor": "#202124",
+    "backgroundColor": "#ffffff",
+    "activeRowColor": "#d2e3fc",
+    "secondaryTextColor": "#595d62",
+    "separatorColor": "#f1f3f4"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "base": "default_light",
+  "colors": {
+    "colorPrimaryDark": "#174ea6",
+    "irc_colorWhite": "#ffffff",
+    "irc_colorBlack": "#202124",
+    "irc_colorBlue": "#174ea6",
+    "irc_colorGreen": "#0d652d",
+    "irc_colorRed": "#a50e0e",
+    "irc_colorYellow": "#934900",
+    "irc_colorPurple": "#681da8",
+    "irc_colorLightCyan": "#00636d",
+    "irc_colorLightGray": "#595d62"
+  }
+}

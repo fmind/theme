@@ -1,0 +1,12 @@
+(* Wolfram Mathematica Notebook Style *)
+Notebook[{
+Cell[StyleData[StyleDefinitions -> "Default.nb"]],
+Cell[StyleData["Notebook"],
+ Background->RGBColor[1, 1, 1],
+ FontColor->RGBColor[0.125, 0.129, 0.141]],
+Cell[StyleData["Input"],
+ FontColor->RGBColor[0.09, 0.306, 0.651]],
+Cell[StyleData["Output"],
+ FontColor->RGBColor[0.125, 0.129, 0.141]]
+}
+]

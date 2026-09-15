@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageGlassTheme>
+  <ThemeName>Fmind</ThemeName>
+  <Author>Médéric Hurier</Author>
+  <BackgroundColor>#ffffff</BackgroundColor>
+  <TextColor>#202124</TextColor>
+  <AccentColor>#174ea6</AccentColor>
+  <BorderColor>#f1f3f4</BorderColor>
+  <SelectionColor>#d2e3fc</SelectionColor>
+</ImageGlassTheme>

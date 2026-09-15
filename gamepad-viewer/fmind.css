@@ -1,0 +1,38 @@
+/* Gamepad Viewer Fmind Light Theme */
+.controller {
+  background: #ffffff;
+}
+
+.controller.white {
+  background: #ffffff;
+}
+
+.stick {
+  background: #f1f3f4;
+  border: 2px solid #9aa0a6;
+}
+
+.button {
+  background: #f1f3f4;
+  border: 1px solid #9aa0a6;
+}
+
+.button.pressed {
+  background: #174ea6;
+}
+
+.trigger {
+  background: #f1f3f4;
+}
+
+.trigger.active {
+  background: #174ea6;
+}
+
+.dpad .face {
+  background: #f1f3f4;
+}
+
+.dpad .face.pressed {
+  background: #174ea6;
+}

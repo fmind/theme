@@ -1,0 +1,81 @@
+/* Fmind light theme for Light Table */
+
+.cm-s-fmind.CodeMirror {
+  background: #ffffff;
+  color: #202124;
+}
+
+.cm-s-fmind .CodeMirror-cursor {
+  border-left: 1px solid #4285f4;
+}
+
+.cm-s-fmind .CodeMirror-selected {
+  background: #d2e3fc;
+}
+
+.cm-s-fmind .CodeMirror-line::selection,
+.cm-s-fmind .CodeMirror-line > span::selection,
+.cm-s-fmind .CodeMirror-line > span > span::selection {
+  background: #d2e3fc;
+}
+
+.cm-s-fmind .CodeMirror-gutters {
+  background: #ffffff;
+  border-right: 1px solid #f1f3f4;
+}
+
+.cm-s-fmind .CodeMirror-linenumber {
+  color: #9aa0a6;
+}
+
+.cm-s-fmind span.cm-comment {
+  color: #595d62;
+}
+
+.cm-s-fmind span.cm-string {
+  color: #0d652d;
+}
+
+.cm-s-fmind span.cm-number {
+  color: #934900;
+}
+
+.cm-s-fmind span.cm-keyword {
+  color: #174ea6;
+}
+
+.cm-s-fmind span.cm-operator {
+  color: #202124;
+}
+
+.cm-s-fmind span.cm-variable {
+  color: #202124;
+}
+
+.cm-s-fmind span.cm-variable-2 {
+  color: #202124;
+}
+
+.cm-s-fmind span.cm-def {
+  color: #174ea6;
+}
+
+.cm-s-fmind span.cm-atom {
+  color: #934900;
+}
+
+.cm-s-fmind span.cm-property {
+  color: #202124;
+}
+
+.cm-s-fmind span.cm-tag {
+  color: #174ea6;
+}
+
+.cm-s-fmind span.cm-attribute {
+  color: #681da8;
+}
+
+.cm-s-fmind span.cm-error {
+  color: #a50e0e;
+}

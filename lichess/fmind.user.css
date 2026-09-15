@@ -1,0 +1,13 @@
+/* ==UserStyle==
+@name Fmind Lichess
+@namespace github.com/fmind/theme
+@version 1.0.0
+==/UserStyle== */
+@-moz-document domain("lichess.org") {
+  body.light {
+    --c-bg: #ffffff;
+    --c-fg: #202124;
+    --c-surface: #f1f3f4;
+    --c-primary: #174ea6;
+  }
+}

@@ -1,0 +1,10 @@
+# Plank Fmind Light Theme
+
+[PlankTheme]
+TopRoundness=8
+BottomRoundness=8
+LineWidth=1
+OuterStrokeColor=241;;243;;244;;255
+FillStartColor=255;;255;;255;;245
+FillEndColor=241;;243;;244;;245
+InnerStrokeColor=255;;255;;255;;255

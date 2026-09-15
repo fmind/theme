@@ -12,7 +12,7 @@ import unittest
 from pathlib import Path
 
 import yaml
-from test_theme import PALETTE, ROOT
+from test_theme import PALETTE, ROOT, contrast
 
 CASES = yaml.safe_load((ROOT / "checks/syntax.yaml").read_text())
 
@@ -186,6 +186,75 @@ io.write(vim.json.encode(styles))
         )
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("Run mise run install", result.stderr)
+
+    def test_bat_gutter_contrast(self):
+        result = subprocess.run(
+            [
+                "bat",
+                "--paging=never",
+                "--color=always",
+                "--style=numbers",
+                "--theme=fmind",
+                str(ROOT / "checks/samples/sample.py"),
+            ],
+            env=self.env,
+            check=True,
+            capture_output=True,
+            text=True,
+            timeout=15,
+        )
+        self.assertEqual(result.stderr, "")
+        plain, styles = terminal_cells(result.stdout, int(self.palette["text"][1:], 16))
+        offset = 0
+        for line in plain.splitlines(keepends=True):
+            gutter = re.match(r"\s*\d+", line)
+            self.assertIsNotNone(gutter, line)
+            for index in range(offset, offset + gutter.end()):
+                if plain[index].isdigit():
+                    self.assertGreaterEqual(contrast(f"#{styles[index]['fg']:06x}", self.palette["ground"]), 4.5)
+            offset += len(line)
+
+    def test_native_editor_states(self):
+        response = self.directory / "states.json"
+        result = subprocess.run(
+            [
+                "nvim",
+                "--headless",
+                "-u",
+                "NONE",
+                "-i",
+                "NONE",
+                "-n",
+                "-l",
+                str(ROOT / "checks/states.lua"),
+                str(response),
+            ],
+            env=self.env,
+            capture_output=True,
+            text=True,
+            timeout=15,
+            check=False,
+        )
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(result.stderr, "")
+        groups = json.loads(response.read_text())
+
+        def ratio(foreground, background):
+            return contrast(f"#{foreground:06x}", f"#{background:06x}")
+
+        normal = groups["Normal"]
+        for name in ("NormalFloat", "Pmenu", "Search", "CurSearch", "IncSearch", "DiffText"):
+            style = groups[name]
+            self.assertGreaterEqual(ratio(style.get("fg", normal["fg"]), style["bg"]), 4.5, name)
+        for name in ("CurSearch", "IncSearch"):
+            self.assertNotEqual(groups[name]["bg"], groups["Search"]["bg"])
+            self.assertTrue(groups[name].get("bold"), name)
+        for name in ("DiagnosticFloatingError", "DiagnosticFloatingWarn"):
+            self.assertGreaterEqual(ratio(groups[name]["fg"], groups["NormalFloat"]["bg"]), 4.5, name)
+        for name in ("Visual", "DiffAdd", "DiffDelete", "DiffChange", "PmenuSel"):
+            for syntax in ("Normal", "Comment", "String", "Number", "Function"):
+                self.assertGreaterEqual(ratio(groups[syntax]["fg"], groups[name]["bg"]), 4.5, (name, syntax))
+        self.assertGreaterEqual(ratio(groups["PmenuThumb"]["bg"], groups["PmenuSbar"]["bg"]), 3)
 
     def test_bat_tokens(self):
         rendered = {}

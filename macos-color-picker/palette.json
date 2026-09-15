@@ -1,0 +1,24 @@
+{
+  "name": "Fmind",
+  "colors": {
+    "Ground": "#ffffff",
+    "Text": "#202124",
+    "Panel": "#f1f3f4",
+    "Line": "#f1f3f4",
+    "Muted": "#595d62",
+    "Blue": "#174ea6",
+    "Light Blue": "#4285f4",
+    "Grey": "#9aa0a6",
+    "Green": "#0d652d",
+    "Light Green": "#34a853",
+    "Orange": "#934900",
+    "Light Orange": "#e37400",
+    "Purple": "#681da8",
+    "Red": "#a50e0e",
+    "Light Red": "#ea4335",
+    "Yellow": "#feefc3",
+    "Light Yellow": "#fbbc04",
+    "Teal": "#00636d",
+    "Selection": "#d2e3fc"
+  }
+}

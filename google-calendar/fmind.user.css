@@ -1,0 +1,20 @@
+/* ==UserStyle==
+@name         Google Calendar Fmind Light
+@namespace    github.com/fmind/theme
+@version      1.0.0
+==/UserStyle== */
+
+@-moz-document domain("calendar.google.com") {
+  body {
+    background-color: #ffffff !important;
+    color: #202124 !important;
+  }
+
+  .SGwaac {
+    background-color: #ffffff !important;
+  }
+
+  .YvjgZe {
+    color: #174ea6 !important;
+  }
+}

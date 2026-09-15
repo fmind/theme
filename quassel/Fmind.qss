@@ -1,0 +1,36 @@
+/* Quassel IRC Fmind Light Theme */
+
+ChatView {
+    background: #ffffff;
+    color: #202124;
+}
+
+ChatLine[label="highlight"] {
+    background: #d2e3fc;
+}
+
+ChatLine::timestamp {
+    foreground: #595d62;
+}
+
+ChatLine::sender {
+    foreground: #174ea6;
+}
+
+ChatLine::sender[sender="self"] {
+    foreground: #0d652d;
+}
+
+BufferView {
+    background: #ffffff;
+    color: #202124;
+}
+
+NickView {
+    background: #ffffff;
+    color: #202124;
+}
+
+MainWidget {
+    background: #f1f3f4;
+}

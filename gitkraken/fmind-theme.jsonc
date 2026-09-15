@@ -1,0 +1,22 @@
+{
+  "meta": {
+    "name": "Fmind",
+    "scheme": "light"
+  },
+  "themeValues": {
+    "root": {
+      "red": "#a50e0e",
+      "orange": "#934900",
+      "yellow": "#934900",
+      "green": "#0d652d",
+      "teal": "#00636d",
+      "blue": "#174ea6",
+      "ltblue": "#4285f4",
+      "purple": "#681da8",
+      "white": "#ffffff",
+      "app-bg": "#ffffff",
+      "panel-bg": "#f1f3f4",
+      "text-color": "#202124"
+    }
+  }
+}

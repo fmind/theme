@@ -1,0 +1,24 @@
+# Fmind styleset for aerc
+*.default = true
+*.normal = #202124
+*.bg = #ffffff
+
+msglist_unread.fg = #174ea6
+msglist_unread.bold = true
+msglist_flagged.fg = #934900
+msglist_deleted.fg = #595d62
+
+statusline_default.fg = #202124
+statusline_default.bg = #f1f3f4
+statusline_error.fg = #a50e0e
+statusline_error.bold = true
+
+border.fg = #9aa0a6
+tab.fg = #595d62
+tab.bg = #f1f3f4
+tab.selected.fg = #202124
+tab.selected.bg = #fbbc04
+tab.selected.bold = true
+
+selector_focused.fg = #202124
+selector_focused.bg = #d2e3fc

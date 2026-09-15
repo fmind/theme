@@ -1,0 +1,14 @@
+/* Fmind theme for FreshRSS */
+body {
+  background: #ffffff;
+  color: #202124;
+}
+a {
+  color: #174ea6;
+}
+.header, .aside {
+  background: #f1f3f4;
+}
+.item.active {
+  background: #d2e3fc;
+}

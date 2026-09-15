@@ -1,0 +1,26 @@
+/* Steam client custom styling */
+html, body, .steamdesktop_Root_1W4qB {
+  color: #202124;
+  background-color: #ffffff;
+  font-family: "Google Sans", sans-serif;
+}
+
+.DialogHeader, .DialogBody, .DialogFooter {
+  color: #202124;
+  background-color: #ffffff;
+}
+
+a, .Highlight {
+  color: #174ea6;
+}
+
+button, .DialogButton {
+  color: #202124;
+  background-color: #f1f3f4;
+  border: 1px solid #9aa0a6;
+}
+
+button.Primary, .DialogButton.Primary {
+  color: #ffffff;
+  background-color: #174ea6;
+}

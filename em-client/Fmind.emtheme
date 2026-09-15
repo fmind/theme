@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SerializableColorTheme name="Fmind" author="Médéric Hurier">
+  <FormBackground>#ffffff</FormBackground>
+  <FormForeground>#202124</FormForeground>
+  <WindowBackground>#ffffff</WindowBackground>
+  <WindowForeground>#202124</WindowForeground>
+  <AccentColor>#174ea6</AccentColor>
+  <SelectionBackground>#d2e3fc</SelectionBackground>
+  <SelectionForeground>#202124</SelectionForeground>
+  <BorderColor>#f1f3f4</BorderColor>
+</SerializableColorTheme>

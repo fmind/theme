@@ -1,0 +1,31 @@
+# Fmind Starship Powerline Preset
+format = """
+[](#f1f3f4)\
+$username\
+[](bg:#d2e3fc fg:#f1f3f4)\
+$directory\
+[](bg:#f1f3f4 fg:#d2e3fc)\
+$git_branch\
+$git_status\
+[](fg:#f1f3f4)\
+$character
+"""
+
+[username]
+show_always = true
+style_user = "bg:#f1f3f4 fg:#202124"
+style_root = "bg:#f1f3f4 fg:#a50e0e"
+format = '[$user ]($style)'
+
+[directory]
+style = "bg:#d2e3fc fg:#174ea6"
+format = "[ $path ]($style)"
+
+[git_branch]
+symbol = ""
+style = "bg:#f1f3f4 fg:#0d652d"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:#f1f3f4 fg:#a50e0e"
+format = '[$all_status$ahead_behind ]($style)'

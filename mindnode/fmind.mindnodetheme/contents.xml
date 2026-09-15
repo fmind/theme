@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>allowNodeStrokeColorVariation</key>
+	<false/>
+	<key>backgroundColor</key>
+	<string>{1.000000, 1.000000, 1.000000, 1.000000}</string>
+	<key>baseSubnode</key>
+	<dict>
+		<key>shapeStyle</key>
+		<dict>
+			<key>borderStrokeStyle</key>
+			<dict>
+				<key>color</key>
+				<string>{0.090196, 0.305882, 0.650980, 1.000000}</string>
+				<key>dash</key>
+				<integer>0</integer>
+				<key>width</key>
+				<real>2</real>
+			</dict>
+			<key>fillColor</key>
+			<string>{1.000000, 1.000000, 1.000000, 1.000000}</string>
+			<key>shapeType</key>
+			<integer>0</integer>
+		</dict>
+		<key>strokeStyle</key>
+		<dict>
+			<key>color</key>
+			<string>{0.090196, 0.305882, 0.650980, 1.000000}</string>
+			<key>dash</key>
+			<integer>0</integer>
+			<key>width</key>
+			<real>3</real>
+		</dict>
+		<key>titleStyle</key>
+		<dict>
+			<key>color</key>
+			<string>{0.125490, 0.129412, 0.141176, 1.000000}</string>
+			<key>fontName</key>
+			<string>HelveticaNeue</string>
+			<key>fontSize</key>
+			<real>14</real>
+		</dict>
+	</dict>
+</dict>
+</plist>

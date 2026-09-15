@@ -1,8 +1,17 @@
-# Remaining work
+# Acceptance roadmap
 
-Work stopped at the user's request on 2026-09-14. This file records the remaining scope; it does not authorize continued execution. The baseline is the free Dracula catalog captured in [CATALOG.md](CATALOG.md). There are 91 shipped catalog entries and 381 pending entries; the repository has 104 integration directories. A shipped port is not a claim of complete native runtime verification.
+All 472 free Dracula catalog entries are represented by files or a shared integration, checked against the live catalog on 2026-09-15. File presence is complete; functional parity is not. The previous checked boxes conflated parser tests with native acceptance and have been reopened. Preserve all 20 core paths in [CATALOG.md](CATALOG.md).
 
-## Resume the SDDM checkpoint first
+## Priorities
+
+1. Resolve the incomplete drafts in [REVIEW.md](REVIEW.md), starting with real native formats and accurate installation routes.
+1. Validate additional ports in small batches with app versions, isolated loading, actual color/state results and visual evidence in [VALIDATION.md](VALIDATION.md).
+1. Finish desktop acceptance below without contacting live authentication, session or power services.
+1. Reconcile upstream catalog additions as a new dated snapshot.
+
+Keep native files directly maintained. Reuse formats where apps genuinely share them; do not invent generic JSON schemas or infer theme support from a filename. An unavailable runtime remains an explicit gap. Historical evidence stays in [COVERAGE.md](COVERAGE.md) and must be refreshed before claiming current acceptance.
+
+## Existing desktop checkpoint
 
 The current [SDDM package](gtk/kde/sddm/README.md) is an implementation checkpoint, not a completed bundle component. Keep its KDE checklist item pending until the remaining checks below are resolved.
 
@@ -10,11 +19,11 @@ The current [SDDM package](gtk/kde/sddm/README.md) is an implementation checkpoi
 - [ ] Verify the new keyboard `hidden` signal, toggle reset and scrolling after hiding through the native keyboard key, the theme button and focus changes. Recheck native character input, backspace, password masking and pending-login behavior against the final files.
 - [ ] Exercise real clicks on user/session/layout menus, keyboard-only navigation, zero-user and zero-session models, power Cancel/Escape, capability changes, successful-login feedback and plain-text handling of provider messages.
 - [ ] Extend the native matrix to 100%, 150% and 200% scaling, both layout directions and narrow/portrait viewports. Check popup bounds, wrapped messages, focused-field visibility, alternative characters, language switching and the keyboard's special modes.
-- [ ] Verify the real Plasma 5 power-management data engine and Plasma 6 battery provider. Existing checks used synthetic providers for percentage, low-battery color, charging and no-battery states; no live battery service was contacted.
-- [ ] Diagnose the native SDDM 0.19 test-mode process. With warnings fatal it aborted (exit 134) without a captured diagnostic; a diagnostic-only run with warnings nonfatal stayed alive until its bounded timeout (124), with no captured output. This is not a passing native greeter check. Capture its warning output in an isolated environment before retrying; do not weaken the warning-free requirement.
+- [ ] Check the Plasma 5 power-management and Plasma 6 battery-provider contracts against installed source or primary docs, then exercise matching isolated fixtures. Existing checks used synthetic percentage, low-battery, charging and no-battery states. Live-provider behavior remains unverified and requires separate authorization; repository checks must not contact live services.
+- [ ] Diagnose the native SDDM 0.19 test-mode failure. The retained coverage record identifies an undeclared `informationMessage` signal and journal-only diagnostics; the corrected checkpoint loaded with fatal warnings enabled. This historical result does not resolve the remaining keyboard-dismissal or deployed-greeter checks.
 - [ ] Verify SDDM 0.21 native loading, the greeter environment/import-path installation route, both Qt selections and theme.conf.user overrides in disposable system images. Keep real authentication, session launch, power operations and Wayland greeter behavior unverified until tested in an explicitly authorized isolated environment.
 - [ ] Refresh the SDDM preview after any appearance changes. The committed preview is the last synthetic Qt 6 render; no real account data is included.
-- [ ] Update the KDE/GTK/root documentation and coverage only after the SDDM component meets its stated coverage target. It is deliberately not marked complete in CATALOG.md or the KDE checklist.
+- [ ] Update the KDE/GTK/root documentation and coverage only after the SDDM component meets its stated coverage target. It remains incomplete in the KDE checklist.
 
 ## Finish the GTK bundle
 
@@ -23,399 +32,485 @@ The current [SDDM package](gtk/kde/sddm/README.md) is an implementation checkpoi
 - [ ] Plasma 5 lock-screen, logout and OSD components.
 - [ ] Finish SDDM validation above.
 - [ ] Unity companion theme.
-- [ ] Reconcile the complete free-reference bundle against [the GTK checklist](gtk/README.md#full-bundle-checklist) and [the KDE checklist](gtk/kde/README.md#bundle-checklist) before marking the catalog entry shipped.
+- [ ] Verify the retained components against [the GTK checklist](gtk/README.md#full-bundle-checklist) and [the KDE checklist](gtk/kde/README.md#bundle-checklist) before claiming the existing desktop bundle complete.
 
-## Complete every pending catalog entry
+## Remaining validation
 
-For each item, inspect the free reference and current primary documentation, implement the native Fmind light theme and an accurate installation route, validate representative states and contrast, and record runtime limits. Shared formats, derivatives, legacy applications and non-application entries remain in scope. Record an explicit supported adaptation or disposition for non-app entries; do not silently exclude them. Keep this checklist and CATALOG.md aligned as work resumes.
+- [ ] After the workstation and desktop items, review the 38 additional integrations against the runtime gaps in [COVERAGE.md](COVERAGE.md). Record each as verified for a specific version/platform or blocked with an explicit reason. Do not treat parser checks as proof of GUI behavior. New and restored integrations have separate tasks below.
 
-- [ ] [Cursor](https://draculatheme.com/cursor)
-- [ ] [Monkeytype](https://draculatheme.com/monkeytype)
-- [ ] [Slack](https://draculatheme.com/slack)
-- [ ] [Raycast](https://draculatheme.com/raycast)
-- [ ] [Claude Code](https://draculatheme.com/claude-code)
-- [ ] [Zsh](https://draculatheme.com/zsh)
-- [ ] [Visual Studio](https://draculatheme.com/visual-studio)
-- [ ] [GTK](https://draculatheme.com/gtk)
-- [ ] [Wallpaper](https://draculatheme.com/wallpaper)
-- [ ] [QBittorrent](https://draculatheme.com/qbittorrent)
-- [ ] [Telegram](https://draculatheme.com/telegram)
-- [ ] [Oracle SQL Developer](https://draculatheme.com/oracle-sql-developer)
-- [ ] [MySQL Workbench](https://draculatheme.com/mysql-workbench)
-- [ ] [BetterDiscord](https://draculatheme.com/betterdiscord)
-- [ ] [Steam](https://draculatheme.com/steam)
-- [ ] [Insomnia](https://draculatheme.com/insomnia)
-- [ ] [Powerlevel10k](https://draculatheme.com/powerlevel10k)
-- [ ] [Vivaldi](https://draculatheme.com/vivaldi)
-- [ ] [GMK](https://draculatheme.com/gmk)
-- [ ] [Highlight.js](https://draculatheme.com/highlightjs)
-- [ ] [Cmder](https://draculatheme.com/cmder)
-- [ ] [Alfred](https://draculatheme.com/alfred)
-- [ ] [Telegram Android](https://draculatheme.com/telegram-android)
-- [ ] [GitHub Pages](https://draculatheme.com/gh-pages)
-- [ ] [LibreOffice](https://draculatheme.com/libreoffice)
-- [ ] [Arduino IDE](https://draculatheme.com/arduino-ide)
-- [ ] [Midnight Commander](https://draculatheme.com/midnight-commander)
-- [ ] [Godot](https://draculatheme.com/godot)
-- [ ] [Sequel Pro](https://draculatheme.com/sequel-pro)
-- [ ] [DuckDuckGo](https://draculatheme.com/duckduckgo)
-- [ ] [GitHub](https://draculatheme.com/github)
-- [ ] [Gamepad Viewer](https://draculatheme.com/gamepad-viewer)
-- [ ] [Spotify TUI](https://draculatheme.com/spotify-tui)
-- [ ] [Telegram iOS](https://draculatheme.com/telegram-ios)
-- [ ] [GameMaker Studio](https://draculatheme.com/gamemaker-studio)
-- [ ] [MonoDevelop](https://draculatheme.com/monodevelop)
-- [ ] [Youtube](https://draculatheme.com/youtube)
-- [ ] [Hacker News](https://draculatheme.com/hacker-news)
-- [ ] [Blender](https://draculatheme.com/blender)
-- [ ] [Adobe](https://draculatheme.com/adobe)
-- [ ] [Oh My Posh](https://draculatheme.com/oh-my-posh)
-- [ ] [GRUB](https://draculatheme.com/grub)
-- [ ] [Pythonista](https://draculatheme.com/pythonista)
-- [ ] [Gitk](https://draculatheme.com/gitk)
-- [ ] [Qutebrowser](https://draculatheme.com/qutebrowser)
-- [ ] [Figma](https://draculatheme.com/figma)
-- [ ] [Wox](https://draculatheme.com/wox)
-- [ ] [Files](https://draculatheme.com/files)
-- [ ] [MetaTrader 5](https://draculatheme.com/metatrader5)
-- [ ] [Mutt](https://draculatheme.com/mutt)
-- [ ] [Microsoft Edge](https://draculatheme.com/microsoft-edge)
-- [ ] [Mousepad](https://draculatheme.com/mousepad)
-- [ ] [Vivado](https://draculatheme.com/vivado)
-- [ ] [Marp](https://draculatheme.com/marp)
-- [ ] [Git](https://draculatheme.com/git)
-- [ ] [DOOM Emacs](https://draculatheme.com/doom-emacs)
-- [ ] [Total Commander](https://draculatheme.com/total-commander)
-- [ ] [Base16](https://draculatheme.com/base16-dracula-scheme)
-- [ ] [qt5](https://draculatheme.com/qt5)
-- [ ] [Coda](https://draculatheme.com/coda)
-- [ ] [colorls](https://draculatheme.com/colorls)
-- [ ] [Aseprite](https://draculatheme.com/aseprite)
-- [ ] [Light Table](https://draculatheme.com/light-table)
-- [ ] [FL Studio 21](https://draculatheme.com/fl-studio-21)
-- [ ] [Vimium](https://draculatheme.com/vimium)
-- [ ] [MacDown](https://draculatheme.com/macdown)
-- [ ] [Nova Launcher](https://draculatheme.com/nova-launcher)
-- [ ] [IDA Pro](https://draculatheme.com/ida)
-- [ ] [Tailwind](https://draculatheme.com/tailwind)
-- [ ] [Mattermost](https://draculatheme.com/mattermost)
-- [ ] [Aliucord](https://draculatheme.com/aliucord)
-- [ ] [Xournal++](https://draculatheme.com/xournalpp)
-- [ ] [ABAP](https://draculatheme.com/abap)
-- [ ] [BBEdit](https://draculatheme.com/bbedit)
-- [ ] [Thunderbird](https://draculatheme.com/thunderbird)
-- [ ] [Logseq](https://draculatheme.com/logseq)
-- [ ] [Ulysses](https://draculatheme.com/ulysses)
-- [ ] [jGrasp](https://draculatheme.com/jgrasp)
-- [ ] [KiCad](https://draculatheme.com/kicad)
-- [ ] [ranger](https://draculatheme.com/ranger)
-- [ ] [Mailspring](https://draculatheme.com/mailspring)
-- [ ] [Ulauncher](https://draculatheme.com/ulauncher)
-- [ ] [Ableton Live](https://draculatheme.com/ableton-live)
-- [ ] [Homer](https://draculatheme.com/homer)
-- [ ] [Wordpress](https://draculatheme.com/wordpress)
-- [ ] [XChat](https://draculatheme.com/xchat)
-- [ ] [MiXplorer](https://draculatheme.com/mixplorer)
-- [ ] [TeXstudio](https://draculatheme.com/texstudio)
-- [ ] [JDownloader2](https://draculatheme.com/jdownloader2)
-- [ ] [MindNode](https://draculatheme.com/mindnode)
-- [ ] [Prism](https://draculatheme.com/prism)
-- [ ] [Bashtop](https://draculatheme.com/bashtop)
-- [ ] [FreeCAD](https://draculatheme.com/freecad)
-- [ ] [Adminer](https://draculatheme.com/adminer)
-- [ ] [LaTeX](https://draculatheme.com/latex)
-- [ ] [PL/SQL Developer](https://draculatheme.com/plsql-developer)
-- [ ] [Inkscape](https://draculatheme.com/inkscape)
-- [ ] [Textual](https://draculatheme.com/textual)
-- [ ] [Roam Research](https://draculatheme.com/roam-research)
-- [ ] [Discourse](https://draculatheme.com/discourse)
-- [ ] [Sumatra PDF](https://draculatheme.com/sumatra-pdf)
-- [ ] [YouTube Music Desktop](https://draculatheme.com/youtube-music-desktop)
-- [ ] [macOS Color Picker](https://draculatheme.com/macos-color-picker)
-- [ ] [Plank](https://draculatheme.com/plank)
-- [ ] [Quiver](https://draculatheme.com/quiver)
-- [ ] [Nextcloud](https://draculatheme.com/nextcloud)
-- [ ] [Unreal Engine](https://draculatheme.com/unreal-engine)
-- [ ] [Standard Notes](https://draculatheme.com/standard-notes)
-- [ ] [Quassel](https://draculatheme.com/quassel)
-- [ ] [Tabletop Simulator](https://draculatheme.com/tabletop-simulator)
-- [ ] [GitLab](https://draculatheme.com/gitlab)
-- [ ] [Spicetify](https://draculatheme.com/spicetify)
-- [ ] [TiddlyWiki](https://draculatheme.com/tiddlywiki)
-- [ ] [Nylas N1](https://draculatheme.com/nylas-n1)
-- [ ] [Bear](https://draculatheme.com/bear)
-- [ ] [Beyond Compare 4](https://draculatheme.com/beyond-compare-4)
-- [ ] [Discord Bot Maker](https://draculatheme.com/discordbotmaker)
-- [ ] [LightPaper](https://draculatheme.com/lightpaper)
-- [ ] [Javadoc](https://draculatheme.com/javadoc)
-- [ ] [Spacemacs](https://draculatheme.com/spacemacs)
-- [ ] [FlorisBoard](https://draculatheme.com/florisboard)
-- [ ] [TTY](https://draculatheme.com/tty)
-- [ ] [Google Calendar](https://draculatheme.com/google-calendar)
-- [ ] [Openbox](https://draculatheme.com/openbox)
-- [ ] [Editplus](https://draculatheme.com/editplus)
-- [ ] [MkDocs](https://draculatheme.com/mkdocs)
-- [ ] [Krita](https://draculatheme.com/krita)
-- [ ] [StackOverflow](https://draculatheme.com/stackoverflow)
-- [ ] [Wolfram Notebooks](https://draculatheme.com/wolfram-notebooks)
-- [ ] [Minecraft](https://draculatheme.com/minecraft)
-- [ ] [.dircolors](https://draculatheme.com/dircolors)
-- [ ] [CotEditor](https://draculatheme.com/coteditor)
-- [ ] [EverythingToolbar](https://draculatheme.com/everythingtoolbar)
-- [ ] [Arduino Pro IDE](https://draculatheme.com/arduino-pro-ide)
-- [ ] [Powerlevel10k for Oh My Posh](https://draculatheme.com/p10k-oh-my-posh)
-- [ ] [Clone Hero](https://draculatheme.com/clone-hero)
-- [ ] [GitKraken](https://draculatheme.com/gitkraken)
-- [ ] [CopyQ](https://draculatheme.com/copyq)
-- [ ] [GIMP](https://draculatheme.com/gimp)
-- [ ] [MetaEditor](https://draculatheme.com/metaeditor)
-- [ ] [iSH](https://draculatheme.com/ish)
-- [ ] [PowerShell ISE](https://draculatheme.com/powershell-ise)
-- [ ] [i3lock-color](https://draculatheme.com/i3lock-color)
-- [ ] [Cava](https://draculatheme.com/cava)
-- [ ] [Sketch](https://draculatheme.com/sketch)
-- [ ] [KDiff3](https://draculatheme.com/kdiff3)
-- [ ] [MusicBee](https://draculatheme.com/musicbee)
-- [ ] [Scrivener](https://draculatheme.com/scrivener)
-- [ ] [LiteIDE](https://draculatheme.com/liteide)
-- [ ] [Homepage](https://draculatheme.com/homepage-app)
-- [ ] [LTSpice](https://draculatheme.com/ltspice)
-- [ ] [eM Client](https://draculatheme.com/em-client)
-- [ ] [Nova](https://draculatheme.com/nova)
-- [ ] [Beamer](https://draculatheme.com/beamer)
-- [ ] [Pandoc](https://draculatheme.com/pandoc)
-- [ ] [Delphi](https://draculatheme.com/delphi)
-- [ ] [Django Admin](https://draculatheme.com/django-admin)
-- [ ] [Kakoune](https://draculatheme.com/kakoune)
-- [ ] [Albert](https://draculatheme.com/albert)
-- [ ] [Facebook Messenger](https://draculatheme.com/facebook-messenger)
-- [ ] [Couscous](https://draculatheme.com/couscous)
-- [ ] [ReNoise](https://draculatheme.com/renoise)
-- [ ] [ghostwriter](https://draculatheme.com/ghostwriter)
-- [ ] [Rio Terminal](https://draculatheme.com/rio-terminal)
-- [ ] [Papirus Folders](https://draculatheme.com/papirus-folders)
-- [ ] [Linear](https://draculatheme.com/linear)
-- [ ] [SwiftUI](https://draculatheme.com/swiftui)
-- [ ] [Audacity](https://draculatheme.com/audacity)
-- [ ] [Node Console](https://draculatheme.com/node-console)
-- [ ] [Uptime Kuma](https://draculatheme.com/uptime-kuma)
-- [ ] [Pywal](https://draculatheme.com/pywal)
-- [ ] [SolidWorks](https://draculatheme.com/solidworks)
-- [ ] [OneCommander](https://draculatheme.com/onecommander)
-- [ ] [Wing](https://draculatheme.com/wing)
-- [ ] [Cryptowatch](https://draculatheme.com/cryptowatch)
-- [ ] [Ripcord](https://draculatheme.com/ripcord)
-- [ ] [Ditto](https://draculatheme.com/ditto)
-- [ ] [SideNotes](https://draculatheme.com/sidenotes)
-- [ ] [bemenu](https://draculatheme.com/bemenu)
-- [ ] [The Lounge](https://draculatheme.com/thelounge)
-- [ ] [ChatGPT](https://draculatheme.com/chatgpt)
-- [ ] [Mako](https://draculatheme.com/mako)
-- [ ] [Flarum](https://draculatheme.com/flarum)
-- [ ] [Visual Basic 6](https://draculatheme.com/visual-basic-6)
-- [ ] [Nyxt](https://draculatheme.com/nyxt)
-- [ ] [Joplin](https://draculatheme.com/joplin)
-- [ ] [Unigram](https://draculatheme.com/unigram)
-- [ ] [Prompt](https://draculatheme.com/prompt)
-- [ ] [ncspot](https://draculatheme.com/ncspot)
-- [ ] [Tower](https://draculatheme.com/tower)
-- [ ] [Keypirinha](https://draculatheme.com/keypirinha)
-- [ ] [Cider](https://draculatheme.com/cider)
-- [ ] [Dwarf Fortress](https://draculatheme.com/dwarf-fortress)
-- [ ] [Google Search](https://draculatheme.com/google-search)
-- [ ] [Anne Pro 2](https://draculatheme.com/anne-pro-2)
-- [ ] [Apollo](https://draculatheme.com/apollo)
-- [ ] [Blockbench](https://draculatheme.com/blockbench)
-- [ ] [LimeChat](https://draculatheme.com/limechat)
-- [ ] [tint2](https://draculatheme.com/tint2)
-- [ ] [fman](https://draculatheme.com/fman)
-- [ ] [bobthefish](https://draculatheme.com/bobthefish)
-- [ ] [Omarchy](https://draculatheme.com/omarchy)
-- [ ] [HyperX NGNUITY](https://draculatheme.com/ngenuity)
-- [ ] [Archive of Our Own](https://draculatheme.com/archive-of-our-own)
-- [ ] [Abricotine](https://draculatheme.com/abricotine)
-- [ ] [CodeRunner](https://draculatheme.com/coderunner)
-- [ ] [Calibre](https://draculatheme.com/calibre)
-- [ ] [Fig](https://draculatheme.com/fig)
-- [ ] [Sequel Ace](https://draculatheme.com/sequel-ace)
-- [ ] [Pi Coding Agent](https://draculatheme.com/pi-coding-agent)
-- [ ] [TeXShop](https://draculatheme.com/texshop)
-- [ ] [Duolingo](https://draculatheme.com/duolingo)
-- [ ] [tig](https://draculatheme.com/tig)
-- [ ] [CodePen](https://draculatheme.com/codepen)
-- [ ] [Caprine Messenger](https://draculatheme.com/caprine-messenger)
-- [ ] [eza](https://draculatheme.com/eza)
-- [ ] [Postbox](https://draculatheme.com/postbox)
-- [ ] [Vesktop Discord](https://draculatheme.com/vesktop-discord)
-- [ ] [Blink Shell](https://draculatheme.com/blink-shell)
-- [ ] [Cli-Visualizer](https://draculatheme.com/cli-visualizer)
-- [ ] [ImageGlass](https://draculatheme.com/imageglass)
-- [ ] [Starship Powerline Preset](https://draculatheme.com/starship-powerline-preset)
-- [ ] [exa](https://draculatheme.com/exa)
-- [ ] [Protonmail](https://draculatheme.com/protonmail)
-- [ ] [SerenityOS](https://draculatheme.com/serenityos)
-- [ ] [SnippetsLab](https://draculatheme.com/snippetslab)
-- [ ] [SmartGit](https://draculatheme.com/smartgit)
-- [ ] [Mantine](https://draculatheme.com/mantine)
-- [ ] [Gajim](https://draculatheme.com/gajim)
-- [ ] [Noir](https://draculatheme.com/noir)
-- [ ] [R](https://draculatheme.com/dRacula)
-- [ ] [Heroic Games Launcher](https://draculatheme.com/heroic-games-launcher)
-- [ ] [Plymouth](https://draculatheme.com/plymouth)
-- [ ] [New Tabs](https://draculatheme.com/new-tabs)
-- [ ] [Textastic](https://draculatheme.com/textastic)
-- [ ] [FontForge](https://draculatheme.com/fontforge)
-- [ ] [Amfora](https://draculatheme.com/amfora)
-- [ ] [Infinity for Reddit](https://draculatheme.com/infinity-for-reddit)
-- [ ] [Vital](https://draculatheme.com/vital)
-- [ ] [Visual Spigot](https://draculatheme.com/visual-spigot)
-- [ ] [Todoist](https://draculatheme.com/todoist)
-- [ ] [nnn](https://draculatheme.com/nnn)
-- [ ] [OpenSCAD](https://draculatheme.com/openscad)
-- [ ] [man-pages](https://draculatheme.com/man-pages)
-- [ ] [Advent of Code](https://draculatheme.com/adventofcode)
-- [ ] [musikcube](https://draculatheme.com/musikcube)
-- [ ] [Revolt](https://draculatheme.com/revolt)
-- [ ] [Libreddit](https://draculatheme.com/libreddit)
-- [ ] [Flowlab](https://draculatheme.com/flowlab)
-- [ ] [Jellyfin](https://draculatheme.com/jellyfin)
-- [ ] [Stirling PDF](https://draculatheme.com/stirling-pdf)
-- [ ] [Drafts](https://draculatheme.com/drafts)
-- [ ] [Tridactyl](https://draculatheme.com/tridactyl)
-- [ ] [GtkSourceView](https://draculatheme.com/gtksourceview)
-- [ ] [Revolution IRC](https://draculatheme.com/revolution-irc)
-- [ ] [Ueli](https://draculatheme.com/ueli)
-- [ ] [Funkwhale](https://draculatheme.com/funkwhale)
-- [ ] [Lichess](https://draculatheme.com/lichess)
-- [ ] [PolyMC](https://draculatheme.com/polymc)
-- [ ] [FreeTube](https://draculatheme.com/freetube)
-- [ ] [PsychoPy](https://draculatheme.com/psychopy)
-- [ ] [BTCPay Server](https://draculatheme.com/btcpay-server)
-- [ ] [Chatterino](https://draculatheme.com/chatterino)
-- [ ] [Nilesoft Shell](https://draculatheme.com/nilesoft-shell)
-- [ ] [Rime](https://draculatheme.com/rime)
-- [ ] [Harpy for Twitter](https://draculatheme.com/harpy-for-twitter)
-- [ ] [Anytype](https://draculatheme.com/anytype)
-- [ ] [Passky](https://draculatheme.com/passky)
-- [ ] [Tofi](https://draculatheme.com/tofi)
-- [ ] [Vortex Mod Manager](https://draculatheme.com/vortex-mod-manager)
-- [ ] [Sioyek](https://draculatheme.com/sioyek)
-- [ ] [Keybr](https://draculatheme.com/keybr)
-- [ ] [Newsboat](https://draculatheme.com/newsboat)
-- [ ] [x64dbg](https://draculatheme.com/x64dbg)
-- [ ] [Tumblr](https://draculatheme.com/tumblr)
-- [ ] [Docker](https://draculatheme.com/docker)
-- [ ] [ColorSlurp](https://draculatheme.com/color-slurp)
-- [ ] [leftwm](https://draculatheme.com/leftwm)
-- [ ] [Notesnook](https://draculatheme.com/notesnook)
-- [ ] [TablePlus](https://draculatheme.com/tableplus)
-- [ ] [aerc](https://draculatheme.com/aerc)
-- [ ] [Fluxbox](https://draculatheme.com/fluxbox)
-- [ ] [Gemini](https://draculatheme.com/gemini)
-- [ ] [Yakuake](https://draculatheme.com/yakuake)
-- [ ] [Dracula CSS](https://draculatheme.com/dracula-css)
-- [ ] [apt](https://draculatheme.com/apt)
-- [ ] [omg.lol](https://draculatheme.com/omglol)
-- [ ] [Sandpack](https://draculatheme.com/sandpack)
-- [ ] [grep](https://draculatheme.com/grep)
-- [ ] [ForkLift](https://draculatheme.com/forklift)
-- [ ] [Peacock Extension](https://draculatheme.com/peacock-extension)
-- [ ] [Campfire](https://draculatheme.com/campfire)
-- [ ] [ITFY](https://draculatheme.com/itfy)
-- [ ] [KanbanFlow](https://draculatheme.com/kanbanflow)
-- [ ] [YunoHost](https://draculatheme.com/yunohost)
-- [ ] [Directory Opus](https://draculatheme.com/directory-opus)
-- [ ] [WP](https://draculatheme.com/wp)
-- [ ] [novelWriter](https://draculatheme.com/novel-writer)
-- [ ] [Markdown CSS](https://draculatheme.com/markdown-css)
-- [ ] [Presenterm](https://draculatheme.com/presenterm)
-- [ ] [FreshRSS](https://draculatheme.com/freshrss)
-- [ ] [TeXworks](https://draculatheme.com/texworks)
-- [ ] [BookWyrm](https://draculatheme.com/bookwyrm)
-- [ ] [Misskey](https://draculatheme.com/misskey)
-- [ ] [SpeedCrunch](https://draculatheme.com/speedcrunch)
-- [ ] [Postman](https://draculatheme.com/postman)
-- [ ] [Nitter](https://draculatheme.com/nitter)
-- [ ] [LabPlot](https://draculatheme.com/labplot)
-- [ ] [LeetCode](https://draculatheme.com/leetcode)
-- [ ] [Dirtywave M8](https://draculatheme.com/m8)
-- [ ] [Bandcamp](https://draculatheme.com/bandcamp)
-- [ ] [lnav](https://draculatheme.com/lnav)
-- [ ] [Cutter](https://draculatheme.com/cutter)
-- [ ] [ripgrep](https://draculatheme.com/ripgrep)
-- [ ] [ThumbKey](https://draculatheme.com/thumb-key)
-- [ ] [Suckless Tabbed](https://draculatheme.com/suckless-tabbed)
-- [ ] [tut](https://draculatheme.com/tut)
-- [ ] [RunJs](https://draculatheme.com/runjs)
-- [ ] [Snappy Driver Installer](https://draculatheme.com/snappy-driver-installer)
-- [ ] [Replugged](https://draculatheme.com/replugged)
-- [ ] [ACS](https://draculatheme.com/acs)
-- [ ] [vis](https://draculatheme.com/vis)
-- [ ] [Beeper](https://draculatheme.com/beeper)
-- [ ] [Dyalog APL](https://draculatheme.com/dyalog)
-- [ ] [Facebook](https://draculatheme.com/facebook)
-- [ ] [Subsonic](https://draculatheme.com/subsonic)
-- [ ] [GoAccess](https://draculatheme.com/go-access)
-- [ ] [Kurozora](https://draculatheme.com/kurozora)
-- [ ] [Codeforces](https://draculatheme.com/codeforces)
-- [ ] [Home Assistant](https://draculatheme.com/home-assistant)
-- [ ] [ggplot2](https://draculatheme.com/ggplot2)
-- [ ] [Makehuman](https://draculatheme.com/makehuman)
-- [ ] [tlrc](https://draculatheme.com/tlrc)
-- [ ] [Jabref](https://draculatheme.com/jabref)
-- [ ] [LCD Smartie](https://draculatheme.com/lcd-smartie)
-- [ ] [AutoAO3App](https://draculatheme.com/auto-ao3-app)
-- [ ] [Sniffnet](https://draculatheme.com/sniffnet)
-- [ ] [Fedilab](https://draculatheme.com/fedilab)
-- [ ] [Kristall](https://draculatheme.com/kristall)
-- [ ] [NewTerm2](https://draculatheme.com/NewTerm2)
-- [ ] [Superset](https://draculatheme.com/superset)
-- [ ] [AdiIRC](https://draculatheme.com/adiirc)
-- [ ] [WhatsApp Web](https://draculatheme.com/whatsapp-web)
-- [ ] [CadZinho](https://draculatheme.com/cadzinho)
-- [ ] [Evidence](https://draculatheme.com/evidence)
-- [ ] [LibreNMS](https://draculatheme.com/librenms)
-- [ ] [T3 Code](https://draculatheme.com/t3code)
-- [ ] [Rackula](https://draculatheme.com/rackula)
-- [ ] [Marta](https://draculatheme.com/marta)
-- [ ] [MacDown CSS](https://draculatheme.com/macdown-css)
-- [ ] [Taskwarrior](https://draculatheme.com/taskwarrior)
-- [ ] [Castero](https://draculatheme.com/castero)
-- [ ] [Gitroll](https://draculatheme.com/gitroll)
-- [ ] [Unraid](https://draculatheme.com/unraid)
-- [ ] [Trudido](https://draculatheme.com/trudido)
-- [ ] [Hermes Agent](https://draculatheme.com/hermes-agent)
-- [ ] [BetterCanvas](https://draculatheme.com/bettercanvas)
-- [ ] [DankMaterialShell](https://draculatheme.com/dankmaterialshell)
-- [ ] [Signal Desktop](https://draculatheme.com/signal-desktop)
-- [ ] [SecureCRT](https://draculatheme.com/securecrt)
-- [ ] [Readwise Reader](https://draculatheme.com/readwise-reader)
-- [ ] [FocusWriter](https://draculatheme.com/focuswriter)
-- [ ] [alphai-tui](https://draculatheme.com/alphai-tui)
-- [ ] [Dash](https://draculatheme.com/dash)
-- [ ] [Telegram macOS](https://draculatheme.com/telegram-macos)
-- [ ] [xdbg](https://draculatheme.com/xdbg)
-- [ ] [Forgejo](https://draculatheme.com/forgejo)
-- [ ] [mRemoteNG](https://draculatheme.com/mremoteng)
-- [ ] [Kagi](https://draculatheme.com/kagi)
-- [ ] [Telegram X](https://draculatheme.com/telegram-x)
-- [ ] [DeepSeek](https://draculatheme.com/deepseek)
-- [ ] [Miniflux](https://draculatheme.com/miniflux)
-- [ ] [Starlight](https://draculatheme.com/astro-starlight)
-- [ ] [Snappy Driver Installer Origin](https://draculatheme.com/snappy-driver-installer-origin)
-- [ ] [Neiki's Editor](https://draculatheme.com/neiki-editor)
-- [ ] [StationView](https://draculatheme.com/stationview)
-- [ ] [Neiki's Page Editor](https://draculatheme.com/neiki-page-editor)
-- [ ] [PeerTube](https://draculatheme.com/peertube)
-- [ ] [Wiremix](https://draculatheme.com/wiremix)
-- [ ] [LDoc](https://draculatheme.com/ldoc)
-- [ ] [Kali Browser](https://draculatheme.com/kali-browser)
+## Catalog acceptance (472)
 
-## Close proof gaps and finish the catalog
+The links are the source catalog snapshot, not permission to execute downloaded content. Each entry closes only with native acceptance evidence; terminal inheritance and palette-only assets must state their limited scope.
 
-- [ ] Work through the retained native-runtime failures and unverified boundaries in [COVERAGE.md](COVERAGE.md), including platform-only applications, editor versus whole-UI scope, desktop/compositor integration and third-party overrides. Keep successful local checks separate from deployed behavior.
-- [ ] Validate the KDE global-theme application in a full desktop, Plasma 6 package/KSplash loading, KWin/Aurorae interaction, Qt 6 Kvantum, and Wayland/hardware cursor behavior. Preserve the exact earlier failures documented in COVERAGE.md.
-- [ ] Keep Google Sans for UI, Google Sans Code for code, ordinary surfaces white, and text contrast at least 4.5:1 on normal, selected, diff and filled-label backgrounds.
-- [ ] On future batches, run `mise install`, `mise run install`, the required `mise run check` gate, `mise run format` for Python edits and `mise run screenshots` after visual changes. Preserve the two synthetic screenshots and refresh native package previews where appropriate.
-- [ ] Keep checks isolated from installed themes and live services; preserve unrelated work and staged selections. Commit bounded batches at least every 30 minutes when the original implementation work is explicitly resumed.
-- [ ] Reconcile all 472 baseline entries and the installation inventory. Claim full parity only after all remaining entries and proof requirements have an explicit, supported result.
+- [ ] Review [Hyper](https://draculatheme.com/hyper) for native loading, representative states and visual acceptance.
+- [ ] Review [Netbeans](https://draculatheme.com/netbeans) for native loading, representative states and visual acceptance.
+- [ ] Review [Atom](https://draculatheme.com/atom) for native loading, representative states and visual acceptance.
+- [ ] Review [Qt Creator](https://draculatheme.com/qtcreator) for native loading, representative states and visual acceptance.
+- [ ] Review [Code::Blocks](https://draculatheme.com/codeblocks) for native loading, representative states and visual acceptance.
+- [ ] Review [Gedit](https://draculatheme.com/gedit) for native loading, representative states and visual acceptance.
+- [ ] Review [ConEmu](https://draculatheme.com/conemu) for native loading, representative states and visual acceptance.
+- [ ] Review [i3](https://draculatheme.com/i3) for native loading, representative states and visual acceptance.
+- [ ] Review [Brackets](https://draculatheme.com/brackets) for native loading, representative states and visual acceptance.
+- [ ] Review [MobaXterm](https://draculatheme.com/mobaxterm) for native loading, representative states and visual acceptance.
+- [ ] Review [Dev-C++](https://draculatheme.com/dev-cpp) for native loading, representative states and visual acceptance.
+- [ ] Review [rofi](https://draculatheme.com/rofi) for native loading, representative states and visual acceptance.
+- [ ] Review [Mintty](https://draculatheme.com/mintty) for native loading, representative states and visual acceptance.
+- [ ] Review [Xfce4 Terminal](https://draculatheme.com/xfce4-terminal) for native loading, representative states and visual acceptance.
+- [ ] Review [Termux](https://draculatheme.com/termux) for native loading, representative states and visual acceptance.
+- [ ] Review [wofi](https://draculatheme.com/wofi) for native loading, representative states and visual acceptance.
+- [ ] Review [Hyprland](https://draculatheme.com/hyprland) for native loading, representative states and visual acceptance.
+- [ ] Review [Kate](https://draculatheme.com/kate) for native loading, representative states and visual acceptance.
+- [ ] Review [Waybar](https://draculatheme.com/waybar) for native loading, representative states and visual acceptance.
+- [ ] Review [Terminator](https://draculatheme.com/terminator) for native loading, representative states and visual acceptance.
+- [ ] Review [Textmate](https://draculatheme.com/textmate) for native loading, representative states and visual acceptance.
+- [ ] Review [IDLE](https://draculatheme.com/idle) for native loading, representative states and visual acceptance.
+- [ ] Review [Fluent Terminal](https://draculatheme.com/fluent-terminal) for native loading, representative states and visual acceptance.
+- [ ] Review [Thonny](https://draculatheme.com/thonny) for native loading, representative states and visual acceptance.
+- [ ] Review [Tilix](https://draculatheme.com/tilix) for native loading, representative states and visual acceptance.
+- [ ] Review [bspwm](https://draculatheme.com/bspwm) for native loading, representative states and visual acceptance.
+- [ ] Review [Geany](https://draculatheme.com/geany) for native loading, representative states and visual acceptance.
+- [ ] Review [MATLAB](https://draculatheme.com/matlab) for native loading, representative states and visual acceptance.
+- [ ] Review [Warp](https://draculatheme.com/warp) for native loading, representative states and visual acceptance.
+- [ ] Review [Dunst](https://draculatheme.com/dunst) for native loading, representative states and visual acceptance.
+- [ ] Review [Zathura](https://draculatheme.com/zathura) for native loading, representative states and visual acceptance.
+- [ ] Review [Swaylock](https://draculatheme.com/swaylock) for native loading, representative states and visual acceptance.
+- [ ] Review [Polybar](https://draculatheme.com/polybar) for native loading, representative states and visual acceptance.
+- [ ] Review [Micro](https://draculatheme.com/micro) for native loading, representative states and visual acceptance.
+- [ ] Review [fuzzel](https://draculatheme.com/fuzzel) for native loading, representative states and visual acceptance.
+- [ ] Review [Termite](https://draculatheme.com/termite) for native loading, representative states and visual acceptance.
+- [ ] Review [WindTerm](https://draculatheme.com/windterm) for native loading, representative states and visual acceptance.
+- [ ] Review [LXTerminal](https://draculatheme.com/lxterminal) for native loading, representative states and visual acceptance.
+- [ ] Review [Cosmic Terminal](https://draculatheme.com/cosmic-terminal) for native loading, representative states and visual acceptance.
+- [ ] Review [Qterminal](https://draculatheme.com/qterminal) for native loading, representative states and visual acceptance.
+- [ ] Review [Rio Terminal](https://draculatheme.com/rio-terminal) for native loading, representative states and visual acceptance.
+- [ ] Review [Pantheon Terminal](https://draculatheme.com/pantheon-terminal) for native loading, representative states and visual acceptance.
+- [ ] Review [Dmenu](https://draculatheme.com/dmenu) for native loading, representative states and visual acceptance.
+- [ ] Review [st](https://draculatheme.com/st) for native loading, representative states and visual acceptance.
+- [ ] Review [tym](https://draculatheme.com/tym) for native loading, representative states and visual acceptance.
+- [ ] Review [WOB](https://draculatheme.com/WOB) for native loading, representative states and visual acceptance.
+- [ ] Review [Swaync](https://draculatheme.com/swaync) for native loading, representative states and visual acceptance.
+- [ ] Review [SwayOSD](https://draculatheme.com/swayosd) for native loading, representative states and visual acceptance.
+- [ ] Review [Monkeytype](https://draculatheme.com/monkeytype) for native loading, representative states and visual acceptance.
+- [ ] Review [Slack](https://draculatheme.com/slack) for native loading, representative states and visual acceptance.
+- [ ] Review [Raycast](https://draculatheme.com/raycast) for native loading, representative states and visual acceptance.
+- [ ] Review [Claude Code](https://draculatheme.com/claude-code) for native loading, representative states and visual acceptance.
+- [ ] Review [Zsh](https://draculatheme.com/zsh) for native loading, representative states and visual acceptance.
+- [ ] Review [Wallpaper](https://draculatheme.com/wallpaper) for native loading, representative states and visual acceptance.
+- [ ] Review [QBittorrent](https://draculatheme.com/qbittorrent) for native loading, representative states and visual acceptance.
+- [ ] Review [Telegram](https://draculatheme.com/telegram) for native loading, representative states and visual acceptance.
+- [ ] Review [Oracle SQL Developer](https://draculatheme.com/oracle-sql-developer) for native loading, representative states and visual acceptance.
+- [ ] Review [MySQL Workbench](https://draculatheme.com/mysql-workbench) for native loading, representative states and visual acceptance.
+- [ ] Review [BetterDiscord](https://draculatheme.com/betterdiscord) for native loading, representative states and visual acceptance.
+- [ ] Review [Steam](https://draculatheme.com/steam) for native loading, representative states and visual acceptance.
+- [ ] Review [Insomnia](https://draculatheme.com/insomnia) for native loading, representative states and visual acceptance.
+- [ ] Review [Powerlevel10k](https://draculatheme.com/powerlevel10k) for native loading, representative states and visual acceptance.
+- [ ] Review [Vivaldi](https://draculatheme.com/vivaldi) for native loading, representative states and visual acceptance.
+- [ ] Review [GMK](https://draculatheme.com/gmk) for native loading, representative states and visual acceptance.
+- [ ] Review [Highlight.js](https://draculatheme.com/highlightjs) for native loading, representative states and visual acceptance.
+- [ ] Review [Cmder](https://draculatheme.com/cmder) for native loading, representative states and visual acceptance.
+- [ ] Review [Alfred](https://draculatheme.com/alfred) for native loading, representative states and visual acceptance.
+- [ ] Review [Telegram Android](https://draculatheme.com/telegram-android) for native loading, representative states and visual acceptance.
+- [ ] Review [GitHub Pages](https://draculatheme.com/gh-pages) for native loading, representative states and visual acceptance.
+- [ ] Review [LibreOffice](https://draculatheme.com/libreoffice) for native loading, representative states and visual acceptance.
+- [ ] Review [Arduino IDE](https://draculatheme.com/arduino-ide) for native loading, representative states and visual acceptance.
+- [ ] Review [Midnight Commander](https://draculatheme.com/midnight-commander) for native loading, representative states and visual acceptance.
+- [ ] Review [Godot](https://draculatheme.com/godot) for native loading, representative states and visual acceptance.
+- [ ] Review [Sequel Pro](https://draculatheme.com/sequel-pro) for native loading, representative states and visual acceptance.
+- [ ] Review [DuckDuckGo](https://draculatheme.com/duckduckgo) for native loading, representative states and visual acceptance.
+- [ ] Review [GitHub](https://draculatheme.com/github) for native loading, representative states and visual acceptance.
+- [ ] Review [Gamepad Viewer](https://draculatheme.com/gamepad-viewer) for native loading, representative states and visual acceptance.
+- [ ] Review [Spotify TUI](https://draculatheme.com/spotify-tui) for native loading, representative states and visual acceptance.
+- [ ] Review [Telegram iOS](https://draculatheme.com/telegram-ios) for native loading, representative states and visual acceptance.
+- [ ] Review [GameMaker Studio](https://draculatheme.com/gamemaker-studio) for native loading, representative states and visual acceptance.
+- [ ] Review [MonoDevelop](https://draculatheme.com/monodevelop) for native loading, representative states and visual acceptance.
+- [ ] Review [Youtube](https://draculatheme.com/youtube) for native loading, representative states and visual acceptance.
+- [ ] Review [Hacker News](https://draculatheme.com/hacker-news) for native loading, representative states and visual acceptance.
+- [ ] Review [Blender](https://draculatheme.com/blender) for native loading, representative states and visual acceptance.
+- [ ] Review [Adobe](https://draculatheme.com/adobe) for native loading, representative states and visual acceptance.
+- [ ] Review [Oh My Posh](https://draculatheme.com/oh-my-posh) for native loading, representative states and visual acceptance.
+- [ ] Review [GRUB](https://draculatheme.com/grub) for native loading, representative states and visual acceptance.
+- [ ] Review [Pythonista](https://draculatheme.com/pythonista) for native loading, representative states and visual acceptance.
+- [ ] Review [Gitk](https://draculatheme.com/gitk) for native loading, representative states and visual acceptance.
+- [ ] Review [Qutebrowser](https://draculatheme.com/qutebrowser) for native loading, representative states and visual acceptance.
+- [ ] Review [Figma](https://draculatheme.com/figma) for native loading, representative states and visual acceptance.
+- [ ] Review [Wox](https://draculatheme.com/wox) for native loading, representative states and visual acceptance.
+- [ ] Review [Files](https://draculatheme.com/files) for native loading, representative states and visual acceptance.
+- [ ] Review [MetaTrader 5](https://draculatheme.com/metatrader5) for native loading, representative states and visual acceptance.
+- [ ] Review [Mutt](https://draculatheme.com/mutt) for native loading, representative states and visual acceptance.
+- [ ] Review [Microsoft Edge](https://draculatheme.com/microsoft-edge) for native loading, representative states and visual acceptance.
+- [ ] Review [Mousepad](https://draculatheme.com/mousepad) for native loading, representative states and visual acceptance.
+- [ ] Review [Vivado](https://draculatheme.com/vivado) for native loading, representative states and visual acceptance.
+- [ ] Review [Marp](https://draculatheme.com/marp) for native loading, representative states and visual acceptance.
+- [ ] Review [Git](https://draculatheme.com/git) for native loading, representative states and visual acceptance.
+- [ ] Review [DOOM Emacs](https://draculatheme.com/doom-emacs) for native loading, representative states and visual acceptance.
+- [ ] Review [Total Commander](https://draculatheme.com/total-commander) for native loading, representative states and visual acceptance.
+- [ ] Review [Base16](https://draculatheme.com/base16-dracula-scheme) for native loading, representative states and visual acceptance.
+- [ ] Review [qt5](https://draculatheme.com/qt5) for native loading, representative states and visual acceptance.
+- [ ] Review [Coda](https://draculatheme.com/coda) for native loading, representative states and visual acceptance.
+- [ ] Review [colorls](https://draculatheme.com/colorls) for native loading, representative states and visual acceptance.
+- [ ] Review [Aseprite](https://draculatheme.com/aseprite) for native loading, representative states and visual acceptance.
+- [ ] Review [Light Table](https://draculatheme.com/light-table) for native loading, representative states and visual acceptance.
+- [ ] Review [FL Studio 21](https://draculatheme.com/fl-studio-21) for native loading, representative states and visual acceptance.
+- [ ] Review [Vimium](https://draculatheme.com/vimium) for native loading, representative states and visual acceptance.
+- [ ] Review [MacDown](https://draculatheme.com/macdown) for native loading, representative states and visual acceptance.
+- [ ] Review [Nova Launcher](https://draculatheme.com/nova-launcher) for native loading, representative states and visual acceptance.
+- [ ] Review [IDA Pro](https://draculatheme.com/ida) for native loading, representative states and visual acceptance.
+- [ ] Review [Tailwind](https://draculatheme.com/tailwind) for native loading, representative states and visual acceptance.
+- [ ] Review [Mattermost](https://draculatheme.com/mattermost) for native loading, representative states and visual acceptance.
+- [ ] Review [Aliucord](https://draculatheme.com/aliucord) for native loading, representative states and visual acceptance.
+- [ ] Review [Xournal++](https://draculatheme.com/xournalpp) for native loading, representative states and visual acceptance.
+- [ ] Review [ABAP](https://draculatheme.com/abap) for native loading, representative states and visual acceptance.
+- [ ] Review [BBEdit](https://draculatheme.com/bbedit) for native loading, representative states and visual acceptance.
+- [ ] Review [Thunderbird](https://draculatheme.com/thunderbird) for native loading, representative states and visual acceptance.
+- [ ] Review [Logseq](https://draculatheme.com/logseq) for native loading, representative states and visual acceptance.
+- [ ] Review [Ulysses](https://draculatheme.com/ulysses) for native loading, representative states and visual acceptance.
+- [ ] Review [jGrasp](https://draculatheme.com/jgrasp) for native loading, representative states and visual acceptance.
+- [ ] Review [KiCad](https://draculatheme.com/kicad) for native loading, representative states and visual acceptance.
+- [ ] Review [ranger](https://draculatheme.com/ranger) for native loading, representative states and visual acceptance.
+- [ ] Review [Mailspring](https://draculatheme.com/mailspring) for native loading, representative states and visual acceptance.
+- [ ] Review [Ulauncher](https://draculatheme.com/ulauncher) for native loading, representative states and visual acceptance.
+- [ ] Review [Ableton Live](https://draculatheme.com/ableton-live) for native loading, representative states and visual acceptance.
+- [ ] Review [Homer](https://draculatheme.com/homer) for native loading, representative states and visual acceptance.
+- [ ] Review [Wordpress](https://draculatheme.com/wordpress) for native loading, representative states and visual acceptance.
+- [ ] Review [XChat](https://draculatheme.com/xchat) for native loading, representative states and visual acceptance.
+- [ ] Review [MiXplorer](https://draculatheme.com/mixplorer) for native loading, representative states and visual acceptance.
+- [ ] Review [TeXstudio](https://draculatheme.com/texstudio) for native loading, representative states and visual acceptance.
+- [ ] Review [JDownloader2](https://draculatheme.com/jdownloader2) for native loading, representative states and visual acceptance.
+- [ ] Review [MindNode](https://draculatheme.com/mindnode) for native loading, representative states and visual acceptance.
+- [ ] Review [Prism](https://draculatheme.com/prism) for native loading, representative states and visual acceptance.
+- [ ] Review [Bashtop](https://draculatheme.com/bashtop) for native loading, representative states and visual acceptance.
+- [ ] Review [FreeCAD](https://draculatheme.com/freecad) for native loading, representative states and visual acceptance.
+- [ ] Review [Adminer](https://draculatheme.com/adminer) for native loading, representative states and visual acceptance.
+- [ ] Review [LaTeX](https://draculatheme.com/latex) for native loading, representative states and visual acceptance.
+- [ ] Review [PL/SQL Developer](https://draculatheme.com/plsql-developer) for native loading, representative states and visual acceptance.
+- [ ] Review [Inkscape](https://draculatheme.com/inkscape) for native loading, representative states and visual acceptance.
+- [ ] Review [Textual](https://draculatheme.com/textual) for native loading, representative states and visual acceptance.
+- [ ] Review [Roam Research](https://draculatheme.com/roam-research) for native loading, representative states and visual acceptance.
+- [ ] Review [Discourse](https://draculatheme.com/discourse) for native loading, representative states and visual acceptance.
+- [ ] Review [Sumatra PDF](https://draculatheme.com/sumatra-pdf) for native loading, representative states and visual acceptance.
+- [ ] Review [YouTube Music Desktop](https://draculatheme.com/youtube-music-desktop) for native loading, representative states and visual acceptance.
+- [ ] Review [macOS Color Picker](https://draculatheme.com/macos-color-picker) for native loading, representative states and visual acceptance.
+- [ ] Review [Plank](https://draculatheme.com/plank) for native loading, representative states and visual acceptance.
+- [ ] Review [Quiver](https://draculatheme.com/quiver) for native loading, representative states and visual acceptance.
+- [ ] Review [Nextcloud](https://draculatheme.com/nextcloud) for native loading, representative states and visual acceptance.
+- [ ] Review [Unreal Engine](https://draculatheme.com/unreal-engine) for native loading, representative states and visual acceptance.
+- [ ] Review [Standard Notes](https://draculatheme.com/standard-notes) for native loading, representative states and visual acceptance.
+- [ ] Review [Quassel](https://draculatheme.com/quassel) for native loading, representative states and visual acceptance.
+- [ ] Review [Tabletop Simulator](https://draculatheme.com/tabletop-simulator) for native loading, representative states and visual acceptance.
+- [ ] Review [GitLab](https://draculatheme.com/gitlab) for native loading, representative states and visual acceptance.
+- [ ] Review [Spicetify](https://draculatheme.com/spicetify) for native loading, representative states and visual acceptance.
+- [ ] Review [TiddlyWiki](https://draculatheme.com/tiddlywiki) for native loading, representative states and visual acceptance.
+- [ ] Review [Nylas N1](https://draculatheme.com/nylas-n1) for native loading, representative states and visual acceptance.
+- [ ] Review [Bear](https://draculatheme.com/bear) for native loading, representative states and visual acceptance.
+- [ ] Review [Beyond Compare 4](https://draculatheme.com/beyond-compare-4) for native loading, representative states and visual acceptance.
+- [ ] Review [Discord Bot Maker](https://draculatheme.com/discordbotmaker) for native loading, representative states and visual acceptance.
+- [ ] Review [LightPaper](https://draculatheme.com/lightpaper) for native loading, representative states and visual acceptance.
+- [ ] Review [Javadoc](https://draculatheme.com/javadoc) for native loading, representative states and visual acceptance.
+- [ ] Review [Spacemacs](https://draculatheme.com/spacemacs) for native loading, representative states and visual acceptance.
+- [ ] Review [FlorisBoard](https://draculatheme.com/florisboard) for native loading, representative states and visual acceptance.
+- [ ] Review [TTY](https://draculatheme.com/tty) for native loading, representative states and visual acceptance.
+- [ ] Review [Google Calendar](https://draculatheme.com/google-calendar) for native loading, representative states and visual acceptance.
+- [ ] Review [Openbox](https://draculatheme.com/openbox) for native loading, representative states and visual acceptance.
+- [ ] Review [Editplus](https://draculatheme.com/editplus) for native loading, representative states and visual acceptance.
+- [ ] Review [MkDocs](https://draculatheme.com/mkdocs) for native loading, representative states and visual acceptance.
+- [ ] Review [Krita](https://draculatheme.com/krita) for native loading, representative states and visual acceptance.
+- [ ] Review [StackOverflow](https://draculatheme.com/stackoverflow) for native loading, representative states and visual acceptance.
+- [ ] Review [Wolfram Notebooks](https://draculatheme.com/wolfram-notebooks) for native loading, representative states and visual acceptance.
+- [ ] Review [Minecraft](https://draculatheme.com/minecraft) for native loading, representative states and visual acceptance.
+- [ ] Review [.dircolors](https://draculatheme.com/dircolors) for native loading, representative states and visual acceptance.
+- [ ] Review [CotEditor](https://draculatheme.com/coteditor) for native loading, representative states and visual acceptance.
+- [ ] Review [EverythingToolbar](https://draculatheme.com/everythingtoolbar) for native loading, representative states and visual acceptance.
+- [ ] Review [Arduino Pro IDE](https://draculatheme.com/arduino-pro-ide) for native loading, representative states and visual acceptance.
+- [ ] Review [Powerlevel10k for Oh My Posh](https://draculatheme.com/p10k-oh-my-posh) for native loading, representative states and visual acceptance.
+- [ ] Review [Clone Hero](https://draculatheme.com/clone-hero) for native loading, representative states and visual acceptance.
+- [ ] Review [GitKraken](https://draculatheme.com/gitkraken) for native loading, representative states and visual acceptance.
+- [ ] Review [CopyQ](https://draculatheme.com/copyq) for native loading, representative states and visual acceptance.
+- [ ] Review [GIMP](https://draculatheme.com/gimp) for native loading, representative states and visual acceptance.
+- [ ] Review [MetaEditor](https://draculatheme.com/metaeditor) for native loading, representative states and visual acceptance.
+- [ ] Review [iSH](https://draculatheme.com/ish) for native loading, representative states and visual acceptance.
+- [ ] Review [PowerShell ISE](https://draculatheme.com/powershell-ise) for native loading, representative states and visual acceptance.
+- [ ] Review [i3lock-color](https://draculatheme.com/i3lock-color) for native loading, representative states and visual acceptance.
+- [ ] Review [Cava](https://draculatheme.com/cava) for native loading, representative states and visual acceptance.
+- [ ] Review [Sketch](https://draculatheme.com/sketch) for native loading, representative states and visual acceptance.
+- [ ] Review [KDiff3](https://draculatheme.com/kdiff3) for native loading, representative states and visual acceptance.
+- [ ] Review [MusicBee](https://draculatheme.com/musicbee) for native loading, representative states and visual acceptance.
+- [ ] Review [Scrivener](https://draculatheme.com/scrivener) for native loading, representative states and visual acceptance.
+- [ ] Review [LiteIDE](https://draculatheme.com/liteide) for native loading, representative states and visual acceptance.
+- [ ] Review [Homepage](https://draculatheme.com/homepage-app) for native loading, representative states and visual acceptance.
+- [ ] Review [LTSpice](https://draculatheme.com/ltspice) for native loading, representative states and visual acceptance.
+- [ ] Review [eM Client](https://draculatheme.com/em-client) for native loading, representative states and visual acceptance.
+- [ ] Review [Nova](https://draculatheme.com/nova) for native loading, representative states and visual acceptance.
+- [ ] Review [Beamer](https://draculatheme.com/beamer) for native loading, representative states and visual acceptance.
+- [ ] Review [Pandoc](https://draculatheme.com/pandoc) for native loading, representative states and visual acceptance.
+- [ ] Review [Delphi](https://draculatheme.com/delphi) for native loading, representative states and visual acceptance.
+- [ ] Review [Django Admin](https://draculatheme.com/django-admin) for native loading, representative states and visual acceptance.
+- [ ] Review [Kakoune](https://draculatheme.com/kakoune) for native loading, representative states and visual acceptance.
+- [ ] Review [Albert](https://draculatheme.com/albert) for native loading, representative states and visual acceptance.
+- [ ] Review [Facebook Messenger](https://draculatheme.com/facebook-messenger) for native loading, representative states and visual acceptance.
+- [ ] Review [Couscous](https://draculatheme.com/couscous) for native loading, representative states and visual acceptance.
+- [ ] Review [ReNoise](https://draculatheme.com/renoise) for native loading, representative states and visual acceptance.
+- [ ] Review [ghostwriter](https://draculatheme.com/ghostwriter) for native loading, representative states and visual acceptance.
+- [ ] Review [Papirus Folders](https://draculatheme.com/papirus-folders) for native loading, representative states and visual acceptance.
+- [ ] Review [Linear](https://draculatheme.com/linear) for native loading, representative states and visual acceptance.
+- [ ] Review [SwiftUI](https://draculatheme.com/swiftui) for native loading, representative states and visual acceptance.
+- [ ] Review [Audacity](https://draculatheme.com/audacity) for native loading, representative states and visual acceptance.
+- [ ] Review [Node Console](https://draculatheme.com/node-console) for native loading, representative states and visual acceptance.
+- [ ] Review [Uptime Kuma](https://draculatheme.com/uptime-kuma) for native loading, representative states and visual acceptance.
+- [ ] Review [Pywal](https://draculatheme.com/pywal) for native loading, representative states and visual acceptance.
+- [ ] Review [SolidWorks](https://draculatheme.com/solidworks) for native loading, representative states and visual acceptance.
+- [ ] Review [OneCommander](https://draculatheme.com/onecommander) for native loading, representative states and visual acceptance.
+- [ ] Review [Wing](https://draculatheme.com/wing) for native loading, representative states and visual acceptance.
+- [ ] Review [Cryptowatch](https://draculatheme.com/cryptowatch) for native loading, representative states and visual acceptance.
+- [ ] Review [Ripcord](https://draculatheme.com/ripcord) for native loading, representative states and visual acceptance.
+- [ ] Review [Ditto](https://draculatheme.com/ditto) for native loading, representative states and visual acceptance.
+- [ ] Review [SideNotes](https://draculatheme.com/sidenotes) for native loading, representative states and visual acceptance.
+- [ ] Review [bemenu](https://draculatheme.com/bemenu) for native loading, representative states and visual acceptance.
+- [ ] Review [The Lounge](https://draculatheme.com/thelounge) for native loading, representative states and visual acceptance.
+- [ ] Review [ChatGPT](https://draculatheme.com/chatgpt) for native loading, representative states and visual acceptance.
+- [ ] Review [Mako](https://draculatheme.com/mako) for native loading, representative states and visual acceptance.
+- [ ] Review [Flarum](https://draculatheme.com/flarum) for native loading, representative states and visual acceptance.
+- [ ] Review [Visual Basic 6](https://draculatheme.com/visual-basic-6) for native loading, representative states and visual acceptance.
+- [ ] Review [Nyxt](https://draculatheme.com/nyxt) for native loading, representative states and visual acceptance.
+- [ ] Review [Joplin](https://draculatheme.com/joplin) for native loading, representative states and visual acceptance.
+- [ ] Review [Unigram](https://draculatheme.com/unigram) for native loading, representative states and visual acceptance.
+- [ ] Review [Prompt](https://draculatheme.com/prompt) for native loading, representative states and visual acceptance.
+- [ ] Review [ncspot](https://draculatheme.com/ncspot) for native loading, representative states and visual acceptance.
+- [ ] Review [Tower](https://draculatheme.com/tower) for native loading, representative states and visual acceptance.
+- [ ] Review [Keypirinha](https://draculatheme.com/keypirinha) for native loading, representative states and visual acceptance.
+- [ ] Review [Cider](https://draculatheme.com/cider) for native loading, representative states and visual acceptance.
+- [ ] Review [Dwarf Fortress](https://draculatheme.com/dwarf-fortress) for native loading, representative states and visual acceptance.
+- [ ] Review [Google Search](https://draculatheme.com/google-search) for native loading, representative states and visual acceptance.
+- [ ] Review [Anne Pro 2](https://draculatheme.com/anne-pro-2) for native loading, representative states and visual acceptance.
+- [ ] Review [Apollo](https://draculatheme.com/apollo) for native loading, representative states and visual acceptance.
+- [ ] Review [Blockbench](https://draculatheme.com/blockbench) for native loading, representative states and visual acceptance.
+- [ ] Review [LimeChat](https://draculatheme.com/limechat) for native loading, representative states and visual acceptance.
+- [ ] Review [tint2](https://draculatheme.com/tint2) for native loading, representative states and visual acceptance.
+- [ ] Review [fman](https://draculatheme.com/fman) for native loading, representative states and visual acceptance.
+- [ ] Review [bobthefish](https://draculatheme.com/bobthefish) for native loading, representative states and visual acceptance.
+- [ ] Review [Omarchy](https://draculatheme.com/omarchy) for native loading, representative states and visual acceptance.
+- [ ] Review [HyperX NGNUITY](https://draculatheme.com/ngenuity) for native loading, representative states and visual acceptance.
+- [ ] Review [Archive of Our Own](https://draculatheme.com/archive-of-our-own) for native loading, representative states and visual acceptance.
+- [ ] Review [Abricotine](https://draculatheme.com/abricotine) for native loading, representative states and visual acceptance.
+- [ ] Review [CodeRunner](https://draculatheme.com/coderunner) for native loading, representative states and visual acceptance.
+- [ ] Review [Calibre](https://draculatheme.com/calibre) for native loading, representative states and visual acceptance.
+- [ ] Review [Fig](https://draculatheme.com/fig) for native loading, representative states and visual acceptance.
+- [ ] Review [Sequel Ace](https://draculatheme.com/sequel-ace) for native loading, representative states and visual acceptance.
+- [ ] Review [Pi Coding Agent](https://draculatheme.com/pi-coding-agent) for native loading, representative states and visual acceptance.
+- [ ] Review [TeXShop](https://draculatheme.com/texshop) for native loading, representative states and visual acceptance.
+- [ ] Review [Duolingo](https://draculatheme.com/duolingo) for native loading, representative states and visual acceptance.
+- [ ] Review [tig](https://draculatheme.com/tig) for native loading, representative states and visual acceptance.
+- [ ] Review [CodePen](https://draculatheme.com/codepen) for native loading, representative states and visual acceptance.
+- [ ] Review [Caprine Messenger](https://draculatheme.com/caprine-messenger) for native loading, representative states and visual acceptance.
+- [ ] Review [eza](https://draculatheme.com/eza) for native loading, representative states and visual acceptance.
+- [ ] Review [Postbox](https://draculatheme.com/postbox) for native loading, representative states and visual acceptance.
+- [ ] Review [Vesktop Discord](https://draculatheme.com/vesktop-discord) for native loading, representative states and visual acceptance.
+- [ ] Review [Blink Shell](https://draculatheme.com/blink-shell) for native loading, representative states and visual acceptance.
+- [ ] Review [Cli-Visualizer](https://draculatheme.com/cli-visualizer) for native loading, representative states and visual acceptance.
+- [ ] Review [ImageGlass](https://draculatheme.com/imageglass) for native loading, representative states and visual acceptance.
+- [ ] Review [Starship Powerline Preset](https://draculatheme.com/starship-powerline-preset) for native loading, representative states and visual acceptance.
+- [ ] Review [exa](https://draculatheme.com/exa) for native loading, representative states and visual acceptance.
+- [ ] Review [Protonmail](https://draculatheme.com/protonmail) for native loading, representative states and visual acceptance.
+- [ ] Review [SerenityOS](https://draculatheme.com/serenityos) for native loading, representative states and visual acceptance.
+- [ ] Review [SnippetsLab](https://draculatheme.com/snippetslab) for native loading, representative states and visual acceptance.
+- [ ] Review [SmartGit](https://draculatheme.com/smartgit) for native loading, representative states and visual acceptance.
+- [ ] Review [Mantine](https://draculatheme.com/mantine) for native loading, representative states and visual acceptance.
+- [ ] Review [Gajim](https://draculatheme.com/gajim) for native loading, representative states and visual acceptance.
+- [ ] Review [Noir](https://draculatheme.com/noir) for native loading, representative states and visual acceptance.
+- [ ] Review [R](https://draculatheme.com/dRacula) for native loading, representative states and visual acceptance.
+- [ ] Review [Heroic Games Launcher](https://draculatheme.com/heroic-games-launcher) for native loading, representative states and visual acceptance.
+- [ ] Review [Plymouth](https://draculatheme.com/plymouth) for native loading, representative states and visual acceptance.
+- [ ] Review [New Tabs](https://draculatheme.com/new-tabs) for native loading, representative states and visual acceptance.
+- [ ] Review [Textastic](https://draculatheme.com/textastic) for native loading, representative states and visual acceptance.
+- [ ] Review [FontForge](https://draculatheme.com/fontforge) for native loading, representative states and visual acceptance.
+- [ ] Review [Amfora](https://draculatheme.com/amfora) for native loading, representative states and visual acceptance.
+- [ ] Review [Infinity for Reddit](https://draculatheme.com/infinity-for-reddit) for native loading, representative states and visual acceptance.
+- [ ] Review [Vital](https://draculatheme.com/vital) for native loading, representative states and visual acceptance.
+- [ ] Review [Visual Spigot](https://draculatheme.com/visual-spigot) for native loading, representative states and visual acceptance.
+- [ ] Review [Todoist](https://draculatheme.com/todoist) for native loading, representative states and visual acceptance.
+- [ ] Review [nnn](https://draculatheme.com/nnn) for native loading, representative states and visual acceptance.
+- [ ] Review [OpenSCAD](https://draculatheme.com/openscad) for native loading, representative states and visual acceptance.
+- [ ] Review [man-pages](https://draculatheme.com/man-pages) for native loading, representative states and visual acceptance.
+- [ ] Review [Advent of Code](https://draculatheme.com/adventofcode) for native loading, representative states and visual acceptance.
+- [ ] Review [musikcube](https://draculatheme.com/musikcube) for native loading, representative states and visual acceptance.
+- [ ] Review [Revolt](https://draculatheme.com/revolt) for native loading, representative states and visual acceptance.
+- [ ] Review [Libreddit](https://draculatheme.com/libreddit) for native loading, representative states and visual acceptance.
+- [ ] Review [Flowlab](https://draculatheme.com/flowlab) for native loading, representative states and visual acceptance.
+- [ ] Review [Jellyfin](https://draculatheme.com/jellyfin) for native loading, representative states and visual acceptance.
+- [ ] Review [Stirling PDF](https://draculatheme.com/stirling-pdf) for native loading, representative states and visual acceptance.
+- [ ] Review [Drafts](https://draculatheme.com/drafts) for native loading, representative states and visual acceptance.
+- [ ] Review [Tridactyl](https://draculatheme.com/tridactyl) for native loading, representative states and visual acceptance.
+- [ ] Review [GtkSourceView](https://draculatheme.com/gtksourceview) for native loading, representative states and visual acceptance.
+- [ ] Review [Revolution IRC](https://draculatheme.com/revolution-irc) for native loading, representative states and visual acceptance.
+- [ ] Review [Ueli](https://draculatheme.com/ueli) for native loading, representative states and visual acceptance.
+- [ ] Review [Funkwhale](https://draculatheme.com/funkwhale) for native loading, representative states and visual acceptance.
+- [ ] Review [Lichess](https://draculatheme.com/lichess) for native loading, representative states and visual acceptance.
+- [ ] Review [PolyMC](https://draculatheme.com/polymc) for native loading, representative states and visual acceptance.
+- [ ] Review [FreeTube](https://draculatheme.com/freetube) for native loading, representative states and visual acceptance.
+- [ ] Review [PsychoPy](https://draculatheme.com/psychopy) for native loading, representative states and visual acceptance.
+- [ ] Review [BTCPay Server](https://draculatheme.com/btcpay-server) for native loading, representative states and visual acceptance.
+- [ ] Review [Chatterino](https://draculatheme.com/chatterino) for native loading, representative states and visual acceptance.
+- [ ] Review [Nilesoft Shell](https://draculatheme.com/nilesoft-shell) for native loading, representative states and visual acceptance.
+- [ ] Review [Rime](https://draculatheme.com/rime) for native loading, representative states and visual acceptance.
+- [ ] Review [Harpy for Twitter](https://draculatheme.com/harpy-for-twitter) for native loading, representative states and visual acceptance.
+- [ ] Review [Anytype](https://draculatheme.com/anytype) for native loading, representative states and visual acceptance.
+- [ ] Review [Passky](https://draculatheme.com/passky) for native loading, representative states and visual acceptance.
+- [ ] Review [Tofi](https://draculatheme.com/tofi) for native loading, representative states and visual acceptance.
+- [ ] Review [Vortex Mod Manager](https://draculatheme.com/vortex-mod-manager) for native loading, representative states and visual acceptance.
+- [ ] Review [Sioyek](https://draculatheme.com/sioyek) for native loading, representative states and visual acceptance.
+- [ ] Review [Keybr](https://draculatheme.com/keybr) for native loading, representative states and visual acceptance.
+- [ ] Review [Newsboat](https://draculatheme.com/newsboat) for native loading, representative states and visual acceptance.
+- [ ] Review [x64dbg](https://draculatheme.com/x64dbg) for native loading, representative states and visual acceptance.
+- [ ] Review [Tumblr](https://draculatheme.com/tumblr) for native loading, representative states and visual acceptance.
+- [ ] Review [Docker](https://draculatheme.com/docker) for native loading, representative states and visual acceptance.
+- [ ] Review [ColorSlurp](https://draculatheme.com/color-slurp) for native loading, representative states and visual acceptance.
+- [ ] Review [leftwm](https://draculatheme.com/leftwm) for native loading, representative states and visual acceptance.
+- [ ] Review [Notesnook](https://draculatheme.com/notesnook) for native loading, representative states and visual acceptance.
+- [ ] Review [TablePlus](https://draculatheme.com/tableplus) for native loading, representative states and visual acceptance.
+- [ ] Review [aerc](https://draculatheme.com/aerc) for native loading, representative states and visual acceptance.
+- [ ] Review [Fluxbox](https://draculatheme.com/fluxbox) for native loading, representative states and visual acceptance.
+- [ ] Review [Gemini](https://draculatheme.com/gemini) for native loading, representative states and visual acceptance.
+- [ ] Review [Yakuake](https://draculatheme.com/yakuake) for native loading, representative states and visual acceptance.
+- [ ] Review [Dracula CSS](https://draculatheme.com/dracula-css) for native loading, representative states and visual acceptance.
+- [ ] Review [apt](https://draculatheme.com/apt) for native loading, representative states and visual acceptance.
+- [ ] Review [omg.lol](https://draculatheme.com/omglol) for native loading, representative states and visual acceptance.
+- [ ] Review [Sandpack](https://draculatheme.com/sandpack) for native loading, representative states and visual acceptance.
+- [ ] Review [grep](https://draculatheme.com/grep) for native loading, representative states and visual acceptance.
+- [ ] Review [ForkLift](https://draculatheme.com/forklift) for native loading, representative states and visual acceptance.
+- [ ] Review [Peacock Extension](https://draculatheme.com/peacock-extension) for native loading, representative states and visual acceptance.
+- [ ] Review [Campfire](https://draculatheme.com/campfire) for native loading, representative states and visual acceptance.
+- [ ] Review [ITFY](https://draculatheme.com/itfy) for native loading, representative states and visual acceptance.
+- [ ] Review [KanbanFlow](https://draculatheme.com/kanbanflow) for native loading, representative states and visual acceptance.
+- [ ] Review [YunoHost](https://draculatheme.com/yunohost) for native loading, representative states and visual acceptance.
+- [ ] Review [Directory Opus](https://draculatheme.com/directory-opus) for native loading, representative states and visual acceptance.
+- [ ] Review [WP](https://draculatheme.com/wp) for native loading, representative states and visual acceptance.
+- [ ] Review [novelWriter](https://draculatheme.com/novel-writer) for native loading, representative states and visual acceptance.
+- [ ] Review [Markdown CSS](https://draculatheme.com/markdown-css) for native loading, representative states and visual acceptance.
+- [ ] Review [Presenterm](https://draculatheme.com/presenterm) for native loading, representative states and visual acceptance.
+- [ ] Review [FreshRSS](https://draculatheme.com/freshrss) for native loading, representative states and visual acceptance.
+- [ ] Review [TeXworks](https://draculatheme.com/texworks) for native loading, representative states and visual acceptance.
+- [ ] Review [BookWyrm](https://draculatheme.com/bookwyrm) for native loading, representative states and visual acceptance.
+- [ ] Review [Misskey](https://draculatheme.com/misskey) for native loading, representative states and visual acceptance.
+- [ ] Review [SpeedCrunch](https://draculatheme.com/speedcrunch) for native loading, representative states and visual acceptance.
+- [ ] Review [Postman](https://draculatheme.com/postman) for native loading, representative states and visual acceptance.
+- [ ] Review [Nitter](https://draculatheme.com/nitter) for native loading, representative states and visual acceptance.
+- [ ] Review [LabPlot](https://draculatheme.com/labplot) for native loading, representative states and visual acceptance.
+- [ ] Review [LeetCode](https://draculatheme.com/leetcode) for native loading, representative states and visual acceptance.
+- [ ] Review [Dirtywave M8](https://draculatheme.com/m8) for native loading, representative states and visual acceptance.
+- [ ] Review [Bandcamp](https://draculatheme.com/bandcamp) for native loading, representative states and visual acceptance.
+- [ ] Review [lnav](https://draculatheme.com/lnav) for native loading, representative states and visual acceptance.
+- [ ] Review [Cutter](https://draculatheme.com/cutter) for native loading, representative states and visual acceptance.
+- [ ] Review [ripgrep](https://draculatheme.com/ripgrep) for native loading, representative states and visual acceptance.
+- [ ] Review [ThumbKey](https://draculatheme.com/thumb-key) for native loading, representative states and visual acceptance.
+- [ ] Review [Suckless Tabbed](https://draculatheme.com/suckless-tabbed) for native loading, representative states and visual acceptance.
+- [ ] Review [tut](https://draculatheme.com/tut) for native loading, representative states and visual acceptance.
+- [ ] Review [RunJs](https://draculatheme.com/runjs) for native loading, representative states and visual acceptance.
+- [ ] Review [Snappy Driver Installer](https://draculatheme.com/snappy-driver-installer) for native loading, representative states and visual acceptance.
+- [ ] Review [Replugged](https://draculatheme.com/replugged) for native loading, representative states and visual acceptance.
+- [ ] Review [ACS](https://draculatheme.com/acs) for native loading, representative states and visual acceptance.
+- [ ] Review [vis](https://draculatheme.com/vis) for native loading, representative states and visual acceptance.
+- [ ] Review [Beeper](https://draculatheme.com/beeper) for native loading, representative states and visual acceptance.
+- [ ] Review [Dyalog APL](https://draculatheme.com/dyalog) for native loading, representative states and visual acceptance.
+- [ ] Review [Facebook](https://draculatheme.com/facebook) for native loading, representative states and visual acceptance.
+- [ ] Review [Subsonic](https://draculatheme.com/subsonic) for native loading, representative states and visual acceptance.
+- [ ] Review [GoAccess](https://draculatheme.com/go-access) for native loading, representative states and visual acceptance.
+- [ ] Review [Kurozora](https://draculatheme.com/kurozora) for native loading, representative states and visual acceptance.
+- [ ] Review [Codeforces](https://draculatheme.com/codeforces) for native loading, representative states and visual acceptance.
+- [ ] Review [Home Assistant](https://draculatheme.com/home-assistant) for native loading, representative states and visual acceptance.
+- [ ] Review [ggplot2](https://draculatheme.com/ggplot2) for native loading, representative states and visual acceptance.
+- [ ] Review [Makehuman](https://draculatheme.com/makehuman) for native loading, representative states and visual acceptance.
+- [ ] Review [tlrc](https://draculatheme.com/tlrc) for native loading, representative states and visual acceptance.
+- [ ] Review [Jabref](https://draculatheme.com/jabref) for native loading, representative states and visual acceptance.
+- [ ] Review [LCD Smartie](https://draculatheme.com/lcd-smartie) for native loading, representative states and visual acceptance.
+- [ ] Review [AutoAO3App](https://draculatheme.com/auto-ao3-app) for native loading, representative states and visual acceptance.
+- [ ] Review [Sniffnet](https://draculatheme.com/sniffnet) for native loading, representative states and visual acceptance.
+- [ ] Review [Fedilab](https://draculatheme.com/fedilab) for native loading, representative states and visual acceptance.
+- [ ] Review [Kristall](https://draculatheme.com/kristall) for native loading, representative states and visual acceptance.
+- [ ] Review [NewTerm2](https://draculatheme.com/NewTerm2) for native loading, representative states and visual acceptance.
+- [ ] Review [Superset](https://draculatheme.com/superset) for native loading, representative states and visual acceptance.
+- [ ] Review [AdiIRC](https://draculatheme.com/adiirc) for native loading, representative states and visual acceptance.
+- [ ] Review [WhatsApp Web](https://draculatheme.com/whatsapp-web) for native loading, representative states and visual acceptance.
+- [ ] Review [CadZinho](https://draculatheme.com/cadzinho) for native loading, representative states and visual acceptance.
+- [ ] Review [Evidence](https://draculatheme.com/evidence) for native loading, representative states and visual acceptance.
+- [ ] Review [LibreNMS](https://draculatheme.com/librenms) for native loading, representative states and visual acceptance.
+- [ ] Review [T3 Code](https://draculatheme.com/t3code) for native loading, representative states and visual acceptance.
+- [ ] Review [Rackula](https://draculatheme.com/rackula) for native loading, representative states and visual acceptance.
+- [ ] Review [Marta](https://draculatheme.com/marta) for native loading, representative states and visual acceptance.
+- [ ] Review [MacDown CSS](https://draculatheme.com/macdown-css) for native loading, representative states and visual acceptance.
+- [ ] Review [Taskwarrior](https://draculatheme.com/taskwarrior) for native loading, representative states and visual acceptance.
+- [ ] Review [Castero](https://draculatheme.com/castero) for native loading, representative states and visual acceptance.
+- [ ] Review [Gitroll](https://draculatheme.com/gitroll) for native loading, representative states and visual acceptance.
+- [ ] Review [Unraid](https://draculatheme.com/unraid) for native loading, representative states and visual acceptance.
+- [ ] Review [Trudido](https://draculatheme.com/trudido) for native loading, representative states and visual acceptance.
+- [ ] Review [Hermes Agent](https://draculatheme.com/hermes-agent) for native loading, representative states and visual acceptance.
+- [ ] Review [BetterCanvas](https://draculatheme.com/bettercanvas) for native loading, representative states and visual acceptance.
+- [ ] Review [DankMaterialShell](https://draculatheme.com/dankmaterialshell) for native loading, representative states and visual acceptance.
+- [ ] Review [Signal Desktop](https://draculatheme.com/signal-desktop) for native loading, representative states and visual acceptance.
+- [ ] Review [SecureCRT](https://draculatheme.com/securecrt) for native loading, representative states and visual acceptance.
+- [ ] Review [Readwise Reader](https://draculatheme.com/readwise-reader) for native loading, representative states and visual acceptance.
+- [ ] Review [FocusWriter](https://draculatheme.com/focuswriter) for native loading, representative states and visual acceptance.
+- [ ] Review [alphai-tui](https://draculatheme.com/alphai-tui) for native loading, representative states and visual acceptance.
+- [ ] Review [Dash](https://draculatheme.com/dash) for native loading, representative states and visual acceptance.
+- [ ] Review [Telegram macOS](https://draculatheme.com/telegram-macos) for native loading, representative states and visual acceptance.
+- [ ] Review [xdbg](https://draculatheme.com/xdbg) for native loading, representative states and visual acceptance.
+- [ ] Review [Forgejo](https://draculatheme.com/forgejo) for native loading, representative states and visual acceptance.
+- [ ] Review [mRemoteNG](https://draculatheme.com/mremoteng) for native loading, representative states and visual acceptance.
+- [ ] Review [Kagi](https://draculatheme.com/kagi) for native loading, representative states and visual acceptance.
+- [ ] Review [Telegram X](https://draculatheme.com/telegram-x) for native loading, representative states and visual acceptance.
+- [ ] Review [DeepSeek](https://draculatheme.com/deepseek) for native loading, representative states and visual acceptance.
+- [ ] Review [Miniflux](https://draculatheme.com/miniflux) for native loading, representative states and visual acceptance.
+- [ ] Review [Starlight](https://draculatheme.com/astro-starlight) for native loading, representative states and visual acceptance.
+- [ ] Review [Snappy Driver Installer Origin](https://draculatheme.com/snappy-driver-installer-origin) for native loading, representative states and visual acceptance.
+- [ ] Review [Neiki's Editor](https://draculatheme.com/neiki-editor) for native loading, representative states and visual acceptance.
+- [ ] Review [StationView](https://draculatheme.com/stationview) for native loading, representative states and visual acceptance.
+- [ ] Review [Neiki's Page Editor](https://draculatheme.com/neiki-page-editor) for native loading, representative states and visual acceptance.
+- [ ] Review [PeerTube](https://draculatheme.com/peertube) for native loading, representative states and visual acceptance.
+- [ ] Review [Wiremix](https://draculatheme.com/wiremix) for native loading, representative states and visual acceptance.
+- [ ] Review [LDoc](https://draculatheme.com/ldoc) for native loading, representative states and visual acceptance.
+- [ ] Review [Kali Browser](https://draculatheme.com/kali-browser) for native loading, representative states and visual acceptance.
+- [ ] Review [Visual Studio Code](https://draculatheme.com/visual-studio-code) for native loading, representative states and visual acceptance.
+- [ ] Review [Vim](https://draculatheme.com/vim) for native loading, representative states and visual acceptance.
+- [ ] Review [Cursor](https://draculatheme.com/cursor) for native loading, representative states and visual acceptance.
+- [ ] Review [Zed](https://draculatheme.com/zed) for native loading, representative states and visual acceptance.
+- [ ] Review [Xcode](https://draculatheme.com/xcode) for native loading, representative states and visual acceptance.
+- [ ] Review [Chrome](https://draculatheme.com/google-chrome) for native loading, representative states and visual acceptance.
+- [ ] Review [Notepad++](https://draculatheme.com/notepad-plus-plus) for native loading, representative states and visual acceptance.
+- [ ] Review [iTerm](https://draculatheme.com/iterm) for native loading, representative states and visual acceptance.
+- [ ] Review [Terminal.app](https://draculatheme.com/terminal-app) for native loading, representative states and visual acceptance.
+- [ ] Review [Gnome Terminal](https://draculatheme.com/gnome-terminal) for native loading, representative states and visual acceptance.
+- [ ] Review [Visual Studio](https://draculatheme.com/visual-studio) for native loading, representative states and visual acceptance.
+- [ ] Review [GTK](https://draculatheme.com/gtk) for native loading, representative states and visual acceptance.
+- [ ] Review [JetBrains](https://draculatheme.com/jetbrains) for native loading, representative states and visual acceptance.
+- [ ] Review [Sublime](https://draculatheme.com/sublime) for native loading, representative states and visual acceptance.
+- [ ] Review [Windows Terminal](https://draculatheme.com/windows-terminal) for native loading, representative states and visual acceptance.
+- [ ] Review [Emacs](https://draculatheme.com/emacs) for native loading, representative states and visual acceptance.
+- [ ] Review [Eclipse](https://draculatheme.com/eclipse) for native loading, representative states and visual acceptance.
+- [ ] Review [PowerShell](https://draculatheme.com/powershell) for native loading, representative states and visual acceptance.
+- [ ] Review [tmux](https://draculatheme.com/tmux) for native loading, representative states and visual acceptance.
+- [ ] Review [Firefox](https://draculatheme.com/firefox) for native loading, representative states and visual acceptance.
+- [ ] Review [Alacritty](https://draculatheme.com/alacritty) for native loading, representative states and visual acceptance.
+- [ ] Review [Konsole](https://draculatheme.com/konsole) for native loading, representative states and visual acceptance.
+- [ ] Review [Kitty](https://draculatheme.com/kitty) for native loading, representative states and visual acceptance.
+- [ ] Review [Xresources](https://draculatheme.com/xresources) for native loading, representative states and visual acceptance.
+- [ ] Review [Fish](https://draculatheme.com/fish) for native loading, representative states and visual acceptance.
+- [ ] Review [Obsidian](https://draculatheme.com/obsidian) for native loading, representative states and visual acceptance.
+- [ ] Review [zsh-syntax-highlighting](https://draculatheme.com/zsh-syntax-highlighting) for native loading, representative states and visual acceptance.
+- [ ] Review [JupyterLab](https://draculatheme.com/jupyterlab) for native loading, representative states and visual acceptance.
+- [ ] Review [Starship](https://draculatheme.com/starship) for native loading, representative states and visual acceptance.
+- [ ] Review [RStudio](https://draculatheme.com/rstudio) for native loading, representative states and visual acceptance.
+- [ ] Review [Pygments](https://draculatheme.com/pygments) for native loading, representative states and visual acceptance.
+- [ ] Review [Typora](https://draculatheme.com/typora) for native loading, representative states and visual acceptance.
+- [ ] Review [WezTerm](https://draculatheme.com/wezterm) for native loading, representative states and visual acceptance.
+- [ ] Review [Ghostty](https://draculatheme.com/ghostty) for native loading, representative states and visual acceptance.
+- [ ] Review [Spyder IDE](https://draculatheme.com/spyder-ide) for native loading, representative states and visual acceptance.
+- [ ] Review [FZF](https://draculatheme.com/fzf) for native loading, representative states and visual acceptance.
+- [ ] Review [Streamlit](https://draculatheme.com/streamlit) for native loading, representative states and visual acceptance.
+- [ ] Review [Matplotlib](https://draculatheme.com/matplotlib) for native loading, representative states and visual acceptance.
+- [ ] Review [Zellij](https://draculatheme.com/zellij) for native loading, representative states and visual acceptance.
+- [ ] Review [LazyGit](https://draculatheme.com/lazygit) for native loading, representative states and visual acceptance.
+- [ ] Review [Jupyter Notebook](https://draculatheme.com/jupyter-notebook) for native loading, representative states and visual acceptance.
+- [ ] Review [Yazi](https://draculatheme.com/yazi) for native loading, representative states and visual acceptance.
+- [ ] Review [lsd](https://draculatheme.com/lsd) for native loading, representative states and visual acceptance.
+- [ ] Review [foot](https://draculatheme.com/foot) for native loading, representative states and visual acceptance.
+- [ ] Review [OpenCode](https://draculatheme.com/opencode) for native loading, representative states and visual acceptance.
+- [ ] Review [GH-Dash](https://draculatheme.com/gh-dash) for native loading, representative states and visual acceptance.
+- [ ] Review [Delta](https://draculatheme.com/delta) for native loading, representative states and visual acceptance.

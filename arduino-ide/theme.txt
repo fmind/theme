@@ -1,0 +1,17 @@
+# Arduino IDE theme settings
+editor.fgcolor = #202124
+editor.bgcolor = #ffffff
+editor.comment1.style = #595d62,plain
+editor.comment2.style = #595d62,plain
+editor.literal1.style = #174ea6,bold
+editor.literal2.style = #0d652d,plain
+editor.keyword1.style = #174ea6,bold
+editor.keyword2.style = #681da8,plain
+editor.keyword3.style = #174ea6,plain
+editor.selection.color = #d2e3fc
+editor.currentline.color = #f1f3f4
+editor.line_number.color = #9aa0a6
+status.notice.fgcolor = #202124
+status.notice.bgcolor = #ceead6
+status.error.fgcolor = #ffffff
+status.error.bgcolor = #a50e0e

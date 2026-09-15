@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <skin version="1.0">
+    <element id="MainBackground" bg="#ffffff" fg="#202124" />
+    <element id="PanelBackground" bg="#f1f3f4" fg="#202124" />
+    <element id="Accent" bg="#174ea6" fg="#ffffff" />
+    <element id="Selection" bg="#d2e3fc" fg="#202124" />
+    <element id="Highlight" bg="#174ea6" fg="#ffffff" />
+  </skin>
+</root>

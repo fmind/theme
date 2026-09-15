@@ -1,0 +1,16 @@
+<chart>
+id=1
+color_background=16777215
+color_foreground=2367776
+color_grid=16053233
+color_barup=2975005
+color_bardown=921253
+color_bullcandle=2975005
+color_bearcandle=921253
+color_chartline=10898967
+color_volumes=2975005
+color_bid=10898967
+color_ask=921253
+color_last=2367776
+color_stop_level=921253
+</chart>

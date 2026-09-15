@@ -1,0 +1,14 @@
+{
+  "id": "fmind-light",
+  "name": "Fmind",
+  "author": "M\u00e9d\u00e9ric Hurier",
+  "desc": "Fmind light theme for Misskey",
+  "base": "light",
+  "props": {
+    "accent": "#174ea6",
+    "bg": "#ffffff",
+    "fg": "#202124",
+    "panel": "#f1f3f4",
+    "divider": "#9aa0a6"
+  }
+}

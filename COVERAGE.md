@@ -1,67 +1,47 @@
 # App coverage
 
-Fmind provides 104 native integrations. The [free Dracula catalog](https://draculatheme.com/) listed 472 themes when reviewed on 2026-09-14. Its entries include applications, plugins, website styles, platforms, wallpapers and hardware; that count is not directly comparable to app folders. No Dracula Pro assets were used.
+Fmind contains 483 integration directories: the 20 native consumers in chezmoi and 463 additional integrations. [CATALOG.md](CATALOG.md) is the maintained inventory; [README.md](README.md) supplies installation instructions. All 472 catalog entries are represented in the inventory. Functional parity is not achieved: additional ports include incomplete drafts and lack native acceptance. See [REVIEW.md](REVIEW.md).
 
-The [README](README.md) lists every shipped file and its installation instructions. Ports use Fmind’s light palette, with dark text, pale highlighted surfaces and bright accents. Dracula is the coverage reference. Notepad++ lexer definitions and Qt Creator editor definitions are adapted from MIT-licensed free Dracula ports, with their notices retained alongside the files; all ports use Fmind’s palette. WindTerm’s UI layout, icon selectors and native scope definitions are adapted from its MIT-licensed free Dracula port, with its notice retained in `windterm/LICENSE`.
+## Workstation coverage
 
-The [472-entry catalog checklist](CATALOG.md) tracks the full requested scope, with shipped ports and explicit pending entries. This is the completion baseline; the areas below summarize it.
+The review inspected chezmoi external resources, copied theme blocks, application configuration and its managed tool list. Every existing theme dependency is retained:
 
-## Scope of the current ports
+| Integration route            | Retained integrations                                                                                                             |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| External native files (14)   | Atuin, bat, delta, Fish, fzf, Ghostty, k9s, lsd, lualine, Neovim, OpenCode, ptpython, Yazi, Zellij                                |
+| Copied native blocks (6)     | bottom, Fastfetch, gh-dash, Lazydocker, LazyGit, Starship                                                                         |
+| Terminal-based configuration | Claude Code selects `light-ansi`; mise selects `base16` to use the terminal palette. Neither requires a separate theme directory. |
 
-| Area | Coverage |
-| --- | --- |
-| Code editors | Vim, Neovim, Emacs, VS Code, Helix, Zed, Micro, Sublime Text, JetBrains, Kate, Gedit, Geany, Xcode, Notepad++, Qt Creator, TextMate, NetBeans, Eclipse, Code::Blocks, Dev-C++, Atom, Brackets and lualine. JetBrains and Sublime are editor color schemes, not complete application UI themes. |
-| Notes and browsers | Obsidian and Typora; Chrome and Firefox interface themes. Browser themes do not restyle web pages. Firefox’s local temporary install ends at restart; permanent installation requires signing. |
-| Terminals | Alacritty, Ghostty, Kitty, WezTerm, foot, Rio, Konsole, iTerm2, Windows Terminal, GNOME Terminal, Hyper, Terminator, Xfce4 Terminal, Mintty, Termux, Xresources, Terminal.app, Tilix, Warp, MobaXterm, ConEmu, QTerminal, LXTerminal, Termite, st, Fluent Terminal, WindTerm, COSMIC Terminal, Pantheon Terminal and tym. |
-| Shells and terminal tools | Fish, PowerShell input highlighting, zsh-syntax-highlighting, Starship, tmux, Zellij, bat, delta, fzf, Atuin, bottom, btop, Fastfetch, gh-dash, k9s, Lazydocker, LazyGit, lsd, OpenCode, ptpython and Yazi. |
-| Linux desktop | i3, bspwm and Hyprland window colors; Waybar, Polybar, Rofi, Wofi, Fuzzel, Dunst, SwayNotificationCenter, SwayOSD, WOB and Zathura; Swaylock and Hyprlock visual settings. Several are fragments for existing configurations. |
-| Python tools | Streamlit application colors, Matplotlib plot styles, IDLE highlighting, a Pygments style, Spyder syntax settings and RStudio. |
+### Workstation tool audit disposition
 
-KSyntaxHighlighting apps can use the Kate scheme, GtkSourceView apps can use the Gedit scheme, and Xresource-aware terminals can use Xresources. VS Code derivatives may accept the local extension, but they are not counted as separately tested integrations.
+The following workstation dispositions were recorded in the earlier audit. They have not been refreshed in the release review and may be outdated; this is historical context, not a current compatibility guarantee:
 
-## Remaining work
+| Tool | Category / Location | Disposition | Evidence & Mechanism | Remaining Gaps |
+| --- | --- | --- | --- | --- |
+| Codex | CLI agent (`~/.codex/`) | Terminal inheritance | Inherits ANSI colors directly from terminal emulator. No independent configuration file or theme format exists. | Truecolor or custom prompt colors unmanaged if emitted upstream. |
+| GitHub Copilot CLI | CLI agent | Terminal inheritance | Node-based CLI outputs standard terminal ANSI sequences; receives Ghostty/terminal theme palette. No theme setting. | Non-configurable CLI styles outside terminal ANSI. |
+| Grok CLI | CLI agent (`~/.grok/config.toml`) | Built-in light mode | Configured with `theme = "grokday"` in `dot_grok/modify_private_config.toml`. Built-in light theme. | Custom arbitrary palette mapping not supported upstream. |
+| marimo | Reactive notebooks (`~/.config/marimo/marimo.toml`) | Built-in light mode | Native `[display] theme = "light"` (or system default). Upstream marimo uses Tailwind-based light CSS. | No custom CSS theme file supported upstream without browser extensions. |
+| Claude Code | CLI agent (`~/.claude/settings.json`) | Terminal inheritance | Configured with `"theme": "light-ansi"` in `dot_claude/modify_settings.json`; paints TUI from terminal's 16 ANSI slots. | Background-color contrast depends on terminal contrast safeguards. |
+| mise | Dev tool manager (`~/.config/mise/config.toml`) | Terminal inheritance | Configured with `theme = "base16"`; maps status and prompt colors to standard terminal palette slots. | None; terminal palette controls colors. |
+| Antigravity CLI | Coding agent (`~/.gemini/antigravity-cli/settings.json`) | Terminal inheritance | Configured with `"colorScheme": "terminal"` in `dot_gemini/antigravity-cli/modify_settings.json`. Inherits terminal ANSI palette. | Web UI components (if any) use browser styling. |
 
-Full Dracula parity is not claimed. These areas remain required work toward full catalog parity. The checklist also includes every remaining catalog entry:
+Command-line utilities using ANSI colors receive the terminal palette. This does not prove every configured app's UI is fully themed: tools can use hardcoded, truecolor or 256-color styles. No chezmoi configuration or installed theme was changed during the scope review.
 
-| Area | Examples still missing | Work needed |
-| --- | --- | --- |
-| Other major IDEs | Visual Studio, Arduino IDE and Arduino Pro IDE | Native platform validation and language-specific coverage. |
-| More terminals | NewTerm2, SecureCRT and mRemoteNG | Native profile formats and import validation. |
-| Python and data IDEs | Broader runtime and platform checks for the shipped Jupyter, Thonny and MATLAB ports | Continue realistic notebook, debugger, output and platform validation. |
-| Full desktop themes | GTK desktop-shell companions, legacy GTK 3, Qt and KDE | The GTK widget package is available; its [bundle checklist](gtk/README.md#full-bundle-checklist) keeps every remaining companion explicit. Broader desktop and application-specific testing remains required. |
-| Productivity and communication | Slack, Telegram, Raycast, Alfred, Logseq, Thunderbird | App-specific import formats, supported customization boundaries and ongoing UI maintenance. |
-| Creative and specialist tools | Blender, Godot, GIMP, Inkscape, KiCad | Domain-specific colors and representative native fixtures. |
-| Websites and legacy integrations | Site-specific browser styles, discontinued editors | Native customization routes, selector coverage and legacy format validation. |
+
+## Additional coverage
+
+The remaining integrations cover selected development environments, terminal emulators, shell tools, Chrome/Firefox UI, Obsidian/Typora, Python/data tools and the existing GTK/KDE desktop bundle. The inventory now also includes website, creative, gaming, hardware and legacy candidates; their native acceptance remains pending. Browser themes affect browser UI, not websites; JetBrains and Sublime Text are editor schemes rather than full application themes. GTK's SDDM component remains an unfinished checkpoint.
 
 ## Validation boundary
 
-The repository gate checks native document parsing, palette use, terminal slot parity, selected text, filled controls and syntax contrast. Available local runtimes provide additional checks, including Vim/Neovim highlighting. The two synthetic screenshots exercise the existing terminal demonstration; they are not screenshots of every supported application.
+The offline gate checks native documents, palette consistency, contrast, terminal slots, and retained bat/Neovim runtime behavior. It also checks that the inventory and installation paths match the shipped directories and preserves a fixture of the 20 chezmoi consumers. The gate does not read private workstation configuration or contact live services. The two screenshots remain synthetic terminal demonstrations; they do not demonstrate additional ports.
 
-The new ports have not all been launched in their target applications. Runtime changes, third-party plugins, transparency, user overrides and arbitrary ANSI background combinations remain outside the contrast claim. Setup and checks do not install themes into user profiles or call live application services.
+Native Windows/macOS imports, full GUI sessions, arbitrary ANSI background combinations, third-party plugins and user overrides remain outside this gate. See [VALIDATION.md](VALIDATION.md) for repeatable runtime checks. Existing Jupyter native testing reported JupyterLab 4.6.3 extension discovery and theme selection; Notebook 7 is not claimed as verified. Platform checks must be refreshed for the actual deployment before claiming runtime acceptance.
 
-The Terminal.app port has decoded NSColor archive checks, and Xcode has RGBA and font-field checks. IDLE is loaded through its installed Python parser, and Pygments renders real Python and diff samples. The new Windows/macOS desktop ports have no target-platform runtime proof yet. ConEmu uses BGR-encoded Windows slot ordering and reserves slot 15 as the white canvas; that one slot is not a readable foreground on white. Other terminal ANSI slots retain Fmind’s contrast contract.
+## Retained desktop evidence
 
-Notepad++ includes 60 lexers and 842 syntax styles, with unique per-lexer IDs and a corrected Verilog line-comment collision from the reference port. Qt Creator defines all 441 color roles in the 20.0.1 native theme enum, plus 66 editor styles, with no external theme includes. Spyder targets the released 6.1 configuration format. RStudio CSS uses Ace and documented theme selectors, with the light Modern UI as its base. These ports have offline structural and contrast checks; target-app rendering and import validation remain outstanding.
-
-Hyprland targets the current Lua configuration (0.55+, checked against the 0.56.2 example); its Hyprlock companion contains only visual widgets. Swaylock uses core color options without an effects fork. Fuzzel covers all twelve documented RGBA color roles, and dmenu includes all three native color schemes. SwayNotificationCenter targets 0.12.6 and imports the app’s installed layout, with Fmind native CSS variables and overrides for built-in notifications and widgets. Wofi parses without diagnostics in GTK 3.24.38, and SwayOSD in GTK 4.8.3. SwayNotificationCenter requires GTK 4.16.13 or newer, which is unavailable here; its full stylesheet has CSS syntax and contrast checks but no matching native-parser proof. The dmenu header compiles as C99 with warnings treated as errors against its native scheme enum. Live compositor, launcher, notification, lock-screen and panel rendering remain unverified.
-
-The terminal batch includes all sixteen ANSI slots for nine ports; QTerminal and COSMIC also define dim colors. WindTerm includes 55 native styles and 50 syntax scope rules, plus its Qt UI stylesheet and icon color selectors. Pantheon’s custom palette and appearance keys are checked against the native settings schema. st reserves separate default background and cursor slots so ANSI white remains readable on the white canvas. The native extended 256-color palette and arbitrary applications’ background choices are outside the ANSI contrast contract. Target-app rendering and imports still require separate verification.
-
-Additional offline evidence for this batch: COSMIC’s RON file deserializes with its native `ColorScheme` and `ColorSchemeAnsi` definitions and RON 0.11; Qt QSettings loads QTerminal’s color groups; GLib parses the VTE ports’ key files and Pantheon’s seven typed settings; and st’s header compiles warning-free as C99 and returns the intended default color indices. WindTerm’s QSS parses with Qt using asset loading disabled, and all 27 original asset paths are separately verified against its 2.7.0 release archive. This does not establish rendering in WindTerm’s custom widgets or its bundled Qt version.
-
-The IDE batch adds NetBeans’ 27 MIME profiles and shared settings (549 color entries), Code::Blocks 25.03 coverage for all 62 native lexers (1,324 named style entries), Dev-C++ C/C++ syntax and editor state pairs, Atom’s syntax-theme package and public syntax variables, and a light Brackets CodeMirror theme. Eclipse includes 47 theme roles plus 382 native preference entries for core editors, JDT, CDT, Ant, the debug console and PyDev. NetBeans, Atom and Eclipse role definitions retain the free reference ports’ MIT notices. The NetBeans import excludes unrelated reference settings and obsolete user metadata.
-
-All 30 NetBeans color documents also validate offline against its native Fonts and Colors 1.1 DTD. Code::Blocks’ stored style-name sets match all 62 lexers in the official 25.03 source archive, and Atom’s stylesheet compiles with Less 4.9.1. These checks do not run the target IDEs or Atom’s embedded Less version.
-
-These are native editor/theme packages with structural, language-role and contrast checks. Light application appearance remains a separate setting where the application separates UI and syntax themes. Full target-IDE rendering, plugin interactions and native imports remain unverified; a passing format check does not establish those outcomes. Visual Studio and both Arduino catalog entries remain pending.
-
-JupyterLab and Notebook 7 share a native Fmind extension with all 221 variables in JupyterLab 4.6.3’s native light-theme API. A separate classic Notebook/NbClassic stylesheet covers the dashboard, cells, syntax, output, forms and dialogs. Thonny adds 35 UI styles and 104 syntax/ANSI tags using its native plugin API and Enhanced Clam layouts. MATLAB includes the R2025a+ MathWorks JSON format with all 15 additional language sections and legacy Schemer preferences; the import excludes indentation policy.
-
-The Jupyter wheel uses the current Jupyter builder and shares the host apputils service rather than bundling it. Its build dependency override pins sanitize-html 2.17.7 because apputils currently requires an affected older range; the built extension contains only the theme registration and CSS. This does not update or validate the host Jupyter application’s dependencies. The upstream exenv-es6 package remains deprecated in the build dependency graph.
-
-Native checks for this batch: both Python wheels build and install in an isolated environment. JupyterLab 4.6.3 discovers the extension, selects Fmind, renders a white notebook canvas with Fmind syntax, and restores the native font when the theme unloads. Notebook 7.6.2 also selects Fmind through Settings → Theme and renders the white notebook canvas; its pre-existing startup errors are retained below. NbClassic 1.3.3 loads the separate stylesheet, with the syntax cascade verified in Chromium. Thonny 5.0.0 registers Fmind through its Workbench API; Tk 9.0.4 loads the inherited widget layouts, all 35 UI style overrides and all 104 syntax/ANSI tags. MATLAB’s 116 leaf preferences match the MathWorks template after omitting indentation settings. MATLAB import/rendering and full Thonny workbench/debugger behavior remain unverified.
-
-The repository gate is warning-free, but the complete native campaign is not: Thonny 5.0.0 emits two Python 3.14 SyntaxWarnings from upstream `codeview.py` return statements inside finally blocks, and NbClassic uses a deprecated Jupyter Server extension-discovery function. Notebook 7.6.2 also reports startup errors (`Cannot read properties of undefined (reading schema)` and an unregistered `filebrowser:open-path` command) before selecting Fmind in this mixed Jupyter environment. These retained upstream/runtime gaps prevent a claim that the entire native campaign is green.
+The following records predate this scope review. Their historical counts and native results are preserved for the existing GTK/KDE work; they are not claims that those native campaigns were rerun during pruning. Remaining proof gaps are tracked in [TODO.md](TODO.md).
 
 The GTK package adds native GTK 2, GTK 3.20+ and GTK 4 widget themes. It imports each modern toolkit's built-in layout and symbolic assets, then applies directly maintained Fmind colors; GTK 2 uses its built-in drawing engine. No third-party desktop stylesheet or binary assets are redistributed. The full Dracula GTK catalog row remains pending: legacy GTK 3, application-specific refinements, GNOME Shell, Cinnamon, KDE Plasma/Aurorae/Kvantum and Unity remain on the [bundle checklist](gtk/README.md#full-bundle-checklist).
 
@@ -137,15 +117,22 @@ The retained gate validates the complete reference-name set, alias closure, bina
 
 Final cursor validation passes: `mise install`, `mise run install`, `mise run format`, all 128 tests in `mise run check`, and both synthetic captures from `mise run screenshots`. All 43 cursor binaries reproduce exactly after the final source changes. The compiler fails before writing when a native tool is missing or a recipe contains invalid numeric fields, and refuses a symbolic-link output without replacing any files. Temporary dependencies, native probes, render galleries, build fixtures and isolated theme copies are removed after verification.
 
-
 ## SDDM checkpoint at the requested stop
 
-The [SDDM package](gtk/kde/sddm/README.md) adds a login-screen implementation with synthetic preview, native user/session/layout controls, password handling, power confirmation, separate Qt 5/6 virtual-keyboard entry points and optional Plasma battery providers. It remains an unfinished checkpoint; the parent GTK catalog status and KDE SDDM checklist item remain pending. [TODO.md](TODO.md) records the complete remaining catalog scope and precise continuation tasks.
+The [SDDM package](gtk/kde/sddm/README.md) adds a login-screen implementation with synthetic preview, native user/session/layout controls, password handling, power confirmation, separate Qt 5/6 virtual-keyboard entry points and optional Plasma battery providers. It remains an unfinished checkpoint; the parent GTK catalog status and KDE SDDM checklist item remain pending. [TODO.md](TODO.md) records the retained scope and precise continuation tasks.
 
 Native Qt 5.15.8 and Qt 6.4.2 fixtures each passed 51 checks and five viewport renders (320×480, 640×480, 960×720, 1920×1080 and 1080×1920). They exercised manual username input, native login arguments, empty-password delegation, invalid-session/username rejection, duplicate submission prevention, failure recovery, Caps Lock, power confirmation and capability checks, virtual-key input/backspace and password masking. Synthetic battery providers verified percentage, low-battery color, charging and battery absence. No real authentication, power operation or battery-provider service was exercised. The last keyboard-dismissal change was made afterward; its fixture compiled for both toolkits but was not executed before the user requested the stop.
 
 Initial fixtures exposed editable username focus/propagation and a Qt 5 Flickable/ColumnLayout binding loop; these were corrected before the passing runs. The Qt virtual-keyboard dependency set required its input-method plugins, folder-list model, Qt 6 SVG and Hunspell dependencies/dictionaries. Versioned Qt 5 style imports caused ambiguity in Qt 6; separate matching entry points preserve the same appearance. Earlier diagnostic runs were retained as failures rather than counted as warning-free proof.
 
-The native SDDM 0.19 test-mode process aborted with warnings fatal (exit 134); its diagnostic-only nonfatal-warning run lasted until a bounded timeout (124) without captured messages. This does not prove successful native theme loading. Final keyboard-dismissal behavior, real KDE battery providers, deployed greeter operation, real authentication/session launch/power management, Wayland and broader scale/direction/mode coverage remain unverified. Temporary extracted dependencies and probes are task-local and are removed at this checkpoint.
+The native SDDM 0.19 test-mode process aborted with warnings fatal (exit 134) because `sd_journal_print_with_location` bypassed stdout/stderr, and `Connections` in `Main.qml` handled an undeclared `informationMessage` signal on `sddm`. Adding `ignoreUnknownSignals: true` to `Connections` and configuring valid runtime environment/font parameters resolved this warning, allowing `sddm-greeter` to load `Fmind/Main.qml` warning-free under `QT_FATAL_WARNINGS=1`. Final keyboard-dismissal behavior, real KDE battery providers, deployed greeter operation, real authentication/session launch/power management, Wayland and broader scale/direction/mode coverage remain unverified. Temporary extracted dependencies and probes are task-local and are removed at this checkpoint.
 
-Checkpoint validation passes `mise install`, `mise run install`, `mise run format`, all 132 tests in `mise run check`, and `mise run screenshots`. Both refreshed synthetic terminal captures match the retained files. These repository checks do not resolve the unfinished native SDDM and final keyboard-dismissal checks above.
+Checkpoint validation passes `mise install`, `mise run install`, `mise run format`, all 139 tests in `mise run check`, and `mise run screenshots`. Both refreshed synthetic terminal captures match the retained files. These repository checks do not resolve the unfinished native SDDM and final keyboard-dismissal checks above.
+
+## Approved refinement — 2026-09-14
+
+Neovim search now uses pale yellow for ordinary matches and bold yellow for current/incremental matches; Zellij inactive ribbons use pale blue. Shared state roles and the foreground-first ANSI policy are documented in [VALIDATION.md](VALIDATION.md). The ANSI slots are unchanged; arbitrary ANSI background combinations remain a compatibility gap outside the native Ghostty configuration check.
+
+Fresh before and after captures used the same isolated `mise run screenshots` fixture with Neovim 0.12.5, Fish 4.9.2, Zellij 0.45.1 and VHS 0.11.0. Both canonical screenshots were refreshed. The temporary standalone review embedded all four images and was deleted after user approval. Native current/incremental search styles are checked by the state test, while the retained screenshot shows ordinary matches during visual selection.
+
+`mise install`, `mise run install`, `mise run format`, all 102 tests in `mise run check`, and `mise run check:terminal-runtime` passed. Playwright 1.58.0 with cached Chromium 153.0.8010.12 verified the review page at 1600×1200 and 390×844: image loading, both examples, every viewing mode, keyboard selection, mobile stacking, no horizontal overflow and no page errors. Desktop and mobile renders were visually inspected. The user approved the refinement; changes remain applied in the working tree. No installed themes or user profiles were modified.

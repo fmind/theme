@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Ditto_Theme_File Version="3" Author="Médéric Hurier" Notes="Fmind Theme">
+    <CaptionLeft>RGB(241, 243, 244)</CaptionLeft>
+    <CaptionRight>RGB(23, 78, 166)</CaptionRight>
+    <ListBoxBackground>RGB(255, 255, 255)</ListBoxBackground>
+    <ListBoxText>RGB(32, 33, 36)</ListBoxText>
+    <ListBoxSelectedBackground>RGB(210, 227, 252)</ListBoxSelectedBackground>
+    <ListBoxSelectedText>RGB(32, 33, 36)</ListBoxSelectedText>
+</Ditto_Theme_File>

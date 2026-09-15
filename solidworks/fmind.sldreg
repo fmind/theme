@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+; Fmind theme for SolidWorks
+[HKEY_CURRENT_USER\Software\SolidWorks\SolidWorks 2024\General\Color]
+"Background"=dword:00ffffff
+"Text"=dword:00202124
+"Highlight"=dword:00d2e3fc
+"Selection"=dword:00174ea6

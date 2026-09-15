@@ -1,0 +1,20 @@
+body {
+  background-color: #ffffff;
+  color: #202124;
+  font-family: "Google Sans", sans-serif;
+}
+h1, h2, h3 {
+  color: #174ea6;
+}
+a {
+  color: #174ea6;
+}
+pre, code {
+  background-color: #f1f3f4;
+  color: #202124;
+}
+blockquote {
+  border-left: 4px solid #174ea6;
+  color: #595d62;
+  background-color: #f1f3f4;
+}

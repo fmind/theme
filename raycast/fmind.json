@@ -1,0 +1,21 @@
+{
+  "author": "Médéric Hurier",
+  "authorUsername": "fmind",
+  "version": "1",
+  "name": "Fmind",
+  "appearance": "light",
+  "colors": {
+    "background": "#ffffff",
+    "backgroundSecondary": "#f1f3f4",
+    "text": "#202124",
+    "selection": "#d2e3fc",
+    "loader": "#174ea6",
+    "red": "#a50e0e",
+    "orange": "#934900",
+    "yellow": "#fbbc04",
+    "green": "#0d652d",
+    "blue": "#174ea6",
+    "purple": "#681da8",
+    "magenta": "#681da8"
+  }
+}

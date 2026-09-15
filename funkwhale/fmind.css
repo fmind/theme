@@ -1,0 +1,8 @@
+/* Fmind theme for Funkwhale */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #202124;
+  --color-primary: #174ea6;
+  --color-sidebar: #f1f3f4;
+  --color-border: #9aa0a6;
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Fmind",
+  "backgroundColor": "#ffffff",
+  "foregroundColor": "#202124",
+  "secondaryTextColor": "#595d62",
+  "selectionBackgroundColor": "#d2e3fc",
+  "selectionForegroundColor": "#202124",
+  "accentColor": "#174ea6"
+}

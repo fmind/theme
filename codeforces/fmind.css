@@ -1,0 +1,12 @@
+/* Fmind theme for Codeforces */
+body {
+  background-color: #ffffff;
+  color: #202124;
+}
+a {
+  color: #174ea6;
+}
+.roundbox {
+  background-color: #f1f3f4;
+  border: 1px solid #9aa0a6;
+}

@@ -1,0 +1,9 @@
+/* Fmind theme for Beeper */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #202124;
+  --secondary-text: #595d62;
+  --accent-color: #174ea6;
+  --sidebar-bg: #f1f3f4;
+  --border-color: #9aa0a6;
+}

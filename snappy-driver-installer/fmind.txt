@@ -1,0 +1,6 @@
+[Theme]
+Name=Fmind
+Background=#ffffff
+Text=#202124
+Active=#174ea6
+Panel=#f1f3f4

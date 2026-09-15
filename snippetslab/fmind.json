@@ -1,0 +1,10 @@
+{
+  "name": "Fmind",
+  "interface": {
+    "backgroundColor": "#ffffff",
+    "textColor": "#202124",
+    "accentColor": "#174ea6",
+    "surfaceColor": "#f1f3f4",
+    "selectionColor": "#d2e3fc"
+  }
+}

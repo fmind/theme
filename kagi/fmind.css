@@ -1,0 +1,10 @@
+/* Fmind theme for Kagi search */
+:root {
+  --app-bg: #ffffff;
+  --app-fg: #202124;
+  --link-color: #174ea6;
+  --link-visited-color: #681da8;
+  --search-box-bg: #f1f3f4;
+  --border-color: #9aa0a6;
+  --accent-color: #174ea6;
+}

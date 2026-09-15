@@ -1,0 +1,13 @@
+:root {
+  --base: #ffffff;
+  --surface: #f1f3f4;
+  --text: #202124;
+  --muted: #595d62;
+  --accent: #174ea6;
+  --selected: #d2e3fc;
+}
+
+body {
+  background-color: var(--base) !important;
+  color: var(--text) !important;
+}

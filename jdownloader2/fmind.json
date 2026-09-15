@@ -1,0 +1,12 @@
+{
+  "name": "Fmind",
+  "colors": {
+    "background": "#ffffff",
+    "foreground": "#202124",
+    "selectionBackground": "#d2e3fc",
+    "selectionForeground": "#202124",
+    "panelBackground": "#f1f3f4",
+    "progressBar": "#174ea6",
+    "error": "#a50e0e"
+  }
+}

@@ -1,0 +1,24 @@
+/* Discord Bot Maker Fmind Light Theme */
+
+body {
+  background-color: #ffffff !important;
+  color: #202124 !important;
+}
+
+.action-holder {
+  background-color: #f1f3f4 !important;
+  border: 1px solid #f1f3f4 !important;
+}
+
+a {
+  color: #174ea6 !important;
+}
+
+button {
+  background-color: #f1f3f4 !important;
+  color: #202124 !important;
+}
+
+button:hover {
+  background-color: #d2e3fc !important;
+}

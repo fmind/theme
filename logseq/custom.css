@@ -1,0 +1,13 @@
+/* Fmind light theme for Logseq */
+
+:root {
+  --ls-primary-background-color: #ffffff;
+  --ls-secondary-background-color: #f1f3f4;
+  --ls-tertiary-background-color: #f1f3f4;
+  --ls-primary-text-color: #202124;
+  --ls-secondary-text-color: #595d62;
+  --ls-link-text-color: #174ea6;
+  --ls-active-primary-color: #174ea6;
+  --ls-selection-background-color: #d2e3fc;
+  --ls-border-color: #9aa0a6;
+}

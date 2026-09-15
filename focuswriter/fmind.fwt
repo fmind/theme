@@ -1,0 +1,9 @@
+[General]
+name=Fmind
+font_family=Google Sans
+font_size=12
+text_color=#202124
+background_color=#ffffff
+margin_color=#f1f3f4
+cursor_color=#174ea6
+selection_color=#d2e3fc

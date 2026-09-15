@@ -1,0 +1,45 @@
+/* https://github.com/qbittorrent/qBittorrent/wiki */
+
+QWidget {
+  color: #202124;
+  background-color: #ffffff;
+  font-family: "Google Sans";
+}
+
+QTreeView, QTableView, QListView {
+  color: #202124;
+  background-color: #ffffff;
+  selection-color: #202124;
+  selection-background-color: #d2e3fc;
+  border: 1px solid #9aa0a6;
+}
+
+QHeaderView::section {
+  color: #202124;
+  background-color: #ffffff;
+  border: 1px solid #9aa0a6;
+  padding: 4px;
+}
+
+QProgressBar {
+  color: #202124;
+  background-color: #f1f3f4;
+  border: 1px solid #9aa0a6;
+  border-radius: 3px;
+  text-align: center;
+}
+
+QProgressBar::chunk {
+  background-color: #174ea6;
+}
+
+QMenuBar, QMenu {
+  color: #202124;
+  background-color: #ffffff;
+  border: 1px solid #9aa0a6;
+}
+
+QMenu::item:selected {
+  color: #202124;
+  background-color: #d2e3fc;
+}

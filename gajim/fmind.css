@@ -1,0 +1,19 @@
+:root {
+  --gajim-background: #ffffff;
+  --gajim-foreground: #202124;
+  --gajim-accent: #174ea6;
+  --gajim-surface: #f1f3f4;
+  --gajim-selection: #d2e3fc;
+}
+
+.gajim-state-composing {
+  color: #0d652d;
+}
+
+.gajim-state-inactive {
+  color: #595d62;
+}
+
+.gajim-state-paused {
+  color: #174ea6;
+}

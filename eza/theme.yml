@@ -1,0 +1,16 @@
+filekinds:
+  directory: {foreground: "#174ea6"}
+  executable: {foreground: "#0d652d"}
+  symlink: {foreground: "#00636d"}
+  pipe: {foreground: "#934900"}
+  block_device: {foreground: "#934900"}
+  char_device: {foreground: "#934900"}
+  socket: {foreground: "#681da8"}
+  special: {foreground: "#681da8"}
+perms:
+  user_read: {foreground: "#202124"}
+  user_write: {foreground: "#a50e0e"}
+  user_execute: {foreground: "#0d652d"}
+  other_read: {foreground: "#595d62"}
+  other_write: {foreground: "#a50e0e"}
+  other_execute: {foreground: "#0d652d"}

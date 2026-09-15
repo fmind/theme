@@ -1,0 +1,11 @@
+body, .board {
+  background-color: #ffffff !important;
+  color: #202124 !important;
+}
+.card {
+  background-color: #f1f3f4 !important;
+  color: #202124 !important;
+}
+a {
+  color: #174ea6 !important;
+}

@@ -1,0 +1,52 @@
+/* https://github.com/dracula/anytype/blob/main/custom.css */
+/* Use Anytype's light appearance; native custom properties supply the palette. */
+:root {
+  --color-text-primary: #202124;
+  --color-text-secondary: #595d62;
+  --color-text-tertiary: #595d62;
+  --color-text-inversion: #ffffff;
+  --color-text-primary-inversion: #ffffff;
+  --color-text-secondary-inversion: #ffffff;
+  --color-text-tertiary-inversion: #ffffff;
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f1f3f4;
+  --color-bg-tertiary: #f1f3f4;
+  --color-bg-primary-inversion: #202124;
+  --color-bg-loader: #ffffff;
+  --color-shape-primary: #595d62;
+  --color-shape-secondary: #9aa0a6;
+  --color-shape-secondary-inversion: #595d62;
+  --color-shape-tertiary: #f1f3f4;
+  --color-control-accent: #174ea6;
+  --color-control-active: #174ea6;
+  --color-control-active-inversion: #ffffff;
+  --color-control-inactive: #595d62;
+  --color-control-bg: #ffffff;
+  --color-system-selection: #d2e3fc;
+  --color-system-drop-zone: #d2e3fc;
+  --color-system-accent-125: #174ea6;
+  --color-system-accent-100: #174ea6;
+  --color-system-accent-50: #d2e3fc;
+  --color-system-accent-25: #d2e3fc;
+  --color-grey: #595d62;
+  --color-yellow: #934900;
+  --color-orange: #934900;
+  --color-red: #a50e0e;
+  --color-pink: #681da8;
+  --color-purple: #681da8;
+  --color-blue: #174ea6;
+  --color-ice: #00636d;
+  --color-teal: #00636d;
+  --color-lime: #0d652d;
+  --color-green: #0d652d;
+}
+
+::selection {
+  color: #202124;
+  background: #d2e3fc;
+}
+
+markuplink, markupmention {
+  color: #174ea6;
+  text-decoration: underline;
+}

@@ -1,0 +1,17 @@
+MainWindowBackground = #ffffff
+EscToExit = false
+ReuseInstance = false
+UseSysColors = false
+RestoreSession = true
+
+FixedPageUI [
+	TextColor = #202124
+	BackgroundColor = #ffffff
+	SelectionColor = #d2e3fc
+	GradientColors = #f1f3f4
+]
+
+EbookUI [
+	TextColor = #202124
+	BackgroundColor = #ffffff
+]

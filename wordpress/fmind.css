@@ -1,0 +1,44 @@
+/* WordPress Admin Fmind Light Theme */
+
+#adminmenuback,
+#adminmenuwrap,
+#adminmenu {
+  background: #ffffff;
+}
+
+#adminmenu a {
+  color: #202124;
+}
+
+#adminmenu a:hover,
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub > a.menu-top,
+#adminmenu li > a.menu-top:focus {
+  color: #174ea6;
+  background-color: #f1f3f4;
+}
+
+#adminmenu li.current a.menu-top,
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
+#adminmenu .wp-menu-arrow,
+#adminmenu .wp-menu-arrow div,
+#adminmenu li.current div.wp-menu-image:before,
+#adminmenu li.wp-has-current-submenu div.wp-menu-image:before {
+  background: #f1f3f4;
+  color: #174ea6;
+}
+
+#wpadminbar {
+  background: #f1f3f4;
+  color: #202124;
+}
+
+#wpadminbar .ab-item,
+#wpadminbar a.ab-item {
+  color: #202124;
+}
+
+#wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item {
+  background: #ffffff;
+  color: #174ea6;
+}

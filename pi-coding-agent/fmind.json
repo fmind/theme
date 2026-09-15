@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/badlogic/pi-mono/main/packages/coding-agent/src/modes/interactive/theme/theme-schema.json",
+  "name": "fmind",
+  "vars": {
+    "background": "#ffffff",
+    "currentLine": "#f1f3f4",
+    "foreground": "#202124",
+    "comment": "#595d62",
+    "cyan": "#00636d",
+    "green": "#0d652d",
+    "orange": "#934900",
+    "purple": "#681da8",
+    "red": "#a50e0e",
+    "selection": "#d2e3fc"
+  }
+}

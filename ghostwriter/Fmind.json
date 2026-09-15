@@ -1,0 +1,15 @@
+{
+  "light": {
+    "accent": "#174ea6",
+    "background": "#ffffff",
+    "block": "#f1f3f4",
+    "cursor": "#174ea6",
+    "emphasis": "#934900",
+    "error": "#a50e0e",
+    "foreground": "#202124",
+    "heading": "#174ea6",
+    "link": "#174ea6",
+    "markup": "#595d62",
+    "selection": "#d2e3fc"
+  }
+}

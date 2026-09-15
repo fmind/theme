@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<abapTheme name="Fmind">
+  <color name="Background" value="#ffffff" />
+  <color name="Foreground" value="#202124" />
+  <color name="Selection" value="#d2e3fc" />
+  <color name="Comment" value="#595d62" />
+  <color name="Keyword" value="#174ea6" />
+  <color name="Identifier" value="#202124" />
+  <color name="Literal" value="#0d652d" />
+  <color name="Number" value="#934900" />
+  <color name="Type" value="#681da8" />
+  <color name="Error" value="#a50e0e" />
+</abapTheme>

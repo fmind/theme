@@ -1,0 +1,9 @@
+/* Fmind theme for Jellyfin */
+:root {
+  --accent: #174ea6;
+  --background: #ffffff;
+  --card: #f1f3f4;
+  --text: #202124;
+  --subtext: #595d62;
+  --border: #9aa0a6;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Fmind",
+  "background": "#ffffff",
+  "cursor": "#174ea6",
+  "result": "#174ea6",
+  "comment": "#595d62",
+  "number": "#934900",
+  "variable": "#202124",
+  "function": "#174ea6",
+  "operator": "#202124",
+  "matched": "#feefc3"
+}

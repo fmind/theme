@@ -1,0 +1,9 @@
+[General]
+name=Fmind
+
+[Palette]
+background=#ffffff
+foreground=#202124
+highlight=#d2e3fc
+active=#174ea6
+inactive=#595d62

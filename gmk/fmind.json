@@ -1,0 +1,26 @@
+{
+  "name": "GMK Fmind",
+  "author": "Fmind",
+  "colors": {
+    "alphas": {
+      "background": "#ffffff",
+      "legend": "#202124"
+    },
+    "modifiers": {
+      "background": "#f1f3f4",
+      "legend": "#202124"
+    },
+    "accent": {
+      "background": "#174ea6",
+      "legend": "#ffffff"
+    },
+    "selection": {
+      "background": "#d2e3fc",
+      "legend": "#174ea6"
+    },
+    "danger": {
+      "background": "#fad2cf",
+      "legend": "#a50e0e"
+    }
+  }
+}

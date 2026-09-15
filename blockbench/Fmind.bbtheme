@@ -1,0 +1,9 @@
+{
+  "name": "Fmind",
+  "author": "M\u00e9d\u00e9ric Hurier",
+  "borders": false,
+  "main_font": "",
+  "headline_font": "",
+  "code_font": "",
+  "css": "body {\n  --color-ui: #ffffff;\n  --color-back: #ffffff;\n  --color-dark: #f1f3f4;\n  --color-border: #f1f3f4;\n  --color-selected: #d2e3fc;\n  --color-button: #f1f3f4;\n  --color-text: #202124;\n  --color-light: #202124;\n  --color-subtle_text: #595d62;\n  --color-accent: #174ea6;\n  --color-error: #a50e0e;\n  --color-warning: #934900;\n  --color-confirm: #0d652d;\n}"
+}

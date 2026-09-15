@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="fmind" _name="Fmind" version="1.0">
+  <author>Médéric Hurier</author>
+  <_description>Fmind light style scheme for GtkSourceView</_description>
+
+  <color name="white" value="#ffffff"/>
+  <color name="panel" value="#f1f3f4"/>
+  <color name="gray" value="#9aa0a6"/>
+  <color name="dark-gray" value="#595d62"/>
+  <color name="charcoal" value="#202124"/>
+  <color name="dark-blue" value="#174ea6"/>
+  <color name="medium-blue" value="#4285f4"/>
+  <color name="light-blue" value="#d2e3fc"/>
+  <color name="dark-red" value="#a50e0e"/>
+  <color name="light-red" value="#fad2cf"/>
+  <color name="dark-orange" value="#934900"/>
+  <color name="yellow" value="#fbbc04"/>
+  <color name="light-yellow" value="#feefc3"/>
+  <color name="dark-green" value="#0d652d"/>
+  <color name="light-green" value="#ceead6"/>
+  <color name="purple" value="#681da8"/>
+  <color name="teal" value="#00636d"/>
+
+  <style name="text" foreground="charcoal" background="white"/>
+  <style name="current-line" background="panel"/>
+  <style name="line-numbers" foreground="dark-gray" background="white"/>
+  <style name="draw-spaces" foreground="gray"/>
+
+  <style name="selection" foreground="charcoal" background="light-blue"/>
+  <style name="search-match" foreground="charcoal" background="light-yellow"/>
+
+  <style name="def:comment" foreground="dark-gray" italic="true"/>
+  <style name="def:constant" foreground="dark-orange"/>
+  <style name="def:string" foreground="dark-green"/>
+  <style name="def:identifier" foreground="charcoal"/>
+  <style name="def:statement" foreground="dark-blue" bold="true"/>
+  <style name="def:type" foreground="purple"/>
+  <style name="def:preprocessor" foreground="teal"/>
+  <style name="def:error" foreground="dark-red" bold="true"/>
+  <style name="def:warning" foreground="dark-orange"/>
+  <style name="def:note" foreground="teal"/>
+</style-scheme>

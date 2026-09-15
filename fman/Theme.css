@@ -1,0 +1,13 @@
+* {
+  background-color: #ffffff;
+  color: #202124;
+}
+
+.locationbar {
+  border-bottom: 1px solid #f1f3f4;
+}
+
+QTableView {
+  selection-background-color: #d2e3fc;
+  selection-color: #202124;
+}

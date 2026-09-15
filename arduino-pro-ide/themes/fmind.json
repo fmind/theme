@@ -1,0 +1,16 @@
+{
+  "name": "Fmind",
+  "type": "light",
+  "colors": {
+    "editor.background": "#ffffff",
+    "editor.foreground": "#202124",
+    "editor.lineHighlightBackground": "#f1f3f4",
+    "editor.selectionBackground": "#d2e3fc",
+    "activityBar.background": "#f1f3f4",
+    "activityBar.foreground": "#202124",
+    "sideBar.background": "#ffffff",
+    "sideBar.foreground": "#202124",
+    "statusBar.background": "#f1f3f4",
+    "statusBar.foreground": "#202124"
+  }
+}

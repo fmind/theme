@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3840" height="2160" viewBox="0 0 3840 2160">
+  <rect width="3840" height="2160" fill="#ffffff" />
+  <circle cx="1920" cy="1080" r="480" fill="#f1f3f4" />
+  <circle cx="1920" cy="1080" r="320" fill="#d2e3fc" />
+  <circle cx="1920" cy="1080" r="160" fill="#174ea6" />
+  <text x="1920" y="1680" text-anchor="middle" font-family="Google Sans" font-size="72" font-weight="500" fill="#202124">Fmind</text>
+  <text x="1920" y="1740" text-anchor="middle" font-family="Google Sans" font-size="28" fill="#595d62">Clean, minimal light aesthetic</text>
+</svg>

@@ -1,0 +1,23 @@
+:root {
+  --primary: #174ea6;
+  --secondary: #174ea6;
+  --accent: #174ea6;
+  --primary-fg: #ffffff;
+  --body-fg: #202124;
+  --body-bg: #ffffff;
+  --body-quiet-color: #595d62;
+  --body-loud-color: #202124;
+  --header-color: #202124;
+  --header-bg: #f1f3f4;
+  --header-link-color: #174ea6;
+  --breadcrumbs-fg: #595d62;
+  --breadcrumbs-bg: #f1f3f4;
+  --breadcrumbs-link-fg: #174ea6;
+  --link-fg: #174ea6;
+  --link-hover-color: #174ea6;
+  --link-selected-fg: #174ea6;
+  --hairline-color: #f1f3f4;
+  --border-color: #f1f3f4;
+  --selected-row: #d2e3fc;
+  --selected-bg: #d2e3fc;
+}

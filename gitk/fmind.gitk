@@ -1,0 +1,8 @@
+# Gitk Fmind light colors
+set mainbgcolor #ffffff
+set mainfgcolor #202124
+set selectbgcolor #d2e3fc
+set findmergecolor #ceead6
+set diffbgcolor #ffffff
+set diffcolors {#0d652d #a50e0e #174ea6}
+set linecolor #9aa0a6

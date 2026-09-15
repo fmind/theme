@@ -1,0 +1,111 @@
+/* FreeCAD Fmind Light Theme */
+
+QMainWindow {
+    background-color: #ffffff;
+    color: #202124;
+}
+
+QWidget {
+    background-color: #ffffff;
+    color: #202124;
+    selection-background-color: #d2e3fc;
+    selection-color: #202124;
+}
+
+QDockWidget {
+    background-color: #f1f3f4;
+    color: #202124;
+    titlebar-close-icon: url(close.png);
+}
+
+QDockWidget::title {
+    background-color: #f1f3f4;
+    border: 1px solid #f1f3f4;
+    padding: 4px;
+    font-weight: bold;
+}
+
+QMenuBar {
+    background-color: #ffffff;
+    color: #202124;
+    border-bottom: 1px solid #f1f3f4;
+}
+
+QMenuBar::item:selected {
+    background-color: #d2e3fc;
+}
+
+QMenu {
+    background-color: #ffffff;
+    color: #202124;
+    border: 1px solid #f1f3f4;
+}
+
+QMenu::item:selected {
+    background-color: #d2e3fc;
+}
+
+QToolBar {
+    background-color: #ffffff;
+    border: 1px solid #f1f3f4;
+    spacing: 2px;
+}
+
+QToolButton:hover {
+    background-color: #d2e3fc;
+    border: 1px solid #174ea6;
+}
+
+QTreeWidget, QTreeView, QListView, QTableView {
+    background-color: #ffffff;
+    alternate-background-color: #f1f3f4;
+    border: 1px solid #f1f3f4;
+    color: #202124;
+}
+
+QHeaderView::section {
+    background-color: #f1f3f4;
+    color: #202124;
+    border: 1px solid #f1f3f4;
+    padding: 4px;
+}
+
+QTabBar::tab {
+    background-color: #f1f3f4;
+    color: #595d62;
+    border: 1px solid #f1f3f4;
+    padding: 6px 12px;
+}
+
+QTabBar::tab:selected {
+    background-color: #ffffff;
+    color: #202124;
+    border-bottom-color: #ffffff;
+}
+
+QStatusBar {
+    background-color: #f1f3f4;
+    color: #595d62;
+    border-top: 1px solid #f1f3f4;
+}
+
+QLineEdit, QTextEdit, QPlainTextEdit {
+    background-color: #ffffff;
+    color: #202124;
+    border: 1px solid #f1f3f4;
+    selection-background-color: #d2e3fc;
+    selection-color: #202124;
+}
+
+QPushButton {
+    background-color: #f1f3f4;
+    color: #202124;
+    border: 1px solid #f1f3f4;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+QPushButton:hover {
+    background-color: #d2e3fc;
+    border-color: #174ea6;
+}

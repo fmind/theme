@@ -1,0 +1,10 @@
+{
+  "base": "#ffffff",
+  "alternate_base": "#f1f3f4",
+  "text": "#202124",
+  "disabled_text": "#595d62",
+  "button": "#f1f3f4",
+  "highlight": "#d2e3fc",
+  "highlighted_text": "#202124",
+  "unread_badge": "#174ea6"
+}

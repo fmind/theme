@@ -1,0 +1,9 @@
+Windows Registry Editor Version 5.00
+
+; Fmind light theme for Embarcadero Delphi IDE
+; Colors in BGR format
+[HKEY_CURRENT_USER\Software\Embarcadero\BDS\22.0\ThemeManager]
+"ThemeName"="Fmind"
+"BackgroundColor"=hex:ff,ff,ff,00
+"ForegroundColor"=hex:24,21,20,00
+"HighlightColor"=hex:fc,e3,d2,00

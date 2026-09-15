@@ -1,0 +1,40 @@
+/* ==UserStyle==
+@name           YouTube Fmind
+@namespace      github.com/fmind/theme
+@version        1.0.0
+@description    Clean light theme for YouTube
+==/UserStyle== */
+
+@-moz-document domain("youtube.com") {
+  html, body, ytd-app {
+    background-color: #ffffff !important;
+    color: #202124 !important;
+  }
+
+  #masthead {
+    background-color: #ffffff !important;
+  }
+
+  #video-title {
+    color: #202124 !important;
+  }
+
+  #channel-name, #metadata-line {
+    color: #595d62 !important;
+  }
+
+  ytd-button-renderer.style-primary {
+    background-color: #174ea6 !important;
+    color: #ffffff !important;
+  }
+
+  yt-chip-cloud-chip-renderer[chip-style="STYLE_DEFAULT"] {
+    background-color: #f1f3f4 !important;
+    color: #202124 !important;
+  }
+
+  yt-chip-cloud-chip-renderer[chip-style="STYLE_DEFAULT"][selected] {
+    background-color: #d2e3fc !important;
+    color: #174ea6 !important;
+  }
+}

@@ -1,0 +1,21 @@
+/* Fmind theme for YouTube Music Desktop */
+
+html:not(.style-scope) {
+  --cust-nav-bg: #f1f3f4;
+  --cust-bg: #ffffff;
+  --cust-primary: #174ea6;
+  --cust-fg: #202124;
+  --cust-muted: #595d62;
+  --cust-border: #f1f3f4;
+  --cust-highlight: #d2e3fc;
+}
+
+body {
+  background-color: var(--cust-bg) !important;
+  color: var(--cust-fg) !important;
+}
+
+#nav-bar-background {
+  background-color: var(--cust-nav-bg) !important;
+  border-bottom: 1px solid var(--cust-border) !important;
+}

@@ -1,0 +1,1 @@
+{"name":"Fmind","cardColor":"#f1f3f4","sidebarColor":"#ffffff","textColor":"#202124","accentColor":"#174ea6"}

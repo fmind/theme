@@ -1,0 +1,50 @@
+{
+  "text-color": "#202124",
+  "background-color": "#ffffff",
+  "line-number-color": "#595d62",
+  "line-number-background-color": "#f1f3f4",
+  "text-styles": {
+    "Normal": {
+      "text-color": "#202124",
+      "background-color": null,
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "Keyword": {
+      "text-color": "#174ea6",
+      "background-color": null,
+      "bold": true,
+      "italic": false,
+      "underline": false
+    },
+    "DataType": {
+      "text-color": "#174ea6",
+      "background-color": null,
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "Decimal": {
+      "text-color": "#174ea6",
+      "background-color": null,
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "String": {
+      "text-color": "#0d652d",
+      "background-color": null,
+      "bold": false,
+      "italic": false,
+      "underline": false
+    },
+    "Comment": {
+      "text-color": "#595d62",
+      "background-color": null,
+      "bold": false,
+      "italic": true,
+      "underline": false
+    }
+  }
+}

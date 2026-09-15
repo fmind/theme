@@ -1,0 +1,11 @@
+{
+  "name": "Fmind",
+  "variables": {
+    "background": "#ffffff",
+    "foreground": "#202124",
+    "primary": "#174ea6",
+    "secondary": "#595d62",
+    "surface": "#f1f3f4",
+    "border": "#9aa0a6"
+  }
+}

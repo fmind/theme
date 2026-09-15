@@ -1,0 +1,17 @@
+:root {
+  --color-bg: #ffffff;
+  --color-current-line: #f1f3f4;
+  --color-foreground: #202124;
+  --color-comment: #595d62;
+  --color-cyan: #00636d;
+  --color-green: #0d652d;
+  --color-orange: #934900;
+  --color-purple: #681da8;
+  --color-red: #a50e0e;
+  --color-accent: #174ea6;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-foreground);
+}

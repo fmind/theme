@@ -1,0 +1,38 @@
+/* Javadoc Fmind Light Theme */
+
+body {
+    background-color: #ffffff;
+    color: #202124;
+    font-family: "Google Sans", sans-serif;
+}
+
+a:link, a:visited {
+    color: #174ea6;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+.topNav, .bottomNav {
+    background-color: #f1f3f4;
+    color: #202124;
+}
+
+.subTitle {
+    color: #595d62;
+}
+
+th.colFirst, th.colLast, th.colOne {
+    background-color: #f1f3f4;
+    color: #202124;
+}
+
+tr.altColor {
+    background-color: #f1f3f4;
+}
+
+tr.rowColor {
+    background-color: #ffffff;
+}

@@ -1,0 +1,78 @@
+/* Adminer Fmind Light Theme */
+
+:root {
+  --color-bg: #ffffff;
+  --color-fg: #202124;
+  --color-panel: #f1f3f4;
+  --color-border: #f1f3f4;
+  --color-accent: #174ea6;
+  --color-muted: #595d62;
+  --color-highlight: #d2e3fc;
+  --color-error: #a50e0e;
+  --color-success: #0d652d;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  font-family: "Google Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#menu {
+  background-color: var(--color-panel);
+  border-right: 1px solid var(--color-border);
+}
+
+#content {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  background-color: var(--color-panel);
+  color: var(--color-fg);
+  border: 1px solid var(--color-border);
+}
+
+td {
+  border: 1px solid var(--color-border);
+}
+
+tr:hover td {
+  background-color: var(--color-highlight);
+}
+
+input, select, textarea {
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.error {
+  background-color: var(--color-panel);
+  color: var(--color-error);
+  border: 1px solid var(--color-error);
+}
+
+.message {
+  background-color: var(--color-panel);
+  color: var(--color-success);
+  border: 1px solid var(--color-success);
+}

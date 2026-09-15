@@ -1,0 +1,29 @@
+/* ==UserStyle==
+@name           DuckDuckGo Fmind
+@namespace      github.com/fmind/theme
+@version        1.0.0
+@description    Clean light theme for DuckDuckGo
+==/UserStyle== */
+
+@-moz-document domain("duckduckgo.com") {
+  body, .site-wrapper {
+    background-color: #ffffff !important;
+    color: #202124 !important;
+  }
+  .header-wrap {
+    background-color: #ffffff !important;
+  }
+  a, .result__title .result__a {
+    color: #174ea6 !important;
+  }
+  .result__snippet {
+    color: #202124 !important;
+  }
+  .result__url {
+    color: #0d652d !important;
+  }
+  .badge--ad {
+    color: #934900 !important;
+    background-color: #feefc3 !important;
+  }
+}

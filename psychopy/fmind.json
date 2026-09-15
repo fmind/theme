@@ -1,0 +1,27 @@
+{
+  "app": "light",
+  "icons": "light",
+  "info": "Fmind Light theme for PsychoPy",
+  "code": {
+    "base": {
+      "fg": "#202124",
+      "bg": "#ffffff"
+    },
+    "comment": {
+      "fg": "#595d62",
+      "bg": "#ffffff"
+    },
+    "keyword": {
+      "fg": "#174ea6",
+      "bg": "#ffffff"
+    },
+    "string": {
+      "fg": "#0d652d",
+      "bg": "#ffffff"
+    },
+    "select": {
+      "fg": "#202124",
+      "bg": "#d2e3fc"
+    }
+  }
+}

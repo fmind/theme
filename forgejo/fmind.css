@@ -1,0 +1,10 @@
+/* Fmind theme for Forgejo */
+:root {
+  --color-primary: #174ea6;
+  --color-body: #ffffff;
+  --color-box-header: #f1f3f4;
+  --color-box-body: #ffffff;
+  --color-text: #202124;
+  --color-text-light: #595d62;
+  --color-border: #9aa0a6;
+}

@@ -214,16 +214,49 @@ print(json.dumps(conf.GetThemeDict('user', 'Fmind')))
         self.assertEqual(style.style_for_token(Generic.Deleted)["bgcolor"], "fad2cf")
 
     def test_catalog_scope_and_shipped_paths(self):
+        from test_theme import APPS
+
         catalog = (ROOT / "CATALOG.md").read_text()
+        readme = (ROOT / "README.md").read_text()
         rows = re.findall(
-            r"^\| \[([^]]+)\]\(https://draculatheme.com/([^/)]+)\) \| ([^|]+) \| (.+) \|$", catalog, re.MULTILINE
+            r"^\| +([^|]+) +\| +(Core|Additional) +\| +\[([^]]+)\]\(([^)]+)/\) +\|$", catalog, re.MULTILINE
         )
-        self.assertEqual(len(rows), 472)
-        self.assertEqual(len({slug for _, slug, _, _ in rows}), 472)
-        for _, slug, status, port in rows:
-            self.assertIn(status, ("Pending", "Port shipped"), slug)
-            if status == "Port shipped":
-                path = re.fullmatch(r"\[([^]]+)\]\(([^)]+)/\)", port)
-                self.assertIsNotNone(path, slug)
-                self.assertTrue((ROOT / path[2]).is_dir(), slug)
-                self.assertIn(f"]({path[2]}/", (ROOT / "README.md").read_text(), slug)
+        self.assertEqual(len(rows), len(APPS))
+        self.assertEqual({path for _, _, _, path in rows}, {app.name for app in APPS})
+        self.assertIn(f"{len(rows)} integration directories", readme)
+        self.assertIn(f"{len(rows)} integration directories", catalog)
+        for _, _, label, path in rows:
+            self.assertEqual(label, path)
+            self.assertTrue((ROOT / path).is_dir(), path)
+            self.assertIn(f"]({path}/", readme, path)
+
+        # Snapshot of native paths consumed by chezmoi. Keep CI independent of
+        # private dotfiles while protecting the public installation contract.
+        core_paths = (
+            "atuin/fmind.toml",
+            "bat/fmind.tmTheme",
+            "bottom/fmind.toml",
+            "delta/fmind.gitconfig",
+            "fastfetch/fmind.json",
+            "fish/fmind.fish",
+            "fzf/fmind.conf",
+            "gh-dash/fmind.yml",
+            "ghostty/fmind",
+            "k9s/fmind.yaml",
+            "lazydocker/fmind.yml",
+            "lazygit/fmind.yml",
+            "lsd/fmind.yaml",
+            "lualine/fmind.lua",
+            "nvim/colors/fmind.lua",
+            "opencode/fmind.json",
+            "ptpython/fmind.py",
+            "starship/fmind.toml",
+            "yazi/fmind.toml",
+            "zellij/fmind.kdl",
+        )
+        self.assertEqual(
+            {path for _, priority, _, path in rows if priority == "Core"}, {path.split("/")[0] for path in core_paths}
+        )
+        for path in core_paths:
+            self.assertTrue((ROOT / path).is_file(), path)
+            self.assertIn(f"]({path})", readme, path)

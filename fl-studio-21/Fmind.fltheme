@@ -1,0 +1,18 @@
+[Theme]
+Name=Fmind
+Author=Médéric Hurier
+Version=1.0
+
+[Colors]
+Background=#ffffff
+Text=#202124
+TextMuted=#595d62
+Highlight=#174ea6
+Selection=#d2e3fc
+Panel=#f1f3f4
+Grid=#f1f3f4
+Accent=#174ea6
+Red=#a50e0e
+Green=#0d652d
+Orange=#934900
+Purple=#681da8

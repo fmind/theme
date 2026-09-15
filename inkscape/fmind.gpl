@@ -1,0 +1,24 @@
+GIMP Palette
+Name: Fmind
+Columns: 4
+#
+255 255 255	Ground
+ 32  33  36	Text
+241 243 244	Panel
+241 243 244	Line
+ 89  93  98	Muted
+ 23  78 166	Blue
+ 66 133 244	Light Blue
+ 26 115 232	Dark Blue
+ 13 101  45	Green
+ 52 168  83	Light Green
+147  73   0	Orange
+227 116   0	Light Orange
+104  29 168	Purple
+165  14  14	Red
+234  67  53	Light Red
+254 239 195	Yellow
+251 188   4	Light Yellow
+  0  99 109	Teal
+210 227 252	Subtle Blue
+250 210 207	Subtle Red

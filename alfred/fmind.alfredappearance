@@ -1,0 +1,25 @@
+{
+  "alfredtheme": {
+    "name": "Fmind",
+    "description": "Minimalist light theme for Alfred using the Fmind color palette",
+    "author": "Fmind",
+    "theme": {
+      "color": {
+        "background": "#ffffff",
+        "border": "#9aa0a6",
+        "separator": "#f1f3f4",
+        "resultText": "#202124",
+        "resultSubtext": "#595d62",
+        "resultSelectedText": "#202124",
+        "resultSelectedSubtext": "#595d62",
+        "resultSelectedBackground": "#d2e3fc",
+        "scrollHandle": "#9aa0a6",
+        "searchBackground": "#ffffff",
+        "searchText": "#202124",
+        "shortcutText": "#595d62",
+        "shortcutSelectedText": "#174ea6"
+      },
+      "font": "Google Sans"
+    }
+  }
+}

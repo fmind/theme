@@ -1,0 +1,10 @@
+{
+  "name": "Fmind",
+  "description": "Fmind light profile for Anne Pro 2 keyboard",
+  "colors": {
+    "base": "#ffffff",
+    "modifiers": "#f1f3f4",
+    "accent": "#174ea6",
+    "highlights": "#d2e3fc"
+  }
+}

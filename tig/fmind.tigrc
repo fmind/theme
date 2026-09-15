@@ -1,0 +1,16 @@
+# Fmind theme for tig
+set git-colors = no
+
+color default         #202124   #ffffff
+color cursor          #202124   #d2e3fc
+color search-result   #202124   #feefc3
+color line-number     #595d62   #ffffff
+color title-focus     #202124   #d2e3fc
+color title-blur      #595d62   #f1f3f4
+color header          #174ea6   #ffffff
+color section         #174ea6   #ffffff
+color date            #595d62   #ffffff
+color author          #174ea6   #ffffff
+color diff-stat       #174ea6   #ffffff
+color diff-add        #0d652d   #ceead6
+color diff-del        #a50e0e   #fad2cf

@@ -1,0 +1,12 @@
+/* Fmind theme for Keybr */
+body {
+  background-color: #ffffff;
+  color: #202124;
+}
+.border {
+  border-color: #9aa0a6;
+}
+.active {
+  background-color: #d2e3fc;
+  color: #174ea6;
+}

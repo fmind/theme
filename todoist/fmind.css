@@ -1,0 +1,8 @@
+/* Fmind theme for Todoist */
+:root {
+  --theme-base-color: #174ea6;
+  --theme-background: #ffffff;
+  --theme-surface: #f1f3f4;
+  --theme-text: #202124;
+  --theme-border: #9aa0a6;
+}

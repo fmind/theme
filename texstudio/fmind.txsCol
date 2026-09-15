@@ -1,0 +1,14 @@
+[General]
+version=1
+
+[Colors]
+background=#ffffff
+foreground=#202124
+selection=#d2e3fc
+comment=#595d62
+keyword=#174ea6
+command=#174ea6
+math=#681da8
+verbatim=#0d652d
+number=#934900
+error=#a50e0e

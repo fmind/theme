@@ -1,0 +1,12 @@
+/* ==UserStyle==
+@name Fmind AutoAO3App
+@namespace github.com/fmind/theme
+@version 1.0.0
+==/UserStyle== */
+body {
+  background-color: #ffffff !important;
+  color: #202124 !important;
+}
+a {
+  color: #174ea6 !important;
+}

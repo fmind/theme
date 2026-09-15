@@ -1,0 +1,15 @@
+/* Nextcloud Fmind Light Theme */
+
+:root, [data-theme-light] {
+    --color-main-text: #202124;
+    --color-main-background: #ffffff;
+    --color-main-background-rgb: 255, 255, 255;
+    --color-background-hover: #f1f3f4;
+    --color-background-dark: #f1f3f4;
+    --color-placeholder-light: #595d62;
+    --color-primary: #174ea6;
+    --color-primary-default: var(--color-primary);
+    --color-primary-text: #ffffff;
+    --color-primary-element: var(--color-primary);
+    --color-border: #f1f3f4;
+}

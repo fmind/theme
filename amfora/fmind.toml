@@ -1,0 +1,12 @@
+# Fmind theme for Amfora
+[theme]
+background = "#ffffff"
+text = "#202124"
+hdg_1 = "#174ea6"
+hdg_2 = "#174ea6"
+hdg_3 = "#174ea6"
+amfora_link = "#174ea6"
+foreign_link = "#00636d"
+tab_bar = "#f1f3f4"
+tab_active = "#d2e3fc"
+status_bar = "#f1f3f4"

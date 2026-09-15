@@ -1,0 +1,12 @@
+# Fmind light theme for Mutt / Neomutt
+color normal        "#202124" "#ffffff"
+color status        "#202124" "#f1f3f4"
+color indicator     "#202124" "#d2e3fc"
+color tree          "#595d62" "#ffffff"
+color error         "#a50e0e" "#fad2cf"
+color message       "#174ea6" "#ffffff"
+color attachment    "#681da8" "#ffffff"
+color header        "#174ea6" "#ffffff" "^(From|Subject):"
+color header        "#595d62" "#ffffff" ".*"
+color body          "#0d652d" "#ffffff" "[\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+"
+color body          "#174ea6" "#ffffff" "(https?|ftp)://[^\ ]+"

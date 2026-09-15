@@ -1,0 +1,40 @@
+/* ==UserStyle==
+@name           GitHub Fmind
+@namespace      github.com/fmind/theme
+@version        1.0.0
+@description    Clean light theme for GitHub
+==/UserStyle== */
+
+@-moz-document domain("github.com") {
+  body {
+    color: #202124 !important;
+    background-color: #ffffff !important;
+  }
+  a {
+    color: #174ea6 !important;
+  }
+  .Header {
+    background-color: #f1f3f4 !important;
+    color: #202124 !important;
+  }
+  .btn-primary {
+    background-color: #174ea6 !important;
+    color: #ffffff !important;
+    border-color: #174ea6 !important;
+  }
+  .blob-code-inner {
+    color: #202124 !important;
+  }
+  .pl-k {
+    color: #174ea6 !important;
+  }
+  .pl-s {
+    color: #0d652d !important;
+  }
+  .pl-c {
+    color: #595d62 !important;
+  }
+  .pl-en {
+    color: #174ea6 !important;
+  }
+}

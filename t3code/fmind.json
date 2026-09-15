@@ -1,0 +1,11 @@
+{
+  "name": "Fmind",
+  "theme": {
+    "background": "#ffffff",
+    "foreground": "#202124",
+    "primary": "#174ea6",
+    "comment": "#595d62",
+    "string": "#0d652d",
+    "keyword": "#174ea6"
+  }
+}

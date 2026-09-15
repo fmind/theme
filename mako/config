@@ -1,0 +1,14 @@
+background-color=#ffffff
+text-color=#202124
+border-color=#f1f3f4
+progress-color=#d2e3fc
+
+[urgency=low]
+border-color=#f1f3f4
+
+[urgency=normal]
+border-color=#174ea6
+
+[urgency=high]
+border-color=#a50e0e
+text-color=#a50e0e

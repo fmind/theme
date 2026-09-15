@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<theme name="Fmind" version="1.0">
+  <colors>
+    <color id="text" value="#202124" />
+    <color id="text_muted" value="#595d62" />
+    <color id="background" value="#ffffff" />
+    <color id="surface" value="#f1f3f4" />
+    <color id="selected" value="#d2e3fc" />
+    <color id="selected_text" value="#202124" />
+    <color id="accent" value="#174ea6" />
+    <color id="border" value="#9aa0a6" />
+    <color id="error" value="#a50e0e" />
+    <color id="warning" value="#934900" />
+    <color id="success" value="#0d652d" />
+  </colors>
+</theme>

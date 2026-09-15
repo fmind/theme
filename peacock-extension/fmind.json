@@ -1,0 +1,24 @@
+{
+  "peacock.favoriteColors": [
+    {
+      "name": "Fmind Dark Blue",
+      "value": "#174ea6"
+    },
+    {
+      "name": "Fmind Teal",
+      "value": "#00636d"
+    },
+    {
+      "name": "Fmind Green",
+      "value": "#0d652d"
+    },
+    {
+      "name": "Fmind Yellow",
+      "value": "#fbbc04"
+    },
+    {
+      "name": "Fmind Purple",
+      "value": "#681da8"
+    }
+  ]
+}

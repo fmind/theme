@@ -47,6 +47,7 @@ Rectangle {
     Timer { interval: 1000; repeat: true; running: true; onTriggered: root.now = new Date() }
     Connections {
         target: sddm
+        ignoreUnknownSignals: true
         function onLoginFailed() {
             root.busy = false;
             root.message = qsTr("Sign-in failed. Check your username and password, then try again.");

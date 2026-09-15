@@ -1,0 +1,22 @@
+/* ==UserStyle==
+@name         Stack Overflow Fmind Light
+@namespace    github.com/fmind/theme
+@version      1.0.0
+==/UserStyle== */
+
+@-moz-document domain("stackoverflow.com") {
+  :root {
+    --theme-primary: #174ea6;
+    --theme-background: #ffffff;
+    --theme-content-background: #ffffff;
+    --theme-foreground: #202124;
+    --theme-muted: #595d62;
+    --theme-border: #f1f3f4;
+    --theme-highlight: #d2e3fc;
+  }
+
+  body {
+    background-color: var(--theme-background) !important;
+    color: var(--theme-foreground) !important;
+  }
+}

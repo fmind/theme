@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SkinColors doc_version="12">
+  <Main_Back>255,255,255</Main_Back>
+  <Main_Font>32,33,36</Main_Font>
+  <Alternate_Main_Back>241,243,244</Alternate_Main_Back>
+  <Alternate_Main_Font>89,93,98</Alternate_Main_Font>
+  <Body_Back>255,255,255</Body_Back>
+  <Body_Font>32,33,36</Body_Font>
+  <Selection_Back>210,227,252</Selection_Back>
+  <Selection_Font>32,33,36</Selection_Font>
+  <StandOut_Font>23,78,166</StandOut_Font>
+</SkinColors>

@@ -1,0 +1,15 @@
+/* Fmind theme for Miniflux */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #202124;
+  --link-color: #174ea6;
+  --panel-bg: #f1f3f4;
+  --border-color: #9aa0a6;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+a {
+  color: var(--link-color);
+}

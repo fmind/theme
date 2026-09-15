@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+body {
+  background-color: #ffffff;
+  color: #202124;
+  font-family: "Google Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.line {
+  padding: 2px 5px;
+}
+
+.line[data-highlight="true"] {
+  background-color: #d2e3fc;
+}
+
+.time {
+  color: #595d62;
+}
+
+.sender {
+  color: #174ea6;
+  font-weight: bold;
+}
+
+.sender[data-member-type="myself"] {
+  color: #0d652d;
+}
+
+.message {
+  color: #202124;
+}
+
+a {
+  color: #174ea6;
+}
+
+.event {
+  color: #595d62;
+}

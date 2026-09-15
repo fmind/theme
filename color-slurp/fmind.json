@@ -1,0 +1,13 @@
+{
+  "name": "Fmind",
+  "colors": {
+    "Background": "#ffffff",
+    "Foreground": "#202124",
+    "Primary": "#174ea6",
+    "Secondary": "#595d62",
+    "Success": "#0d652d",
+    "Warning": "#934900",
+    "Danger": "#a50e0e",
+    "Selection": "#d2e3fc"
+  }
+}

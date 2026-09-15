@@ -1,0 +1,11 @@
+{
+  "name": "Fmind",
+  "theme": "light",
+  "colors": {
+    "highlight": "#174ea6",
+    "background": "#ffffff",
+    "surface": "#f1f3f4",
+    "text": "#202124",
+    "border": "#9aa0a6"
+  }
+}

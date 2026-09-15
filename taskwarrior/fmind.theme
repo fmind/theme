@@ -1,0 +1,15 @@
+# Fmind theme for Taskwarrior
+color.header=color12
+color.footnote=color8
+color.warning=bold color3
+color.error=bold color1
+color.debug=color8
+color.uda.priority.H=bold color1
+color.uda.priority.M=color3
+color.uda.priority.L=color2
+color.due=color1
+color.due.today=bold color1
+color.overdue=bold white on color1
+color.active=bold color12 on color7
+color.completed=color8
+color.deleted=color8

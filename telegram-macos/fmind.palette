@@ -1,0 +1,6 @@
+name: Fmind
+parent: day
+windowBackground: #ffffff
+windowForeground: #202124
+selection: #d2e3fc
+accent: #174ea6

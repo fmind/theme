@@ -1,0 +1,22 @@
+/* ==UserStyle==
+@name           Fmind Facebook Messenger
+@namespace      github.com/fmind/theme
+@version        1.0.0
+@description    Fmind light theme for Facebook Messenger
+@author         Médéric Hurier
+==/UserStyle== */
+
+@-moz-document domain("messenger.com") {
+  :root {
+    --messenger-card-background: #ffffff;
+    --surface-background: #f1f3f4;
+    --primary-text: #202124;
+    --secondary-text: #595d62;
+    --primary-icon: #174ea6;
+    --accent: #174ea6;
+  }
+  body {
+    background-color: #ffffff !important;
+    color: #202124 !important;
+  }
+}

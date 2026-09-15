@@ -1,0 +1,10 @@
+/* Fmind theme for LeetCode */
+:root {
+  --lc-bg: #ffffff;
+  --lc-panel: #f1f3f4;
+  --lc-text: #202124;
+  --lc-link: #174ea6;
+  --lc-easy: #0d652d;
+  --lc-medium: #934900;
+  --lc-hard: #a50e0e;
+}

@@ -46,7 +46,7 @@ Copy the complete [plasma/look-and-feel/Fmind/](plasma/look-and-feel/Fmind/) dir
 
 The same package supports the Plasma 5 and 6 look-and-feel formats. To use only its startup screen, select Fmind in System Settings → Splash Screen. The splash shows dark text and a blue activity marker on white; the marker follows Plasma's stage changes without estimating a completion percentage. Its [package preview](plasma/look-and-feel/Fmind/contents/previews/preview.png) is a native rendering of the splash, not a screenshot of an entire desktop.
 
-KDE Frameworks 5.103 loads the package and defaults, and Plasma 5.27.5 completes its native KSplash test without warnings. The splash also renders in both Qt 5.15.8 and Qt 6.4.2 at multiple viewport sizes and scale factors. Full Global Theme application in a desktop session, a Plasma 6 package loader and the Plasma 6 KSplash process remain unverified. See [coverage](../../COVERAGE.md) for the tested boundaries.
+KDE Frameworks 5.103 loads the package and defaults, and Plasma 5.27.5 completes its native KSplash test without warnings. The splash also renders in both Qt 5.15.8 and Qt 6.4.2 at multiple viewport sizes and scale factors. The look-and-feel package also includes native Plasma 5 components for the [lock screen](plasma/look-and-feel/Fmind/contents/lockscreen/LockScreen.qml) with clock, date and masked password entry, the [logout screen](plasma/look-and-feel/Fmind/contents/logout/Logout.qml) with session actions and countdown timer, and the [OSD](plasma/look-and-feel/Fmind/contents/osd/Osd.qml) with volume and brightness indicators. All surfaces remain pure white with dark charcoal text and pale blue accents. Full Global Theme application in a desktop session, a Plasma 6 package loader and the Plasma 6 KSplash process remain unverified. See [coverage](../../COVERAGE.md) for the tested boundaries.
 
 ## Cursor theme
 
@@ -61,11 +61,11 @@ The [free Dracula KDE directory](https://github.com/dracula/gtk/tree/master/kde)
 - [x] Aurorae window decorations.
 - [x] Kvantum widget theme.
 - [x] Global themes and splash screens for Plasma 5 and 6.
-- [ ] Plasma 5 lock-screen, logout and OSD components from the reference bundle.
+- [x] [Plasma 5 lock-screen, logout and OSD components](plasma/look-and-feel/Fmind/contents/) from the reference bundle.
 - [x] Cursor theme.
 - [ ] SDDM login-screen theme.
 
-The parent GTK catalog entry remains pending until its full bundle is implemented and checked. See [coverage](../../COVERAGE.md) for the exact native evidence and remaining runtime boundaries.
+The desktop bundle remains incomplete until SDDM validation is finished; its existing components remain supported. See [coverage](../../COVERAGE.md) for the exact native evidence and remaining runtime boundaries.
 
 ## Maintenance
 

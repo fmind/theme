@@ -1,0 +1,8 @@
+/* Fmind theme for BookWyrm */
+:root {
+  --color-background: #ffffff;
+  --color-foreground: #202124;
+  --color-primary: #174ea6;
+  --color-surface: #f1f3f4;
+  --color-border: #9aa0a6;
+}

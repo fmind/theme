@@ -141,6 +141,57 @@ class GtkPortTests(unittest.TestCase):
         self.assertIn('engine "" {}', source)
         self.assertNotRegex(source, r'\binclude\b|engine "[^"\n]+"')
 
+    def test_unity_companion_and_application_refinements(self):
+        import xml.etree.ElementTree as ET
+
+        unity = GTK / "unity"
+        self.assertTrue(unity.is_dir())
+        buttons = ("close", "minimize", "maximize", "unmaximize")
+        states = (
+            "focused_normal",
+            "focused_prelight",
+            "focused_pressed",
+            "unfocused",
+            "unfocused_prelight",
+            "unfocused_pressed",
+        )
+        for btn in buttons:
+            self.assertTrue((unity / f"{btn}.svg").is_symlink())
+            self.assertEqual((unity / f"{btn}.svg").resolve(), (unity / f"{btn}_focused_normal.svg").resolve())
+            for state in states:
+                path = unity / f"{btn}_{state}.svg"
+                self.assertTrue(path.is_file(), path)
+                root = ET.fromstring(path.read_text())
+                circle = root.find("{http://www.w3.org/2000/svg}circle")
+                self.assertIsNotNone(circle)
+                path_elem = root.find("{http://www.w3.org/2000/svg}path")
+                self.assertIsNotNone(path_elem)
+                bg = circle.attrib["fill"]
+                fg = path_elem.attrib["stroke"]
+                self.assertGreaterEqual(contrast(fg, bg), 4.5, (btn, state, fg, bg))
+
+        common = (GTK / "common.css").read_text()
+        for selector in (
+            "GtkButton",
+            "GtkEntry",
+            "GtkTextView",
+            "GtkTreeView",
+            "GtkHeaderBar",
+            "GtkNotebook",
+            "GtkSwitch",
+            ".nemo-window",
+            "ThunarWindow",
+            "CajaNavigationWindow",
+            ".geary-main-window",
+            "UnityDecoration",
+            "UnityPanelWidget",
+            ".xfce4-panel",
+            ".mate-panel-menu-bar",
+            ".budgie-panel",
+            "#lightdm-user-pass",
+        ):
+            self.assertIn(selector, common, f"Missing selector {selector} in common.css")
+
 
 if __name__ == "__main__":
     unittest.main()

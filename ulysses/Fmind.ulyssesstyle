@@ -1,0 +1,17 @@
+{
+  "name": "Fmind",
+  "author": "Médéric Hurier",
+  "colors": {
+    "background": "#ffffff",
+    "text": "#202124",
+    "heading": "#174ea6",
+    "link": "#174ea6",
+    "tag": "#174ea6",
+    "code": "#0d652d",
+    "comment": "#595d62",
+    "emphasis": "#681da8",
+    "strong": "#202124",
+    "mark": "#feefc3",
+    "deletion": "#a50e0e"
+  }
+}

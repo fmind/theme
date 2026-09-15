@@ -1,0 +1,15 @@
+{
+  "name": "Fmind",
+  "theme_type": "Light",
+  "editor_colours": {
+    "background": "#ffffff",
+    "text": "#202124",
+    "comments": "#595d62",
+    "keywords": "#174ea6",
+    "numbers": "#934900",
+    "strings": "#0d652d",
+    "functions": "#174ea6",
+    "variables": "#202124",
+    "selection": "#d2e3fc"
+  }
+}

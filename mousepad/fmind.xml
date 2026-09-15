@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<style-scheme id="fmind" _name="Fmind" version="1.0">
+  <author>Fmind</author>
+  <_description>Clean light theme for Mousepad</_description>
+
+  <color name="white" value="#ffffff"/>
+  <color name="charcoal" value="#202124"/>
+  <color name="gray" value="#9aa0a6"/>
+  <color name="dark_gray" value="#595d62"/>
+  <color name="blue" value="#174ea6"/>
+  <color name="light_blue" value="#d2e3fc"/>
+  <color name="green" value="#0d652d"/>
+  <color name="orange" value="#934900"/>
+  <color name="purple" value="#681da8"/>
+  <color name="red" value="#a50e0e"/>
+
+  <style name="text" foreground="charcoal" background="white"/>
+  <style name="selection" foreground="charcoal" background="light_blue"/>
+  <style name="cursor" foreground="charcoal"/>
+  <style name="line-numbers" foreground="gray" background="white"/>
+  <style name="current-line" background="#f1f3f4"/>
+
+  <style name="def:comment" foreground="dark_gray" italic="true"/>
+  <style name="def:constant" foreground="orange"/>
+  <style name="def:string" foreground="green"/>
+  <style name="def:statement" foreground="blue" bold="true"/>
+  <style name="def:type" foreground="purple" bold="true"/>
+  <style name="def:function" foreground="blue"/>
+  <style name="def:error" foreground="red" bold="true"/>
+</style-scheme>

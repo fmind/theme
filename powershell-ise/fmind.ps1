@@ -1,0 +1,12 @@
+# Fmind PowerShell ISE theme
+$psISE.Options.ConsolePaneBackgroundColor = '#ffffff'
+$psISE.Options.ConsolePaneForegroundColor = '#202124'
+$psISE.Options.ScriptPaneBackgroundColor = '#ffffff'
+$psISE.Options.ScriptPaneForegroundColor = '#202124'
+$psISE.Options.TokenColors['Keyword'] = '#174ea6'
+$psISE.Options.TokenColors['String'] = '#0d652d'
+$psISE.Options.TokenColors['Comment'] = '#595d62'
+$psISE.Options.TokenColors['Command'] = '#174ea6'
+$psISE.Options.TokenColors['CommandParameter'] = '#934900'
+$psISE.Options.TokenColors['Number'] = '#174ea6'
+$psISE.Options.TokenColors['Type'] = '#174ea6'

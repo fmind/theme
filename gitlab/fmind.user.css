@@ -1,0 +1,25 @@
+/* ==UserStyle==
+@name         GitLab Fmind Light
+@namespace    github.com/fmind/theme
+@version      1.0.0
+==/UserStyle== */
+
+@-moz-document domain("gitlab.com") {
+  :root {
+    --gl-theme-accent: #174ea6;
+    --gl-text-color: #202124;
+    --gl-text-secondary: #595d62;
+    --gl-background-color: #ffffff;
+    --gl-border-color: #f1f3f4;
+    --gl-selection-bg: #d2e3fc;
+  }
+
+  body {
+    background-color: var(--gl-background-color) !important;
+    color: var(--gl-text-color) !important;
+  }
+
+  a {
+    color: var(--gl-theme-accent) !important;
+  }
+}

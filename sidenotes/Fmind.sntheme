@@ -1,0 +1,19 @@
+{
+  "$schema": "https://www.apptorium.com/schemas/sntheme.json",
+  "any": {
+    "systemAppearance": "light",
+    "folders": {
+      "header": {
+        "backgroundColor": "#ffffff"
+      },
+      "list": {
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "notes": {
+      "background": "#ffffff",
+      "text": "#202124",
+      "tint": "#174ea6"
+    }
+  }
+}

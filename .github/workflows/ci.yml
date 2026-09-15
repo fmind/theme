@@ -26,4 +26,25 @@ jobs:
       - name: Install validation dependencies
         run: mise run install
       - name: Validate native themes
-        run: mise run check
+        run: mise run all
+      - name: Upload documentation
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@7b1f4a764d45c48632c6b24a0339c27f5614fb0b # v4.0.0
+        with:
+          path: .cache/site
+  pages:
+    name: GitHub Pages
+    needs: ci
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      pages: write # Publish the validated documentation artifact.
+      id-token: write # Authenticate this deployment to GitHub Pages with OIDC.
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy documentation
+        id: deployment
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5

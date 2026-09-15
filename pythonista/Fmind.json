@@ -1,0 +1,14 @@
+{
+  "name": "Fmind",
+  "background": "#ffffff",
+  "gutter_background": "#ffffff",
+  "text": "#202124",
+  "selection": "#d2e3fc",
+  "tint": "#174ea6",
+  "line_numbers": "#9aa0a6",
+  "comments": "#595d62",
+  "keywords": "#174ea6",
+  "strings": "#0d652d",
+  "numbers": "#934900",
+  "definitions": "#174ea6"
+}

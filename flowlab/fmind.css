@@ -1,0 +1,11 @@
+body, .workspace {
+  background-color: #ffffff !important;
+  color: #202124 !important;
+}
+.toolbar, .panel {
+  background-color: #f1f3f4 !important;
+  color: #202124 !important;
+}
+a, .accent {
+  color: #174ea6 !important;
+}

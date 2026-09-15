@@ -1,0 +1,11 @@
+/* ==UserStyle==
+@name Fmind LibreNMS
+@namespace github.com/fmind/theme
+@version 1.0.0
+==/UserStyle== */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #202124;
+  --primary-color: #174ea6;
+  --panel-bg: #f1f3f4;
+}

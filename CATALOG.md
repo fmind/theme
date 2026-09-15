@@ -1,482 +1,499 @@
-# Dracula free catalog checklist
+# Integration inventory
 
-Snapshot of all 472 entries listed by [Dracula’s free catalog](https://draculatheme.com/) on 2026-09-14. Catalog names and links identify the coverage target; no Pro assets are included. The original goal includes every entry, including specialist tools, website styles and legacy applications. None are silently excluded.
+483 integration directories: 20 required by chezmoi and 463 additional developer integrations. Count one directory per integration, including lualine and the entire GTK/KDE bundle; do not count individual desktop components or terminal-inherited CLI colors as separate apps.
 
-`Port shipped` means native files and installation instructions exist; it does **not** mean the whole application UI or its runtime has been verified. See [validation boundaries](COVERAGE.md#validation-boundary). `Pending` remains work toward full parity. Shared formats and derivatives stay pending until their own installation route and target behavior are checked. Non-app entries require a suitable adaptation or an explicit disposition before the parity goal can close.
+## Scope and acceptance
 
-Update the relevant row in each app batch. The snapshot is a fixed scope baseline, not a live catalog cache.
+All 472 entries in [Dracula’s free catalog](https://draculatheme.com/) are represented in this inventory, reconciled on 2026-09-15. This measures directory coverage only. The 20 core paths remain protected by regression tests. Additional entries include experimental ports and incomplete drafts; native import, state behavior and visual acceptance are not established by this list.
 
-| Dracula entry | Status | Fmind port |
+[TODO.md](TODO.md) tracks native acceptance. [REVIEW.md](REVIEW.md) records concrete defects and [VALIDATION.md](VALIDATION.md) defines the evidence required. The GTK bundle includes an unfinished SDDM checkpoint. Avoid installing an additional port until its documented route matches your app version.
+
+## Inventory
+
+Core means a native theme consumed through chezmoi external files or copied configuration blocks. Additional integrations have offline checks; this does not establish native runtime acceptance. GTK includes an unfinished SDDM checkpoint, tracked in [TODO.md](TODO.md).
+
+| Integration | Priority | Directory |
 | --- | --- | --- |
-| [Visual Studio Code](https://draculatheme.com/visual-studio-code) | Port shipped | [vscode](vscode/) |
-| [Vim](https://draculatheme.com/vim) | Port shipped | [vim](vim/) |
-| [Cursor](https://draculatheme.com/cursor) | Pending | — |
-| [Zed](https://draculatheme.com/zed) | Port shipped | [zed](zed/) |
-| [Hyper](https://draculatheme.com/hyper) | Port shipped | [hyper](hyper/) |
-| [Xcode](https://draculatheme.com/xcode) | Port shipped | [xcode](xcode/) |
-| [Chrome](https://draculatheme.com/google-chrome) | Port shipped | [chrome](chrome/) |
-| [Monkeytype](https://draculatheme.com/monkeytype) | Pending | — |
-| [Slack](https://draculatheme.com/slack) | Pending | — |
-| [Raycast](https://draculatheme.com/raycast) | Pending | — |
-| [Claude Code](https://draculatheme.com/claude-code) | Pending | — |
-| [Notepad++](https://draculatheme.com/notepad-plus-plus) | Port shipped | [notepad-plus-plus](notepad-plus-plus/) |
-| [iTerm](https://draculatheme.com/iterm) | Port shipped | [iterm2](iterm2/) |
-| [Zsh](https://draculatheme.com/zsh) | Pending | — |
-| [Terminal.app](https://draculatheme.com/terminal-app) | Port shipped | [terminal-app](terminal-app/) |
-| [Gnome Terminal](https://draculatheme.com/gnome-terminal) | Port shipped | [gnome-terminal](gnome-terminal/) |
-| [Visual Studio](https://draculatheme.com/visual-studio) | Pending | — |
-| [Netbeans](https://draculatheme.com/netbeans) | Port shipped | [netbeans](netbeans/) |
-| [GTK](https://draculatheme.com/gtk) | Pending | [GTK, shell/KDE styles, global theme and companions; checklist](gtk/README.md#full-bundle-checklist) |
-| [JetBrains](https://draculatheme.com/jetbrains) | Port shipped | [jetbrains](jetbrains/) |
-| [Sublime](https://draculatheme.com/sublime) | Port shipped | [sublime-text](sublime-text/) |
-| [Windows Terminal](https://draculatheme.com/windows-terminal) | Port shipped | [windows-terminal](windows-terminal/) |
-| [Wallpaper](https://draculatheme.com/wallpaper) | Pending | — |
-| [QBittorrent](https://draculatheme.com/qbittorrent) | Pending | — |
-| [Telegram](https://draculatheme.com/telegram) | Pending | — |
-| [Oracle SQL Developer](https://draculatheme.com/oracle-sql-developer) | Pending | — |
-| [Emacs](https://draculatheme.com/emacs) | Port shipped | [emacs](emacs/) |
-| [Eclipse](https://draculatheme.com/eclipse) | Port shipped | [eclipse](eclipse/) |
-| [PowerShell](https://draculatheme.com/powershell) | Port shipped | [powershell](powershell/) |
-| [Atom](https://draculatheme.com/atom) | Port shipped | [atom](atom/) |
-| [tmux](https://draculatheme.com/tmux) | Port shipped | [tmux](tmux/) |
-| [Firefox](https://draculatheme.com/firefox) | Port shipped | [firefox](firefox/) |
-| [Qt Creator](https://draculatheme.com/qtcreator) | Port shipped | [qtcreator](qtcreator/) |
-| [MySQL Workbench](https://draculatheme.com/mysql-workbench) | Pending | — |
-| [Alacritty](https://draculatheme.com/alacritty) | Port shipped | [alacritty](alacritty/) |
-| [Konsole](https://draculatheme.com/konsole) | Port shipped | [konsole](konsole/) |
-| [BetterDiscord](https://draculatheme.com/betterdiscord) | Pending | — |
-| [Code::Blocks](https://draculatheme.com/codeblocks) | Port shipped | [codeblocks](codeblocks/) |
-| [Gedit](https://draculatheme.com/gedit) | Port shipped | [gedit](gedit/) |
-| [Steam](https://draculatheme.com/steam) | Pending | — |
-| [ConEmu](https://draculatheme.com/conemu) | Port shipped | [conemu](conemu/) |
-| [i3](https://draculatheme.com/i3) | Port shipped | [i3](i3/) |
-| [Kitty](https://draculatheme.com/kitty) | Port shipped | [kitty](kitty/) |
-| [Insomnia](https://draculatheme.com/insomnia) | Pending | — |
-| [Brackets](https://draculatheme.com/brackets) | Port shipped | [brackets](brackets/) |
-| [Xresources](https://draculatheme.com/xresources) | Port shipped | [xresources](xresources/) |
-| [MobaXterm](https://draculatheme.com/mobaxterm) | Port shipped | [mobaxterm](mobaxterm/) |
-| [Powerlevel10k](https://draculatheme.com/powerlevel10k) | Pending | — |
-| [Dev-C++](https://draculatheme.com/dev-cpp) | Port shipped | [dev-cpp](dev-cpp/) |
-| [Vivaldi](https://draculatheme.com/vivaldi) | Pending | — |
-| [rofi](https://draculatheme.com/rofi) | Port shipped | [rofi](rofi/) |
-| [Mintty](https://draculatheme.com/mintty) | Port shipped | [mintty](mintty/) |
-| [GMK](https://draculatheme.com/gmk) | Pending | — |
-| [Highlight.js](https://draculatheme.com/highlightjs) | Pending | — |
-| [Fish](https://draculatheme.com/fish) | Port shipped | [fish](fish/) |
-| [Obsidian](https://draculatheme.com/obsidian) | Port shipped | [obsidian](obsidian/) |
-| [Xfce4 Terminal](https://draculatheme.com/xfce4-terminal) | Port shipped | [xfce4-terminal](xfce4-terminal/) |
-| [Cmder](https://draculatheme.com/cmder) | Pending | — |
-| [zsh-syntax-highlighting](https://draculatheme.com/zsh-syntax-highlighting) | Port shipped | [zsh-syntax-highlighting](zsh-syntax-highlighting/) |
-| [Termux](https://draculatheme.com/termux) | Port shipped | [termux](termux/) |
-| [Alfred](https://draculatheme.com/alfred) | Pending | — |
-| [Telegram Android](https://draculatheme.com/telegram-android) | Pending | — |
-| [wofi](https://draculatheme.com/wofi) | Port shipped | [wofi](wofi/) |
-| [JupyterLab](https://draculatheme.com/jupyterlab) | Port shipped | [jupyterlab](jupyterlab/) |
-| [GitHub Pages](https://draculatheme.com/gh-pages) | Pending | — |
-| [LibreOffice](https://draculatheme.com/libreoffice) | Pending | — |
-| [Arduino IDE](https://draculatheme.com/arduino-ide) | Pending | — |
-| [Midnight Commander](https://draculatheme.com/midnight-commander) | Pending | — |
-| [Hyprland](https://draculatheme.com/hyprland) | Port shipped | [hyprland](hyprland/) |
-| [Kate](https://draculatheme.com/kate) | Port shipped | [kate](kate/) |
-| [Godot](https://draculatheme.com/godot) | Pending | — |
-| [Sequel Pro](https://draculatheme.com/sequel-pro) | Pending | — |
-| [Waybar](https://draculatheme.com/waybar) | Port shipped | [waybar](waybar/) |
-| [Terminator](https://draculatheme.com/terminator) | Port shipped | [terminator](terminator/) |
-| [DuckDuckGo](https://draculatheme.com/duckduckgo) | Pending | — |
-| [GitHub](https://draculatheme.com/github) | Pending | — |
-| [Gamepad Viewer](https://draculatheme.com/gamepad-viewer) | Pending | — |
-| [Spotify TUI](https://draculatheme.com/spotify-tui) | Pending | — |
-| [Telegram iOS](https://draculatheme.com/telegram-ios) | Pending | — |
-| [Starship](https://draculatheme.com/starship) | Port shipped | [starship](starship/) |
-| [GameMaker Studio](https://draculatheme.com/gamemaker-studio) | Pending | — |
-| [Textmate](https://draculatheme.com/textmate) | Port shipped | [textmate](textmate/) |
-| [MonoDevelop](https://draculatheme.com/monodevelop) | Pending | — |
-| [Youtube](https://draculatheme.com/youtube) | Pending | — |
-| [Hacker News](https://draculatheme.com/hacker-news) | Pending | — |
-| [IDLE](https://draculatheme.com/idle) | Port shipped | [idle](idle/) |
-| [Blender](https://draculatheme.com/blender) | Pending | — |
-| [Adobe](https://draculatheme.com/adobe) | Pending | — |
-| [Oh My Posh](https://draculatheme.com/oh-my-posh) | Pending | — |
-| [GRUB](https://draculatheme.com/grub) | Pending | — |
-| [Pythonista](https://draculatheme.com/pythonista) | Pending | — |
-| [Gitk](https://draculatheme.com/gitk) | Pending | — |
-| [Qutebrowser](https://draculatheme.com/qutebrowser) | Pending | — |
-| [Figma](https://draculatheme.com/figma) | Pending | — |
-| [Fluent Terminal](https://draculatheme.com/fluent-terminal) | Port shipped | [fluent-terminal](fluent-terminal/) |
-| [Wox](https://draculatheme.com/wox) | Pending | — |
-| [Files](https://draculatheme.com/files) | Pending | — |
-| [MetaTrader 5](https://draculatheme.com/metatrader5) | Pending | — |
-| [Mutt](https://draculatheme.com/mutt) | Pending | — |
-| [Microsoft Edge](https://draculatheme.com/microsoft-edge) | Pending | — |
-| [Thonny](https://draculatheme.com/thonny) | Port shipped | [thonny](thonny/) |
-| [Mousepad](https://draculatheme.com/mousepad) | Pending | — |
-| [Tilix](https://draculatheme.com/tilix) | Port shipped | [tilix](tilix/) |
-| [Vivado](https://draculatheme.com/vivado) | Pending | — |
-| [bspwm](https://draculatheme.com/bspwm) | Port shipped | [bspwm](bspwm/) |
-| [Marp](https://draculatheme.com/marp) | Pending | — |
-| [Git](https://draculatheme.com/git) | Pending | — |
-| [DOOM Emacs](https://draculatheme.com/doom-emacs) | Pending | — |
-| [Total Commander](https://draculatheme.com/total-commander) | Pending | — |
-| [Base16](https://draculatheme.com/base16-dracula-scheme) | Pending | — |
-| [qt5](https://draculatheme.com/qt5) | Pending | — |
-| [Coda](https://draculatheme.com/coda) | Pending | — |
-| [colorls](https://draculatheme.com/colorls) | Pending | — |
-| [Aseprite](https://draculatheme.com/aseprite) | Pending | — |
-| [Light Table](https://draculatheme.com/light-table) | Pending | — |
-| [FL Studio 21](https://draculatheme.com/fl-studio-21) | Pending | — |
-| [Vimium](https://draculatheme.com/vimium) | Pending | — |
-| [MacDown](https://draculatheme.com/macdown) | Pending | — |
-| [RStudio](https://draculatheme.com/rstudio) | Port shipped | [rstudio](rstudio/) |
-| [Nova Launcher](https://draculatheme.com/nova-launcher) | Pending | — |
-| [Geany](https://draculatheme.com/geany) | Port shipped | [geany](geany/) |
-| [Pygments](https://draculatheme.com/pygments) | Port shipped | [pygments](pygments/) |
-| [IDA Pro](https://draculatheme.com/ida) | Pending | — |
-| [Tailwind](https://draculatheme.com/tailwind) | Pending | — |
-| [Mattermost](https://draculatheme.com/mattermost) | Pending | — |
-| [Aliucord](https://draculatheme.com/aliucord) | Pending | — |
-| [Typora](https://draculatheme.com/typora) | Port shipped | [typora](typora/) |
-| [Xournal++](https://draculatheme.com/xournalpp) | Pending | — |
-| [ABAP](https://draculatheme.com/abap) | Pending | — |
-| [WezTerm](https://draculatheme.com/wezterm) | Port shipped | [wezterm](wezterm/) |
-| [BBEdit](https://draculatheme.com/bbedit) | Pending | — |
-| [Thunderbird](https://draculatheme.com/thunderbird) | Pending | — |
-| [MATLAB](https://draculatheme.com/matlab) | Port shipped | [matlab](matlab/) |
-| [Logseq](https://draculatheme.com/logseq) | Pending | — |
-| [Warp](https://draculatheme.com/warp) | Port shipped | [warp](warp/) |
-| [Ulysses](https://draculatheme.com/ulysses) | Pending | — |
-| [jGrasp](https://draculatheme.com/jgrasp) | Pending | — |
-| [KiCad](https://draculatheme.com/kicad) | Pending | — |
-| [ranger](https://draculatheme.com/ranger) | Pending | — |
-| [Mailspring](https://draculatheme.com/mailspring) | Pending | — |
-| [Ghostty](https://draculatheme.com/ghostty) | Port shipped | [ghostty](ghostty/) |
-| [Ulauncher](https://draculatheme.com/ulauncher) | Pending | — |
-| [Ableton Live](https://draculatheme.com/ableton-live) | Pending | — |
-| [Dunst](https://draculatheme.com/dunst) | Port shipped | [dunst](dunst/) |
-| [Homer](https://draculatheme.com/homer) | Pending | — |
-| [Wordpress](https://draculatheme.com/wordpress) | Pending | — |
-| [XChat](https://draculatheme.com/xchat) | Pending | — |
-| [MiXplorer](https://draculatheme.com/mixplorer) | Pending | — |
-| [TeXstudio](https://draculatheme.com/texstudio) | Pending | — |
-| [JDownloader2](https://draculatheme.com/jdownloader2) | Pending | — |
-| [MindNode](https://draculatheme.com/mindnode) | Pending | — |
-| [Prism](https://draculatheme.com/prism) | Pending | — |
-| [Bashtop](https://draculatheme.com/bashtop) | Pending | — |
-| [FreeCAD](https://draculatheme.com/freecad) | Pending | — |
-| [Adminer](https://draculatheme.com/adminer) | Pending | — |
-| [Zathura](https://draculatheme.com/zathura) | Port shipped | [zathura](zathura/) |
-| [LaTeX](https://draculatheme.com/latex) | Pending | — |
-| [PL/SQL Developer](https://draculatheme.com/plsql-developer) | Pending | — |
-| [Inkscape](https://draculatheme.com/inkscape) | Pending | — |
-| [Textual](https://draculatheme.com/textual) | Pending | — |
-| [Swaylock](https://draculatheme.com/swaylock) | Port shipped | [swaylock](swaylock/) |
-| [Roam Research](https://draculatheme.com/roam-research) | Pending | — |
-| [Discourse](https://draculatheme.com/discourse) | Pending | — |
-| [Sumatra PDF](https://draculatheme.com/sumatra-pdf) | Pending | — |
-| [YouTube Music Desktop](https://draculatheme.com/youtube-music-desktop) | Pending | — |
-| [macOS Color Picker](https://draculatheme.com/macos-color-picker) | Pending | — |
-| [Plank](https://draculatheme.com/plank) | Pending | — |
-| [Quiver](https://draculatheme.com/quiver) | Pending | — |
-| [Polybar](https://draculatheme.com/polybar) | Port shipped | [polybar](polybar/) |
-| [Micro](https://draculatheme.com/micro) | Port shipped | [micro](micro/) |
-| [Nextcloud](https://draculatheme.com/nextcloud) | Pending | — |
-| [Unreal Engine](https://draculatheme.com/unreal-engine) | Pending | — |
-| [Standard Notes](https://draculatheme.com/standard-notes) | Pending | — |
-| [Spyder IDE](https://draculatheme.com/spyder-ide) | Port shipped | [spyder](spyder/) |
-| [Quassel](https://draculatheme.com/quassel) | Pending | — |
-| [Tabletop Simulator](https://draculatheme.com/tabletop-simulator) | Pending | — |
-| [GitLab](https://draculatheme.com/gitlab) | Pending | — |
-| [Spicetify](https://draculatheme.com/spicetify) | Pending | — |
-| [TiddlyWiki](https://draculatheme.com/tiddlywiki) | Pending | — |
-| [Nylas N1](https://draculatheme.com/nylas-n1) | Pending | — |
-| [FZF](https://draculatheme.com/fzf) | Port shipped | [fzf](fzf/) |
-| [fuzzel](https://draculatheme.com/fuzzel) | Port shipped | [fuzzel](fuzzel/) |
-| [Bear](https://draculatheme.com/bear) | Pending | — |
-| [Beyond Compare 4](https://draculatheme.com/beyond-compare-4) | Pending | — |
-| [Discord Bot Maker](https://draculatheme.com/discordbotmaker) | Pending | — |
-| [Streamlit](https://draculatheme.com/streamlit) | Port shipped | [streamlit](streamlit/) |
-| [LightPaper](https://draculatheme.com/lightpaper) | Pending | — |
-| [Javadoc](https://draculatheme.com/javadoc) | Pending | — |
-| [Spacemacs](https://draculatheme.com/spacemacs) | Pending | — |
-| [Termite](https://draculatheme.com/termite) | Port shipped | [termite](termite/) |
-| [FlorisBoard](https://draculatheme.com/florisboard) | Pending | — |
-| [TTY](https://draculatheme.com/tty) | Pending | — |
-| [Google Calendar](https://draculatheme.com/google-calendar) | Pending | — |
-| [Openbox](https://draculatheme.com/openbox) | Pending | — |
-| [Editplus](https://draculatheme.com/editplus) | Pending | — |
-| [MkDocs](https://draculatheme.com/mkdocs) | Pending | — |
-| [Krita](https://draculatheme.com/krita) | Pending | — |
-| [StackOverflow](https://draculatheme.com/stackoverflow) | Pending | — |
-| [Wolfram Notebooks](https://draculatheme.com/wolfram-notebooks) | Pending | — |
-| [Matplotlib](https://draculatheme.com/matplotlib) | Port shipped | [matplotlib](matplotlib/) |
-| [Minecraft](https://draculatheme.com/minecraft) | Pending | — |
-| [.dircolors](https://draculatheme.com/dircolors) | Pending | — |
-| [CotEditor](https://draculatheme.com/coteditor) | Pending | — |
-| [EverythingToolbar](https://draculatheme.com/everythingtoolbar) | Pending | — |
-| [Zellij](https://draculatheme.com/zellij) | Port shipped | [zellij](zellij/) |
-| [Arduino Pro IDE](https://draculatheme.com/arduino-pro-ide) | Pending | — |
-| [Powerlevel10k for Oh My Posh](https://draculatheme.com/p10k-oh-my-posh) | Pending | — |
-| [WindTerm](https://draculatheme.com/windterm) | Port shipped | [windterm](windterm/) |
-| [Clone Hero](https://draculatheme.com/clone-hero) | Pending | — |
-| [LXTerminal](https://draculatheme.com/lxterminal) | Port shipped | [lxterminal](lxterminal/) |
-| [LazyGit](https://draculatheme.com/lazygit) | Port shipped | [lazygit](lazygit/) |
-| [GitKraken](https://draculatheme.com/gitkraken) | Pending | — |
-| [CopyQ](https://draculatheme.com/copyq) | Pending | — |
-| [GIMP](https://draculatheme.com/gimp) | Pending | — |
-| [MetaEditor](https://draculatheme.com/metaeditor) | Pending | — |
-| [iSH](https://draculatheme.com/ish) | Pending | — |
-| [Jupyter Notebook](https://draculatheme.com/jupyter-notebook) | Port shipped | [jupyter-notebook](jupyter-notebook/) |
-| [PowerShell ISE](https://draculatheme.com/powershell-ise) | Pending | — |
-| [i3lock-color](https://draculatheme.com/i3lock-color) | Pending | — |
-| [Cava](https://draculatheme.com/cava) | Pending | — |
-| [Sketch](https://draculatheme.com/sketch) | Pending | — |
-| [KDiff3](https://draculatheme.com/kdiff3) | Pending | — |
-| [MusicBee](https://draculatheme.com/musicbee) | Pending | — |
-| [Cosmic Terminal](https://draculatheme.com/cosmic-terminal) | Port shipped | [cosmic-terminal](cosmic-terminal/) |
-| [Scrivener](https://draculatheme.com/scrivener) | Pending | — |
-| [LiteIDE](https://draculatheme.com/liteide) | Pending | — |
-| [Homepage](https://draculatheme.com/homepage-app) | Pending | — |
-| [Yazi](https://draculatheme.com/yazi) | Port shipped | [yazi](yazi/) |
-| [LTSpice](https://draculatheme.com/ltspice) | Pending | — |
-| [eM Client](https://draculatheme.com/em-client) | Pending | — |
-| [Qterminal](https://draculatheme.com/qterminal) | Port shipped | [qterminal](qterminal/) |
-| [Nova](https://draculatheme.com/nova) | Pending | — |
-| [Beamer](https://draculatheme.com/beamer) | Pending | — |
-| [Pandoc](https://draculatheme.com/pandoc) | Pending | — |
-| [lsd](https://draculatheme.com/lsd) | Port shipped | [lsd](lsd/) |
-| [Delphi](https://draculatheme.com/delphi) | Pending | — |
-| [Django Admin](https://draculatheme.com/django-admin) | Pending | — |
-| [Kakoune](https://draculatheme.com/kakoune) | Pending | — |
-| [Albert](https://draculatheme.com/albert) | Pending | — |
-| [Facebook Messenger](https://draculatheme.com/facebook-messenger) | Pending | — |
-| [Couscous](https://draculatheme.com/couscous) | Pending | — |
-| [ReNoise](https://draculatheme.com/renoise) | Pending | — |
-| [ghostwriter](https://draculatheme.com/ghostwriter) | Pending | — |
-| [Rio Terminal](https://draculatheme.com/rio-terminal) | Pending | — |
-| [Papirus Folders](https://draculatheme.com/papirus-folders) | Pending | — |
-| [Linear](https://draculatheme.com/linear) | Pending | — |
-| [SwiftUI](https://draculatheme.com/swiftui) | Pending | — |
-| [Audacity](https://draculatheme.com/audacity) | Pending | — |
-| [Node Console](https://draculatheme.com/node-console) | Pending | — |
-| [Uptime Kuma](https://draculatheme.com/uptime-kuma) | Pending | — |
-| [Pywal](https://draculatheme.com/pywal) | Pending | — |
-| [SolidWorks](https://draculatheme.com/solidworks) | Pending | — |
-| [OneCommander](https://draculatheme.com/onecommander) | Pending | — |
-| [Wing](https://draculatheme.com/wing) | Pending | — |
-| [Cryptowatch](https://draculatheme.com/cryptowatch) | Pending | — |
-| [Ripcord](https://draculatheme.com/ripcord) | Pending | — |
-| [Ditto](https://draculatheme.com/ditto) | Pending | — |
-| [SideNotes](https://draculatheme.com/sidenotes) | Pending | — |
-| [bemenu](https://draculatheme.com/bemenu) | Pending | — |
-| [Pantheon Terminal](https://draculatheme.com/pantheon-terminal) | Port shipped | [pantheon-terminal](pantheon-terminal/) |
-| [The Lounge](https://draculatheme.com/thelounge) | Pending | — |
-| [ChatGPT](https://draculatheme.com/chatgpt) | Pending | — |
-| [Mako](https://draculatheme.com/mako) | Pending | — |
-| [foot](https://draculatheme.com/foot) | Port shipped | [foot](foot/) |
-| [Dmenu](https://draculatheme.com/dmenu) | Port shipped | [dmenu](dmenu/) |
-| [Flarum](https://draculatheme.com/flarum) | Pending | — |
-| [Visual Basic 6](https://draculatheme.com/visual-basic-6) | Pending | — |
-| [Nyxt](https://draculatheme.com/nyxt) | Pending | — |
-| [OpenCode](https://draculatheme.com/opencode) | Port shipped | [opencode](opencode/) |
-| [Joplin](https://draculatheme.com/joplin) | Pending | — |
-| [Unigram](https://draculatheme.com/unigram) | Pending | — |
-| [Prompt](https://draculatheme.com/prompt) | Pending | — |
-| [ncspot](https://draculatheme.com/ncspot) | Pending | — |
-| [Tower](https://draculatheme.com/tower) | Pending | — |
-| [Keypirinha](https://draculatheme.com/keypirinha) | Pending | — |
-| [Cider](https://draculatheme.com/cider) | Pending | — |
-| [Dwarf Fortress](https://draculatheme.com/dwarf-fortress) | Pending | — |
-| [Google Search](https://draculatheme.com/google-search) | Pending | — |
-| [Anne Pro 2](https://draculatheme.com/anne-pro-2) | Pending | — |
-| [Apollo](https://draculatheme.com/apollo) | Pending | — |
-| [Blockbench](https://draculatheme.com/blockbench) | Pending | — |
-| [LimeChat](https://draculatheme.com/limechat) | Pending | — |
-| [tint2](https://draculatheme.com/tint2) | Pending | — |
-| [fman](https://draculatheme.com/fman) | Pending | — |
-| [bobthefish](https://draculatheme.com/bobthefish) | Pending | — |
-| [Omarchy](https://draculatheme.com/omarchy) | Pending | — |
-| [HyperX NGNUITY](https://draculatheme.com/ngenuity) | Pending | — |
-| [Archive of Our Own](https://draculatheme.com/archive-of-our-own) | Pending | — |
-| [Abricotine](https://draculatheme.com/abricotine) | Pending | — |
-| [CodeRunner](https://draculatheme.com/coderunner) | Pending | — |
-| [Calibre](https://draculatheme.com/calibre) | Pending | — |
-| [Fig](https://draculatheme.com/fig) | Pending | — |
-| [Sequel Ace](https://draculatheme.com/sequel-ace) | Pending | — |
-| [Pi Coding Agent](https://draculatheme.com/pi-coding-agent) | Pending | — |
-| [TeXShop](https://draculatheme.com/texshop) | Pending | — |
-| [Duolingo](https://draculatheme.com/duolingo) | Pending | — |
-| [tig](https://draculatheme.com/tig) | Pending | — |
-| [CodePen](https://draculatheme.com/codepen) | Pending | — |
-| [Caprine Messenger](https://draculatheme.com/caprine-messenger) | Pending | — |
-| [eza](https://draculatheme.com/eza) | Pending | — |
-| [Postbox](https://draculatheme.com/postbox) | Pending | — |
-| [Vesktop Discord](https://draculatheme.com/vesktop-discord) | Pending | — |
-| [Blink Shell](https://draculatheme.com/blink-shell) | Pending | — |
-| [Cli-Visualizer](https://draculatheme.com/cli-visualizer) | Pending | — |
-| [ImageGlass](https://draculatheme.com/imageglass) | Pending | — |
-| [Starship Powerline Preset](https://draculatheme.com/starship-powerline-preset) | Pending | — |
-| [exa](https://draculatheme.com/exa) | Pending | — |
-| [Protonmail](https://draculatheme.com/protonmail) | Pending | — |
-| [SerenityOS](https://draculatheme.com/serenityos) | Pending | — |
-| [SnippetsLab](https://draculatheme.com/snippetslab) | Pending | — |
-| [SmartGit](https://draculatheme.com/smartgit) | Pending | — |
-| [Mantine](https://draculatheme.com/mantine) | Pending | — |
-| [Gajim](https://draculatheme.com/gajim) | Pending | — |
-| [Noir](https://draculatheme.com/noir) | Pending | — |
-| [R](https://draculatheme.com/dRacula) | Pending | — |
-| [Heroic Games Launcher](https://draculatheme.com/heroic-games-launcher) | Pending | — |
-| [Plymouth](https://draculatheme.com/plymouth) | Pending | — |
-| [New Tabs](https://draculatheme.com/new-tabs) | Pending | — |
-| [Textastic](https://draculatheme.com/textastic) | Pending | — |
-| [FontForge](https://draculatheme.com/fontforge) | Pending | — |
-| [Amfora](https://draculatheme.com/amfora) | Pending | — |
-| [Infinity for Reddit](https://draculatheme.com/infinity-for-reddit) | Pending | — |
-| [Vital](https://draculatheme.com/vital) | Pending | — |
-| [Visual Spigot](https://draculatheme.com/visual-spigot) | Pending | — |
-| [Todoist](https://draculatheme.com/todoist) | Pending | — |
-| [nnn](https://draculatheme.com/nnn) | Pending | — |
-| [OpenSCAD](https://draculatheme.com/openscad) | Pending | — |
-| [man-pages](https://draculatheme.com/man-pages) | Pending | — |
-| [Advent of Code](https://draculatheme.com/adventofcode) | Pending | — |
-| [musikcube](https://draculatheme.com/musikcube) | Pending | — |
-| [Revolt](https://draculatheme.com/revolt) | Pending | — |
-| [Libreddit](https://draculatheme.com/libreddit) | Pending | — |
-| [Flowlab](https://draculatheme.com/flowlab) | Pending | — |
-| [Jellyfin](https://draculatheme.com/jellyfin) | Pending | — |
-| [Stirling PDF](https://draculatheme.com/stirling-pdf) | Pending | — |
-| [Drafts](https://draculatheme.com/drafts) | Pending | — |
-| [Tridactyl](https://draculatheme.com/tridactyl) | Pending | — |
-| [GtkSourceView](https://draculatheme.com/gtksourceview) | Pending | — |
-| [Revolution IRC](https://draculatheme.com/revolution-irc) | Pending | — |
-| [Ueli](https://draculatheme.com/ueli) | Pending | — |
-| [Funkwhale](https://draculatheme.com/funkwhale) | Pending | — |
-| [Lichess](https://draculatheme.com/lichess) | Pending | — |
-| [PolyMC](https://draculatheme.com/polymc) | Pending | — |
-| [st](https://draculatheme.com/st) | Port shipped | [st](st/) |
-| [FreeTube](https://draculatheme.com/freetube) | Pending | — |
-| [PsychoPy](https://draculatheme.com/psychopy) | Pending | — |
-| [BTCPay Server](https://draculatheme.com/btcpay-server) | Pending | — |
-| [Chatterino](https://draculatheme.com/chatterino) | Pending | — |
-| [Nilesoft Shell](https://draculatheme.com/nilesoft-shell) | Pending | — |
-| [Rime](https://draculatheme.com/rime) | Pending | — |
-| [Harpy for Twitter](https://draculatheme.com/harpy-for-twitter) | Pending | — |
-| [Anytype](https://draculatheme.com/anytype) | Pending | — |
-| [Passky](https://draculatheme.com/passky) | Pending | — |
-| [Tofi](https://draculatheme.com/tofi) | Pending | — |
-| [Vortex Mod Manager](https://draculatheme.com/vortex-mod-manager) | Pending | — |
-| [Sioyek](https://draculatheme.com/sioyek) | Pending | — |
-| [Keybr](https://draculatheme.com/keybr) | Pending | — |
-| [Newsboat](https://draculatheme.com/newsboat) | Pending | — |
-| [x64dbg](https://draculatheme.com/x64dbg) | Pending | — |
-| [Tumblr](https://draculatheme.com/tumblr) | Pending | — |
-| [Docker](https://draculatheme.com/docker) | Pending | — |
-| [ColorSlurp](https://draculatheme.com/color-slurp) | Pending | — |
-| [leftwm](https://draculatheme.com/leftwm) | Pending | — |
-| [Notesnook](https://draculatheme.com/notesnook) | Pending | — |
-| [TablePlus](https://draculatheme.com/tableplus) | Pending | — |
-| [aerc](https://draculatheme.com/aerc) | Pending | — |
-| [Fluxbox](https://draculatheme.com/fluxbox) | Pending | — |
-| [Gemini](https://draculatheme.com/gemini) | Pending | — |
-| [Yakuake](https://draculatheme.com/yakuake) | Pending | — |
-| [tym](https://draculatheme.com/tym) | Port shipped | [tym](tym/) |
-| [Dracula CSS](https://draculatheme.com/dracula-css) | Pending | — |
-| [apt](https://draculatheme.com/apt) | Pending | — |
-| [omg.lol](https://draculatheme.com/omglol) | Pending | — |
-| [Sandpack](https://draculatheme.com/sandpack) | Pending | — |
-| [grep](https://draculatheme.com/grep) | Pending | — |
-| [GH-Dash](https://draculatheme.com/gh-dash) | Port shipped | [gh-dash](gh-dash/) |
-| [ForkLift](https://draculatheme.com/forklift) | Pending | — |
-| [Peacock Extension](https://draculatheme.com/peacock-extension) | Pending | — |
-| [Campfire](https://draculatheme.com/campfire) | Pending | — |
-| [ITFY](https://draculatheme.com/itfy) | Pending | — |
-| [KanbanFlow](https://draculatheme.com/kanbanflow) | Pending | — |
-| [YunoHost](https://draculatheme.com/yunohost) | Pending | — |
-| [Directory Opus](https://draculatheme.com/directory-opus) | Pending | — |
-| [WP](https://draculatheme.com/wp) | Pending | — |
-| [novelWriter](https://draculatheme.com/novel-writer) | Pending | — |
-| [Markdown CSS](https://draculatheme.com/markdown-css) | Pending | — |
-| [Presenterm](https://draculatheme.com/presenterm) | Pending | — |
-| [FreshRSS](https://draculatheme.com/freshrss) | Pending | — |
-| [TeXworks](https://draculatheme.com/texworks) | Pending | — |
-| [BookWyrm](https://draculatheme.com/bookwyrm) | Pending | — |
-| [Misskey](https://draculatheme.com/misskey) | Pending | — |
-| [SpeedCrunch](https://draculatheme.com/speedcrunch) | Pending | — |
-| [Postman](https://draculatheme.com/postman) | Pending | — |
-| [Nitter](https://draculatheme.com/nitter) | Pending | — |
-| [LabPlot](https://draculatheme.com/labplot) | Pending | — |
-| [LeetCode](https://draculatheme.com/leetcode) | Pending | — |
-| [Dirtywave M8](https://draculatheme.com/m8) | Pending | — |
-| [Bandcamp](https://draculatheme.com/bandcamp) | Pending | — |
-| [lnav](https://draculatheme.com/lnav) | Pending | — |
-| [Cutter](https://draculatheme.com/cutter) | Pending | — |
-| [ripgrep](https://draculatheme.com/ripgrep) | Pending | — |
-| [ThumbKey](https://draculatheme.com/thumb-key) | Pending | — |
-| [Suckless Tabbed](https://draculatheme.com/suckless-tabbed) | Pending | — |
-| [tut](https://draculatheme.com/tut) | Pending | — |
-| [RunJs](https://draculatheme.com/runjs) | Pending | — |
-| [Snappy Driver Installer](https://draculatheme.com/snappy-driver-installer) | Pending | — |
-| [Replugged](https://draculatheme.com/replugged) | Pending | — |
-| [ACS](https://draculatheme.com/acs) | Pending | — |
-| [vis](https://draculatheme.com/vis) | Pending | — |
-| [Beeper](https://draculatheme.com/beeper) | Pending | — |
-| [Dyalog APL](https://draculatheme.com/dyalog) | Pending | — |
-| [Facebook](https://draculatheme.com/facebook) | Pending | — |
-| [Subsonic](https://draculatheme.com/subsonic) | Pending | — |
-| [GoAccess](https://draculatheme.com/go-access) | Pending | — |
-| [Kurozora](https://draculatheme.com/kurozora) | Pending | — |
-| [Codeforces](https://draculatheme.com/codeforces) | Pending | — |
-| [Home Assistant](https://draculatheme.com/home-assistant) | Pending | — |
-| [ggplot2](https://draculatheme.com/ggplot2) | Pending | — |
-| [Makehuman](https://draculatheme.com/makehuman) | Pending | — |
-| [tlrc](https://draculatheme.com/tlrc) | Pending | — |
-| [Jabref](https://draculatheme.com/jabref) | Pending | — |
-| [LCD Smartie](https://draculatheme.com/lcd-smartie) | Pending | — |
-| [AutoAO3App](https://draculatheme.com/auto-ao3-app) | Pending | — |
-| [Sniffnet](https://draculatheme.com/sniffnet) | Pending | — |
-| [Fedilab](https://draculatheme.com/fedilab) | Pending | — |
-| [Kristall](https://draculatheme.com/kristall) | Pending | — |
-| [NewTerm2](https://draculatheme.com/NewTerm2) | Pending | — |
-| [Superset](https://draculatheme.com/superset) | Pending | — |
-| [AdiIRC](https://draculatheme.com/adiirc) | Pending | — |
-| [WhatsApp Web](https://draculatheme.com/whatsapp-web) | Pending | — |
-| [CadZinho](https://draculatheme.com/cadzinho) | Pending | — |
-| [Evidence](https://draculatheme.com/evidence) | Pending | — |
-| [LibreNMS](https://draculatheme.com/librenms) | Pending | — |
-| [T3 Code](https://draculatheme.com/t3code) | Pending | — |
-| [Rackula](https://draculatheme.com/rackula) | Pending | — |
-| [Marta](https://draculatheme.com/marta) | Pending | — |
-| [MacDown CSS](https://draculatheme.com/macdown-css) | Pending | — |
-| [Taskwarrior](https://draculatheme.com/taskwarrior) | Pending | — |
-| [Castero](https://draculatheme.com/castero) | Pending | — |
-| [Gitroll](https://draculatheme.com/gitroll) | Pending | — |
-| [Unraid](https://draculatheme.com/unraid) | Pending | — |
-| [Trudido](https://draculatheme.com/trudido) | Pending | — |
-| [Hermes Agent](https://draculatheme.com/hermes-agent) | Pending | — |
-| [BetterCanvas](https://draculatheme.com/bettercanvas) | Pending | — |
-| [DankMaterialShell](https://draculatheme.com/dankmaterialshell) | Pending | — |
-| [Signal Desktop](https://draculatheme.com/signal-desktop) | Pending | — |
-| [SecureCRT](https://draculatheme.com/securecrt) | Pending | — |
-| [Delta](https://draculatheme.com/delta) | Port shipped | [delta](delta/) |
-| [Readwise Reader](https://draculatheme.com/readwise-reader) | Pending | — |
-| [FocusWriter](https://draculatheme.com/focuswriter) | Pending | — |
-| [alphai-tui](https://draculatheme.com/alphai-tui) | Pending | — |
-| [Dash](https://draculatheme.com/dash) | Pending | — |
-| [WOB](https://draculatheme.com/WOB) | Port shipped | [wob](wob/) |
-| [Telegram macOS](https://draculatheme.com/telegram-macos) | Pending | — |
-| [xdbg](https://draculatheme.com/xdbg) | Pending | — |
-| [Forgejo](https://draculatheme.com/forgejo) | Pending | — |
-| [mRemoteNG](https://draculatheme.com/mremoteng) | Pending | — |
-| [Kagi](https://draculatheme.com/kagi) | Pending | — |
-| [Telegram X](https://draculatheme.com/telegram-x) | Pending | — |
-| [DeepSeek](https://draculatheme.com/deepseek) | Pending | — |
-| [Swaync](https://draculatheme.com/swaync) | Port shipped | [swaync](swaync/) |
-| [Miniflux](https://draculatheme.com/miniflux) | Pending | — |
-| [Starlight](https://draculatheme.com/astro-starlight) | Pending | — |
-| [Snappy Driver Installer Origin](https://draculatheme.com/snappy-driver-installer-origin) | Pending | — |
-| [Neiki's Editor](https://draculatheme.com/neiki-editor) | Pending | — |
-| [StationView](https://draculatheme.com/stationview) | Pending | — |
-| [SwayOSD](https://draculatheme.com/swayosd) | Port shipped | [swayosd](swayosd/) |
-| [Neiki's Page Editor](https://draculatheme.com/neiki-page-editor) | Pending | — |
-| [PeerTube](https://draculatheme.com/peertube) | Pending | — |
-| [Wiremix](https://draculatheme.com/wiremix) | Pending | — |
-| [LDoc](https://draculatheme.com/ldoc) | Pending | — |
-| [Kali Browser](https://draculatheme.com/kali-browser) | Pending | — |
+| ABAP                     | Additional | [abap](abap/) |
+| Ableton Live             | Additional | [ableton-live](ableton-live/) |
+| Abricotine               | Additional | [abricotine](abricotine/) |
+| AdiIRC                   | Additional | [adiirc](adiirc/) |
+| Adminer                  | Additional | [adminer](adminer/) |
+| Adobe                    | Additional | [adobe](adobe/) |
+| Advent of Code           | Additional | [adventofcode](adventofcode/) |
+| aerc                     | Additional | [aerc](aerc/) |
+| Alacritty                | Additional | [alacritty](alacritty/) |
+| Albert                   | Additional | [albert](albert/) |
+| Alfred                   | Additional | [alfred](alfred/) |
+| Aliucord                 | Additional | [aliucord](aliucord/) |
+| AlphaI TUI               | Additional | [alphai-tui](alphai-tui/) |
+| Amfora                   | Additional | [amfora](amfora/) |
+| Anne Pro 2               | Additional | [anne-pro-2](anne-pro-2/) |
+| Anytype                  | Additional | [anytype](anytype/) |
+| Apache Superset          | Additional | [superset](superset/) |
+| Apollo                   | Additional | [apollo](apollo/) |
+| apt                      | Additional | [apt](apt/) |
+| Archive of Our Own       | Additional | [archive-of-our-own](archive-of-our-own/) |
+| Arduino IDE              | Additional | [arduino-ide](arduino-ide/) |
+| Arduino Pro IDE          | Additional | [arduino-pro-ide](arduino-pro-ide/) |
+| Aseprite                 | Additional | [aseprite](aseprite/) |
+| Atom                     | Additional | [atom](atom/) |
+| Atuin                    | Core       | [atuin](atuin/) |
+| Audacity                 | Additional | [audacity](audacity/) |
+| AutoAO3App               | Additional | [auto-ao3-app](auto-ao3-app/) |
+| Bandcamp                 | Additional | [bandcamp](bandcamp/) |
+| Base16                   | Additional | [base16](base16/) |
+| Bashtop                  | Additional | [bashtop](bashtop/) |
+| bat                      | Core       | [bat](bat/) |
+| BBEdit                   | Additional | [bbedit](bbedit/) |
+| Beamer                   | Additional | [beamer](beamer/) |
+| Bear                     | Additional | [bear](bear/) |
+| Beeper                   | Additional | [beeper](beeper/) |
+| bemenu                   | Additional | [bemenu](bemenu/) |
+| BetterCanvas             | Additional | [bettercanvas](bettercanvas/) |
+| BetterDiscord            | Additional | [betterdiscord](betterdiscord/) |
+| Beyond Compare 4         | Additional | [beyond-compare-4](beyond-compare-4/) |
+| Blender                  | Additional | [blender](blender/) |
+| Blink Shell              | Additional | [blink-shell](blink-shell/) |
+| Blockbench               | Additional | [blockbench](blockbench/) |
+| bobthefish               | Additional | [bobthefish](bobthefish/) |
+| BookWyrm                 | Additional | [bookwyrm](bookwyrm/) |
+| bottom                   | Core       | [bottom](bottom/) |
+| Brackets                 | Additional | [brackets](brackets/) |
+| bspwm                    | Additional | [bspwm](bspwm/) |
+| BTCPay Server            | Additional | [btcpay-server](btcpay-server/) |
+| btop                     | Additional | [btop](btop/) |
+| CadZinho                 | Additional | [cadzinho](cadzinho/) |
+| Calibre                  | Additional | [calibre](calibre/) |
+| Campfire                 | Additional | [campfire](campfire/) |
+| Caprine Messenger        | Additional | [caprine-messenger](caprine-messenger/) |
+| Castero                  | Additional | [castero](castero/) |
+| Cava                     | Additional | [cava](cava/) |
+| ChatGPT                  | Additional | [chatgpt](chatgpt/) |
+| Chatterino               | Additional | [chatterino](chatterino/) |
+| Chrome                   | Additional | [chrome](chrome/) |
+| Cider                    | Additional | [cider](cider/) |
+| Claude Code              | Additional | [claude-code](claude-code/) |
+| Cli-Visualizer           | Additional | [cli-visualizer](cli-visualizer/) |
+| Clone Hero               | Additional | [clone-hero](clone-hero/) |
+| Cmder                    | Additional | [cmder](cmder/) |
+| Coda                     | Additional | [coda](coda/) |
+| Code::Blocks             | Additional | [codeblocks](codeblocks/) |
+| Codeforces               | Additional | [codeforces](codeforces/) |
+| CodePen                  | Additional | [codepen](codepen/) |
+| CodeRunner               | Additional | [coderunner](coderunner/) |
+| colorls                  | Additional | [colorls](colorls/) |
+| ColorSlurp               | Additional | [color-slurp](color-slurp/) |
+| ConEmu                   | Additional | [conemu](conemu/) |
+| CopyQ                    | Additional | [copyq](copyq/) |
+| COSMIC Terminal          | Additional | [cosmic-terminal](cosmic-terminal/) |
+| CotEditor                | Additional | [coteditor](coteditor/) |
+| Couscous                 | Additional | [couscous](couscous/) |
+| Cryptowatch              | Additional | [cryptowatch](cryptowatch/) |
+| Cursor                   | Additional | [cursor](cursor/) |
+| Cutter                   | Additional | [cutter](cutter/) |
+| DankMaterialShell        | Additional | [dankmaterialshell](dankmaterialshell/) |
+| Dash                     | Additional | [dash](dash/) |
+| DeepSeek                 | Additional | [deepseek](deepseek/) |
+| Delphi                   | Additional | [delphi](delphi/) |
+| delta                    | Core       | [delta](delta/) |
+| Dev-C++                  | Additional | [dev-cpp](dev-cpp/) |
+| dircolors                | Additional | [dircolors](dircolors/) |
+| Directory Opus           | Additional | [directory-opus](directory-opus/) |
+| Dirtywave M8             | Additional | [m8](m8/) |
+| Discord Bot Maker        | Additional | [discordbotmaker](discordbotmaker/) |
+| Discourse                | Additional | [discourse](discourse/) |
+| Ditto                    | Additional | [ditto](ditto/) |
+| Django Admin             | Additional | [django-admin](django-admin/) |
+| dmenu                    | Additional | [dmenu](dmenu/) |
+| Docker                   | Additional | [docker](docker/) |
+| DOOM Emacs               | Additional | [doom-emacs](doom-emacs/) |
+| Dracula CSS              | Additional | [dracula-css](dracula-css/) |
+| Drafts                   | Additional | [drafts](drafts/) |
+| DuckDuckGo               | Additional | [duckduckgo](duckduckgo/) |
+| Dunst                    | Additional | [dunst](dunst/) |
+| Duolingo                 | Additional | [duolingo](duolingo/) |
+| Dwarf Fortress           | Additional | [dwarf-fortress](dwarf-fortress/) |
+| Dyalog APL               | Additional | [dyalog](dyalog/) |
+| Eclipse                  | Additional | [eclipse](eclipse/) |
+| EditPlus                 | Additional | [editplus](editplus/) |
+| eM Client                | Additional | [em-client](em-client/) |
+| Emacs                    | Additional | [emacs](emacs/) |
+| EverythingToolbar        | Additional | [everythingtoolbar](everythingtoolbar/) |
+| Evidence                 | Additional | [evidence](evidence/) |
+| exa                      | Additional | [exa](exa/) |
+| eza                      | Additional | [eza](eza/) |
+| Facebook                 | Additional | [facebook](facebook/) |
+| Facebook Messenger       | Additional | [facebook-messenger](facebook-messenger/) |
+| Fastfetch                | Core       | [fastfetch](fastfetch/) |
+| Fedilab                  | Additional | [fedilab](fedilab/) |
+| Fig                      | Additional | [fig](fig/) |
+| Figma                    | Additional | [figma](figma/) |
+| Files                    | Additional | [files](files/) |
+| Firefox                  | Additional | [firefox](firefox/) |
+| Fish                     | Core       | [fish](fish/) |
+| FL Studio 21             | Additional | [fl-studio-21](fl-studio-21/) |
+| Flarum                   | Additional | [flarum](flarum/) |
+| FlorisBoard              | Additional | [florisboard](florisboard/) |
+| Flowlab                  | Additional | [flowlab](flowlab/) |
+| Fluent Terminal          | Additional | [fluent-terminal](fluent-terminal/) |
+| Fluxbox                  | Additional | [fluxbox](fluxbox/) |
+| fman                     | Additional | [fman](fman/) |
+| FocusWriter              | Additional | [focuswriter](focuswriter/) |
+| FontForge                | Additional | [fontforge](fontforge/) |
+| foot                     | Additional | [foot](foot/) |
+| Forgejo                  | Additional | [forgejo](forgejo/) |
+| ForkLift                 | Additional | [forklift](forklift/) |
+| FreeCAD                  | Additional | [freecad](freecad/) |
+| FreeTube                 | Additional | [freetube](freetube/) |
+| FreshRSS                 | Additional | [freshrss](freshrss/) |
+| Funkwhale                | Additional | [funkwhale](funkwhale/) |
+| Fuzzel                   | Additional | [fuzzel](fuzzel/) |
+| fzf                      | Core       | [fzf](fzf/) |
+| Gajim                    | Additional | [gajim](gajim/) |
+| GameMaker Studio         | Additional | [gamemaker-studio](gamemaker-studio/) |
+| Gamepad Viewer           | Additional | [gamepad-viewer](gamepad-viewer/) |
+| Geany                    | Additional | [geany](geany/) |
+| Gedit                    | Additional | [gedit](gedit/) |
+| Gemini                   | Additional | [gemini](gemini/) |
+| ggplot2                  | Additional | [ggplot2](ggplot2/) |
+| gh-dash                  | Core       | [gh-dash](gh-dash/) |
+| Ghostty                  | Core       | [ghostty](ghostty/) |
+| ghostwriter              | Additional | [ghostwriter](ghostwriter/) |
+| GIMP                     | Additional | [gimp](gimp/) |
+| Git                      | Additional | [git](git/) |
+| GitHub                   | Additional | [github](github/) |
+| GitHub Pages             | Additional | [gh-pages](gh-pages/) |
+| Gitk                     | Additional | [gitk](gitk/) |
+| GitKraken                | Additional | [gitkraken](gitkraken/) |
+| GitLab                   | Additional | [gitlab](gitlab/) |
+| Gitroll                  | Additional | [gitroll](gitroll/) |
+| GMK                      | Additional | [gmk](gmk/) |
+| GNOME Terminal           | Additional | [gnome-terminal](gnome-terminal/) |
+| GNU grep                 | Additional | [grep](grep/) |
+| GoAccess                 | Additional | [go-access](go-access/) |
+| Godot                    | Additional | [godot](godot/) |
+| Google Calendar          | Additional | [google-calendar](google-calendar/) |
+| Google Search            | Additional | [google-search](google-search/) |
+| GRUB                     | Additional | [grub](grub/) |
+| GTK                      | Additional | [gtk](gtk/) |
+| GtkSourceView            | Additional | [gtksourceview](gtksourceview/) |
+| Hacker News              | Additional | [hacker-news](hacker-news/) |
+| Harpy for Twitter        | Additional | [harpy-for-twitter](harpy-for-twitter/) |
+| Helix                    | Additional | [helix](helix/) |
+| Hermes Agent             | Additional | [hermes-agent](hermes-agent/) |
+| Heroic Games Launcher    | Additional | [heroic-games-launcher](heroic-games-launcher/) |
+| highlight.js             | Additional | [highlightjs](highlightjs/) |
+| Home Assistant           | Additional | [home-assistant](home-assistant/) |
+| Homepage                 | Additional | [homepage-app](homepage-app/) |
+| Homer                    | Additional | [homer](homer/) |
+| Hyper                    | Additional | [hyper](hyper/) |
+| HyperX NGENUITY          | Additional | [ngenuity](ngenuity/) |
+| Hyprland                 | Additional | [hyprland](hyprland/) |
+| i3                       | Additional | [i3](i3/) |
+| i3lock-color             | Additional | [i3lock-color](i3lock-color/) |
+| IBM ACS                  | Additional | [acs](acs/) |
+| IDA Pro                  | Additional | [ida](ida/) |
+| IDLE                     | Additional | [idle](idle/) |
+| ImageGlass               | Additional | [imageglass](imageglass/) |
+| Infinity for Reddit      | Additional | [infinity-for-reddit](infinity-for-reddit/) |
+| Inkscape                 | Additional | [inkscape](inkscape/) |
+| Insomnia                 | Additional | [insomnia](insomnia/) |
+| iSH                      | Additional | [ish](ish/) |
+| iTerm2                   | Additional | [iterm2](iterm2/) |
+| ITFY                     | Additional | [itfy](itfy/) |
+| JabRef                   | Additional | [jabref](jabref/) |
+| Javadoc                  | Additional | [javadoc](javadoc/) |
+| JDownloader 2            | Additional | [jdownloader2](jdownloader2/) |
+| Jellyfin                 | Additional | [jellyfin](jellyfin/) |
+| JetBrains                | Additional | [jetbrains](jetbrains/) |
+| jGRASP                   | Additional | [jgrasp](jgrasp/) |
+| Joplin                   | Additional | [joplin](joplin/) |
+| Jupyter Notebook         | Additional | [jupyter-notebook](jupyter-notebook/) |
+| JupyterLab               | Additional | [jupyterlab](jupyterlab/) |
+| k9s                      | Core       | [k9s](k9s/) |
+| Kagi                     | Additional | [kagi](kagi/) |
+| Kakoune                  | Additional | [kakoune](kakoune/) |
+| Kali Browser             | Additional | [kali-browser](kali-browser/) |
+| KanbanFlow               | Additional | [kanbanflow](kanbanflow/) |
+| Kate                     | Additional | [kate](kate/) |
+| KDiff3                   | Additional | [kdiff3](kdiff3/) |
+| Keybr                    | Additional | [keybr](keybr/) |
+| Keypirinha               | Additional | [keypirinha](keypirinha/) |
+| KiCad                    | Additional | [kicad](kicad/) |
+| Kitty                    | Additional | [kitty](kitty/) |
+| Konsole                  | Additional | [konsole](konsole/) |
+| Kristall                 | Additional | [kristall](kristall/) |
+| Krita                    | Additional | [krita](krita/) |
+| Kurozora                 | Additional | [kurozora](kurozora/) |
+| LabPlot                  | Additional | [labplot](labplot/) |
+| LaTeX                    | Additional | [latex](latex/) |
+| Lazydocker               | Core       | [lazydocker](lazydocker/) |
+| LazyGit                  | Core       | [lazygit](lazygit/) |
+| LCD Smartie              | Additional | [lcd-smartie](lcd-smartie/) |
+| LDoc                     | Additional | [ldoc](ldoc/) |
+| LeetCode                 | Additional | [leetcode](leetcode/) |
+| LeftWM                   | Additional | [leftwm](leftwm/) |
+| Libreddit                | Additional | [libreddit](libreddit/) |
+| LibreNMS                 | Additional | [librenms](librenms/) |
+| LibreOffice              | Additional | [libreoffice](libreoffice/) |
+| Lichess                  | Additional | [lichess](lichess/) |
+| Light Table              | Additional | [light-table](light-table/) |
+| LightPaper               | Additional | [lightpaper](lightpaper/) |
+| LimeChat                 | Additional | [limechat](limechat/) |
+| Linear                   | Additional | [linear](linear/) |
+| Linux TTY                | Additional | [tty](tty/) |
+| LiteIDE                  | Additional | [liteide](liteide/) |
+| lnav                     | Additional | [lnav](lnav/) |
+| Logseq                   | Additional | [logseq](logseq/) |
+| lsd                      | Core       | [lsd](lsd/) |
+| LTSpice                  | Additional | [ltspice](ltspice/) |
+| lualine                  | Core       | [lualine](lualine/) |
+| LXTerminal               | Additional | [lxterminal](lxterminal/) |
+| MacDown                  | Additional | [macdown](macdown/) |
+| MacDown CSS              | Additional | [macdown-css](macdown-css/) |
+| macOS Color Picker       | Additional | [macos-color-picker](macos-color-picker/) |
+| Mailspring               | Additional | [mailspring](mailspring/) |
+| Makehuman                | Additional | [makehuman](makehuman/) |
+| Mako                     | Additional | [mako](mako/) |
+| man pages                | Additional | [man-pages](man-pages/) |
+| Mantine                  | Additional | [mantine](mantine/) |
+| Markdown CSS             | Additional | [markdown-css](markdown-css/) |
+| Marp                     | Additional | [marp](marp/) |
+| Marta                    | Additional | [marta](marta/) |
+| MATLAB                   | Additional | [matlab](matlab/) |
+| Matplotlib               | Additional | [matplotlib](matplotlib/) |
+| Mattermost               | Additional | [mattermost](mattermost/) |
+| MetaEditor               | Additional | [metaeditor](metaeditor/) |
+| MetaTrader 5             | Additional | [metatrader5](metatrader5/) |
+| Micro                    | Additional | [micro](micro/) |
+| Microsoft Edge           | Additional | [microsoft-edge](microsoft-edge/) |
+| Midnight Commander       | Additional | [midnight-commander](midnight-commander/) |
+| MindNode                 | Additional | [mindnode](mindnode/) |
+| Minecraft                | Additional | [minecraft](minecraft/) |
+| Miniflux                 | Additional | [miniflux](miniflux/) |
+| Mintty                   | Additional | [mintty](mintty/) |
+| Misskey                  | Additional | [misskey](misskey/) |
+| MiXplorer                | Additional | [mixplorer](mixplorer/) |
+| MkDocs                   | Additional | [mkdocs](mkdocs/) |
+| MobaXterm                | Additional | [mobaxterm](mobaxterm/) |
+| Monkeytype               | Additional | [monkeytype](monkeytype/) |
+| MonoDevelop              | Additional | [monodevelop](monodevelop/) |
+| Mousepad                 | Additional | [mousepad](mousepad/) |
+| mRemoteNG                | Additional | [mremoteng](mremoteng/) |
+| MusicBee                 | Additional | [musicbee](musicbee/) |
+| musikcube                | Additional | [musikcube](musikcube/) |
+| Mutt                     | Additional | [mutt](mutt/) |
+| MySQL Workbench          | Additional | [mysql-workbench](mysql-workbench/) |
+| ncspot                   | Additional | [ncspot](ncspot/) |
+| Neiki's Editor           | Additional | [neiki-editor](neiki-editor/) |
+| Neiki's Page Editor      | Additional | [neiki-page-editor](neiki-page-editor/) |
+| Neovim                   | Core       | [nvim](nvim/) |
+| NetBeans                 | Additional | [netbeans](netbeans/) |
+| New Tabs                 | Additional | [new-tabs](new-tabs/) |
+| Newsboat                 | Additional | [newsboat](newsboat/) |
+| NewTerm2                 | Additional | [newterm2](newterm2/) |
+| Nextcloud                | Additional | [nextcloud](nextcloud/) |
+| Nilesoft Shell           | Additional | [nilesoft-shell](nilesoft-shell/) |
+| Nitter                   | Additional | [nitter](nitter/) |
+| nnn                      | Additional | [nnn](nnn/) |
+| Node Console             | Additional | [node-console](node-console/) |
+| Noir                     | Additional | [noir](noir/) |
+| Notepad++                | Additional | [notepad-plus-plus](notepad-plus-plus/) |
+| Notesnook                | Additional | [notesnook](notesnook/) |
+| Nova                     | Additional | [nova](nova/) |
+| Nova Launcher            | Additional | [nova-launcher](nova-launcher/) |
+| novelWriter              | Additional | [novel-writer](novel-writer/) |
+| Nylas N1                 | Additional | [nylas-n1](nylas-n1/) |
+| Nyxt                     | Additional | [nyxt](nyxt/) |
+| Obsidian                 | Additional | [obsidian](obsidian/) |
+| Oh My Posh               | Additional | [oh-my-posh](oh-my-posh/) |
+| Omarchy                  | Additional | [omarchy](omarchy/) |
+| omg.lol                  | Additional | [omglol](omglol/) |
+| OneCommander             | Additional | [onecommander](onecommander/) |
+| Openbox                  | Additional | [openbox](openbox/) |
+| OpenCode                 | Core       | [opencode](opencode/) |
+| OpenSCAD                 | Additional | [openscad](openscad/) |
+| Oracle SQL Developer     | Additional | [oracle-sql-developer](oracle-sql-developer/) |
+| Pandoc                   | Additional | [pandoc](pandoc/) |
+| Pantheon Terminal        | Additional | [pantheon-terminal](pantheon-terminal/) |
+| Papirus Folders          | Additional | [papirus-folders](papirus-folders/) |
+| Passky                   | Additional | [passky](passky/) |
+| Peacock Extension        | Additional | [peacock-extension](peacock-extension/) |
+| PeerTube                 | Additional | [peertube](peertube/) |
+| Pi Coding Agent          | Additional | [pi-coding-agent](pi-coding-agent/) |
+| PL/SQL Developer         | Additional | [plsql-developer](plsql-developer/) |
+| Plank                    | Additional | [plank](plank/) |
+| Plymouth                 | Additional | [plymouth](plymouth/) |
+| Polybar                  | Additional | [polybar](polybar/) |
+| PolyMC                   | Additional | [polymc](polymc/) |
+| Postbox                  | Additional | [postbox](postbox/) |
+| Postman                  | Additional | [postman](postman/) |
+| Powerlevel10k            | Additional | [powerlevel10k](powerlevel10k/) |
+| Powerlevel10k for Oh My Posh | Additional | [p10k-oh-my-posh](p10k-oh-my-posh/) |
+| PowerShell               | Additional | [powershell](powershell/) |
+| PowerShell ISE           | Additional | [powershell-ise](powershell-ise/) |
+| presenterm               | Additional | [presenterm](presenterm/) |
+| Prism                    | Additional | [prism](prism/) |
+| Prompt                   | Additional | [prompt](prompt/) |
+| Protonmail               | Additional | [protonmail](protonmail/) |
+| PsychoPy                 | Additional | [psychopy](psychopy/) |
+| ptpython                 | Core       | [ptpython](ptpython/) |
+| Pygments                 | Additional | [pygments](pygments/) |
+| Pythonista               | Additional | [pythonista](pythonista/) |
+| Pywal                    | Additional | [pywal](pywal/) |
+| qBittorrent              | Additional | [qbittorrent](qbittorrent/) |
+| Qt Creator               | Additional | [qtcreator](qtcreator/) |
+| Qt5 / Qt6                | Additional | [qt5](qt5/) |
+| QTerminal                | Additional | [qterminal](qterminal/) |
+| Quassel                  | Additional | [quassel](quassel/) |
+| Quiver                   | Additional | [quiver](quiver/) |
+| Qutebrowser              | Additional | [qutebrowser](qutebrowser/) |
+| R                        | Additional | [r](r/) |
+| Rackula                  | Additional | [rackula](rackula/) |
+| ranger                   | Additional | [ranger](ranger/) |
+| Raycast                  | Additional | [raycast](raycast/) |
+| Readwise Reader          | Additional | [readwise-reader](readwise-reader/) |
+| ReNoise                  | Additional | [renoise](renoise/) |
+| Replugged                | Additional | [replugged](replugged/) |
+| Revolt                   | Additional | [revolt](revolt/) |
+| Revolution IRC           | Additional | [revolution-irc](revolution-irc/) |
+| Rime                     | Additional | [rime](rime/) |
+| Rio                      | Additional | [rio](rio/) |
+| Ripcord                  | Additional | [ripcord](ripcord/) |
+| ripgrep                  | Additional | [ripgrep](ripgrep/) |
+| Roam Research            | Additional | [roam-research](roam-research/) |
+| Rofi                     | Additional | [rofi](rofi/) |
+| RStudio                  | Additional | [rstudio](rstudio/) |
+| RunJS                    | Additional | [runjs](runjs/) |
+| Sandpack                 | Additional | [sandpack](sandpack/) |
+| Scrivener                | Additional | [scrivener](scrivener/) |
+| SecureCRT                | Additional | [securecrt](securecrt/) |
+| Sequel Ace               | Additional | [sequel-ace](sequel-ace/) |
+| Sequel Pro               | Additional | [sequel-pro](sequel-pro/) |
+| SerenityOS               | Additional | [serenityos](serenityos/) |
+| SideNotes                | Additional | [sidenotes](sidenotes/) |
+| Signal Desktop           | Additional | [signal-desktop](signal-desktop/) |
+| Sioyek                   | Additional | [sioyek](sioyek/) |
+| Sketch                   | Additional | [sketch](sketch/) |
+| Slack                    | Additional | [slack](slack/) |
+| SmartGit                 | Additional | [smartgit](smartgit/) |
+| Snappy Driver Installer  | Additional | [snappy-driver-installer](snappy-driver-installer/) |
+| Snappy Driver Installer Origin | Additional | [snappy-driver-installer-origin](snappy-driver-installer-origin/) |
+| Sniffnet                 | Additional | [sniffnet](sniffnet/) |
+| SnippetsLab              | Additional | [snippetslab](snippetslab/) |
+| SolidWorks               | Additional | [solidworks](solidworks/) |
+| Spacemacs                | Additional | [spacemacs](spacemacs/) |
+| SpeedCrunch              | Additional | [speedcrunch](speedcrunch/) |
+| Spicetify                | Additional | [spicetify](spicetify/) |
+| Spotify TUI              | Additional | [spotify-tui](spotify-tui/) |
+| Spyder                   | Additional | [spyder](spyder/) |
+| st                       | Additional | [st](st/) |
+| Stack Overflow           | Additional | [stackoverflow](stackoverflow/) |
+| Standard Notes           | Additional | [standard-notes](standard-notes/) |
+| Starlight                | Additional | [astro-starlight](astro-starlight/) |
+| Starship                 | Core       | [starship](starship/) |
+| Starship Powerline Preset | Additional | [starship-powerline-preset](starship-powerline-preset/) |
+| StationView              | Additional | [stationview](stationview/) |
+| Steam                    | Additional | [steam](steam/) |
+| Stirling PDF             | Additional | [stirling-pdf](stirling-pdf/) |
+| Streamlit                | Additional | [streamlit](streamlit/) |
+| Sublime Text             | Additional | [sublime-text](sublime-text/) |
+| Subsonic                 | Additional | [subsonic](subsonic/) |
+| Suckless Tabbed          | Additional | [suckless-tabbed](suckless-tabbed/) |
+| Sumatra PDF              | Additional | [sumatra-pdf](sumatra-pdf/) |
+| Swaylock                 | Additional | [swaylock](swaylock/) |
+| SwayNotificationCenter   | Additional | [swaync](swaync/) |
+| SwayOSD                  | Additional | [swayosd](swayosd/) |
+| SwiftUI                  | Additional | [swiftui](swiftui/) |
+| T3 Code                  | Additional | [t3code](t3code/) |
+| TablePlus                | Additional | [tableplus](tableplus/) |
+| Tabletop Simulator       | Additional | [tabletop-simulator](tabletop-simulator/) |
+| Tailwind                 | Additional | [tailwind](tailwind/) |
+| Taskwarrior              | Additional | [taskwarrior](taskwarrior/) |
+| Telegram                 | Additional | [telegram](telegram/) |
+| Telegram Android         | Additional | [telegram-android](telegram-android/) |
+| Telegram iOS             | Additional | [telegram-ios](telegram-ios/) |
+| Telegram macOS           | Additional | [telegram-macos](telegram-macos/) |
+| Telegram X               | Additional | [telegram-x](telegram-x/) |
+| Terminal.app             | Additional | [terminal-app](terminal-app/) |
+| Terminator               | Additional | [terminator](terminator/) |
+| Termite                  | Additional | [termite](termite/) |
+| Termux                   | Additional | [termux](termux/) |
+| TeXShop                  | Additional | [texshop](texshop/) |
+| TeXstudio                | Additional | [texstudio](texstudio/) |
+| Textastic                | Additional | [textastic](textastic/) |
+| TextMate                 | Additional | [textmate](textmate/) |
+| Textual                  | Additional | [textual](textual/) |
+| TeXworks                 | Additional | [texworks](texworks/) |
+| The Lounge               | Additional | [thelounge](thelounge/) |
+| Thonny                   | Additional | [thonny](thonny/) |
+| ThumbKey                 | Additional | [thumb-key](thumb-key/) |
+| Thunderbird              | Additional | [thunderbird](thunderbird/) |
+| TiddlyWiki               | Additional | [tiddlywiki](tiddlywiki/) |
+| tig                      | Additional | [tig](tig/) |
+| Tilix                    | Additional | [tilix](tilix/) |
+| tint2                    | Additional | [tint2](tint2/) |
+| tlrc                     | Additional | [tlrc](tlrc/) |
+| tmux                     | Additional | [tmux](tmux/) |
+| Todoist                  | Additional | [todoist](todoist/) |
+| tofi                     | Additional | [tofi](tofi/) |
+| Total Commander          | Additional | [total-commander](total-commander/) |
+| Tower                    | Additional | [tower](tower/) |
+| Tridactyl                | Additional | [tridactyl](tridactyl/) |
+| Trudido                  | Additional | [trudido](trudido/) |
+| Tumblr                   | Additional | [tumblr](tumblr/) |
+| Tut                      | Additional | [tut](tut/) |
+| tym                      | Additional | [tym](tym/) |
+| Typora                   | Additional | [typora](typora/) |
+| Ueli                     | Additional | [ueli](ueli/) |
+| Ulauncher                | Additional | [ulauncher](ulauncher/) |
+| Ulysses                  | Additional | [ulysses](ulysses/) |
+| Unigram                  | Additional | [unigram](unigram/) |
+| Unraid                   | Additional | [unraid](unraid/) |
+| Unreal Engine            | Additional | [unreal-engine](unreal-engine/) |
+| Uptime Kuma              | Additional | [uptime-kuma](uptime-kuma/) |
+| Vesktop Discord          | Additional | [vesktop-discord](vesktop-discord/) |
+| Vim                      | Additional | [vim](vim/) |
+| Vimium                   | Additional | [vimium](vimium/) |
+| vis                      | Additional | [vis](vis/) |
+| Visual Basic 6           | Additional | [visual-basic-6](visual-basic-6/) |
+| Visual Spigot            | Additional | [visual-spigot](visual-spigot/) |
+| Visual Studio            | Additional | [visual-studio](visual-studio/) |
+| Vital                    | Additional | [vital](vital/) |
+| Vivado                   | Additional | [vivado](vivado/) |
+| Vivaldi                  | Additional | [vivaldi](vivaldi/) |
+| Vortex Mod Manager       | Additional | [vortex-mod-manager](vortex-mod-manager/) |
+| VS Code                  | Additional | [vscode](vscode/) |
+| Wallpaper                | Additional | [wallpaper](wallpaper/) |
+| Warp                     | Additional | [warp](warp/) |
+| Waybar                   | Additional | [waybar](waybar/) |
+| WezTerm                  | Additional | [wezterm](wezterm/) |
+| WhatsApp Web             | Additional | [whatsapp-web](whatsapp-web/) |
+| Windows Terminal         | Additional | [windows-terminal](windows-terminal/) |
+| WindTerm                 | Additional | [windterm](windterm/) |
+| Wing                     | Additional | [wing](wing/) |
+| Wiremix                  | Additional | [wiremix](wiremix/) |
+| WOB                      | Additional | [wob](wob/) |
+| Wofi                     | Additional | [wofi](wofi/) |
+| Wolfram Notebooks        | Additional | [wolfram-notebooks](wolfram-notebooks/) |
+| WordPress                | Additional | [wordpress](wordpress/) |
+| Wox                      | Additional | [wox](wox/) |
+| WP                       | Additional | [wp](wp/) |
+| x64dbg                   | Additional | [x64dbg](x64dbg/) |
+| XChat / HexChat          | Additional | [xchat](xchat/) |
+| Xcode                    | Additional | [xcode](xcode/) |
+| xdbg                     | Additional | [xdbg](xdbg/) |
+| Xfce4 Terminal           | Additional | [xfce4-terminal](xfce4-terminal/) |
+| Xournal++                | Additional | [xournalpp](xournalpp/) |
+| Xresources               | Additional | [xresources](xresources/) |
+| Yakuake                  | Additional | [yakuake](yakuake/) |
+| Yazi                     | Core       | [yazi](yazi/) |
+| YouTube                  | Additional | [youtube](youtube/) |
+| YouTube Music Desktop    | Additional | [youtube-music-desktop](youtube-music-desktop/) |
+| YunoHost                 | Additional | [yunohost](yunohost/) |
+| Zathura                  | Additional | [zathura](zathura/) |
+| Zed                      | Additional | [zed](zed/) |
+| Zellij                   | Core       | [zellij](zellij/) |
+| Zsh                      | Additional | [zsh](zsh/) |
+| zsh-syntax-highlighting  | Additional | [zsh-syntax-highlighting](zsh-syntax-highlighting/) |

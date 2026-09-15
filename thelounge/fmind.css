@@ -1,0 +1,16 @@
+:root {
+  --body-bg-color: #ffffff;
+  --body-color: #202124;
+  --window-bg-color: #ffffff;
+  --window-heading-color: #174ea6;
+  --highlight-bg-color: #d2e3fc;
+  --unread-badge-bg-color: #174ea6;
+  --unread-badge-color: #ffffff;
+  --link-color: #174ea6;
+  --border-color: #f1f3f4;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  color: var(--body-color);
+}

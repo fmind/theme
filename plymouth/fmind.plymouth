@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Fmind
+Description=Fmind Light theme for Plymouth
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/fmind
+ScriptFile=/usr/share/plymouth/themes/fmind/fmind.script

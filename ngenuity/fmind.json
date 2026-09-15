@@ -1,0 +1,10 @@
+{
+  "name": "Fmind",
+  "author": "M\u00e9d\u00e9ric Hurier",
+  "lighting": {
+    "primary": "#ffffff",
+    "secondary": "#174ea6",
+    "accent": "#d2e3fc",
+    "text": "#202124"
+  }
+}

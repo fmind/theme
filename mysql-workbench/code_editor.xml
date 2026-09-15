@@ -1,0 +1,15 @@
+<language name="SCLEX_MYSQL">
+  <style id="32" fore-color-light="#202124" back-color-light="#ffffff" bold="No" /> <!-- STYLE_DEFAULT -->
+  <style id="33" fore-color-light="#9aa0a6" back-color-light="#ffffff" bold="No" /> <!-- STYLE_LINENUMBER -->
+  <style id="0" fore-color-light="#202124" back-color-light="#ffffff" bold="No" />  <!-- SCE_MYSQL_DEFAULT -->
+  <style id="1" fore-color-light="#595d62" back-color-light="#ffffff" bold="No" />  <!-- SCE_MYSQL_COMMENT -->
+  <style id="2" fore-color-light="#595d62" back-color-light="#ffffff" bold="No" />  <!-- SCE_MYSQL_COMMENTLINE -->
+  <style id="3" fore-color-light="#595d62" back-color-light="#ffffff" bold="No" />  <!-- SCE_MYSQL_VARIABLE -->
+  <style id="4" fore-color-light="#934900" back-color-light="#ffffff" bold="No" />  <!-- SCE_MYSQL_NUMBER -->
+  <style id="5" fore-color-light="#174ea6" back-color-light="#ffffff" bold="Yes" /> <!-- SCE_MYSQL_KEYWORD -->
+  <style id="6" fore-color-light="#0d652d" back-color-light="#ffffff" bold="No" />  <!-- SCE_MYSQL_STRING -->
+  <style id="7" fore-color-light="#0d652d" back-color-light="#ffffff" bold="No" />  <!-- SCE_MYSQL_SQSTRING -->
+  <style id="10" fore-color-light="#202124" back-color-light="#ffffff" bold="No" /> <!-- SCE_MYSQL_OPERATOR -->
+  <style id="11" fore-color-light="#202124" back-color-light="#ffffff" bold="No" /> <!-- SCE_MYSQL_IDENTIFIER -->
+  <style id="12" fore-color-light="#174ea6" back-color-light="#ffffff" bold="No" /> <!-- SCE_MYSQL_FUNCTION -->
+</language>

@@ -1,0 +1,10 @@
+body, .room {
+  background-color: #ffffff !important;
+  color: #202124 !important;
+}
+.message--self {
+  background-color: #f1f3f4 !important;
+}
+a {
+  color: #174ea6 !important;
+}
