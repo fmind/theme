@@ -1,0 +1,177 @@
+{
+  "inputs": {
+    "logo.png": "571cabdf26f1262a5b757f8dde57003aa8e23d9398f47dbba6e036be837ccf03",
+    "reference-banner.png": "8682cfba9f4127b9c070114026c51801d919ccc70598c822ad3a4dc292be9f98",
+    "GoogleSans-Bold.ttf": "280eab71ebed3dca9281ca7b071a219d48a4b379f3277b4a10c1b21b7e697126"
+  },
+  "exports": [
+    {
+      "file": "wallpapers/fmind-desktop-16x9.png",
+      "svg": "wallpapers/fmind-desktop-16x9.svg",
+      "width": 3840,
+      "height": 2160,
+      "panel": [
+        384.0,
+        665.8672032193159,
+        3072,
+        828.2655935613682
+      ],
+      "bytes": 447299,
+      "sha256": "9bdecce2fd73b00c65feb186b08e49c577727515232b2c4037bcacb1ae4539f0"
+    },
+    {
+      "file": "wallpapers/fmind-laptop-16x10.png",
+      "svg": "wallpapers/fmind-laptop-16x10.svg",
+      "width": 2560,
+      "height": 1600,
+      "panel": [
+        256.0,
+        523.9114688128773,
+        2048,
+        552.1770623742456
+      ],
+      "bytes": 235353,
+      "sha256": "01329eb894966d5d28ac3e5a41de0dcda868155f163a745dbad4d31f5210b67e"
+    },
+    {
+      "file": "wallpapers/fmind-ultrawide-21x9.png",
+      "svg": "wallpapers/fmind-ultrawide-21x9.svg",
+      "width": 3360,
+      "height": 1440,
+      "panel": [
+        437.0,
+        384.86519114688133,
+        2486,
+        670.2696177062373
+      ],
+      "bytes": 316972,
+      "sha256": "43994f2dd08d802aa081c53f2f25067d2dd6fabd64caf16e2ad190f9b854ed7e"
+    },
+    {
+      "file": "wallpapers/fmind-tablet-3x4.png",
+      "svg": "wallpapers/fmind-tablet-3x4.svg",
+      "width": 1536,
+      "height": 2048,
+      "panel": [
+        61.5,
+        833.5150905432596,
+        1413,
+        380.9698189134809
+      ],
+      "bytes": 135921,
+      "sha256": "45836de11d580a56c91d1205c45d2b1f4eaeb48f8a40e22d855739319d87cb56"
+    },
+    {
+      "file": "wallpapers/fmind-phone-9x20.png",
+      "svg": "wallpapers/fmind-phone-9x20.svg",
+      "width": 1440,
+      "height": 3200,
+      "panel": [
+        43.0,
+        1417.4688128772636,
+        1354,
+        365.0623742454728
+      ],
+      "bytes": 135008,
+      "sha256": "60aa7cfe202e79e49377edb0f00c48f6b641706512323366348b76db06d0e1b3"
+    },
+    {
+      "file": "wallpapers/fmind-square.png",
+      "svg": "wallpapers/fmind-square.svg",
+      "width": 2048,
+      "height": 2048,
+      "panel": [
+        143.5,
+        786.6016096579477,
+        1761,
+        474.7967806841046
+      ],
+      "bytes": 190754,
+      "sha256": "cc700e805658befa3f48adbf6517d35368fe3076a6293a88946d43f756645495"
+    },
+    {
+      "file": "banners/youtube.png",
+      "svg": "banners/youtube.svg",
+      "width": 2560,
+      "height": 1440,
+      "panel": [
+        550.5,
+        523.3138832997988,
+        1459,
+        393.3722334004024
+      ],
+      "bytes": 146192,
+      "sha256": "cecf7fe146075280f1439519f565b9ee7a0bd41937b6e374700f2d6842339bb3"
+    },
+    {
+      "file": "banners/x.png",
+      "svg": "banners/x.svg",
+      "width": 1500,
+      "height": 500,
+      "panel": [
+        307.5,
+        96.31790744466801,
+        1140,
+        307.364185110664
+      ],
+      "bytes": 90505,
+      "sha256": "51b9365fccf9c3e34bcb6bfa6386f6bb82c03d88fa5d4f61889de7dbde74825d"
+    },
+    {
+      "file": "banners/linkedin.png",
+      "svg": "banners/linkedin.svg",
+      "width": 1584,
+      "height": 396,
+      "panel": [
+        372.56,
+        42.1609657947686,
+        1156,
+        311.6780684104628
+      ],
+      "bytes": 91683,
+      "sha256": "bc4c41f93030cc130ca47bd0d10f73d1f9bd828170d4f1916b2eb26d21c5e976"
+    },
+    {
+      "file": "banners/reddit.png",
+      "svg": "banners/reddit.svg",
+      "width": 1920,
+      "height": 384,
+      "panel": [
+        585.5,
+        91.02816901408451,
+        749,
+        201.94366197183098
+      ],
+      "bytes": 50191,
+      "sha256": "c0f814204c2b2c620aa6a7f900d97aed09c9b0c40912e454c53e56c4f2c40ec8"
+    },
+    {
+      "file": "banners/bluesky.png",
+      "svg": "banners/bluesky.svg",
+      "width": 1500,
+      "height": 500,
+      "panel": [
+        307.5,
+        96.31790744466801,
+        1140,
+        307.364185110664
+      ],
+      "bytes": 90505,
+      "sha256": "51b9365fccf9c3e34bcb6bfa6386f6bb82c03d88fa5d4f61889de7dbde74825d"
+    },
+    {
+      "file": "banners/mastodon.png",
+      "svg": "banners/mastodon.svg",
+      "width": 1500,
+      "height": 500,
+      "panel": [
+        307.5,
+        96.31790744466801,
+        1140,
+        307.364185110664
+      ],
+      "bytes": 90505,
+      "sha256": "51b9365fccf9c3e34bcb6bfa6386f6bb82c03d88fa5d4f61889de7dbde74825d"
+    }
+  ]
+}

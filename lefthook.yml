@@ -1,0 +1,22 @@
+# https://lefthook.dev/configuration/
+output: [summary, failure, execution_out]
+pre-commit:
+  parallel: false
+  commands:
+    format:dprint:
+      glob: "*.{json,md,toml,yaml,yml}"
+      priority: 10
+      run: mise run format:dprint {staged_files}
+      stage_fixed: true
+    format:ruff:
+      glob: "*.py"
+      priority: 15
+      run: mise run format:ruff {staged_files}
+      stage_fixed: true
+    check:
+      priority: 30
+      run: mise run check
+pre-push:
+  commands:
+    test:
+      run: mise run test

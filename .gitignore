@@ -3,7 +3,6 @@
 .ruff_cache/
 .venv/
 __pycache__/
-jupyterlab/node_modules/
-jupyterlab/jupyterlab_fmind/labextension/
-jupyterlab/dist/
-.agents/prompts/
+themes/jupyterlab/dist/
+themes/jupyterlab/jupyterlab_fmind/labextension/
+themes/jupyterlab/node_modules/

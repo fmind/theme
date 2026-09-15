@@ -1,0 +1,60 @@
+{
+  "manifest_version": 3,
+  "name": "Fmind",
+  "version": "3.0.0",
+  "description": "Fmind light browser theme.",
+  "theme": {
+    "colors": {
+      "frame": [
+        241,
+        243,
+        244
+      ],
+      "frame_inactive": [
+        241,
+        243,
+        244
+      ],
+      "toolbar": [
+        255,
+        255,
+        255
+      ],
+      "tab_text": [
+        32,
+        33,
+        36
+      ],
+      "tab_background_text": [
+        89,
+        93,
+        98
+      ],
+      "bookmark_text": [
+        32,
+        33,
+        36
+      ],
+      "ntp_background": [
+        255,
+        255,
+        255
+      ],
+      "ntp_text": [
+        32,
+        33,
+        36
+      ],
+      "ntp_link": [
+        23,
+        78,
+        166
+      ],
+      "button_background": [
+        210,
+        227,
+        252
+      ]
+    }
+  }
+}

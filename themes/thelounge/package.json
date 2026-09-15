@@ -1,0 +1,9 @@
+{
+  "name": "thelounge-theme-fmind",
+  "version": "3.0.0",
+  "description": "Fmind light theme for The Lounge",
+  "thelounge": {
+    "theme": "true",
+    "color": "#174ea6"
+  }
+}

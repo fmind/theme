@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "Fmind",
+  "version": "3.0.0",
+  "description": "Fmind light theme for Mozilla Thunderbird",
+  "theme": {
+    "colors": {
+      "frame": "#f1f3f4",
+      "tab_background_text": "#595d62",
+      "tab_selected": "#ffffff",
+      "tab_text": "#202124",
+      "toolbar": "#ffffff",
+      "toolbar_text": "#202124",
+      "toolbar_field": "#f1f3f4",
+      "toolbar_field_text": "#202124"
+    }
+  }
+}

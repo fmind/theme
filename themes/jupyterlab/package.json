@@ -1,0 +1,36 @@
+{
+  "name": "jupyterlab-fmind",
+  "version": "3.0.0",
+  "description": "Fmind light theme for JupyterLab and Notebook 7",
+  "license": "BSD-3-Clause",
+  "main": "src/index.js",
+  "files": [
+    "src/index.js",
+    "style/index.css"
+  ],
+  "scripts": {
+    "build": "jupyter-builder build ."
+  },
+  "dependencies": {
+    "@jupyterlab/apputils": "^4.7.3"
+  },
+  "devDependencies": {
+    "@jupyter/builder": "1.2.3",
+    "@jupyterlab/core-meta": "4.6.3",
+    "css-loader": "7.1.4"
+  },
+  "jupyterlab": {
+    "extension": true,
+    "themePath": "style/index.css",
+    "outputDir": "jupyterlab_fmind/labextension",
+    "sharedPackages": {
+      "@jupyterlab/apputils": {
+        "bundled": false,
+        "singleton": true
+      }
+    }
+  },
+  "overrides": {
+    "sanitize-html": "2.17.7"
+  }
+}

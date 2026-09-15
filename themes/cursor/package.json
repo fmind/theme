@@ -1,0 +1,27 @@
+{
+  "name": "fmind-cursor",
+  "displayName": "Fmind for Cursor",
+  "description": "Fmind light theme for Cursor AI code editor.",
+  "version": "3.0.0",
+  "publisher": "fmind",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fmind/theme"
+  },
+  "contributes": {
+    "themes": [
+      {
+        "label": "Fmind",
+        "uiTheme": "vs",
+        "path": "./fmind-color-theme.json"
+      }
+    ]
+  }
+}

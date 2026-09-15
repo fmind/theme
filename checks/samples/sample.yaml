@@ -1,9 +1,0 @@
-# deployment
-service: &service
-  name: "demo"
-  enabled: true
-  replicas: 3
-  scale: 1.5
-  command: |
-    echo hello
-copy: *service

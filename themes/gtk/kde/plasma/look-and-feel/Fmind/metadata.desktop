@@ -1,0 +1,11 @@
+# https://develop.kde.org/docs/plasma/
+[Desktop Entry]
+Name=Fmind
+Comment=Fmind light colors, widget styles, decorations and startup screen
+X-KDE-PluginInfo-Name=Fmind
+X-KDE-PluginInfo-Author=Médéric Hurier
+X-KDE-PluginInfo-Version=3.0.0
+X-KDE-PluginInfo-License=MIT
+X-KDE-PluginInfo-Website=https://github.com/fmind/theme
+X-KDE-ServiceTypes=Plasma/LookAndFeel
+X-Plasma-APIVersion=2

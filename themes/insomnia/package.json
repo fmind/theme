@@ -1,0 +1,12 @@
+{
+  "name": "insomnia-plugin-theme-fmind",
+  "displayName": "Fmind Theme",
+  "version": "3.0.0",
+  "description": "Fmind light theme for Insomnia REST client",
+  "main": "index.js",
+  "insomnia": {
+    "name": "fmind",
+    "displayName": "Fmind",
+    "description": "Fmind light theme for Insomnia"
+  }
+}

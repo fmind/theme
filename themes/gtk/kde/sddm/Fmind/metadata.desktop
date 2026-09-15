@@ -1,0 +1,15 @@
+# https://github.com/sddm/sddm/blob/v0.21.0/docs/THEMING.md
+[SddmGreeterTheme]
+Name=Fmind
+Description=Fmind light login screen
+Author=Médéric Hurier
+License=MIT
+Type=sddm-theme
+Version=3.0.0
+Website=https://github.com/fmind/theme
+Screenshot=preview.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+Theme-Id=Fmind
+Theme-API=2.0
+QtVersion=6

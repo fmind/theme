@@ -34,8 +34,13 @@ def main() -> None:
     tools = ["vhs", "ttyd", "ffmpeg", "bat", "fish", "nvim", "zellij"]
     binaries = {}
     for tool in tools:
-        resolved = subprocess.run(["mise", "which", tool], capture_output=True, text=True, check=False)
-        path = resolved.stdout.strip() if resolved.returncode == 0 else shutil.which(tool)
+        # Task-specific tool pins are already first on PATH. `mise which` recalculates
+        # project/global configuration and can silently select a different version.
+        path = shutil.which(tool)
+        if path and Path(path).parent.name == "shims":
+            # Resolve shims before switching to the isolated HOME below.
+            resolved = subprocess.run(["mise", "which", tool], capture_output=True, text=True, check=False)
+            path = resolved.stdout.strip() if resolved.returncode == 0 else None
         if not path:
             raise RuntimeError(f"Install {tool} before recording")
         binaries[tool] = path
@@ -60,14 +65,14 @@ def main() -> None:
         }.items():
             target = config / dest
             target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(ROOT / source, target)
+            shutil.copyfile(ROOT / "themes" / source, target)
         fonts = home / ".local/share/fonts"
         fonts.mkdir(parents=True)
         for face in font.parent.glob("GoogleSansCodeNerdFontMono-*.ttf"):
             shutil.copyfile(face, fonts / face.name)
         for source in ("editor.lua", "demo.tape"):
             shutil.copyfile(ROOT / "screenshots" / source, work / source)
-        for source in (ROOT / "checks/samples").glob("sample.*"):
+        for source in (ROOT / "screenshots/samples").glob("sample.*"):
             shutil.copyfile(source, work / source.name)
         (config / "bat/config").write_text('--theme="fmind"\n--paging=never\n')
         (work / "preview.py").write_text("# Numbered preview\ncount = 42\nmessage = 'Ready'\nprint(message)\n")
@@ -103,7 +108,7 @@ bat --style=numbers --color=always preview.py
 }
 """)
         fields, slots = {}, {}
-        for line in (ROOT / "ghostty/fmind").read_text().splitlines():
+        for line in (ROOT / "themes/ghostty/fmind").read_text().splitlines():
             key, separator, value = line.partition("=")
             if not separator or key.lstrip().startswith("#"):
                 continue
@@ -143,7 +148,7 @@ bat --style=numbers --color=always preview.py
             "VHS_CHROME_PATH": str(Path(browser).resolve()),
         }
         Path(env["XDG_RUNTIME_DIR"]).mkdir(mode=0o700)
-        # Fail before recording if the checked parser runtime is absent or broken.
+        # Validate the isolated editor configuration before recording.
         run([binaries["nvim"], "--headless", "-u", "NONE", "-i", "NONE", "-l", "editor.lua"], env, work, 15)
         run([binaries["bat"], "cache", "--build"], env, work)
         run([binaries["vhs"], "validate", "demo.tape"], env, work, 15)

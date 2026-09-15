@@ -1,0 +1,11 @@
+{
+  "identifier": "fmind.theme",
+  "name": "Fmind",
+  "organization": "Fmind",
+  "description": "Fmind light theme for Nova",
+  "version": "3.0.0",
+  "categories": [
+    "themes"
+  ],
+  "main": "Themes/fmind.json"
+}

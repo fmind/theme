@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Fmind Edge Theme",
+  "version": "3.0.0",
+  "description": "Fmind light theme for Microsoft Edge",
+  "theme": {
+    "colors": {
+      "frame": [255, 255, 255],
+      "frame_inactive": [241, 243, 244],
+      "toolbar": [255, 255, 255],
+      "tab_text": [32, 33, 36],
+      "tab_background_text": [89, 93, 98],
+      "bookmark_text": [32, 33, 36],
+      "toolbar_text": [32, 33, 36],
+      "ntp_background": [255, 255, 255],
+      "ntp_text": [32, 33, 36]
+    }
+  }
+}

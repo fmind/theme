@@ -1,11 +1,39 @@
 # AGENTS.md
 
-Fmind is a light theme. [README.md](README.md) owns usage and the GitHub Pages content.
+Fmind is a light theme. README.md owns usage and is displayed directly on GitHub; CHANGELOG.md records user-visible changes. Keep only these three root Markdown files.
 
-- Follow [CATALOG.md](CATALOG.md) and [TODO.md](TODO.md); preserve all 20 core consumers. Directory parity does not mean functional parity. Read [REVIEW.md](REVIEW.md) before making support claims.
-- Edit native theme files directly. Keep palette expectations, README and palette SVG aligned; use colors only where they have a meaningful role.
-- Text contrast must reach 4.5:1 on backgrounds, selections, diffs and filled labels. Essential controls need 3:1; retain non-color state cues.
-- Run `mise install`, `mise run install`, then `mise run all`. Use `mise run format` for Python edits.
-- Keep two synthetic terminal screenshots; refresh with `mise run screenshots` after theme visual changes. They do not prove GUI coverage.
+## Guidelines
+
+- Maintain native files directly under `themes/`; list every integration alphabetically in README, linking to its directory. Each directory owns installation in its README; do not introduce priority tiers. Experimental files do not establish native support.
+- Keep palette expectations in `checks/palette.yaml`, README and `screenshots/palette.svg` aligned. Text needs 4.5:1 contrast; essential controls need 3:1 and non-color state cues.
+- Refresh the two synthetic terminal captures with `mise run screenshots` after theme visual changes. They do not prove GUI coverage.
+- Edit branding through `artworks/generate.py` and regenerate with `mise run artwork`; preserve bundled source assets and their licenses.
 - Isolate app configuration. Never modify installed themes or contact live app services during checks.
-- For publication, use [theme-release](.agents/skills/theme-release/SKILL.md). Native acceptance and publication are separate evidence.
+- Keep validation in `checks/`, branding sources and generation in `artworks/`.
+- Keep README concise and verify documentation links and image paths after changes.
+- For authorized publication, follow [theme-release](.agents/skills/theme-release/SKILL.md). Local checks, hosted CI and releases are separate evidence.
+
+## Maintenance
+
+Install [mise](https://mise.jdx.dev/):
+
+```sh
+mise trust
+mise install
+mise run install
+mise run all
+```
+
+| Task                   | Purpose                                                                                            |
+| ---------------------- | -------------------------------------------------------------------------------------------------- |
+| `mise run format`      | Format Python with Ruff and repository documentation/configuration with dprint.                    |
+| `mise run check`       | Lint Python and workflows, validate hooks, and check formatting.                                   |
+| `mise run test`        | Check shared palette, JSON/TOML/YAML syntax, documentation and artwork.                            |
+| `mise run screenshots` | Refresh the two terminal captures. Requires FFmpeg, Fontconfig, Chromium and the recommended font. |
+| `mise run artwork`     | Regenerate artwork from `artworks/generate.py` and bundled assets.                                 |
+
+Checks cover shared repository invariants, not native app behavior; verify affected themes manually in their apps. Do not add app-specific test harnesses or parser downloads. Screenshot capture uses built-in Neovim syntax highlighting and accepts `VHS_CHROME_PATH` or cached Playwright Chromium.
+
+`mise run install` activates Lefthook: pre-commit formats staged files in scope and runs `mise run check`; pre-push runs `mise run test`. Keep hook commands delegated to mise tasks. dprint uses the explicit scope in `dprint.json`; native files under `themes/`, screenshot fixtures, generated artwork and lockfiles are outside that scope. Preserve one-line Markdown paragraphs.
+
+GitHub Actions runs the read-only `mise run all` gate. Dependencies and tools are pinned in lockfiles and `mise.toml`; Dependabot proposes dependency updates for review.

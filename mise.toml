@@ -1,27 +1,32 @@
 # https://mise.jdx.dev/configuration.html
 [tools]
-python = "3.14.7"
-uv = "0.12.10"
-neovim = "0.12.5"
-bat = "0.26.1"
-tree-sitter = "0.27.0"
-ruff = "0.16.6"
-fish = "4.9.2"
 actionlint = "1.7.12"
+bat = "0.26.1"
+dprint = "0.57.4"
+fish = "4.9.2"
+imagemagick = "7.1.2-31"
+lefthook = "2.1.14"
+neovim = "0.12.5"
+python = "3.14.7"
+ruff = "0.16.6"
 shellcheck = "0.11.0"
+ttyd = "1.7.7"
+uv = "0.12.10"
+vhs = "0.11.0"
+zellij = "0.45.1"
 zizmor = "1.30.0"
 
 [task_config]
 dir = "{{config_root}}"
 
-[tasks.install]
-alias = "i"
-description = "Install validation dependencies and isolated syntax parsers"
-run = ["uv sync --locked", "uv run --locked checks/setup.py"]
+[tasks.all]
+alias = "a"
+description = "Validate themes, documentation and artwork"
+run = ["mise run check", "mise run test"]
 
-[tasks.format]
-alias = "f"
-run = "ruff format ."
+[tasks.artwork]
+description = "Regenerate branding SVGs, PNGs, previews and manifest from bundled assets"
+run = "uv run --locked --script artworks/generate.py"
 
 [tasks.check]
 alias = "c"
@@ -29,35 +34,33 @@ run = [
   "actionlint",
   "zizmor --offline --pedantic .github/",
   "ruff check .",
-  "ruff format --check .",
-  "fish --no-config --no-execute fish/fmind.fish",
-  "git config --file delta/fmind.gitconfig --list",
-  "uv run --locked python -m unittest discover -s checks -q",
+  "lefthook validate",
+  "mise run check:format",
 ]
+
+[tasks."check:format"]
+run = ["dprint check", "ruff format --check ."]
+
+[tasks.format]
+alias = "f"
+run = ["mise run format:dprint", "mise run format:ruff"]
+
+[tasks."format:dprint"]
+run = "dprint fmt --allow-no-files"
+
+[tasks."format:ruff"]
+run = "ruff format"
+
+[tasks.install]
+alias = "i"
+description = "Install validation dependencies and Git hooks"
+run = ["uv sync --locked", "lefthook install"]
 
 [tasks.screenshots]
 description = "Record two screenshots from synthetic inputs (requires VHS and Chromium)"
 run = "uv run --locked screenshots/capture.py"
 
-[tasks.screenshots.tools]
-vhs = "0.11.0"
-ttyd = "1.7.7"
-zellij = "0.45.1"
-
-[tasks."check:gtk-runtime"]
-description = "Exercise GTK 3 control states on a private Broadway display (requires broadwayd and PyGObject)"
-run = "uv run --locked checks/gtk_runtime.py"
-
-[tasks."check:terminal-runtime"]
-description = "Validate the contrast safeguard with Ghostty's isolated native configuration loader"
-run = "uv run --locked checks/terminal_runtime.py"
-
-[tasks.build]
-alias = "b"
-description = "Build the README documentation site"
-run = "uv run --locked checks/build_site.py"
-
-[tasks.all]
-alias = "a"
-description = "Validate themes and build documentation"
-run = ["mise run check", "mise run build"]
+[tasks.test]
+alias = "t"
+description = "Check shared palette, structured files, documentation and artwork"
+run = "uv run --locked python -m unittest discover -s checks -q"

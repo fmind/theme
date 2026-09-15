@@ -1,0 +1,18 @@
+/* Fmind theme for Advent of Code */
+body {
+  background-color: #ffffff;
+  color: #202124;
+}
+a {
+  color: #174ea6;
+}
+em {
+  color: #0d652d;
+}
+.star-count {
+  color: #934900;
+}
+code {
+  background-color: #f1f3f4;
+  color: #202124;
+}
