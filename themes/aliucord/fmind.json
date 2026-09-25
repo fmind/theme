@@ -2,7 +2,7 @@
   "name": "Fmind",
   "description": "Fmind light theme for Aliucord",
   "author": "Médéric Hurier",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "color_palette": {
     "background_primary": "#ffffff",
     "background_secondary": "#f1f3f4",

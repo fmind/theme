@@ -24,13 +24,15 @@ mise run install
 mise run all
 ```
 
-| Task                   | Purpose                                                                                            |
-| ---------------------- | -------------------------------------------------------------------------------------------------- |
-| `mise run format`      | Format Python with Ruff and repository documentation/configuration with dprint.                    |
-| `mise run check`       | Lint Python and workflows, validate hooks, and check formatting.                                   |
-| `mise run test`        | Check shared palette, JSON/TOML/YAML syntax, documentation and artwork.                            |
-| `mise run screenshots` | Refresh the two terminal captures. Requires FFmpeg, Fontconfig, Chromium and the recommended font. |
-| `mise run artwork`     | Regenerate artwork from `artworks/generate.py` and bundled assets.                                 |
+| Task                   | Purpose                                                                                                        |
+| ---------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `mise run format`      | Format Python with Ruff and repository documentation/configuration with dprint.                                |
+| `mise run check`       | Lint Python and workflows, validate hooks, check formatting and audit locked dependencies.                     |
+| `mise run test`        | Check shared palette, JSON/TOML/YAML syntax, documentation and artwork.                                        |
+| `mise run screenshots` | Refresh the two terminal captures. Uses pinned FFmpeg; requires Fontconfig, Chromium and the recommended font. |
+| `mise run artwork`     | Regenerate artwork from `artworks/generate.py` and bundled assets.                                             |
+
+`mise run check:security` queries OSV and npm for known vulnerabilities in the root Python lock, artwork script lock and JupyterLab npm lock, including development dependencies. It requires network access, installs no npm packages and fails on reported vulnerabilities or registry errors. Update artwork script locks, mise pins and dprint plugins manually; Dependabot covers root uv, GitHub Actions and JupyterLab npm dependencies.
 
 Checks cover shared repository invariants, not native app behavior; verify affected themes manually in their apps. Do not add app-specific test harnesses or parser downloads. Screenshot capture uses built-in Neovim syntax highlighting and accepts `VHS_CHROME_PATH` or cached Playwright Chromium.
 

@@ -1,5 +1,22 @@
 # Changelog
 
+## 3.0.1 — 2026-09-25
+
+### Fixed
+
+- Improve TTY bright-text, Light Table gutter, ptpython scrollbar and FreeCAD control contrast.
+- Correct nnn palette indexes and document the matching terminal palette.
+- Restore FreeCAD native dock close icons and keep Highlight.js, Prism and MacDown text upright.
+- Include the MIT license in the Thonny distribution.
+- Correct the ptpython installation example for its native config loader.
+- Make artwork previews and manifest ordering deterministic.
+
+### Maintenance
+
+- Audit locked project, artwork and JupyterLab dependencies in the shared check gate; add JupyterLab Dependabot updates.
+- Update Ruff, uv, VHS, the dprint JSON plugin and artwork dependencies; pin Node.js for npm audits.
+- Pin FFmpeg for screenshot capture and refresh the synthetic terminal screenshots.
+
 ## 3.0.0 — 2026-09-15
 
 ### Breaking

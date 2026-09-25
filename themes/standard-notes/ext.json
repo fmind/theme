@@ -3,7 +3,7 @@
   "name": "Fmind",
   "content_type": "SN|Theme",
   "area": "themes",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Fmind light theme for Standard Notes",
   "url": "https://raw.githubusercontent.com/fmind/theme/main/themes/standard-notes/dist/fmind.css",
   "dock_icon": {

@@ -17,7 +17,7 @@ code.hljs {
 .hljs-comment,
 .hljs-quote {
   color: #595d62;
-  font-style: italic;
+  font-style: normal;
 }
 
 .hljs-keyword,
@@ -87,7 +87,7 @@ code.hljs {
 }
 
 .hljs-emphasis {
-  font-style: italic;
+  font-style: normal;
 }
 
 .hljs-strong {

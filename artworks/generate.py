@@ -173,6 +173,7 @@ def main() -> None:
             "#e8e8e8",
             "-tile",
             "3x",
+            "-strip",
             str(PREVIEWS / "all-variants.png"),
         ],
         check=True,
@@ -191,6 +192,7 @@ def main() -> None:
             "+repage",
             str(PREVIEWS / "composition.png"),
             "-append",
+            "-strip",
             str(PREVIEWS / "reference-comparison.png"),
         ],
         check=True,
@@ -204,13 +206,16 @@ def main() -> None:
                 "-crop",
                 geometry,
                 "+repage",
+                "-strip",
                 str(PREVIEWS / f"{name}-mobile-crop.png"),
             ],
             check=True,
         )
 
     inputs = {
-        p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in ARTWORK.iterdir() if p.suffix in {".png", ".ttf"}
+        p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+        for p in sorted(ARTWORK.iterdir())
+        if p.suffix in {".png", ".ttf"}
     }
     (ARTWORK / "manifest.json").write_text(json.dumps({"inputs": inputs, "exports": records}, indent=2) + "\n")
     Console().print(f"Successfully generated {len(records)} SVGs and PNGs.")

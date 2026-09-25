@@ -9,7 +9,7 @@ uv build --wheel .
 Install the resulting wheel into the Python environment that runs Jupyter:
 
 ```sh
-python -m pip install dist/jupyterlab_fmind-3.0.0-py3-none-any.whl
+python -m pip install dist/jupyterlab_fmind-3.0.1-py3-none-any.whl
 ```
 
 Restart Jupyter and refresh the browser. In JupyterLab, choose Settings → Theme → Fmind. In Notebook 7, choose Settings → Theme → Fmind. The installed wheel contains the compiled frontend; end users installing a wheel do not need Node.js or a JupyterLab rebuild. The package registers Fmind without selecting it or changing preferences.

@@ -78,7 +78,7 @@ UI: dict[str, str] = {
     "completion.keyword": "#174ea6",
     "completion.param": "#202124",
     "scrollbar.background": "bg:#f1f3f4",
-    "scrollbar.button": "bg:#9aa0a6",
+    "scrollbar.button": "bg:#595d62",
     "system-toolbar": "#681da8",
     "arg-toolbar": "#681da8",
     "arg-toolbar.text": "noinherit",

@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "jupyterlab-fmind"
-version = "3.0.0"
+version = "3.0.1"
 description = "Fmind light theme for JupyterLab and Notebook 7"
 requires-python = ">=3.10"
 dependencies = ["jupyterlab>=4.6.3,<5"]

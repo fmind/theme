@@ -1,8 +1,8 @@
 {
   "inputs": {
+    "GoogleSans-Bold.ttf": "280eab71ebed3dca9281ca7b071a219d48a4b379f3277b4a10c1b21b7e697126",
     "logo.png": "571cabdf26f1262a5b757f8dde57003aa8e23d9398f47dbba6e036be837ccf03",
-    "reference-banner.png": "8682cfba9f4127b9c070114026c51801d919ccc70598c822ad3a4dc292be9f98",
-    "GoogleSans-Bold.ttf": "280eab71ebed3dca9281ca7b071a219d48a4b379f3277b4a10c1b21b7e697126"
+    "reference-banner.png": "8682cfba9f4127b9c070114026c51801d919ccc70598c822ad3a4dc292be9f98"
   },
   "exports": [
     {

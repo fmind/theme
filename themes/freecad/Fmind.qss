@@ -15,7 +15,6 @@ QWidget {
 QDockWidget {
     background-color: #f1f3f4;
     color: #202124;
-    titlebar-close-icon: url(close.png);
 }
 
 QDockWidget::title {
@@ -92,7 +91,7 @@ QStatusBar {
 QLineEdit, QTextEdit, QPlainTextEdit {
     background-color: #ffffff;
     color: #202124;
-    border: 1px solid #f1f3f4;
+    border: 1px solid #595d62;
     selection-background-color: #d2e3fc;
     selection-color: #202124;
 }
@@ -100,7 +99,7 @@ QLineEdit, QTextEdit, QPlainTextEdit {
 QPushButton {
     background-color: #f1f3f4;
     color: #202124;
-    border: 1px solid #f1f3f4;
+    border: 1px solid #595d62;
     padding: 4px 12px;
     border-radius: 4px;
 }
