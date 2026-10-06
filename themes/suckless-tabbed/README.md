@@ -4,4 +4,4 @@ Light color header for suckless tabbed.
 
 ## Installation
 
-Include [fmind.h](fmind.h) in tabbed's `config.h` and recompile.
+Replace the six color definitions in tabbed's `config.h` with those in [fmind.h](fmind.h), then recompile.

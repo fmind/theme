@@ -4,6 +4,7 @@ Name=fmind
 ColorForeground=#202124
 ColorBackground=#ffffff
 ColorCursor=#4285f4
+ColorCursorUseDefault=FALSE
 ColorSelection=#d2e3fc
 ColorSelectionUseDefault=FALSE
 ColorBold=#202124

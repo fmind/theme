@@ -4,4 +4,4 @@ Light splash theme for [Plymouth](https://www.freedesktop.org/wiki/Software/Plym
 
 ## Installation
 
-Copy [fmind.plymouth](fmind.plymouth) to `/usr/share/plymouth/themes/fmind/`.
+Copy [fmind.plymouth](fmind.plymouth) and [fmind.script](fmind.script) to `/usr/share/plymouth/themes/fmind/`, then run `sudo plymouth-set-default-theme -R fmind`.

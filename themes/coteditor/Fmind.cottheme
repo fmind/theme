@@ -9,7 +9,7 @@
     "color": "#d2e3fc"
   },
   "insertionPoint": {
-    "color": "#174ea6"
+    "color": "#4285f4"
   },
   "lineHighlight": {
     "color": "#f1f3f4"
@@ -24,7 +24,7 @@
     "color": "#174ea6"
   },
   "types": {
-    "color": "#174ea6"
+    "color": "#681da8"
   },
   "attributes": {
     "color": "#934900"
@@ -36,7 +36,7 @@
     "color": "#934900"
   },
   "numbers": {
-    "color": "#174ea6"
+    "color": "#934900"
   },
   "strings": {
     "color": "#0d652d"

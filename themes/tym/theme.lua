@@ -3,7 +3,7 @@ return {
     color_foreground = "#202124",
     color_background = "#ffffff",
     color_window_background = "#ffffff",
-    color_cursor = "#174ea6",
+    color_cursor = "#4285f4",
     color_cursor_foreground = "#ffffff",
     color_highlight = "#d2e3fc",
     color_highlight_foreground = "#202124",

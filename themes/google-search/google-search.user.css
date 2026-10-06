@@ -1,12 +1,12 @@
 /* ==UserStyle==
 @name           Fmind Google Search
 @namespace      github.com/fmind/theme
-@version        1.0.0
+@version        3.0.1
 @description    Fmind theme for Google Search
 @author         Médéric Hurier
 ==/UserStyle== */
 
-@-moz-document domain("google.com") {
+@-moz-document regexp("https://www\\.google\\.[a-z.]+/search.*") {
   body {
     background-color: #ffffff !important;
     color: #202124 !important;

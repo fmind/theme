@@ -3,7 +3,11 @@
   "version": "3.0.1",
   "description": "Fmind light theme for The Lounge",
   "thelounge": {
-    "theme": "true",
-    "color": "#174ea6"
-  }
+    "name": "Fmind",
+    "type": "theme",
+    "css": "fmind.css"
+  },
+  "keywords": [
+    "thelounge-theme"
+  ]
 }

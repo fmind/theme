@@ -1,0 +1,7 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+  <qresource prefix="/uitheme">
+    <file>config.json</file>
+    <file>stylesheet.qss</file>
+  </qresource>
+</RCC>

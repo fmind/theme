@@ -2,9 +2,9 @@
 BgColor=255,255,255
 FgColor=32,33,36
 DiffBgColor=241,243,244
-ColorA=206,234,214
-ColorB=250,210,207
-ColorC=210,227,252
+ColorA=23,78,166
+ColorB=13,101,45
+ColorC=104,29,168
 ColorForConflict=165,14,14
 CurrentRangeBgColor=210,227,252
 CurrentRangeDiffBgColor=241,243,244

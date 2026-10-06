@@ -23,7 +23,7 @@ menuSubmenuArrowFg: #595d62;
 menuFgDisabled: #9aa0a6;
 scrollBarBg: #ffffff;
 scrollBarBgOver: #f1f3f4;
-scrollBarBar: #9aa0a6;
+scrollBarBar: #595d62;
 scrollBarBarOver: #595d62;
 boxBg: #ffffff;
 boxTextFg: #202124;

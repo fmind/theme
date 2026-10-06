@@ -103,7 +103,7 @@ entry selection, calendar:selected,
     background: #d2e3fc;
     color: #174ea6;
 }
-switch { background: #ffffff; border-color: #9aa0a6; color: #595d62; }
+switch { background: #ffffff; border-color: #595d62; color: #595d62; }
 switch:checked { background: #d2e3fc; border-color: #174ea6; color: #174ea6; }
 switch slider { background: #595d62; border-color: #595d62; box-shadow: none; }
 switch:checked slider { background: #174ea6; border-color: #174ea6; }
@@ -115,7 +115,7 @@ scale highlight, scale slider, progressbar progress {
 }
 scale:disabled, scale:disabled label { color: #595d62; opacity: 1; }
 scrollbar { background: #ffffff; }
-scrollbar slider { background: #9aa0a6; }
+scrollbar slider { background: #595d62; }
 tooltip, tooltip label, popover contents, popover modelbutton {
     background: #ffffff;
     color: #202124;

@@ -3,7 +3,7 @@
     name: "Fmind",
     foreground: "#202124",
     background: "#ffffff",
-    cursor: "#174ea6",
+    cursor: "#4285f4",
     bright_foreground: "#202124",
     dim_foreground: "#595d62",
     normal: (

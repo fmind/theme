@@ -8,7 +8,7 @@
 .CodeMirror-gutters { border-right: 1px solid #9aa0a6; }
 .CodeMirror-linenumber, .CodeMirror-guttermarker-subtle { color: #595d62; }
 .CodeMirror-guttermarker { color: #174ea6; }
-.CodeMirror-cursor { border-left: 2px solid #174ea6; }
+.CodeMirror-cursor { border-left: 2px solid #4285f4; }
 .CodeMirror div.CodeMirror-selected,
 .CodeMirror-focused div.CodeMirror-selected { background: #d2e3fc; }
 .CodeMirror .CodeMirror-activeline-background,

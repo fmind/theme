@@ -220,7 +220,7 @@
   --jp-collaborator-color7: #202124;
   --jp-vega-background: #ffffff;
   --jp-sidebar-min-width: 250px;
-  --jp-search-selected-match-background-color: #feefc3;
+  --jp-search-selected-match-background-color: #fbbc04;
   --jp-search-selected-match-color: #202124;
   --jp-search-unselected-match-background-color: #feefc3;
   --jp-search-unselected-match-color: #202124;
@@ -246,7 +246,7 @@
   --jp-terminal-icon-color: #ffffff;
   --jp-text-editor-icon-color: #595d62;
   --jp-inspector-icon-color: #595d62;
-  --jp-switch-color: #9aa0a6;
+  --jp-switch-color: #595d62;
   --jp-switch-true-position-color: #174ea6;
   --jp-focus-outline-color: var(--jp-brand-color1);
   --jp-focus-outline-width: 2px;

@@ -24,6 +24,7 @@ tooltip label {
 #workspaces button.active {
     background: #d2e3fc;
     color: #202124;
+    font-weight: bold;
 }
 #workspaces button.urgent,
 #battery.critical:not(.charging) {

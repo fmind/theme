@@ -4,4 +4,4 @@ Fmind theme for [Django Admin](https://docs.djangoproject.com/en/stable/ref/cont
 
 ## Install
 
-Include `fmind.css` in your custom admin base template or `ADMIN_CSS` configuration.
+Serve `fmind.css` as a static file, override `admin/base_site.html`, and link it in the `extrastyle` block with `{{ block.super }}`. Django's dark-mode toggle can override it; select the light theme.

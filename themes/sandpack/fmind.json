@@ -14,13 +14,12 @@
   "syntax": {
     "plain": "#202124",
     "comment": {
-      "color": "#595d62",
-      "fontStyle": "italic"
+      "color": "#595d62"
     },
     "keyword": "#174ea6",
     "definition": "#174ea6",
     "punctuation": "#202124",
-    "property": "#174ea6",
+    "property": "#202124",
     "tag": "#174ea6",
     "static": "#934900",
     "string": "#0d652d"

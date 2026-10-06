@@ -1,5 +1,5 @@
 // Fmind theme for Blink Shell
-black       = '#ffffff';
+black       = '#202124';
 red         = '#a50e0e';
 green       = '#0d652d';
 yellow      = '#934900';
@@ -8,10 +8,10 @@ magenta     = '#681da8';
 cyan        = '#00636d';
 white       = '#202124';
 lightBlack  = '#595d62';
-lightRed    = '#ea4335';
-lightGreen  = '#34a853';
-lightYellow = '#e37400';
-lightBlue   = '#4285f4';
+lightRed    = '#a50e0e';
+lightGreen  = '#0d652d';
+lightYellow = '#934900';
+lightBlue   = '#174ea6';
 lightMagenta= '#681da8';
 lightCyan   = '#00636d';
 lightWhite  = '#202124';
@@ -22,4 +22,4 @@ t.prefs_.set('color-palette-overrides', [
 ]);
 t.prefs_.set('background-color', '#ffffff');
 t.prefs_.set('foreground-color', '#202124');
-t.prefs_.set('cursor-color', '#174ea6');
+t.prefs_.set('cursor-color', '#4285f4');

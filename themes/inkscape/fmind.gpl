@@ -2,23 +2,23 @@ GIMP Palette
 Name: Fmind
 Columns: 4
 #
-255 255 255	Ground
- 32  33  36	Text
-241 243 244	Panel
-241 243 244	Line
- 89  93  98	Muted
- 23  78 166	Blue
- 66 133 244	Light Blue
- 26 115 232	Dark Blue
- 13 101  45	Green
- 52 168  83	Light Green
-147  73   0	Orange
-227 116   0	Light Orange
+255 255 255	White
+241 243 244	Light gray
+154 160 166	Gray
+ 89  93  98	Dark gray
+ 32  33  36	Charcoal
+ 23  78 166	Dark blue
+ 66 133 244	Medium blue
+210 227 252	Light blue
+165  14  14	Dark red
+234  67  53	Medium red
+250 210 207	Light red
+147  73   0	Dark orange
+227 116   0	Orange
+251 188   4	Yellow
+254 239 195	Light yellow
+ 13 101  45	Dark green
+ 52 168  83	Medium green
+206 234 214	Light green
 104  29 168	Purple
-165  14  14	Red
-234  67  53	Light Red
-254 239 195	Yellow
-251 188   4	Light Yellow
   0  99 109	Teal
-210 227 252	Subtle Blue
-250 210 207	Subtle Red

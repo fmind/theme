@@ -4,4 +4,4 @@ Fmind light color theme for `colorls`.
 
 ## Install
 
-Copy `fmind.yaml` to `~/.config/colorls/fmind.yaml` (or `~/.config/colorls/dark_colors.yaml`), or pass `--theme /path/to/fmind.yaml` to `colorls`.
+Copy [fmind.yaml](fmind.yaml) to `~/.config/colorls/light_colors.yaml` and run `colorls --light`.

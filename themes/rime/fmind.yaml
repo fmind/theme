@@ -1,11 +1,10 @@
 patch:
   style/color_scheme: fmind
-  preset_color_schemes:
-    fmind:
-      name: fmind
-      back_color: "#ffffff"
-      border_color: "#9aa0a6"
-      text_color: "#202124"
-      candidate_text_color: "#202124"
-      hilited_text_color: "#174ea6"
-      hilited_back_color: "#d2e3fc"
+  "preset_color_schemes/fmind":
+    name: Fmind
+    back_color: 0xffffff
+    border_color: 0xa6a09a
+    text_color: 0x242120
+    candidate_text_color: 0x242120
+    hilited_text_color: 0xa64e17
+    hilited_back_color: 0xfce3d2

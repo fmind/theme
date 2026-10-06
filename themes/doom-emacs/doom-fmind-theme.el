@@ -64,7 +64,7 @@
    (mode-line-inactive
     :background bg :foreground base5
     :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,bg)))
-   (line-number :foreground base4 :background bg)
+   (line-number :foreground base5 :background bg)
    (line-number-current-line :foreground fg :background base1 :bold t)))
 
 ;;; doom-fmind-theme.el ends here

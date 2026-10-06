@@ -7,7 +7,7 @@
         icon_alpha="1.0">
         <wcol_regular>
           <ThemeWidgetColors
-            outline="#9aa0a6"
+            outline="#595d62"
             inner="#ffffff"
             inner_sel="#174ea6"
             item="#202124"
@@ -17,7 +17,7 @@
         </wcol_regular>
         <wcol_tool>
           <ThemeWidgetColors
-            outline="#9aa0a6"
+            outline="#595d62"
             inner="#f1f3f4"
             inner_sel="#d2e3fc"
             item="#202124"

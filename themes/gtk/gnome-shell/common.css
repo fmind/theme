@@ -708,7 +708,7 @@ StEntry,
 .lg-dialog StEntry {
   background-color: #ffffff !important;
   background-gradient-direction: none !important;
-  border-color: #9aa0a6 !important;
+  border-color: #595d62 !important;
   color: #202124 !important;
   selected-color: #202124 !important;
   selection-background-color: #d2e3fc !important;
@@ -811,7 +811,7 @@ StEntry,
 .search-entry {
   background-color: #ffffff !important;
   background-gradient-direction: none !important;
-  border-color: #9aa0a6 !important;
+  border-color: #595d62 !important;
   box-shadow: none !important;
   color: #202124 !important;
   selected-color: #202124 !important;
@@ -844,7 +844,7 @@ StEntry,
   color: #202124 !important;
 }
 .unlock-dialog StEntry {
-  border-color: #9aa0a6 !important;
+  border-color: #595d62 !important;
 }
 .url-highlighter {
   link-color: #595d62 !important;

@@ -1,5 +1,5 @@
-;;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Custom-Themes.html
 ;;; fmind-theme.el --- Fmind light colors -*- lexical-binding: t; -*-
+;;; https://www.gnu.org/software/emacs/manual/html_node/elisp/Custom-Themes.html
 (deftheme fmind "Readable light colors for code and text.")
 (custom-theme-set-faces
  'fmind

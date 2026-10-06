@@ -4,6 +4,8 @@
 [delta]
     light = true
     syntax-theme = "fmind"
+    # Neutral line backgrounds keep +/- markers as the non-color cue.
+    keep-plus-minus-markers = true
     minus-style = syntax "#f1f3f4"
     minus-emph-style = bold syntax "#fad2cf"
     plus-style = syntax "#f1f3f4"

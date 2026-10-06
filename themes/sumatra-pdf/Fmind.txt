@@ -1,8 +1,5 @@
 MainWindowBackground = #ffffff
-EscToExit = false
-ReuseInstance = false
 UseSysColors = false
-RestoreSession = true
 
 FixedPageUI [
 	TextColor = #202124

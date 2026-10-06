@@ -13,7 +13,7 @@ Six light wallpapers with editable SVG sources and exact-size PNG exports. These
 
 Select the PNG matching your display and use Fit to preserve the complete design. Portrait versions retain generous blank space above and below the horizontal logo and text.
 
-The circular FΦ mark is the byte-identical original logo asset. The logo stays on the left of `fmind.dev` and `AI Agents, MLOps & Security` inside the rounded blue panel border. Royal blue `#004BBA` and dark slate `#353B4E` sit on near-white `#FDFDFD`; the text uses shaped Google Sans Bold outlines.
+The circular FΦ mark is the byte-identical original logo asset. The logo stays on the left of `fmind.dev` and `AI Agents, MLOps & Security` inside the rounded blue panel border. Dark blue `#174EA6` and dark slate `#353B4E` sit on near-white `#FDFDFD`; the text uses shaped Google Sans Bold outlines.
 
 ## Editing and export
 

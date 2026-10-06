@@ -13,7 +13,7 @@
               <Item Name="Plain Text" Foreground="0x00242120" Background="0x00FFFFFF" BoldFont="No" />
               <Item Name="Selected Text" Foreground="0x00242120" Background="0x00FCE3D2" BoldFont="No" />
               <Item Name="Inactive Selected Text" Foreground="0x00242120" Background="0x00F4F3F1" BoldFont="No" />
-              <Item Name="Line Number" Foreground="0x00A6A09A" Background="0x00FFFFFF" BoldFont="No" />
+              <Item Name="Line Number" Foreground="0x00625D59" Background="0x00FFFFFF" BoldFont="No" />
               <Item Name="CurrentLineActiveFormat" Foreground="0x02000000" Background="0x00F4F3F1" BoldFont="No" />
               <Item Name="Keyword" Foreground="0x00A64E17" Background="0x02000000" BoldFont="No" />
               <Item Name="Comment" Foreground="0x00625D59" Background="0x02000000" BoldFont="No" />

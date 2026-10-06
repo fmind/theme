@@ -6,8 +6,8 @@
   <style name="CurrentLine" background="#f1f3f4"/>
   <style name="IndentLine" foreground="#f1f3f4"/>
   <style name="Keyword" foreground="#174ea6"/>
-  <style name="DataType" foreground="#174ea6"/>
-  <style name="Decimal" foreground="#174ea6"/>
+  <style name="DataType" foreground="#681da8"/>
+  <style name="Decimal" foreground="#934900"/>
   <style name="String" foreground="#0d652d"/>
   <style name="Comment" foreground="#595d62"/>
 </style-scheme>

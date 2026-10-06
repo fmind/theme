@@ -1,6 +1,7 @@
 title: $:/palettes/Fmind
 name: Fmind
 tags: $:/tags/Palette
+type: application/x-tiddler-dictionary
 description: Fmind light palette
 
 background: #ffffff

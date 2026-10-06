@@ -4,7 +4,7 @@
 
 def syntax() -> dict[str, dict[str, str | int | bool]]:
     styles = {
-        "TEXT": {"foreground": "#202124", "background": "#ffffff", "insertbackground": "#174ea6"},
+        "TEXT": {"foreground": "#202124", "background": "#ffffff", "insertbackground": "#4285f4"},
         "GUTTER": {"foreground": "#595d62", "background": "#ffffff"},
         "sel": {"foreground": "#202124", "background": "#d2e3fc"},
         "current_line": {"background": "#f1f3f4"},

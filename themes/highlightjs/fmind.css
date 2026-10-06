@@ -28,11 +28,14 @@ code.hljs {
 }
 
 .hljs-number,
-.hljs-literal,
+.hljs-literal {
+  color: #934900;
+}
+
 .hljs-variable,
 .hljs-template-variable,
 .hljs-tag .hljs-attr {
-  color: #934900;
+  color: #202124;
 }
 
 .hljs-string,
@@ -48,6 +51,7 @@ code.hljs {
 }
 
 .hljs-type,
+.hljs-title.class_,
 .hljs-class .hljs-title {
   color: #681da8;
   font-weight: bold;

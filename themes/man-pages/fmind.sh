@@ -6,3 +6,5 @@ export LESS_TERMCAP_so=$(printf '\e[48;2;210;227;252m\e[38;2;32;33;36m')
 export LESS_TERMCAP_se=$(printf '\e[0m')
 export LESS_TERMCAP_us=$(printf '\e[4;32m')
 export LESS_TERMCAP_ue=$(printf '\e[0m')
+# groff 1.23+ emits SGR by default, which bypasses LESS_TERMCAP_*.
+export GROFF_NO_SGR=1

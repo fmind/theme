@@ -7,7 +7,7 @@ overall = { fg = "#202124", bg = "#ffffff" }
 [mgr]
 cwd = { fg = "#174ea6", italic = false, reversed = false }
 border_style = { fg = "#595d62", italic = false, reversed = false }
-find_keyword = { fg = "#202124", italic = false, reversed = false, bg = "#e37400", bold = true }
+find_keyword = { fg = "#202124", italic = false, reversed = false, bg = "#fbbc04", bold = true }
 find_position = { fg = "#174ea6", italic = false, reversed = false }
 symlink_target = { fg = "#595d62", italic = false, reversed = false }
 marker_copied = { fg = "#34a853", italic = false, reversed = false, bg = "#34a853" }
@@ -26,7 +26,7 @@ preview = { fg = "#202124", italic = false, reversed = false, bg = "#d2e3fc", bo
 
 [tabs]
 active = { fg = "#202124", italic = false, reversed = false, bg = "#fbbc04", bold = true }
-inactive = { fg = "#202124", italic = false, reversed = false, bg = "#4285f4" }
+inactive = { fg = "#202124", italic = false, reversed = false, bg = "#d2e3fc" }
 
 [mode]
 normal_main = { fg = "#202124", italic = false, reversed = false, bg = "#4285f4", bold = true }

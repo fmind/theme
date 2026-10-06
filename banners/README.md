@@ -17,7 +17,7 @@ The YouTube composition fits its central mobile safe area; Reddit keeps a smalle
 
 Check the upload preview on desktop and mobile before saving. Responsive crops and overlays remain unverified; Reddit community guidance does not establish personal-profile compatibility. No account was changed.
 
-The circular FΦ mark is the byte-identical original logo asset. The logo stays on the left of `fmind.dev` and `AI Agents, MLOps & Security` inside the rounded blue panel border. Royal blue `#004BBA` and dark slate `#353B4E` sit on near-white `#FDFDFD`; the text uses shaped Google Sans Bold outlines.
+The circular FΦ mark is the byte-identical original logo asset. The logo stays on the left of `fmind.dev` and `AI Agents, MLOps & Security` inside the rounded blue panel border. Dark blue `#174EA6` and dark slate `#353B4E` sit on near-white `#FDFDFD`; the text uses shaped Google Sans Bold outlines.
 
 ## Editing and export
 

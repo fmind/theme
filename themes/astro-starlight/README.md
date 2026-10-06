@@ -11,7 +11,7 @@ Import [fmind.css](fmind.css) into your Starlight custom CSS configuration:
 export default defineConfig({
   integrations: [
     starlight({
-      customCss: [./src/styles/fmind.css],
+      customCss: ['./src/styles/fmind.css'],
     }),
   ],
 });

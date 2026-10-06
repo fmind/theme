@@ -47,5 +47,4 @@
   <selectionForeground color="#202124" bold="false" italic="false" underline="false" strikethrough="false" />
   <debugCurrentInstructionPointer color="#ceead6" />
   <debugSecondaryInstructionPointer color="#d2e3fc" />
-  <occurenceIndication color="#d2e3fc" />
 </colorTheme>

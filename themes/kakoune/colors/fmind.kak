@@ -14,16 +14,16 @@ evaluate-commands %sh{
     teal="rgb:00636d"
 
     echo "
-        face global value ${blue}
-        face global type ${blue}
+        face global value ${orange}
+        face global type ${purple}
         face global variable ${text}
         face global module ${blue}
         face global function ${blue}
         face global string ${green}
         face global keyword ${blue}+b
-        face global operator ${blue}
+        face global operator ${text}
         face global attribute ${orange}
-        face global comment ${muted}+i
+        face global comment ${muted}
         face global title ${blue}+b
         face global header ${blue}
         face global Default ${text},${ground}

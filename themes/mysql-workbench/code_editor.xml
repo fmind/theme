@@ -1,6 +1,6 @@
 <language name="SCLEX_MYSQL">
   <style id="32" fore-color-light="#202124" back-color-light="#ffffff" bold="No" /> <!-- STYLE_DEFAULT -->
-  <style id="33" fore-color-light="#9aa0a6" back-color-light="#ffffff" bold="No" /> <!-- STYLE_LINENUMBER -->
+  <style id="33" fore-color-light="#595d62" back-color-light="#ffffff" bold="No" /> <!-- STYLE_LINENUMBER -->
   <style id="0" fore-color-light="#202124" back-color-light="#ffffff" bold="No" />  <!-- SCE_MYSQL_DEFAULT -->
   <style id="1" fore-color-light="#595d62" back-color-light="#ffffff" bold="No" />  <!-- SCE_MYSQL_COMMENT -->
   <style id="2" fore-color-light="#595d62" back-color-light="#ffffff" bold="No" />  <!-- SCE_MYSQL_COMMENTLINE -->

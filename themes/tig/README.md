@@ -6,6 +6,6 @@ Fmind theme for [tig](https://jonas.github.io/tig/).
 
 Source `fmind.tigrc` in your `~/.tigrc`:
 
-```
+```text
 source path/to/tig/fmind.tigrc
 ```

@@ -1,6 +1,6 @@
 # Fmind for Revolution IRC
 
-Light theme for [Revolution IRC](https://github.com/Anakoda/RevolutionIRC).
+Light theme for [Revolution IRC](https://github.com/MCMrARM/revolution-irc).
 
 ## Installation
 

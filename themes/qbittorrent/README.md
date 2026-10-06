@@ -4,7 +4,7 @@ A high-contrast light theme for qBittorrent desktop and WebUI.
 
 ## Install
 
-1. Compile the theme source into a `.qbtheme` bundle:
+1. Compile [resources.qrc](resources.qrc) into a `.qbtheme` bundle from this directory:
    ```sh
    rcc -binary -o fmind.qbtheme resources.qrc
    ```

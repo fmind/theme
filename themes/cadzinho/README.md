@@ -1,6 +1,6 @@
 # Fmind for CadZinho
 
-Color theme for [CadZinho](https://github.com/zecarneiro/CadZinho).
+Color theme for [CadZinho](https://github.com/zecruel/CadZinho).
 
 ## Installation
 
