@@ -6,4 +6,4 @@ Files: [theme](fmind-color-theme.json), [manifest](package.json).
 
 Merge fragments into existing settings.
 
-Copy this entire directory to `~/.vscode/extensions/fmind-theme-3.0.1/`, reload VS Code, then select `fmind` in Preferences: Color Theme.
+Copy this entire directory to `~/.vscode/extensions/fmind-theme-3.0.2/`, reload VS Code, then select `fmind` in Preferences: Color Theme.

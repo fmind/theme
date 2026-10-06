@@ -5,7 +5,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "thonny-fmind"
-version = "3.0.1"
+version = "3.0.2"
 description = "Fmind light UI and syntax themes for Thonny"
 requires-python = ">=3.10"
 dependencies = ["thonny>=4.1,<6"]
