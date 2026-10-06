@@ -1,0 +1,8 @@
+# https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#automatic-filtering
+# Search exclusions only; Git tracking is unchanged. Theme assets stay searchable for palette greps.
+*.lock
+themes/jupyterlab/package-lock.json
+# Generated artwork embeds the logo as base64 (about 2 MB per SVG).
+artworks/composition.svg
+banners/*.svg
+wallpapers/*.svg
