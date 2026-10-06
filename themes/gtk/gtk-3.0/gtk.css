@@ -44,10 +44,10 @@
   -gtk-icon-effect: none;
 }
 entry {
-  caret-color: #174ea6;
+  caret-color: #4285f4;
 }
 textview text {
-  caret-color: #174ea6;
+  caret-color: #4285f4;
 }
 menu, .csd.popup, .csd decoration {
   background-color: #ffffff;

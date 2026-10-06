@@ -4,7 +4,7 @@ Files: [fmind.dconf](fmind.dconf).
 
 ## Installation
 
-Configuration destinations are relative to `~/.config` unless an absolute path or another location is specified. Merge fragments into existing settings.
+Merge fragments into existing settings.
 
 Import into a chosen profile with the scoped command below. The fragment only changes colors.
 

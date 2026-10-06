@@ -94,7 +94,7 @@ button:disabled, button:disabled label, button:disabled image,
 entry, .notification .inline-reply .inline-reply-entry {
     background: #ffffff;
     color: #202124;
-    caret-color: #174ea6;
+    caret-color: #4285f4;
     border-color: #9aa0a6;
     box-shadow: none;
 }

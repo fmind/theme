@@ -6,7 +6,7 @@
   -gtk-icon-filter: none;
 }
 entry text, textview text {
-  caret-color: #174ea6;
+  caret-color: #4285f4;
 }
 popover > contents, popover > arrow {
   background-color: #ffffff;

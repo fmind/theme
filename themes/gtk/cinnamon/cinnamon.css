@@ -71,7 +71,7 @@ stage {
   background-gradient-direction: none;
   border-color: #595d62;
   box-shadow: none;
-  caret-color: #174ea6;
+  caret-color: #4285f4;
   color: #202124;
   selected-color: #202124;
   selection-background-color: #d2e3fc;
@@ -170,7 +170,7 @@ stage {
   background-gradient-start: #ffffff;
   border-color: #595d62;
   box-shadow: none;
-  caret-color: #174ea6;
+  caret-color: #4285f4;
   color: #202124;
   selected-color: #202124;
   selection-background-color: #d2e3fc;
@@ -194,7 +194,7 @@ stage {
   background-gradient-start: #ffffff;
   border-color: #595d62;
   box-shadow: none;
-  caret-color: #174ea6;
+  caret-color: #4285f4;
   color: #202124;
   selected-color: #202124;
 }
@@ -917,7 +917,7 @@ StScrollBar StButton#vhandle:hover {
   background-gradient-end: #d2e3fc;
   background-gradient-start: #d2e3fc;
   border-color: #174ea6;
-  caret-color: #174ea6;
+  caret-color: #4285f4;
   color: #202124;
   selection-background-color: #d2e3fc;
 }

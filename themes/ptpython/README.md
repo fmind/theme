@@ -4,7 +4,7 @@ Files: [fmind.py](fmind.py).
 
 ## Installation
 
-Configuration destinations are relative to `~/.config` unless an absolute path or another location is specified. Merge fragments into existing settings.
+Merge fragments into existing settings.
 
 Load `CODE` and `UI` in `config.py`; register and select them as shown below.
 

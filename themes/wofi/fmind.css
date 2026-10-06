@@ -19,7 +19,7 @@ window {
     border-radius: 8px;
     margin-bottom: 8px;
     padding: 8px;
-    caret-color: #174ea6;
+    caret-color: #4285f4;
 }
 #input:focus { border-color: #174ea6; }
 #input selection { color: #202124; background: #d2e3fc; }

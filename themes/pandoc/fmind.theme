@@ -43,7 +43,7 @@
       "text-color": "#595d62",
       "background-color": null,
       "bold": false,
-      "italic": true,
+      "italic": false,
       "underline": false
     }
   }

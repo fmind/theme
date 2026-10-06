@@ -10,7 +10,7 @@
   <style name="line-numbers" foreground="#595d62" background="#ffffff" />
   <style name="current-line-number" foreground="#174ea6" background="#f1f3f4" />
   <style name="cursor" foreground="#4285f4" />
-  <style name="secondary-cursor" foreground="#174ea6" />
+  <style name="secondary-cursor" foreground="#4285f4" />
   <style name="search-match" foreground="#202124" background="#feefc3" />
   <style name="bracket-match" foreground="#202124" background="#feefc3" />
   <style name="bracket-mismatch" foreground="#a50e0e" background="#fad2cf" />

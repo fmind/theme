@@ -85,7 +85,7 @@ pre, code, kbd, samp, .rendered_html pre, .rendered_html code { color: #202124; 
 .CodeMirror, .cm-s-ipython.CodeMirror, .CodeMirror-gutters { color: #202124; background: #ffffff; }
 .CodeMirror-gutters { border-color: #9aa0a6; }
 .CodeMirror-linenumber { color: #595d62; }
-.CodeMirror-cursor { border-left-color: #174ea6; }
+.CodeMirror-cursor { border-left-color: #4285f4; }
 .CodeMirror-selected, .CodeMirror-focused .CodeMirror-selected { background: #d2e3fc; }
 .CodeMirror-activeline-background { background: #f1f3f4; }
 .CodeMirror.cm-s-ipython .cm-keyword, .CodeMirror.cm-s-ipython .cm-def, .CodeMirror.cm-s-ipython .cm-tag { color: #174ea6; }

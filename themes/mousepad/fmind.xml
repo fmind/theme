@@ -20,7 +20,7 @@
   <style name="line-numbers" foreground="#595d62" background="white"/>
   <style name="current-line" background="#f1f3f4"/>
 
-  <style name="def:comment" foreground="dark_gray" italic="true"/>
+  <style name="def:comment" foreground="dark_gray"/>
   <style name="def:constant" foreground="orange"/>
   <style name="def:string" foreground="green"/>
   <style name="def:statement" foreground="blue" bold="true"/>

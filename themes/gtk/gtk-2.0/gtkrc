@@ -30,7 +30,7 @@ style "fmind-default" {
   GtkWidget::focus-padding = 1
   GtkWidget::link-color = "#174ea6"
   GtkWidget::visited-link-color = "#681da8"
-  GtkWidget::cursor-color = "#174ea6"
+  GtkWidget::cursor-color = "#4285f4"
   GtkWidget::secondary-cursor-color = "#595d62"
   GtkEntry::inner-border = { 3, 3, 3, 3 }
   GtkButton::default-border = { 1, 1, 1, 1 }

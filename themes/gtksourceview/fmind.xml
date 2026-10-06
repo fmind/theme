@@ -29,7 +29,7 @@
   <style name="selection" foreground="charcoal" background="light-blue"/>
   <style name="search-match" foreground="charcoal" background="light-yellow"/>
 
-  <style name="def:comment" foreground="dark-gray" italic="true"/>
+  <style name="def:comment" foreground="dark-gray"/>
   <style name="def:constant" foreground="dark-orange"/>
   <style name="def:string" foreground="dark-green"/>
   <style name="def:identifier" foreground="charcoal"/>

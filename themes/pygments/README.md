@@ -4,7 +4,7 @@ Files: [fmind.py](fmind.py).
 
 ## Installation
 
-Configuration destinations are relative to `~/.config` unless an absolute path or another location is specified. Merge fragments into existing settings.
+Merge fragments into existing settings.
 
 Copy the module into your Python project and pass `FmindStyle` to `HtmlFormatter`, as shown below. Requires Pygments; no changes to installed Pygments files.
 

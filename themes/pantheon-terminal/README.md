@@ -4,7 +4,7 @@ Files: [fmind.dconf](fmind.dconf).
 
 ## Installation
 
-Configuration destinations are relative to `~/.config` unless an absolute path or another location is specified. Merge fragments into existing settings.
+Merge fragments into existing settings.
 
 Import only the terminal appearance keys using the scoped command below. Selects the Custom palette, light UI and explicit colors; system-style following is disabled so it cannot replace the palette.
 
