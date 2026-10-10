@@ -1,8 +1,8 @@
 # fmind/theme
 
-A light theme for code, terminals and apps. Native files live in one folder per app under `themes/`.
+A light theme for code, terminals and apps, and the Fmind design system. Native files live in one folder per app under `themes/`; [DESIGN.md](DESIGN.md) describes the design for agents and design tools.
 
-[Previews](#previews) · [Palette](#palette) · [Themes](#available-themes) · [Contribute](#contribute)
+[Previews](#previews) · [Design system](#design-system) · [Palette](#palette) · [Themes](#available-themes) · [Contribute](#contribute)
 
 [Changelog](CHANGELOG.md) · [Previous releases](https://github.com/fmind/theme/releases)
 
@@ -15,6 +15,25 @@ A light theme for code, terminals and apps. Native files live in one folder per 
 | ![Neovim and Fish in Zellij](screenshots/zellij.png) | ![Markdown in Neovim](screenshots/markdown.png) |
 
 Synthetic terminal captures made with VHS. Download [wallpapers](wallpapers/README.md) and [social banners](banners/README.md), or [preview all artwork](artworks/previews/all-variants.png).
+
+## Design system
+
+[DESIGN.md](DESIGN.md) is the single source for Fmind's visual identity: color roles, typography, layout, shapes, diagram components and do's and don'ts. It follows the [DESIGN.md format](https://github.com/google-labs-code/design.md) (alpha): YAML design tokens followed by prose rationale. Edit it here; consumers read it or export it instead of copying values.
+
+It is the default for Médéric Hurier's own work. Customer or employer work uses that organization's design system, and an existing project keeps its established identity.
+
+| Consumer                                                                     | How it uses DESIGN.md                                                                                                                                       |
+| ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Coding agents (Claude Code, Codex, Copilot, Gemini CLI, OpenCode, Grok, agy) | [fmind/dot](https://github.com/fmind/dot) deploys a checksummed copy to `~/.agents/DESIGN.md`, and its shared `AGENTS.md` persona points every agent to it. |
+| A project repository                                                         | Copy DESIGN.md to the project root, where design-aware agents look for it, or link to `~/.agents/DESIGN.md` from the project's `AGENTS.md`.                 |
+| [Google Stitch](https://stitch.withgoogle.com/docs/design-md/specification)  | Provide DESIGN.md as the design system for generated UI; the format originates from Stitch.                                                                 |
+| Tailwind CSS v4 or v3                                                        | `npx @google/design.md@0.4.0 export --format css-tailwind DESIGN.md` emits an `@theme` block; `--format json-tailwind` emits v3 `theme.extend` JSON.        |
+| Figma variables, Style Dictionary, Tokens Studio                             | `npx @google/design.md@0.4.0 export --format dtcg DESIGN.md` emits [W3C Design Tokens](https://www.designtokens.org/) JSON.                                 |
+| Plain CSS (Zensical, static sites)                                           | `npx @google/design.md@0.4.0 export --format css-vars --prefix fmind DESIGN.md` emits custom properties.                                                    |
+| Diagrams, decks, illustrations and demos                                     | The `fmind-visuals` and `diagrams-as-code` skills in fmind/dot adapt the tokens to D2, Mermaid, SVG, Typst and VHS.                                         |
+| Terminals, editors and apps                                                  | Use the native files under `themes/`; [palette.yaml](checks/palette.yaml) maps the same colors to syntax and ANSI roles.                                    |
+
+Validate changes with `npx @google/design.md@0.4.0 lint DESIGN.md` (structure, references and WCAG contrast) and compare revisions with `npx @google/design.md@0.4.0 diff old.md DESIGN.md`. `mise run test` checks offline that the tokens match the palette and that component text meets 4.5:1.
 
 ## Palette
 

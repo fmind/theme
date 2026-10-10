@@ -1,11 +1,11 @@
 # AGENTS.md
 
-Fmind is a light theme. README.md owns usage and is displayed directly on GitHub; CHANGELOG.md records user-visible changes. Keep only these three root Markdown files.
+Fmind is a light theme and design system. README.md owns usage and is displayed directly on GitHub; DESIGN.md owns the design system in the [DESIGN.md format](https://github.com/google-labs-code/design.md); CHANGELOG.md records user-visible changes. Keep only these four root Markdown files.
 
 ## Guidelines
 
 - Maintain native files directly under `themes/`; list every integration alphabetically in README, linking to its directory. Each directory owns installation in its README; do not introduce priority tiers. Experimental files do not establish native support.
-- Keep palette expectations in `checks/palette.yaml`, README and `screenshots/palette.svg` aligned. Text needs 4.5:1 contrast; essential controls need 3:1 and non-color state cues.
+- Keep palette expectations in `checks/palette.yaml`, DESIGN.md, README and `screenshots/palette.svg` aligned. Design roles, typography, layout and components change in DESIGN.md only; lint it with `npx @google/design.md@0.4.0 lint DESIGN.md`. Text needs 4.5:1 contrast; essential controls need 3:1 and non-color state cues.
 - Refresh the two synthetic terminal captures with `mise run screenshots` after theme visual changes. They do not prove GUI coverage.
 - Edit branding through `artworks/generate.py` and regenerate with `mise run artwork`; preserve bundled source assets and their licenses.
 - Isolate app configuration. Never modify installed themes or contact live app services during checks.

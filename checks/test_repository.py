@@ -16,6 +16,7 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1] / "themes"
 APPS = sorted(path for path in ROOT.iterdir() if path.is_dir() and not path.name.startswith((".", "__")))
 PALETTE = yaml.safe_load((ROOT.parent / "checks/palette.yaml").read_text())
+DESIGN = yaml.safe_load((ROOT.parent / "DESIGN.md").read_text().split("---\n")[1])
 
 
 def contrast(a: str, b: str) -> float:
@@ -96,7 +97,7 @@ class DocumentationTests(unittest.TestCase):
                     self.assertTrue((app / unquote(url.path)).exists(), f"{app.name}: {target}")
 
     def test_repository_documentation_links_and_images(self):
-        paths = [ROOT.parent / name for name in ("README.md", "AGENTS.md", "CHANGELOG.md")]
+        paths = [ROOT.parent / name for name in ("README.md", "AGENTS.md", "CHANGELOG.md", "DESIGN.md")]
         paths += [ROOT.parent / folder / "README.md" for folder in ("artworks", "banners", "wallpapers")]
         for path in paths:
             parser = Links()
@@ -120,6 +121,20 @@ class SharedTests(unittest.TestCase):
         for color in {PALETTE["text"], PALETTE["gutter"], *PALETTE["roles"].values(), *PALETTE["ansi"].values()}:
             with self.subTest(color=color):
                 self.assertGreaterEqual(contrast(color, PALETTE["ground"]), 4.5)
+
+    def test_design_tokens_match_palette(self):
+        colors = {name: value.lower() for name, value in DESIGN["colors"].items()}
+        self.assertEqual(set(colors.values()), {*PALETTE["official"], *PALETTE["custom"]})
+        self.assertEqual(len(colors), len(set(colors.values())))
+        for name, tokens in DESIGN["components"].items():
+            values = {
+                key: colors[value[len("{colors.") : -1]]
+                for key, value in tokens.items()
+                if value.startswith("{colors.")
+            }
+            if {"backgroundColor", "textColor"} <= values.keys():
+                with self.subTest(component=name):
+                    self.assertGreaterEqual(contrast(values["textColor"], values["backgroundColor"]), 4.5)
 
     def test_structured_theme_files(self):
         # Honor ignored build/dependency directories and pending deletions.
