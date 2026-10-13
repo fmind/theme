@@ -6,6 +6,10 @@
 
 - Add `DESIGN.md`, the Fmind design system in the DESIGN.md format: color roles, typography, layout, shapes, diagram components and usage rules, with the tools that consume it. Checks keep its tokens equal to the palette and its component text at 4.5:1 contrast.
 
+### Maintenance
+
+- Update dprint, Lefthook, Neovim, Node.js, Ruff and uv to current stable releases.
+
 ## 3.0.2 — 2026-10-06
 
 ### Fixed
