@@ -9,6 +9,7 @@
 ### Maintenance
 
 - Update dprint, Lefthook, Neovim, Node.js, Ruff and uv to current stable releases.
+- Use Python 3.15 for repository tasks and update the locked artwork dependencies; retain Python 3.14 source compatibility.
 
 ## 3.0.2 — 2026-10-06
 
