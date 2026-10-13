@@ -9,7 +9,7 @@
 ### Maintenance
 
 - Update dprint, Lefthook, Neovim, Node.js, Ruff and uv to current stable releases.
-- Use Python 3.15 for repository tasks and update the locked artwork dependencies; retain Python 3.14 source compatibility.
+- Update the locked artwork dependencies; repository tasks stay on the workstation Python 3.14.
 - Update jdx/mise-action to 5.1.2 and refresh the JupyterLab build lock.
 
 ### Fixed
