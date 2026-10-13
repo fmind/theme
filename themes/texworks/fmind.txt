@@ -1,0 +1,17 @@
+# https://github.com/TeXworks/texworks/blob/main/res/resfiles/configuration/syntax-patterns.txt
+# Keep the leading space before each hex color.
+[LaTeX]
+# special characters
+ #934900		N	[$#^_{}&]
+
+# LaTeX environments
+ #0d652d	N	\\(?:begin|end)\s*\{[^\}]*\}
+
+# LaTeX packages
+ #0d652d	N	\\usepackage\s*(?:\[[^\]]*\]\s*)?\{[^\}]*\}
+
+# control sequences
+ #174ea6;B	N	\\(?:[\p{L}@]+|.)
+
+# comments
+ #595d62		Y	%.*

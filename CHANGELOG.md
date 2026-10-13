@@ -12,6 +12,10 @@
 - Use Python 3.15 for repository tasks and update the locked artwork dependencies; retain Python 3.14 source compatibility.
 - Update jdx/mise-action to 5.1.2 and refresh the JupyterLab build lock.
 
+### Fixed
+
+- Correct native theme formats and settings for Git, aerc, lnav, Nova, Pi Coding Agent, Notepad++ and TeXworks; remove an unrecognized Sioyek setting.
+
 ## 3.0.2 — 2026-10-06
 
 ### Fixed

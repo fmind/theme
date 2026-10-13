@@ -1,40 +1,43 @@
 {
-  "$schema": "https://lnav.org/schemas/format-v1.schema.json",
-  "fmind-theme": {
-    "title": "Fmind",
-    "description": "Fmind light theme for lnav",
-    "theme": {
-      "styles": {
-        "text": {
-          "color": "#202124",
-          "background-color": "#ffffff"
+  "$schema": "https://lnav.org/schemas/config-v1.schema.json",
+  "ui": {
+    "theme-defs": {
+      "fmind": {
+        "styles": {
+          "text": {
+            "color": "#202124",
+            "background-color": "#ffffff"
+          },
+          "alt-text": {
+            "color": "#202124",
+            "background-color": "#f1f3f4"
+          },
+          "error": {
+            "color": "#a50e0e",
+            "bold": true
+          },
+          "warning": {
+            "color": "#934900"
+          },
+          "info": {
+            "color": "#00636d"
+          },
+          "focused": {
+            "background-color": "#d2e3fc",
+            "color": "#202124"
+          }
         },
-        "alt-text": {
-          "color": "#202124",
-          "background-color": "#f1f3f4"
-        },
-        "error": {
-          "color": "#a50e0e",
-          "bold": true
-        },
-        "warning": {
-          "color": "#934900"
-        },
-        "info": {
-          "color": "#00636d"
-        },
-        "keyword": {
-          "color": "#174ea6",
-          "bold": true
-        },
-        "string": {
-          "color": "#0d652d"
-        },
-        "comment": {
-          "color": "#595d62"
-        },
-        "focused": {
-          "background-color": "#d2e3fc"
+        "syntax-styles": {
+          "keyword": {
+            "color": "#174ea6",
+            "bold": true
+          },
+          "string": {
+            "color": "#0d652d"
+          },
+          "comment": {
+            "color": "#595d62"
+          }
         }
       }
     }

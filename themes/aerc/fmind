@@ -1,6 +1,7 @@
 # Fmind styleset for aerc
 *.default = true
-*.normal = #202124
+*.normal = true
+*.fg = #202124
 *.bg = #ffffff
 
 msglist_unread.fg = #174ea6

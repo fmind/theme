@@ -1,0 +1,41 @@
+/* https://docs.nova.app/extensions/themes/ */
+meta {
+  -theme-interface-style: light;
+  -theme-vibrancy: none;
+}
+meta.window, meta.document {
+  background-color: #ffffff;
+  border-color: #9aa0a6;
+}
+meta.text {
+  color: #202124;
+}
+meta.text.selected {
+  color: #202124;
+  background-color: #d2e3fc;
+}
+meta.cursor {
+  background-color: #f1f3f4;
+}
+meta.gutter {
+  color: #595d62;
+  background-color: #ffffff;
+}
+comment {
+  color: #595d62;
+}
+keyword, identifier.function {
+  color: #174ea6;
+}
+string {
+  color: #0d652d;
+}
+value.number, value.boolean {
+  color: #934900;
+}
+identifier.type {
+  color: #681da8;
+}
+invalid {
+  color: #a50e0e;
+}

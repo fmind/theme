@@ -8,5 +8,5 @@ Include `fmind.gitconfig` from your global `~/.gitconfig`:
 
 ```ini
 [include]
-	path = /path/to/git/fmind.gitconfig
+	path = /path/to/theme/themes/git/fmind.gitconfig
 ```
