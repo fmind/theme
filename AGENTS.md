@@ -38,4 +38,4 @@ Checks cover shared repository invariants, not native app behavior; verify affec
 
 `mise run install` activates Lefthook: pre-commit formats staged files in scope and runs `mise run check`; pre-push runs `mise run test`. Keep hook commands delegated to mise tasks. dprint uses the explicit scope in `dprint.json`; native files under `themes/`, screenshot fixtures, generated artwork and lockfiles are outside that scope. Preserve one-line Markdown paragraphs.
 
-GitHub Actions runs the read-only `mise run all` gate. Dependencies and tools are pinned in lockfiles and `mise.toml`; Dependabot proposes dependency updates for review.
+GitHub Actions runs the read-only `mise run all` gate. Dependencies and tools are pinned in lockfiles and `mise.toml`; Dependabot opens grouped pull requests for security fixes only; version updates stay off.

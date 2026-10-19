@@ -1,42 +1,39 @@
-# https://docs.github.com/en/code-security/dependabot/working-with-dependabot/dependabot-options-reference
+# Docs: https://docs.github.com/en/code-security/reference/supply-chain-security/dependabot-options-reference
+# Security updates only: `open-pull-requests-limit: 0` disables version updates, while
+# Dependabot still opens one grouped fix PR per ecosystem when an alert has a patched
+# release. `schedule` is required by the schema; it only paces the disabled version updates.
 version: 2
 updates:
   - package-ecosystem: github-actions
     directory: /
-    cooldown:
-      default-days: 7
     schedule:
       interval: weekly
-      day: monday
+    open-pull-requests-limit: 0
     commit-message:
-      prefix: chore(deps)
+      prefix: "fix(deps)"
     groups:
-      actions:
+      actions-security:
+        applies-to: security-updates
         patterns: ["*"]
-        update-types: [minor, patch]
   - package-ecosystem: uv
     directory: /
-    cooldown:
-      default-days: 7
     schedule:
       interval: weekly
-      day: monday
+    open-pull-requests-limit: 0
     commit-message:
-      prefix: chore(deps)
+      prefix: "fix(deps)"
     groups:
-      python:
+      python-security:
+        applies-to: security-updates
         patterns: ["*"]
-        update-types: [minor, patch]
   - package-ecosystem: npm
     directory: /themes/jupyterlab
-    cooldown:
-      default-days: 7
     schedule:
       interval: weekly
-      day: monday
+    open-pull-requests-limit: 0
     commit-message:
-      prefix: chore(deps)
+      prefix: "fix(deps)"
     groups:
-      jupyterlab:
+      jupyterlab-security:
+        applies-to: security-updates
         patterns: ["*"]
-        update-types: [minor, patch]
