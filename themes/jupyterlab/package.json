@@ -31,6 +31,6 @@
     }
   },
   "overrides": {
-    "sanitize-html": "2.17.7"
+    "sanitize-html": "2.18.1"
   }
 }

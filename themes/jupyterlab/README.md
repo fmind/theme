@@ -18,4 +18,4 @@ The theme covers the native CSS variable API, notebook cells, CodeMirror syntax,
 
 For classic Notebook 6 or NbClassic, use the separate [classic Notebook port](../jupyter-notebook/README.md). The native variable vocabulary and dimensions retain Jupyter's BSD notice in `LICENSE`.
 
-Build dependencies are locked in `package-lock.json`. The sanitize-html override selects the patched 2.17.7 release for the build graph; apputils is supplied by the host at runtime and is not bundled. This override does not patch the host Jupyter application. The transitive exenv-es6 package still emits an upstream deprecation notice on a fresh npm install.
+Build dependencies are locked in `package-lock.json`. The sanitize-html override selects the patched 2.18.1 release for the build graph; apputils is supplied by the host at runtime and is not bundled. This override does not patch the host Jupyter application. The transitive exenv-es6 package still emits an upstream deprecation notice on a fresh npm install.

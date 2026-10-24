@@ -11,6 +11,7 @@
 - Update dprint, Lefthook, Neovim, Node.js, Ruff and uv to current stable releases.
 - Update the locked artwork dependencies; repository tasks stay on the workstation Python 3.14.
 - Update jdx/mise-action to 5.1.2 and refresh the JupyterLab build lock.
+- Clear npm audit advisories in the JupyterLab build lock: override sanitize-html to 2.18.1 and update fast-uri to 3.1.9.
 
 ### Fixed
 
