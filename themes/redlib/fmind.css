@@ -1,0 +1,20 @@
+/* Fmind theme for Redlib */
+/* Format and variables follow static/themes/*.css in redlib-org/redlib. */
+.fmind {
+	--accent: #174ea6;
+	--green: #0d652d;
+	--text: #202124;
+	--foreground: #f1f3f4;
+	--background: #ffffff;
+	--outside: #f1f3f4;
+	--post: #f1f3f4;
+	--panel-border: 1px solid #9aa0a6;
+	--highlighted: #ffffff;
+	--visited: #681da8;
+	--shadow: 0 1px 3px rgba(32, 33, 36, 0.25);
+}
+
+html:has(> .fmind) {
+	/* Hint color theme to browser for scrollbar */
+	color-scheme: light;
+}
