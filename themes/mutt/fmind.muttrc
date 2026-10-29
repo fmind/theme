@@ -1,4 +1,6 @@
-# Fmind light theme for Mutt / Neomutt
+# Fmind light theme for NeoMutt (24-bit colors; classic Mutt does not accept #RRGGBB)
+# color_directcolor must be set before any color command: https://neomutt.org/guide/reference.html#color-directcolor
+set color_directcolor = yes
 color normal        "#202124" "#ffffff"
 color status        "#202124" "#f1f3f4"
 color indicator     "#202124" "#d2e3fc"

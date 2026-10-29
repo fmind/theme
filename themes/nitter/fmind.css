@@ -1,14 +1,13 @@
 /* Fmind theme for Nitter */
-:root {
-  --bg: #ffffff;
-  --fg: #202124;
-  --accent: #174ea6;
-  --panel: #f1f3f4;
-  --border: #9aa0a6;
-}
+/* Variable names follow public/css/themes/*.css in zedeus/nitter. */
 body {
-  background-color: var(--bg);
-  color: var(--fg);
+  --bg_color: #ffffff;
+  --fg_color: #202124;
+  --accent: #174ea6;
+  --bg_panel: #f1f3f4;
+  --border_grey: #9aa0a6;
+  background-color: var(--bg_color);
+  color: var(--fg_color);
 }
 a {
   color: var(--accent);

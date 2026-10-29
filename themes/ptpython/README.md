@@ -4,8 +4,6 @@ Files: [fmind.py](fmind.py).
 
 ## Installation
 
-Merge fragments into existing settings.
-
 Load `CODE` and `UI` in `config.py`; register and select them as shown below.
 
 Place `fmind.py` in `~/.config/ptpython/` and add this inside your `configure(repl)` function. Adjust the explicit path if you use a different config directory; ptpython executes `config.py` without defining `__file__`.

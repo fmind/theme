@@ -1,13 +1,12 @@
 {
-  "name": "Fmind",
-  "description": "Fmind Light Theme for Apache Superset",
-  "colors": {
-    "primary": "#174ea6",
-    "secondary": "#595d62",
-    "grayscale": {
-      "base": "#ffffff",
-      "light1": "#f1f3f4",
-      "dark1": "#202124"
-    }
+  "token": {
+    "colorPrimary": "#174ea6",
+    "colorLink": "#174ea6",
+    "colorSuccess": "#0d652d",
+    "colorWarning": "#934900",
+    "colorError": "#a50e0e",
+    "colorInfo": "#00636d",
+    "colorBgBase": "#ffffff",
+    "colorTextBase": "#202124"
   }
 }

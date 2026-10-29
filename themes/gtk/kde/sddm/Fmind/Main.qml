@@ -80,7 +80,7 @@ Rectangle {
             y: 24
             spacing: 10
             FLabel { text: "Fmind"; font.pixelSize: 36; font.weight: Font.Medium; Layout.fillWidth: true }
-            FLabel { text: Qt.formatDateTime(root.now, Qt.DefaultLocaleShortDate); color: "#595d62"; Layout.fillWidth: true }
+            FLabel { text: Qt.formatDateTime(root.now, Qt.locale(), Locale.ShortFormat); color: "#595d62"; Layout.fillWidth: true }
             Loader {
                 Layout.fillWidth: true
                 active: config.showBattery === "true"

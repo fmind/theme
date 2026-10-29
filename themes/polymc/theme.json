@@ -1,4 +1,6 @@
 {
+  "name": "Fmind",
+  "widgets": "Fusion",
   "colors": {
     "AlternateBase": "#f1f3f4",
     "Base": "#ffffff",

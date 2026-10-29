@@ -6,12 +6,12 @@
   "author": {
     "name": "Médéric Hurier"
   },
-  "contributions": {
+  "contributes": {
     "themes": [
       {
         "id": "fmind",
         "name": "Fmind",
-        "path": "./theme.xml"
+        "path": "."
       }
     ]
   }

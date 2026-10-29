@@ -2,6 +2,9 @@
   "name": "fmind",
   "displayName": "Fmind",
   "theme": "ui",
+  "engines": {
+    "mailspring": "*"
+  },
   "version": "3.0.2",
   "title": "Fmind",
   "description": "Fmind light theme for Mailspring"

@@ -1,0 +1,13 @@
+{
+  "name": "Fmind",
+  "author": "Fmind",
+  "description": "Fmind light theme for the Steam client.",
+  "UseDefaultPatches": false,
+  "Patches": [
+    { "MatchRegexString": "^Steam$", "TargetCss": "webkit.css" },
+    { "MatchRegexString": "Menu$", "TargetCss": "webkit.css" },
+    { "MatchRegexString": "Supernav$", "TargetCss": "webkit.css" },
+    { "MatchRegexString": ".ModalDialogPopup", "TargetCss": "webkit.css" },
+    { "MatchRegexString": ".FullModalOverlay", "TargetCss": "webkit.css" }
+  ]
+}

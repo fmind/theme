@@ -1,6 +1,8 @@
 /* Fmind light theme for Logseq */
+/* Logseq sets light variables on html[data-theme=light][data-color=…]; match that specificity so these win. */
 
-:root {
+html[data-theme="light"],
+html[data-theme="light"][data-color] {
   --ls-primary-background-color: #ffffff;
   --ls-secondary-background-color: #f1f3f4;
   --ls-tertiary-background-color: #f1f3f4;

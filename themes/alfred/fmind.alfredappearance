@@ -1,25 +1,61 @@
 {
-  "alfredtheme": {
-    "name": "Fmind",
-    "description": "Minimalist light theme for Alfred using the Fmind color palette",
-    "author": "Fmind",
-    "theme": {
-      "color": {
-        "background": "#ffffff",
-        "border": "#9aa0a6",
-        "separator": "#f1f3f4",
-        "resultText": "#202124",
-        "resultSubtext": "#595d62",
-        "resultSelectedText": "#202124",
-        "resultSelectedSubtext": "#595d62",
-        "resultSelectedBackground": "#d2e3fc",
-        "scrollHandle": "#595d62",
-        "searchBackground": "#ffffff",
-        "searchText": "#202124",
-        "shortcutText": "#595d62",
-        "shortcutSelectedText": "#174ea6"
+  "alfredtheme" : {
+    "result" : {
+      "textSpacing" : 5,
+      "subtext" : {
+        "size" : 12,
+        "colorSelected" : "#595D62FF",
+        "font" : "System",
+        "color" : "#595D62FF"
       },
-      "font": "Google Sans"
-    }
+      "shortcut" : {
+        "size" : 16,
+        "colorSelected" : "#174EA6FF",
+        "font" : "System",
+        "color" : "#595D62FF"
+      },
+      "backgroundSelected" : "#D2E3FCFF",
+      "text" : {
+        "size" : 18,
+        "colorSelected" : "#202124FF",
+        "font" : "System",
+        "color" : "#202124FF"
+      },
+      "iconPaddingHorizontal" : 4,
+      "paddingVertical" : 3,
+      "iconSize" : 40
+    },
+    "search" : {
+      "paddingVertical" : 5,
+      "background" : "#FFFFFFFF",
+      "spacing" : 4,
+      "text" : {
+        "size" : 34,
+        "colorSelected" : "#202124FF",
+        "font" : "System Thin",
+        "color" : "#202124FF"
+      },
+      "backgroundSelected" : "#D2E3FCFF"
+    },
+    "window" : {
+      "color" : "#FFFFFFFF",
+      "paddingHorizontal" : 4,
+      "width" : 559,
+      "borderPadding" : 0,
+      "borderColor" : "#9AA0A6FF",
+      "blur" : 0,
+      "roundness" : 3,
+      "paddingVertical" : 4
+    },
+    "credit" : "Fmind",
+    "separator" : {
+      "color" : "#F1F3F4FF",
+      "thickness" : 1
+    },
+    "scrollbar" : {
+      "color" : "#595D62FF",
+      "thickness" : 2
+    },
+    "name" : "Fmind"
   }
 }

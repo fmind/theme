@@ -4,8 +4,6 @@ Files: [fmind.py](fmind.py).
 
 ## Installation
 
-Merge fragments into existing settings.
-
 Copy the module into your Python project and pass `FmindStyle` to `HtmlFormatter`, as shown below. Requires Pygments; no changes to installed Pygments files.
 
 With `fmind.py` beside your script:

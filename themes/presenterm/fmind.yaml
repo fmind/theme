@@ -14,9 +14,8 @@ headings:
     colors:
       foreground: "#174ea6"
 code:
-  colors:
-    foreground: "#202124"
-    background: "#f1f3f4"
+  # presenterm highlights code with a syntect theme; it ignores colors here.
+  theme_name: GitHub
 intro_slide:
   title:
     colors:

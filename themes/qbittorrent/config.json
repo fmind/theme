@@ -1,12 +1,13 @@
 {
   "colors": {
-    "TransferList.Normal": "#202124",
     "TransferList.Downloading": "#174ea6",
     "TransferList.StalledDownloading": "#595d62",
     "TransferList.Uploading": "#0d652d",
     "TransferList.StalledUploading": "#595d62",
     "TransferList.Error": "#a50e0e",
-    "TransferList.Paused": "#595d62",
-    "TransferList.Queued": "#934900"
+    "TransferList.StoppedDownloading": "#595d62",
+    "TransferList.StoppedUploading": "#595d62",
+    "TransferList.QueuedDownloading": "#934900",
+    "TransferList.QueuedUploading": "#934900"
   }
 }

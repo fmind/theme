@@ -4,8 +4,6 @@ Files: [fmind.css](fmind.css).
 
 ## Installation
 
-Merge fragments into existing settings.
-
 Copy to `~/.config/swaync/fmind.css`; import the installed default stylesheet followed by this file in your `~/.config/swaync/style.css`, as shown below. Reload with `swaync-client --reload-css`. Covers notifications, actions, replies, groups and built-in widgets.
 
 In `~/.config/swaync/style.css`:

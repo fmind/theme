@@ -9,7 +9,7 @@ A light theme for [Monkeytype](https://monkeytype.com).
 3. Apply the following color values:
    - **Background**: `#ffffff`
    - **Main**: `#174ea6`
-   - **Sub**: `#9aa0a6`
+   - **Sub**: `#595d62`
    - **Text**: `#202124`
    - **Caret**: `#4285f4`
 4. Alternatively, import the JSON settings from [fmind.json](fmind.json).

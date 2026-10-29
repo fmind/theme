@@ -4,4 +4,4 @@ Light theme for [FocusWriter](https://gottcode.org/focuswriter/).
 
 ## Installation
 
-Import [fmind.fwt](fmind.fwt) in FocusWriter Settings → Themes.
+In FocusWriter Settings → Themes → Custom, choose Import and select [fmind.theme](fmind.theme).

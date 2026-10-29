@@ -1,18 +1,18 @@
 {
-  "name": "Fmind",
-  "version": 1,
-  "colors": {
-    "schematic": {
-      "background": "#ffffff",
-      "grid": "#f1f3f4",
-      "wire": "#174ea6",
-      "bus": "#681da8",
-      "junction": "#174ea6",
-      "device": "#202124",
-      "label": "#0d652d",
-      "text": "#202124",
-      "pin": "#a50e0e",
-      "note": "#595d62"
-    }
+  "meta": {
+    "name": "Fmind",
+    "version": 6
+  },
+  "schematic": {
+    "background": "#ffffff",
+    "grid": "#f1f3f4",
+    "wire": "#174ea6",
+    "bus": "#681da8",
+    "junction": "#174ea6",
+    "component_outline": "#202124",
+    "label_local": "#0d652d",
+    "fields": "#202124",
+    "pin": "#a50e0e",
+    "note": "#595d62"
   }
 }

@@ -1,21 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- https://github.com/Sequel-Ace/Sequel-Ace/blob/main/Source/Controllers/Preferences/Panes/SPEditorPreferencePane.m -->
 <plist version="1.0">
 <dict>
 	<key>name</key>
 	<string>Fmind</string>
 	<key>settings</key>
-	<dict>
-		<key>background</key>
-		<string>#ffffff</string>
-		<key>foreground</key>
-		<string>#202124</string>
-		<key>caret</key>
-		<string>#174ea6</string>
-		<key>selection</key>
-		<string>#d2e3fc</string>
-		<key>lineHighlight</key>
-		<string>#f1f3f4</string>
-	</dict>
+	<array>
+		<dict>
+			<key>settings</key>
+			<dict>
+				<key>background</key>
+				<string>#ffffff</string>
+				<key>caret</key>
+				<string>#174ea6</string>
+				<key>foreground</key>
+				<string>#202124</string>
+				<key>lineHighlight</key>
+				<string>#f1f3f4</string>
+				<key>selection</key>
+				<string>#d2e3fc</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Comment</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#595d62</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>String</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#0d652d</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Keyword</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#174ea6</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>User-defined constant</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#681da8</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Number</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#934900</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Variable</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#202124</string>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>

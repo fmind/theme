@@ -30,12 +30,18 @@
     <view_3d>
       <ThemeView3D>
         <space>
-          <ThemeSpaceGeneric
-            back="#ffffff"
+          <ThemeSpaceGradient
             title="#202124"
             text="#202124"
             text_hi="#174ea6">
-          </ThemeSpaceGeneric>
+            <gradients>
+              <ThemeGradientColors
+                background_type="SINGLE_COLOR"
+                high_gradient="#ffffff"
+                gradient="#ffffff">
+              </ThemeGradientColors>
+            </gradients>
+          </ThemeSpaceGradient>
         </space>
       </ThemeView3D>
     </view_3d>

@@ -1,10 +1,41 @@
 {
   "name": "Fmind",
-  "background": "#ffffff",
+  "index": 3000,
+  "paper": "#ffffff",
   "text": "#202124",
-  "keyword": "#174ea6",
-  "number": "#934900",
-  "string": "#0d652d",
-  "comment": "#595d62",
-  "selection": "#d2e3fc"
+  "caret": {
+    "width": 2,
+    "foreground": "#4285f4",
+    "line-background": "#f1f3f4"
+  },
+  "colors": {
+    "keyword1": "#174ea6",
+    "keyword2": "#174ea6",
+    "keyword3": "#681da8",
+    "commentline": "#595d62",
+    "commentdoc": "#595d62",
+    "commentdockeyword": "#174ea6",
+    "comment": "#595d62",
+    "number": "#934900",
+    "string": "#0d652d",
+    "operator": "#202124",
+    "variables": "#202124",
+    "keywords": "#174ea6",
+    "transformations": "#681da8",
+    "booleans": "#934900",
+    "functions": "#174ea6",
+    "models": "#681da8",
+    "special-variables": "#681da8",
+    "whitespace-foreground": "#595d62",
+    "selection-foreground": "#202124",
+    "selection-background": "#d2e3fc",
+    "margin-background": "#ffffff",
+    "margin-foreground": "#595d62",
+    "matched-brace-background": "#d2e3fc",
+    "matched-brace-foreground": "#202124",
+    "unmatched-brace-background": "#fad2cf",
+    "unmatched-brace-foreground": "#a50e0e",
+    "error-marker": "#a50e0e",
+    "edge": "#9aa0a6"
+  }
 }

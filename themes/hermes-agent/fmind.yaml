@@ -1,6 +1,26 @@
-theme:
-  name: fmind
-  background: "#ffffff"
-  text: "#202124"
-  accent: "#174ea6"
-  surface: "#f1f3f4"
+# https://hermes-agent.nousresearch.com/docs/user-guide/features/skins
+# Unset keys inherit from the built-in default skin.
+name: fmind
+description: Fmind light skin
+colors:
+  banner_border: "#174ea6"
+  banner_title: "#174ea6"
+  banner_accent: "#174ea6"
+  banner_dim: "#595d62"
+  banner_text: "#202124"
+  ui_accent: "#174ea6"
+  ui_label: "#681da8"
+  ui_ok: "#0d652d"
+  ui_error: "#a50e0e"
+  ui_warn: "#934900"
+  prompt: "#202124"
+  input_rule: "#9aa0a6"
+  response_border: "#174ea6"
+  session_label: "#174ea6"
+  session_border: "#9aa0a6"
+  status_bar_bg: "#f1f3f4"
+  selection_bg: "#d2e3fc"
+  completion_menu_bg: "#f1f3f4"
+  completion_menu_current_bg: "#d2e3fc"
+  completion_menu_meta_bg: "#f1f3f4"
+  completion_menu_meta_current_bg: "#d2e3fc"

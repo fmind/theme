@@ -4,4 +4,4 @@ Light colors for [GoAccess](https://goaccess.io/).
 
 ## Installation
 
-Include [fmind.conf](fmind.conf) in `~/.goaccessrc`.
+Append the lines of [fmind.conf](fmind.conf) to `~/.goaccessrc`; GoAccess has no include directive.

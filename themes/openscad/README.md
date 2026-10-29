@@ -4,4 +4,4 @@ Color scheme for [OpenSCAD](https://openscad.org/).
 
 ## Installation
 
-Import [fmind.json](fmind.json) into OpenSCAD editor preferences.
+Copy [fmind.json](fmind.json) to `color-schemes/editor/` in your OpenSCAD user config directory (`~/.config/OpenSCAD/` on Linux), restart OpenSCAD, then select Fmind under Preferences → Editor.

@@ -4,8 +4,6 @@ Files: [fmind.dconf](fmind.dconf).
 
 ## Installation
 
-Merge fragments into existing settings.
-
 Import only the terminal appearance keys using the scoped command below. Selects the Custom palette, light UI and explicit colors; system-style following is disabled so it cannot replace the palette.
 
 Run from this directory, then reopen Terminal:

@@ -13,11 +13,19 @@ if c is not None:
     c.colors.completion.fg = "#202124"
     c.colors.completion.item.selected.bg = "#d2e3fc"
     c.colors.completion.item.selected.fg = "#202124"
+    c.colors.completion.match.fg = "#174ea6"
+    c.colors.completion.item.selected.match.fg = "#174ea6"
 
     # Statusbar
     c.colors.statusbar.normal.bg = "#ffffff"
     c.colors.statusbar.normal.fg = "#202124"
     c.colors.statusbar.url.fg = "#174ea6"
+    c.colors.statusbar.url.success.http.fg = "#174ea6"
+    c.colors.statusbar.url.success.https.fg = "#174ea6"
+    c.colors.statusbar.url.hover.fg = "#174ea6"
+    c.colors.statusbar.url.warn.fg = "#934900"
+    c.colors.statusbar.url.error.fg = "#a50e0e"
+    c.colors.statusbar.progress.bg = "#174ea6"
 
     # Tabs
     c.colors.tabs.even.bg = "#f1f3f4"

@@ -441,10 +441,13 @@ stage,
   border-left-color: #9aa0a6 !important;
   color: #202124 !important;
 }
-.calendar .calendar-day-with-events,
-.calendar .calendar-day.calendar-day-with-events,
 #dash .dash-item-container .placeholder {
   background-image: none !important;
+}
+.calendar .calendar-day-with-events,
+.calendar .calendar-day.calendar-day-with-events {
+  background-image: url("assets/event-dot.svg") !important;
+  background-size: contain;
 }
 .workspace-thumbnails .placeholder,
 #dash .placeholder {
@@ -648,7 +651,8 @@ StEntry StLabel.hint-text,
   background-image: url("../cinnamon/assets/arrow-right.svg") !important;
 }
 .calendar-day-with-events {
-  background-image: none !important;
+  background-image: url("assets/event-dot.svg") !important;
+  background-size: contain;
   color: #202124 !important;
 }
 .calendar-other-month-day {
@@ -1779,9 +1783,9 @@ StScrollBar > .vhandle:active,
 .unlock-dialog-notifications-container .unlock-dialog-notification-source StButton:checked:active,
 .unlock-dialog-notifications-container .unlock-dialog-notification-source StButton:checked:hover,
 .unlock-dialog-notifications-container .unlock-dialog-notification-source StButton:focus:hover,
-.message-close-button:focus > StIcon
-  .message-close-button:active > StIcon,
-.message-list-section-close:focus > StIcon
+.message-close-button:focus > StIcon,
+.message-close-button:active > StIcon,
+.message-list-section-close:focus > StIcon,
 .message-list-section-close:active > StIcon,
 .app-folder-dialog .calendar .calendar-month-header .pager-button:active,
 .app-folder-dialog .folder-name-container .edit-folder-button:checked:active,
@@ -2589,7 +2593,8 @@ StEntry:focus,
   color: #202124 !important;
 }
 .calendar .calendar-day.calendar-today.calendar-day-with-events {
-  background-image: none !important;
+  background-image: url("assets/event-dot.svg") !important;
+  background-size: contain;
 }
 .calendar .calendar-today {
   background-color: #d2e3fc !important;

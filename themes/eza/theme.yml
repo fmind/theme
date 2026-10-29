@@ -10,7 +10,8 @@ filekinds:
 perms:
   user_read: {foreground: "#202124"}
   user_write: {foreground: "#a50e0e"}
-  user_execute: {foreground: "#0d652d"}
+  user_execute_file: {foreground: "#0d652d"}
+  user_execute_other: {foreground: "#0d652d"}
   other_read: {foreground: "#595d62"}
   other_write: {foreground: "#a50e0e"}
   other_execute: {foreground: "#0d652d"}

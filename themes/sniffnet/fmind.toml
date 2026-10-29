@@ -1,10 +1,8 @@
-# Fmind theme for Sniffnet
-[palette]
-primary = "#174ea6"
-secondary = "#00636d"
-outgoing = "#0d652d"
-starred = "#fbbc04"
-text_headers = "#202124"
-text_body = "#202124"
-round_borders = "#9aa0a6"
-round_containers = "#f1f3f4"
+# https://sniffnet.app/wiki/custom-themes
+# All colors are in RGB/RGBA hexadecimal.
+primary = "#ffffff"           # background color
+secondary = "#174ea6"         # header, footer, and incoming connections color
+outgoing = "#0d652d"          # outgoing connections color
+text_body = "#202124"         # body text color
+text_headers = "#ffffff"      # header and footer text color
+starred = "#934900"           # favorites' star color

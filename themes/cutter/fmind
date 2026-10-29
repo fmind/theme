@@ -1,0 +1,57 @@
+ec comment rgb:595d62
+ec usrcmt rgb:595d62
+ec args rgb:202124
+ec fname rgb:174ea6
+ec floc rgb:595d62
+ec fline rgb:595d62
+ec flag rgb:934900
+ec label rgb:174ea6
+ec help rgb:00636d
+ec flow rgb:174ea6
+ec flow2 rgb:0d652d
+ec prompt rgb:174ea6
+ec offset rgb:595d62
+ec input rgb:202124
+ec invalid rgb:a50e0e
+ec other rgb:202124
+ec b0x00 rgb:595d62
+ec b0x7f rgb:595d62
+ec b0xff rgb:a50e0e
+ec math rgb:202124
+ec bin rgb:202124
+ec btext rgb:0d652d
+ec push rgb:681da8
+ec pop rgb:681da8
+ec crypto rgb:681da8
+ec jmp rgb:174ea6
+ec cjmp rgb:174ea6
+ec ujmp rgb:174ea6
+ec call rgb:174ea6
+ec ucall rgb:174ea6
+ec nop rgb:595d62
+ec ret rgb:174ea6
+ec trap rgb:a50e0e
+ec swi rgb:a50e0e
+ec cmp rgb:681da8
+ec reg rgb:202124
+ec creg rgb:934900
+ec num rgb:934900
+ec mov rgb:202124
+ec func_var rgb:202124
+ec func_var_type rgb:681da8
+ec func_var_addr rgb:595d62
+ec graph.true rgb:0d652d
+ec graph.false rgb:a50e0e
+ec graph.ujump rgb:174ea6
+ec gui.cflow rgb:feefc3
+#~gui.dataoffset rgb:feefc3
+#~gui.background rgb:ffffff
+#~gui.alt_background rgb:f1f3f4
+#~gui.border rgb:9aa0a6
+#~gui.disass_selected rgb:d2e3fc
+#~gui.breakpoint_background rgb:fad2cf
+#~wordHighlight rgb:feefc3
+#~lineHighlight rgb:f1f3f4
+#~highlightPC rgb:ceead6
+#~searchHighlight rgb:feefc3
+#~searchCurrent rgb:fbbc04

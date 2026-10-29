@@ -1,11 +1,21 @@
 /* Ulauncher Fmind Light Theme */
+/* https://docs.ulauncher.io/en/stable/themes/themes.html */
+/* Extends the built-in "light" theme and overrides the colors its rules use. */
 
 @define-color bg_color #ffffff;
-@define-color text_color #202124;
+@define-color window_bg #ffffff;
+@define-color window_border_color #9aa0a6;
+@define-color prefs_backgroud #f1f3f4; /* upstream spelling */
 @define-color selected_bg_color #d2e3fc;
-@define-color selected_text_color #202124;
-@define-color border_color #9aa0a6;
+@define-color selected_fg_color #202124;
 @define-color input_color #202124;
-@define-color input_bg #ffffff;
-@define-color app_result_color #202124;
-@define-color app_desc_color #595d62;
+@define-color caret_color #4285f4;
+@define-color item_name #202124;
+@define-color item_text #595d62;
+@define-color item_box_selected #d2e3fc;
+@define-color item_text_selected #202124;
+@define-color item_name_selected #202124;
+@define-color item_shortcut_color #595d62;
+@define-color item_shortcut_shadow #ffffff;
+@define-color item_shortcut_color_sel #202124;
+@define-color item_shortcut_shadow_sel #d2e3fc;

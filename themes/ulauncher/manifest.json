@@ -2,6 +2,11 @@
   "manifest_version": "1",
   "name": "Fmind",
   "display_name": "Fmind",
+  "extend_theme": "light",
   "css_file": "theme.css",
-  "matched_text_hl": "#174ea6"
+  "css_file_gtk_3.20+": "theme.css",
+  "matched_text_hl_colors": {
+    "when_selected": "#174ea6",
+    "when_not_selected": "#174ea6"
+  }
 }

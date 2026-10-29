@@ -1,6 +1,7 @@
+// https://nilesoft.org/docs/configuration/themes
 theme
 {
-	name = "fmind"
+	name = "white"
 	view = view.small
 	background
 	{
@@ -10,12 +11,15 @@ theme
 	item
 	{
 		opacity = 100
-		text.color = #202124
-		back.color = #f1f3f4
-	}
-	select
-	{
-		text.color = #202124
-		back.color = #d2e3fc
+		text
+		{
+			normal = #202124
+			select = #202124
+		}
+		back
+		{
+			normal = #f1f3f4
+			select = #d2e3fc
+		}
 	}
 }

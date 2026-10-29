@@ -1,8 +1,10 @@
 /* Fmind theme for Libreddit */
+/* Variable names follow static/style.css in libreddit/libreddit. */
 :root {
-  --bg: #ffffff;
-  --fg: #202124;
+  --background: #ffffff;
+  --text: #202124;
   --accent: #174ea6;
-  --card-bg: #f1f3f4;
-  --border: #9aa0a6;
+  --foreground: #f1f3f4;
+  --post: #f1f3f4;
+  --panel-border: 1px solid #9aa0a6;
 }

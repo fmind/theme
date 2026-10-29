@@ -5,7 +5,7 @@ windowBgOver: #f1f3f4;
 windowBgActive: #d2e3fc;
 windowFgActive: #174ea6;
 activeButtonBg: #174ea6;
-activeButtonBgOver: #4285f4;
+activeButtonBgOver: #174ea6;
 activeButtonBgRipple: #174ea6;
 activeButtonFg: #ffffff;
 activeButtonFgOver: #ffffff;

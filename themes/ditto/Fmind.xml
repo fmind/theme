@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Ditto_Theme_File Version="3" Author="Médéric Hurier" Notes="Fmind Theme">
     <CaptionLeft>RGB(241, 243, 244)</CaptionLeft>
-    <CaptionRight>RGB(23, 78, 166)</CaptionRight>
-    <ListBoxBackground>RGB(255, 255, 255)</ListBoxBackground>
-    <ListBoxText>RGB(32, 33, 36)</ListBoxText>
-    <ListBoxSelectedBackground>RGB(210, 227, 252)</ListBoxSelectedBackground>
+    <CaptionRight>RGB(241, 243, 244)</CaptionRight>
+    <CaptionTextColor>RGB(32, 33, 36)</CaptionTextColor>
+    <ListBoxOddRowsBG>RGB(255, 255, 255)</ListBoxOddRowsBG>
+    <ListBoxEvenRowsBG>RGB(255, 255, 255)</ListBoxEvenRowsBG>
+    <ListBoxOddRowsText>RGB(32, 33, 36)</ListBoxOddRowsText>
+    <ListBoxEvenRowsText>RGB(32, 33, 36)</ListBoxEvenRowsText>
+    <ListBoxSelectedBG>RGB(210, 227, 252)</ListBoxSelectedBG>
+    <ListBoxSelectedNoFocusBG>RGB(210, 227, 252)</ListBoxSelectedNoFocusBG>
     <ListBoxSelectedText>RGB(32, 33, 36)</ListBoxSelectedText>
+    <ListBoxSelectedNoFocusText>RGB(32, 33, 36)</ListBoxSelectedNoFocusText>
 </Ditto_Theme_File>

@@ -1,0 +1,23 @@
+{
+  "name": "Fmind",
+  "primary": "#174ea6",
+  "primaryText": "#ffffff",
+  "primaryContainer": "#d2e3fc",
+  "secondary": "#00636d",
+  "surfaceTint": "#174ea6",
+  "surface": "#ffffff",
+  "surfaceText": "#202124",
+  "surfaceVariant": "#f1f3f4",
+  "surfaceVariantText": "#595d62",
+  "surfaceContainerLowest": "#ffffff",
+  "surfaceContainerLow": "#f1f3f4",
+  "surfaceContainer": "#f1f3f4",
+  "surfaceContainerHigh": "#f1f3f4",
+  "surfaceContainerHighest": "#f1f3f4",
+  "background": "#ffffff",
+  "backgroundText": "#202124",
+  "outline": "#9aa0a6",
+  "error": "#a50e0e",
+  "warning": "#934900",
+  "info": "#00636d"
+}

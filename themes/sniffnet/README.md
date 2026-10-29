@@ -4,4 +4,4 @@ Light theme for [Sniffnet](https://sniffnet.net/).
 
 ## Installation
 
-Import [fmind.toml](fmind.toml) in Sniffnet Settings → Appearance → Custom Themes.
+In Sniffnet Settings → Style, select [fmind.toml](fmind.toml) with the custom theme file selector at the bottom of the tab.

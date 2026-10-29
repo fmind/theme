@@ -43,7 +43,7 @@
         "tab.inactive_background": "#f1f3f4",
         "tab.active_background": "#ffffff",
         "search.match_background": "#feefc3",
-        "search.active_match_background": "#feefc3",
+        "search.active_match_background": "#fbbc04",
         "panel.background": "#f1f3f4",
         "panel.focused_border": "#174ea6",
         "pane.focused_border": "#174ea6",

@@ -176,9 +176,9 @@
     </LexerType>
     <LexerType name="errorlist" desc="ErrorList" ext="">
       <WordsStyle name="DEFAULT" styleID="0" fgColor="202124" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" colorStyle="3" />
-      <WordsStyle name="ERROR" styleID="1" fgColor="A50E0E" bgColor="FAD2CF" fontName="" fontStyle="0" fontSize="" colorStyle="3" />
-      <WordsStyle name="WARNING" styleID="2" fgColor="934900" bgColor="FEEFC3" fontName="" fontStyle="0" fontSize="" colorStyle="3" />
-      <WordsStyle name="INFO" styleID="3" fgColor="202124" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" colorStyle="3" />
+      <WordsStyle name="PYTHON Error" styleID="1" fgColor="A50E0E" bgColor="FAD2CF" fontName="" fontStyle="0" fontSize="" colorStyle="3" />
+      <WordsStyle name="GCC Error" styleID="2" fgColor="A50E0E" bgColor="FAD2CF" fontName="" fontStyle="0" fontSize="" colorStyle="3" />
+      <WordsStyle name="MS Error" styleID="3" fgColor="A50E0E" bgColor="FAD2CF" fontName="" fontStyle="0" fontSize="" colorStyle="3" />
     </LexerType>
     <LexerType name="go" desc="Go" ext="">
       <WordsStyle name="DEFAULT" styleID="0" fgColor="202124" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" colorStyle="3" />
@@ -714,7 +714,7 @@
       <WordsStyle name="STANDARD PACKAGE" styleID="12" fgColor="202124" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" colorStyle="3" />
       <WordsStyle name="STANDARD TYPE" styleID="13" fgColor="681DA8" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" colorStyle="3" />
       <WordsStyle name="USER WORD" styleID="14" fgColor="202124" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" colorStyle="3" />
-      <WordsStyle name="STRING EOL" styleID="15" fgColor="0D652D" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" colorStyle="3" />
+      <WordsStyle name="COMMENT BLOCK" styleID="15" fgColor="595D62" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" colorStyle="3" />
     </LexerType>
     <LexerType name="xml" desc="XML" ext="xaml svg xul vcxproj csproj vbproj fsproj lsxtproj shproj xproj ccproj jsproj sqlproj dbproj msbuildproj props">
       <WordsStyle name="XMLSTART" styleID="12" fgColor="202124" bgColor="FFFFFF" fontName="" fontStyle="0" fontSize="" colorStyle="3" />

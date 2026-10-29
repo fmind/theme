@@ -13,10 +13,11 @@
       "blue": "#174ea6",
       "ltblue": "#4285f4",
       "purple": "#681da8",
-      "white": "#ffffff",
-      "app-bg": "#ffffff",
-      "panel-bg": "#f1f3f4",
-      "text-color": "#202124"
+      "app__bg0": "#ffffff",
+      "panel__bg0": "#f1f3f4",
+      ".text-color": "#202124",
+      "text-normal": "#202124",
+      "text-selected": "#202124"
     }
   }
 }

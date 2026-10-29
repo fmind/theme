@@ -4,4 +4,4 @@ Light theme for [Home Assistant](https://www.home-assistant.io/).
 
 ## Installation
 
-Add [fmind.yaml](fmind.yaml) into your `themes/` directory in Home Assistant.
+Copy [fmind.yaml](fmind.yaml) into a `themes/` folder beside `configuration.yaml`, load that folder with `frontend: themes: !include_dir_merge_named themes` in `configuration.yaml`, restart Home Assistant, then select Fmind in your profile.

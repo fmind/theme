@@ -1,14 +1,17 @@
 # Fmind tint2 theme
+# https://gitlab.com/o9000/tint2/-/blob/master/doc/tint2.md
+# Background 1 ("rounded" starts a background; ID 0 is the built-in transparent one).
+rounded = 0
 background_color = #ffffff 100
 border_color = #f1f3f4 100
-panel_background_id = 0
+panel_background_id = 1
 
 # Taskbar
 taskbar_background_id = 0
 task_active_background_id = 0
-task_text_color = #202124 100
-task_active_text_color = #174ea6 100
-task_iconified_text_color = #595d62 100
+task_font_color = #202124 100
+task_active_font_color = #174ea6 100
+task_iconified_font_color = #595d62 100
 
 # Clock
 time1_font = Google Sans 10

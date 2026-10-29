@@ -58,12 +58,8 @@
 
   ;; Faces
   ((doom-modeline-bar :background blue)
-   (mode-line
-    :background bg-alt :foreground fg
-    :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,bg-alt)))
-   (mode-line-inactive
-    :background bg :foreground base5
-    :box (if -modeline-pad `(:line-width ,-modeline-pad :color ,bg)))
+   (mode-line :background bg-alt :foreground fg)
+   (mode-line-inactive :background bg :foreground base5)
    (line-number :foreground base5 :background bg)
    (line-number-current-line :foreground fg :background base1 :bold t)))
 

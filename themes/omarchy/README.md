@@ -1,6 +1,6 @@
 # Omarchy
 
-Fmind theme bundle for [Omarchy](https://github.com/omarchy/omarchy).
+Fmind theme bundle for [Omarchy](https://github.com/basecamp/omarchy).
 
 ## Install
 
