@@ -1,3 +1,4 @@
+# shellcheck shell=sh
 # https://github.com/baskerville/bspwm/blob/master/doc/bspwm.1.asciidoc
 # Source from bspwmrc after other border settings.
 bspc config normal_border_color '#9aa0a6'

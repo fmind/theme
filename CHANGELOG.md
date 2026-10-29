@@ -13,6 +13,8 @@
 - Update jdx/mise-action to 5.1.2 and refresh the JupyterLab build lock.
 - Clear npm audit advisories in the JupyterLab build lock: override sanitize-html to 2.18.1 and update fast-uri to 3.1.9.
 - List the coding agents fmind/dot currently supports in the design system consumers.
+- Update dprint 0.64.3 and its Markdown plugin, Node.js 26.13.0, Python 3.14.10, Ruff 0.17.3, uv 0.13.6, zizmor 1.31.1, jdx/mise-action 5.2.4, Python dependencies, artwork dependencies and the JupyterLab builders.
+- Lint shipped shell scripts with ShellCheck in `mise run check`; declare the shell of sourced snippets and drop subshells from the man page colors.
 
 ### Fixed
 

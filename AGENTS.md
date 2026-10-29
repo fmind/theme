@@ -27,7 +27,7 @@ mise run all
 | Task                   | Purpose                                                                                                        |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------- |
 | `mise run format`      | Format Python with Ruff and repository documentation/configuration with dprint.                                |
-| `mise run check`       | Lint Python and workflows, validate hooks, check formatting and audit locked dependencies.                     |
+| `mise run check`       | Lint Python, shell scripts and workflows, validate hooks, check formatting and audit locked dependencies.      |
 | `mise run test`        | Check shared palette, JSON/TOML/YAML syntax, documentation and artwork.                                        |
 | `mise run screenshots` | Refresh the two terminal captures. Uses pinned FFmpeg; requires Fontconfig, Chromium and the recommended font. |
 | `mise run artwork`     | Regenerate artwork from `artworks/generate.py` and bundled assets.                                             |

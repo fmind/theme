@@ -1,3 +1,4 @@
+# shellcheck shell=sh
 # Fmind colors for nnn file manager
 export NNN_COLORS='4231'
 # Two-digit ANSI indexes; 00 keeps the terminal's default foreground.

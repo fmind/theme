@@ -36,6 +36,8 @@ run = [
   "actionlint",
   "zizmor --offline --pedantic .github/",
   "ruff check .",
+  # --norc keeps results independent of a personal shellcheckrc.
+  "git ls-files -z '*.sh' | xargs -0 shellcheck --norc",
   "lefthook validate",
   "mise run check:format",
   "mise run check:security",
