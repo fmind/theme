@@ -1,30 +1,29 @@
 # Changelog
 
-## Unreleased
+## 4.0.0 — 2026-10-29
+
+### Breaking
+
+- Remove themes for discontinued or archived apps: Abricotine, Apollo, Atom, Coda, Cryptowatch, exa (use eza), Fig, Fluent Terminal, Harpy for Twitter, Light Table, MonoDevelop, Nylas N1 (use Mailspring), Postbox, Termite and XChat / HexChat. Their folders and raw download paths no longer exist.
+- Remove the Rackula port: it targeted VCV Rack, and Rackula is now dark-only without custom themes.
+- Move Libreddit to `themes/redlib/` as a native Redlib theme for self-hosted instances; Libreddit itself is no longer operational.
 
 ### Added
 
 - Add `DESIGN.md`, the Fmind design system in the DESIGN.md format: color roles, typography, layout, shapes, diagram components and usage rules, with the tools that consume it. Checks keep its tokens equal to the palette and its component text at 4.5:1 contrast.
 
-### Removed
-
-- Remove themes for discontinued or archived apps: Abricotine, Apollo, Atom, Coda, Cryptowatch, exa (use eza), Fig, Fluent Terminal, Harpy for Twitter, Light Table, MonoDevelop, Nylas N1 (use Mailspring), Postbox, Termite and XChat / HexChat.
-
 ### Maintenance
 
-- Update dprint, Lefthook, Neovim, Node.js, Ruff and uv to current stable releases.
-- Update the locked artwork dependencies; repository tasks stay on the workstation Python 3.14.
-- Update jdx/mise-action to 5.1.2 and refresh the JupyterLab build lock.
+- Update dprint 0.64.3 and its plugins, Lefthook, Neovim, Node.js 26.13.0, Python 3.14.10, Ruff 0.17.3, uv 0.13.6, zizmor 1.31.1, jdx/mise-action 5.2.4, Python and artwork dependencies and the JupyterLab builders; repository tasks stay on the workstation Python 3.14.
 - Clear npm audit advisories in the JupyterLab build lock: override sanitize-html to 2.18.1 and update fast-uri to 3.1.9.
-- List the coding agents fmind/dot currently supports in the design system consumers.
-- Update dprint 0.64.3 and its Markdown plugin, Node.js 26.13.0, Python 3.14.10, Ruff 0.17.3, uv 0.13.6, zizmor 1.31.1, jdx/mise-action 5.2.4, Python dependencies, artwork dependencies and the JupyterLab builders.
 - Lint shipped shell scripts with ShellCheck in `mise run check`; declare the shell of sourced snippets and drop subshells from the man page colors.
+- List the coding agents fmind/dot currently supports in the design system consumers.
 
 ### Fixed
 
 - Correct native theme formats and settings for Git, aerc, lnav, Nova, Pi Coding Agent, Notepad++ and TeXworks; remove an unrecognized Sioyek setting.
 - Rewrite files the app could not load in its native format: Alfred, Chatterino, Cutter, DankMaterialShell, FocusWriter, Hermes Agent, musikcube, OpenSCAD, Sequel Ace, Sequel Pro, SerenityOS, Sniffnet, Superset, tig, tut and Xournal++.
-- Correct ignored or invalid keys and structure in Aseprite, Arduino IDE, Blender, castero, CopyQ, Ditto, Doom Emacs, eza, GitKraken, ghostwriter, GoAccess, KDiff3, KiCad, Logseq, MacDown, Mailspring, MySQL Workbench, NeoMutt, Nilesoft Shell, Nitter, Libreddit, PolyMC, presenterm, qBittorrent, spotify-tui, tint2, Ulauncher and wob; add the metadata FreshRSS, Discourse and Millennium (Steam) need to list the theme.
+- Correct ignored or invalid keys and structure in Aseprite, Arduino IDE, Blender, castero, CopyQ, Ditto, Doom Emacs, eza, GitKraken, ghostwriter, GoAccess, KDiff3, KiCad, Logseq, MacDown, Mailspring, MySQL Workbench, NeoMutt, Nilesoft Shell, Nitter, PolyMC, presenterm, qBittorrent, spotify-tui, tint2, Ulauncher and wob; add the metadata FreshRSS, Discourse and Millennium (Steam) need to list the theme.
 - Fix unreadable or wrong colors: base16 bright white and yellow slots, qutebrowser URL and match colors, Telegram hover buttons, Notepad++ VHDL comments and error lists, Total Commander cursor, CodeRunner caret and syntax, and Zed current search match.
 - Restore GNOME Shell calendar event markers and close-button focus colors, and use a Qt 6 date format on the SDDM login screen.
 - Correct installation steps for Home Assistant, LDoc, Monkeytype, Omarchy, Rio, Spacemacs and the apps above; remove a generic "merge fragments" note that contradicted whole-file installs.
