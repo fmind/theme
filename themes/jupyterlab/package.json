@@ -15,7 +15,7 @@
     "@jupyterlab/apputils": "^4.7.4"
   },
   "devDependencies": {
-    "@jupyter/builder": "1.2.3",
+    "@jupyter/builder": "1.2.4",
     "@jupyterlab/core-meta": "4.6.4",
     "css-loader": "7.1.5"
   },

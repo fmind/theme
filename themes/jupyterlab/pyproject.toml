@@ -1,6 +1,6 @@
 # https://jupyterlab.readthedocs.io/en/stable/extension/extension_dev.html#packaging-information
 [build-system]
-requires = ["hatchling>=1.27,<2", "hatch-jupyter-builder==0.9.1", "jupyter-builder==1.2.3"]
+requires = ["hatchling>=1.27,<2", "hatch-jupyter-builder==0.10.0", "jupyter-builder==1.2.4"]
 build-backend = "hatchling.build"
 
 [project]
