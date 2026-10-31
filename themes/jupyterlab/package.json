@@ -31,6 +31,7 @@
     }
   },
   "overrides": {
+    "glob": "14.0.3",
     "sanitize-html": "2.18.1"
   }
 }
