@@ -3,7 +3,7 @@
   "name": "Fmind",
   "content_type": "SN|Theme",
   "area": "themes",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Fmind light theme for Standard Notes",
   "url": "https://cdn.jsdelivr.net/gh/fmind/theme@main/themes/standard-notes/dist/fmind.css",
   "dock_icon": {

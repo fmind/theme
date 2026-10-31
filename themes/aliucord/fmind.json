@@ -2,7 +2,7 @@
   "manifest": {
     "name": "Fmind",
     "author": "Médéric Hurier",
-    "version": "4.0.0",
+    "version": "5.0.0",
     "license": "MIT"
   },
   "simple_colors": {

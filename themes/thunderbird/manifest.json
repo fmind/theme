@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Fmind",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Fmind light theme for Mozilla Thunderbird",
   "browser_specific_settings": {
     "gecko": {

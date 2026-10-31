@@ -2,7 +2,7 @@
   "name": "Fmind",
   "author": "Médéric Hurier",
   "description": "Fmind light theme for FreshRSS",
-  "version": "4.0.0",
+  "version": "5.0.0",
   "files": ["_frss.css", "fmind.css"],
   "theme-color": "#ffffff"
 }

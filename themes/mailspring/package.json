@@ -5,7 +5,7 @@
   "engines": {
     "mailspring": "*"
   },
-  "version": "4.0.0",
+  "version": "5.0.0",
   "title": "Fmind",
   "description": "Fmind light theme for Mailspring"
 }
