@@ -90,6 +90,22 @@ components:
     textColor: "{colors.canvas}"
     typography: "{typography.body-sm}"
     rounded: "{rounded.full}"
+  button-secondary:
+    backgroundColor: "{colors.panel}"
+    textColor: "{colors.foreground}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.full}"
+  input:
+    backgroundColor: "{colors.canvas}"
+    textColor: "{colors.foreground}"
+    typography: "{typography.body-md}"
+    rounded: "{rounded.md}"
+    padding: "{spacing.sm}"
+  chip:
+    backgroundColor: "{colors.panel}"
+    textColor: "{colors.foreground}"
+    typography: "{typography.body-sm}"
+    rounded: "{rounded.md}"
   code-inline:
     textColor: "{colors.primary}"
     typography: "{typography.code-md}"
@@ -180,15 +196,15 @@ components:
 
 ## Overview
 
-Calm, exact, spacious and technically grounded. The reader is a peer who checks one claim before believing the rest, so every visual carries evidence: crisp geometry, editable diagrams and real labels over decorative imagery.
+Calm, exact, spacious and technically grounded. Inspired by Google's product design, interfaces focus on the user's immediate task and strip away cognitive load: one clear purpose per view, sensible defaults that work on the first click, and progressive disclosure for complexity. The reader or user is a peer who checks one claim before believing the rest, so every screen and visual carries evidence: crisp geometry, editable diagrams and real labels over decorative imagery or chrome.
 
-**Scope.** This is the default design for Médéric Hurier's (Fmind) own work: fmind.dev, articles, talks, courses, open-source repositories, documentation and media. When the work belongs to a customer or employer, use their design system, brand guide, templates, fonts and logo instead. Ask for their guide rather than inferring a palette, and never mix brands in one asset. An existing project's established identity also wins over this default.
+**Scope.** This is the default design for Médéric Hurier's (Fmind) own work: fmind.dev, applications, articles, talks, courses, open-source repositories, documentation and media. When the work belongs to a customer or employer, use their design system, brand guide, templates, fonts and logo instead. Ask for their guide rather than inferring a palette, and never mix brands in one asset. An existing project's established identity also wins over this default.
 
 The design is light only. Terminal and editor themes in this repository apply the same palette to syntax and ANSI roles.
 
 ## Colors
 
-The palette is the 15 Google News colors plus five custom shades (dark gray, dark orange, purple and teal). Each hue has three jobs: dark shades carry text, bright shades mark active states and accents, and pale shades provide surfaces.
+The palette is the 15 Google News colors plus five custom shades (white, dark gray, dark orange, purple and teal). Each hue has three jobs: dark shades carry text, bright shades mark active states and accents, and pale shades provide surfaces.
 
 - **White (#FFFFFF) — canvas:** the main background and label text on dark fills.
 - **Light gray (#F1F3F4) — panel:** groups, panels, code blocks and neutral surfaces.
@@ -196,7 +212,7 @@ The palette is the 15 Google News colors plus five custom shades (dark gray, dar
 - **Dark gray (#595D62) — muted:** secondary text, comments and essential control borders.
 - **Charcoal (#202124) — foreground:** body text, variables and punctuation.
 - **Dark blue (#174EA6) — primary:** headings, links, keywords, calls and the logo frame. The single brand accent.
-- **Medium blue (#4285F4) — focus:** cursors, active controls and glow accents.
+- **Medium blue (#4285F4) — focus:** cursors, active controls and focus rings.
 - **Light blue (#D2E3FC) — selection:** selected rows and primary containers.
 - **Dark red (#A50E0E), medium red (#EA4335), light red (#FAD2CF) — error:** error text, markers and underlines, removed or failed regions.
 - **Dark orange (#934900), orange (#E37400), yellow (#FBBC04), light yellow (#FEEFC3) — warning:** warning text, numbers and constants; attention fills; active tabs and current matches; changed or caution regions.
@@ -212,17 +228,30 @@ Headlines are bold dark charcoal or dark blue. Body text is regular charcoal wit
 
 ## Layout
 
-Generous whitespace on a 4px unit, with 8px steps between items and 24–32px margins. Long-form reading stays within 768px; pages within 1152px. One idea per slide, one thesis per diagram, one concept per illustration.
+Generous whitespace on a 4px unit, with 8px steps between items and 24–32px margins. Long-form reading and focused single-purpose tools stay within 768px; wider data or multi-pane pages stay within 1152px. One job per view, one idea per slide, one thesis per diagram, one concept per illustration.
+
+Applications follow Google's canonical layouts and progressive disclosure instead of dense dashboards:
+
+- **Single workspace (default):** one centered column (`768px`) with the primary input, action and inline result in a single vertical flow, like Google Search or a document canvas.
+- **List-detail or supporting pane:** split up to `1152px` into at most two panes (a primary content area plus a list or contextual inspector) only when the task compares items or inspects selections; collapse to a single pane on narrow viewports.
+- **Progressive disclosure:** keep only the 1–3 controls needed for the main run visible; tuck advanced parameters, filters and raw diagnostics behind an expansion panel (`<details>`) or overflow menu until requested.
 
 ## Elevation & Depth
 
-Flat. Hierarchy comes from tonal layers (white canvas, light gray panels, light blue containers), 1–2px strokes and typography, not shadows or gradients.
+Flat. Hierarchy comes from tonal layers (white canvas, light gray panels, light blue containers), 1–2px strokes and typography, not shadows or gradients. Separate related groups with whitespace or a single 1px divider rather than nesting bordered cards inside cards.
 
 ## Shapes
 
 Softly rounded rectangles: 8px for small controls, 12px for code blocks and tiles, 16px for cards and illustration frames, pills for buttons and badges. Lines are solid for flows and dashed for anything outside the boundary being described.
 
 ## Components
+
+Application components keep interaction direct, predictable and low-noise:
+
+- **Buttons and actions:** limit each view to one `button-primary` pill (`#174EA6` fill, white text) for the main action. Subordinate secondary actions with `button-secondary` (`#F1F3F4` fill, charcoal text) or plain text links; never place competing primary buttons side by side.
+- **Inputs and forms:** `input` fields sit on white canvas with a 1px `#595D62` control border, `8px` radius and a 2px `#4285F4` focus ring. Pair every field with a visible label, prefill sensible defaults so the form works immediately, and validate inline (`underline-error` and `#A50E0E` helper text) rather than with popups.
+- **Cards, lists and chips:** `card` containers group related content with `16px` radius and `16–24px` padding; `chip` elements hold compact filters or attributes on `#F1F3F4`. Separate list rows with whitespace or a 1px `#9AA0A6` `divider`.
+- **Inline states (empty, loading, error, result):** render feedback in place within the workspace. Empty states explain what to do next in one muted sentence or starter example; errors state the failure and recovery on `#FAD2CF` with `#A50E0E` text; reserve modal dialogs for destructive confirmations.
 
 Diagram components carry fixed meanings; reinforce each with a label, shape or line style rather than color alone.
 
@@ -238,11 +267,15 @@ Flows and arrows use dark blue. Inline code uses dark blue; code blocks sit on l
 
 ## Do's and Don'ts
 
+- Do give each view one focal point and one primary action, revealing secondary controls progressively.
+- Do handle empty, loading, error and result states inline with plain-language recovery.
 - Do use dark shades for text and bright shades only for fills, markers and accents.
 - Do keep text at 4.5:1 contrast or more on its actual surface, and essential controls at 3:1.
 - Do choose charcoal or white label text on filled shapes by measured contrast.
 - Do keep editable sources (D2, Mermaid, SVG, Typst, VHS tapes) beside every export.
 - Do copy approved artwork (logo, banners, wallpapers) unchanged instead of recoloring it.
+- Don't add unrequested application chrome (navigation bars, sidebars, tabs, KPI ribbons, settings drawers, fake user menus or toast spam).
+- Don't nest bordered cards inside cards or place multiple primary buttons in the same view.
 - Don't use gradients, drop shadows, neon, dark backgrounds or generic AI imagery.
 - Don't put readable technical labels or data in generated imagery.
 - Don't add colors outside this palette; extend a semantic role here first.
