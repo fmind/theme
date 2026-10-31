@@ -55,7 +55,7 @@ CODE: dict[str, str] = {
 
 UI: dict[str, str] = {
     "": "#202124 bg:#ffffff",
-    "search-match.current": "#202124 bg:#fbbc04",
+    "search.current": "#202124 bg:#fbbc04",
     "matching-bracket.cursor": "#934900 bold",
     "matching-bracket.other": "#934900 bold",
     "prompt": "#174ea6",
@@ -68,10 +68,10 @@ UI: dict[str, str] = {
     "separator": "#595d62",
     "docstring": "#0d652d",
     "line-number": "#595d62",
-    "search-match": "#202124 bg:#e37400",
-    "selected-text": "bg:#d2e3fc",
+    "search": "#202124 bg:#e37400",
+    "selected": "#202124 bg:#d2e3fc noreverse",
     "completion-menu.completion": "#202124 bg:#f1f3f4",
-    "completion-menu.completion.current": "#202124 bg:#4285f4",
+    "completion-menu.completion.current": "#202124 bg:#4285f4 noreverse",
     "completion-menu.meta.completion": "#202124 bg:#f1f3f4",
     "completion-menu.meta.completion.current": "#ffffff bg:#202124",
     "completion.builtin": "#681da8",

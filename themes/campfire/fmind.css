@@ -1,10 +1,17 @@
-body, .room {
-  background-color: #ffffff !important;
-  color: #202124 !important;
-}
-.message--self {
-  background-color: #f1f3f4 !important;
-}
-a {
-  color: #174ea6 !important;
+/* Fmind for Campfire: overrides the colour abstractions in app/assets/stylesheets/colors.css
+   (https://github.com/basecamp/once-campfire). Paste into Account settings > Custom styles. */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #202124;
+  --color-text-reversed: #ffffff;
+  --color-message-bg: #f1f3f4;
+  --color-link: #174ea6;
+  --color-border: #f1f3f4;
+  --color-border-dark: #9aa0a6;
+  --color-border-darker: #595d62;
+  --color-selected: #d2e3fc;
+  --color-selected-dark: #4285f4;
+  --color-negative: #a50e0e;
+  --color-positive: #0d652d;
+  --color-alert: #e37400;
 }

@@ -8,7 +8,7 @@
     <fontcolor foreColor="ff202124" name="synchronized-text-blocks-ext" />
     <fontcolor bgColor="fffad2cf" name="nbeditor-bracesMatching-mismatch" foreColor="ffa50e0e" />
     <fontcolor bgColor="fff1f3f4" name="highlight-caret-row" foreColor="ff202124" />
-    <fontcolor foreColor="ff174ea6" name="caret-color-overwrite-mode" />
+    <fontcolor foreColor="ff4285f4" name="caret-color-overwrite-mode" />
     <fontcolor name="status-bar" foreColor="ff202124" />
     <fontcolor bgColor="fff1f3f4" name="guarded" foreColor="ff202124" />
     <fontcolor name="trailing-whitespace" foreColor="ff595d62" bgColor="fff1f3f4" />
@@ -28,6 +28,6 @@
     <fontcolor bgColor="ffd2e3fc" name="selection" foreColor="ff202124" />
     <fontcolor bgColor="fffeefc3" foreColor="ff202124" name="inc-search" />
     <fontcolor bgColor="ffd2e3fc" name="nbeditor-bracesMatching-match-multichar" foreColor="ff0d652d" />
-    <fontcolor foreColor="ff174ea6" name="caret-color-insert-mode" />
+    <fontcolor foreColor="ff4285f4" name="caret-color-insert-mode" />
     <fontcolor foreColor="ff174ea6" name="hyperlinks" underline="ff174ea6" />
 </fontscolors>

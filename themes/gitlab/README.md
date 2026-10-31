@@ -1,6 +1,8 @@
 # GitLab
 
-Fmind user style for [GitLab](https://gitlab.com/).
+Fmind user style for [GitLab](https://gitlab.com/). It sets GitLab's text, link, background and border design tokens in light mode; dark mode stays GitLab's own.
+
+Format: [Stylus UserCSS](https://github.com/openstyles/stylus/wiki/Writing-UserCSS) · [GitLab UI design tokens](https://gitlab.com/gitlab-org/gitlab-ui/-/blob/main/src/tokens/build/css/tokens.css)
 
 ## Install
 

@@ -1,4 +1,9 @@
 {
+  "version": 1,
+  "appearance": {
+    "lightOverride": false,
+    "darkOverride": true
+  },
   "shared": {
     "backgroundColor": "#ffffff",
     "foregroundColor": "#202124",

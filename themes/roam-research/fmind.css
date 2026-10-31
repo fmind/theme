@@ -16,7 +16,7 @@ body, .roam-body-main {
   color: var(--text-color);
 }
 
-.roam-topbar {
+.rm-topbar {
   background-color: var(--panel-color);
   border-bottom: 1px solid var(--border-color);
 }

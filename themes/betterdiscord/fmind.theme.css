@@ -1,29 +1,40 @@
 /**
  * @name Fmind
- * @description A crisp light theme for Discord using the Fmind color palette.
+ * @description A crisp light theme for Discord using the Fmind color palette. Requires Discord's Light appearance.
  * @author Fmind
  * @version 4.0.0
  * @source https://github.com/fmind/theme
  */
 
-:root {
-  --background-primary: #ffffff;
-  --background-secondary: #f1f3f4;
-  --background-secondary-alt: #ffffff;
-  --background-tertiary: #f1f3f4;
-  --background-floating: #ffffff;
-  --channeltextarea-background: #ffffff;
-  --text-normal: #202124;
-  --text-muted: #595d62;
-  --text-link: #174ea6;
-  --header-primary: #202124;
-  --header-secondary: #595d62;
-  --interactive-normal: #202124;
-  --interactive-hover: #174ea6;
-  --interactive-active: #174ea6;
-  --interactive-muted: #9aa0a6;
-  --brand-experiment: #174ea6;
-  --status-positive: #0d652d;
-  --status-warning: #934900;
-  --status-danger: #a50e0e;
+/* Discord defines these semantic tokens on .theme-light (Discord web CSS, checked 2026-10-31).
+   !important lets them win over Discord's own .theme-light declarations. */
+.theme-light {
+  --background-base-lowest: #f1f3f4 !important;
+  --background-base-lower: #ffffff !important;
+  --background-base-low: #f1f3f4 !important;
+  --background-surface-high: #ffffff !important;
+  --background-surface-higher: #ffffff !important;
+  --background-surface-highest: #ffffff !important;
+  --modal-background: #ffffff !important;
+  --background-brand: #174ea6 !important;
+  --text-default: #202124 !important;
+  --text-strong: #202124 !important;
+  --text-muted: #595d62 !important;
+  --text-subtle: #595d62 !important;
+  --text-link: #174ea6 !important;
+  --text-brand: #174ea6 !important;
+  --text-code: #202124 !important;
+  --text-feedback-critical: #a50e0e !important;
+  --text-feedback-positive: #0d652d !important;
+  --text-feedback-warning: #934900 !important;
+  --interactive-text-default: #595d62 !important;
+  --interactive-text-hover: #202124 !important;
+  --interactive-text-active: #202124 !important;
+  --icon-strong: #202124 !important;
+  --icon-default: #202124 !important;
+  --icon-subtle: #595d62 !important;
+  --icon-muted: #595d62 !important;
+  --channel-icon: #595d62 !important;
+  --input-placeholder-text-default: #595d62 !important;
+  --border-focus: #4285f4 !important;
 }

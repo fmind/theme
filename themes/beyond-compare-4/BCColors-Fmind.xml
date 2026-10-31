@@ -1,12 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<BCColors Version="2" MinVersion="2">
-	<TBcColors>
-		<ThemeMode Value="tmLight"/>
-	</TBcColors>
+<!-- Fmind colors in Beyond Compare 4 format; Beyond Compare 5 imports it into its Light theme. -->
+<!-- Values are Delphi $BBGGRR: $FFFFFF #ffffff, $242120 #202124, $625D59 #595d62, $F4F3F1 #f1f3f4, $FCE3D2 #d2e3fc, -->
+<!-- $0E0EA5 #a50e0e, $A64E17 #174ea6, $A81D68 #681da8, $C3EFFE #feefc3, $D6EACE #ceead6, $CFD2FA #fad2cf, $A6A09A #9aa0a6. -->
+<BCColors Version="1" MinVersion="1">
 	<TDirColors>
 		<BGColor Value="$FFFFFF"/>
-		<CenterGradient Value="True"/>
-		<ColoredFolders Value="True"/>
-		<DarkBGColor Value="$FFFFFF"/>
+		<FGColor Value="$242120"/>
+		<DiffFGColor Value="$0E0EA5"/>
+		<OrphanFGColor Value="$A81D68"/>
+		<SameFGColor Value="$242120"/>
+		<FilteredFGColor Value="$625D59"/>
+		<FolderInfoFGColor Value="$625D59"/>
+		<UnknownFGColor Value="$625D59"/>
+		<SelFocusedBGColor Value="$FCE3D2"/>
+		<SelFocusedFGColor Value="$242120"/>
+		<SelSystem Value="False"/>
+		<StripeBGColor Value="$F4F3F1"/>
 	</TDirColors>
+	<TFileColors>
+		<BGColor Value="$FFFFFF"/>
+		<FGColor Value="$242120"/>
+		<GutterBGColor Value="$F4F3F1"/>
+		<GutterFGColor Value="$625D59"/>
+		<SigDiffBGColor Value="-"/>
+		<SigDiffFGColor Value="$0E0EA5"/>
+		<InsigDiffBGColor Value="-"/>
+		<InsigDiffFGColor Value="$A64E17"/>
+		<HasSigDiffBGColor Value="$C3EFFE"/>
+		<HasInsigDiffBGColor Value="$F4F3F1"/>
+		<HasSigOrphanBGColor Value="$D6EACE"/>
+		<HasSigConflictBGColor Value="$CFD2FA"/>
+		<SelFocusedBGColor Value="$FCE3D2"/>
+		<SelFocusedFGColor Value="$242120"/>
+		<SelSystem Value="False"/>
+		<WhitespaceFGColor Value="$A6A09A"/>
+	</TFileColors>
 </BCColors>

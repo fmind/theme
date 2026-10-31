@@ -16,7 +16,7 @@
 }
 
 .ace_cursor {
-  color: #174ea6;
+  color: #4285f4;
 }
 
 .ace_marker-layer .ace_selection, .ace_selection.ace_start {

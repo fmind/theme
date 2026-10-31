@@ -1,13 +1,18 @@
-/* Fmind theme for MkDocs Material / MkDocs */
+/* Fmind theme for Material for MkDocs */
+/* Material defines these variables on body attributes, so `:root > *` overrides them as its custom-colors docs show:
+   https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/#custom-colors */
 
-:root {
+:root > * {
   --md-primary-fg-color: #174ea6;
+  --md-primary-fg-color--light: #174ea6;
+  --md-primary-fg-color--dark: #174ea6;
   --md-primary-bg-color: #ffffff;
   --md-default-fg-color: #202124;
   --md-default-bg-color: #ffffff;
   --md-code-fg-color: #202124;
   --md-code-bg-color: #f1f3f4;
-  --md-code-hl-color: #d2e3fc;
+  --md-code-hl-color: #4285f4;
+  --md-code-hl-color--light: #d2e3fc;
 }
 
 body {

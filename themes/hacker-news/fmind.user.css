@@ -15,11 +15,12 @@
     background-color: #ffffff !important;
   }
 
+  /* The site name sits on Hacker News' orange header, where blue reads at 2.67:1. */
   .hnname a {
-    color: #174ea6 !important;
+    color: #202124 !important;
   }
 
-  table.itemlist, td.title, .title a {
+  td.title, .title a {
     color: #202124 !important;
   }
 

@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "version": 2,
+  "version": 4,
   "blocks": [
     {
       "type": "prompt",
@@ -12,7 +12,7 @@
           "powerline_symbol": "\ue0b0",
           "background": "#d2e3fc",
           "foreground": "#202124",
-          "properties": {
+          "options": {
             "style": "full"
           }
         },

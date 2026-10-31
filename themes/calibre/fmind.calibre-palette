@@ -1,4 +1,8 @@
 {
+  "dark": {
+    "palette": {},
+    "use_custom": false
+  },
   "light": {
     "palette": {
       "Base": "#ffffff",
@@ -10,6 +14,7 @@
       "Highlight": "#d2e3fc",
       "HighlightedText": "#202124",
       "Link": "#174ea6"
-    }
+    },
+    "use_custom": true
   }
 }

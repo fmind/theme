@@ -5,21 +5,22 @@ module.exports.themes = [
     theme: {
       background: {
         default: "#ffffff",
-        success: "#ceead6",
-        notice: "#feefc3",
-        warning: "#feefc3",
-        danger: "#fad2cf",
-        surprise: "#d2e3fc",
-        info: "#d2e3fc",
-      },
-      foreground: {
-        default: "#202124",
+        // Insomnia also uses these as text colors (e.g. HTTP method labels), so they stay dark.
         success: "#0d652d",
         notice: "#934900",
         warning: "#934900",
         danger: "#a50e0e",
-        surprise: "#174ea6",
-        info: "#174ea6",
+        surprise: "#681da8",
+        info: "#00636d",
+      },
+      foreground: {
+        default: "#202124",
+        success: "#ffffff",
+        notice: "#ffffff",
+        warning: "#ffffff",
+        danger: "#ffffff",
+        surprise: "#ffffff",
+        info: "#ffffff",
       },
       highlight: {
         default: "#595d62",
@@ -39,12 +40,12 @@ module.exports.themes = [
         paneHeader: {
           background: {
             default: "#ffffff",
-            success: "#ceead6",
-            notice: "#feefc3",
-            warning: "#feefc3",
-            danger: "#fad2cf",
-            surprise: "#d2e3fc",
-            info: "#d2e3fc",
+            success: "#0d652d",
+            notice: "#934900",
+            warning: "#934900",
+            danger: "#a50e0e",
+            surprise: "#681da8",
+            info: "#00636d",
           },
           foreground: {
             default: "#202124",

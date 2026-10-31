@@ -1,7 +1,9 @@
 # Albert
 
-Fmind theme for [Albert](https://albertlauncher.github.io/).
+Fmind theme for [Albert](https://albertlauncher.github.io/)'s Widgets BoxModel frontend.
+
+Format: [Theme.ini.template](https://github.com/albertlauncher/albert-plugin-widgetsboxmodel/blob/main/themes/Theme.ini.template) · [Albert theme loader](https://github.com/albertlauncher/albert-plugin-widgetsboxmodel/blob/main/src/window.cpp)
 
 ## Install
 
-Copy `Fmind.qss` to `~/.local/share/albert/widgetsboxmodel/themes/` and select **Fmind** in Albert settings.
+Copy [Fmind.ini](Fmind.ini) to `~/.local/share/albert/widgetsboxmodel/themes/`; Albert skips symbolic links there. Restart Albert, then choose **Fmind** as the **Light theme** in the Widgets BoxModel frontend settings.

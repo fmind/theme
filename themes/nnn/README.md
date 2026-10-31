@@ -2,6 +2,8 @@
 
 Light theme colors for [nnn](https://github.com/jarun/nnn).
 
+Format: [nnn man page (NNN_COLORS, NNN_FCOLORS)](https://github.com/jarun/nnn/blob/master/nnn.1)
+
 ## Installation
 
 Source [fmind.sh](fmind.sh) or add the exports to your shell configuration:

@@ -1,9 +1,26 @@
-/* Fmind theme for Readwise Reader */
-:root {
-  --bg-main: #ffffff;
-  --text-main: #202124;
-  --text-secondary: #595d62;
-  --accent-main: #174ea6;
-  --surface-main: #f1f3f4;
-  --border-main: #9aa0a6;
+/* ==UserStyle==
+@name Fmind Readwise Reader
+@namespace github.com/fmind/theme
+@version 4.0.0
+==/UserStyle== */
+
+/* Reader defines light tokens on :root and dark tokens on .theme--dark, which can sit on :root. */
+@-moz-document domain("read.readwise.io") {
+  html:root:not(.theme--dark) {
+    --background-primary: #ffffff;
+    --background-secondary: #f1f3f4;
+    --background-elevated: #ffffff;
+    --background-interactive: #174ea6;
+    --background-button-blue: #174ea6;
+    --text-primary: #202124;
+    --text-secondary: #595d62;
+    --text-interactive: #174ea6;
+    --text-error: #a50e0e;
+    --text-success: #0d652d;
+    --border-primary: #9aa0a6;
+    --border-secondary: #f1f3f4;
+    --border-focus: #4285f4;
+    --focus-ring-color: #4285f4;
+    --selection-color: #d2e3fc;
+  }
 }

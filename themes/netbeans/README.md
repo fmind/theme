@@ -2,6 +2,8 @@
 
 This native Fonts & Colors profile covers 27 MIME types, shared syntax, editor highlights and debugger annotations. Select a light look and feel under Tools → Options → Appearance; the profile styles editor content.
 
+Format: [NetBeans Fonts & Colors DTD](https://github.com/apache/netbeans/blob/master/ide/editor.settings.storage/src/org/netbeans/modules/editor/settings/storage/fontscolors/EditorFontsColors-1_1.dtd) · [Options import](https://github.com/apache/netbeans/blob/master/platform/options.api/src/org/netbeans/modules/options/export/OptionsExportModel.java)
+
 From this `netbeans/` directory, create the native import archive:
 
 ```sh

@@ -1,6 +1,62 @@
-:root {
-  --body-background: #ffffff;
-  --body-color: #202124;
-  --link-color: #174ea6;
-  --card-background: #f1f3f4;
+/* Fmind for omg.lol profiles: paste into the profile's Custom CSS, which loads after the theme.
+   Selectors follow omg.lol's profile base.css and bundled themes:
+   https://cdn.cache.lol/profiles/themes/css/base.css and https://api.omg.lol/theme/list */
+body {
+  background: #ffffff;
+  color: #202124;
+}
+
+main {
+  background: #f1f3f4;
+  color: #202124;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #202124;
+}
+
+a:link,
+a:visited {
+  color: #174ea6;
+  text-decoration: none;
+  border-bottom: 1px dotted #174ea6;
+}
+
+a:hover,
+a:active {
+  color: #174ea6;
+  text-decoration: none;
+  border-bottom: 2px solid #174ea6;
+}
+
+#pronouns,
+#pronouns a:link,
+#pronouns a:visited,
+#pronouns a:hover,
+#pronouns a:active,
+#footer,
+#footer a:link,
+#footer a:visited,
+#footer a:hover,
+#footer a:active {
+  color: #595d62;
+}
+
+#verification,
+.fa-li,
+.fas,
+.omg-icon,
+.omg-icon path {
+  color: #174ea6;
+  fill: #174ea6;
+  stroke: #174ea6;
+}
+
+hr {
+  background: #9aa0a6;
 }

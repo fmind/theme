@@ -1,7 +1,7 @@
 {
   "id": "fmind-light",
   "name": "Fmind",
-  "author": "M\u00e9d\u00e9ric Hurier",
+  "author": "Médéric Hurier",
   "desc": "Fmind light theme for Misskey",
   "base": "light",
   "props": {
@@ -9,6 +9,13 @@
     "bg": "#ffffff",
     "fg": "#202124",
     "panel": "#f1f3f4",
-    "divider": "#9aa0a6"
+    "divider": "#9aa0a6",
+    "link": "#174ea6",
+    "hashtag": "#174ea6",
+    "renote": "#0d652d",
+    "infoFg": "#595d62",
+    "success": "#0d652d",
+    "error": "#a50e0e",
+    "warn": "#934900"
   }
 }

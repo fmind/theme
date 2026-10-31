@@ -1,6 +1,6 @@
 # Fmind Telegram
 
-Light theme palette for Telegram Desktop using Google Sans typography and Fmind tones.
+Light theme palette for Telegram Desktop in Fmind tones.
 
 ## Install
 

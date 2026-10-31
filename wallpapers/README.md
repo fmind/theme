@@ -1,8 +1,8 @@
 # Fmind wallpapers
 
-Six light wallpapers with editable SVG sources and exact-size PNG exports. These replace the previous logo-only and website-only wallpapers.
+Six light wallpapers as exact-size PNGs with generated SVGs.
 
-| Screen         | Pixels      | Download                        | Source                          |
+| Screen         | Pixels      | Download                        | Scalable                        |
 | -------------- | ----------- | ------------------------------- | ------------------------------- |
 | Desktop 16:9   | 3840 × 2160 | [PNG](fmind-desktop-16x9.png)   | [SVG](fmind-desktop-16x9.svg)   |
 | Laptop 16:10   | 2560 × 1600 | [PNG](fmind-laptop-16x10.png)   | [SVG](fmind-laptop-16x10.svg)   |

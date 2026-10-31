@@ -5,6 +5,9 @@ on:
     branches:
       - main
   pull_request:
+  # Weekly run: new advisories can fail the gate without a commit.
+  schedule:
+    - cron: "17 3 * * 1"
   workflow_dispatch:
 permissions:
   contents: read
@@ -20,9 +23,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
+          fetch-depth: 100 # check:leaks scans the last 100 commits; a shallower clone hides them
           persist-credentials: false
       - name: Install tools
         uses: jdx/mise-action@6be3c7ed4c21d4f76b208d351d95aac273ebb76d # v5.2.4
+        with:
+          version: 2026.10.21 # pinned mise; bump deliberately with mise.lock tooling
       - name: Install validation dependencies
         run: mise run install
       - name: Validate themes, documentation and artwork

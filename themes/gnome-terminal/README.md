@@ -2,6 +2,8 @@
 
 Files: [fmind.dconf](fmind.dconf).
 
+Format: [GNOME Terminal profile schema](https://gitlab.gnome.org/GNOME/gnome-terminal/-/blob/master/src/org.gnome.Terminal.gschema.xml)
+
 ## Installation
 
 Import into a chosen profile with the scoped command below. The fragment only changes colors.

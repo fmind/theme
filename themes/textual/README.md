@@ -1,6 +1,6 @@
 # Textual
 
-Fmind theme for [Textual](https://www.textualirc.com/) on macOS.
+Fmind theme for [Textual](https://www.textualapp.com/) on macOS.
 
 ## Install
 

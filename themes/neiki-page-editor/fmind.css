@@ -1,0 +1,21 @@
+/* Fmind theme for Neiki's Page Editor */
+/* Variables: https://github.com/neikiri/neiki-page-editor/blob/main/src/neiki-page-editor.css */
+/* `body .npe-editor` outranks the light defaults on `.npe-editor`, even when the bundled CSS loads later; built-in theme classes still win. */
+body .npe-editor {
+  --npe-chrome-bg: #f1f3f4;
+  --npe-chrome-border: #9aa0a6;
+  --npe-chrome-text: #202124;
+  --npe-chrome-text-muted: #595d62;
+  --npe-toolbar-bg: #ffffff;
+  --npe-toolbar-border: #9aa0a6;
+  --npe-toolbar-btn-hover-bg: #f1f3f4;
+  --npe-toolbar-btn-active-bg: #d2e3fc;
+  --npe-toolbar-btn-active-text: #174ea6;
+  --npe-toolbar-separator: #9aa0a6;
+  --npe-canvas-bg: #ffffff;
+  --npe-canvas-border: #9aa0a6;
+  --npe-statusbar-bg: #f1f3f4;
+  --npe-statusbar-border: #9aa0a6;
+  --npe-statusbar-text: #595d62;
+  --npe-focus-ring: 0 0 0 2px #4285f4;
+}

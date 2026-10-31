@@ -1,7 +1,33 @@
-/* Fmind for Replugged */
-:root {
-  --background-primary: #ffffff;
-  --background-secondary: #f1f3f4;
-  --text-normal: #202124;
-  --brand-experiment: #174ea6;
+/* Fmind for Replugged: recolors Discord's light theme tokens. Requires Discord's Light appearance. */
+/* Discord defines these semantic tokens on .theme-light (Discord web CSS, checked 2026-10-31).
+   !important lets them win over Discord's own .theme-light declarations. */
+.theme-light {
+  --background-base-lowest: #f1f3f4 !important;
+  --background-base-lower: #ffffff !important;
+  --background-base-low: #f1f3f4 !important;
+  --background-surface-high: #ffffff !important;
+  --background-surface-higher: #ffffff !important;
+  --background-surface-highest: #ffffff !important;
+  --modal-background: #ffffff !important;
+  --background-brand: #174ea6 !important;
+  --text-default: #202124 !important;
+  --text-strong: #202124 !important;
+  --text-muted: #595d62 !important;
+  --text-subtle: #595d62 !important;
+  --text-link: #174ea6 !important;
+  --text-brand: #174ea6 !important;
+  --text-code: #202124 !important;
+  --text-feedback-critical: #a50e0e !important;
+  --text-feedback-positive: #0d652d !important;
+  --text-feedback-warning: #934900 !important;
+  --interactive-text-default: #595d62 !important;
+  --interactive-text-hover: #202124 !important;
+  --interactive-text-active: #202124 !important;
+  --icon-strong: #202124 !important;
+  --icon-default: #202124 !important;
+  --icon-subtle: #595d62 !important;
+  --icon-muted: #595d62 !important;
+  --channel-icon: #595d62 !important;
+  --input-placeholder-text-default: #595d62 !important;
+  --border-focus: #4285f4 !important;
 }

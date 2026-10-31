@@ -1,10 +1,18 @@
 {
-  "base": "#ffffff",
   "alternate_base": "#f1f3f4",
-  "text": "#202124",
-  "disabled_text": "#595d62",
+  "base": "#ffffff",
+  "bright_text": "#ffffff",
   "button": "#f1f3f4",
+  "chat_timestamp": "#595d62",
+  "disabled_button": "#f1f3f4",
+  "disabled_icon": "#9aa0a6",
+  "disabled_text": "#595d62",
   "highlight": "#d2e3fc",
   "highlighted_text": "#202124",
-  "unread_badge": "#174ea6"
+  "icon": "#595d62",
+  "shadow": "#9aa0a6",
+  "text": "#202124",
+  "unread_badge": "#174ea6",
+  "unread_badge_text": "#ffffff",
+  "window": "#f1f3f4"
 }

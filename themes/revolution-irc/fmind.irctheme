@@ -1,5 +1,6 @@
 {
-  "base": "default_light",
+  "name": "Fmind",
+  "base": "default",
   "colors": {
     "colorPrimaryDark": "#174ea6",
     "irc_colorWhite": "#ffffff",

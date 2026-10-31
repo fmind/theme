@@ -1,0 +1,26 @@
+# Fmind for alphai-tui: merge this [theme] table into ~/.config/alphai-tui/config.toml.
+# Slots follow src/theme.rs (Theme::from_config) in https://github.com/makeev/alphai-tui.
+# Unpainted text keeps the terminal's colors, so use a light terminal with 24-bit color.
+[theme]
+accent = "#174ea6"         # header title, active tab, overlay borders, headings
+accent_text = "#ffffff"    # text on the active tab
+up = "#0d652d"             # price up: candles, deltas, sparklines
+down = "#a50e0e"           # price down
+flat = "#595d62"           # unchanged / no data
+pos = "#0d652d"            # bullish sentiment, insider buys
+neg = "#a50e0e"            # bearish sentiment, insider sells
+error = "#a50e0e"          # error messages
+warn = "#934900"           # notices and the editing highlight
+score_high = "#934900"     # relevance score 8 to 10
+sma_fast = "#934900"       # fast moving average overlay
+sma_slow = "#681da8"       # slow moving average overlay
+rsi_line = "#00636d"       # RSI line
+ref_line = "#9aa0a6"       # previous close and RSI 30/70 reference lines
+pre_market_bg = "#feefc3"  # pre-market session band
+post_market_bg = "#d2e3fc" # after-hours session band
+border = "#9aa0a6"         # panel frames
+text = "#202124"           # body text on tinted panels
+subtle = "#595d62"         # sources, ages, axis labels, key hints
+faint = "#595d62"          # separators and inactive text
+selection = "#d2e3fc"      # background of the cursor row
+surface = "#f1f3f4"        # panel background with [ui] borders = "none"

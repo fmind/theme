@@ -1,15 +1,36 @@
 # Fmind style for Fluxbox
+# https://github.com/fluxbox/fluxbox/blob/master/doc/asciidoc/fluxbox-style.txt
+# Fluxbox draws an unset texture as flat solid darkgray and unset text or button
+# glyphs in white (src/FbTk/ThemeItems.cc), so every visible part is set here.
 window.title.focus.color: #ffffff
 window.title.unfocus.color: #f1f3f4
+window.label.focus.color: #ffffff
+window.label.unfocus.color: #f1f3f4
 window.label.focus.textColor: #202124
 window.label.unfocus.textColor: #595d62
+window.button.focus.color: #ffffff
+window.button.focus.picColor: #202124
+window.button.unfocus.color: #f1f3f4
+window.button.unfocus.picColor: #595d62
+window.button.pressed.color: #d2e3fc
 window.handle.focus.color: #ffffff
+window.handle.unfocus.color: #f1f3f4
 window.grip.focus.color: #174ea6
+window.grip.unfocus.color: #f1f3f4
 toolbar.color: #ffffff
-toolbar.textColor: #202124
+toolbar.clock.color: #ffffff
+toolbar.clock.textColor: #202124
+toolbar.workspace.color: #ffffff
+toolbar.workspace.textColor: #202124
+toolbar.iconbar.empty.color: #ffffff
+toolbar.iconbar.focused.color: #d2e3fc
+toolbar.iconbar.focused.textColor: #202124
+toolbar.iconbar.unfocused.color: #ffffff
+toolbar.iconbar.unfocused.textColor: #595d62
 menu.title.color: #f1f3f4
 menu.title.textColor: #174ea6
 menu.frame.color: #ffffff
 menu.frame.textColor: #202124
+menu.frame.disableColor: #595d62
 menu.hilite.color: #d2e3fc
 menu.hilite.textColor: #202124

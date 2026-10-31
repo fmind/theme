@@ -2,6 +2,8 @@
 
 Files: [fmind.py](fmind.py).
 
+Format: [Pygments custom styles](https://pygments.org/docs/styles/#creating-own-styles)
+
 ## Installation
 
 Copy the module into your Python project and pass `FmindStyle` to `HtmlFormatter`, as shown below. Requires Pygments; no changes to installed Pygments files.

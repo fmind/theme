@@ -2,11 +2,13 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>author</key>
+	<string>Fmind</string>
 	<key>id</key>
-	<string>com.fmind.theme</string>
-	<key>name</key>
+	<string>5D0C2B8E-3F4A-4C6E-9B7D-1A2F3E4D5C6B</string>
+	<key>title</key>
 	<string>Fmind</string>
 	<key>version</key>
-	<string>1.0</string>
+	<integer>3</integer>
 </dict>
 </plist>

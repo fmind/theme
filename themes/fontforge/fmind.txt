@@ -1,5 +1,5 @@
 fontforge.View.Background: #ffffff
-fontforge.View.Foreground: #202124
-fontforge.FontView.Selected: #d2e3fc
-fontforge.CharView.GridColor: #9aa0a6
-fontforge.CharView.Selected: #d2e3fc
+fontforge.FontView.GlyphFGColor: #202124
+fontforge.FontView.SelectedColor: #d2e3fc
+fontforge.FontView.SelectedFgColor: #202124
+fontforge.CharView.SelectedPointColor: #174ea6

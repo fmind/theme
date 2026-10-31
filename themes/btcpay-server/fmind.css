@@ -1,9 +1,17 @@
+/* Fmind for BTCPay Server: overrides variables from BTCPayServer/wwwroot/main/themes/default.css. */
 :root {
   --btcpay-body-bg: #ffffff;
-  --btcpay-body-color: #202124;
+  --btcpay-body-bg-rgb: 255, 255, 255;
+  --btcpay-body-text: #202124;
+  --btcpay-body-text-rgb: 32, 33, 36;
+  --btcpay-body-text-muted: #595d62;
   --btcpay-primary: #174ea6;
+  --btcpay-primary-accent: #174ea6;
+  --btcpay-primary-rgb: 23, 78, 166;
+  --btcpay-primary-shadow: rgba(23, 78, 166, 0.5);
   --btcpay-secondary: #f1f3f4;
   --btcpay-success: #0d652d;
   --btcpay-danger: #a50e0e;
   --btcpay-warning: #934900;
+  --btcpay-warning-text: #ffffff;
 }

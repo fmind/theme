@@ -2,6 +2,8 @@
 
 Fmind light theme for GitHub.
 
+Format: [Stylus UserCSS](https://github.com/openstyles/stylus/wiki/Writing-UserCSS) · [GitHub Primer CSS](https://github.com/primer/css)
+
 ## Installation
 
 1. Install the [Stylus](https://github.com/openstyles/stylus) extension.

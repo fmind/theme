@@ -7,8 +7,3 @@ FixedPageUI [
 	SelectionColor = #d2e3fc
 	GradientColors = #f1f3f4
 ]
-
-EbookUI [
-	TextColor = #202124
-	BackgroundColor = #ffffff
-]

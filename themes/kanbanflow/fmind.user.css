@@ -1,0 +1,23 @@
+/* ==UserStyle==
+@name           KanbanFlow Fmind
+@namespace      github.com/fmind/theme
+@version        4.0.0
+@description    Clean light theme for KanbanFlow
+==/UserStyle== */
+
+@-moz-document domain("kanbanflow.com") {
+  body,
+  .board {
+    background-color: #ffffff !important;
+    color: #202124 !important;
+  }
+
+  .card {
+    background-color: #f1f3f4 !important;
+    color: #202124 !important;
+  }
+
+  a {
+    color: #174ea6 !important;
+  }
+}

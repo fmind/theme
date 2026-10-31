@@ -1,5 +1,24 @@
-name: Fmind
-parent: classic
-windowBackground: #ffffff
-windowForeground: #202124
-accent: #174ea6
+!
+name: "Fmind"
+@
+parentTheme: 1
+#
+// Format and color names follow the bundled Blue and Cyan themes (app/src/main/other/themes) and TdlibUi.readCustomTheme.
+bubbleIn_text, bubbleOut_text, iv_text, text: #202124
+textLight: #595D62
+background: #F1F3F4
+badge, fillingPositive, bubbleOut_inlineOutline, bubbleOut_fillingPositive, bubbleOut_fillingPositive_overlay, bubbleIn_fillingPositive, bubbleIn_fillingPositive_overlay, chatListAction, chatListVerify, circleButtonActive, circleButtonRegular, circleButtonTheme, headerBarCallActive, inlineOutline, inputActive, profileSectionActiveContent, seekDone, sliderActive, snackbarUpdate: #174EA6
+bubbleIn_progress, bubbleIn_textLink, bubbleOut_chatCorrectChosenFilling, bubbleOut_chatCorrectFilling, bubbleOut_chatVerticalLine, bubbleOut_inlineIcon, bubbleOut_inlineText, bubbleOut_messageAuthor, bubbleOut_textLink, bubbleOut_ticks, bubbleOut_ticksRead, bubbleOut_waveformActive, checkActive, iconActive, inlineIcon, inlineText, iv_textLink, iv_textMarkedLink, messageAuthor, messageCorrectChosenFilling, messageCorrectFilling, messageSwipeBackground, messageVerticalLine, progress, textLink, textNeutral, ticks, ticksRead, togglerActive, unreadText, waveformActive: #174EA6
+bubbleIn_textLinkPressHighlight, bubbleOut_textLinkPressHighlight, iv_textLinkPressHighlight, iv_textMarkedLinkPressHighlight, textLinkPressHighlight, tooltip_textLinkPressHighlight: #174EA640
+bubbleOut_background, textSelectionHighlight, unread: #D2E3FC
+promo, textSearchQueryHighlight: #174EA6
+bubbleOut_file, controlActive, file, playerButtonActive, profileSectionActive, tooltip_textLink, avatarArchive, avatarSavedMessages, avatarSavedMessages_big, avatarReplies, avatarReplies_big: #4285F4
+bubbleOut_progress, bubbleOut_separator, bubbleOut_time: #595D62
+bubbleOut_waveformInactive, togglerActiveBackground, waveformInactive: #D2E3FC
+chatSendButton, online: #174EA6
+headerBadge: #D2E3FC
+headerBackground, notification, notificationLink, notificationPlayer, passcode: #174EA6
+messageSelection: #4285F410
+seekReady: #D2E3FC
+bubble_messageSelection, bubble_messageSelectionNoWallpaper: #4285F433
+bubbleOut_fillingActive: #4285F426

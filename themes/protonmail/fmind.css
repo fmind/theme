@@ -1,16 +1,85 @@
-:root {
-  --primary: #174ea6;
-  --text-norm: #202124;
-  --text-weak: #595d62;
-  --background-norm: #ffffff;
-  --background-weak: #f1f3f4;
-  --border-norm: #f1f3f4;
-  --signal-success: #0d652d;
-  --signal-danger: #a50e0e;
-  --signal-warning: #934900;
-}
+/* ==UserStyle==
+@name           Proton Mail Fmind
+@namespace      github.com/fmind/theme
+@version        4.0.0
+@description    Fmind light colors for Proton Mail on the web
+==/UserStyle== */
 
-body {
-  background-color: var(--background-norm);
-  color: var(--text-norm);
+/* Proton themes set these variables on :root, .ui-standard and .ui-prominent:
+   https://github.com/ProtonMail/WebClients/blob/main/packages/colors/themes/dist/snow.theme.css */
+@-moz-document domain("mail.proton.me") {
+  :root,
+  .ui-standard,
+  .ui-prominent {
+    --primary-minor-2: #d2e3fc !important;
+    --primary-minor-1: #d2e3fc !important;
+    --primary: #174ea6 !important;
+    --primary-major-1: #174ea6 !important;
+    --primary-major-2: #174ea6 !important;
+    --primary-major-3: #174ea6 !important;
+    --primary-contrast: #ffffff !important;
+    --interaction-norm-minor-2: #d2e3fc !important;
+    --interaction-norm-minor-1: #d2e3fc !important;
+    --interaction-norm: #174ea6 !important;
+    --interaction-norm-major-1: #174ea6 !important;
+    --interaction-norm-major-2: #174ea6 !important;
+    --interaction-norm-major-3: #174ea6 !important;
+    --interaction-norm-contrast: #ffffff !important;
+    --interaction-weak-minor-2: #f1f3f4 !important;
+    --interaction-weak-minor-1: #f1f3f4 !important;
+    --interaction-weak: #f1f3f4 !important;
+    --interaction-weak-major-1: #d2e3fc !important;
+    --interaction-weak-major-2: #d2e3fc !important;
+    --interaction-weak-major-3: #d2e3fc !important;
+    --interaction-weak-contrast: #202124 !important;
+    --signal-danger-minor-2: #fad2cf !important;
+    --signal-danger-minor-1: #fad2cf !important;
+    --signal-danger: #a50e0e !important;
+    --signal-danger-major-1: #a50e0e !important;
+    --signal-danger-major-2: #a50e0e !important;
+    --signal-danger-major-3: #a50e0e !important;
+    --signal-danger-contrast: #ffffff !important;
+    --signal-warning-minor-2: #feefc3 !important;
+    --signal-warning-minor-1: #feefc3 !important;
+    --signal-warning: #934900 !important;
+    --signal-warning-major-1: #934900 !important;
+    --signal-warning-major-2: #934900 !important;
+    --signal-warning-major-3: #934900 !important;
+    --signal-warning-contrast: #ffffff !important;
+    --signal-success-minor-2: #ceead6 !important;
+    --signal-success-minor-1: #ceead6 !important;
+    --signal-success: #0d652d !important;
+    --signal-success-major-1: #0d652d !important;
+    --signal-success-major-2: #0d652d !important;
+    --signal-success-major-3: #0d652d !important;
+    --signal-success-contrast: #ffffff !important;
+    --signal-info-minor-2: #f1f3f4 !important;
+    --signal-info-minor-1: #f1f3f4 !important;
+    --signal-info: #00636d !important;
+    --signal-info-major-1: #00636d !important;
+    --signal-info-major-2: #00636d !important;
+    --signal-info-major-3: #00636d !important;
+    --signal-info-contrast: #ffffff !important;
+    --text-norm: #202124 !important;
+    --text-weak: #595d62 !important;
+    --text-hint: #595d62 !important;
+    --text-disabled: #9aa0a6 !important;
+    --text-invert: #ffffff !important;
+    /* Field borders are essential controls, so they use dark grey (3:1 or more on white). */
+    --field-norm: #595d62 !important;
+    --field-hover: #202124 !important;
+    --field-disabled: #9aa0a6 !important;
+    --focus-outline: #4285f4 !important;
+    --focus-ring: #d2e3fc !important;
+    --border-norm: #9aa0a6 !important;
+    --border-weak: #f1f3f4 !important;
+    --background-norm: #ffffff !important;
+    --background-weak: #f1f3f4 !important;
+    --background-strong: #f1f3f4 !important;
+    --background-invert: #202124 !important;
+    --optional-scrollbar-thumb-color: #9aa0a6 !important;
+    --optional-background-lowered: #f1f3f4 !important;
+    --optional-email-item-read-background-color: #f1f3f4 !important;
+    --optional-email-item-read-text-color: #202124 !important;
+  }
 }

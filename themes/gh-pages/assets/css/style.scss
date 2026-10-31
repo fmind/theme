@@ -1,0 +1,41 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Fmind overrides. Primer styles page content under .markdown-body, so the
+// overrides use the same scope to win the cascade.
+body {
+  color: #202124;
+  background-color: #ffffff;
+}
+
+.markdown-body {
+  font-family: "Google Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  a {
+    color: #174ea6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #202124;
+  }
+
+  code,
+  pre,
+  .highlight pre {
+    font-family: "Google Sans Code", monospace;
+    color: #202124;
+    background-color: #f1f3f4;
+  }
+
+  blockquote {
+    color: #595d62;
+    border-left-color: #9aa0a6;
+  }
+}

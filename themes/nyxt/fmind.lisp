@@ -9,4 +9,4 @@
                          :on-primary-color "#ffffff"
                          :secondary-color "#f1f3f4"
                          :on-secondary-color "#202124"
-                         :accent-color "#174ea6"))))
+                         :action-color "#174ea6"))))

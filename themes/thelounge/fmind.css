@@ -1,16 +1,72 @@
+/* The Lounge draws the sidebar and footer on --body-bg-color with hard-coded
+   light-on-dark colors, so those rules are restyled for the light panel too. */
 :root {
-  --body-bg-color: #ffffff;
+  --body-bg-color: #f1f3f4;
   --body-color: #202124;
+  --button-color: #174ea6;
+  --highlight-bg-color: #d2e3fc;
+  --link-color: #174ea6;
   --window-bg-color: #ffffff;
   --window-heading-color: #174ea6;
-  --highlight-bg-color: #d2e3fc;
-  --unread-badge-bg-color: #174ea6;
-  --unread-badge-color: #ffffff;
-  --link-color: #174ea6;
-  --border-color: #f1f3f4;
 }
 
-body {
-  background-color: var(--body-bg-color);
-  color: var(--body-color);
+#sidebar .logo {
+  display: inline;
+}
+
+#sidebar .logo-inverted {
+  display: none;
+}
+
+#sidebar,
+#footer button,
+#footer button:hover,
+#footer button.active,
+.channel-list-item:hover,
+.channel-list-item.active,
+.channel-list-item .close::before,
+.channel-list-item[data-type="lobby"] .add-channel::before,
+#sidebar .network .collapse-network-icon::before {
+  color: #202124;
+}
+
+.channel-list-item:hover,
+#footer button:hover {
+  background-color: #ffffff;
+}
+
+.channel-list-item.active,
+#footer button.active {
+  background-color: #d2e3fc;
+}
+
+.channel-list-item[data-type="lobby"],
+.channel-list-item[data-type="lobby"]:hover,
+.channel-list-item[data-type="lobby"].active {
+  color: #174ea6;
+}
+
+.channel-list-item.not-secure,
+.channel-list-item.not-secure:hover,
+.channel-list-item.not-secure.active {
+  color: #934900;
+}
+
+.channel-list-item.not-connected,
+.channel-list-item.not-connected:hover,
+.channel-list-item.not-connected.active,
+.channel-list-item.parted-channel,
+.channel-list-item.parted-channel:hover,
+.channel-list-item.parted-channel.active {
+  color: #a50e0e;
+}
+
+.channel-list-item .badge {
+  background: #ffffff;
+  color: #595d62;
+}
+
+.channel-list-item .badge.highlight {
+  background: #174ea6;
+  color: #ffffff;
 }

@@ -1,0 +1,33 @@
+/* Fmind theme for Neiki's Editor */
+/* Variables: https://github.com/neikiri/neiki-editor/blob/main/src/neiki-editor.css */
+.neiki-editor.neiki-theme-fmind,
+.neiki-modal-overlay.neiki-theme-fmind,
+.neiki-context-menu.neiki-theme-fmind {
+  --neiki-bg-primary: #ffffff;
+  --neiki-bg-secondary: #f1f3f4;
+  --neiki-bg-tertiary: #f1f3f4;
+  --neiki-bg-hover: #d2e3fc;
+  --neiki-bg-active: #d2e3fc;
+  --neiki-border-color: #9aa0a6;
+  --neiki-border-color-dark: #595d62;
+  --neiki-text-primary: #202124;
+  --neiki-text-secondary: #595d62;
+  --neiki-text-muted: #595d62;
+  --neiki-accent-color: #174ea6;
+  --neiki-accent-hover: #202124;
+  --neiki-danger-color: #a50e0e;
+  --neiki-success-color: #0d652d;
+  --neiki-editor-bg: #ffffff;
+  --neiki-toolbar-bg: #f1f3f4;
+  --neiki-statusbar-bg: #f1f3f4;
+  --neiki-scrollbar-thumb: #595d62;
+  --neiki-scrollbar-track: #f1f3f4;
+  --neiki-selection-bg: #d2e3fc;
+  --neiki-highlight-color: #feefc3;
+  --neiki-table-border: #9aa0a6;
+}
+
+.neiki-editor.neiki-theme-fmind .neiki-html-tag { color: #174ea6; }
+.neiki-editor.neiki-theme-fmind .neiki-html-attr { color: #202124; }
+.neiki-editor.neiki-theme-fmind .neiki-html-string { color: #0d652d; }
+.neiki-editor.neiki-theme-fmind .neiki-html-comment { color: #595d62; font-style: normal; }

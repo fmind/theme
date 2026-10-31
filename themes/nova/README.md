@@ -2,6 +2,8 @@
 
 Fmind theme for [Nova](https://nova.app/).
 
+Format: [Nova themes](https://docs.nova.app/extensions/themes/) · [extension manifest](https://docs.nova.app/extensions/manifest/)
+
 ## Install
 
 Double click `Fmind.novaextension` or copy it to `~/Library/Application Support/Nova/Extensions/`. Select Fmind for the editor and window in Nova Settings → Theme.

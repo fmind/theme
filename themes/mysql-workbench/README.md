@@ -2,6 +2,8 @@
 
 Light theme syntax highlighting for the MySQL Workbench SQL query editor.
 
+Format: [MySQL Workbench code_editor.xml](https://github.com/mysql/mysql-workbench/blob/8.0/res/wbdata/code_editor.xml)
+
 ## Install
 
 1. Locate your MySQL Workbench installation's data directory (e.g. `/usr/share/mysql-workbench/data/` or `C:\Program Files\MySQL\MySQL Workbench X.X\data\`).

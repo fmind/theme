@@ -1,6 +1,8 @@
-# Fmind for DankMaterialShell
+# Fmind for Dux Shell (DankMaterialShell)
 
-Light styling for DankMaterialShell, the Quickshell desktop shell for Wayland compositors such as niri and Hyprland.
+Light styling for Dux Shell, formerly DankMaterialShell, the Quickshell desktop shell for Wayland compositors such as niri and Hyprland.
+
+Format: [Dux Shell custom themes](https://duxlabs.dev/docs/dms/custom-themes)
 
 ## Installation
 

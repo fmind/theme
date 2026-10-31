@@ -2,6 +2,8 @@
 
 A high-contrast light theme for the qBittorrent desktop app.
 
+Format: [qBittorrent custom themes](https://github.com/qbittorrent/qBittorrent/wiki/Create-custom-themes-for-qBittorrent) · [color keys](https://github.com/qbittorrent/qBittorrent/blob/master/src/gui/uithemecommon.h)
+
 ## Install
 
 1. Compile [resources.qrc](resources.qrc) into a `.qbtheme` bundle from this directory:

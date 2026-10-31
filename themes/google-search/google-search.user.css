@@ -11,7 +11,8 @@
     background-color: #ffffff !important;
     color: #202124 !important;
   }
-  a {
+  /* Skip the Google bar: its sign-in link is a filled button (`.gb_y a.gb_A`, white text on Google blue). */
+  a:not(#gb a) {
     color: #174ea6 !important;
   }
 }

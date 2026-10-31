@@ -4,18 +4,16 @@ Fmind is a light theme and design system. README.md owns usage and is displayed 
 
 ## Guidelines
 
-- Maintain native files directly under `themes/`; list every integration alphabetically in README, linking to its directory. Each directory owns installation in its README; do not introduce priority tiers. Experimental files do not establish native support.
-- Keep palette expectations in `checks/palette.yaml`, DESIGN.md, README and `screenshots/palette.svg` aligned. Design roles, typography, layout and components change in DESIGN.md only; lint it with `npx @google/design.md@0.4.0 lint DESIGN.md`. Text needs 4.5:1 contrast; essential controls need 3:1 and non-color state cues.
-- Refresh the two synthetic terminal captures with `mise run screenshots` after theme visual changes. They do not prove GUI coverage.
-- Edit branding through `artworks/generate.py` and regenerate with `mise run artwork`; preserve bundled source assets and their licenses.
-- Isolate app configuration. Never modify installed themes or contact live app services during checks.
-- Keep validation in `checks/`, branding sources and generation in `artworks/`.
-- Keep README concise and verify documentation links and image paths after changes.
-- For authorized publication, follow [theme-release](.agents/skills/theme-release/SKILL.md). Local checks, hosted CI and releases are separate evidence.
+- **Edit native files directly**: each `themes/<app>/` directory holds native files and a README that owns installation. List every integration alphabetically in README, linking to its directory, without priority tiers. Experimental files do not establish native support. Follow README [Contribute](README.md#contribute) for ports, and keep README concise.
+- **Treat removals and renames as breaking**: raw download URLs and [fmind/dot](https://github.com/fmind/dot), which pins and executes several theme files, depend on theme paths. Record a removal or rename under Breaking in CHANGELOG.md and release a major version.
+- **Keep the palette aligned**: `checks/palette.yaml`, DESIGN.md, README, `screenshots/palette.svg` and fmind/www `tests/test_palette.py` (`FMIND_COLORS`) list the same colors. Text needs 4.5:1 contrast; essential controls need 3:1 and non-color state cues. Design roles, typography, layout and components change in DESIGN.md only; lint it with `npx @google/design.md@0.4.0 lint DESIGN.md`.
+- **Regenerate visuals from their sources**: edit branding in `artworks/generate.py`, run `mise run artwork`, and preserve bundled source assets and their licenses. After changing the nvim, fish, bat, zellij or ghostty themes, refresh the two synthetic terminal captures with `mise run screenshots`. Capture uses Neovim's built-in syntax highlighting, and the captures do not prove GUI coverage.
+- **Keep checks generic**: `checks/` covers shared repository invariants, not native app behavior. Do not add app-specific harnesses or parser downloads. Checks isolate app configuration and never modify installed themes or contact live app services; verify affected themes manually in their apps.
+- **Release only when authorized**: follow [theme-release](.agents/skills/theme-release/SKILL.md). Local checks, hosted CI and releases are separate evidence.
 
 ## Maintenance
 
-Install [mise](https://mise.jdx.dev/):
+Install [mise](https://mise.jdx.dev/), then set up and validate:
 
 ```sh
 mise trust
@@ -24,18 +22,11 @@ mise run install
 mise run all
 ```
 
-| Task                   | Purpose                                                                                                        |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------- |
-| `mise run format`      | Format Python with Ruff and repository documentation/configuration with dprint.                                |
-| `mise run check`       | Lint Python, shell scripts and workflows, validate hooks, check formatting and audit locked dependencies.      |
-| `mise run test`        | Check shared palette, JSON/TOML/YAML syntax, documentation and artwork.                                        |
-| `mise run screenshots` | Refresh the two terminal captures. Uses pinned FFmpeg; requires Fontconfig, Chromium and the recommended font. |
-| `mise run artwork`     | Regenerate artwork from `artworks/generate.py` and bundled assets.                                             |
+`mise tasks` lists every task and its purpose. `mise run all` is the read-only gate that GitHub Actions runs on pushes to `main`, pull requests and weekly.
 
-`mise run check:security` queries OSV and npm for known vulnerabilities in the root Python lock, artwork script lock and JupyterLab npm lock, including development dependencies. It requires network access, installs no npm packages and fails on reported vulnerabilities or registry errors. Update artwork script locks, mise pins and dprint plugins manually; Dependabot covers root uv, GitHub Actions and JupyterLab npm dependencies.
-
-Checks cover shared repository invariants, not native app behavior; verify affected themes manually in their apps. Do not add app-specific test harnesses or parser downloads. Screenshot capture uses built-in Neovim syntax highlighting and accepts `VHS_CHROME_PATH` or cached Playwright Chromium.
-
-`mise run install` activates Lefthook: pre-commit formats staged files in scope and runs `mise run check`; pre-push runs `mise run test`. Keep hook commands delegated to mise tasks. dprint uses the explicit scope in `dprint.json`; native files under `themes/`, screenshot fixtures, generated artwork and lockfiles are outside that scope. Preserve one-line Markdown paragraphs.
-
-GitHub Actions runs the read-only `mise run all` gate. Dependencies and tools are pinned in lockfiles and `mise.toml`; Dependabot opens grouped pull requests for security fixes only; version updates stay off.
+- **Hooks delegate to mise tasks**: `mise run install` activates Lefthook. Pre-commit formats staged files in scope and runs `mise run check`; pre-push runs `mise run test`.
+- **Formatting scope is explicit**: dprint formats only the paths in `dprint.json`, and Ruff formats only Python. Native files under `themes/`, screenshot fixtures, generated artwork and lockfiles stay unformatted. Preserve one-line Markdown paragraphs.
+- **Network checks are separate evidence**: `check:security` needs network access and fails on reported vulnerabilities or registry errors. `mise run test` checks local links and anchors, not external URLs.
+- **Dependabot opens security fixes only**: it groups fixes for root uv, GitHub Actions and JupyterLab npm; version updates stay off. Update artwork script locks, mise pins (including the workflow's mise version) and dprint plugins manually.
+- **Capture screenshots on Linux**: mise locks ttyd for Linux only, and the Chromium fallback searches only the Linux Playwright cache. Elsewhere, put ttyd on `PATH` and set `VHS_CHROME_PATH` (untested).
+- **Search lockfiles with Git**: `.ignore` hides lockfiles and generated SVGs from ripgrep and agent search tools; use `git grep` for them.

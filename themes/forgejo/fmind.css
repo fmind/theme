@@ -1,10 +1,41 @@
-/* Fmind theme for Forgejo */
+/* Fmind theme for Forgejo: extends the built-in light theme, which defines every variable Forgejo needs. */
+/* https://codeberg.org/forgejo/forgejo/src/branch/forgejo/web_src/css/themes/theme-forgejo-light.css */
+@import "./theme-forgejo-light.css";
+
 :root {
   --color-primary: #174ea6;
+  --color-primary-contrast: #ffffff;
+  --color-primary-dark-1: #174ea6;
+  --color-primary-dark-2: #174ea6;
+  --color-primary-dark-3: #174ea6;
+  --color-primary-dark-4: #174ea6;
+  --color-primary-light-1: #4285f4;
+  --color-primary-light-2: #4285f4;
+  --color-primary-light-3: #4285f4;
+  --color-primary-light-4: #d2e3fc;
+  --color-primary-light-5: #d2e3fc;
+  --color-primary-light-6: #d2e3fc;
+  --color-primary-light-7: #d2e3fc;
+  --color-primary-alpha-10: #174ea619;
+  --color-primary-alpha-20: #174ea633;
+  --color-primary-alpha-30: #174ea64b;
+  --color-primary-alpha-40: #174ea666;
+  --color-primary-alpha-50: #174ea680;
+  --color-primary-alpha-60: #174ea699;
+  --color-primary-alpha-70: #174ea6b3;
+  --color-primary-alpha-80: #174ea6cc;
+  --color-primary-alpha-90: #174ea6e1;
+  --color-secondary: #9aa0a6;
   --color-body: #ffffff;
   --color-box-header: #f1f3f4;
   --color-box-body: #ffffff;
   --color-text: #202124;
   --color-text-light: #595d62;
-  --color-border: #9aa0a6;
+  --color-text-light-1: #595d62;
+  --color-text-light-2: #595d62;
+  --color-text-light-3: #595d62;
+  --color-input-border: #595d62;
+  --color-input-border-hover: #202124;
+  --color-selection-bg: #d2e3fc;
+  --color-selection-fg: #202124;
 }

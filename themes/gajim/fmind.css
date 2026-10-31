@@ -1,19 +1,38 @@
-:root {
-  --gajim-background: #ffffff;
-  --gajim-foreground: #202124;
-  --gajim-accent: #174ea6;
-  --gajim-surface: #f1f3f4;
-  --gajim-selection: #d2e3fc;
+/* Fmind theme for Gajim: the selectors and properties of Gajim's theme editor options. */
+/* https://github.com/gajim/gajim/blob/master/src/gajim/gtk/themes.py */
+.gajim-conversation-text {
+  color: #202124;
 }
 
-.gajim-state-composing {
-  color: #0d652d;
+.gajim-incoming-nickname {
+  color: #a50e0e;
 }
 
-.gajim-state-inactive {
+.gajim-outgoing-nickname {
+  color: #174ea6;
+}
+
+.gajim-status-message {
   color: #595d62;
 }
 
-.gajim-state-paused {
-  color: #174ea6;
+.gajim-banner {
+  color: #202124;
+  background: #f1f3f4;
+}
+
+.gajim-status-online {
+  color: #0d652d;
+}
+
+.gajim-status-away {
+  color: #934900;
+}
+
+.gajim-status-dnd {
+  color: #a50e0e;
+}
+
+.gajim-status-offline {
+  color: #595d62;
 }

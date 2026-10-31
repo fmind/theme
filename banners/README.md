@@ -2,7 +2,7 @@
 
 Upload the PNG; use the generated SVG for scalable viewing. Each layout preserves the logo on the left of the website and tagline. X, LinkedIn, Bluesky and Mastodon layouts leave extra space at the left for a profile photo.
 
-| Platform | Pixels      | Download            | Source              |
+| Platform | Pixels      | Download            | Scalable            |
 | -------- | ----------- | ------------------- | ------------------- |
 | YouTube  | 2560 × 1440 | [PNG](youtube.png)  | [SVG](youtube.svg)  |
 | X        | 1500 × 500  | [PNG](x.png)        | [SVG](x.svg)        |
@@ -15,7 +15,7 @@ Upload the PNG; use the generated SVG for scalable viewing. Each layout preserve
 
 The YouTube composition fits its central mobile safe area; Reddit keeps a smaller composition inside a shallow central crop. X, LinkedIn, Bluesky and Mastodon reserve space on the left for typical profile-photo overlays. See [platform sources, crop previews and limitations](../artworks/README.md#crop-evidence-and-limits).
 
-Check the upload preview on desktop and mobile before saving. Responsive crops and overlays remain unverified; Reddit community guidance does not establish personal-profile compatibility. No account was changed.
+Check the upload preview on desktop and mobile before saving. Responsive crops and overlays remain unverified; Reddit community guidance does not establish personal-profile compatibility.
 
 The circular FΦ mark is the byte-identical original logo asset. The logo stays on the left of `fmind.dev` and `AI Agents, MLOps & Security` inside the rounded blue panel border. Dark blue `#174EA6` and dark slate `#353B4E` sit on near-white `#FDFDFD`; the text uses shaped Google Sans Bold outlines.
 

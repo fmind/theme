@@ -27,7 +27,8 @@
    (orange     '("#934900" "#934900" "brightred"))
    (green      '("#0d652d" "#0d652d" "green"))
    (teal       '("#00636d" "#00636d" "brightgreen"))
-   (yellow     '("#e37400" "#e37400" "yellow"))
+   ;; doom-themes uses yellow mostly as text, so it takes the readable dark orange.
+   (yellow     '("#934900" "#934900" "yellow"))
    (blue       '("#174ea6" "#174ea6" "brightblue"))
    (dark-blue  '("#174ea6" "#174ea6" "blue"))
    (magenta    '("#681da8" "#681da8" "magenta"))
@@ -61,6 +62,8 @@
    (mode-line :background bg-alt :foreground fg)
    (mode-line-inactive :background bg :foreground base5)
    (line-number :foreground base5 :background bg)
-   (line-number-current-line :foreground fg :background base1 :bold t)))
+   (line-number-current-line :foreground fg :background base1 :bold t)
+   ;; doom-themes fills hi-yellow with yellow; keep highlighted text readable.
+   (hi-yellow :background "#feefc3")))
 
 ;;; doom-fmind-theme.el ends here

@@ -5,7 +5,7 @@ color = "blue"
 bold = true
 
 [style.description]
-color = "black"
+color = "default"
 
 [style.bullet]
 color = "bright_black"
@@ -18,7 +18,7 @@ color = "blue"
 underline = true
 
 [style.inline_code]
-color = "red"
+color = "blue"
 
 [style.placeholder]
 color = "cyan"

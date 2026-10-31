@@ -1,0 +1,197 @@
+/* Fmind light theme for Heroic Games Launcher. */
+/* Heroic sets the body class from the file name (fmind.css -> body.fmind). Custom themes do not
+   inherit the default theme's variables, so this block defines its full set plus the colour-system
+   values that assume a dark UI, following Heroic's built-in Nord Light theme:
+   https://github.com/Heroic-Games-Launcher/HeroicGamesLauncher/blob/main/src/frontend/themes.scss */
+
+body.fmind {
+  /* Colour system (src/frontend/styles/_colors.scss) */
+  --brand-primary: #174ea6;
+  --brand-primary-hover: #202124;
+  --brand-secondary: #681da8;
+  --brand-text-01: #ffffff;
+  --brand-text-02: #595d62;
+  --brand-text-05: #174ea6;
+  --neutral-01: #ffffff;
+  --neutral-02: #f1f3f4;
+  --neutral-03: #f1f3f4;
+  --neutral-04: #9aa0a6;
+  --neutral-05: #595d62;
+  --neutral-06: #202124;
+  --status-default-hover: #202124;
+  --status-success: #0d652d;
+  --status-success-hover: #0d652d;
+  --status-warning: #934900;
+  --status-warning-hover: #202124;
+  --status-danger: #a50e0e;
+  --status-danger-hover: #fad2cf;
+  --status-info: #00636d;
+  --primary-hover: #202124;
+  --primary-active: #174ea6;
+  --secondary-hover: #202124;
+  --accent: #174ea6;
+  --accent-02: #d2e3fc;
+  --accent-overlay: #202124;
+  --gamecard-title-color: #ffffffe6;
+  --gradient-gamecard: linear-gradient(180deg, #ffffff00 1.8%, var(--gamecard-title-color) 45%);
+  --gradient-body-background: var(--body-background);
+
+  /* Text */
+  --text-default: #202124;
+  --text-secondary: #595d62;
+  /* Text on dark fills: buttons, badges and the accent. */
+  --text-tertiary: #ffffff;
+  --text-quartenary: #595d62;
+  --text-hover: #174ea6;
+  --text-title: #202124;
+  --text-log: #934900;
+
+  /* Backgrounds, inputs, on-screen keyboard and modals */
+  --background: #ffffff;
+  --background-darker: #f1f3f4;
+  --background-lighter: #f1f3f4;
+  --body-background: #ffffff;
+  --input-background: #f1f3f4;
+  --controller-hints-background: transparent;
+  --current-background: var(--body-background);
+  --modal-background: #ffffff;
+  --modal-backdrop: #20212499;
+  --modal-border: #9aa0a6;
+  --osk-background: var(--body-background);
+  --osk-button-background: var(--input-background);
+  --osk-button-border: #9aa0a6;
+  --search-bar-background: #f1f3f4;
+  --search-bar-border: #595d62;
+
+  /* Action icons */
+  --action-icon: #595d62;
+  --action-icon-hover: #174ea6;
+  --action-icon-active: #202124;
+  --icon-disabled: #9aa0a6;
+  --icon-disabled-overlay: #9aa0a6;
+  --icons-background: #f1f3f4;
+
+  /* Buttons */
+  --primary: #174ea6;
+  --secondary: #174ea6;
+  --primary-button: #174ea6;
+  --secondary-button: #174ea6;
+  --secondary-button-overlay: #202124;
+  --tertiary-button: #595d62;
+  --tertiary-button-overlay: #202124;
+  --success-button: #0d652d;
+  --disabled-button: #f1f3f4;
+  --disabled-button-overlay: #9aa0a6;
+  --play-button: var(--primary-button);
+  --install-button: var(--secondary-button);
+  --cancel-button: #a50e0e;
+  --cancel-button-overlay: #202124;
+  --button-stroke: #202124;
+  --link-highlight: #174ea6;
+
+  /* Sidebar */
+  --navbar-background: #f1f3f4;
+  --navbar-active: #174ea6;
+  --navbar-inactive: #202124;
+  --navbar-active-background: #d2e3fc;
+  --navbar-accent: #174ea6;
+  --divider: #9aa0a6;
+
+  /* Status */
+  --success: #0d652d;
+  --success-hover: #202124;
+  --danger: #a50e0e;
+  --danger-hover: #a50e0e;
+  --anticheat-denied: #a50e0e;
+  --anticheat-broken: #934900;
+  --anticheat-running: #595d62;
+  --anticheat-supported: #0d652d;
+  --anticheat-planned: #00636d;
+  --anticheat-unknown: #595d62;
+
+  /* Onboarding tour */
+  --tour-popup-background: #f1f3f4;
+  --tour-popup-title: #202124;
+  --tour-popup-skip-color: #595d62;
+  --tour-popup-skip-color-hover: #202124;
+  --tour-bullet-active: #174ea6;
+  --tour-bullet-inactive: #9aa0a6;
+}
+
+/* Components that hard-code dark surfaces or light text; selectors from Nord Light. */
+body.fmind .developer,
+body.fmind .releaseDate,
+body.fmind .timeContainerLabel {
+  color: var(--text-default) !important;
+}
+
+body.fmind .MuiDialog-paper {
+  background-color: var(--background);
+  color: var(--text-default);
+}
+
+body.fmind .runnerIcon {
+  background: #d2e3fc;
+}
+
+body.fmind .genre {
+  background: #174ea6 !important;
+  color: #ffffff !important;
+}
+
+body.fmind .playIcon circle {
+  fill: var(--status-success);
+}
+
+body.fmind .downIcon circle {
+  fill: var(--primary-active);
+}
+
+body.fmind .selectFieldWrapper select > option {
+  background: var(--background);
+}
+
+body.fmind .searchBarInput::placeholder {
+  color: var(--text-secondary);
+  opacity: 1;
+}
+
+body.fmind .heroicVersion:hover {
+  color: var(--navbar-active);
+}
+
+body.fmind .contextMenu > .MuiPaper-root,
+body.fmind .contextMenu > .MuiPaper-root > .MuiMenu-list {
+  background-color: var(--input-background);
+}
+
+body.fmind .contextMenu .MuiMenuItem-root:hover {
+  background-color: #d2e3fc;
+}
+
+body.fmind .progressDialog.log-box,
+body.fmind .errorDialog.error-box {
+  background-color: #f1f3f4;
+}
+
+/* Status labels sit on a hard-coded dark gradient over the cover art. */
+body.fmind .gameCard > .gameCardStatus {
+  background: #ffffff;
+}
+
+body.fmind .CategoriesManager__Dialog .MuiDialogContent-root .Category:hover,
+body.fmind .CategoriesManager__Dialog .MuiDialogContent-root .Category:focus-within {
+  background-color: #f1f3f4;
+}
+
+body.fmind .tour-button {
+  --tour-button-color: var(--accent);
+}
+
+body.fmind .Sidebar .tour-button {
+  --tour-button-color: var(--primary-active);
+}
+
+body.fmind .alternative > svg {
+  fill: var(--accent) !important;
+}

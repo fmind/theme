@@ -1,8 +1,8 @@
 {
-  "name": "Fmind",
-  "background": "#ffffff",
-  "foreground": "#202124",
-  "keyword": "#174ea6",
-  "string": "#0d652d",
-  "comment": "#595d62"
+  "name": "fmind",
+  "label": "Fmind",
+  "dark": false,
+  "stylesheet": "fmind.css",
+  "license": "MIT",
+  "homepage": "https://github.com/fmind/theme"
 }

@@ -2,6 +2,8 @@
 
 Fmind light theme for Hacker News (`news.ycombinator.com`).
 
+Format: [Stylus UserCSS](https://github.com/openstyles/stylus/wiki/Writing-UserCSS) · [news.css](https://news.ycombinator.com/news.css)
+
 ## Installation
 
 1. Install the [Stylus](https://github.com/openstyles/stylus) extension.

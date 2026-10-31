@@ -1,3 +1,5 @@
+/* Same selector as Django's base.css, so the theme also applies when Light is chosen. */
+html[data-theme="light"],
 :root {
   --primary: #174ea6;
   --secondary: #174ea6;

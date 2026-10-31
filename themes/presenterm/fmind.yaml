@@ -1,22 +1,23 @@
 # Fmind theme for presenterm
+# presenterm reads colors as hex without "#": https://github.com/mfontanini/presenterm/blob/master/docs/src/features/themes/definition.md#colors
 default:
   colors:
-    foreground: "#202124"
-    background: "#ffffff"
+    foreground: "202124"
+    background: "ffffff"
 headings:
   h1:
     colors:
-      foreground: "#174ea6"
+      foreground: "174ea6"
   h2:
     colors:
-      foreground: "#174ea6"
+      foreground: "174ea6"
   h3:
     colors:
-      foreground: "#174ea6"
+      foreground: "174ea6"
 code:
   # presenterm highlights code with a syntect theme; it ignores colors here.
   theme_name: GitHub
 intro_slide:
   title:
     colors:
-      foreground: "#174ea6"
+      foreground: "174ea6"

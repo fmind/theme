@@ -2,6 +2,8 @@
 
 Fmind light theme for GRUB 2 bootloader.
 
+Format: [GRUB theme file format](https://www.gnu.org/software/grub/manual/grub/html_node/Theme-file-format.html)
+
 ## Installation
 
 1. Copy the `grub/` directory to `/boot/grub/themes/fmind` (or `/boot/grub2/themes/fmind`).

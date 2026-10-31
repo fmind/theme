@@ -2,6 +2,8 @@
 
 Files: [fmind.conf](fmind.conf).
 
+Format: [EditorColourSet](https://github.com/arnholm/codeblocks_sfmirror/blob/master/src/sdk/editorcolourset.cpp) · [Code::Blocks source](https://www.codeblocks.org/downloads/source/)
+
 ## Installation
 
 Close Code::Blocks; open its `cb_share_config` utility with this file as source and your `default.conf` as destination. Select only `editor → colour_sets → fmind`, Transfer and Save. Reopen, then Settings → Editor → Syntax highlighting → Colour theme → Fmind. Covers 62 lexers from 25.03.

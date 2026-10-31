@@ -1,10 +1,20 @@
-/* Fmind theme for Kagi search */
-:root {
+/* Fmind theme for Kagi search: paste into https://kagi.com/settings/custom_css */
+/* Overrides variables from Kagi's light theme (`.theme_light,:root` in kagi.com/asset/<build>/css/kagi_themes.scss.css). */
+:root,
+.theme_light {
   --app-bg: #ffffff;
-  --app-fg: #202124;
-  --link-color: #174ea6;
-  --link-visited-color: #681da8;
-  --search-box-bg: #f1f3f4;
-  --border-color: #9aa0a6;
-  --accent-color: #174ea6;
+  --modal-bg: #ffffff;
+  --app-text: #202124;
+  --primary: #202124;
+  --link: #174ea6;
+  --primary-hover: #174ea6;
+  --primary-visited: #681da8;
+  --search-result-title: #174ea6;
+  --search-result-title-hover: #174ea6;
+  --search-result-content-text: #202124;
+  --search-result-url-link: #595d62;
+  --result-item-title-border: #9aa0a6;
+  --result-item-title-border_hover: #174ea6;
+  --input-bg: #f1f3f4;
+  --color-search-input-border: #595d62;
 }

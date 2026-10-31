@@ -241,12 +241,18 @@
       <value>
         <option name="FOREGROUND" value="a50e0e" />
         <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" value="ea4335" />
+        <option name="EFFECT_TYPE" value="2" />
+        <option name="ERROR_STRIPE_COLOR" value="ea4335" />
       </value>
     </option>
     <option name="RUNTIME_ERROR">
       <value>
         <option name="FOREGROUND" value="a50e0e" />
         <option name="FONT_TYPE" value="0" />
+        <option name="EFFECT_COLOR" value="ea4335" />
+        <option name="EFFECT_TYPE" value="5" />
+        <option name="ERROR_STRIPE_COLOR" value="ea4335" />
       </value>
     </option>
     <option name="CONSOLE_SYSTEM_OUTPUT">
@@ -258,7 +264,9 @@
     <option name="WARNING_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="934900" />
+        <option name="BACKGROUND" value="feefc3" />
         <option name="FONT_TYPE" value="0" />
+        <option name="ERROR_STRIPE_COLOR" value="e37400" />
       </value>
     </option>
     <option name="FOLDED_TEXT_ATTRIBUTES">

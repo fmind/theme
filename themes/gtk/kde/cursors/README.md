@@ -10,7 +10,7 @@ The theme contains native sizes 24, 32, 36, 48, 64 and 96 pixels. Choose the siz
 
 Shapes include left/right/center arrows, pointing/open/closed hands, text and vertical text, crosshairs, every resize direction, splitters, movement, copy/link/help/context-menu badges, forbidden/no-drop states, pencil, color picker, zoom and a kill cursor. Wait and progress have twelve frames at 60 ms per frame; progress retains an arrow with a fixed hotspot. Common toolkit names and legacy hashed names resolve directly to the appropriate native file. Unlike the reference bundle, `size-hor`, `size-ver`, `size-fdiag` and `size-bdiag` select resize shapes; `move` uses the four-way arrow and `grabbing` uses the closed hand.
 
-The native X11 checks use isolated Xvfb and libXcursor; Wayland compositor rendering, sandboxed application theme discovery and hardware-specific cursor limits remain unverified.
+A one-off native X11 check in September 2026 loaded every name at every size with libXcursor 1.2.1 under isolated Xvfb; repository checks do not exercise cursors. Wayland compositor rendering, sandboxed application theme discovery and hardware-specific cursor limits remain unverified.
 
 ## Maintenance
 
@@ -22,7 +22,6 @@ From the repository root:
 uv run --locked themes/gtk/kde/cursors/compile.py --output themes/gtk/kde/cursors/Fmind/cursors
 mise run format
 mise run check
-mise run screenshots
 ```
 
 To verify compilation without modifying the package, pass a temporary output directory and compare its files with `Fmind/cursors/`. The helper compiles every input before copying any output and refuses to replace symbolic links. Aliases are maintained directly in the package.

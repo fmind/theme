@@ -1,18 +1,124 @@
-/* Fmind theme for Advent of Code */
-body {
-  background-color: #ffffff;
-  color: #202124;
-}
-a {
-  color: #174ea6;
-}
-em {
-  color: #0d652d;
-}
-.star-count {
-  color: #934900;
-}
-code {
-  background-color: #f1f3f4;
-  color: #202124;
+/* ==UserStyle==
+@name Fmind Advent of Code
+@namespace github.com/fmind/theme
+@version 4.0.0
+==/UserStyle== */
+/* Selectors and the colors they replace follow https://adventofcode.com/static/style.css. */
+@-moz-document domain("adventofcode.com") {
+  body {
+    background: #ffffff;
+    color: #202124;
+  }
+  a,
+  input[type="submit"],
+  .share {
+    color: #174ea6;
+  }
+  a:hover,
+  a:focus,
+  input[type="submit"]:hover,
+  input[type="submit"]:focus,
+  .share:hover,
+  .share:focus-within {
+    color: #174ea6;
+    text-decoration: underline;
+  }
+  /* Calendar art keeps its own hover cue: the background below. */
+  .calendar a:hover,
+  .calendar a:focus {
+    text-decoration: none;
+  }
+  /* The site draws the code background on a pseudo-element behind the text. */
+  code:before {
+    background: #f1f3f4;
+    border-color: #f1f3f4;
+  }
+  header h1 a,
+  header h1 span,
+  header h1 a:hover,
+  header h1 a:focus {
+    color: #0d652d;
+    text-shadow: none;
+  }
+  article h2,
+  input[type="radio"]:checked ~ span,
+  input[type="checkbox"]:checked ~ span,
+  #calendar-countdown,
+  .calendar a .calendar-day,
+  .stats > a,
+  .leaderboard-daylinks-selected,
+  .leaderboard-entry .leaderboard-totalscore {
+    color: #202124;
+    text-shadow: none;
+  }
+  article em {
+    color: #0d652d;
+    text-shadow: none;
+  }
+  /* Gold marks both stars, blue the first star only and grey a locked or unsolved day. */
+  .star-count,
+  .supporter-badge,
+  a.supporter-badge:hover,
+  a.supporter-badge:focus,
+  article em.star,
+  .day-success,
+  .calendar a.calendar-complete .calendar-mark-complete,
+  .calendar a.calendar-verycomplete .calendar-mark-complete,
+  .calendar a.calendar-verycomplete .calendar-mark-verycomplete,
+  .stats-both,
+  .leaderboard-daydesc-both,
+  .privboard-star-both {
+    color: #934900;
+    text-shadow: none;
+  }
+  .sponsor-badge,
+  a.sponsor-badge:hover,
+  a.sponsor-badge:focus,
+  .stats-firstonly,
+  .leaderboard-daydesc-first,
+  .privboard-star-firstonly {
+    color: #174ea6;
+    text-shadow: none;
+  }
+  .calendar > span,
+  .calendar > a,
+  .calendar .calendar-day,
+  .stats > span,
+  .stats > span .stats-firstonly,
+  .stats > span .stats-both,
+  .privboard-days > span,
+  .privboard-star-unlocked {
+    color: #595d62;
+  }
+  /* Muted text uses dark grey instead of the site's translucent text, which falls below 4.5:1 on white. */
+  .quiet,
+  article .aside {
+    opacity: 1;
+    color: #595d62;
+  }
+  .warning-active {
+    color: #a50e0e;
+  }
+  input[type="text"],
+  textarea {
+    background: #ffffff;
+    color: #202124;
+    border-color: #595d62;
+  }
+  .puzzle-input {
+    background: #f1f3f4;
+    color: #202124;
+    border-color: #9aa0a6;
+    text-shadow: none;
+  }
+  input[type="radio"] ~ span:hover,
+  input[type="radio"] ~ span:focus,
+  input[type="checkbox"] ~ span:hover,
+  input[type="checkbox"] ~ span:focus,
+  .calendar a:hover,
+  .calendar a:focus,
+  .stats > a:hover,
+  .stats > a:focus {
+    background-color: #f1f3f4;
+  }
 }

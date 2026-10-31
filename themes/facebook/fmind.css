@@ -1,9 +1,14 @@
 /* Fmind theme for Facebook */
-:root {
-  --primary-button-background: #174ea6;
-  --secondary-button-background: #f1f3f4;
-  --primary-text: #202124;
-  --secondary-text: #595d62;
-  --surface-background: #ffffff;
-  --card-background: #f1f3f4;
+/* Facebook declares these variables on ":root, .__fb-light-mode:root, .__fb-light-mode"
+   (inline CSS on www.facebook.com, checked 2026-10-31). Reusing that selector gives equal
+   specificity, so this later style wins; a bare :root would lose to .__fb-light-mode:root. */
+@-moz-document domain("facebook.com") {
+  :root, .__fb-light-mode:root, .__fb-light-mode {
+    --primary-button-background: #174ea6;
+    --secondary-button-background: #f1f3f4;
+    --primary-text: #202124;
+    --secondary-text: #595d62;
+    --surface-background: #ffffff;
+    --card-background: #f1f3f4;
+  }
 }

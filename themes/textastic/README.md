@@ -1,7 +1,9 @@
 # Fmind for Textastic
 
-Light syntax theme for [Textastic](https://www.textasticapp.com/).
+Light syntax theme for [Textastic](https://www.textasticapp.com/). Textastic reads TextMate themes, so it uses the [TextMate theme](../textmate/fmind.tmTheme).
 
 ## Installation
 
-Import [fmind.tmTheme](fmind.tmTheme) into Textastic via Files / WebDAV.
+1. In Textastic's Local Files root, create a folder named `#Textastic` (case-sensitive).
+2. Copy [fmind.tmTheme](../textmate/fmind.tmTheme) into it.
+3. Open **Settings** → **Other** → **Reload Customizations**, then select Fmind in the code editor settings.

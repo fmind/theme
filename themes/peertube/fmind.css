@@ -1,8 +1,10 @@
-/* Fmind theme for PeerTube */
+/* Fmind theme for PeerTube 7.3+: https://docs.joinpeertube.org/contribute/plugins#css-variables */
+/* PeerTube derives its shades from these base colors and reads --is-dark from :root. */
 :root {
-  --mainColor: #174ea6;
-  --mainBackgroundColor: #ffffff;
-  --menuBackgroundColor: #f1f3f4;
-  --mainForegroundColor: #202124;
-  --subForegroundColor: #595d62;
+  --is-dark: 0;
+  --primary: #174ea6;
+  --on-primary: #ffffff;
+  --fg: #202124;
+  --bg: #ffffff;
+  --bg-secondary: #f1f3f4;
 }

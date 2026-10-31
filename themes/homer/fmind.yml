@@ -1,0 +1,19 @@
+# https://github.com/bastienwirtz/homer/blob/main/docs/theming.md
+# Merge into Homer's assets/config.yml. Homer applies these values to
+# `#app.light`, where a stylesheet's `:root` variables would be shadowed.
+defaults:
+  colorTheme: light # Fmind is light only.
+colors:
+  light:
+    highlight-primary: "#174ea6" # Header fill and group icons.
+    highlight-secondary: "#174ea6" # Navbar fill, card tags and group-title accents.
+    highlight-hover: "#202124" # Navbar hover and search fill under white text.
+    background: "#ffffff"
+    card-background: "#f1f3f4"
+    text: "#202124"
+    text-header: "#ffffff"
+    text-title: "#174ea6"
+    text-subtitle: "#595d62"
+    card-shadow: transparent
+    link: "#174ea6"
+    link-hover: "#202124"

@@ -8,5 +8,5 @@
   <Body_Font>32,33,36</Body_Font>
   <Selection_Back>210,227,252</Selection_Back>
   <Selection_Font>32,33,36</Selection_Font>
-  <StandOut_Font>23,78,166</StandOut_Font>
+  <Strong_Body_Font>23,78,166</Strong_Body_Font>
 </SkinColors>

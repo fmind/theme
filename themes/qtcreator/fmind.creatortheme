@@ -207,6 +207,9 @@ Bookmarks_TextMarkColor=ff202124
 TextEditor_SearchResult_ScrollBarColor=ff202124
 TextEditor_Selection_ScrollBarColor=ff202124
 TextEditor_CurrentLine_ScrollBarColor=ff202124
+TextEditor_MergeConflictCurrent_ScrollBarColor=ff174ea6
+TextEditor_MergeConflictIncoming_ScrollBarColor=ff681da8
+TextEditor_MergeConflictBase_ScrollBarColor=ff595d62
 Debugger_Breakpoint_TextMarkColor=ff174ea6
 Navigator_DefaultColor=ff202124
 Navigator_3DColor=ff202124
@@ -451,7 +454,6 @@ ChatPlanBackground=ffffffff
 [Flags]
 DarkUserInterface=false
 DerivePaletteFromTheme=true
-ApplyThemePaletteGlobally=true
 WindowColorAsBase=true
 ComboBoxDrawTextShadow=false
 DrawIndicatorBranch=true

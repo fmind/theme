@@ -24,7 +24,9 @@ inode:
 links:
   valid: cyan
   invalid: red
+tree-edge: dark_grey
 git-status:
+  default: dark_grey
   unmodified: dark_grey
   ignored: dark_grey
   new-in-index: green

@@ -1,41 +1,242 @@
 {
   "mainWindow": {
     "divider": {
-      "topColor": "#f1f3f4",
-      "middleColor": "#f1f3f4",
-      "bottomColor": "#f1f3f4"
+      "topColor": "#9aa0a6",
+      "middleColor": "#9aa0a6",
+      "bottomColor": "#9aa0a6"
     }
   },
   "sidebar": {
     "topBar": {
       "backgroundColor": "#f1f3f4",
-      "bottomBorderColor": "#f1f3f4",
+      "bottomBorderColor": "#9aa0a6",
       "segmentedControl": {
         "tintColor": "#174ea6",
-        "borderWidth": 1
+        "borderWidth": 2,
+        "borderRadius": 3
       }
     },
-    "body": {
+    "table": {
       "backgroundColor": "#f1f3f4",
-      "selectedRowBackgroundColor": "#d2e3fc",
       "textColor": "#202124",
-      "selectedTextColor": "#202124"
+      "selectedTextColor": "#202124",
+      "emphasizedTextColor": "#ffffff",
+      "iconColor": "#595d62",
+      "selectedIconColor": "#202124",
+      "emphasizedIconColor": "#ffffff",
+      "selectedRowBgColor": "#d2e3fc",
+      "emphasizedRowBgColor": "#174ea6"
+    },
+    "bottomBar": {
+      "backgroundColor": "#f1f3f4",
+      "topBorderColor": "#9aa0a6",
+      "textColor": "#202124",
+      "controlColor": "#595d62",
+      "pressedControlColor": "#174ea6"
     }
   },
   "noteList": {
     "topBar": {
-      "backgroundColor": "#f1f3f4",
-      "bottomBorderColor": "#f1f3f4"
-    },
-    "body": {
       "backgroundColor": "#ffffff",
-      "selectedRowBackgroundColor": "#d2e3fc",
+      "bottomBorderColor": "#9aa0a6",
+      "controlColor": "#595d62",
+      "pressedControlColor": "#174ea6"
+    },
+    "tableHeader": {
+      "backgroundColor": "#ffffff",
+      "bottomBorderColor": "#9aa0a6",
+      "controlColor": "#595d62",
+      "pressedControlColor": "#174ea6"
+    },
+    "table": {
+      "backgroundColor": "#ffffff",
+      "separatorColor": "#f1f3f4",
       "textColor": "#202124",
-      "selectedTextColor": "#202124"
+      "selectedTextColor": "#202124",
+      "emphasizedTextColor": "#ffffff",
+      "detailColor": "#595d62",
+      "selectedDetailColor": "#595d62",
+      "emphasizedDetailColor": "#ffffff",
+      "iconColor": "#595d62",
+      "selectedIconColor": "#202124",
+      "emphasizedIconColor": "#ffffff",
+      "rowBgColor": "#ffffff",
+      "altRowBgColor": "#f1f3f4",
+      "selectedRowBgColor": "#d2e3fc",
+      "emphasizedRowBgColor": "#174ea6",
+      "draggedRowBgColor": "#d2e3fc",
+      "emptyTextColor": "#595d62"
+    },
+    "bottomBar": {
+      "backgroundColor": "#ffffff",
+      "searchField": {
+        "textColor": "#202124",
+        "controlColor": "#595d62",
+        "pressedControlColor": "#174ea6",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#9aa0a6",
+        "placeholderColor": "#595d62"
+      }
     }
   },
-  "editor": {
+  "noteView": {
     "backgroundColor": "#ffffff",
-    "textColor": "#202124"
+    "dividerColor": "#9aa0a6",
+    "topBar": {
+      "backgroundColor": "#ffffff",
+      "bottomBorderColor": "#9aa0a6",
+      "controlColor": "#595d62",
+      "pressedControlColor": "#174ea6",
+      "segmentedControl": {
+        "tintColor": "#174ea6",
+        "borderWidth": 2,
+        "borderRadius": 3
+      }
+    },
+    "toolbar": {
+      "backgroundColor": "#f1f3f4",
+      "dividerColor": "#9aa0a6",
+      "middleDividerColor": "#9aa0a6",
+      "controlColor": "#595d62",
+      "pressedControlColor": "#174ea6",
+      "iconColor": "#595d62",
+      "textColor": "#202124",
+      "popUpButton": {
+        "titleColor": "#202124",
+        "borderColor": "#9aa0a6"
+      },
+      "tagField": {
+        "textColor": "#202124",
+        "placeholderColor": "#595d62",
+        "tag": {
+          "textColor": "#202124",
+          "selectedTextColor": "#ffffff",
+          "backgroundColor": "#d2e3fc",
+          "selectedBackgroundColor": "#174ea6",
+          "borderRadius": 4
+        }
+      },
+      "formatBar": {
+        "controlColor": "#595d62",
+        "highlightColor": "#174ea6"
+      },
+      "searchField": {
+        "textColor": "#202124",
+        "controlColor": "#595d62",
+        "pressedControlColor": "#174ea6",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#9aa0a6",
+        "placeholderColor": "#595d62"
+      },
+      "doneButton": {
+        "textColor": "#202124",
+        "highlightBackgroundColor": "#d2e3fc",
+        "borderColor": "#9aa0a6"
+      }
+    },
+    "bottomBar": {
+      "backgroundColor": "#ffffff",
+      "controlColor": "#595d62",
+      "pressedControlColor": "#174ea6"
+    }
+  },
+  "multiNote": {
+    "backgroundColor": "#f1f3f4",
+    "textColor": "#595d62",
+    "button": {
+      "tintColor": "#595d62",
+      "highlightColor": "#202124",
+      "backgroundColor": "#ffffff",
+      "highlightBackgroundColor": "#d2e3fc",
+      "borderColor": "#9aa0a6",
+      "highlightBorderColor": "#9aa0a6"
+    },
+    "tagField": {
+      "textColor": "#202124",
+      "placeholderColor": "#595d62",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#9aa0a6",
+      "borderRadius": 4,
+      "tag": {
+        "textColor": "#202124",
+        "selectedTextColor": "#ffffff",
+        "backgroundColor": "#d2e3fc",
+        "selectedBackgroundColor": "#174ea6",
+        "borderRadius": 4
+      }
+    }
+  },
+  "notebookPicker": {
+    "backgroundColor": "#f1f3f4",
+    "textColor": "#202124",
+    "dividerColor": "#9aa0a6",
+    "searchField": {
+      "textColor": "#202124",
+      "controlColor": "#595d62",
+      "pressedControlColor": "#174ea6",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#9aa0a6",
+      "placeholderColor": "#595d62"
+    },
+    "table": {
+      "textColor": "#202124",
+      "selectedTextColor": "#202124",
+      "emphasizedTextColor": "#ffffff",
+      "iconColor": "#595d62",
+      "selectedIconColor": "#202124",
+      "emphasizedIconColor": "#ffffff",
+      "selectedRowBgColor": "#d2e3fc",
+      "emphasizedRowBgColor": "#174ea6",
+      "emptyTextColor": "#595d62"
+    }
+  },
+  "searchView": {
+    "backgroundColor": "#f1f3f4",
+    "searchField": {
+      "textColor": "#202124",
+      "controlColor": "#595d62",
+      "pressedControlColor": "#174ea6",
+      "backgroundColor": "#ffffff",
+      "borderColor": "#9aa0a6",
+      "placeholderColor": "#595d62"
+    },
+    "tableHeader": {
+      "backgroundColor": "#f1f3f4",
+      "topBorderColor": "#9aa0a6",
+      "bottomBorderColor": "#9aa0a6",
+      "textColor": "#202124",
+      "controlColor": "#595d62",
+      "pressedControlColor": "#174ea6"
+    },
+    "table": {
+      "separatorColor": "#f1f3f4",
+      "textColor": "#202124",
+      "selectedTextColor": "#202124",
+      "emphasizedTextColor": "#ffffff",
+      "detailColor": "#595d62",
+      "selectedDetailColor": "#595d62",
+      "emphasizedDetailColor": "#ffffff",
+      "iconColor": "#595d62",
+      "selectedIconColor": "#202124",
+      "emphasizedIconColor": "#ffffff",
+      "rowBgColor": "#ffffff",
+      "altRowBgColor": "#f1f3f4",
+      "selectedRowBgColor": "#d2e3fc",
+      "emphasizedRowBgColor": "#174ea6",
+      "emptyTextColor": "#595d62"
+    }
+  },
+  "presentation": {
+    "backgroundColor": "#ffffff"
+  },
+  "editor": {
+    "codeCellTheme": "chrome",
+    "markdownCellTheme": "textmate"
+  },
+  "css": {
+    "className": "light",
+    "editor": "",
+    "preview": "",
+    "presentation": ""
   }
 }

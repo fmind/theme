@@ -22,7 +22,7 @@ Button {
     background: Rectangle {
         radius: 6
         color: control.down || control.visualFocus || control.primary ? "#d2e3fc" : "#ffffff"
-        border.color: control.visualFocus || control.hovered ? "#174ea6" : "#9aa0a6"
+        border.color: control.visualFocus || control.hovered ? "#174ea6" : "#595d62"
         border.width: control.visualFocus ? 2 : 1
     }
 }

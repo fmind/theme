@@ -1,4 +1,4 @@
--- https://wiki.hypr.land/Configuring/Basics/Variables/
+-- https://wiki.hypr.land/configuring/core/config-options/
 -- Hyprland 0.55+; load after your other appearance settings.
 hl.config({
     general = {

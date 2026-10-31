@@ -1,0 +1,110 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetwriters/notesnook-themes/main/schemas/v1.schema.json",
+  "name": "Fmind",
+  "id": "fmind",
+  "version": 5,
+  "license": "MIT",
+  "homepage": "https://github.com/fmind/theme",
+  "description": "Fmind light theme: charcoal text and dark blue accents on white.",
+  "colorScheme": "light",
+  "compatibilityVersion": 1,
+  "authors": [
+    {
+      "name": "Médéric Hurier",
+      "url": "https://github.com/fmind"
+    }
+  ],
+  "scopes": {
+    "base": {
+      "primary": {
+        "accent": "#174ea6",
+        "accentForeground": "#ffffff",
+        "paragraph": "#202124",
+        "background": "#ffffff",
+        "border": "#595d62",
+        "heading": "#202124",
+        "icon": "#595d62",
+        "separator": "#9aa0a6",
+        "placeholder": "#595d62",
+        "hover": "#f1f3f4",
+        "backdrop": "#20212499"
+      },
+      "secondary": {
+        "accent": "#174ea6",
+        "accentForeground": "#ffffff",
+        "paragraph": "#595d62",
+        "background": "#f1f3f4",
+        "border": "#595d62",
+        "heading": "#595d62",
+        "icon": "#595d62",
+        "separator": "#9aa0a6",
+        "placeholder": "#595d62",
+        "hover": "#ffffff",
+        "backdrop": "#20212499"
+      },
+      "disabled": {
+        "accent": "#595d62",
+        "accentForeground": "#ffffff",
+        "paragraph": "#595d62",
+        "background": "#f1f3f4",
+        "border": "#9aa0a6",
+        "heading": "#595d62",
+        "icon": "#595d62",
+        "separator": "#9aa0a6",
+        "placeholder": "#595d62",
+        "hover": "#f1f3f4",
+        "backdrop": "#20212499"
+      },
+      "selected": {
+        "accent": "#174ea6",
+        "accentForeground": "#ffffff",
+        "paragraph": "#202124",
+        "background": "#d2e3fc",
+        "border": "#174ea6",
+        "heading": "#202124",
+        "icon": "#174ea6",
+        "separator": "#9aa0a6",
+        "placeholder": "#595d62",
+        "hover": "#d2e3fc",
+        "backdrop": "#20212499"
+      },
+      "error": {
+        "accent": "#a50e0e",
+        "accentForeground": "#ffffff",
+        "paragraph": "#a50e0e",
+        "background": "#fad2cf",
+        "border": "#a50e0e",
+        "heading": "#a50e0e",
+        "icon": "#a50e0e",
+        "separator": "#9aa0a6",
+        "placeholder": "#a50e0e",
+        "hover": "#fad2cf",
+        "backdrop": "#20212499"
+      },
+      "success": {
+        "accent": "#0d652d",
+        "accentForeground": "#ffffff",
+        "paragraph": "#0d652d",
+        "background": "#ceead6",
+        "border": "#0d652d",
+        "heading": "#0d652d",
+        "icon": "#0d652d",
+        "separator": "#9aa0a6",
+        "placeholder": "#0d652d",
+        "hover": "#ceead6",
+        "backdrop": "#20212499"
+      }
+    },
+    "navigationMenu": {
+      "primary": {
+        "background": "#f1f3f4",
+        "hover": "#ffffff"
+      }
+    },
+    "editor": {
+      "primary": {
+        "heading": "#174ea6"
+      }
+    }
+  }
+}

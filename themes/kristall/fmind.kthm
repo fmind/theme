@@ -1,0 +1,32 @@
+; Kristall style preset (QSettings INI, version 1); keys from src/documentstyle.cpp.
+; Fonts are omitted, so Kristall uses its default fonts.
+[General]
+name=Fmind
+version=1
+theme=0
+background_color=#ffffff
+blockquote_color=#f1f3f4
+ansi_colors=#202124, #a50e0e, #0d652d, #934900, #174ea6, #681da8, #00636d, #202124, #595d62, #a50e0e, #0d652d, #934900, #174ea6, #681da8, #00636d, #202124
+
+[Standard]
+color=#202124
+
+[Preformatted]
+color=#202124
+
+[H1]
+color=#174ea6
+
+[H2]
+color=#174ea6
+
+[H3]
+color=#174ea6
+
+[Blockquote]
+color=#595d62
+
+[Link]
+color_internal=#174ea6
+color_external=#174ea6
+color_cross_scheme=#174ea6

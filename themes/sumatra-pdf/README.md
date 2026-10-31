@@ -4,5 +4,5 @@ Fmind theme for [Sumatra PDF](https://www.sumatrapdfreader.org/).
 
 ## Install
 
-1. In Sumatra PDF, open `Settings` -> `Advanced Options...` (opens `SumatraPDF-settings.txt`).
-2. Replace or update the `MainWindowBackground`, `FixedPageUI`, and `EbookUI` sections with the values in `Fmind.txt`.
+1. In Sumatra PDF, open `Settings` -> `Advanced Options...` (`Advanced Settings...` in pre-release builds; opens `SumatraPDF-settings.txt`).
+2. Replace or update `MainWindowBackground`, `UseSysColors` and the `FixedPageUI` section with the values in `Fmind.txt`. The `EBookUI` section has no color settings.

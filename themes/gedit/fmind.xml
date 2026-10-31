@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- https://gnome.pages.gitlab.gnome.org/gtksourceview/gtksourceview5/style-reference.html -->
-<style-scheme id="fmind" _name="Fmind" version="1.0">
-  <author>Fmind</author>
-  <_description>Readable light colors for code and selections.</_description>
+<!-- libgedit-gtksourceview 299.2+ format (current gedit): no version or author, "kind" is required. -->
+<!-- https://gitlab.gnome.org/World/gedit/libgedit-gtksourceview/-/blob/main/gtksourceview/gtksourcestyleschemeparser.c -->
+<style-scheme id="fmind" name="Fmind" kind="light">
+  <description>Readable light colors for code and selections.</description>
   <style name="text" foreground="#202124" background="#ffffff" />
   <style name="selection" foreground="#202124" background="#d2e3fc" />
   <style name="selection-unfocused" foreground="#202124" background="#d2e3fc" />

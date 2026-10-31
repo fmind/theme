@@ -16,3 +16,5 @@ package = false
 [tool.ruff]
 line-length = 120
 target-version = "py314"
+# Ruff formats Python code blocks in Markdown by default; dprint owns Markdown, and theme READMEs and fixtures stay native.
+extend-exclude = ["*.md"]

@@ -2,6 +2,8 @@
 
 Fmind light syntax theme for Godot Engine script editor.
 
+Format: [Godot .tet loader](https://github.com/godotengine/godot/blob/master/editor/themes/editor_theme_manager.cpp) · [highlighting settings](https://github.com/godotengine/godot/blob/master/editor/settings/editor_settings.cpp)
+
 ## Installation
 
 1. Copy `fmind.tet` to your Godot text editor themes directory:
@@ -9,4 +11,4 @@ Fmind light syntax theme for Godot Engine script editor.
    - macOS: `~/Library/Application Support/Godot/text_editor_themes/fmind.tet`
    - Windows: `%APPDATA%\Godot\text_editor_themes\fmind.tet`
 2. Open Godot, go to **Editor → Editor Settings → Text Editor → Theme**.
-3. Select **Fmind** from the Color Theme dropdown.
+3. Select **fmind** from the Color Theme dropdown; Godot lists custom themes by file name.

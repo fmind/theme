@@ -1,3 +1,51 @@
-name: Fmind
-author: Médéric Hurier
-version: 1.0.0
+# Fmind theme for LimeChat: input, member list and server tree colors.
+# All colors must be in the form of '#rrggbb' or '#rgb'.
+# Font families are left unset; the member list keeps LimeChat's small default size.
+
+log-view:
+  scroller-highlight-color: '#174ea6'
+input-text:
+  background-color: '#ffffff'
+  color: '#202124'
+  selected:
+    background-color: '#d2e3fc'
+member-list:
+  # A member-list section without font-size switches LimeChat to the regular
+  # system size (13pt); 11.0 keeps its small system font default.
+  font-size: 11.0
+  color: '#202124'
+  background-color: '#ffffff'
+  operator:
+    color: '#174ea6'
+  selected:
+    color: '#202124'
+    background:
+      # gradient
+      top-line-color: '#d2e3fc'
+      bottom-line-color: '#d2e3fc'
+      top-color: '#d2e3fc'
+      bottom-color: '#d2e3fc'
+server-tree:
+  background-color: '#f1f3f4'
+  highlight:
+    color: '#681da8'
+  newtalk:
+    color: '#a50e0e'
+  unread:
+    color: '#174ea6'
+  normal:
+    active:
+      color: '#202124'
+    inactive:
+      color: '#595d62'
+  selected:
+    active:
+      color: '#202124'
+    inactive:
+      color: '#595d62'
+    background:
+      # gradient
+      top-line-color: '#d2e3fc'
+      bottom-line-color: '#d2e3fc'
+      top-color: '#d2e3fc'
+      bottom-color: '#d2e3fc'

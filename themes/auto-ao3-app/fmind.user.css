@@ -3,10 +3,13 @@
 @namespace github.com/fmind/theme
 @version 4.0.0
 ==/UserStyle== */
-body {
-  background-color: #ffffff !important;
-  color: #202124 !important;
-}
-a {
-  color: #174ea6 !important;
+/* The site's own CSS sets body and link colors; .dark is its dark mode and .btn its link buttons. */
+@-moz-document domain("autoao3app.firebaseapp.com") {
+  body:not(.dark) {
+    background-color: #ffffff !important;
+    color: #202124 !important;
+  }
+  body:not(.dark) a:not(.btn) {
+    color: #174ea6 !important;
+  }
 }

@@ -2,6 +2,8 @@
 
 Fmind light theme for Qutebrowser.
 
+Format: [qutebrowser settings](https://qutebrowser.org/doc/help/settings.html) · [config.source](https://qutebrowser.org/doc/help/configuring.html)
+
 ## Installation
 
 1. Copy `fmind.py` to `~/.config/qutebrowser/fmind.py`.

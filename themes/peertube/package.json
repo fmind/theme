@@ -1,0 +1,22 @@
+{
+  "name": "peertube-theme-fmind",
+  "version": "4.0.0",
+  "description": "Fmind light theme for PeerTube",
+  "engine": {
+    "peertube": ">=7.3.0"
+  },
+  "keywords": [
+    "peertube",
+    "theme"
+  ],
+  "homepage": "https://github.com/fmind/theme",
+  "author": "Médéric Hurier",
+  "bugs": "https://github.com/fmind/theme/issues",
+  "license": "MIT",
+  "staticDirs": {},
+  "css": [
+    "fmind.css"
+  ],
+  "clientScripts": [],
+  "translations": {}
+}

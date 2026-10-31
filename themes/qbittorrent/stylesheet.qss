@@ -21,16 +21,17 @@ QHeaderView::section {
   padding: 4px;
 }
 
+/* The centered percentage overlaps the chunk and the track, so both stay pale under charcoal text. */
 QProgressBar {
   color: #202124;
-  background-color: #f1f3f4;
+  background-color: #ffffff;
   border: 1px solid #9aa0a6;
   border-radius: 3px;
   text-align: center;
 }
 
 QProgressBar::chunk {
-  background-color: #174ea6;
+  background-color: #d2e3fc;
 }
 
 QMenuBar, QMenu {

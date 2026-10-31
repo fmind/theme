@@ -1,0 +1,39 @@
+# Fmind theme for Omarchy: palette keys read by omarchy-theme-color.
+# Every key is set so Omarchy derives no off-palette shades.
+mode = "light"
+
+accent = "#174ea6"
+selection = "#d2e3fc"
+selection_foreground = "#202124"
+muted = "#595d62"
+
+background = "#ffffff"
+dark_background = "#f1f3f4"
+darker_background = "#f1f3f4"
+lighter_background = "#f1f3f4"
+
+foreground = "#202124"
+dark_foreground = "#595d62"
+light_foreground = "#202124"
+bright_foreground = "#202124"
+
+# Yellow, orange and brown use dark orange: brighter oranges fail 4.5:1 on white.
+red = "#a50e0e"
+yellow = "#934900"
+orange = "#934900"
+brown = "#934900"
+green = "#0d652d"
+cyan = "#00636d"
+blue = "#174ea6"
+magenta = "#681da8"
+
+bright_red = "#a50e0e"
+bright_yellow = "#934900"
+bright_green = "#0d652d"
+bright_cyan = "#00636d"
+bright_blue = "#174ea6"
+bright_magenta = "#681da8"
+
+# Window borders: dark blue when focused, dark gray otherwise (3:1 on white).
+hyprland_active_border = "#174ea6"
+hyprland_inactive_border = "#595d62"

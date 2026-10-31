@@ -1,15 +1,43 @@
-/* Fmind theme for LDoc */
-body {
-  background: #ffffff;
+/* Fmind theme for LDoc. Load it with custom_css: it recolors the default
+   ldoc.css, which still provides the layout, so selectors match its specificity. */
+body, #product, #content, #about {
+  background-color: #ffffff;
   color: #202124;
 }
-a {
+a:link, a:visited {
   color: #174ea6;
 }
-#navigation {
-  background: #f1f3f4;
+hr {
+  color: #9aa0a6;
+  background: #9aa0a6;
 }
-pre, code {
-  background: #f1f3f4;
+#container, #main, #navigation,
+table.module_list td.name, table.function_list td.name {
+  background-color: #f1f3f4;
+}
+#navigation h2 {
+  background-color: #f1f3f4;
   color: #202124;
 }
+#product, #main, #content, #about, #navigation h2, pre,
+table.module_list, table.module_list td,
+table.function_list, table.function_list td,
+dl.table dt, dl.function dt {
+  border-color: #9aa0a6;
+}
+pre, code {
+  background-color: #f1f3f4;
+  color: #202124;
+}
+a:target + * {
+  background-color: #feefc3;
+}
+
+/* Source highlighting */
+pre .comment, pre .prompt { color: #595d62; }
+pre .keyword, pre .user-keyword, pre .function-name, pre .escape, pre .url { color: #174ea6; }
+pre .string { color: #0d652d; }
+pre .number, pre .constant { color: #934900; }
+pre .library, pre .preprocessor, pre .prepro { color: #681da8; }
+pre .operator, pre .global { color: #202124; }
+pre .marker { color: #202124; background: #feefc3; }

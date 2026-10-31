@@ -49,25 +49,25 @@
     {
       "name": "line.caret.command",
       "style": {
-        "foreground": "#174ea6"
+        "foreground": "#4285f4"
       }
     },
     {
       "name": "line.caret.local",
       "style": {
-        "foreground": "#174ea6"
+        "foreground": "#4285f4"
       }
     },
     {
       "name": "line.caret.normal",
       "style": {
-        "foreground": "#174ea6"
+        "foreground": "#4285f4"
       }
     },
     {
       "name": "line.caret.remote",
       "style": {
-        "foreground": "#174ea6"
+        "foreground": "#4285f4"
       }
     },
     {
@@ -150,7 +150,7 @@
       }
     },
     {
-      "name": "pair.error",
+      "name": "pair.highlightUnmatched",
       "style": {
         "decorationStyle": "roundBox",
         "decorationForeground": "#a50e0e",
@@ -158,7 +158,7 @@
       }
     },
     {
-      "name": "pair.highlight",
+      "name": "pair.highlightMatched",
       "style": {
         "decorationStyle": "roundBox",
         "decorationForeground": "#174ea6",

@@ -1,0 +1,14 @@
+{
+  "id": "dev.fmind.theme",
+  "name": "Fmind",
+  "description": "Light Discord theme with the Fmind palette. Requires Discord's Light appearance.",
+  "author": {
+    "name": "Médéric Hurier",
+    "github": "fmind"
+  },
+  "version": "4.0.0",
+  "license": "MIT",
+  "source": "https://github.com/fmind/theme",
+  "type": "replugged-theme",
+  "main": "fmind.css"
+}

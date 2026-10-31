@@ -24,13 +24,13 @@
 	<key>DVTMarkupTextNormalFont</key>
 	<string>GoogleSans-Regular - 13.0</string>
 	<key>DVTMarkupTextOtherHeadingFont</key>
-	<string>GoogleSans-Regular - 13.0</string>
+	<string>GoogleSans-Bold - 13.0</string>
 	<key>DVTMarkupTextPrimaryHeadingFont</key>
-	<string>GoogleSans-Regular - 13.0</string>
+	<string>GoogleSans-Bold - 13.0</string>
 	<key>DVTMarkupTextSecondaryHeadingFont</key>
-	<string>GoogleSans-Regular - 13.0</string>
+	<string>GoogleSans-Bold - 13.0</string>
 	<key>DVTMarkupTextStrongFont</key>
-	<string>GoogleSans-Regular - 13.0</string>
+	<string>GoogleSans-Bold - 13.0</string>
 	<key>DVTSourceTextBackground</key>
 	<string>1.000000000 1.000000000 1.000000000 1</string>
 	<key>DVTSourceTextCurrentLineHighlightColor</key>
@@ -38,7 +38,7 @@
 	<key>DVTSourceTextSelectionColor</key>
 	<string>0.823529412 0.890196078 0.988235294 1</string>
 	<key>DVTSourceTextInsertionPointColor</key>
-	<string>0.090196078 0.305882353 0.650980392 1</string>
+	<string>0.258823529 0.521568627 0.956862745 1</string>
 	<key>DVTSourceTextInvisiblesColor</key>
 	<string>0.603921569 0.627450980 0.650980392 1</string>
 	<key>DVTSourceTextBlockDimBackgroundColor</key>
@@ -48,7 +48,7 @@
 	<key>DVTConsoleTextSelectionColor</key>
 	<string>0.823529412 0.890196078 0.988235294 1</string>
 	<key>DVTConsoleTextInsertionPointColor</key>
-	<string>0.090196078 0.305882353 0.650980392 1</string>
+	<string>0.258823529 0.521568627 0.956862745 1</string>
 	<key>DVTDebuggerInstructionPointerColor</key>
 	<string>0.807843137 0.917647059 0.839215686 1</string>
 	<key>DVTConsoleDebuggerInputTextColor</key>
@@ -68,7 +68,7 @@
 	<key>DVTMarkupTextEmphasisColor</key>
 	<string>0.407843137 0.113725490 0.658823529 1</string>
 	<key>DVTMarkupTextInlineCodeColor</key>
-	<string>0.125490196 0.129411765 0.141176471 1</string>
+	<string>0.090196078 0.305882353 0.650980392 1</string>
 	<key>DVTMarkupTextLinkColor</key>
 	<string>0.090196078 0.305882353 0.650980392 1</string>
 	<key>DVTMarkupTextNormalColor</key>

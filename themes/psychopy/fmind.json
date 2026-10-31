@@ -1,27 +1,228 @@
 {
   "app": "light",
   "icons": "light",
-  "info": "Fmind Light theme for PsychoPy",
+  "info": "Fmind light theme: charcoal text on white, Google colors for syntax",
   "code": {
     "base": {
       "fg": "#202124",
-      "bg": "#ffffff"
+      "bg": "#ffffff",
+      "font": "Google Sans Code"
     },
-    "comment": {
+    "margin": {
       "fg": "#595d62",
-      "bg": "#ffffff"
+      "bg": "#f1f3f4",
+      "font": ""
     },
-    "keyword": {
-      "fg": "#174ea6",
-      "bg": "#ffffff"
-    },
-    "string": {
-      "fg": "#0d652d",
-      "bg": "#ffffff"
+    "caret": {
+      "fg": "#4285f4",
+      "bg": "#f1f3f4",
+      "font": "bold"
     },
     "select": {
       "fg": "#202124",
-      "bg": "#d2e3fc"
+      "bg": "#d2e3fc",
+      "font": ""
+    },
+    "indent": {
+      "fg": "#9aa0a6",
+      "bg": "",
+      "font": ""
+    },
+    "brace": {
+      "fg": "#174ea6",
+      "bg": "#d2e3fc",
+      "font": "bold"
+    },
+    "operator": {
+      "fg": "#202124",
+      "bg": "",
+      "font": ""
+    },
+    "keyword": {
+      "fg": "#174ea6",
+      "bg": "",
+      "font": "bold"
+    },
+    "keyword2": {
+      "fg": "#681da8",
+      "bg": "",
+      "font": ""
+    },
+    "controlchar": {
+      "fg": "#174ea6",
+      "bg": "",
+      "font": ""
+    },
+    "id": {
+      "fg": "#202124",
+      "bg": "",
+      "font": ""
+    },
+    "num": {
+      "fg": "#934900",
+      "bg": "",
+      "font": ""
+    },
+    "char": {
+      "fg": "#0d652d",
+      "bg": "",
+      "font": ""
+    },
+    "str": {
+      "fg": "#0d652d",
+      "bg": "",
+      "font": ""
+    },
+    "openstr": {
+      "fg": "#0d652d",
+      "bg": "#fad2cf",
+      "font": ""
+    },
+    "infix": {
+      "fg": "#174ea6",
+      "bg": "",
+      "font": ""
+    },
+    "openinfix": {
+      "fg": "#174ea6",
+      "bg": "#fad2cf",
+      "font": ""
+    },
+    "decorator": {
+      "fg": "#681da8",
+      "bg": "",
+      "font": ""
+    },
+    "class": {
+      "fg": "#681da8",
+      "bg": "",
+      "font": ""
+    },
+    "def": {
+      "fg": "#174ea6",
+      "bg": "",
+      "font": ""
+    },
+    "comment": {
+      "fg": "#595d62",
+      "bg": "",
+      "font": ""
+    },
+    "commentblock": {
+      "fg": "#595d62",
+      "bg": "",
+      "font": ""
+    },
+    "commentkw": {
+      "fg": "#595d62",
+      "bg": "",
+      "font": "bold"
+    },
+    "commenterror": {
+      "fg": "#a50e0e",
+      "bg": "",
+      "font": ""
+    },
+    "documentation": {
+      "fg": "#0d652d",
+      "bg": "",
+      "font": ""
+    },
+    "documentation2": {
+      "fg": "#0d652d",
+      "bg": "",
+      "font": ""
+    },
+    "whitespace": {
+      "fg": "#9aa0a6",
+      "bg": "",
+      "font": ""
+    },
+    "python": {},
+    "c++": {},
+    "r": {},
+    "json": {},
+    "markdown": {
+      "italic": {
+        "fg": "#681da8",
+        "bg": "",
+        "font": ""
+      },
+      "italic2": {
+        "fg": "#681da8",
+        "bg": "",
+        "font": ""
+      },
+      "bold": {
+        "fg": "#202124",
+        "bg": "",
+        "font": "bold"
+      },
+      "bold2": {
+        "fg": "#202124",
+        "bg": "",
+        "font": "bold"
+      },
+      "link": {
+        "fg": "#174ea6",
+        "bg": "",
+        "font": ""
+      },
+      "hr": {
+        "fg": "#595d62",
+        "bg": "",
+        "font": "bold"
+      },
+      "h1": {
+        "fg": "#174ea6",
+        "bg": "",
+        "font": "bold"
+      },
+      "h2": {
+        "fg": "#174ea6",
+        "bg": "",
+        "font": "bold"
+      },
+      "h3": {
+        "fg": "#174ea6",
+        "bg": "",
+        "font": "bold"
+      },
+      "h4": {
+        "fg": "#174ea6",
+        "bg": "",
+        "font": "bold"
+      },
+      "h5": {
+        "fg": "#174ea6",
+        "bg": "",
+        "font": "bold"
+      },
+      "h6": {
+        "fg": "#174ea6",
+        "bg": "",
+        "font": "bold"
+      },
+      "code": {
+        "fg": "#174ea6",
+        "bg": "",
+        "font": ""
+      },
+      "codeblock": {
+        "fg": "#202124",
+        "bg": "#f1f3f4",
+        "font": ""
+      },
+      "li": {
+        "fg": "#174ea6",
+        "bg": "",
+        "font": "bold"
+      },
+      "prechar": {
+        "fg": "#595d62",
+        "bg": "",
+        "font": "bold"
+      }
     }
   }
 }

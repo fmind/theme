@@ -1,6 +1,8 @@
 # Arduino IDE
 
-Fmind light theme for Arduino IDE 1.8+.
+Fmind light theme for the legacy Arduino IDE 1.8. Arduino IDE 2.x does not read `theme.txt`; it loads VS Code themes from `~/.arduinoIDE/plugins/` ([Arduino’s instructions](https://github.com/arduino/arduino-ide/blob/main/docs/advanced-usage.md#3rd-party-themes)), so copy the [VS Code theme](../vscode/) directory there instead.
+
+Format: [Arduino IDE 1.x theme.txt](https://github.com/arduino/Arduino/blob/master/build/shared/lib/theme/theme.txt)
 
 ## Installation
 

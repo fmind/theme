@@ -11,7 +11,11 @@
     "HighlightedText": "#202124",
     "Link": "#174ea6",
     "Text": "#202124",
+    "ToolTipBase": "#ffffff",
+    "ToolTipText": "#202124",
     "Window": "#ffffff",
-    "WindowText": "#202124"
+    "WindowText": "#202124",
+    "fadeColor": "#ffffff",
+    "fadeAmount": 0.5
   }
 }

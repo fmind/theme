@@ -2,6 +2,8 @@
 
 A clean light theme for the Insomnia API client.
 
+Format: [Insomnia plugin reference](https://developer.konghq.com/insomnia/plugins/plugin-reference/) · [Insomnia theme loader](https://github.com/Kong/insomnia/blob/develop/packages/insomnia/src/ui/plugins/misc.ts)
+
 ## Install
 
 1. In Insomnia, go to **Application** → **Preferences** → **Plugins**.

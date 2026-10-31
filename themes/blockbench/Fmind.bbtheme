@@ -1,9 +1,25 @@
-{
-  "name": "Fmind",
-  "author": "M\u00e9d\u00e9ric Hurier",
-  "borders": false,
-  "main_font": "",
-  "headline_font": "",
-  "code_font": "",
-  "css": "body {\n  --color-ui: #ffffff;\n  --color-back: #ffffff;\n  --color-dark: #f1f3f4;\n  --color-border: #f1f3f4;\n  --color-selected: #d2e3fc;\n  --color-button: #f1f3f4;\n  --color-text: #202124;\n  --color-light: #202124;\n  --color-subtle_text: #595d62;\n  --color-accent: #174ea6;\n  --color-error: #a50e0e;\n  --color-warning: #934900;\n  --color-confirm: #0d652d;\n}"
+/*
+name: Fmind
+author: Médéric Hurier
+version: 4.0.0
+*/
+body {
+	--color-ui: #ffffff;
+	--color-back: #f1f3f4;
+	--color-dark: #f1f3f4;
+	--color-border: #9aa0a6;
+	--color-selected: #d2e3fc;
+	--color-elevated: #ffffff;
+	--color-button: #f1f3f4;
+	--color-bright_ui: #ffffff;
+	--color-accent: #174ea6;
+	--color-frame: #f1f3f4;
+	--color-text: #202124;
+	--color-light: #202124;
+	--color-accent_text: #ffffff;
+	--color-bright_ui_text: #202124;
+	--color-subtle_text: #595d62;
+	--color-grid: #9aa0a6;
+	--color-wireframe: #595d62;
+	--color-checkerboard: #f1f3f4;
 }

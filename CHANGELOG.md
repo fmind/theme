@@ -1,5 +1,26 @@
 # Changelog
 
+## Unreleased
+
+### Breaking
+
+- Remove unmaintained or non-themeable ports: Dirtywave M8, Gitroll, GMK, Google Calendar, Homepage, HyperX NGENUITY, IDA Pro, LTSpice, macOS Color Picker, Makehuman, Marta, MetaEditor, Minecraft, MiXplorer, mRemoteNG, MusicBee, New Tabs and NewTerm2. Their folders and raw download paths no longer exist.
+- Replace or retire superseded theme files so each port keeps only its native format: Albert (`Fmind.qss` -> `Fmind.ini`), CadZinho (`fmind.json` -> `fmind.lua`), Drafts (`fmind.yml` -> `fmind.draftsTheme`), GitHub Pages (`_config.yml` and `assets/css/style.css` -> `assets/css/style.scss`), Heroic Games Launcher (`fmind.json` -> `fmind.css`), Homer (`fmind.css` -> `fmind.yml`), KanbanFlow (`fmind.css` -> `fmind.user.css`), Keybr (`fmind.css` -> `fmind.user.css`), Kristall (`fmind.ini` -> `fmind.kthm`), Krita (`Fmind.colors` removed in favor of `Fmind.colorscheme`), Monkeytype (`fmind.json` removed), novelWriter (`fmind.conf` -> `fmind.toml`), Spacemacs (`fmind-theme.el` removed; uses the Emacs theme), Textastic (`fmind.tmTheme` removed in favor of `Fmind.json`), Vivaldi (`fmind.json` removed), Vortex Mod Manager (`fmind.scss` -> `variables.scss`), Wox (`Fmind.xaml` -> `fmind.json`) and x64dbg (`fmind.ini` -> `style.ini`).
+
+### Added
+
+- Distill Google UI/UX layout, progressive disclosure, interactive component (`button-secondary`, `input`, `chip`) and inline-state rules into `DESIGN.md`.
+- Add native theme files and metadata for AlphaI TUI (`fmind.toml`), Neiki's Editor (`fmind.css`), Neiki's Page Editor (`fmind.css`), Notesnook (`fmind.json`), Omarchy (`colors.toml`), PeerTube (`package.json`) and Replugged (`manifest.json`).
+
+### Fixed
+
+- Align off-palette hex colors, Windows BGR integers, XML/plist structures and release versions across native theme files, and state explicit installation paths and palette color names across theme READMEs.
+
+### Maintenance
+
+- Expand `checks/test_repository.py` to validate XML/plist syntax, theme `#` hex colors against the palette, release versions, token references, KDE scheme copies and Markdown anchor targets.
+- Add `gitleaks` secret scanning (`check:leaks`) to `mise run check` and CI, pin `jdx/mise-action` to mise 2026.10.21 with a weekly schedule and 100-commit checkout depth, and override `glob` to 14.0.3 in the JupyterLab lockfile.
+
 ## 4.0.0 — 2026-10-29
 
 ### Breaking

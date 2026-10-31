@@ -1,15 +1,20 @@
 /* Nextcloud Fmind Light Theme */
+/* Nextcloud sets theme variables on body[data-theme-<id>]; this selector outranks the Light theme's own rules.
+   Variables: https://github.com/nextcloud/server/blob/master/apps/theming/lib/Themes/DefaultTheme.php
+   and https://github.com/nextcloud/server/blob/master/apps/theming/lib/Themes/CommonThemeTrait.php */
 
-:root, [data-theme-light] {
+body[data-theme-light] {
     --color-main-text: #202124;
     --color-main-background: #ffffff;
     --color-main-background-rgb: 255, 255, 255;
     --color-background-hover: #f1f3f4;
     --color-background-dark: #f1f3f4;
-    --color-placeholder-light: #595d62;
-    --color-primary: #174ea6;
-    --color-primary-default: var(--color-primary);
-    --color-primary-text: #ffffff;
-    --color-primary-element: var(--color-primary);
+    --color-placeholder-light: #f1f3f4;
+    --color-text-maxcontrast: #595d62;
     --color-border: #f1f3f4;
+    --color-border-maxcontrast: #595d62;
+    --color-primary: #174ea6;
+    --color-primary-text: #ffffff;
+    --color-primary-element: #174ea6;
+    --color-primary-element-text: #ffffff;
 }

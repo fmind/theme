@@ -1,0 +1,22 @@
+/* ==UserStyle==
+@name           Keybr Fmind
+@namespace      github.com/fmind/theme
+@version        4.0.0
+@description    Clean light theme for Keybr
+==/UserStyle== */
+
+@-moz-document domain("keybr.com") {
+  body {
+    background-color: #ffffff;
+    color: #202124;
+  }
+
+  .border {
+    border-color: #9aa0a6;
+  }
+
+  .active {
+    background-color: #d2e3fc;
+    color: #174ea6;
+  }
+}

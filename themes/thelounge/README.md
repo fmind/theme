@@ -4,4 +4,8 @@ Fmind theme for [The Lounge](https://thelounge.chat/).
 
 ## Install
 
-Install package into your The Lounge packages directory and select Fmind in settings.
+On the server, install this directory as a local package, then choose **Fmind** under **Settings** → **Appearance** → **Theme**:
+
+```sh
+thelounge install file:/path/to/theme/themes/thelounge
+```

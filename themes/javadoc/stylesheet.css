@@ -1,38 +1,50 @@
 /* Javadoc Fmind Light Theme */
+/* Load with --add-stylesheet; it overrides the default stylesheet's :root variables (JDK 21+). */
+/* Variable names: https://github.com/openjdk/jdk/blob/master/src/jdk.javadoc/share/classes/jdk/javadoc/internal/doclets/formats/html/resources/stylesheet.css */
 
-body {
-    background-color: #ffffff;
-    color: #202124;
-    font-family: "Google Sans", sans-serif;
-}
-
-a:link, a:visited {
-    color: #174ea6;
-    text-decoration: none;
-}
-
-a:hover, a:focus {
-    text-decoration: underline;
-}
-
-.topNav, .bottomNav {
-    background-color: #f1f3f4;
-    color: #202124;
-}
-
-.subTitle {
-    color: #595d62;
-}
-
-th.colFirst, th.colLast, th.colOne {
-    background-color: #f1f3f4;
-    color: #202124;
-}
-
-tr.altColor {
-    background-color: #f1f3f4;
-}
-
-tr.rowColor {
-    background-color: #ffffff;
+:root {
+    --body-font-family: "Google Sans", Arial, Helvetica, sans-serif;
+    --block-font-family: "Google Sans", Arial, Helvetica, sans-serif;
+    --code-font-family: "Google Sans Code", monospace;
+    --body-text-color: #202124;
+    --block-text-color: #202124;
+    --body-background-color: #ffffff;
+    --section-background-color: #ffffff;
+    --detail-background-color: #ffffff;
+    --code-background-color: #f1f3f4;
+    --mark-background-color: #f1f3f4;
+    --detail-block-color: #f1f3f4;
+    /* Light navbar: hover links (--link-color-active) and caption links also sit on it. */
+    --navbar-background-color: #f1f3f4;
+    --navbar-text-color: #174ea6;
+    --subnav-background-color: #f1f3f4;
+    --subnav-link-color: #174ea6;
+    --selected-background-color: #fbbc04;
+    --selected-text-color: #202124;
+    --selected-link-color: #202124;
+    --table-header-color: #f1f3f4;
+    --even-row-color: #ffffff;
+    --odd-row-color: #f1f3f4;
+    --title-color: #174ea6;
+    --link-color: #174ea6;
+    --link-color-active: #202124;
+    --toc-background-color: #ffffff;
+    --toc-highlight-color: #d2e3fc;
+    --toc-hover-color: #f1f3f4;
+    --snippet-background-color: #f1f3f4;
+    --snippet-highlight-color: #feefc3;
+    --border-color: #9aa0a6;
+    --table-border-color: #595d62;
+    --search-input-background-color: #ffffff;
+    --search-input-text-color: #202124;
+    --search-input-placeholder-color: #595d62;
+    --search-border-light-color: #9aa0a6;
+    --search-border-dark-color: #595d62;
+    --search-hover-background: #d2e3fc;
+    --search-tag-highlight-color: #fbbc04;
+    --search-tag-background-color: #fbbc04;
+    --button-border-color: #595d62;
+    --overlay-background: rgba(32, 33, 36, 0.3);
+    --invalid-tag-background-color: #fad2cf;
+    --invalid-tag-text-color: #202124;
 }

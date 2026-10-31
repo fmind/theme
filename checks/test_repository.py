@@ -1,11 +1,14 @@
-"""Check release metadata, the complete theme index and documentation navigation."""
+"""Check release metadata, theme files, the theme index and documentation navigation."""
 
+import functools
 import hashlib
 import json
+import plistlib
 import re
 import subprocess
 import tomllib
 import unittest
+import xml.etree.ElementTree as ET
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -17,6 +20,73 @@ ROOT = Path(__file__).resolve().parents[1] / "themes"
 APPS = sorted(path for path in ROOT.iterdir() if path.is_dir() and not path.name.startswith((".", "__")))
 PALETTE = yaml.safe_load((ROOT.parent / "checks/palette.yaml").read_text())
 DESIGN = yaml.safe_load((ROOT.parent / "DESIGN.md").read_text().split("---\n")[1])
+COLORS = {*PALETTE["official"], *PALETTE["custom"]}
+# XML files without an XML declaration; other XML and JSON files are recognized by their content.
+XML_SUFFIXES = {".icls", ".qrc", ".svg", ".vssettings", ".xaml", ".xml"}
+# Hex colors as #rrggbb, #rrggbbaa or #aarrggbb. Short forms are skipped: anchors, issue numbers and CSS IDs match them.
+HEX = re.compile(r"(?<![\w&#/])#([0-9a-f]{6}|[0-9a-f]{8})(?![\w-])", re.IGNORECASE)
+# Release versions are X.Y.Z; native format and API versions such as 2, "1" or 1.0 are ignored.
+SEMVER = re.compile(r"\d+\.\d+\.\d+")
+TEXT_VERSIONS = {
+    ".css": re.compile(r"(?m)^\s*\*?\s*@version\s+(\S+)"),
+    ".desktop": re.compile(r"(?m)^(?:X-KDE-PluginInfo-)?Version=(\S+)$"),
+}
+
+
+def files(*pathspecs):
+    """Return tracked and untracked files, honoring ignored build directories and pending deletions."""
+    names = subprocess.check_output(
+        ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z", "--", *pathspecs],
+        cwd=ROOT.parent,
+        text=True,
+    ).split("\0")
+    return [path for name in sorted(set(names) - {""}) if (path := ROOT.parent / name).is_file()]
+
+
+@functools.cache
+def theme_texts():
+    """Return (path, text) for every UTF-8 file under themes/, skipping binary assets."""
+    texts = []
+    for path in files("themes"):
+        try:
+            texts.append((path, path.read_text(encoding="utf-8")))
+        except UnicodeDecodeError:
+            continue
+    return tuple(texts)
+
+
+def is_json(path, text):
+    """Recognize JSON by suffix or, for app-specific suffixes, by a top-level object."""
+    suffix = path.suffix.lower()
+    # JSONC may legitimately hold comments, and YAML flow mappings also start with a brace.
+    if suffix in (".jsonc", ".toml", ".yaml", ".yml"):
+        return False
+    return suffix == ".json" or (text.lstrip().startswith("{") and text.rstrip().endswith("}"))
+
+
+def parse(path, text):
+    """Parse a structured file by suffix or unambiguous content; return None for other formats."""
+    suffix = path.suffix.lower()
+    if suffix == ".toml":
+        return tomllib.loads(text)
+    if suffix in (".yaml", ".yml"):
+        return yaml.safe_load(text)
+    if is_json(path, text):
+        return json.loads(text)
+    if suffix in XML_SUFFIXES or text.lstrip().startswith("<?xml"):
+        data = path.read_bytes()
+        element = ET.fromstring(data)
+        return plistlib.loads(data) if element.tag == "plist" else element
+    return None
+
+
+def strings(node):
+    """Yield every string in a parsed YAML tree."""
+    if isinstance(node, str):
+        yield node
+    elif isinstance(node, (dict, list)):
+        for value in node.values() if isinstance(node, dict) else node:
+            yield from strings(value)
 
 
 def contrast(a: str, b: str) -> float:
@@ -46,27 +116,32 @@ class Links(HTMLParser):
             self.images.append(attrs["src"])
 
 
+@functools.cache
+def links(path):
+    """Return the links, images and anchors of a rendered Markdown file."""
+    parser = Links()
+    parser.feed(markdown.markdown(path.read_text(), extensions=["fenced_code", "tables", "toc"]))
+    return parser
+
+
 class DocumentationTests(unittest.TestCase):
     def test_release_versions_are_consistent(self):
         version = tomllib.loads((ROOT.parent / "pyproject.toml").read_text())["project"]["version"]
-        for path in ROOT.rglob("*.json"):
-            if "node_modules" in path.parts or "labextension" in path.parts:
-                continue
-            doc = json.loads(path.read_text())
-            if not isinstance(doc, dict):
-                continue
-            # Package versions only; leave native file-format/API versions intact.
-            if path.name in ("package.json", "package-lock.json", "manifest.json", "extension.json", "ext.json"):
-                if "version" in doc:
-                    self.assertEqual(doc["version"], version, path)
+        for path, text in theme_texts():
+            if pattern := TEXT_VERSIONS.get(path.suffix):
+                found = pattern.findall(text)
+            elif path.name == "pyproject.toml":
+                found = [tomllib.loads(text).get("project", {}).get("version")]
+            elif is_json(path, text) and isinstance(doc := json.loads(text), dict):
+                # Package, extension and theme metadata; a lockfile repeats its root package version.
+                found = [doc.get("version"), doc.get("theme_version"), doc.get("KPlugin", {}).get("Version")]
                 if path.name == "package-lock.json":
-                    self.assertEqual(doc["packages"][""]["version"], version, path)
-            if "KPlugin" in doc:
-                self.assertEqual(doc["KPlugin"]["Version"], version, path)
-        for path in ROOT.glob("*/pyproject.toml"):
-            doc = tomllib.loads(path.read_text())
-            if "project" in doc:
-                self.assertEqual(doc["project"]["version"], version, path)
+                    found.append(doc["packages"][""]["version"])
+            else:
+                continue
+            for value in found:
+                if isinstance(value, str) and SEMVER.fullmatch(value):
+                    self.assertEqual(value, version, path)
 
     def test_manifest_downloads_follow_repository_layout(self):
         prefix = "https://raw.githubusercontent.com/fmind/theme/main/"
@@ -84,47 +159,40 @@ class DocumentationTests(unittest.TestCase):
         self.assertEqual(entries, sorted(entries, key=lambda entry: (entry[0].casefold(), entry[1])))
         for app in APPS:
             self.assertTrue((app / "README.md").is_file(), app)
-        for color in PALETTE["official"] + PALETTE["custom"]:
+        for color in COLORS:
             self.assertIn(color.lower(), readme.lower())
 
-    def test_tool_readme_local_links(self):
-        for app in APPS:
-            parser = Links()
-            parser.feed(markdown.markdown((app / "README.md").read_text(), extensions=["fenced_code", "tables"]))
-            for target in parser.links + parser.images:
-                url = urlsplit(target)
-                if url.path and not url.scheme and not url.netloc:
-                    self.assertTrue((app / unquote(url.path)).exists(), f"{app.name}: {target}")
-
-    def test_repository_documentation_links_and_images(self):
-        paths = [ROOT.parent / name for name in ("README.md", "AGENTS.md", "CHANGELOG.md", "DESIGN.md")]
-        paths += [ROOT.parent / folder / "README.md" for folder in ("artworks", "banners", "wallpapers")]
-        for path in paths:
-            parser = Links()
-            parser.feed(markdown.markdown(path.read_text(), extensions=["fenced_code", "tables", "toc"]))
-            for target in parser.links + parser.images:
+    def test_markdown_local_links_and_anchors(self):
+        # Screenshot samples are rendering fixtures, not navigation.
+        for path in files("*.md", ":!screenshots/samples"):
+            document = links(path)
+            for target in document.links + document.images:
                 url = urlsplit(target)
                 if url.scheme or url.netloc:
                     continue
-                with self.subTest(document=path.name, target=target):
-                    if url.path:
-                        self.assertTrue((path.parent / unquote(url.path)).exists())
-                    elif url.fragment:
-                        self.assertIn(unquote(url.fragment), parser.ids)
+                with self.subTest(document=str(path.relative_to(ROOT.parent)), target=target):
+                    resolved = (path.parent / unquote(url.path)).resolve() if url.path else path
+                    self.assertTrue(resolved.exists())
+                    # A directory link opens its README on GitHub, so its anchors come from there.
+                    anchors = resolved / "README.md" if resolved.is_dir() else resolved
+                    if url.fragment and anchors.suffix == ".md":
+                        self.assertIn(unquote(url.fragment), links(anchors).ids)
 
 
 class SharedTests(unittest.TestCase):
     def test_palette_contrast_and_preview(self):
         preview = (ROOT.parent / "screenshots/palette.svg").read_text().lower()
-        for color in PALETTE["official"] + PALETTE["custom"]:
+        for color in COLORS:
             self.assertIn(color, preview)
+        listed = {value.lower() for value in strings(PALETTE) if re.fullmatch(r"#[0-9a-fA-F]{6}", value)}
+        self.assertLessEqual(listed, COLORS)
         for color in {PALETTE["text"], PALETTE["gutter"], *PALETTE["roles"].values(), *PALETTE["ansi"].values()}:
             with self.subTest(color=color):
                 self.assertGreaterEqual(contrast(color, PALETTE["ground"]), 4.5)
 
     def test_design_tokens_match_palette(self):
         colors = {name: value.lower() for name, value in DESIGN["colors"].items()}
-        self.assertEqual(set(colors.values()), {*PALETTE["official"], *PALETTE["custom"]})
+        self.assertEqual(set(colors.values()), COLORS)
         self.assertEqual(len(colors), len(set(colors.values())))
         for name, tokens in DESIGN["components"].items():
             values = {
@@ -136,23 +204,42 @@ class SharedTests(unittest.TestCase):
                 with self.subTest(component=name):
                     self.assertGreaterEqual(contrast(values["textColor"], values["backgroundColor"]), 4.5)
 
+    def test_design_token_references_resolve(self):
+        for value in strings(DESIGN):
+            if reference := re.fullmatch(r"\{([\w.-]+)\}", value):
+                with self.subTest(reference=value):
+                    node = DESIGN
+                    for key in reference[1].split("."):
+                        self.assertIsInstance(node, dict)
+                        self.assertIn(key, node)
+                        node = node[key]
+
     def test_structured_theme_files(self):
-        # Honor ignored build/dependency directories and pending deletions.
-        paths = subprocess.check_output(
-            ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z", "--", "themes"],
-            cwd=ROOT.parent,
-            text=True,
-        ).split("\0")
-        for name in sorted(set(paths) - {""}):
-            path = ROOT.parent / name
-            if not path.is_file():
-                continue
-            parser = {".json": json.loads, ".toml": tomllib.loads, ".yaml": yaml.safe_load, ".yml": yaml.safe_load}.get(
-                path.suffix
-            )
-            if parser:
-                with self.subTest(path=name):
-                    parser(path.read_text())
+        for path, text in theme_texts():
+            with self.subTest(path=str(path.relative_to(ROOT.parent))):
+                parse(path, text)
+
+    def test_theme_colors_are_palette_colors(self):
+        # 0x, decimal and Windows BGR color encodings are not checked.
+        off_palette = []
+        for path, text in theme_texts():
+            for value in HEX.findall(text):
+                # An 8-digit value is #rrggbbaa or #aarrggbb, so either 6-digit part may hold the color.
+                if not {"#" + value[:6].lower(), "#" + value[-6:].lower()} & COLORS:
+                    off_palette.append(f"{path.relative_to(ROOT.parent)}: #{value}")
+        self.assertEqual(off_palette, [])
+
+    def test_hex_colors_skip_anchors_and_references(self):
+        text = "[Add the theme](#add-the-theme), [Decade](#decade-notes), issue #123, #feed, `#174EA6`, '#80fbbc04'"
+        self.assertEqual(HEX.findall(text), ["174EA6", "80fbbc04"])
+
+    def test_kde_color_scheme_copies_match(self):
+        # themes/gtk/kde/README.md requires these copies of the application scheme to stay identical.
+        kde = ROOT / "gtk/kde"
+        scheme = (kde / "color-schemes/Fmind.colors").read_bytes()
+        for copy in ("kvantum/Fmind/Fmind.colors", "plasma/look-and-feel/Fmind/contents/colors"):
+            with self.subTest(copy=copy):
+                self.assertEqual((kde / copy).read_bytes(), scheme)
 
     def test_artwork_manifest(self):
         artwork = ROOT.parent / "artworks"

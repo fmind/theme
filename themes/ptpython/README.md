@@ -2,6 +2,8 @@
 
 Files: [fmind.py](fmind.py).
 
+Format: [ptpython config example](https://github.com/prompt-toolkit/ptpython/blob/main/examples/ptpython_config/config.py)
+
 ## Installation
 
 Load `CODE` and `UI` in `config.py`; register and select them as shown below.

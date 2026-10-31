@@ -5,6 +5,7 @@ bat = "0.26.1"
 dprint = "0.64.3"
 ffmpeg = "9.0.2"
 fish = "4.9.3"
+gitleaks = "8.30.1"
 imagemagick = "7.1.2_31"
 lefthook = "2.2.2"
 neovim = "0.12.6"
@@ -32,6 +33,7 @@ run = "uv run --locked --script artworks/generate.py"
 
 [tasks.check]
 alias = "c"
+description = "Lint Python, shell scripts and workflows, validate hooks, check formatting, and scan for secrets and vulnerable dependencies"
 run = [
   "actionlint",
   "zizmor --offline --pedantic .github/",
@@ -40,14 +42,20 @@ run = [
   "git ls-files -z '*.sh' | xargs -0 shellcheck --norc",
   "lefthook validate",
   "mise run check:format",
+  "mise run check:leaks",
   "mise run check:security",
 ]
 
 [tasks."check:format"]
+description = "Check documentation, configuration and Python formatting without writing"
 run = ["dprint check", "ruff format --check ."]
 
+[tasks."check:leaks"]
+description = "Scan the last 100 commits for leaked secrets"
+run = 'gitleaks git --redact=100 --log-opts="--max-count=100" --no-banner --verbose'
+
 [tasks."check:security"]
-description = "Audit locked Python and JupyterLab dependencies (requires network access)"
+description = "Audit the root, artwork script and JupyterLab npm locks, including dev dependencies, with OSV and npm (requires network access)"
 run = [
   "uv audit --preview-features audit-command --locked",
   "uv audit --preview-features audit-command --locked --script artworks/generate.py",
@@ -56,12 +64,15 @@ run = [
 
 [tasks.format]
 alias = "f"
+description = "Format Python with Ruff and documentation and configuration with dprint"
 run = ["mise run format:dprint", "mise run format:ruff"]
 
 [tasks."format:dprint"]
+description = "Format documentation and configuration in dprint's scope"
 run = "dprint fmt --allow-no-files"
 
 [tasks."format:ruff"]
+description = "Format Python with Ruff"
 run = "ruff format"
 
 [tasks.install]
@@ -70,10 +81,10 @@ description = "Install validation dependencies and Git hooks"
 run = ["uv sync --locked", "lefthook install"]
 
 [tasks.screenshots]
-description = "Record two screenshots from synthetic inputs (requires VHS and Chromium)"
+description = "Record the two terminal screenshots from synthetic inputs (requires Fontconfig, Chromium and GoogleSansCode Nerd Font Mono)"
 run = "uv run --locked screenshots/capture.py"
 
 [tasks.test]
 alias = "t"
-description = "Check shared palette, structured files, documentation and artwork"
+description = "Check the palette, theme syntax, colors and versions, documentation links and artwork"
 run = "uv run --locked python -m unittest discover -s checks -q"

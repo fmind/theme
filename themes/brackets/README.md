@@ -2,6 +2,8 @@
 
 Files: [package](package.json), [theme.css](theme.css).
 
+Format: [Brackets: creating themes](https://github.com/brackets-cont/brackets/wiki/Creating-Themes)
+
 ## Installation
 
 Help → Show Extensions Folder; copy this directory into its `user/fmind-theme/` directory. Restart, then View → Themes → Fmind. Includes CodeMirror syntax, selections, search, matching brackets and completion styles.

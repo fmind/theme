@@ -2,6 +2,8 @@
 
 Light color scheme for GNU grep.
 
+Format: [GNU grep GREP_COLORS](https://www.gnu.org/software/grep/manual/html_node/Environment-Variables.html)
+
 ## Installation
 
 Source [fmind.sh](fmind.sh) or add the export to your `~/.bashrc`, `~/.zshrc`, or `~/.config/fish/config.fish`:

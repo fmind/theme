@@ -1,9 +1,33 @@
-/* Fmind theme for Jellyfin */
-:root {
-  --accent: #174ea6;
-  --background: #ffffff;
-  --card: #f1f3f4;
-  --text: #202124;
-  --subtext: #595d62;
-  --border: #9aa0a6;
+/* Fmind theme for Jellyfin: use with the Light display theme. */
+/* Overrides jellyfin-web's MUI palette variables (prefix "jf", set on html[data-theme]); */
+/* names from src/themes/index.ts and src/themes/_base/_theme.scss. :root[data-theme] outranks [data-theme="light"]. */
+:root[data-theme] {
+  --jf-palette-common-white: #ffffff;
+  --jf-palette-background-default: #ffffff;
+  --jf-palette-background-paper: #f1f3f4;
+  --jf-palette-text-primary: #202124;
+  --jf-palette-text-secondary: #202124;
+  --jf-palette-divider: #9aa0a6;
+  --jf-palette-action-hover: #f1f3f4;
+  --jf-palette-action-focus: #d2e3fc;
+  --jf-palette-primary-main: #174ea6;
+  --jf-palette-primary-mainChannel: 23 78 166;
+  --jf-palette-primary-dark: #174ea6;
+  --jf-palette-primary-light: #4285f4;
+  --jf-palette-primary-contrastText: #ffffff;
+  --jf-palette-secondary-main: #174ea6;
+  --jf-palette-secondary-contrastText: #ffffff;
+  --jf-palette-error-main: #a50e0e;
+  --jf-palette-error-light: #ea4335;
+  --jf-palette-error-contrastText: #ffffff;
+  --jf-palette-AppBar-defaultBg: #f1f3f4;
+  --jf-palette-AppBar-transparentBg: #f1f3f4;
+  --jf-palette-Alert-infoFilledBg: #feefc3;
+  --jf-palette-Alert-infoFilledColor: #202124;
+  --jf-palette-Button-inheritContainedBg: #f1f3f4;
+  --jf-palette-Button-inheritContainedHoverBg: #d2e3fc;
+  --jf-palette-FilledInput-bg: #f1f3f4;
+  --jf-palette-FilledInput-borderColor: #595d62;
+  --jf-palette-SnackbarContent-bg: #202124;
+  --jf-palette-SnackbarContent-color: #ffffff;
 }

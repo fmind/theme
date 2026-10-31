@@ -2,6 +2,8 @@
 
 Files: [fmind.dconf](fmind.dconf).
 
+Format: [io.elementary.terminal.gschema.xml](https://github.com/elementary/terminal/blob/main/data/io.elementary.terminal.gschema.xml) · [Themes.vala](https://github.com/elementary/terminal/blob/main/src/Themes.vala)
+
 ## Installation
 
 Import only the terminal appearance keys using the scoped command below. Selects the Custom palette, light UI and explicit colors; system-style following is disabled so it cannot replace the palette.

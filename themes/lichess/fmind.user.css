@@ -4,10 +4,25 @@
 @version 4.0.0
 ==/UserStyle== */
 @-moz-document domain("lichess.org") {
-  body.light {
+  /* Lichess marks its light background with a class on <html>. */
+  html.light {
     --c-bg: #ffffff;
-    --c-fg: #202124;
-    --c-surface: #f1f3f4;
+    --c-bg-page: #ffffff;
+    --c-body-gradient: #ffffff;
+    --c-bg-popup: #ffffff;
+    --c-bg-low: #f1f3f4;
+    --c-bg-zebra: #f1f3f4;
+    --c-bg-zebra2: #f1f3f4;
+    --c-font: #202124;
+    --c-font-clear: #202124;
+    --c-font-clearer: #202124;
+    --c-font-dim: #595d62;
+    --c-font-dimmer: #595d62;
+    --c-font-page: #595d62;
     --c-primary: #174ea6;
+    --c-secondary: #0d652d;
+    --c-good: #0d652d;
+    --c-bad: #a50e0e;
+    --c-accent: #934900;
   }
 }

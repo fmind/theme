@@ -2,6 +2,8 @@
 
 Native GTK 2, GTK 3.20+ and GTK 4 widget themes, with GNOME Shell and Cinnamon desktop themes and Metacity and Xfwm window decorations. Windows, editors, panels and popovers are white; selections and semantic feedback use pale fills. Google Sans is the UI font and Google Sans Code is the monospace font. Missing fonts use the system fallback.
 
+Format: [GTK 3 theme loading](https://docs.gtk.org/gtk3/class.CssProvider.html) · [GTK 4 theme loading](https://docs.gtk.org/gtk4/class.CssProvider.html)
+
 ## Install
 
 Copy this entire directory to `~/.themes/Fmind/`, preserving [common.css](common.css), [index.theme](index.theme) and all version subdirectories. Select Fmind in your desktop's GTK theme chooser. This package does not change your settings automatically.

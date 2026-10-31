@@ -4,16 +4,33 @@
     "systemAppearance": "light",
     "folders": {
       "header": {
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "textColor": "#202124",
+        "buttonColor": "#174ea6"
       },
       "list": {
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "textColor": "#202124",
+        "secondaryTextColor": "#595d62",
+        "buttonColor": "#174ea6"
       }
     },
-    "notes": {
-      "background": "#ffffff",
-      "text": "#202124",
-      "tint": "#174ea6"
+    "folder": {
+      "header": {
+        "backgroundColor": "#ffffff",
+        "textColor": "#202124",
+        "buttonColor": "#174ea6"
+      },
+      "notes": {
+        "clean": {
+          "backgroundColor": "#ffffff",
+          "textColor": "#202124",
+          "secondaryTextColor": "#595d62",
+          "tertiaryTextColor": "#595d62",
+          "linkColor": "#174ea6",
+          "buttonColor": "#174ea6"
+        }
+      }
     }
   }
 }

@@ -32,7 +32,7 @@ ComboBox {
     background: Rectangle {
         color: "#ffffff"
         radius: 6
-        border.color: control.activeFocus ? "#174ea6" : "#9aa0a6"
+        border.color: control.activeFocus ? "#174ea6" : "#595d62"
         border.width: control.activeFocus ? 2 : 1
     }
     delegate: ItemDelegate {
