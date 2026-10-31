@@ -2,6 +2,8 @@
 
 Light theme palette for Telegram Desktop in Fmind tones.
 
+Format: [Telegram Desktop colors.palette](https://github.com/desktop-app/lib_ui/blob/master/ui/colors.palette)
+
 ## Install
 
 1. In Telegram Desktop, go to **Settings** → **Chat Settings**.

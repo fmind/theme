@@ -1,0 +1,19 @@
+# Fmind theme for MakeHuman: flat white viewport, gray grid and palette log colors
+# Viewport colors are RGB floats: white #ffffff, gray #9aa0a6 and light gray #f1f3f4.
+version 1.0
+creator Fmind
+color clear 1.0 1.0 1.0
+color grid 0.604 0.627 0.651
+color subgrid 0.945 0.953 0.957
+
+color bgbottomleft 1.0 1.0 1.0
+color bgbottomright 1.0 1.0 1.0
+color bgtopleft 1.0 1.0 1.0
+color bgtopright 1.0 1.0 1.0
+
+logwindow_color DEBUG #595d62
+logwindow_color NOTICE #174ea6
+logwindow_color INFO #202124
+logwindow_color WARNING #934900
+logwindow_color ERROR #a50e0e
+logwindow_color CRITICAL #a50e0e

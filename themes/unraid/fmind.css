@@ -1,6 +1,22 @@
-:root {
-  --unraid-bg: #ffffff;
-  --unraid-fg: #202124;
-  --unraid-header: #f1f3f4;
-  --unraid-accent: #174ea6;
+/* Fmind for the Unraid webGUI: overrides the Dynamix theme variables (Unraid 7.1+, white theme). */
+/* html:root outranks the theme's :root rule whatever the load order. */
+html:root {
+  --text-color: #202124;
+  --blockquote-text-color: #202124;
+  --alt-text-color: #595d62;
+  --link-text-color: #174ea6;
+  --background-color: #ffffff;
+  --mild-background-color: #f1f3f4;
+  --border-color: #f1f3f4;
+  --table-border-color: #f1f3f4;
+  --table-background-color: #f1f3f4;
+  --table-header-background-color: #f1f3f4;
+  --title-header-background-color: #f1f3f4;
+  --footer-text: #202124;
+  --footer-background-color: #f1f3f4;
+  --header-text-color: #202124;
+  --header-background-color: #ffffff;
+  --button-text-color: #174ea6;
+  --hover-button-text-color: #ffffff;
+  --hover-button-background: #174ea6;
 }

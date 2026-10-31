@@ -2,6 +2,8 @@
 
 A clean light theme for the Steam client interface using the Fmind color scheme.
 
+Format: [Millennium skin.json](https://docs.steambrew.app/themes/basics/config) · [Millennium patches](https://docs.steambrew.app/themes/intermediate/custom-structure)
+
 ## Install
 
 1. Install the [Millennium](https://steambrew.app/) client patcher ([source](https://github.com/SteamClientHomebrew/Millennium)) to enable custom CSS styling.

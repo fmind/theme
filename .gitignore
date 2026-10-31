@@ -1,8 +1,10 @@
 # https://git-scm.com/docs/gitignore
-.cache/
 .ruff_cache/
 .venv/
 __pycache__/
 themes/jupyterlab/dist/
 themes/jupyterlab/jupyterlab_fmind/labextension/
 themes/jupyterlab/node_modules/
+themes/thonny/dist/
+themes/*.zip
+*.qbtheme

@@ -1,0 +1,136 @@
+name "Fmind"
+
+base {
+    appearance "light"
+    background #ffffff
+    separator #9aa0a6
+    text #202124
+}
+
+actionBar {
+    separator #9aa0a6
+
+    button {
+        background #f1f3f4
+        hotkey #595d62
+        text #202124
+    }
+}
+
+asyncProgressBar {
+    border #595d62
+    progress #174ea6
+    itemProgress #4285f4
+}
+
+breadcrumbs {
+    color1 #ffffff
+    color2 #f1f3f4
+    color3 #d2e3fc
+    separator #9aa0a6
+    text #202124
+}
+
+files {
+    background {
+        alternate #ffffff
+        current #d2e3fc
+        currentSelected #d2e3fc
+        selected #feefc3
+    }
+
+    dragDropSelection {
+        color #4285f4
+        width 1
+    }
+
+    text {
+        current #202124
+        currentSelected #934900
+        hidden #595d62
+        matched #00636d
+        selected #934900
+
+        highlighting1 #174ea6
+        highlighting2 #0d652d
+        highlighting3 #934900
+        highlighting4 #681da8
+    }
+}
+
+searchBar {
+    query {
+        background #ffffff
+        border #595d62
+        placeholder #595d62
+        text #202124
+    }
+
+    results {
+        highlighting #174ea6
+        selection #d2e3fc
+        subtitle #595d62
+        text #202124
+    }
+
+    rowSeparator {
+        color #9aa0a6
+        show true
+    }
+}
+
+statusBar {
+    background #f1f3f4
+    border #9aa0a6
+    text #595d62
+    quickSelectNoResultsHighlighting #fad2cf
+}
+
+tableHeader {
+    separator #9aa0a6
+    text #595d62
+
+    pressed {
+        background #f1f3f4
+    }
+}
+
+tabs {
+    background #f1f3f4
+
+    active {
+        background #fbbc04
+        text #202124
+    }
+
+    inactive {
+        background #f1f3f4
+        text #595d62
+    }
+}
+
+terminal {
+    caret {
+        background #4285f4
+        text #202124
+    }
+}
+
+textEditor {
+    error #fad2cf
+    warning #feefc3
+    keyword #174ea6
+    comment #595d62
+    text #202124
+
+    literal {
+        string #0d652d
+        number #934900
+        color #934900
+    }
+
+    gutter {
+        background #f1f3f4
+        text #595d62
+    }
+}

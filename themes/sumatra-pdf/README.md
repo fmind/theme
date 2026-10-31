@@ -2,6 +2,8 @@
 
 Fmind theme for [Sumatra PDF](https://www.sumatrapdfreader.org/).
 
+Format: [SumatraPDF settings](https://www.sumatrapdfreader.org/settings/settings)
+
 ## Install
 
 1. In Sumatra PDF, open `Settings` -> `Advanced Options...` (`Advanced Settings...` in pre-release builds; opens `SumatraPDF-settings.txt`).

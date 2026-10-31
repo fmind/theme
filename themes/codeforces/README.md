@@ -2,7 +2,7 @@
 
 Userstyle for Codeforces.
 
-Format: [Stylus UserCSS](https://github.com/openstyles/stylus/wiki/Writing-UserCSS)
+Format: [Stylus Mozilla-format styles](https://github.com/openstyles/stylus/wiki/Writing-styles#file-formats)
 
 ## Installation
 

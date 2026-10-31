@@ -1,5 +1,7 @@
 # Fmind for Thonny
 
+Format: [Thonny plugins](https://github.com/thonny/thonny/wiki/Plugins) · [clean_ui_themes.py](https://github.com/thonny/thonny/blob/master/thonny/plugins/clean_ui_themes.py) · [base_syntax_themes.py](https://github.com/thonny/thonny/blob/master/thonny/plugins/base_syntax_themes.py)
+
 Create a wheel from this directory:
 
 ```sh

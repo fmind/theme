@@ -41,6 +41,6 @@ For Plasma 6, the provider is `org.kde.plasma.private.battery` from Plasma Works
 
 ## Validation and limits
 
-The retained [preview](Fmind/preview.png) uses synthetic accounts and sessions. Native Qt 5.15.8 and Qt 6.4.2 checks exercise login requests, failure recovery, session validation, power confirmation, virtual-key input and password masking. Battery presentation is checked against synthetic provider data; the real KDE battery providers remain unverified. The native SDDM process did not complete a warning-free test, and real authentication, session launch, power management, Wayland greeter operation and a deployed login screen remain unverified.
+The retained [preview](Fmind/preview.png) uses synthetic accounts and sessions. One-off native Qt 5.15.8 and Qt 6.4.2 checks exercised login requests, failure recovery, session validation, power confirmation, virtual-key input and password masking; repository checks do not run SDDM. Battery presentation was checked against synthetic provider data; the real KDE battery providers remain unverified. The native SDDM process did not complete a warning-free test, and real authentication, session launch, power management, Wayland greeter operation and a deployed login screen remain unverified.
 
 Edit the QML and native configuration directly. Keep the two keyboard styles visually identical and refresh the synthetic package preview after visual changes. User names and provider messages render as plain text. No theme code runs shell commands, changes authentication policy or contacts remote services.

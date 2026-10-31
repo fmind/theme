@@ -3,6 +3,11 @@
   "name": "Fmind",
   "version": "4.0.0",
   "description": "Fmind light theme for Mozilla Thunderbird",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "fmind-theme@fmind.dev"
+    }
+  },
   "theme": {
     "colors": {
       "frame": "#f1f3f4",

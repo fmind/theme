@@ -1,6 +1,6 @@
-# Protonmail
+# Proton Mail
 
-Fmind theme for [Protonmail](https://proton.me/mail).
+Fmind theme for [Proton Mail](https://proton.me/mail).
 
 Format: [Proton theme variables](https://github.com/ProtonMail/WebClients/blob/main/packages/colors/themes/dist/snow.theme.css)
 

@@ -5,17 +5,25 @@
  * @version 4.0.0
  */
 
-:root {
-  --background-primary: #ffffff;
-  --background-secondary: #f1f3f4;
-  --background-tertiary: #ffffff;
+/* Discord's light-theme variables. The doubled class outranks Discord's own .theme-light and .visual-refresh rules. */
+.theme-light.theme-light {
+  --background-base-lowest: #f1f3f4;
+  --background-base-lower: #ffffff;
+  --background-base-low: #ffffff;
+  --background-surface-high: #ffffff;
+  --background-surface-higher: #ffffff;
+  --background-surface-highest: #ffffff;
+  --chat-background-default: #ffffff;
   --channeltextarea-background: #f1f3f4;
-  --text-normal: #202124;
+  --text-default: #202124;
+  --text-strong: #202124;
   --text-muted: #595d62;
-  --accent-color: #174ea6;
-  --brand-experiment: #174ea6;
-  --interactive-normal: #202124;
-  --interactive-hover: #174ea6;
-  --interactive-active: #174ea6;
-  --background-modifier-selected: #d2e3fc;
+  --text-subtle: #595d62;
+  --text-link: #174ea6;
+  --text-brand: #174ea6;
+  --interactive-text-default: #595d62;
+  --interactive-text-hover: #202124;
+  --interactive-text-active: #202124;
+  --interactive-background-selected: #d2e3fc;
+  --brand-500: #174ea6;
 }

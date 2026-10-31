@@ -1,6 +1,20 @@
-name: Fmind
-parent: day
-windowBackground: #ffffff
-windowForeground: #202124
-selection: #d2e3fc
-accent: #174ea6
+//Fmind palette for Telegram macOS; keys left out fall back to the parent theme.
+name = Fmind
+isDark = 0
+tinted = 0
+parent = day
+copyright = Fmind
+basicAccent = #174ea6
+accent = #174ea6
+link = #174ea6
+accentIcon = #174ea6
+background = #ffffff
+text = #202124
+grayText = #595d62
+grayIcon = #595d62
+grayBackground = #f1f3f4
+border = #9aa0a6
+selectText = #d2e3fc
+redUI = #a50e0e
+greenUI = #0d652d
+badge = #174ea6

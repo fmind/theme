@@ -162,6 +162,12 @@ class DocumentationTests(unittest.TestCase):
         for color in COLORS:
             self.assertIn(color.lower(), readme.lower())
 
+    def test_theme_readmes_cite_their_format(self):
+        # AGENTS.md keeps a port only while its README cites the upstream format or loader.
+        cited = re.compile(r"(?m)^Format: .*\]\(https://[^)\s]+\)")
+        missing = [app.name for app in APPS if not cited.search((app / "README.md").read_text())]
+        self.assertEqual(missing, [])
+
     def test_markdown_local_links_and_anchors(self):
         # Screenshot samples are rendering fixtures, not navigation.
         for path in files("*.md", ":!screenshots/samples"):

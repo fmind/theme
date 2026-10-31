@@ -2,6 +2,8 @@
 
 A light prompt theme for Zsh and Oh My Zsh.
 
+Format: [Zsh prompt expansion](https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html) · [Oh My Zsh theme loader](https://github.com/ohmyzsh/ohmyzsh/blob/master/oh-my-zsh.sh)
+
 ## Installation
 
 ### Oh My Zsh

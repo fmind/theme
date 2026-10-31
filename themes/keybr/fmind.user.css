@@ -5,18 +5,57 @@
 @description    Clean light theme for Keybr
 ==/UserStyle== */
 
+/* Overrides the color variables of Keybr's built-in light theme (html[data-color=light] in its main CSS). */
+/* :root[data-color] outranks html[data-color=...], so the style also replaces the system and dark themes. */
 @-moz-document domain("keybr.com") {
-  body {
-    background-color: #ffffff;
-    color: #202124;
-  }
-
-  .border {
-    border-color: #9aa0a6;
-  }
-
-  .active {
-    background-color: #d2e3fc;
-    color: #174ea6;
+  :root[data-color] {
+    --primary-d2: #9aa0a6;
+    --primary-d1: #f1f3f4;
+    --primary: #ffffff;
+    --primary-l1: #f1f3f4;
+    --primary-l2: #ffffff;
+    --secondary-d1: #202124;
+    --secondary: #202124;
+    --secondary-l1: #595d62;
+    --secondary-l2: #174ea6;
+    --secondary-f1: #595d62;
+    --secondary-f2: #595d62;
+    --accent-d2: #174ea6;
+    --accent-d1: #174ea6;
+    --accent: #174ea6;
+    --accent-l1: #595d62;
+    --accent-l2: #202124;
+    --error-d1: #a50e0e;
+    --error: #a50e0e;
+    --error-l1: #ea4335;
+    --slow-key-color: #a50e0e;
+    --fast-key-color: #34a853;
+    --effort-color: #4285f4;
+    --textinput__color: #202124;
+    --textinput--special__color: #595d62;
+    --textinput--hit__color: #595d62;
+    --textinput--miss__color: #a50e0e;
+    --Name-color: #595d62;
+    --Value-color: #202124;
+    --Value--more__color: #0d652d;
+    --Value--less__color: #a50e0e;
+    --Chart-speed__color: #34a853;
+    --Chart-accuracy__color: #ea4335;
+    --Chart-complexity__color: #681da8;
+    --Chart-threshold__color: #e37400;
+    --Chart-hist-h__color: #4285f4;
+    --Chart-hist-m__color: #ea4335;
+    --Chart-hist-r__color: #681da8;
+    --KeyboardKey-pointer__color: #4285f4;
+    --pinky-zone-color: #ceead6;
+    --ring-zone-color: #feefc3;
+    --middle-zone-color: #d2e3fc;
+    --left-index-zone-color: #fad2cf;
+    --right-index-zone-color: #f1f3f4;
+    --thumb-zone-color: #fbbc04;
+    --syntax-keyword: #174ea6;
+    --syntax-string: #0d652d;
+    --syntax-number: #934900;
+    --syntax-comment: #595d62;
   }
 }

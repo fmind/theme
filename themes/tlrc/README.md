@@ -2,6 +2,8 @@
 
 Light theme for [tlrc](https://github.com/tldr-pages/tlrc).
 
+Format: [config.rs](https://github.com/tldr-pages/tlrc/blob/main/src/config.rs)
+
 ## Installation
 
 Merge [fmind.toml](fmind.toml) into the config file printed by `tldr --config-path` (`~/.config/tlrc/config.toml` on Linux).

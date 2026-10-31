@@ -28,12 +28,13 @@
     color: #ffffff !important;
   }
 
-  yt-chip-cloud-chip-renderer[chip-style="STYLE_DEFAULT"] {
+  /* Filter chips render as chip-shape view models (.ytChipShape*). */
+  .ytChipShapeInactive {
     background-color: #f1f3f4 !important;
     color: #202124 !important;
   }
 
-  yt-chip-cloud-chip-renderer[chip-style="STYLE_DEFAULT"][selected] {
+  .ytChipShapeActive {
     background-color: #d2e3fc !important;
     color: #174ea6 !important;
   }

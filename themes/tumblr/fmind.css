@@ -1,7 +1,31 @@
 /* Fmind theme for Tumblr */
-:root {
-  --navy: #ffffff;
-  --white: #202124;
-  --accent: #174ea6;
-  --border-subtle: #f1f3f4;
+/* Tumblr's own palette block names these variables: RGB triplets (--navy, --white, ...) and semantic colors (--chrome, --content-panel, ...). */
+@-moz-document domain("tumblr.com") {
+  :root {
+    --black: 32, 33, 36;
+    --white: 255, 255, 255;
+    --white-on-dark: 32, 33, 36;
+    --navy: 255, 255, 255;
+    --deprecated-accent: 23, 78, 166;
+    --accent: #174ea6;
+    --accent-fg: #ffffff;
+    --chrome: #ffffff;
+    --chrome-mobile: #ffffff;
+    --chrome-panel: #f1f3f4;
+    --chrome-fg: #202124;
+    --chrome-fg-secondary: #595d62;
+    --chrome-fg-tertiary: #595d62;
+    --chrome-tint: #f1f3f4;
+    --chrome-tint-strong: #d2e3fc;
+    --chrome-tint-heavy: #d2e3fc;
+    --chrome-ui: #174ea6;
+    --chrome-ui-fg: #ffffff;
+    --side-menu: #ffffff;
+    --top-menu: #ffffff;
+    --content-panel: #ffffff;
+    --content-panel-border: #9aa0a6;
+    --content-fg: #202124;
+    --content-fg-secondary: #595d62;
+    --content-fg-tertiary: #595d62;
+  }
 }

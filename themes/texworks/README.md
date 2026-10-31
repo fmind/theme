@@ -2,6 +2,8 @@
 
 Syntax colors for [TeXworks](https://www.tug.org/texworks/).
 
+Format: [syntax-patterns.txt](https://github.com/TeXworks/texworks/blob/main/res/resfiles/configuration/syntax-patterns.txt) · [TeXHighlighter.cpp](https://github.com/TeXworks/texworks/blob/main/src/TeXHighlighter.cpp)
+
 ## Installation
 
 Open TeXworks' resources folder from Help → Settings and Resources, then edit `configuration/syntax-patterns.txt`. Replace only its `[LaTeX]` section with [fmind.txt](fmind.txt), preserving other sections. Keep the leading spaces before hex colors: without them, TeXworks treats those rules as comments. Restart TeXworks.

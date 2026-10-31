@@ -1,12 +1,35 @@
-:root {
-  --primary-color: #174ea6;
-  --text-color: #202124;
-  --background-color: #ffffff;
-  --surface-color: #f1f3f4;
-  --selected-color: #d2e3fc;
-}
-
-body {
-  background-color: var(--background-color);
-  color: var(--text-color);
+/* Fmind for the Joplin desktop UI: use with the Light theme. */
+/* Overrides the --joplin-* variables that Joplin generates from its theme (lib/services/style/themeToCss.ts, lib/themes/light.ts). */
+/* :root:root outranks Joplin's own :root block, which is re-appended after this file when the theme changes. */
+/* The dark sidebar ("2" variables) is left alone: parts of it are styled from the theme object, not from these variables. */
+:root:root {
+  --joplin-background-color: #ffffff;
+  --joplin-odd-background-color: #f1f3f4;
+  --joplin-color: #202124;
+  --joplin-color-faded: #595d62;
+  --joplin-color-error: #a50e0e;
+  --joplin-color-error-selected: #a50e0e;
+  --joplin-color-correct: #0d652d;
+  --joplin-color-warn: #934900;
+  --joplin-color-warn-url: #174ea6;
+  --joplin-url-color: #174ea6;
+  --joplin-divider-color: #9aa0a6;
+  --joplin-selected-color: #d2e3fc;
+  --joplin-background-color3: #f1f3f4;
+  --joplin-background-color-hover3: #d2e3fc;
+  --joplin-color3: #595d62;
+  --joplin-background-color4: #ffffff;
+  --joplin-color4: #174ea6;
+  --joplin-background-color4-dimmed: #d2e3fc;
+  --joplin-raised-background-color: #f1f3f4;
+  --joplin-raised-color: #202124;
+  --joplin-search-marker-background-color: #fbbc04;
+  --joplin-search-marker-color: #202124;
+  --joplin-warning-background-color: #feefc3;
+  --joplin-destructive-color: #a50e0e;
+  --joplin-table-background-color: #f1f3f4;
+  --joplin-code-background-color: #f1f3f4;
+  --joplin-code-border-color: #9aa0a6;
+  --joplin-code-color: #202124;
+  --joplin-header-background-color: #f1f3f4;
 }

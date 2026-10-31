@@ -51,8 +51,11 @@ description = "Check documentation, configuration and Python formatting without 
 run = ["dprint check", "ruff format --check ."]
 
 [tasks."check:leaks"]
-description = "Scan the last 100 commits for leaked secrets"
-run = 'gitleaks git --redact=100 --log-opts="--max-count=100" --no-banner --verbose'
+description = "Scan the last 100 commits and the working tree for leaked secrets"
+run = [
+  'gitleaks git --redact=100 --log-opts="--max-count=100" --no-banner --verbose',
+  "gitleaks dir . --redact=100 --no-banner --verbose",
+]
 
 [tasks."check:security"]
 description = "Audit the root, artwork script and JupyterLab npm locks, including dev dependencies, with OSV and npm (requires network access)"
@@ -86,5 +89,5 @@ run = "uv run --locked screenshots/capture.py"
 
 [tasks.test]
 alias = "t"
-description = "Check the palette, theme syntax, colors and versions, documentation links and artwork"
+description = "Check the palette, theme syntax, colors, versions and format citations, documentation links and artwork"
 run = "uv run --locked python -m unittest discover -s checks -q"

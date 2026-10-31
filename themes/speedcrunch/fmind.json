@@ -1,12 +1,18 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://speedcrunch.org/schemas/theme-v1.schema.json",
   "name": "Fmind",
-  "background": "#ffffff",
-  "cursor": "#4285f4",
+  "homepage": "https://github.com/fmind/theme",
+  "number": "#934900",
+  "parens": "#202124",
+  "list": "#202124",
+  "unit": "#681da8",
   "result": "#174ea6",
   "comment": "#595d62",
-  "number": "#934900",
-  "variable": "#202124",
   "function": "#174ea6",
   "operator": "#202124",
-  "matched": "#feefc3"
+  "variable": "#202124",
+  "separator": "#202124",
+  "background": "#ffffff",
+  "primary": "#174ea6"
 }

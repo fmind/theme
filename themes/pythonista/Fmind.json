@@ -1,14 +1,125 @@
 {
   "name": "Fmind",
+  "editor_actions_icon_background": "#ffffff",
+  "editor_actions_icon_tint": "#595d62",
+  "editor_actions_popover_background": "#f1f3f4",
+  "library_background": "#ffffff",
+  "library_tint": "#174ea6",
+  "thumbnail_border": "#9aa0a6",
+  "default_text": "#202124",
+  "tint": "#174ea6",
+  "text_selection_tint": "#4285f4",
+  "bar_background": "#ffffff",
+  "tab_background": "#f1f3f4",
+  "tab_title": "#202124",
+  "separator_line": "#9aa0a6",
   "background": "#ffffff",
   "gutter_background": "#ffffff",
-  "text": "#202124",
-  "selection": "#d2e3fc",
-  "tint": "#174ea6",
-  "line_numbers": "#595d62",
-  "comments": "#595d62",
-  "keywords": "#174ea6",
-  "strings": "#0d652d",
-  "numbers": "#934900",
-  "definitions": "#174ea6"
+  "gutter_border": "#f1f3f4",
+  "line_number": "#595d62",
+  "interstitial": "#f1f3f4",
+  "error_text": "#a50e0e",
+  "dark_keyboard": false,
+  "scopes": {
+    "default": {
+      "color": "#202124"
+    },
+    "string": {
+      "color": "#0d652d"
+    },
+    "docstring": {
+      "color": "#0d652d"
+    },
+    "number": {
+      "color": "#934900"
+    },
+    "keyword": {
+      "color": "#174ea6"
+    },
+    "module": {
+      "color": "#681da8"
+    },
+    "function": {
+      "color": "#174ea6"
+    },
+    "builtinfunction": {
+      "color": "#681da8"
+    },
+    "functiondef": {
+      "color": "#174ea6",
+      "font-style": "bold"
+    },
+    "classdef": {
+      "color": "#681da8",
+      "font-style": "bold"
+    },
+    "class": {
+      "color": "#681da8"
+    },
+    "comment": {
+      "color": "#595d62"
+    },
+    "marker": {
+      "box-background-color": "#feefc3",
+      "box-border-color": "#fbbc04",
+      "box-border-type": 4
+    },
+    "decorator": {
+      "color": "#681da8"
+    },
+    "formatting": {
+      "color": "#595d62"
+    },
+    "codeblock-start": {
+      "color": "#595d62"
+    },
+    "bold": {
+      "font-style": "bold"
+    },
+    "italic": {
+      "color": "#681da8"
+    },
+    "bold-italic": {
+      "color": "#681da8",
+      "font-style": "bold"
+    },
+    "heading-1": {
+      "color": "#174ea6",
+      "font-style": "bold"
+    },
+    "heading-2": {
+      "color": "#174ea6",
+      "font-style": "bold"
+    },
+    "heading-3": {
+      "color": "#174ea6",
+      "font-style": "bold"
+    },
+    "link": {
+      "color": "#174ea6",
+      "text-decoration": "underline"
+    },
+    "code": {
+      "color": "#174ea6",
+      "background-color": "#f1f3f4",
+      "corner-radius": 2.0
+    },
+    "project": {
+      "font-style": "bold"
+    },
+    "checkbox": {
+      "checkbox": true
+    },
+    "checkbox-done": {
+      "checkbox": true,
+      "done": true
+    },
+    "task-done": {
+      "color": "#595d62",
+      "text-decoration": "strikeout"
+    },
+    "tag": {
+      "text-decoration": "none"
+    }
+  }
 }

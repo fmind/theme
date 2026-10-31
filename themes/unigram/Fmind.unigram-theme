@@ -1,11 +1,27 @@
-{
-  "name": "Fmind",
-  "colors": {
-    "windowBackground": "#ffffff",
-    "windowForeground": "#202124",
-    "windowMuted": "#595d62",
-    "accent": "#174ea6",
-    "selection": "#d2e3fc",
-    "surface": "#f1f3f4"
-  }
-}
+!
+name: Fmind
+parent: 2
+accent: #FF174EA6
+#
+PageHeaderHighlightBrush: #FF174EA6
+PinnedMessageForegroundBrush: #FF174EA6
+ChatVerifiedBadgeBrush: #FF174EA6
+ChatLastMessageStateBrush: #FF174EA6
+ChatFromLabelBrush: #FF174EA6
+ChatUnreadBadgeBrush: #FF174EA6
+MessageAccentIncoming: #FF174EA6
+MessageAccentOutgoing: #FF174EA6
+MessageSelectionIncoming: #FF174EA6
+MessageSelectionOutgoing: #FF174EA6
+MessageBackgroundOutgoing: #FFD2E3FC
+MessageSubtleLabelIncoming: #FF595D62
+MessageSubtleGlyphIncoming: #FF595D62
+MessageSubtleLabelOutgoing: #FF595D62
+MessageSubtleGlyphOutgoing: #FF174EA6
+MessageSubtleForegroundOutgoing: #FF595D62
+MessageHeaderForegroundIncoming: #FF174EA6
+MessageHeaderBorderIncoming: #FF174EA6
+MessageHeaderForegroundOutgoing: #FF174EA6
+MessageHeaderBorderOutgoing: #FF174EA6
+MessageMediaBackgroundIncoming: #FF174EA6
+MessageMediaBackgroundOutgoing: #FF174EA6

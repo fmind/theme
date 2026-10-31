@@ -1,9 +1,61 @@
-/* Fmind theme for Beeper */
-:root {
-  --bg-color: #ffffff;
-  --text-color: #202124;
-  --secondary-text: #595d62;
-  --accent-color: #174ea6;
-  --sidebar-bg: #f1f3f4;
-  --border-color: #9aa0a6;
+/* Fmind theme for Beeper Desktop (v4 custom CSS).
+   Overrides the light-mode variables listed in beeper/themes current-v4/variables.css;
+   Beeper's semantic colors derive from these base tokens.
+   Only the light appearance changes; the dark appearance keeps Beeper's colors. */
+@media (prefers-color-scheme: light) {
+  :root {
+    --color-bg: #ffffff;
+    --color-bg-rgb: 255, 255, 255;
+    --color-fg: #202124;
+    --color-fg-rgb: 32, 33, 36;
+    --color-primary: #174ea6;
+    --color-primary-rgb: 23, 78, 166;
+    --color-gray-rgb: 89, 93, 98;
+
+    --color-base-black: #202124;
+    --color-base-black-rgb: 32, 33, 36;
+
+    /* Panels, inputs and received bubbles: #f1f3f4; dividers: #9aa0a6; muted text, icons and input borders: #595d62. */
+    --color-base-gray-20: #f1f3f4;
+    --color-base-gray-20-rgb: 241, 243, 244;
+    --color-base-gray-30: #f1f3f4;
+    --color-base-gray-30-rgb: 241, 243, 244;
+    --color-base-gray-40: #f1f3f4;
+    --color-base-gray-40-rgb: 241, 243, 244;
+    --color-base-gray-50: #f1f3f4;
+    --color-base-gray-50-rgb: 241, 243, 244;
+    --color-base-gray-60: #9aa0a6;
+    --color-base-gray-60-rgb: 154, 160, 166;
+    --color-base-gray-70: #9aa0a6;
+    --color-base-gray-70-rgb: 154, 160, 166;
+    --color-base-gray-80: #595d62;
+    --color-base-gray-80-rgb: 89, 93, 98;
+    --color-base-gray-100: #595d62;
+    --color-base-gray-100-rgb: 89, 93, 98;
+    --color-base-gray-110: #595d62;
+    --color-base-gray-110-rgb: 89, 93, 98;
+    --color-base-gray-120: #202124;
+    --color-base-gray-120-rgb: 32, 33, 36;
+
+    /* Primary buttons, sent bubbles and selections carry white text: #174ea6. */
+    --color-base-system-blue-80: #4285f4;
+    --color-base-system-blue-80-rgb: 66, 133, 244;
+    --color-base-system-blue-90: #174ea6;
+    --color-base-system-blue-90-rgb: 23, 78, 166;
+    --color-base-system-blue-100: #174ea6;
+    --color-base-system-blue-100-rgb: 23, 78, 166;
+    --color-base-system-blue-110: #174ea6;
+    --color-base-system-blue-110-rgb: 23, 78, 166;
+
+    /* Inputs are essential controls: 3:1 border, focus ring #4285f4. */
+    --color-border-input: #595d62;
+    --color-border-input-active: #4285f4;
+
+    --mark-bg: #feefc3;
+    --error-color: #a50e0e;
+    --warning-color: #934900;
+    --snoozed-indicator-bg: #934900;
+    --message-snoozed-border: #934900;
+    --sms-sent-bg: #0d652d;
+  }
 }

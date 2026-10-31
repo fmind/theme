@@ -1,4 +1,5 @@
 /* Vimium Fmind Light Theme */
+/* Selectors follow Vimium's pages/vomnibar_page.css, pages/hud_page.css and the userDefinedLinkHintCss default. */
 
 #vomnibar {
   background-color: #ffffff;
@@ -11,7 +12,7 @@
   border: 1px solid #d2e3fc;
 }
 
-#vomnibar .vomnibarSearchArea {
+#vomnibar-search-area {
   background-color: #ffffff;
   border-bottom: 1px solid #f1f3f4;
 }
@@ -24,41 +25,43 @@
   border-bottom: 1px solid #f1f3f4;
 }
 
-#vomnibar li .vomnibarTitle {
+#vomnibar li .title {
   color: #202124;
 }
 
-#vomnibar li .vomnibarUrl {
+#vomnibar li .url {
   color: #174ea6;
 }
 
-#vomnibar li .vomnibarMatch {
+#vomnibar li .match,
+#vomnibar li em .match,
+#vomnibar li .title .match {
   color: #934900;
   font-weight: bold;
 }
 
-#vomnibar li.vomnibarSelected {
+#vomnibar li.selected {
   background-color: #d2e3fc;
 }
 
-div.vimiumReset.vimiumHUD {
+#hud-container,
+#hud-body {
   background-color: #f1f3f4;
   border: 1px solid #9aa0a6;
   color: #202124;
 }
 
-div.vimiumReset.vimiumHUD span#hud-find-input,
-div.vimiumReset.vimiumHUD span#hud-match-count {
+#hud-container span#hud-find-input,
+#hud-container span#hud-match-count {
   color: #174ea6;
 }
 
-div.vimiumReset.vimiumHintMarker,
-div.vimiumReset.vimiumNormalHintMarker {
-  background-color: #feefc3;
+div > .vimiumHintMarker {
+  background: #feefc3;
   border: 1px solid #e37400;
 }
 
-div.vimiumReset.vimiumHintMarker span {
+div > .vimiumHintMarker span {
   color: #202124;
   font-weight: bold;
 }

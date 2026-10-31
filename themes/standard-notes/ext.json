@@ -5,7 +5,7 @@
   "area": "themes",
   "version": "4.0.0",
   "description": "Fmind light theme for Standard Notes",
-  "url": "https://raw.githubusercontent.com/fmind/theme/main/themes/standard-notes/dist/fmind.css",
+  "url": "https://cdn.jsdelivr.net/gh/fmind/theme@main/themes/standard-notes/dist/fmind.css",
   "dock_icon": {
     "type": "circle",
     "background_color": "#174ea6",

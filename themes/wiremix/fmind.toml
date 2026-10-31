@@ -1,6 +1,21 @@
-[theme]
-name = "fmind"
-background = "#ffffff"
-text = "#202124"
-accent = "#174ea6"
-surface = "#f1f3f4"
+# https://github.com/tsowell/wiremix/blob/main/wiremix.toml
+# Fmind for a white terminal background. Unset styles inherit from "default".
+theme = "fmind"
+
+[themes.fmind]
+selector = { fg = "#174ea6" }
+tab_selected = { fg = "#174ea6", add_modifier = "BOLD" }
+tab_marker = { fg = "#174ea6" }
+list_more = { fg = "#595d62" }
+# Empty and filled volume use different glyphs, so dark gray stays distinct.
+volume_empty = { fg = "#595d62" }
+volume_filled = { fg = "#174ea6" }
+# Unlit meter cells share the lit glyph; light gray keeps them apart.
+meter_inactive = { fg = "#9aa0a6" }
+meter_active = { fg = "#0d652d" }
+meter_overload = { fg = "#a50e0e" }
+meter_center_inactive = { fg = "#9aa0a6" }
+meter_center_active = { fg = "#0d652d" }
+dropdown_selected = { fg = "#202124", bg = "#d2e3fc", add_modifier = "BOLD" }
+dropdown_more = { fg = "#595d62" }
+help_more = { fg = "#595d62" }

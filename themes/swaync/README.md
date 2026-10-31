@@ -2,6 +2,8 @@
 
 Files: [fmind.css](fmind.css).
 
+Format: [SwayNC default style](https://github.com/ErikReider/SwayNotificationCenter/blob/main/data/style/style.scss)
+
 ## Installation
 
 Copy to `~/.config/swaync/fmind.css`; import the installed default stylesheet followed by this file in your `~/.config/swaync/style.css`, as shown below. Reload with `swaync-client --reload-css`. Covers notifications, actions, replies, groups and built-in widgets.

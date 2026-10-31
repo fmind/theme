@@ -1,6 +1,28 @@
-:root {
-  --ynh-bg: #ffffff;
-  --ynh-text: #202124;
-  --ynh-primary: #174ea6;
-  --ynh-panel: #f1f3f4;
+/* Fmind for the YunoHost 12+ user portal.
+ * The portal styles itself with DaisyUI 4 color variables, which hold OKLCH
+ * "lightness chroma hue" triplets rather than hex; each comment names the palette color.
+ * html[data-theme] outranks DaisyUI's [data-theme=...] rules, so every portal theme turns Fmind.
+ */
+html[data-theme] {
+  color-scheme: light;
+  --b1: 100% 0 0; /* #ffffff white */
+  --b2: 96.2913% 0.00253 228.784; /* #f1f3f4 light gray */
+  --b3: 70.2767% 0.011138 247.986; /* #9aa0a6 gray */
+  --bc: 24.7936% 0.005846 271.176; /* #202124 charcoal */
+  --p: 44.3226% 0.153078 259.855; /* #174ea6 dark blue */
+  --pc: 100% 0 0; /* #ffffff white */
+  --s: 47.6529% 0.009493 253.92; /* #595d62 dark gray */
+  --sc: 100% 0 0; /* #ffffff white */
+  --a: 43.1093% 0.201286 302.677; /* #681da8 purple */
+  --ac: 100% 0 0; /* #ffffff white */
+  --n: 24.7936% 0.005846 271.176; /* #202124 charcoal */
+  --nc: 100% 0 0; /* #ffffff white */
+  --in: 45.6619% 0.078264 206.843; /* #00636d teal */
+  --inc: 100% 0 0; /* #ffffff white */
+  --su: 44.4941% 0.117836 149.556; /* #0d652d dark green */
+  --suc: 100% 0 0; /* #ffffff white */
+  --wa: 48.8828% 0.121889 54.4176; /* #934900 dark orange */
+  --wac: 100% 0 0; /* #ffffff white */
+  --er: 45.8787% 0.18052 28.3374; /* #a50e0e dark red */
+  --erc: 100% 0 0; /* #ffffff white */
 }

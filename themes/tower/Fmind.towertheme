@@ -1,25 +1,129 @@
 {
+  "identifier": "069E4EA8-F16F-4069-8C9D-56AA54A93BDB",
+  "version": 6,
   "name": "Fmind",
-  "identifier": "com.fmind.theme",
-  "fontSize": 11,
-  "backgroundColor": {
-    "hexValue": "ffffff",
+  "font": {
+    "name": "Menlo-Regular",
+    "size": 11
+  },
+  "textColor": {
+    "hexValue": "#202124",
     "alpha": 1,
     "version": 3
   },
-  "textColor": {
-    "hexValue": "202124",
+  "invisibleCharacterColor": {
+    "hexValue": "#9aa0a6",
     "alpha": 1,
     "version": 3
   },
   "addedColor": {
-    "hexValue": "0d652d",
-    "version": 3,
-    "alpha": 1
+    "hexValue": "#ceead6",
+    "alpha": 1,
+    "version": 3
   },
   "deletedColor": {
-    "hexValue": "a50e0e",
-    "version": 3,
-    "alpha": 1
+    "hexValue": "#fad2cf",
+    "alpha": 1,
+    "version": 3
+  },
+  "backgroundColor": {
+    "hexValue": "#ffffff",
+    "alpha": 1,
+    "version": 3
+  },
+  "selectedTextBackgroundColor": {
+    "hexValue": "#d2e3fc",
+    "alpha": 1,
+    "version": 3
+  },
+  "keywordColor": {
+    "hexValue": "#174ea6",
+    "alpha": 1,
+    "version": 3
+  },
+  "identifierColor": {
+    "hexValue": "#202124",
+    "alpha": 1,
+    "version": 3
+  },
+  "functionColor": {
+    "hexValue": "#174ea6",
+    "alpha": 1,
+    "version": 3
+  },
+  "numberColor": {
+    "hexValue": "#934900",
+    "alpha": 1,
+    "version": 3
+  },
+  "stringColor": {
+    "hexValue": "#0d652d",
+    "alpha": 1,
+    "version": 3
+  },
+  "symbolColor": {
+    "hexValue": "#934900",
+    "alpha": 1,
+    "version": 3
+  },
+  "commentColor": {
+    "hexValue": "#595d62",
+    "alpha": 1,
+    "version": 3
+  },
+  "preprocessorStatementColor": {
+    "hexValue": "#174ea6",
+    "alpha": 1,
+    "version": 3
+  },
+  "xmlTagColor": {
+    "hexValue": "#174ea6",
+    "alpha": 1,
+    "version": 3
+  },
+  "attributeNameColor": {
+    "hexValue": "#681da8",
+    "alpha": 1,
+    "version": 3
+  },
+  "attributeValueColor": {
+    "hexValue": "#0d652d",
+    "alpha": 1,
+    "version": 3
+  },
+  "cssSelectorColor": {
+    "hexValue": "#174ea6",
+    "alpha": 1,
+    "version": 3
+  },
+  "headingColor": {
+    "hexValue": "#174ea6",
+    "alpha": 1,
+    "version": 3
+  },
+  "codeBlockColor": {
+    "hexValue": "#174ea6",
+    "alpha": 1,
+    "version": 3
+  },
+  "delimiterColor": {
+    "hexValue": "#202124",
+    "alpha": 1,
+    "version": 3
+  },
+  "emphasizedColor": {
+    "hexValue": "#681da8",
+    "alpha": 1,
+    "version": 3
+  },
+  "stronglyEmphasizedColor": {
+    "hexValue": "#202124",
+    "alpha": 1,
+    "version": 3
+  },
+  "urlColor": {
+    "hexValue": "#174ea6",
+    "alpha": 1,
+    "version": 3
   }
 }

@@ -2,6 +2,8 @@
 
 Clean, minimal light theme for Vivaldi browser.
 
+Format: [Vivaldi Themes](https://help.vivaldi.com/desktop/appearance-customization/themes/)
+
 ## Install
 
 Vivaldi's **Open Theme** expects a theme ZIP file, so create the theme in the editor:

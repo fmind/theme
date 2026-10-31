@@ -5,5 +5,6 @@
   --tridactyl-highlight-box-bg: #d2e3fc;
   --tridactyl-cmdl-bg: #ffffff;
   --tridactyl-cmdl-fg: #202124;
-  --tridactyl-border: 1px solid #9aa0a6;
+  --tridactyl-status-border: 1px solid #9aa0a6;
+  --tridactyl-cmplt-border-top: 1px solid #9aa0a6;
 }

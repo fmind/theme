@@ -2,6 +2,8 @@
 
 A clean, high-contrast light theme for Visual Studio using Google Sans Code and the Fmind palette.
 
+Format: [Visual Studio color items](https://github.com/microsoft/theme-converter/blob/main/ThemeConverter/ThemeConverter/VSTokens.json) · [Import and export settings](https://learn.microsoft.com/en-us/visualstudio/ide/environment-settings)
+
 ## Install
 
 1. In Visual Studio, go to **Tools** → **Import and Export Settings…**.
