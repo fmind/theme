@@ -1242,23 +1242,6 @@ checksum = "sha256:cf896717611de9608a000664b7020bb56d2ac1298b2222c356756f7f76c5e
 url = "https://conda.anaconda.org/conda-forge/osx-arm64/zstd-1.5.7-hf451053_7.conda"
 checksum = "sha256:da867f5092eb0cb746d353694f0098031fd9817a4ce7d5743121209ae0f406ca"
 
-[[tools.actionlint]]
-version = "1.7.12"
-backend = "aqua:rhysd/actionlint"
-specifiers = ["1.7.12"]
-
-[tools.actionlint."platforms.linux-x64"]
-checksum = "sha256:8aca8db96f1b94770f1b0d72b6dddcb1ebb8123cb3712530b08cc387b349a3d8"
-url = "https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_linux_amd64.tar.gz"
-url_api = "https://api.github.com/repos/rhysd/actionlint/releases/assets/384924896"
-provenance = "github-attestations"
-
-[tools.actionlint."platforms.macos-arm64"]
-checksum = "sha256:aba9ced2dee8d27fecca3dc7feb1a7f9a52caefa1eb46f3271ea66b6e0e6953f"
-url = "https://github.com/rhysd/actionlint/releases/download/v1.7.12/actionlint_1.7.12_darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/rhysd/actionlint/releases/assets/384924893"
-provenance = "github-attestations"
-
 [[tools.bat]]
 version = "0.26.1"
 backend = "aqua:sharkdp/bat"
@@ -1273,6 +1256,23 @@ url_api = "https://api.github.com/repos/sharkdp/bat/releases/assets/323549181"
 checksum = "sha256:e30beff26779c9bf60bb541e1d79046250cb74378f2757f8eb250afddb19e114"
 url = "https://github.com/sharkdp/bat/releases/download/v0.26.1/bat-v0.26.1-aarch64-apple-darwin.tar.gz"
 url_api = "https://api.github.com/repos/sharkdp/bat/releases/assets/323548442"
+
+[[tools.betterleaks]]
+version = "1.9.0"
+backend = "aqua:betterleaks/betterleaks"
+specifiers = ["1.9.0"]
+
+[tools.betterleaks."platforms.linux-x64"]
+checksum = "sha256:f8b185a39ffcece2a1ca82bf3a4e7435cd81963ffd16b7a9128daf75f35f6de7"
+url = "https://github.com/betterleaks/betterleaks/releases/download/v1.9.0/betterleaks_1.9.0_linux_x64.tar.gz"
+url_api = "https://api.github.com/repos/betterleaks/betterleaks/releases/assets/599108929"
+provenance = "cosign"
+
+[tools.betterleaks."platforms.macos-arm64"]
+checksum = "sha256:83dd7eaab13d44a1e8e347a17064cdef153a1478db473276d41b38d55613d3f2"
+url = "https://github.com/betterleaks/betterleaks/releases/download/v1.9.0/betterleaks_1.9.0_darwin_arm64.tar.gz"
+url_api = "https://api.github.com/repos/betterleaks/betterleaks/releases/assets/599108927"
+provenance = "cosign"
 
 [[tools.dprint]]
 version = "0.64.3"
@@ -1546,23 +1546,6 @@ checksum = "sha256:fb489929e25e66b8c026a1da8935f68f828134e115a1706f360ed73149b84
 url = "https://github.com/fish-shell/fish-shell/releases/download/4.9.3/fish-4.9.3.pkg"
 url_api = "https://api.github.com/repos/fish-shell/fish-shell/releases/assets/551147059"
 
-[[tools.gitleaks]]
-version = "8.30.1"
-backend = "aqua:gitleaks/gitleaks"
-specifiers = ["8.30.1"]
-
-[tools.gitleaks."platforms.linux-x64"]
-checksum = "sha256:551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb"
-checksum_source = "mise-versions"
-url = "https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz"
-url_api = "https://api.github.com/repos/gitleaks/gitleaks/releases/assets/378332058"
-
-[tools.gitleaks."platforms.macos-arm64"]
-checksum = "sha256:b40ab0ae55c505963e365f271a8d3846efbc170aa17f2607f13df610a9aeb6a5"
-checksum_source = "mise-versions"
-url = "https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_darwin_arm64.tar.gz"
-url_api = "https://api.github.com/repos/gitleaks/gitleaks/releases/assets/378332059"
-
 [[tools.imagemagick]]
 version = "7.1.2_31"
 backend = "conda:imagemagick"
@@ -1798,6 +1781,23 @@ conda_deps = [
     "_openmp_mutex-4.5-8_kmp_llvm",
 ]
 
+[[tools.jactionlint]]
+version = "2.4.0"
+backend = "packslip:github.com/jdx/jactionlint"
+specifiers = ["2.4.0"]
+
+[tools.jactionlint."platforms.linux-x64"]
+checksum = "sha256:26ddba81db28fffc51163175c070ee1a9d1150260de4b5232f01d9b749f32d8e"
+url = "https://github.com/jdx/jactionlint/releases/download/v2.4.0/jactionlint_2.4.0_linux_amd64.tar.gz"
+signer = "sigstore-oidc:https://github.com/jdx/jactionlint/.github/workflows/release.yaml"
+repository_ids = { repository = "1404951382" }
+
+[tools.jactionlint."platforms.macos-arm64"]
+checksum = "sha256:349a13dbffdd25376898a256d195806afda08ba97ccc6378cbf2dd11a77ef8e7"
+url = "https://github.com/jdx/jactionlint/releases/download/v2.4.0/jactionlint_2.4.0_darwin_arm64.tar.gz"
+signer = "sigstore-oidc:https://github.com/jdx/jactionlint/.github/workflows/release.yaml"
+repository_ids = { repository = "1404951382" }
+
 [[tools.lefthook]]
 version = "2.2.2"
 backend = "aqua:evilmartians/lefthook"
@@ -1944,20 +1944,3 @@ url_api = "https://api.github.com/repos/zellij-org/zellij/releases/assets/533538
 checksum = "sha256:c029ba4fe1927b79ad9f0cdd59155c4dff80777863c85857d4d09b88b56f9891"
 url = "https://github.com/zellij-org/zellij/releases/download/v0.45.1/zellij-aarch64-apple-darwin.tar.gz"
 url_api = "https://api.github.com/repos/zellij-org/zellij/releases/assets/533540212"
-
-[[tools.zizmor]]
-version = "1.31.1"
-backend = "aqua:zizmorcore/zizmor"
-specifiers = ["1.31.1"]
-
-[tools.zizmor."platforms.linux-x64"]
-checksum = "sha256:d185f726bdaf92df78273217dfdd24ebcd6b0ef48cf3ce776ff5762b6e138c99"
-url = "https://github.com/zizmorcore/zizmor/releases/download/v1.31.1/zizmor-x86_64-unknown-linux-gnu.tar.gz"
-url_api = "https://api.github.com/repos/zizmorcore/zizmor/releases/assets/645467284"
-provenance = "github-attestations"
-
-[tools.zizmor."platforms.macos-arm64"]
-checksum = "sha256:ad5aa633cd56215b11e6c51d51f90c7e6b22904a75047d1215abbd422f61d698"
-url = "https://github.com/zizmorcore/zizmor/releases/download/v1.31.1/zizmor-aarch64-apple-darwin.tar.gz"
-url_api = "https://api.github.com/repos/zizmorcore/zizmor/releases/assets/645467283"
-provenance = "github-attestations"

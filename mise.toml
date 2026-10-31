@@ -1,12 +1,12 @@
-# https://mise.jdx.dev/configuration.html
+# Docs: https://mise.jdx.dev/configuration.html
 [tools]
-actionlint = "1.7.12"
 bat = "0.26.1"
+betterleaks = "1.9.0"
 dprint = "0.64.3"
 ffmpeg = "9.0.2"
 fish = "4.9.3"
-gitleaks = "8.30.1"
 imagemagick = "7.1.2_31"
+jactionlint = "2.4.0"
 lefthook = "2.2.2"
 neovim = "0.12.6"
 node = "26.13.0"
@@ -17,7 +17,6 @@ ttyd = "1.7.7"
 uv = "0.13.6"
 vhs = "0.12.1"
 zellij = "0.45.1"
-zizmor = "1.31.1"
 
 [task_config]
 dir = "{{config_root}}"
@@ -33,18 +32,20 @@ run = "uv run --locked --script artworks/generate.py"
 
 [tasks.check]
 alias = "c"
-description = "Lint Python, shell scripts and workflows, validate hooks, check formatting, and scan for secrets and vulnerable dependencies"
-run = [
-  "actionlint",
-  "zizmor --offline --pedantic .github/",
-  "ruff check .",
-  # --norc keeps results independent of a personal shellcheckrc.
-  "git ls-files -z '*.sh' | xargs -0 shellcheck --norc",
-  "lefthook validate",
-  "mise run check:format",
-  "mise run check:leaks",
-  "mise run check:security",
-]
+description = "Run all static checks in parallel"
+depends = ["check:local", "check:network"]
+
+[tasks."check:local"]
+description = "Run the static checks that need no network (pre-commit)"
+depends = ["check:actions", "check:format", "check:leaks", "check:lint"]
+
+[tasks."check:network"]
+description = "Run the checks that download vulnerability data (pre-push)"
+depends = ["check:vuln"]
+
+[tasks."check:actions"]
+description = "Lint and audit GitHub Actions workflows and Dependabot (jactionlint)"
+run = "jactionlint"
 
 [tasks."check:format"]
 description = "Check documentation, configuration and Python formatting without writing"
@@ -53,11 +54,24 @@ run = ["dprint check", "ruff format --check ."]
 [tasks."check:leaks"]
 description = "Scan the last 100 commits and the working tree for leaked secrets"
 run = [
-  'gitleaks git --redact=100 --log-opts="--max-count=100" --no-banner --verbose',
-  "gitleaks dir . --redact=100 --no-banner --verbose",
+  'betterleaks git --redact=100 --log-opts="--max-count=100" --no-banner --verbose',
+  "betterleaks dir . --redact=100 --no-banner --verbose",
 ]
 
-[tasks."check:security"]
+[tasks."check:leaks:full"]
+description = "Scan the complete Git history for leaked secrets (needs a full clone)"
+run = "betterleaks git --redact=100 --verbose --no-banner"
+
+[tasks."check:lint"]
+description = "Lint Python and shell scripts and validate Git hooks"
+run = [
+  "ruff check .",
+  # --norc keeps results independent of a personal shellcheckrc.
+  "git ls-files -z '*.sh' | xargs -0 shellcheck --norc",
+  "lefthook validate",
+]
+
+[tasks."check:vuln"]
 description = "Audit the root, artwork script and JupyterLab npm locks, including dev dependencies, with OSV and npm (requires network access)"
 run = [
   "uv audit --preview-features audit-command --locked",
@@ -68,15 +82,23 @@ run = [
 [tasks.format]
 alias = "f"
 description = "Format Python with Ruff and documentation and configuration with dprint"
-run = ["mise run format:dprint", "mise run format:ruff"]
+depends = ["format:dprint", "format:python"]
 
 [tasks."format:dprint"]
-description = "Format documentation and configuration in dprint's scope"
+description = "Format documentation and configuration in dprint's scope, or only the given files"
+# mise appends Lefthook's staged files; dprint still formats only paths that dprint.json includes.
 run = "dprint fmt --allow-no-files"
 
-[tasks."format:ruff"]
-description = "Format Python with Ruff"
-run = "ruff format"
+# Lefthook passes staged files; mise hands variadic arguments over as one shell-quoted
+# string, which `eval "set -- ..."` splits back safely. Without files, Ruff formats the project.
+[tasks."format:python"]
+description = "Sort imports and format Python, or only the given files"
+usage = 'arg "[files]..."'
+run = '''
+eval "set -- $usage_files"
+ruff check --select=I --fix --force-exclude "$@"
+ruff format --force-exclude "$@"
+'''
 
 [tasks.install]
 alias = "i"

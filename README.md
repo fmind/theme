@@ -440,7 +440,7 @@ Use only palette colors and keep text upright. Compute `0x` hex, decimal and Win
 
 Validation checks the palette and its contrast, the syntax of JSON, TOML, YAML, XML and plist theme files, theme `#` hex colors against the palette, release versions, a `Format:` link in every theme README, local Markdown links and anchors, and artwork integrity. Verify changed themes manually in their native apps.
 
-Run `mise install` and `mise run install` to install tools, validation dependencies and Git hooks. Use `mise run format` to format Python and repository documentation/configuration, then `mise run all` to validate. Lefthook formats staged files in scope and runs checks before commits, and runs tests before pushes. See [maintenance](AGENTS.md#maintenance) for formatting scope and tasks.
+Run `mise install` and `mise run install` to install tools, validation dependencies and Git hooks. Use `mise run format` to format Python and repository documentation/configuration, then `mise run all` to validate. Lefthook formats staged files in scope and runs offline checks before commits, and runs the vulnerability audit and tests before pushes. See [maintenance](AGENTS.md#maintenance) for formatting scope and tasks.
 
 ## Releases
 

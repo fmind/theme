@@ -24,9 +24,9 @@ mise run all
 
 `mise tasks` lists every task and its purpose. `mise run all` is the read-only gate that GitHub Actions runs on pushes to `main`, pull requests and weekly.
 
-- **Hooks delegate to mise tasks**: `mise run install` activates Lefthook. Pre-commit formats staged files in scope and runs `mise run check`; pre-push runs `mise run test`.
+- **Hooks delegate to mise tasks**: `mise run install` activates Lefthook. Pre-commit formats staged files in scope and runs the offline `mise run check:local`; pre-push runs `mise run check:network` and `mise run test`.
 - **Formatting scope is explicit**: dprint formats only the paths in `dprint.json`, and Ruff formats only Python. Native files under `themes/`, screenshot fixtures, generated artwork and lockfiles stay unformatted. Preserve one-line Markdown paragraphs.
-- **Network checks are separate evidence**: `check:security` needs network access and fails on reported vulnerabilities or registry errors. `mise run test` checks local links and anchors, not external URLs.
+- **Network checks are separate evidence**: `check:vuln` (in `check:network`) needs network access and fails on reported vulnerabilities or registry errors, so it runs on pre-push and in CI, not on commit. `mise run test` checks local links and anchors, not external URLs.
 - **Dependabot opens security fixes only**: it groups fixes for root uv, GitHub Actions and JupyterLab npm; version updates stay off. Update artwork script locks, mise pins (including the workflow's mise version) and dprint plugins manually.
 - **Capture screenshots on Linux**: mise locks ttyd for Linux only, and the Chromium fallback searches only the Linux Playwright cache. Elsewhere, put ttyd on `PATH` and set `VHS_CHROME_PATH` (untested).
 - **Search lockfiles with Git**: `.ignore` hides lockfiles and generated SVGs from ripgrep and agent search tools; use `git grep` for them.

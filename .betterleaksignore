@@ -1,0 +1,4 @@
+# Docs: https://github.com/gitleaks/gitleaks#gitleaksignore (betterleaks reads the same fingerprint format)
+# False positive: generic-password matches the QML enum `TextInput.Password` (echo mode), not a credential.
+8c6d24bdb4ccd3a845f95380a33156d2b431691a:themes/gtk/kde/plasma/look-and-feel/Fmind/contents/lockscreen/LockScreen.qml:generic-password:159
+themes/gtk/kde/plasma/look-and-feel/Fmind/contents/lockscreen/LockScreen.qml:generic-password:159

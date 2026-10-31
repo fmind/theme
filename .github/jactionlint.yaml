@@ -1,0 +1,10 @@
+# Docs: https://jactionlint.jdx.dev/config
+# The pedantic profile keeps the strictness of the former `zizmor --pedantic` audit.
+profile: pedantic
+rules:
+  # Dependabot runs security updates only, which ignore cooldowns; version updates are off.
+  dependabot-cooldown: off
+ignores:
+  - rule: dependabot-missing-actions-update
+    file: .github/dependabot.yml
+    reason: Dependabot opens security fixes only; action pins and the mise version are upgraded manually (AGENTS.md).
