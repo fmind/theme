@@ -62,9 +62,8 @@ typography:
   label-md:
     fontFamily: Google Sans
     fontSize: 12px
-    fontWeight: 700
+    fontWeight: 600
     lineHeight: 1.5
-    letterSpacing: 0.1em
   code-md:
     fontFamily: Google Sans Code
     fontSize: 14px
@@ -224,7 +223,7 @@ The palette is the 15 Google News colors plus five custom shades (white, dark gr
 
 Google Sans carries headings and body text; Google Sans Code carries code, commands, paths and protocol fields. Terminals use GoogleSansCode Nerd Font Mono. Use only regular (400), semibold (600) and bold (700), with real bold and italic faces; never synthesize slanting or weight.
 
-Headlines are bold dark charcoal or dark blue. Body text is regular charcoal with relaxed leading. Labels are small bold uppercase in dark gray with wide tracking. Bundle the static TTF faces with their OFL notices in standalone deliverables and verify they load before export: [Google Sans](https://github.com/googlefonts/googlesans) and [Google Sans Code](https://github.com/googlefonts/googlesans-code).
+Headlines are bold dark charcoal or dark blue. Body text is regular charcoal with relaxed leading. Labels are small semibold sentence case in dark gray with normal tracking; never set labels in all caps or letter-space them. Bundle the static TTF faces with their OFL notices in standalone deliverables and verify they load before export: [Google Sans](https://github.com/googlefonts/googlesans) and [Google Sans Code](https://github.com/googlefonts/googlesans-code).
 
 ## Layout
 

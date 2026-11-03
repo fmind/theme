@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Changed
+
+- `label-md` labels are semibold (600) sentence case with normal tracking, replacing bold all-caps with wide tracking, a common tell of generated designs.
+
 ## 5.0.0 — 2026-10-31
 
 ### Breaking
