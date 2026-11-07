@@ -10,6 +10,6 @@ A user stylesheet that restyles the built-in JupyterLab Light theme. It needs no
 
 The stylesheet covers the native CSS variable API, notebook cells, CodeMirror syntax, output, forms, dialogs, search, completions and UI states. It uses Google Sans for UI/text and Google Sans Code for code, with system fallbacks and no remote font requests. The terminal's inherited canvas follows the theme; xterm's built-in ANSI palette and application-supplied output colors remain outside its control.
 
-Classic Notebook 6 and NbClassic read the same `custom/custom.css`, and the [classic Notebook port](../jupyter-notebook/README.md) styles global elements that would also restyle JupyterLab. Keep the two in separate configuration directories with `JUPYTER_CONFIG_DIR`.
+Classic Notebook 6 and NbClassic also read `custom/custom.css`, but they do not use JupyterLab's CSS variables, so this stylesheet does not theme them.
 
 If you installed the `jupyterlab-fmind` extension from Fmind 6.x or earlier, remove it with `python -m pip uninstall jupyterlab-fmind`. The native variable vocabulary and dimensions retain Jupyter's BSD notice in `LICENSE`.

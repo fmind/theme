@@ -1,9 +1,0 @@
-name Fmind
-
-button_normal             #f1f3f4
-button_hover              #d2e3fc
-button_pressed            #ceead6
-
-window_background         #ffffff
-
-label                     #202124

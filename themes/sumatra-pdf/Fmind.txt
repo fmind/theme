@@ -1,9 +1,0 @@
-MainWindowBackground = #ffffff
-UseSysColors = false
-
-FixedPageUI [
-	TextColor = #202124
-	BackgroundColor = #ffffff
-	SelectionColor = #d2e3fc
-	GradientColors = #f1f3f4
-]

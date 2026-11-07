@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+### Breaking
+
+- Focus the catalog on widely used apps and developer, data and AI tools: 206 niche, duplicate or discontinued ports are removed, and their `themes/<app>/` raw download paths no longer exist. Removed: `adminer`, `adobe`, `adventofcode`, `aerc`, `albert`, `aliucord`, `alphai-tui`, `amfora`, `anytype`, `apt`, `archive-of-our-own`, `arduino-ide`, `auto-ao3-app`, `bashtop`, `bbedit`, `beeper`, `bemenu`, `bettercanvas`, `beyond-compare-4`, `blink-shell`, `blockbench`, `bobthefish`, `bottom`, `brackets`, `bspwm`, `btcpay-server`, `cadzinho`, `calibre`, `campfire`, `castero`, `cava`, `chatterino`, `clone-hero`, `codeblocks`, `codeforces`, `coderunner`, `colorls`, `copyq`, `cosmic-terminal`, `coteditor`, `cutter`, `dankmaterialshell`, `dev-cpp`, `discourse`, `ditto`, `dmenu`, `doom-emacs`, `dracula-css`, `drafts`, `duolingo`, `dwarf-fortress`, `editplus`, `evidence`, `facebook`, `flarum`, `fluxbox`, `focuswriter`, `fontforge`, `forgejo`, `freecad`, `freshrss`, `fuzzel`, `gajim`, `geany`, `gedit`, `gh-dash`, `ghostwriter`, `go-access`, `hacker-news`, `heroic-games-launcher`, `homer`, `i3lock-color`, `infinity-for-reddit`, `ish`, `jabref`, `javadoc`, `jupyter-notebook`, `kagi`, `kakoune`, `kdiff3`, `keybr`, `keypirinha`, `kicad`, `kristall`, `ldoc`, `leftwm`, `lichess`, `limechat`, `liteide`, `lnav`, `lxterminal`, `macdown`, `macdown-css`, `mailspring`, `makehuman`, `mako`, `mantine`, `markdown-css`, `marta`, `mattermost`, `metatrader5`, `mindnode`, `miniflux`, `misskey`, `mobaxterm`, `monkeytype`, `mousepad`, `musikcube`, `mutt`, `ncspot`, `neiki-editor`, `neiki-page-editor`, `newsboat`, `nilesoft-shell`, `notesnook`, `nova`, `novel-writer`, `nyxt`, `omglol`, `openbox`, `openscad`, `p10k-oh-my-posh`, `pantheon-terminal`, `papirus-folders`, `peacock-extension`, `peertube`, `plank`, `plsql-developer`, `plymouth`, `polymc`, `powershell-ise`, `presenterm`, `protonmail`, `psychopy`, `ptpython`, `pythonista`, `pywal`, `qterminal`, `quassel`, `quiver`, `qutebrowser`, `r`, `readwise-reader`, `redlib`, `renoise`, `replugged`, `revolution-irc`, `rime`, `ripcord`, `roam-research`, `sandpack`, `securecrt`, `sequel-ace`, `serenityos`, `sidenotes`, `sioyek`, `smartgit`, `sniffnet`, `speedcrunch`, `st`, `standard-notes`, `starship-powerline-preset`, `suckless-tabbed`, `sumatra-pdf`, `superset`, `swaylock`, `swaync`, `swayosd`, `swiftui`, `tableplus`, `tabletop-simulator`, `taskwarrior`, `telegram-macos`, `telegram-x`, `texshop`, `texstudio`, `textmate`, `texworks`, `thelounge`, `thonny`, `tiddlywiki`, `tint2`, `tlrc`, `tofi`, `total-commander`, `tower`, `tridactyl`, `tty`, `tumblr`, `tut`, `tym`, `ulauncher`, `unigram`, `unraid`, `uptime-kuma`, `vis`, `vortex-mod-manager`, `windterm`, `wing`, `wiremix`, `wob`, `wolfram-notebooks`, `wox`, `x64dbg`, `xournalpp`, `yunohost`. The README Textastic entry, which pointed to the TextMate port, is removed too.
+- Thonny is removed with its plugin package and build step; uninstall `thonny-fmind` from Tools → Manage plug-ins.
+
 ## 7.0.0 — 2026-11-07
 
 ### Breaking
@@ -31,7 +38,7 @@
 
 ### Breaking
 
-- Remove the README-only folders `themes/cmder/`, `themes/color-slurp/`, `themes/krita/`, `themes/labplot/`, `themes/prompt/`, `themes/spacemacs/`, `themes/textastic/` and `themes/wallpaper/`. Their install steps move to a section of the theme they use: [ConEmu](themes/conemu/#cmder), [GIMP](themes/gimp/#colorslurp), [KDE](themes/gtk/kde/#krita), [iTerm2](themes/iterm2/#prompt), [Emacs](themes/emacs/#spacemacs), [TextMate](themes/textmate/#textastic) and [wallpapers](wallpapers/README.md). The theme index still lists every app.
+- Remove the README-only folders `themes/cmder/`, `themes/color-slurp/`, `themes/krita/`, `themes/labplot/`, `themes/prompt/`, `themes/spacemacs/`, `themes/textastic/` and `themes/wallpaper/`. Their install steps move to a section of the theme they use: [ConEmu](themes/conemu/#cmder), [GIMP](themes/gimp/#colorslurp), [KDE](themes/gtk/kde/#krita), [iTerm2](themes/iterm2/#prompt), [Emacs](themes/emacs/#spacemacs), TextMate (removed in a later release) and [wallpapers](wallpapers/README.md). The theme index still lists every app.
 - Ghostty: the theme sets `faint-opacity`, so it requires Ghostty 1.2.0 or later.
 
 ### Added
