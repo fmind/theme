@@ -1,4 +1,10 @@
 # Docs: https://mise.jdx.dev/configuration.html
+# Verify the signatures that mise.lock records (cosign, GitHub attestations), as CI does by
+# default; this overrides a global opt-out so a full `mise lock` works on every machine.
+[settings]
+aqua.cosign = true
+github_attestations = true
+
 [tools]
 bat = "0.26.1"
 betterleaks = "1.10.0"

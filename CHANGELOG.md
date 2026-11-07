@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Maintenance
+
+- Enable cosign and GitHub attestation verification in `mise.toml` `[settings]`, matching CI's defaults, so a full `mise lock` works on machines that turn them off globally.
+
 ## 8.0.0 — 2026-11-07
 
 ### Breaking
