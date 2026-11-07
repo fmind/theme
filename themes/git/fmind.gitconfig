@@ -17,6 +17,9 @@
 	untracked = "#174ea6"
 	branch = "#174ea6"
 	nobranch = "#a50e0e"
+	# Short-format branch line (git status -sb); matches [color "branch"] and decorations.
+	localBranch = "#174ea6"
+	remoteBranch = "#0d652d"
 [color "branch"]
 	current = "#174ea6"
 	local = "#202124"

@@ -285,6 +285,71 @@
 				<string>bold</string>
 			</dict>
 		</dict>
+		<dict>
+			<key>name</key>
+			<string>diff header</string>
+			<key>scope</key>
+			<string>meta.diff.header, meta.diff.index, punctuation.definition.from-file, punctuation.definition.to-file</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#595d62</string>
+				<key>fontStyle</key>
+				<string></string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>diff range</string>
+			<key>scope</key>
+			<string>meta.diff.range, punctuation.definition.range</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#174ea6</string>
+				<key>fontStyle</key>
+				<string></string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>changed</string>
+			<key>scope</key>
+			<string>markup.changed</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#934900</string>
+				<key>fontStyle</key>
+				<string></string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>inserted marker</string>
+			<key>scope</key>
+			<string>punctuation.definition.inserted</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#0d652d</string>
+				<key>fontStyle</key>
+				<string></string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>deleted marker</string>
+			<key>scope</key>
+			<string>punctuation.definition.deleted</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#a50e0e</string>
+				<key>fontStyle</key>
+				<string>bold</string>
+			</dict>
+		</dict>
 	</array>
 </dict>
 </plist>

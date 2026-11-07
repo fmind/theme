@@ -2,7 +2,7 @@
 
 Files: [fmind.json](fmind.json).
 
-Format: [OpenCode themes](https://opencode.ai/docs/themes/) · [schema](https://github.com/anomalyco/opencode/blob/dev/packages/console/app/public/theme.json)
+Format: [OpenCode themes](https://opencode.ai/docs/themes/) · [schema](https://github.com/anomalyco/opencode/blob/dev/packages/web/public/theme.json)
 
 ## Installation
 

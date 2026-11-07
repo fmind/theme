@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/anomalyco/opencode/dev/packages/console/app/public/theme.json",
+  "$schema": "https://raw.githubusercontent.com/anomalyco/opencode/dev/packages/web/public/theme.json",
   "defs": {
     "variable": "#202124",
     "error": "#a50e0e",
@@ -39,7 +39,7 @@
     "textMuted": "comment",
     "background": "ground",
     "backgroundPanel": "panel",
-    "backgroundElement": "panel",
+    "backgroundElement": "element",
     "border": "comment",
     "borderActive": "escape",
     "borderSubtle": "element",

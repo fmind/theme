@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased
+
+### Fixed
+
+- bat: color diff file headers, hunk ranges and the `+`/`-` markers, which rendered as plain text.
+- Git: `git status -sb` shows the local branch in blue and the remote in green, like the other branch views.
+- OpenCode: hovered dialog items use pale blue, distinct from the panel, and `$schema` points to the current schema; the previous URL returned 404.
+
 ## 6.0.0 — 2026-11-07
 
 ### Breaking
