@@ -20,8 +20,6 @@ Synthetic terminal captures made with VHS. Download [wallpapers](wallpapers/READ
 
 [DESIGN.md](DESIGN.md) is the single source for Fmind's visual identity: color roles, typography, layout, shapes, diagram components and do's and don'ts. It follows the [DESIGN.md format](https://github.com/google-labs-code/design.md) (alpha): YAML design tokens followed by prose rationale. Edit it here; consumers read it or export it instead of copying values.
 
-It is the default for Médéric Hurier's own work. Customer or employer work uses that organization's design system, and an existing project keeps its established identity.
-
 | Consumer                                                                    | How it uses DESIGN.md                                                                                                                                       |
 | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Coding agents (Antigravity, Claude Code, Copilot, OpenCode)                 | [fmind/dot](https://github.com/fmind/dot) deploys a checksummed copy to `~/.agents/DESIGN.md`, and its shared `AGENTS.md` persona points every agent to it. |
@@ -33,7 +31,7 @@ It is the default for Médéric Hurier's own work. Customer or employer work use
 | Diagrams, decks, illustrations and demos                                    | The `fmind-visuals` and `diagrams-as-code` skills in fmind/dot adapt the tokens to D2, Mermaid, SVG, Typst and VHS.                                         |
 | Terminals, editors and apps                                                 | Use the native files under `themes/`; [palette.yaml](checks/palette.yaml) maps the same colors to syntax and ANSI roles.                                    |
 
-Validate changes with `mise run check:design`, which lints structure, token references and WCAG contrast with the design.md version pinned in `mise.toml` and fails on any warning; pre-commit and CI run it. Compare revisions with `npx @google/design.md@0.4.0 diff old.md DESIGN.md`. `mise run test` checks offline that the tokens match the palette.
+Validate changes with `mise run check:design`, which fails on any lint warning, and compare revisions with `npx @google/design.md@0.4.0 diff old.md DESIGN.md`.
 
 ## Palette
 
@@ -230,12 +228,6 @@ Edit native files under `themes/` directly. New ports target widely used apps or
 
 Use only palette colors and keep text upright. Compute `0x` hex, decimal and Windows BGR color values carefully, because checks read only `#` hex colors. Name palette swatches with the color names above, and state the full installation destination, such as `~/.config/<app>/`, in each README.
 
-Validation checks the palette and its contrast, the syntax of JSON, TOML, YAML, XML and plist theme files, theme `#` hex colors against the palette, release versions, a `Format:` link in every theme README, local Markdown links and anchors, and artwork integrity. Verify changed themes manually in their native apps.
+Run `mise install` and `mise run install` to install tools and Git hooks, `mise run format` to format, then `mise run all` to validate. Checks cover repository invariants such as palette colors, file syntax and links, not native loading, so verify changed themes manually in their apps. See [maintenance](AGENTS.md#maintenance) for hooks, formatting scope and tasks.
 
-Run `mise install` and `mise run install` to install tools, validation dependencies and Git hooks. Use `mise run format` to format Python and repository documentation/configuration, then `mise run all` to validate. Lefthook formats staged files in scope and runs offline checks before commits, and runs the vulnerability audit and tests before pushes. See [maintenance](AGENTS.md#maintenance) for formatting scope and tasks.
-
-## Releases
-
-Releases use explicitly chosen versions and immutable annotated tags. Follow the [release procedure](.agents/skills/theme-release/SKILL.md); verify CI for the release commit before tagging. Source archives are the release payload.
-
-Maintained alongside [fmind/dot](https://github.com/fmind/dot). [MIT license](LICENSE); bundled Google Sans retains its [OFL license](artworks/OFL.txt).
+Releases use immutable annotated tags and source archives; maintainers follow the [release procedure](.agents/skills/theme-release/SKILL.md). Maintained alongside [fmind/dot](https://github.com/fmind/dot). [MIT license](LICENSE); bundled Google Sans retains its [OFL license](artworks/OFL.txt).
