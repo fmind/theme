@@ -1,6 +1,6 @@
 {
   "name": "peertube-theme-fmind",
-  "version": "6.0.2",
+  "version": "7.0.0",
   "description": "Fmind light theme for PeerTube",
   "engine": {
     "peertube": ">=7.3.0"

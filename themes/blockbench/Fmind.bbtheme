@@ -1,7 +1,7 @@
 /*
 name: Fmind
 author: Médéric Hurier
-version: 6.0.2
+version: 7.0.0
 */
 body {
 	--color-ui: #ffffff;
