@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 8.0.1 — 2026-11-07
 
 ### Maintenance
 
