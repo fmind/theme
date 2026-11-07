@@ -6,6 +6,8 @@ Format: [Zsh prompt expansion](https://zsh.sourceforge.io/Doc/Release/Prompt-Exp
 
 ## Installation
 
+The prompt uses 24-bit `%F{#RRGGBB}` colors, so the terminal needs truecolor support.
+
 ### Oh My Zsh
 1. Copy [fmind.zsh-theme](fmind.zsh-theme) to `~/.oh-my-zsh/custom/themes/fmind.zsh-theme`:
    ```sh

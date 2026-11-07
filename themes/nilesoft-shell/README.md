@@ -6,4 +6,4 @@ Format: [Nilesoft Shell themes](https://nilesoft.org/docs/configuration/themes) 
 
 ## Installation
 
-Import [fmind.nss](fmind.nss) in `shell.nss`.
+Copy [fmind.nss](fmind.nss) to the `imports` folder, then in `shell.nss` replace the bundled `import 'imports/theme.nss'` line with `import 'imports/fmind.nss'`, so only one `theme {}` block applies.

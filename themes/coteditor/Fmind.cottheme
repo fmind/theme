@@ -5,6 +5,9 @@
   "background": {
     "color": "#ffffff"
   },
+  "invisibles": {
+    "color": "#9aa0a6"
+  },
   "selection": {
     "color": "#d2e3fc"
   },

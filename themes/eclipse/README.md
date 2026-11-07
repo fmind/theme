@@ -1,6 +1,6 @@
 # Fmind for Eclipse
 
-Files: [preferences](fmind.epf), [theme XML](fmind.xml).
+Files: [preferences](fmind.epf), [theme XML](fmind.xml), [MIT license](LICENSE).
 
 Format: [Eclipse preference import](https://help.eclipse.org/latest/topic/org.eclipse.platform.doc.user/tasks/timpandexp.htm) · [JDT PreferenceConstants](https://github.com/eclipse-jdt/eclipse.jdt.ui/blob/master/org.eclipse.jdt.ui/ui/org/eclipse/jdt/ui/PreferenceConstants.java) · [Eclipse Color Theme keys](https://github.com/eclipse-color-theme/eclipse-color-theme/blob/master/com.github.eclipsecolortheme/src/com/github/eclipsecolortheme/ColorThemeKeys.java)
 

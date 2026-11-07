@@ -1,6 +1,6 @@
 # Fmind for VS Code
 
-Files: [theme](fmind-color-theme.json), [manifest](package.json).
+Files: [theme](fmind-color-theme.json), [manifest](package.json), [MIT license](LICENSE).
 
 Format: [Color Theme guide](https://code.visualstudio.com/api/extension-guides/color-theme) · [Theme Color reference](https://code.visualstudio.com/api/references/theme-color)
 

@@ -3,7 +3,7 @@
 /* `body .npe-editor` outranks the light defaults on `.npe-editor`, even when the bundled CSS loads later; built-in theme classes still win. */
 body .npe-editor {
   --npe-chrome-bg: #f1f3f4;
-  --npe-chrome-border: #9aa0a6;
+  --npe-chrome-border: #595d62;
   --npe-chrome-text: #202124;
   --npe-chrome-text-muted: #595d62;
   --npe-toolbar-bg: #ffffff;

@@ -1,6 +1,6 @@
 # Pi Coding Agent
 
-Fmind theme for [Pi Coding Agent](https://github.com/badlogic/pi-mono).
+Fmind theme for [Pi Coding Agent](https://github.com/earendil-works/pi).
 
 Format: [Pi themes](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/themes.md) · [theme schema](https://pi.dev/schemas/theme.schema.json)
 

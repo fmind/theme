@@ -6,8 +6,8 @@ Format: [NeoMutt colors](https://neomutt.org/guide/configuration.html#color) · 
 
 ## Installation
 
-1. Copy `fmind.muttrc` to `~/.mutt/fmind.muttrc` (or `~/.config/neomutt/fmind.muttrc`).
-2. Source it in your `muttrc`:
+1. Copy `fmind.muttrc` to `~/.config/neomutt/fmind.muttrc` (or `~/.mutt/fmind.muttrc`).
+2. Source it from your `neomuttrc` with the path you chose:
    ```muttrc
-   source ~/.mutt/fmind.muttrc
+   source ~/.config/neomutt/fmind.muttrc
    ```

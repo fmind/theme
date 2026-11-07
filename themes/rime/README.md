@@ -6,4 +6,4 @@ Format: [Squirrel squirrel.yaml](https://github.com/rime/squirrel/blob/master/da
 
 ## Installation
 
-Merge [fmind.yaml](fmind.yaml) into `squirrel.custom.yaml` or `weasel.custom.yaml`.
+Merge [fmind.yaml](fmind.yaml) into `~/Library/Rime/squirrel.custom.yaml` for Squirrel on macOS, or `%APPDATA%\Rime\weasel.custom.yaml` for Weasel on Windows. Then redeploy Rime from its menu.

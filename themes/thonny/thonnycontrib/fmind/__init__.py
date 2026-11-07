@@ -29,7 +29,7 @@ def ui() -> UiThemeSettings:
     settings["Url.TLabel"]["configure"]["foreground"] = "#174ea6"
     for name in ("Menubar", "Menu"):
         settings[name]["configure"].update(activebackground="#d2e3fc", activeforeground="#174ea6")
-    settings["."]["configure"].update(font="TkDefaultFont", bordercolor="#9aa0a6")
+    settings["."]["configure"].update(font="TkDefaultFont", bordercolor="#595d62")
     return settings
 
 

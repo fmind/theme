@@ -6,4 +6,4 @@ Format: [sioyek config.cpp](https://github.com/ahrm/sioyek/blob/development/pdf_
 
 ## Installation
 
-Append [fmind.config](fmind.config) to `prefs_user.config`.
+Append [fmind.config](fmind.config) to `~/.config/sioyek/prefs_user.config` on Linux or macOS, or to `prefs_user.config` next to `sioyek.exe` for the portable Windows build. Restart sioyek.

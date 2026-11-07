@@ -1,6 +1,6 @@
 # Fmind for WindTerm
 
-Files: [UI](gui.theme), [icons](icon.theme), [syntax and terminal](scheme.theme).
+Files: [UI](gui.theme), [icons](icon.theme), [syntax and terminal](scheme.theme), [MIT license](LICENSE).
 
 Format: [WindTerm 2.7.0 bundled global/themes/](https://github.com/kingToolbox/WindTerm/releases/tag/2.7.0) · [Dracula for WindTerm](https://github.com/dracula/windterm)
 

@@ -25,6 +25,49 @@
           "focused": {
             "background-color": "#d2e3fc",
             "color": "#202124"
+          },
+          "selected-text": {
+            "color": "#202124",
+            "background-color": "#d2e3fc"
+          },
+          "cursor-line": {
+            "color": "#202124",
+            "background-color": "#d2e3fc",
+            "bold": true
+          },
+          "disabled-cursor-line": {
+            "color": "#202124",
+            "background-color": "#f1f3f4"
+          },
+          "hidden": {
+            "color": "#595d62",
+            "bold": true
+          },
+          "popup": {
+            "color": "#202124",
+            "background-color": "#f1f3f4"
+          },
+          "popup-border": {
+            "color": "#595d62"
+          },
+          "scrollbar": {
+            "color": "#595d62",
+            "background-color": "#f1f3f4"
+          },
+          "h1": {
+            "color": "#174ea6",
+            "bold": true
+          },
+          "h2": {
+            "color": "#174ea6",
+            "bold": true
+          },
+          "h3": {
+            "color": "#174ea6"
+          },
+          "hyperlink": {
+            "color": "#174ea6",
+            "underline": true
           }
         },
         "syntax-styles": {
@@ -37,6 +80,46 @@
           },
           "comment": {
             "color": "#595d62"
+          }
+        },
+        "status-styles": {
+          "text": {
+            "color": "#202124",
+            "background-color": "#f1f3f4"
+          },
+          "title": {
+            "color": "#ffffff",
+            "background-color": "#174ea6",
+            "bold": true
+          },
+          "title-hotkey": {
+            "color": "#ffffff",
+            "background-color": "#174ea6",
+            "underline": true
+          },
+          "subtitle": {
+            "color": "#202124",
+            "background-color": "#d2e3fc"
+          },
+          "hotkey": {
+            "color": "#174ea6",
+            "underline": true
+          },
+          "info": {
+            "color": "#00636d",
+            "background-color": "#f1f3f4"
+          },
+          "warn": {
+            "color": "#934900",
+            "background-color": "#f1f3f4"
+          },
+          "alert": {
+            "color": "#a50e0e",
+            "background-color": "#f1f3f4"
+          },
+          "inactive": {
+            "color": "#595d62",
+            "background-color": "#f1f3f4"
           }
         }
       }

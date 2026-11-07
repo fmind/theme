@@ -6,4 +6,4 @@ Format: [Chatterino theme schema](https://github.com/Chatterino/chatterino2/blob
 
 ## Installation
 
-Copy [fmind.json](fmind.json) to `~/.local/share/chatterino/Themes/`.
+Copy [fmind.json](fmind.json) to the `Themes` folder of Chatterino's settings directory: `%APPDATA%\Chatterino2\Themes\` on Windows, `~/Library/Application Support/chatterino/Themes/` on macOS or `~/.local/share/chatterino/Themes/` on Linux. Restart Chatterino, then select **Custom: fmind** in the theme setting.

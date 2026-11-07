@@ -6,13 +6,14 @@ Format: [Material custom colors](https://squidfunk.github.io/mkdocs-material/set
 
 ## Install
 
-Copy `fmind.css` into your `docs/` directory, then select custom primary colors and add the file to `extra_css` in `mkdocs.yml`:
+Copy `fmind.css` into your `docs/` directory, then select custom primary and accent colors and add the file to `extra_css` in `mkdocs.yml`:
 
 ```yaml
 theme:
   name: material
   palette:
     primary: custom
+    accent: custom
 extra_css:
   - fmind.css
 ```

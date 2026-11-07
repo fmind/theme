@@ -60,7 +60,7 @@ QAbstractItemView::indicator:checked {
 }
 
 QAbstractSpinBox {
-	border: 1px solid #9aa0a6;
+	border: 1px solid #595d62;
 	padding: 2px;
 }
 QAbstractSpinBox:disabled {
@@ -122,7 +122,7 @@ QCheckBox::indicator:disabled {
 }
 
 QComboBox {
-	border: 1px solid #9aa0a6;
+	border: 1px solid #595d62;
 	height: 21px;
 	padding: 0px 2px 0px 2px;
 }
@@ -150,7 +150,7 @@ QDialog QFrame[frameShape = "4"] {
 
 QLineEdit {
 	padding: 2px;
-	border: 1px solid #9aa0a6;
+	border: 1px solid #595d62;
 }
 QLineEdit:disabled {
 	border: none;
@@ -250,7 +250,7 @@ QMenu::right-arrow {
 }
 
 QPlainTextEdit {
-	border: 1px solid #9aa0a6;
+	border: 1px solid #595d62;
 	padding: 2px;
 }
 QPlainTextEdit:disabled {
@@ -294,7 +294,7 @@ QScrollBar:vertical {
 	width: 8px;
 }
 QScrollBar::handle {
-	background-color: #9aa0a6;
+	background-color: #595d62;
 }
 QScrollBar::handle:horizontal {
 	min-width: 20px;
@@ -303,7 +303,7 @@ QScrollBar::handle:vertical {
 	min-height: 20px;
 }
 QScrollBar::handle:hover {
-	background-color: #9aa0a6;
+	background-color: #202124;
 }
 QScrollBar::handle:disabled {
 	background-color: transparent;
@@ -570,7 +570,7 @@ QuickBar #ActionButton {
 }
 
 SearchPane > QLineEdit[state = "Error"] {
-	border: 1px solid deeppink;
+	border: 1px solid #a50e0e;
 }
 
 SideSeparator {
@@ -627,7 +627,7 @@ TabGroup #CloseButton[state = "Saved"] {
 
 #ToolBarPopup QLabel {
 	border: none;
-	border-bottom: 1px solid darkgray;
+	border-bottom: 1px solid #9aa0a6;
 	color: #202124;
 	padding-bottom: 4px;
 	margin-bottom: 6px;
@@ -710,7 +710,7 @@ ApplicationPalette {
 QWidget:disabled { color: #595d62; }
 QAbstractItemView { selection-color: #202124; selection-background-color: #d2e3fc; }
 QAbstractItemView::item:selected { color: #174ea6; background-color: #d2e3fc; }
-QPushButton { color: #202124; background-color: #ffffff; border: 1px solid #9aa0a6; padding: 4px 8px; }
+QPushButton { color: #202124; background-color: #ffffff; border: 1px solid #595d62; padding: 4px 8px; }
 QPushButton:hover, QToolButton:hover { color: #174ea6; background-color: #f1f3f4; }
 QPushButton:pressed, QToolButton:checked { color: #174ea6; background-color: #d2e3fc; }
 QPushButton:disabled { color: #595d62; background-color: #ffffff; }

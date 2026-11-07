@@ -20,8 +20,8 @@
         {
           "type": "path",
           "style": "plain",
-          "foreground": "#174ea6",
-          "background": "#ffffff"
+          "foreground": "p:blue",
+          "background": "p:background"
         }
       ]
     }

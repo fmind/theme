@@ -49,9 +49,9 @@
     <fontcolor name="FieldBreakpoint_stroke" />
     <fontcolor bgColor="fff1f3f4" name="debugger-multi_DBPCBP" />
     <fontcolor bgColor="fffad2cf" name="Breakpoint" />
-    <fontcolor bgColor="ffd2e3fc" name="org-netbeans-modules-tomcat5-error" />
+    <fontcolor bgColor="fffad2cf" name="org-netbeans-modules-tomcat5-error" />
     <fontcolor name="org-netbeans-modules-editor-annotations-implements-is-overridden-combined" />
-    <fontcolor bgColor="ffd2e3fc" name="org-netbeans-modules-xml-error" />
+    <fontcolor bgColor="fffad2cf" name="org-netbeans-modules-xml-error" />
     <fontcolor bgColor="ffd2e3fc" name="CallSite" />
     <fontcolor bgColor="fff1f3f4" name="debugger-PC_BP_broken" />
     <fontcolor bgColor="fff1f3f4" name="debugger-PC_DBP_stroke" />

@@ -6,4 +6,4 @@ Format: [Tridactyl default.css](https://github.com/tridactyl/tridactyl/blob/mast
 
 ## Installation
 
-Copy [fmind.css](fmind.css) to `~/.config/tridactyl/themes/fmind.css` and run `:colors fmind` in Tridactyl.
+Copy [fmind.css](fmind.css) to `~/.config/tridactyl/themes/fmind.css` and run `:colors fmind` in Tridactyl. Loading themes from that folder needs Tridactyl's [native messenger](https://github.com/tridactyl/tridactyl#extra-features-through-native-messaging) (`:installnative`).

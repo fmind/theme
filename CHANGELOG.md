@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased
+
+### Fixed
+
+- Openbox: title labels, buttons, handles and grips no longer fall back to solid black, and inactive button glyphs and disabled menu items are visible.
+- Unreal Engine: title bars, foldouts and the deepest panels use light surfaces instead of near-black under dark text; selection, hover, status and accent colors are now defined.
+- WordPress: admin bar labels and icons, and admin menu icons, are readable on the light bar and menu.
+- Partial themes now cover the rest of the app: the qutebrowser command, mode, prompt, download, hint and message bars; lnav's status bar, cursor line and popups; the remaining vis base styles; MySQL Workbench brace matching, placeholders and `/*! */` hidden commands; TiddlyWiki sidebar, tabs, tags and editor; and Astro Starlight body text, inline code and hairlines.
+- Contrast: input and control borders use dark gray `#595D62` in neiki-editor, neiki-page-editor, Thonny, Vimium, WindTerm and wofi; Adminer table grid lines, bashtop dividers and gradients, and the first cava bar color are visible on white; MkDocs link hover uses dark blue.
+- Semantics: Prism tags are blue and attribute values green; NetBeans XML and Tomcat errors use pale red; Qt Creator output pane toggles and flashes follow the palette; MySQL Workbench variables use the text color; WindTerm session color tags are distinct again; CotEditor invisibles and Newsboat backgrounds no longer inherit off-palette defaults.
+- Installation: complete paths or steps for Chatterino, delta, GRUB (PF2 font), lnav, Nilesoft Shell, NeoMutt, Rime, sioyek, Starship, Tridactyl and Visual Studio, and note truecolor or Nerd Font needs for Zsh and the Starship powerline preset. The Anytype loader citation points to its current source.
+
 ## 6.0.1 — 2026-11-07
 
 ### Fixed

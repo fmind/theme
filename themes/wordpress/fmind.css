@@ -42,3 +42,28 @@
   background: #ffffff;
   color: #174ea6;
 }
+
+/* Core colors these with higher-specificity selectors (admin-bar.css, admin-menu.css). */
+#wpadminbar .ab-empty-item,
+#wpadminbar > #wp-toolbar span.ab-label,
+#wpadminbar > #wp-toolbar span.noticon {
+  color: #202124;
+}
+
+#wpadminbar .ab-icon,
+#wpadminbar .ab-icon::before,
+#wpadminbar .ab-item::before,
+#wpadminbar.mobile .quicklinks .ab-icon,
+#wpadminbar.mobile .quicklinks .ab-item::before,
+#adminmenu div.wp-menu-image,
+#adminmenu div.wp-menu-image::before {
+  color: #595d62;
+}
+
+#wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item .ab-label,
+#wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item .ab-icon::before,
+#wpadminbar:not(.mobile) .ab-top-menu > li:hover > .ab-item::before,
+#adminmenu li.menu-top:hover div.wp-menu-image::before,
+#adminmenu li.opensub > a.menu-top div.wp-menu-image::before {
+  color: #174ea6;
+}

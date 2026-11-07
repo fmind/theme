@@ -2,7 +2,7 @@
 
 Experimental custom CSS for Anytype’s light appearance.
 
-Format: [Anytype color variables](https://github.com/anyproto/anytype-ts/blob/develop/src/scss/_vars.scss) · [Anytype custom.css loader](https://github.com/anyproto/anytype-ts/blob/develop/electron/js/util.js)
+Format: [Anytype color variables](https://github.com/anyproto/anytype-ts/blob/develop/src/scss/_vars.scss) · [Anytype custom.css loader](https://github.com/anyproto/anytype-ts/blob/develop/electron/ts/util.ts)
 
 1. Choose the built-in light appearance in Anytype.
 1. Open the working directory shown in Anytype’s application menu. Merge [custom.css](custom.css) into its `custom.css` file.

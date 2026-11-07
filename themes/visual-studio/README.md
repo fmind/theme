@@ -6,9 +6,10 @@ Format: [Visual Studio color items](https://github.com/microsoft/theme-converter
 
 ## Install
 
+1. Set **Tools** → **Options** → **Environment** → **Color Theme** to **Light**. The file sets editor colors only, and every item it omits keeps the current theme's color.
 1. In Visual Studio, go to **Tools** → **Import and Export Settings…**.
-2. Select **Import selected environment settings** and click **Next**.
-3. Choose whether to save your existing settings, then click **Next**.
-4. Click **Browse…** and select [fmind.vssettings](fmind.vssettings).
-5. Ensure **All Settings** → **Options** → **Environment** → **Fonts and Colors** is selected.
-6. Click **Finish** to apply the theme.
+1. Select **Import selected environment settings** and click **Next**.
+1. Choose whether to save your existing settings, then click **Next**.
+1. Click **Browse…** and select [fmind.vssettings](fmind.vssettings).
+1. Ensure **All Settings** → **Options** → **Environment** → **Fonts and Colors** is selected.
+1. Click **Finish** to apply the theme.

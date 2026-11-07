@@ -6,4 +6,4 @@ Format: [Starship palettes](https://starship.rs/config/#palettes) · [Starship c
 
 ## Installation
 
-Merge the palette and `palette = "fmind"` into `starship.toml`. Module styles select palette names.
+Merge the palette and `palette = "fmind"` into `~/.config/starship.toml` (or the file named by `STARSHIP_CONFIG`). Module styles select palette names.

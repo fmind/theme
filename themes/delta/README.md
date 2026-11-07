@@ -6,4 +6,9 @@ Format: [delta configuration](https://dandavison.github.io/delta/configuration.h
 
 ## Installation
 
-Include from Git configuration; install the bat theme first.
+Install the [bat theme](../bat/README.md) first, since delta reads `syntax-theme = "fmind"` from bat. Then include [fmind.gitconfig](fmind.gitconfig) from your global `~/.gitconfig`, or paste its `[delta]` section there:
+
+```ini
+[include]
+	path = /path/to/theme/themes/delta/fmind.gitconfig
+```

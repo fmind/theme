@@ -7,6 +7,8 @@
   --md-primary-fg-color--light: #174ea6;
   --md-primary-fg-color--dark: #174ea6;
   --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #174ea6;
+  --md-accent-fg-color--transparent: #174ea61a;
   --md-default-fg-color: #202124;
   --md-default-bg-color: #ffffff;
   --md-code-fg-color: #202124;

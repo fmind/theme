@@ -46,18 +46,18 @@
 #stop           		.brush { fill: #a50e0e; }
 #transferPane   		.brush { fill: #174ea6; }
 
-#colorDarkCyan			.brush { fill-opacity: 0.88; fill: #174ea6; }
-#colorDeepPink			.brush { fill-opacity: 0.88; fill: #174ea6; }
-#colorForestGreen		.brush { fill-opacity: 0.88; fill: #174ea6; }
-#colorGoldenrod			.brush { fill-opacity: 0.88; fill: #174ea6; }
-#colorIndianRed			.brush { fill-opacity: 0.88; fill: #174ea6; }
-#colorMediumOrchid		.brush { fill-opacity: 0.88; fill: #174ea6; }
-#colorMediumSlateBlue	.brush { fill-opacity: 0.88; fill: #174ea6; }
-#colorOlive				.brush { fill-opacity: 0.88; fill: #174ea6; }
-#colorRed				.brush { fill-opacity: 0.88; fill: #174ea6; }
+#colorDarkCyan			.brush { fill-opacity: 0.88; fill: #00636d; }
+#colorDeepPink			.brush { fill-opacity: 0.88; fill: #ea4335; }
+#colorForestGreen		.brush { fill-opacity: 0.88; fill: #0d652d; }
+#colorGoldenrod			.brush { fill-opacity: 0.88; fill: #fbbc04; }
+#colorIndianRed			.brush { fill-opacity: 0.88; fill: #a50e0e; }
+#colorMediumOrchid		.brush { fill-opacity: 0.88; fill: #681da8; }
+#colorMediumSlateBlue	.brush { fill-opacity: 0.88; fill: #4285f4; }
+#colorOlive				.brush { fill-opacity: 0.88; fill: #934900; }
+#colorRed				.brush { fill-opacity: 0.88; fill: #ea4335; }
 #colorRoyalBlue			.brush { fill-opacity: 0.88; fill: #174ea6; }
-#colorSteelBlue			.brush { fill-opacity: 0.88; fill: #174ea6; }
-#colorTeal				.brush { fill-opacity: 0.88; fill: #174ea6; }
+#colorSteelBlue			.brush { fill-opacity: 0.88; fill: #595d62; }
+#colorTeal				.brush { fill-opacity: 0.88; fill: #00636d; }
 
 /*** symbols ***/
 
@@ -119,7 +119,6 @@
 #minus .frame-outer,    #Minus .frame-inner    { stroke: #174ea6; fill: #174ea6; }
 #parenthesis .frame-outer, #Parenthesis .frame-inner { stroke: #174ea6; fill: #174ea6; }
 #percent .frame-outer,  #Percent .frame-inner  { stroke: #174ea6; fill: #174ea6; }
-#plus .frame-outer,     #Plus .frame-inner     { stroke: #174ea6; fill: #174ea6; }
 #plus .frame-outer,     #Plus .frame-inner     { stroke: #174ea6; fill: #174ea6; }
 #pound .frame-outer,    #Pound .frame-inner    { stroke: #174ea6; fill: #174ea6; }
 #power .frame-outer,    #Power .frame-inner    { stroke: #174ea6; fill: #174ea6; }
