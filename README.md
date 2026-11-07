@@ -189,7 +189,6 @@ Choose a tool for installation instructions and theme files. Each tool's README 
 - [highlight.js](themes/highlightjs/)
 - [Home Assistant](themes/home-assistant/)
 - [Homer](themes/homer/)
-- [Hyper](themes/hyper/)
 - [Hyprland](themes/hyprland/)
 - [i3](themes/i3/)
 - [i3lock-color](themes/i3lock-color/)

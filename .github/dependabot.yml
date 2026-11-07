@@ -26,14 +26,3 @@ updates:
       python-security:
         applies-to: security-updates
         patterns: ["*"]
-  - package-ecosystem: npm
-    directory: /themes/jupyterlab
-    schedule:
-      interval: weekly
-    open-pull-requests-limit: 0
-    commit-message:
-      prefix: "fix(deps)"
-    groups:
-      jupyterlab-security:
-        applies-to: security-updates
-        patterns: ["*"]

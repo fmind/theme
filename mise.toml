@@ -72,11 +72,10 @@ run = [
 ]
 
 [tasks."check:vuln"]
-description = "Audit the root, artwork script and JupyterLab npm locks, including dev dependencies, with OSV and npm (requires network access)"
+description = "Audit the root and artwork script locks with OSV (requires network access)"
 run = [
   "uv audit --preview-features audit-command --locked",
   "uv audit --preview-features audit-command --locked --script artworks/generate.py",
-  "npm audit --prefix themes/jupyterlab --package-lock-only --ignore-scripts --include=dev --audit-level=low",
 ]
 
 [tasks.format]

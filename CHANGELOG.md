@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+### Breaking
+
+- JupyterLab: the theme is now `themes/jupyterlab/custom.css`, a user stylesheet that restyles JupyterLab Light in JupyterLab (started with `--custom-css`) and Notebook 7, without an extension or build. The `jupyterlab-fmind` extension package, its npm lockfile and its build files are removed. Uninstall the extension with `python -m pip uninstall jupyterlab-fmind` and choose JupyterLab Light in Settings → Theme.
+- Remove Hyper: its upstream repository, vercel/hyper, is archived, and its last release is 3.4.1 from January 2023. `themes/hyper/` and its raw download paths no longer exist.
+
 ## 6.0.2 — 2026-11-07
 
 ### Fixed

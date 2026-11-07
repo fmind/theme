@@ -133,10 +133,8 @@ class DocumentationTests(unittest.TestCase):
             elif path.name == "pyproject.toml":
                 found = [tomllib.loads(text).get("project", {}).get("version")]
             elif is_json(path, text) and isinstance(doc := json.loads(text), dict):
-                # Package, extension and theme metadata; a lockfile repeats its root package version.
+                # Package, extension and theme metadata.
                 found = [doc.get("version"), doc.get("theme_version"), doc.get("KPlugin", {}).get("Version")]
-                if path.name == "package-lock.json":
-                    found.append(doc["packages"][""]["version"])
             else:
                 continue
             for value in found:
@@ -146,8 +144,6 @@ class DocumentationTests(unittest.TestCase):
     def test_manifest_downloads_follow_repository_layout(self):
         prefix = "https://raw.githubusercontent.com/fmind/theme/main/"
         for path in ROOT.rglob("*.json"):
-            if "node_modules" in path.parts:
-                continue
             for target in re.findall(re.escape(prefix) + r'([^"\s]+)', path.read_text()):
                 self.assertTrue((ROOT.parent / target).is_file(), f"{path}: {target}")
 

@@ -1,6 +1,10 @@
+/* https://jupyterlab.readthedocs.io/en/stable/user/custom_css.html */
 /* https://jupyterlab.readthedocs.io/en/stable/developer/css.html#css-variables */
 /* Native variable vocabulary and dimensions: Jupyter Development Team, BSD-3-Clause; see LICENSE. */
-:root {
+/* Restyles JupyterLab Light only. Jupyter appends its theme stylesheet after custom.css, so the
+   variables use a more specific :root selector, and the rules add one type selector (body) to
+   win ties with core rules without overriding their more specific state rules. */
+:root:has(> body[data-jp-theme-name="JupyterLab Light"]) {
   --jp-shortcuts-button-background: #ffffff;
   --jp-shortcuts-button-hover-background: #d2e3fc;
   --jp-shadow-base-lightness: 0;
@@ -263,24 +267,25 @@
   --jp-completer-type-background10: #00636d;
 }
 
-body { color-scheme: light; }
-.jp-RenderedHTMLCommon pre, .jp-RenderedHTMLCommon code { font-family: var(--jp-code-font-family); }
-.jp-RenderedHTMLCommon pre, .jp-RenderedHTMLCommon blockquote { background: #ffffff; color: #202124; }
-.jp-RenderedHTMLCommon a { color: #174ea6; }
-.jp-RenderedHTMLCommon a:visited { color: #681da8; }
-.jp-RenderedHTMLCommon .highlight .err { color: #a50e0e; background: #fad2cf; }
-.jp-RenderedHTMLCommon .highlight .gd { color: #a50e0e; background: #fad2cf; }
-.jp-RenderedHTMLCommon .highlight .gi { color: #0d652d; background: #ceead6; }
-.jp-RenderedHTMLCommon .highlight .gh { color: #174ea6; }
-.jp-InputArea-editor, .jp-OutputArea-output, .jp-NotebookPanel-toolbar,
-.jp-StatusBar-Widget, .jp-FileBrowser, .jp-Launcher { background-color: #ffffff; }
-.jp-Dialog-header, .jp-Dialog-body, .jp-Dialog-footer { background-color: #ffffff; }
-.jp-Tooltip { color: #202124; background: #ffffff; border: 1px solid #9aa0a6; }
-.jp-Tooltip .jp-RenderedText { color: #202124; }
-.jp-mod-current .jp-InputPrompt, .jp-mod-current .jp-OutputPrompt { opacity: 1; }
-::selection { color: #202124; background: #d2e3fc; }
+body:where([data-jp-theme-name="JupyterLab Light"]) {
+  & .jp-RenderedHTMLCommon pre, & .jp-RenderedHTMLCommon code { font-family: var(--jp-code-font-family); }
+  & .jp-RenderedHTMLCommon pre, & .jp-RenderedHTMLCommon blockquote { background: #ffffff; color: #202124; }
+  & .jp-RenderedHTMLCommon a { color: #174ea6; }
+  & .jp-RenderedHTMLCommon a:visited { color: #681da8; }
+  & .jp-RenderedHTMLCommon .highlight .err { color: #a50e0e; background: #fad2cf; }
+  & .jp-RenderedHTMLCommon .highlight .gd { color: #a50e0e; background: #fad2cf; }
+  & .jp-RenderedHTMLCommon .highlight .gi { color: #0d652d; background: #ceead6; }
+  & .jp-RenderedHTMLCommon .highlight .gh { color: #174ea6; }
+  & .jp-InputArea-editor, & .jp-OutputArea-output, & .jp-NotebookPanel-toolbar,
+  & .jp-StatusBar-Widget, & .jp-FileBrowser, & .jp-Launcher { background-color: #ffffff; }
+  & .jp-Dialog-header, & .jp-Dialog-body, & .jp-Dialog-footer { background-color: #ffffff; }
+  & .jp-Tooltip { color: #202124; background: #ffffff; border: 1px solid #9aa0a6; }
+  & .jp-Tooltip .jp-RenderedText { color: #202124; }
+  & .jp-mod-current .jp-InputPrompt, & .jp-mod-current .jp-OutputPrompt { opacity: 1; }
+  & ::selection { color: #202124; background: #d2e3fc; }
 
-/* Dock and tab containers are ordinary surfaces, independent of terminal selection color. */
-.lm-DockPanel, .lm-TabBar { background-color: #ffffff; }
+  /* Dock and tab containers are ordinary surfaces, independent of terminal selection color. */
+  & .lm-DockPanel, & .lm-TabBar { background-color: #ffffff; }
 
-.cm-editor .cm-content span { font-style: normal; }
+  & .cm-editor .cm-content span { font-style: normal; }
+}
