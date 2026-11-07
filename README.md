@@ -61,7 +61,7 @@ The palette uses the 15 [Google News hex colors](https://partnermarketinghub.wit
 | Dark green           | `#0D652D` | Strings and added text                      | Success, additions and executables; ANSI green                    |
 | Medium green         | `#34A853` | —                                           | Mode labels, copy markers and success accents                     |
 | Light green          | `#CEEAD6` | —                                           | Addition backgrounds                                              |
-| Purple (custom)      | `#681DA8` | Types, builtins, decorators and emphasis    | Secondary accents; ANSI magenta                                   |
+| Purple (custom)      | `#681DA8` | Types, builtins, decorators and hints       | Secondary accents; ANSI magenta                                   |
 | Teal (custom)        | `#00636D` | Informational diagnostics                   | Information and icons; ANSI cyan                                  |
 
 ## Available themes
@@ -113,12 +113,12 @@ Choose a tool for installation instructions and theme files. Each tool's README 
 - [Chrome](themes/chrome/)
 - [Claude Code](themes/claude-code/)
 - [Clone Hero](themes/clone-hero/)
-- [Cmder](themes/cmder/)
+- [Cmder](themes/conemu/#cmder)
 - [Code::Blocks](themes/codeblocks/)
 - [Codeforces](themes/codeforces/)
 - [CodeRunner](themes/coderunner/)
 - [colorls](themes/colorls/)
-- [ColorSlurp](themes/color-slurp/)
+- [ColorSlurp](themes/gimp/#colorslurp)
 - [ConEmu](themes/conemu/)
 - [CopyQ](themes/copyq/)
 - [COSMIC Terminal](themes/cosmic-terminal/)
@@ -218,8 +218,8 @@ Choose a tool for installation instructions and theme files. Each tool's README 
 - [Kitty](themes/kitty/)
 - [Konsole](themes/konsole/)
 - [Kristall](themes/kristall/)
-- [Krita](themes/krita/)
-- [LabPlot](themes/labplot/)
+- [Krita](themes/gtk/kde/#krita)
+- [LabPlot](themes/gtk/kde/#labplot)
 - [LaTeX](themes/latex/)
 - [Lazydocker](themes/lazydocker/)
 - [LazyGit](themes/lazygit/)
@@ -301,7 +301,7 @@ Choose a tool for installation instructions and theme files. Each tool's README 
 - [PowerShell ISE](themes/powershell-ise/)
 - [presenterm](themes/presenterm/)
 - [Prism](themes/prism/)
-- [Prompt](themes/prompt/)
+- [Prompt](themes/iterm2/#prompt)
 - [Proton Mail](themes/protonmail/)
 - [PsychoPy](themes/psychopy/)
 - [ptpython](themes/ptpython/)
@@ -339,7 +339,7 @@ Choose a tool for installation instructions and theme files. Each tool's README 
 - [Slack](themes/slack/)
 - [SmartGit](themes/smartgit/)
 - [Sniffnet](themes/sniffnet/)
-- [Spacemacs](themes/spacemacs/)
+- [Spacemacs](themes/emacs/#spacemacs)
 - [SpeedCrunch](themes/speedcrunch/)
 - [Spicetify](themes/spicetify/)
 - [Spyder](themes/spyder/)
@@ -372,7 +372,7 @@ Choose a tool for installation instructions and theme files. Each tool's README 
 - [Termux](themes/termux/)
 - [TeXShop](themes/texshop/)
 - [TeXstudio](themes/texstudio/)
-- [Textastic](themes/textastic/)
+- [Textastic](themes/textmate/#textastic)
 - [TextMate](themes/textmate/)
 - [Textual](themes/textual/)
 - [TeXworks](themes/texworks/)
@@ -406,7 +406,7 @@ Choose a tool for installation instructions and theme files. Each tool's README 
 - [Vivaldi](themes/vivaldi/)
 - [Vortex Mod Manager](themes/vortex-mod-manager/)
 - [VS Code](themes/vscode/)
-- [Wallpaper](themes/wallpaper/)
+- [Wallpaper](wallpapers/README.md)
 - [Warp](themes/warp/)
 - [Waybar](themes/waybar/)
 - [WezTerm](themes/wezterm/)

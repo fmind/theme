@@ -9,6 +9,9 @@ selection-foreground = #202124
 # Text slots use dark shades; bright slots retain the same readable foregrounds.
 # Adjust otherwise unreadable ANSI foreground/background combinations.
 minimum-contrast = 4.5
+# Faint (SGR 2) text is drawn at this opacity; 0.65 keeps #202124 at 5:1 on white.
+# minimum-contrast ignores opacity, so it cannot lift faint text. Ghostty 1.2.0+.
+faint-opacity = 0.65
 palette = 0=#202124
 palette = 1=#a50e0e
 palette = 2=#0d652d

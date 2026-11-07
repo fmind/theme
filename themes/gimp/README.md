@@ -7,3 +7,7 @@ Format: [GIMP palette loader](https://gitlab.gnome.org/GNOME/gimp/-/blob/master/
 ## Install
 
 Copy `Fmind.gpl` to the `palettes` folder of your [GIMP configuration folder](https://docs.gimp.org/3.2/en/gimp-fire-up.html#gimp-concepts-setup), then restart GIMP. For GIMP 3.2 this is `~/.config/GIMP/3.2/palettes/` on Linux, `%APPDATA%\GIMP\3.2\palettes\` on Windows and `~/Library/Application Support/GIMP/3.2/palettes/` on macOS; other versions use their own `major.minor` folder.
+
+## ColorSlurp
+
+[ColorSlurp](https://colorslurp.com/) imports GIMP palettes, not JSON ([ColorSlurp import formats](https://colorslurp.com/docs/guides/palettes)). Choose **File** > **Import Palettes** and select [Fmind.gpl](Fmind.gpl), or drop that file into the ColorSlurp window.

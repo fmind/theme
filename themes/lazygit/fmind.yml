@@ -1,13 +1,17 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 # Docs: https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
-# Merge gui.theme into ~/.config/lazygit/config.yml.
+# Merge gui into ~/.config/lazygit/config.yml.
 gui:
+  # Light-only theme: without this, lazygit assumes a dark background whenever the
+  # terminal does not report one, and picks dark defaults for unset colours.
+  colorScheme: light
   theme:
     activeBorderColor: [blue, bold]
-    inactiveBorderColor: ["#9aa0a6"]
+    inactiveBorderColor: ["#595d62"]
     searchingActiveBorderColor: [yellow, bold]
     optionsTextColor: [blue]
     selectedLineBgColor: ["#d2e3fc"]
+    inactiveViewSelectedLineBgColor: ["#f1f3f4"]
     cherryPickedCommitFgColor: ["#0d652d"]
     cherryPickedCommitBgColor: ["#ceead6"]
     markedBaseCommitFgColor: ["#174ea6"]

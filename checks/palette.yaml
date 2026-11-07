@@ -81,7 +81,7 @@ official:
   - "#202124"
 custom:
   - "#ffffff" # white canvas
-  - "#681da8" # purple: types, builtins, emphasis and ANSI magenta
+  - "#681da8" # purple: types, builtins, hints, emphasis and ANSI magenta
   - "#00636d" # teal: ANSI cyan
   - "#595d62" # dark grey: comments and muted text
   - "#934900" # dark orange: numbers, constants and warnings

@@ -101,5 +101,36 @@ chord = { fg = "#174ea6", italic = false, reversed = false }
 action = { fg = "#202124", italic = false, reversed = false, bg = "#ffffff" }
 hovered = { fg = "#202124", italic = false, reversed = false, bg = "#d2e3fc", bold = true }
 
+[icon]
+# Yazi starts from its dark preset when the terminal does not report a light background,
+# and both presets colour these fallbacks and folders below 3:1 on white.
+# Orphan and dummy icons sit on the red row that [filetype] gives them.
+prepend_dirs = [
+  { name = ".config", text = "", fg = "#934900" },
+  { name = ".github", text = "", fg = "#174ea6" },
+  { name = ".npm", text = "", fg = "#174ea6" },
+]
+conds = [
+  { if = "orphan", text = "", fg = "#ffffff" },
+  { if = "link", text = "", fg = "#595d62" },
+  { if = "block", text = "", fg = "#934900" },
+  { if = "char", text = "", fg = "#934900" },
+  { if = "fifo", text = "", fg = "#934900" },
+  { if = "sock", text = "", fg = "#934900" },
+  { if = "sticky", text = "", fg = "#934900" },
+  { if = "dummy", text = "", fg = "#ffffff" },
+  { if = "dir & hovered", text = "", fg = "#174ea6" },
+  { if = "dir", text = "", fg = "#174ea6" },
+  { if = "exec", text = "", fg = "#0d652d" },
+  { if = "!dir", text = "", fg = "#202124" },
+]
+
 [filetype]
-rules = [{ url = "*/", fg = "#174ea6" }, { url = "*", is = "exec", fg = "#0d652d" }, { url = "*", fg = "#202124" }]
+rules = [
+  { url = "*", is = "orphan", fg = "#ffffff", bg = "#a50e0e" },
+  { url = "*", is = "dummy", fg = "#ffffff", bg = "#a50e0e" },
+  { url = "*/", is = "dummy", fg = "#ffffff", bg = "#a50e0e" },
+  { url = "*/", fg = "#174ea6" },
+  { url = "*", is = "exec", fg = "#0d652d" },
+  { url = "*", fg = "#202124" },
+]

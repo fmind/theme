@@ -2,9 +2,29 @@
 
 ## Unreleased
 
+### Breaking
+
+- Remove the README-only folders `themes/cmder/`, `themes/color-slurp/`, `themes/krita/`, `themes/labplot/`, `themes/prompt/`, `themes/spacemacs/`, `themes/textastic/` and `themes/wallpaper/`. Their install steps move to a section of the theme they use: [ConEmu](themes/conemu/#cmder), [GIMP](themes/gimp/#colorslurp), [KDE](themes/gtk/kde/#krita), [iTerm2](themes/iterm2/#prompt), [Emacs](themes/emacs/#spacemacs), [TextMate](themes/textmate/#textastic) and [wallpapers](wallpapers/README.md). The theme index still lists every app.
+- Ghostty: the theme sets `faint-opacity`, so it requires Ghostty 1.2.0 or later.
+
+### Added
+
+- Fish: `themes/fish/fmind.theme`, a data-only theme loaded with `fish_config theme choose fmind`, is now the recommended install. `fmind.fish` remains available.
+
 ### Changed
 
 - `label-md` labels are semibold (600) sentence case with normal tracking, replacing bold all-caps with wide tracking, a common tell of generated designs.
+- Neovim: hint diagnostics and the builtin variables, parameters and modules (`self`, `cls`) use purple, as the palette documents; the indent scope guide is dark blue and plain guides are gray.
+- fzf and LazyGit: inactive borders and separators use dark gray `#595D62`, which meets 3:1 on white.
+
+### Fixed
+
+- Git: remove `color.diff.context`, which made delta print unchanged lines without syntax highlighting, and show whitespace errors as a solid red cell instead of pale red on gray.
+- Ghostty: faint (SGR 2) text keeps 5:1 contrast on white.
+- Neovim: make the Trouble cursor line, bufferline selection, Mason and Octo text readable, and stop Trouble from painting white strips in its panel.
+- Zellij: hovered tabs and status-bar items show pale yellow behind readable text instead of dark text on a dark fill.
+- LazyGit: set `gui.colorScheme: light`, so a terminal that does not report its background no longer gets dark defaults, and style the selected line in unfocused views.
+- Yazi: fallback icons use Fmind colors that stay readable on white, and broken symlinks get a red row again.
 
 ## 5.0.0 — 2026-10-31
 

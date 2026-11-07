@@ -6,10 +6,10 @@
 [color "diff"]
 	meta = "#595d62"
 	frag = "#174ea6"
-	context = "#202124"
 	old = "#a50e0e"
 	new = "#0d652d"
-	whitespace = "#ea4335 #fad2cf"
+	# Solid red cell: whitespace errors have no glyph, so the background is the cue.
+	whitespace = "#ffffff #a50e0e"
 [color "status"]
 	header = "#595d62"
 	added = "#0d652d"

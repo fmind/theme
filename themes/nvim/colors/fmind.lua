@@ -144,6 +144,9 @@ local groups = {
   ["@function.method"] = { fg = "#174ea6" },
   ["@function.method.call"] = { fg = "#174ea6" },
   ["@function.builtin"] = { fg = "#681da8" },
+  ["@variable.builtin"] = { fg = "#681da8" },
+  ["@variable.parameter.builtin"] = { fg = "#681da8" },
+  ["@module.builtin"] = { fg = "#681da8" },
   ["@constructor"] = { fg = "#681da8" },
   ["@keyword"] = { fg = "#174ea6", bold = true },
   ["@keyword.function"] = { fg = "#174ea6", bold = true },
@@ -249,12 +252,12 @@ local groups = {
   ["DiagnosticError"] = { fg = "#a50e0e" },
   ["DiagnosticWarn"] = { fg = "#934900" },
   ["DiagnosticInfo"] = { fg = "#00636d" },
-  ["DiagnosticHint"] = { fg = "#202124" },
+  ["DiagnosticHint"] = { fg = "#681da8" },
   ["DiagnosticOk"] = { fg = "#0d652d" },
   ["DiagnosticUnderlineError"] = { sp = "#ea4335", undercurl = true },
   ["DiagnosticUnderlineWarn"] = { sp = "#e37400", undercurl = true },
   ["DiagnosticUnderlineInfo"] = { sp = "#00636d", undercurl = true },
-  ["DiagnosticUnderlineHint"] = { sp = "#202124", undercurl = true },
+  ["DiagnosticUnderlineHint"] = { sp = "#681da8", undercurl = true },
   ["DiagnosticUnderlineOk"] = { sp = "#34a853", undercurl = true },
   ["DiagnosticDeprecated"] = { sp = "#9aa0a6", strikethrough = true },
   ["DiagnosticUnnecessary"] = { fg = "#595d62" },
@@ -316,8 +319,8 @@ local groups = {
   ["SnacksPickerBufFlags"] = { fg = "#595d62" },
   ["SnacksPickerGitStatusAdded"] = { fg = "#0d652d" },
   ["SnacksPickerGitStatusUntracked"] = { fg = "#202124" },
-  ["SnacksIndent"] = { fg = "#595d62" },
-  ["SnacksIndentScope"] = { fg = "#595d62" },
+  ["SnacksIndent"] = { fg = "#9aa0a6" },
+  ["SnacksIndentScope"] = { fg = "#174ea6" },
   ["TodoFgFIX"] = { fg = "#a50e0e" },
   ["TodoBgFIX"] = { fg = "#ffffff", bg = "#a50e0e", bold = true },
   ["TodoSignFIX"] = { fg = "#a50e0e" },
@@ -368,22 +371,42 @@ local groups = {
   ["GrugFarResultsAddIndicator"] = { fg = "#0d652d" },
   ["GrugFarResultsChangeIndicator"] = { fg = "#934900" },
   ["GrugFarResultsRemoveIndicator"] = { fg = "#a50e0e" },
+  -- Trouble defaults to NormalFloat, which shares the panel colour with CursorLine,
+  -- and its Normal-linked text would paint over the cursor line.
+  ["TroubleNormal"] = { fg = "#202124", bg = "#ffffff" },
+  ["TroubleNormalNC"] = { fg = "#202124", bg = "#ffffff" },
+  ["TroubleText"] = { fg = "#202124" },
+  ["LazyButton"] = { fg = "#202124", bg = "#ffffff" },
+  ["TreesitterContextBottom"] = { underline = true, sp = "#9aa0a6" },
+  -- bufferline derives these accents from TabLineSel's pale background.
+  ["BufferLineIndicatorSelected"] = { fg = "#4285f4", bg = "#ffffff" },
+  ["BufferLineTabSelected"] = { fg = "#174ea6", bg = "#ffffff", bold = true },
+  ["MasonHeader"] = { fg = "#202124", bg = "#fbbc04", bold = true },
+  ["MasonHeaderSecondary"] = { fg = "#202124", bg = "#d2e3fc", bold = true },
+  ["MasonHighlight"] = { fg = "#00636d" },
+  ["MasonHighlightBlock"] = { fg = "#202124", bg = "#d2e3fc" },
+  ["MasonHighlightBlockBold"] = { fg = "#202124", bg = "#d2e3fc", bold = true },
+  ["MasonHighlightSecondary"] = { fg = "#934900" },
+  ["MasonHighlightBlockSecondary"] = { fg = "#202124", bg = "#feefc3" },
+  ["MasonHighlightBlockBoldSecondary"] = { fg = "#202124", bg = "#feefc3", bold = true },
+  ["MasonMuted"] = { fg = "#595d62" },
+  ["MasonMutedBlock"] = { fg = "#595d62", bg = "#ffffff" },
+  ["MasonMutedBlockBold"] = { fg = "#595d62", bg = "#ffffff", bold = true },
+  ["OctoBlue"] = { fg = "#174ea6" },
+  ["OctoBlueFloat"] = { fg = "#174ea6", bg = "#f1f3f4" },
+  ["OctoYellow"] = { fg = "#934900" },
+  ["OctoYellowFloat"] = { fg = "#934900", bg = "#f1f3f4" },
+  ["OctoGreenFloat"] = { fg = "#0d652d", bg = "#f1f3f4" },
+  ["OctoRedFloat"] = { fg = "#a50e0e", bg = "#f1f3f4" },
+  ["OctoBubbleBlue"] = { fg = "#ffffff", bg = "#174ea6" },
+  ["OctoBubbleDelimiterBlue"] = { fg = "#174ea6" },
+  ["OctoUnderline"] = { fg = "#202124", underline = true },
 }
 
 for name, spec in pairs(groups) do
   vim.api.nvim_set_hl(0, name, spec)
 end
 
--- Link the full standard LSP token vocabulary; modifiers keep the token's colour.
-local semantic = {
-  namespace = "@module", type = "@type", class = "@type", enum = "@type",
-  interface = "@type", struct = "@type", typeParameter = "@type",
-  parameter = "@variable.parameter", variable = "@variable", property = "@property",
-  enumMember = "@constant", event = "@type", ["function"] = "@function",
-  method = "@function.method", macro = "@function.macro", keyword = "@keyword",
-  modifier = "@keyword", comment = "@comment", string = "@string", number = "@number",
-  regexp = "@string.regexp", operator = "@operator", decorator = "@attribute",
-}
-for token, target in pairs(semantic) do
-  vim.api.nvim_set_hl(0, "@lsp.type." .. token, { link = target })
-end
+-- Neovim links the other LSP tokens to matching captures; these two differ by design.
+vim.api.nvim_set_hl(0, "@lsp.type.macro", { link = "@function.macro" })
+vim.api.nvim_set_hl(0, "@lsp.type.modifier", { link = "@keyword" })

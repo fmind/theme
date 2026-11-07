@@ -10,6 +10,20 @@ Neutral feedback uses amber on ordinary surfaces. Inside selections it uses the 
 
 Colors do not select an application widget style, font or icon theme. Use Google Sans for general text and Google Sans Code for fixed-width text in System Settings → Fonts. Applications that override the system palette need their own theme integration.
 
+## Krita
+
+[Krita](https://krita.org/) reads KDE color schemes from its own resource folder ([Krita thememanager.cpp](https://invent.kde.org/graphics/krita/-/blob/master/libs/ui/thememanager.cpp) · [Krita resource folder](https://docs.krita.org/en/reference_manual/resource_management.html)).
+
+1. Copy [Fmind.colors](color-schemes/Fmind.colors) into the `color-schemes` folder of Krita's resource folder: `~/.local/share/krita/color-schemes/` on Linux, `%APPDATA%\krita\color-schemes\` on Windows or `~/Library/Application Support/Krita/color-schemes/` on macOS. On Linux, KDE's `~/.local/share/color-schemes/` also works.
+2. Restart Krita, then select **Settings → Themes → Fmind**.
+
+## LabPlot
+
+[LabPlot](https://labplot.kde.org/) reads KDE color schemes ([LabPlot ActionsManager.cpp](https://invent.kde.org/education/labplot/-/blob/master/src/frontend/ActionsManager.cpp) · [KColorScheme kcolorschememodel.cpp](https://invent.kde.org/frameworks/kcolorscheme/-/blob/master/src/kcolorschememodel.cpp)).
+
+1. Copy [Fmind.colors](color-schemes/Fmind.colors) into the `color-schemes` folder of your user data directory: `~/.local/share/color-schemes/` on Linux, `%LOCALAPPDATA%\color-schemes\` on Windows or `~/Library/Application Support/color-schemes/` on macOS.
+2. Restart LabPlot, then select **Settings → Color Scheme → Fmind**.
+
 ## Plasma style
 
 Copy the complete `plasma/desktoptheme/Fmind/` directory to `~/.local/share/plasma/desktoptheme/Fmind/`, preserving its [metadata](plasma/desktoptheme/Fmind/metadata.json), [colors](plasma/desktoptheme/Fmind/colors), [settings](plasma/desktoptheme/Fmind/plasmarc) and SVG subdirectories. Select Fmind in System Settings → Plasma Style. Keep the installed Breeze default style: Plasma supplies its remaining control geometry and assets through the native fallback mechanism.

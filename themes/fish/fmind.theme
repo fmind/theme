@@ -1,0 +1,47 @@
+# name: fmind
+# preferred_background: ffffff
+# https://fishshell.com/docs/current/cmds/fish_config.html#theme-files
+# Data-only twin of fmind.fish: no [light]/[dark] sections, so it applies on any terminal.
+# fish allows only comments and fish_*color_* lines here; values match fmind.fish.
+
+# Syntax highlighting and prompt identity
+fish_color_normal 202124
+fish_color_command 174ea6
+fish_color_param 202124
+fish_color_option 681da8
+fish_color_keyword 174ea6 --bold
+fish_color_quote 0d652d
+fish_color_escape 174ea6
+fish_color_redirection 681da8
+fish_color_operator 202124
+fish_color_end 934900 --bold
+fish_color_error a50e0e --bold
+fish_color_comment 595d62
+fish_color_autosuggestion 595d62
+fish_color_cancel 934900
+fish_color_cwd 202124
+fish_color_cwd_root a50e0e --bold
+fish_color_user 202124
+fish_color_host 681da8
+fish_color_host_remote 934900
+fish_color_selection --background=d2e3fc
+fish_color_search_match --background=d2e3fc
+fish_color_valid_path --underline
+# Choosing a theme clears colours it omits; these restore the fish defaults that fmind.fish leaves in place.
+fish_color_status red
+fish_color_history_current --bold
+
+# Completion pager
+fish_pager_color_progress 595d62
+fish_pager_color_prefix 681da8 --bold
+fish_pager_color_completion 202124
+fish_pager_color_description 595d62
+fish_pager_color_selected_background --background=d2e3fc
+fish_pager_color_background --background=ffffff
+fish_pager_color_selected_prefix 681da8 --bold
+fish_pager_color_selected_completion 202124
+fish_pager_color_selected_description 595d62
+fish_pager_color_secondary_background --background=f1f3f4
+fish_pager_color_secondary_prefix 681da8 --bold
+fish_pager_color_secondary_completion 202124
+fish_pager_color_secondary_description 595d62

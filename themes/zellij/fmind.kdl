@@ -1,6 +1,7 @@
 // https://zellij.dev/documentation/themes
 //
-// Pale blue separates inactive tiles from chrome; yellow identifies active tiles.
+// Pale blue separates inactive tiles from chrome; pale yellow marks hovered tiles;
+// yellow identifies active tiles.
 
 themes {
     fmind {
@@ -24,7 +25,8 @@ themes {
             base "#202124"
             background "#d2e3fc"
             emphasis_0 "#202124"
-            emphasis_1 "#202124"
+            // Plugins paint hovered and alternate ribbons with emphasis_1 under base text.
+            emphasis_1 "#feefc3"
             emphasis_2 "#202124"
             emphasis_3 "#202124"
         }

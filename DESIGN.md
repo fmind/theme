@@ -216,7 +216,7 @@ The palette is the 15 Google News colors plus five custom shades (white, dark gr
 - **Dark red (#A50E0E), medium red (#EA4335), light red (#FAD2CF) — error:** error text, markers and underlines, removed or failed regions.
 - **Dark orange (#934900), orange (#E37400), yellow (#FBBC04), light yellow (#FEEFC3) — warning:** warning text, numbers and constants; attention fills; active tabs and current matches; changed or caution regions.
 - **Dark green (#0D652D), medium green (#34A853), light green (#CEEAD6) — success:** strings, success text and additions; success markers; added regions and actor nodes.
-- **Purple (#681DA8) — type:** types, builtins and secondary emphasis.
+- **Purple (#681DA8) — type:** types, builtins, hint diagnostics and secondary emphasis.
 - **Teal (#00636D) — information:** informational text and diagnostics.
 
 ## Typography
