@@ -2849,6 +2849,12 @@ url = "https://nodejs.org/dist/v26.13.0/node-v26.13.0-linux-x64.tar.gz"
 checksum = "sha256:d38bd5e5a2ddce6bbb5ce45e46e208337da4d51fffe611e567fd32073d6439f6"
 url = "https://nodejs.org/dist/v26.13.0/node-v26.13.0-darwin-arm64.tar.gz"
 
+[[tools."npm:@google/design.md"]]
+version = "0.4.0"
+aube = { path = ".mise/locks/npm-google-design-md/0.4.0", digest = "sha256:bcf08393bdd907144343fecd295c41fa67a4006de0928d7dd7e264c8ae617197" }
+backend = "npm:@google/design.md"
+specifiers = ["0.4.0"]
+
 [[tools.python]]
 version = "3.14.10"
 backend = "core:python"

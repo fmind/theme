@@ -158,6 +158,16 @@ class DocumentationTests(unittest.TestCase):
         for color in COLORS:
             self.assertIn(color.lower(), readme.lower())
 
+    def test_design_md_commands_use_the_pinned_version(self):
+        # Consumers run design.md through npx; maintainers run the version mise.toml pins.
+        pin = tomllib.loads((ROOT.parent / "mise.toml").read_text())["tools"]["npm:@google/design.md"]
+        versions = {
+            version
+            for path in files("*.md")
+            for version in re.findall(r"@google/design\.md@([\w.-]+)", path.read_text())
+        }
+        self.assertEqual(versions, {pin})
+
     def test_theme_readmes_cite_their_format(self):
         # AGENTS.md keeps a port only while its README cites the upstream format or loader.
         cited = re.compile(r"(?m)^Format: .*\]\(https://[^)\s]+\)")
@@ -193,28 +203,10 @@ class SharedTests(unittest.TestCase):
                 self.assertGreaterEqual(contrast(color, PALETTE["ground"]), 4.5)
 
     def test_design_tokens_match_palette(self):
-        colors = {name: value.lower() for name, value in DESIGN["colors"].items()}
-        self.assertEqual(set(colors.values()), COLORS)
-        self.assertEqual(len(colors), len(set(colors.values())))
-        for name, tokens in DESIGN["components"].items():
-            values = {
-                key: colors[value[len("{colors.") : -1]]
-                for key, value in tokens.items()
-                if value.startswith("{colors.")
-            }
-            if {"backgroundColor", "textColor"} <= values.keys():
-                with self.subTest(component=name):
-                    self.assertGreaterEqual(contrast(values["textColor"], values["backgroundColor"]), 4.5)
-
-    def test_design_token_references_resolve(self):
-        for value in strings(DESIGN):
-            if reference := re.fullmatch(r"\{([\w.-]+)\}", value):
-                with self.subTest(reference=value):
-                    node = DESIGN
-                    for key in reference[1].split("."):
-                        self.assertIsInstance(node, dict)
-                        self.assertIn(key, node)
-                        node = node[key]
+        # `mise run check:design` lints token references and component contrast.
+        colors = [value.lower() for value in DESIGN["colors"].values()]
+        self.assertEqual(set(colors), COLORS)
+        self.assertEqual(len(colors), len(set(colors)))
 
     def test_structured_theme_files(self):
         for path, text in theme_texts():

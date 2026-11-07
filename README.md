@@ -33,7 +33,7 @@ It is the default for Médéric Hurier's own work. Customer or employer work use
 | Diagrams, decks, illustrations and demos                                    | The `fmind-visuals` and `diagrams-as-code` skills in fmind/dot adapt the tokens to D2, Mermaid, SVG, Typst and VHS.                                         |
 | Terminals, editors and apps                                                 | Use the native files under `themes/`; [palette.yaml](checks/palette.yaml) maps the same colors to syntax and ANSI roles.                                    |
 
-Validate changes with `npx @google/design.md@0.4.0 lint DESIGN.md` (structure, references and WCAG contrast) and compare revisions with `npx @google/design.md@0.4.0 diff old.md DESIGN.md`. `mise run test` checks offline that the tokens match the palette and that component text meets 4.5:1.
+Validate changes with `mise run check:design`, which lints structure, token references and WCAG contrast with the design.md version pinned in `mise.toml` and fails on any warning; pre-commit and CI run it. Compare revisions with `npx @google/design.md@0.4.0 diff old.md DESIGN.md`. `mise run test` checks offline that the tokens match the palette.
 
 ## Palette
 
