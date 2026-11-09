@@ -1,7 +1,7 @@
 #!/usr/bin/env -S uv run --quiet --script
 # /// script
 # requires-python = ">=3.14"
-# dependencies = ["fonttools>=4.60", "uharfbuzz>=0.51", "typer>=0.27", "rich>=15"]
+# dependencies = ["fonttools>=4.60", "uharfbuzz>=0.51"]
 # ///
 """Generate faithful Fmind branding wallpapers and banners."""
 
@@ -12,13 +12,11 @@ import subprocess
 from pathlib import Path
 from xml.sax.saxutils import escape
 
-import typer
 import uharfbuzz as hb
 from fontTools.pens.boundsPen import BoundsPen
 from fontTools.pens.svgPathPen import SVGPathPen
 from fontTools.pens.transformPen import TransformPen
 from fontTools.ttLib import TTFont
-from rich.console import Console
 
 ROOT = Path(__file__).resolve().parents[1]
 ARTWORK = ROOT / "artworks"
@@ -43,8 +41,6 @@ VARIANTS = [
     ("banners/bluesky", 1500, 500, 0.76),
     ("banners/mastodon", 1500, 500, 0.76),
 ]
-
-app = typer.Typer(add_completion=False, pretty_exceptions_show_locals=False)
 
 
 def lettering(text: str, x: float, y: float, width: float, color: str) -> str:
@@ -82,7 +78,7 @@ def composition() -> str:
         f'<rect x="10" y="10" width="1968" height="516" rx="48" '
         f'fill="{WHITE}" stroke="{BLUE}" stroke-width="20"/>'
         f'<image x="71" y="29" width="480" height="480" '
-        f'href="data:image/png;base64,{logo}" xlink:href="data:image/png;base64,{logo}"/>'
+        f'href="data:image/png;base64,{logo}"/>'
         + lettering("fmind.dev", 615, 96, 1280, BLUE)
         + lettering("AI Agents, MLOps & Security", 625, 366, 1225, INK)
     )
@@ -90,7 +86,7 @@ def composition() -> str:
 
 def svg_document(width: int, height: int, content: str) -> str:
     return (
-        f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" '
+        f'<svg xmlns="http://www.w3.org/2000/svg" '
         f'width="{width}" height="{height}" viewBox="0 0 {width} {height}">'
         f"<title>fmind.dev — AI Agents, MLOps &amp; Security</title>{content}</svg>"
     )
@@ -114,7 +110,6 @@ def render(source: Path, target: Path) -> None:
     )
 
 
-@app.command()
 def main() -> None:
     """Generate all 12 SVG sources, export exact PNGs, and create validation previews."""
     PREVIEWS.mkdir(parents=True, exist_ok=True)
@@ -218,8 +213,8 @@ def main() -> None:
         if p.suffix in {".png", ".ttf"}
     }
     (ARTWORK / "manifest.json").write_text(json.dumps({"inputs": inputs, "exports": records}, indent=2) + "\n")
-    Console().print(f"Successfully generated {len(records)} SVGs and PNGs.")
+    print(f"Generated {len(records)} SVGs and PNGs.")
 
 
 if __name__ == "__main__":
-    app()
+    main()

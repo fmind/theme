@@ -1,4 +1,4 @@
-# GRUB 2
+# Fmind for GRUB 2
 
 Fmind light theme for GRUB 2 bootloader.
 

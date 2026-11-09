@@ -1,10 +1,10 @@
-# Fmind Highlight.js
+# Fmind for Highlight.js
 
 A high-contrast light theme stylesheet for highlight.js syntax highlighting.
 
 Format: [highlight.js CSS classes](https://highlightjs.readthedocs.io/en/latest/css-classes-reference.html) · [theme guide](https://highlightjs.readthedocs.io/en/latest/theme-guide.html)
 
-## Install
+## Installation
 
 Link [fmind.css](fmind.css) in your HTML document:
 

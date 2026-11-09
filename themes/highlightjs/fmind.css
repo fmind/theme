@@ -21,10 +21,13 @@ code.hljs {
 }
 
 .hljs-keyword,
-.hljs-selector-tag,
-.hljs-subst {
+.hljs-selector-tag {
   color: #174ea6;
   font-weight: bold;
+}
+
+.hljs-subst {
+  color: #202124;
 }
 
 .hljs-number,
@@ -79,7 +82,7 @@ code.hljs {
 }
 
 .hljs-meta {
-  color: #595d62;
+  color: #681da8;
 }
 
 .hljs-deletion {

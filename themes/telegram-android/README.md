@@ -1,4 +1,4 @@
-# Telegram Android
+# Fmind for Telegram Android
 
 Fmind light theme for Telegram on Android.
 

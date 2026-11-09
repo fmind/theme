@@ -1,14 +1,14 @@
 # https://partnermarketinghub.withgoogle.com/brands/google-news/visual-identity/color-palette/
-# Expected colours for regression checks; app files are edited directly.
+# Expected colors for regression checks; app files are edited directly.
 name: "fmind"
 description: >-
-  Google colours with supporting accents on white: charcoal content, blue control flow, green strings,
+  Google colors with supporting accents on white: charcoal content, blue control flow, green strings,
   orange literals, red errors, and purple types; teal supplies information and ANSI cyan.
 ground: &white "#ffffff"
 text: &text "#202124"
 cursor: "#4285f4"
 gutter: "#595d62"
-# Secondary syntax shares colours deliberately; structure supplies the detail.
+# Secondary syntax shares colors deliberately; structure supplies the detail.
 roles:
   variable: *text
   error: &red "#a50e0e"

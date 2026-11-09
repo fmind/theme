@@ -1,4 +1,4 @@
-# Godot
+# Fmind for Godot
 
 Fmind light syntax theme for Godot Engine script editor.
 

@@ -1014,7 +1014,7 @@
     <WidgetStyle name="Mark Style 3" styleID="23" bgColor="FAD2CF" fontName="" fontSize="" />
     <WidgetStyle name="Mark Style 4" styleID="22" bgColor="CEEAD6" fontName="" fontSize="" />
     <WidgetStyle name="Mark Style 5" styleID="21" bgColor="F1F3F4" fontName="" fontSize="" />
-    <WidgetStyle name="Incremental highlight all" styleID="28" bgColor="F1F3F4" fontName="" fontSize="" />
+    <WidgetStyle name="Incremental highlight all" styleID="28" bgColor="FEEFC3" fontName="" fontSize="" />
     <WidgetStyle name="Active tab unfocused indicator" styleID="0" fgColor="4285F4" fontName="" fontSize="" />
     <WidgetStyle name="Active tab text" styleID="0" fgColor="202124" bgColor="D2E3FC" fontName="" fontSize="" />
     <WidgetStyle name="Inactive tabs" styleID="0" fgColor="202124" bgColor="FFFFFF" fontName="" fontSize="" />

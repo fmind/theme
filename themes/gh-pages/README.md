@@ -1,4 +1,4 @@
-# GitHub Pages
+# Fmind for GitHub Pages
 
 Fmind light stylesheet for GitHub Pages sites that use the [Primer](https://github.com/pages-themes/primer) Jekyll theme, the GitHub Pages default.
 

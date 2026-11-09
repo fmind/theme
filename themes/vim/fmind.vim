@@ -19,12 +19,12 @@ highlight Float guifg=#934900 guibg=NONE gui=NONE cterm=NONE
 highlight Identifier guifg=#202124 guibg=NONE gui=NONE cterm=NONE
 highlight Function guifg=#174ea6 guibg=NONE gui=NONE cterm=NONE
 highlight Statement guifg=#174ea6 guibg=NONE gui=bold cterm=bold
-highlight Conditional guifg=#174ea6 guibg=NONE gui=NONE cterm=NONE
-highlight Repeat guifg=#174ea6 guibg=NONE gui=NONE cterm=NONE
-highlight Label guifg=#174ea6 guibg=NONE gui=NONE cterm=NONE
+highlight Conditional guifg=#174ea6 guibg=NONE gui=bold cterm=bold
+highlight Repeat guifg=#174ea6 guibg=NONE gui=bold cterm=bold
+highlight Label guifg=#174ea6 guibg=NONE gui=bold cterm=bold
 highlight Operator guifg=#202124 guibg=NONE gui=NONE cterm=NONE
 highlight Keyword guifg=#174ea6 guibg=NONE gui=bold cterm=bold
-highlight Exception guifg=#174ea6 guibg=NONE gui=NONE cterm=NONE
+highlight Exception guifg=#a50e0e guibg=NONE gui=bold cterm=bold
 highlight PreProc guifg=#681da8 guibg=NONE gui=NONE cterm=NONE
 highlight Type guifg=#681da8 guibg=NONE gui=NONE cterm=NONE
 highlight Special guifg=#174ea6 guibg=NONE gui=NONE cterm=NONE
@@ -43,8 +43,8 @@ highlight CursorLineNr guifg=#174ea6 guibg=#f1f3f4 gui=bold cterm=bold
 highlight SignColumn guifg=#595d62 guibg=#ffffff gui=NONE cterm=NONE
 highlight FoldColumn guifg=#595d62 guibg=#ffffff gui=NONE cterm=NONE
 highlight Folded guifg=#595d62 guibg=#f1f3f4 gui=NONE cterm=NONE
-highlight NonText guifg=#9aa0a6 guibg=NONE gui=NONE cterm=NONE
-highlight SpecialKey guifg=#9aa0a6 guibg=NONE gui=NONE cterm=NONE
+highlight NonText guifg=#595d62 guibg=NONE gui=NONE cterm=NONE
+highlight SpecialKey guifg=#595d62 guibg=NONE gui=NONE cterm=NONE
 highlight EndOfBuffer guifg=#595d62 guibg=#ffffff gui=NONE cterm=NONE
 highlight Visual guifg=NONE guibg=#d2e3fc gui=NONE cterm=NONE
 highlight VisualNOS guifg=NONE guibg=#d2e3fc gui=NONE cterm=NONE

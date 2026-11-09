@@ -1,10 +1,10 @@
-# Prism
+# Fmind for Prism
 
 Fmind syntax highlighting theme for [Prism](https://prismjs.com/).
 
 Format: [Prism default theme](https://github.com/PrismJS/prism/blob/v1.30.0/themes/prism.css)
 
-## Install
+## Installation
 
 Link `prism-fmind.css` in your HTML document:
 

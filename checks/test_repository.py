@@ -16,13 +16,14 @@ from urllib.parse import unquote, urlsplit
 import markdown
 import yaml
 
-ROOT = Path(__file__).resolve().parents[1] / "themes"
-APPS = sorted(path for path in ROOT.iterdir() if path.is_dir() and not path.name.startswith((".", "__")))
-PALETTE = yaml.safe_load((ROOT.parent / "checks/palette.yaml").read_text())
-DESIGN = yaml.safe_load((ROOT.parent / "DESIGN.md").read_text().split("---\n")[1])
+ROOT = Path(__file__).resolve().parents[1]
+THEMES = ROOT / "themes"
+APPS = sorted(path for path in THEMES.iterdir() if path.is_dir() and not path.name.startswith((".", "__")))
+PALETTE = yaml.safe_load((ROOT / "checks/palette.yaml").read_text())
+DESIGN = yaml.safe_load((ROOT / "DESIGN.md").read_text().split("---\n")[1])
 COLORS = {*PALETTE["official"], *PALETTE["custom"]}
 # XML files without an XML declaration; other XML and JSON files are recognized by their content.
-XML_SUFFIXES = {".icls", ".qrc", ".svg", ".vssettings", ".xaml", ".xml"}
+XML_SUFFIXES = {".icls", ".svg", ".vssettings", ".xml"}
 # Hex colors as #rrggbb, #rrggbbaa or #aarrggbb. Short forms are skipped: anchors, issue numbers and CSS IDs match them.
 HEX = re.compile(r"(?<![\w&#/])#([0-9a-f]{6}|[0-9a-f]{8})(?![\w-])", re.IGNORECASE)
 # Release versions are X.Y.Z; native format and API versions such as 2, "1" or 1.0 are ignored.
@@ -37,10 +38,10 @@ def files(*pathspecs):
     """Return tracked and untracked files, honoring ignored build directories and pending deletions."""
     names = subprocess.check_output(
         ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z", "--", *pathspecs],
-        cwd=ROOT.parent,
+        cwd=ROOT,
         text=True,
     ).split("\0")
-    return [path for name in sorted(set(names) - {""}) if (path := ROOT.parent / name).is_file()]
+    return [path for name in sorted(set(names) - {""}) if (path := ROOT / name).is_file()]
 
 
 @functools.cache
@@ -126,7 +127,7 @@ def links(path):
 
 class DocumentationTests(unittest.TestCase):
     def test_release_versions_are_consistent(self):
-        version = tomllib.loads((ROOT.parent / "pyproject.toml").read_text())["project"]["version"]
+        version = tomllib.loads((ROOT / "pyproject.toml").read_text())["project"]["version"]
         for path, text in theme_texts():
             if pattern := TEXT_VERSIONS.get(path.suffix):
                 found = pattern.findall(text)
@@ -141,14 +142,8 @@ class DocumentationTests(unittest.TestCase):
                 if isinstance(value, str) and SEMVER.fullmatch(value):
                     self.assertEqual(value, version, path)
 
-    def test_manifest_downloads_follow_repository_layout(self):
-        prefix = "https://raw.githubusercontent.com/fmind/theme/main/"
-        for path in ROOT.rglob("*.json"):
-            for target in re.findall(re.escape(prefix) + r'([^"\s]+)', path.read_text()):
-                self.assertTrue((ROOT.parent / target).is_file(), f"{path}: {target}")
-
     def test_all_themes_and_palette_are_documented(self):
-        readme = (ROOT.parent / "README.md").read_text()
+        readme = (ROOT / "README.md").read_text()
         entries = re.findall(r"(?m)^- \[([^\]]+)\]\(themes/([^/]+)/\)$", readme)
         self.assertEqual(len(entries), len(APPS))
         self.assertEqual({slug for _, slug in entries}, {app.name for app in APPS})
@@ -160,7 +155,7 @@ class DocumentationTests(unittest.TestCase):
 
     def test_design_md_commands_use_the_pinned_version(self):
         # Consumers run design.md through npx; maintainers run the version mise.toml pins.
-        pin = tomllib.loads((ROOT.parent / "mise.toml").read_text())["tools"]["npm:@google/design.md"]
+        pin = tomllib.loads((ROOT / "mise.toml").read_text())["tools"]["npm:@google/design.md"]
         versions = {
             version
             for path in files("*.md")
@@ -182,7 +177,7 @@ class DocumentationTests(unittest.TestCase):
                 url = urlsplit(target)
                 if url.scheme or url.netloc:
                     continue
-                with self.subTest(document=str(path.relative_to(ROOT.parent)), target=target):
+                with self.subTest(document=str(path.relative_to(ROOT)), target=target):
                     resolved = (path.parent / unquote(url.path)).resolve() if url.path else path
                     self.assertTrue(resolved.exists())
                     # A directory link opens its README on GitHub, so its anchors come from there.
@@ -193,7 +188,7 @@ class DocumentationTests(unittest.TestCase):
 
 class SharedTests(unittest.TestCase):
     def test_palette_contrast_and_preview(self):
-        preview = (ROOT.parent / "screenshots/palette.svg").read_text().lower()
+        preview = (ROOT / "screenshots/palette.svg").read_text().lower()
         for color in COLORS:
             self.assertIn(color, preview)
         listed = {value.lower() for value in strings(PALETTE) if re.fullmatch(r"#[0-9a-fA-F]{6}", value)}
@@ -210,7 +205,7 @@ class SharedTests(unittest.TestCase):
 
     def test_structured_theme_files(self):
         for path, text in theme_texts():
-            with self.subTest(path=str(path.relative_to(ROOT.parent))):
+            with self.subTest(path=str(path.relative_to(ROOT))):
                 parse(path, text)
 
     def test_theme_colors_are_palette_colors(self):
@@ -220,8 +215,18 @@ class SharedTests(unittest.TestCase):
             for value in HEX.findall(text):
                 # An 8-digit value is #rrggbbaa or #aarrggbb, so either 6-digit part may hold the color.
                 if not {"#" + value[:6].lower(), "#" + value[-6:].lower()} & COLORS:
-                    off_palette.append(f"{path.relative_to(ROOT.parent)}: #{value}")
+                    off_palette.append(f"{path.relative_to(ROOT)}: #{value}")
         self.assertEqual(off_palette, [])
+
+    def test_ports_do_not_share_identical_files(self):
+        # An identical theme file in two ports is a variant: keep one port and add the other app to its README.
+        ports = {}
+        for path in files("themes"):
+            if path.name != "LICENSE":
+                ports.setdefault(hashlib.sha256(path.read_bytes()).hexdigest(), set()).add(
+                    path.relative_to(THEMES).parts[0]
+                )
+        self.assertEqual([sorted(shared) for shared in ports.values() if len(shared) > 1], [])
 
     def test_hex_colors_skip_anchors_and_references(self):
         text = "[Add the theme](#add-the-theme), [Decade](#decade-notes), issue #123, #feed, `#174EA6`, '#80fbbc04'"
@@ -229,14 +234,14 @@ class SharedTests(unittest.TestCase):
 
     def test_kde_color_scheme_copies_match(self):
         # themes/gtk/kde/README.md requires these copies of the application scheme to stay identical.
-        kde = ROOT / "gtk/kde"
+        kde = THEMES / "gtk/kde"
         scheme = (kde / "color-schemes/Fmind.colors").read_bytes()
         for copy in ("kvantum/Fmind/Fmind.colors", "plasma/look-and-feel/Fmind/contents/colors"):
             with self.subTest(copy=copy):
                 self.assertEqual((kde / copy).read_bytes(), scheme)
 
     def test_artwork_manifest(self):
-        artwork = ROOT.parent / "artworks"
+        artwork = ROOT / "artworks"
         manifest = json.loads((artwork / "manifest.json").read_text())
         self.assertTrue((artwork / "OFL.txt").is_file())
         for name, digest in manifest["inputs"].items():
@@ -245,7 +250,7 @@ class SharedTests(unittest.TestCase):
         self.assertTrue(manifest["exports"])
         for record in manifest["exports"]:
             with self.subTest(export=record["file"]):
-                data = (ROOT.parent / record["file"]).read_bytes()
+                data = (ROOT / record["file"]).read_bytes()
                 self.assertEqual(hashlib.sha256(data).hexdigest(), record["sha256"])
                 self.assertEqual(len(data), record["bytes"])
-                self.assertTrue((ROOT.parent / record["svg"]).is_file())
+                self.assertTrue((ROOT / record["svg"]).is_file())

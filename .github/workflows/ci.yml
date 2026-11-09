@@ -32,7 +32,5 @@ jobs:
         uses: jdx/mise-action@b44d12e7d0d8ee7461bb893e1b1993500433185b # v5.2.7
         with:
           version: 2026.11.3 # pinned mise; bump deliberately with mise.lock tooling
-      - name: Install validation dependencies
-        run: mise run install
       - name: Validate themes, documentation and artwork
         run: mise run all

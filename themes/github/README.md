@@ -1,4 +1,4 @@
-# GitHub
+# Fmind for GitHub
 
 Fmind light theme for GitHub.
 

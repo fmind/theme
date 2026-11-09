@@ -2,7 +2,7 @@
 # Search exclusions only; Git tracking is unchanged. Theme assets stay searchable for palette greps.
 *.lock
 .mise/locks/
-# Generated artwork embeds the logo as base64 (about 2 MB per SVG).
+# Generated artwork embeds the logo as base64 (about 1 MB per SVG).
 artworks/composition.svg
 banners/*.svg
 wallpapers/*.svg

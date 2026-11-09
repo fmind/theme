@@ -1,4 +1,4 @@
-# Marp
+# Fmind for Marp
 
 Fmind light theme for Marp markdown slide decks.
 

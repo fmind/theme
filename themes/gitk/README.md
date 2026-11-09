@@ -1,4 +1,4 @@
-# Gitk
+# Fmind for Gitk
 
 Fmind light colors for Gitk repository browser.
 

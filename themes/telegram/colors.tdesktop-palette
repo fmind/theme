@@ -20,7 +20,7 @@ menuBgRipple: #d2e3fc;
 menuIconFg: #595d62;
 menuIconFgOver: #202124;
 menuSubmenuArrowFg: #595d62;
-menuFgDisabled: #9aa0a6;
+menuFgDisabled: #595d62;
 scrollBg: #ffffff;
 scrollBgOver: #f1f3f4;
 scrollBarBg: #595d62;

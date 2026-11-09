@@ -6,4 +6,4 @@ Format: [Home Assistant themes](https://www.home-assistant.io/integrations/front
 
 ## Installation
 
-Copy [fmind.yaml](fmind.yaml) into a `themes/` folder beside `configuration.yaml`, load that folder with `frontend: themes: !include_dir_merge_named themes` in `configuration.yaml`, restart Home Assistant, then select Fmind in your profile.
+Copy [fmind.yaml](fmind.yaml) into a `themes/` folder beside `configuration.yaml`, load that folder with `frontend: themes: !include_dir_merge_named themes` in `configuration.yaml`, restart Home Assistant, then select `fmind` in your profile.

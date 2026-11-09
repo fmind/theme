@@ -27,7 +27,7 @@ fish_color_host_remote 934900
 fish_color_selection --background=d2e3fc
 fish_color_search_match --background=d2e3fc
 fish_color_valid_path --underline
-# Choosing a theme clears colours it omits; these restore the fish defaults that fmind.fish leaves in place.
+# Choosing a theme clears colors it omits; these restore the fish defaults that fmind.fish leaves in place.
 fish_color_status red
 fish_color_history_current --bold
 

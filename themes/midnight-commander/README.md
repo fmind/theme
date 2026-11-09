@@ -1,4 +1,4 @@
-# Midnight Commander
+# Fmind for Midnight Commander
 
 Fmind light skin for Midnight Commander (`mc`).
 

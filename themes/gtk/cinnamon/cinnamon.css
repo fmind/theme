@@ -1360,7 +1360,7 @@ StScrollBar StButton#vhandle:active {
 }
 StScrollBar StButton#vhandle, StScrollBar StButton#hhandle {
   background-image: none;
-  background-color: #9aa0a6;
+  background-color: #595d62;
 }
 StScrollBar StButton#vhandle:hover, StScrollBar StButton#hhandle:hover {
   color: #ffffff;

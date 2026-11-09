@@ -1,10 +1,10 @@
-# Fmind BetterDiscord
+# Fmind for BetterDiscord
 
 Crisp light theme for BetterDiscord adhering to the Fmind color palette.
 
 Format: [BetterDiscord theme structure](https://docs.betterdiscord.app/themes/introduction/structure)
 
-## Install
+## Installation
 
 1. Open Discord with BetterDiscord installed.
 2. Navigate to **User Settings** → **BetterDiscord** → **Themes**.

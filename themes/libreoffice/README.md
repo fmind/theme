@@ -1,4 +1,4 @@
-# LibreOffice
+# Fmind for LibreOffice
 
 Fmind color palette for LibreOffice (Writer, Calc, Impress, Draw).
 

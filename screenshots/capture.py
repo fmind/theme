@@ -5,8 +5,6 @@ Run from any directory: python screenshots/capture.py
 Requires installed vhs, ttyd, ffmpeg, bat, fish, nvim and zellij.
 """
 
-from __future__ import annotations
-
 import json
 import os
 import shutil
@@ -59,7 +57,7 @@ def main() -> None:
         config = home / ".config"
         for dest, source in {
             "nvim/colors/fmind.lua": "nvim/colors/fmind.lua",
-            "fish/conf.d/theme.fish": "fish/fmind.fish",
+            "fish/themes/fmind.theme": "fish/fmind.theme",
             "bat/themes/fmind.tmTheme": "bat/fmind.tmTheme",
             "zellij/themes/fmind.kdl": "zellij/fmind.kdl",
         }.items():
@@ -77,7 +75,7 @@ def main() -> None:
         (config / "bat/config").write_text('--theme="fmind"\n--paging=never\n')
         (work / "preview.py").write_text("# Numbered preview\ncount = 42\nmessage = 'Ready'\nprint(message)\n")
         (work / "config.kdl").write_text('theme "fmind"\npane_frames true\ndefault_shell "fish"\n')
-        (work / "shell.fish").write_text("""source ~/.config/fish/conf.d/theme.fish
+        (work / "shell.fish").write_text("""fish_config theme choose fmind
 function fish_prompt
     set_color green
     printf '> '
@@ -87,7 +85,7 @@ clear
 set_color blue --bold
 printf 'Theme verification\\n\\n'
 set_color green
-printf '✓ Readable selections\\n✓ Visible pane frames\\n✓ Google-inspired colours\\n'
+printf '✓ Readable selections\\n✓ Visible pane frames\\n✓ Google-inspired colors\\n'
 set_color normal
 printf '\\nSynthetic local demonstration\\n'
 bat --style=numbers --color=always preview.py
@@ -114,8 +112,8 @@ bat --style=numbers --color=always preview.py
                 continue
             key, value = key.strip(), value.strip()
             if key == "palette":
-                index, colour = value.split("=")
-                slots[int(index)] = colour
+                index, color = value.split("=")
+                slots[int(index)] = color
             else:
                 fields[key] = value
         names = ["black", "red", "green", "yellow", "blue", "magenta", "cyan", "white"]

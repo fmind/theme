@@ -66,11 +66,11 @@
 "warning" = "orange"
 "error" = "red"
 "info" = "teal"
-"hint" = "muted"
+"hint" = "purple"
 "diagnostic.warning" = { underline = { color = "orange", style = "curl" } }
 "diagnostic.error" = { underline = { color = "red", style = "curl" } }
 "diagnostic.info" = { underline = { color = "teal", style = "curl" } }
-"diagnostic.hint" = { underline = { color = "muted", style = "curl" } }
+"diagnostic.hint" = { underline = { color = "purple", style = "curl" } }
 "diagnostic.unnecessary" = { fg = "muted" }
 "diagnostic.deprecated" = { modifiers = ["crossed_out"] }
 

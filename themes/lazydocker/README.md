@@ -6,4 +6,4 @@ Format: [Lazydocker Config.md](https://github.com/jesseduffield/lazydocker/blob/
 
 ## Installation
 
-Merge `gui.theme` into Lazydocker’s `config.yml`.
+Merge `gui.theme` into Lazydocker’s `config.yml` (`~/.config/lazydocker/config.yml` on Linux).

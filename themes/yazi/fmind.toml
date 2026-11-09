@@ -103,7 +103,7 @@ hovered = { fg = "#202124", italic = false, reversed = false, bg = "#d2e3fc", bo
 
 [icon]
 # Yazi starts from its dark preset when the terminal does not report a light background,
-# and both presets colour these fallbacks and folders below 3:1 on white.
+# and both presets color these fallbacks and folders below 3:1 on white.
 # Orphan and dummy icons sit on the red row that [filetype] gives them.
 prepend_dirs = [
   { name = ".config", text = "", fg = "#934900" },

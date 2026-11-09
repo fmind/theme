@@ -14,3 +14,8 @@ Format: [ray.so Theme type](https://github.com/raycast/ray-so/blob/main/app/%28n
    - **Text**: `#202124`
    - **Selection**: `#d2e3fc`
    - **Loader**: `#174ea6`
+   - **Red**: `#a50e0e`
+   - **Orange** and **Yellow**: `#934900`
+   - **Green**: `#0d652d`
+   - **Blue**: `#174ea6`
+   - **Purple** and **Magenta**: `#681da8`

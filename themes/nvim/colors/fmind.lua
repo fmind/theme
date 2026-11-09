@@ -371,7 +371,7 @@ local groups = {
   ["GrugFarResultsAddIndicator"] = { fg = "#0d652d" },
   ["GrugFarResultsChangeIndicator"] = { fg = "#934900" },
   ["GrugFarResultsRemoveIndicator"] = { fg = "#a50e0e" },
-  -- Trouble defaults to NormalFloat, which shares the panel colour with CursorLine,
+  -- Trouble defaults to NormalFloat, which shares the panel color with CursorLine,
   -- and its Normal-linked text would paint over the cursor line.
   ["TroubleNormal"] = { fg = "#202124", bg = "#ffffff" },
   ["TroubleNormalNC"] = { fg = "#202124", bg = "#ffffff" },

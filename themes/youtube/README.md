@@ -1,4 +1,4 @@
-# YouTube
+# Fmind for YouTube
 
 Fmind light user style for YouTube.
 

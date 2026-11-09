@@ -41,12 +41,9 @@ pre[class*="language-"] {
 	font-style: normal;
 }
 
-.token.punctuation {
+.token.punctuation,
+.token.operator {
 	color: #202124;
-}
-
-.token.namespace {
-	opacity: .7;
 }
 
 .token.property,
@@ -82,11 +79,8 @@ pre[class*="language-"] {
 	color: #0d652d;
 }
 
-.token.operator,
 .token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
+.token.url {
 	color: #174ea6;
 }
 

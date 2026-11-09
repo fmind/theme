@@ -19,7 +19,7 @@ def summarize(results: list[Result]) -> str:
 results = [
     Result("Contrast on selected text", True),
     Result("Visible tabs and pane borders", True),
-    Result("Consistent success and error colours", True),
+    Result("Consistent success and error colors", True),
 ]
 
 print(summarize(results))

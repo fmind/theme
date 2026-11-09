@@ -1,10 +1,10 @@
-# tig
+# Fmind for tig
 
 Fmind theme for [tig](https://jonas.github.io/tig/).
 
 Format: [tigrc(5)](https://github.com/jonas/tig/blob/master/doc/tigrc.5.adoc)
 
-## Install
+## Installation
 
 Source `fmind.tigrc` in your `~/.tigrc`:
 

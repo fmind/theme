@@ -1,37 +1,37 @@
 # Docs: https://github.com/lsd-rs/lsd/blob/main/doc/colors.md
 # Green means success/new/readable; red means an error or deletion.
 
-user: yellow
-group: dark_grey
+user: "#934900"
+group: "#595d62"
 permission:
-  read: green
-  write: yellow
-  exec: green
-  exec-sticky: magenta
-  no-access: dark_grey
+  read: "#0d652d"
+  write: "#934900"
+  exec: "#0d652d"
+  exec-sticky: "#681da8"
+  no-access: "#595d62"
 date:
-  hour-old: cyan
-  day-old: green
-  older: dark_grey
+  hour-old: "#00636d"
+  day-old: "#0d652d"
+  older: "#595d62"
 size:
-  none: dark_grey
-  small: green
-  medium: yellow
-  large: red
+  none: "#595d62"
+  small: "#0d652d"
+  medium: "#934900"
+  large: "#a50e0e"
 inode:
-  valid: magenta
-  invalid: red
+  valid: "#681da8"
+  invalid: "#a50e0e"
 links:
-  valid: cyan
-  invalid: red
-tree-edge: dark_grey
+  valid: "#00636d"
+  invalid: "#a50e0e"
+tree-edge: "#595d62"
 git-status:
-  default: dark_grey
-  unmodified: dark_grey
-  ignored: dark_grey
-  new-in-index: green
-  new-in-workdir: green
-  deleted: red
-  renamed: cyan
-  modified: yellow
-  conflicted: red
+  default: "#595d62"
+  unmodified: "#595d62"
+  ignored: "#595d62"
+  new-in-index: "#0d652d"
+  new-in-workdir: "#0d652d"
+  deleted: "#a50e0e"
+  renamed: "#00636d"
+  modified: "#934900"
+  conflicted: "#a50e0e"

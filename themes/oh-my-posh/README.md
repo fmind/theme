@@ -1,4 +1,4 @@
-# Oh My Posh
+# Fmind for Oh My Posh
 
 Fmind light theme for Oh My Posh.
 

@@ -1,10 +1,10 @@
-# Fmind GTK
+# Fmind for GTK
 
-Native GTK 2, GTK 3.20+ and GTK 4 widget themes, with GNOME Shell and Cinnamon desktop themes and Metacity and Xfwm window decorations. Windows, editors, panels and popovers are white; selections and semantic feedback use pale fills. Google Sans is the UI font and Google Sans Code is the monospace font. Missing fonts use the system fallback.
+Native GTK 2, GTK 3.20+ and GTK 4 widget themes, with GNOME Shell and Cinnamon desktop themes, Metacity, Xfwm and Unity window decorations, and KDE components. Windows, editors, panels and popovers are white; selections and semantic feedback use pale fills. Google Sans is the UI font and Google Sans Code is the monospace font. Missing fonts use the system fallback.
 
 Format: [GTK 3 theme loading](https://docs.gtk.org/gtk3/class.CssProvider.html) · [GTK 4 theme loading](https://docs.gtk.org/gtk4/class.CssProvider.html)
 
-## Install
+## Installation
 
 Copy this entire directory to `~/.themes/Fmind/`, preserving [common.css](common.css), [index.theme](index.theme) and all version subdirectories. Select Fmind in your desktop's GTK theme chooser. This package does not change your settings automatically.
 
@@ -12,7 +12,7 @@ For an isolated GTK 3 or GTK 4 application preview, use `GTK_THEME=Fmind applica
 
 Fmind is exclusively light. The `gtk-dark.css` entry points deliberately load the same light palette. GTK 3 uses its built-in Adwaita resource for geometry and symbolic assets; GTK 4 uses its built-in Default resource. GTK 2 uses its built-in drawing engine. No copied third-party base styles, external rendering engines or downloaded image assets are needed.
 
-The theme includes buttons, suggested/destructive actions, entries, selection, checks, radios, switches, menus, popovers, tooltips, tabs, lists, scrollbars, scales, progress and semantic messages, with disabled and backdrop states. It exports GTK 3's named theme colors for applications that draw custom controls. Applications can override system themes; libadwaita applications are not covered by installing this package. GTK 3 versions older than 3.20 are covered through shared type and class selectors in [common.css](common.css).
+The theme includes buttons, suggested/destructive actions, entries, selection, checks, radios, switches, menus, popovers, tooltips, tabs, lists, scrollbars, scales, progress and semantic messages, with disabled and backdrop states. It exports GTK 3's named theme colors for applications that draw custom controls. Applications can override system themes; libadwaita applications are not covered by installing this package. GTK 3 versions older than 3.20 are covered through shared type and class selectors in [common.css](common.css), which also refines Nemo, Thunar, Caja, Geary, Pantheon, Xfce, Budgie, MATE, LightDM and Unity widgets.
 
 ## GNOME Shell
 
@@ -38,13 +38,13 @@ Native style resolution was checked with Cinnamon 5.6.8 and with the stable 6.6.
 
 ## KDE components and global theme
 
-The package also includes [KDE application colors, a Plasma desktop style, Aurorae decorations, Kvantum widgets, cursors and a global theme with a startup splash](kde/README.md). Install them in KDE's color-scheme, Plasma-style, Aurorae, Kvantum, cursor and look-and-feel directories as described in that guide; the GTK theme directory is not a KDE installation location. The [KDE checklist](kde/README.md#bundle-checklist) tracks the remaining session-screen and SDDM companions.
+The package also includes [KDE application colors, a Plasma desktop style, Aurorae decorations, Kvantum widgets, cursors and a global theme with a startup splash](kde/README.md). Install them in KDE's color-scheme, Plasma-style, Aurorae, Kvantum, cursor and look-and-feel directories as described in that guide; the GTK theme directory is not a KDE installation location.
 
 ## Window decorations
 
 For Xfwm, the normal [decoration theme](xfwm4/themerc) is included when you copy this directory to `~/.themes/Fmind/`. Select Fmind under Xfce Settings → Window Manager → Style. Your button layout and title alignment remain configurable in Xfce. The menu button uses a consistent Fmind glyph instead of an application icon.
 
-For a display requiring larger decorations, copy the entire `variants/Fmind-hdpi/` directory beside `~/.themes/Fmind/` as `~/.themes/Fmind-hdpi/`, or use `variants/Fmind-xhdpi/` as `~/.themes/Fmind-xhdpi/`. Select the corresponding name in Window Manager. The [HiDPI](variants/Fmind-hdpi/xfwm4/themerc) and [extra-HiDPI](variants/Fmind-xhdpi/xfwm4/themerc) variants use twice and three times the normal pixel dimensions. Text uses your desktop DPI with Google Sans Bold 10; choose the variant that matches that scale. Each variant includes all 24 frame pieces and 36 button assets: focused, unfocused, hover and pressed, with distinct toggled stick, shade and maximize controls. The XPM files are maintained directly and require no asset build step.
+The theme includes all 24 frame pieces and 36 button assets: focused, unfocused, hover and pressed, with distinct toggled stick, shade and maximize controls. Text uses your desktop DPI with Google Sans Bold 10. The XPM files are maintained directly and require no asset build step.
 
 For Metacity 3.46+, copy this complete package to `~/.local/share/themes/Fmind/`, preserving the [theme XML](metacity-1/metacity-theme-3.xml) in its `metacity-1/` subdirectory. Metacity searches the XDG data locations instead of `~/.themes/`. If you set `XDG_DATA_HOME`, use its `themes/Fmind/` directory. Select the native Metacity theme type and name in your desktop's configuration UI, or run these commands after installing:
 
@@ -57,22 +57,4 @@ The Metacity XML draws vector controls and covers normal, dialog, modal, utility
 
 ## Unity window decorations
 
-Copy the complete GTK package to `~/.themes/Fmind/`, preserving the [unity/](unity/) subdirectory. Unity 7 loads panel window buttons for maximized windows from that folder. The theme supplies all 24 vector assets: close, minimize, maximize and unmaximize across focused normal, prelight, pressed, unfocused, unfocused prelight and unfocused pressed states. Controls use circular glyph backgrounds with pure white on normal surfaces, pale blue for minimize/maximize/unmaximize active states, and pale red `#fad2cf` with `#a50e0e` glyph for close hover and pressed states.
-
-## Full bundle checklist
-
-The [free Dracula GTK repository](https://github.com/dracula/gtk) also contains desktop-shell and window-manager themes. The existing companions below remain supported; SDDM runtime validation is unfinished.
-
-- [x] [GTK 2 widgets](gtk-2.0/gtkrc), using the native drawing engine.
-- [x] [GTK 3.20+ widgets](gtk-3.0/gtk.css).
-- [x] [GTK 4 widgets](gtk-4.0/gtk.css).
-- [x] [GTK 3 before 3.20](common.css), with type and class selectors.
-- [x] [Application-specific widget refinements](common.css) for Nemo, Thunar, Caja, Geary, Pantheon, Xfce, Budgie, MATE, LightDM and Unity.
-- [x] [GNOME Shell](gnome-shell/gnome-shell.css), with [legacy image controls](gnome-shell/legacy.css).
-- [x] [Cinnamon](cinnamon/cinnamon.css).
-- [ ] [Complete KDE bundle](kde/README.md#bundle-checklist); color scheme, Plasma style, Aurorae decorations, Kvantum widgets, cursors, global theme, startup splash and session screens are available, with SDDM validation pending.
-- [x] [Metacity](metacity-1/metacity-theme-3.xml).
-- [x] [Xfwm](xfwm4/themerc), including HiDPI and extra-HiDPI decorations.
-- [x] [Unity](unity/), with 24 window control SVGs.
-
-The shared color layer is maintained directly. The built-in base theme can evolve with GTK.
+Copy the complete GTK package to `~/.themes/Fmind/`, preserving the [unity/](unity/) subdirectory. Unity 7 loads panel window buttons for maximized windows from that folder. The theme supplies 24 vector assets: close, minimize, maximize and unmaximize across focused normal, prelight, pressed, unfocused, unfocused prelight and unfocused pressed states. Four default names (`close.svg`, `maximize.svg`, `minimize.svg` and `unmaximize.svg`) are symbolic links to the focused normal assets, so preserve links when copying. Controls use circular glyph backgrounds with pure white on normal surfaces, pale blue for minimize/maximize/unmaximize active states, and pale red `#fad2cf` with `#a50e0e` glyph for close hover and pressed states.

@@ -1,4 +1,4 @@
-# DuckDuckGo
+# Fmind for DuckDuckGo
 
 Fmind light theme for DuckDuckGo.
 
@@ -9,7 +9,7 @@ Format: [DuckDuckGo URL parameters](https://duckduckgo.com/duckduckgo-help-pages
 ### Via URL Parameters
 
 Append the following parameters to `https://duckduckgo.com/`:
-`?k7=ffffff&kj=ffffff&k9=174ea6&k8=202124&kx=174ea6&kae=d2e3fc`
+`?k7=ffffff&kj=ffffff&k9=174ea6&k8=202124&kx=0d652d&kae=d2e3fc`
 
 ### Via Stylus / UserCSS
 

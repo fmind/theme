@@ -1,10 +1,10 @@
-# Omarchy
+# Fmind for Omarchy
 
 Fmind theme for [Omarchy](https://omarchy.org/).
 
 Format: [Omarchy manual: Making your own theme](https://learn.omacom.io/2/the-omarchy-manual/92/making-your-own-theme) · [colors.toml resolver](https://github.com/omacom/omarchy/blob/quattro/bin/omarchy-theme-color)
 
-## Install
+## Installation
 
 Copy [colors.toml](colors.toml) into a user theme folder, then apply it:
 

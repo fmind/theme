@@ -1,5 +1,30 @@
 # Changelog
 
+## Unreleased
+
+### Breaking
+
+- Fold duplicate and README-only ports into the port whose files they use; their folders and raw download paths no longer exist. Cursor is now a section of [VS Code](themes/vscode/#cursor) (its theme file was identical), Inkscape of [GIMP](themes/gimp/#inkscape) (identical palette), and Microsoft Edge and Vivaldi of [Chrome](themes/chrome/#microsoft-edge). The theme index still lists every app.
+- Remove NetBeans and qBittorrent: both needed a build step (`zip`, `rcc`) before the app could load them.
+- GTK: remove the unfinished SDDM login theme (`themes/gtk/kde/sddm/`), the experimental Plasma lock-screen, logout and OSD components of the global theme (Plasma keeps its own session screens), and the HiDPI Xfwm variants (`themes/gtk/variants/`).
+
+### Fixed
+
+- Terminal.app: the cursor is medium blue `#4285F4`, as in the other terminals.
+- Contrast: control borders use dark gray `#595D62` in Django Admin, Streamlit and the Cinnamon scrollbar; gray `#9AA0A6` no longer carries text in Vim (`NonText`, `SpecialKey`), Telegram Desktop (disabled menu items) and JDownloader 2 (disabled labels); Raycast yellow is dark orange `#934900`.
+- Semantics: hint diagnostics are purple in VS Code and Helix; Prism operators are charcoal, CSS strings green and namespaces fully opaque; highlight.js decorators are purple and interpolations charcoal; micro and Notepad++ highlight all search matches in light yellow; Vim conditionals, loops and labels are bold like other keywords, and exceptions are red.
+- lsd and LazyGit use palette hex colors instead of ANSI color names, so they no longer depend on the terminal palette.
+- tmux: drop `pane-border-format`, a layout setting.
+- Installation: Telegram (no `tiled.png`), Visual Studio (the file also sets the editor font), WordPress (registration snippet), Claude Code (settings file), DuckDuckGo (the URL color matches the userstyle), Home Assistant and Xfce4 Terminal (theme name), Lazydocker (path), Raycast (all twelve colors) and Unity (four of the 28 files are links).
+
+### Maintenance
+
+- Artwork SVGs embed the logo once instead of twice (1.1 MB each instead of 2.2 MB; the PNG exports are byte-identical), and the generator no longer needs Typer and Rich (2 locked packages instead of 10).
+- Checks fail when two ports ship a byte-identical theme file; a test that matched no file is removed.
+- Remove the unused `check:leaks:full` task and the redundant CI install step, format `.github/jactionlint.yaml`, and capture screenshots with the data-only fish theme.
+- Theme READMEs share one title (`Fmind for <app>`) and one `Installation` heading.
+- Python stays at 3.14.10: PyYAML 6.0.3, the latest release, ships no Python 3.15 wheel.
+
 ## 8.0.1 — 2026-11-07
 
 ### Maintenance

@@ -1,4 +1,4 @@
-# Figma
+# Fmind for Figma
 
 Fmind color tokens for Figma.
 

@@ -1,4 +1,4 @@
-# GameMaker Studio
+# Fmind for GameMaker Studio
 
 Fmind light theme for the Code Editor 2 of [GameMaker](https://gamemaker.io/), formerly GameMaker Studio 2. It colors the editor background, caret, selection, gutter and GML syntax scopes; pair it with the built-in light IDE skin.
 

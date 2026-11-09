@@ -7,7 +7,7 @@
     "/*.toml",
     "/*.yml",
     "/.agents/**/*.md",
-    "/.github/**/*.yml",
+    "/.github/**/*.{yaml,yml}",
     "/artworks/README.md",
     "/banners/README.md",
     "/checks/*.yaml",

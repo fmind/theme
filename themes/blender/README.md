@@ -1,4 +1,4 @@
-# Blender
+# Fmind for Blender
 
 Experimental, partial Fmind preset for Blender. It is not a complete light theme.
 
