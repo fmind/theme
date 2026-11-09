@@ -1,0 +1,115 @@
+# Fmind light theme for D2 diagrams.
+# Docs: https://d2lang.com/tour/themes/ · https://d2lang.com/tour/classes/
+#
+# Import it at the top of a diagram, then give each shape one class:
+#
+#   ...@fmind
+#   api: API {class: container}
+#
+# The classes implement the diagram-* components of DESIGN.md.
+
+# Unclassed shapes, connections and labels use palette colors too.
+vars: {
+  d2-config: {
+    theme-overrides: {
+      N1: "#202124"
+      N2: "#595d62"
+      N3: "#9aa0a6"
+      N4: "#9aa0a6"
+      N5: "#f1f3f4"
+      N6: "#f1f3f4"
+      N7: "#ffffff"
+      B1: "#174ea6"
+      B2: "#174ea6"
+      B3: "#d2e3fc"
+      B4: "#d2e3fc"
+      B5: "#f1f3f4"
+      B6: "#ffffff"
+      AA2: "#0d652d"
+      AA4: "#ceead6"
+      AA5: "#ceead6"
+      AB4: "#feefc3"
+      AB5: "#feefc3"
+    }
+  }
+}
+
+# Keep the canvas white on every viewer.
+style.fill: "#ffffff"
+
+# Flows and arrows are dark blue. Triple globs also style connections declared after the import.
+(*** -> ***)[*].style: {
+  stroke: "#174ea6"
+  font-color: "#202124"
+}
+
+classes: {
+  # A labelled boundary holding other shapes: a platform, a layer, a zone. The quietest fill.
+  group: {
+    style: {
+      fill: "#f1f3f4"
+      stroke: "#9aa0a6"
+      font-color: "#595d62"
+      stroke-width: 2
+    }
+  }
+
+  # A major building block the text names.
+  container: {
+    style: {
+      fill: "#d2e3fc"
+      stroke: "#174ea6"
+      font-color: "#202124"
+      stroke-width: 2
+    }
+  }
+
+  # A leaf part inside a container. Neutral on purpose.
+  component: {
+    style: {
+      fill: "#ffffff"
+      stroke: "#9aa0a6"
+      font-color: "#202124"
+    }
+  }
+
+  # A human or calling system where the flow enters. `shape: person` draws its label
+  # below the shape on the canvas, so the label stays charcoal.
+  actor: {
+    style: {
+      fill: "#ceead6"
+      stroke: "#0d652d"
+      font-color: "#202124"
+      stroke-width: 2
+    }
+  }
+
+  # Something outside the described boundary. The dash is the signal, not the color.
+  external: {
+    style: {
+      fill: "#ffffff"
+      stroke: "#9aa0a6"
+      font-color: "#595d62"
+      stroke-dash: 4
+    }
+  }
+
+  # One numbered stage of a sequence.
+  step: {
+    style: {
+      fill: "#feefc3"
+      stroke: "#934900"
+      font-color: "#202124"
+    }
+  }
+
+  # Where a flow starts or stops. Keep it a plain box: white text disappears on shapes
+  # that draw their label outside, such as `person` and `image`.
+  terminal: {
+    style: {
+      fill: "#202124"
+      stroke: "#202124"
+      font-color: "#ffffff"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+/* Fmind light theme for daisyUI 5: https://daisyui.com/docs/themes/ */
+@plugin "daisyui/theme" {
+  name: "fmind";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  /* Surfaces: white canvas, light gray panels, gray borders. */
+  --color-base-100: #ffffff;
+  --color-base-200: #f1f3f4;
+  --color-base-300: #9aa0a6;
+  --color-base-content: #202124;
+
+  /* Dark blue is the single brand accent; purple is the secondary emphasis. */
+  --color-primary: #174ea6;
+  --color-primary-content: #ffffff;
+  --color-secondary: #681da8;
+  --color-secondary-content: #ffffff;
+  --color-accent: #174ea6;
+  --color-accent-content: #ffffff;
+  --color-neutral: #202124;
+  --color-neutral-content: #ffffff;
+
+  /* Status fills use the dark shade of their role with white text. */
+  --color-info: #00636d;
+  --color-info-content: #ffffff;
+  --color-success: #0d652d;
+  --color-success-content: #ffffff;
+  --color-warning: #934900;
+  --color-warning-content: #ffffff;
+  --color-error: #a50e0e;
+  --color-error-content: #ffffff;
+
+  /* Pills for badges and toggles, 8px fields, 16px cards; flat, without depth or noise. */
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}

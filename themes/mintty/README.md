@@ -1,9 +1,0 @@
-# Fmind for Mintty
-
-Files: [fmind.minttyrc](fmind.minttyrc).
-
-Format: [mintty manual](https://mintty.github.io/mintty.1.html#CONFIGURATION)
-
-## Installation
-
-Merge into `~/.minttyrc` or load the file with `mintty -C /path/to/fmind.minttyrc`.

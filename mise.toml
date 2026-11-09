@@ -57,10 +57,11 @@ description = "Lint and audit GitHub Actions workflows and Dependabot (jactionli
 run = "jactionlint"
 
 [tasks."check:design"]
-description = "Lint DESIGN.md structure, token references and WCAG contrast (design.md)"
+description = "Lint DESIGN.md structure, token references and WCAG contrast, and compare the generated token files (design.md)"
 # Lint prints JSON and exits 0 on warnings such as low contrast, so any warning or error fails here.
-# Unparsable output also fails.
-run = '''
+# Unparsable output also fails. The diffs fail when DESIGN.md changed without `mise run tokens`.
+run = [
+  '''
 design.md lint DESIGN.md | python3 -c '
 import json, sys
 findings = [f for f in json.load(sys.stdin)["findings"] if f["severity"] != "info"]
@@ -68,7 +69,10 @@ for f in findings:
     print(f"DESIGN.md {f["severity"]} [{f["rule"]}]: {f["message"]}")
 sys.exit(1 if findings else 0)
 '
-'''
+''',
+  "design.md export --format css-vars --prefix fmind DESIGN.md | diff - themes/css/fmind.css",
+  "design.md export --format css-tailwind DESIGN.md | diff - themes/tailwind/fmind.css",
+]
 
 [tasks."check:format"]
 description = "Check documentation, configuration and Python formatting without writing"
@@ -85,8 +89,9 @@ run = [
 description = "Lint Python and shell scripts and validate Git hooks"
 run = [
   "ruff check .",
-  # --norc keeps results independent of a personal shellcheckrc.
-  "git ls-files -z '*.sh' | xargs -0 shellcheck --norc",
+  # --norc keeps results independent of a personal shellcheckrc. `find` reads the working tree,
+  # so untracked scripts are linted and deleted ones are skipped before they are staged.
+  "find . -name .git -prune -o -name .venv -prune -o -name '*.sh' -print0 | xargs -0 shellcheck --norc",
   "lefthook validate",
 ]
 
@@ -126,6 +131,13 @@ run = ["uv sync --locked", "lefthook install"]
 [tasks.screenshots]
 description = "Record the two terminal screenshots from synthetic inputs (requires Fontconfig, Chromium and GoogleSansCode Nerd Font Mono)"
 run = "python3 screenshots/capture.py"
+
+[tasks.tokens]
+description = "Regenerate the CSS and Tailwind token files from DESIGN.md"
+run = [
+  "design.md export --format css-vars --prefix fmind DESIGN.md > themes/css/fmind.css",
+  "design.md export --format css-tailwind DESIGN.md > themes/tailwind/fmind.css",
+]
 
 [tasks.test]
 alias = "t"

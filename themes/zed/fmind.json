@@ -163,7 +163,7 @@
           "boolean": {
             "color": "#934900",
             "font_style": "normal",
-            "font_weight": 400
+            "font_weight": 700
           },
           "comment": {
             "color": "#595d62",
@@ -178,7 +178,7 @@
           "constant": {
             "color": "#934900",
             "font_style": "normal",
-            "font_weight": 400
+            "font_weight": 700
           },
           "constructor": {
             "color": "#681da8",
@@ -328,7 +328,7 @@
           "tag": {
             "color": "#174ea6",
             "font_style": "normal",
-            "font_weight": 400
+            "font_weight": 700
           },
           "text.literal": {
             "color": "#174ea6",

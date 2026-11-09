@@ -2,6 +2,8 @@
 
 Light CLI skin for Hermes Agent.
 
+Files: [fmind.yaml](fmind.yaml).
+
 Format: [Hermes Agent skins](https://hermes-agent.nousresearch.com/docs/user-guide/features/skins)
 
 ## Installation

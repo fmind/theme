@@ -2,6 +2,8 @@
 
 Light color scheme for GNU grep.
 
+Files: [fmind.sh](fmind.sh).
+
 Format: [GNU grep GREP_COLORS](https://www.gnu.org/software/grep/manual/html_node/Environment-Variables.html)
 
 ## Installation

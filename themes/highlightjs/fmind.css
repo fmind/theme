@@ -30,9 +30,13 @@ code.hljs {
   color: #202124;
 }
 
-.hljs-number,
+.hljs-number {
+  color: #934900;
+}
+
 .hljs-literal {
   color: #934900;
+  font-weight: bold;
 }
 
 .hljs-variable,
@@ -68,7 +72,7 @@ code.hljs {
 
 .hljs-regexp,
 .hljs-link {
-  color: #00636d;
+  color: #174ea6;
 }
 
 .hljs-symbol,

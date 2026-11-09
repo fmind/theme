@@ -2,6 +2,8 @@
 
 Fmind theme for [dircolors](https://www.gnu.org/software/coreutils/).
 
+Files: [.dircolors](.dircolors).
+
 Format: [dircolors invocation](https://www.gnu.org/software/coreutils/manual/html_node/dircolors-invocation.html) · [dircolors.hin](https://github.com/coreutils/coreutils/blob/master/src/dircolors.hin)
 
 ## Installation

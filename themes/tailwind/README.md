@@ -1,18 +1,18 @@
-# Fmind for Tailwind
+# Fmind for Tailwind CSS
 
-Fmind light theme color palette preset for Tailwind CSS.
+Files: [fmind.css](fmind.css).
 
-Format: [Tailwind presets](https://v3.tailwindcss.com/docs/presets) · [Tailwind v4 @config](https://tailwindcss.com/docs/functions-and-directives#config-directive)
+Format: [Tailwind CSS theme variables](https://tailwindcss.com/docs/theme)
 
 ## Installation
 
-In your `tailwind.config.js`:
+Requires Tailwind CSS v4. Copy `fmind.css` next to your stylesheet and import it after Tailwind:
 
-```javascript
-const fmindTheme = require("/path/to/tailwind/fmind.js");
-
-module.exports = {
-  presets: [fmindTheme],
-  // ...
-};
+```css
+@import "tailwindcss";
+@import "./fmind.css";
 ```
+
+The `@theme` block adds the [DESIGN.md](../../DESIGN.md) tokens under their own names: colors (`bg-canvas`, `text-foreground`, `text-primary`, `border-border`, `bg-error-surface`), type (`font-body-md`, `text-headline-lg`), radii (`rounded-md` to `rounded-xl`) and spacing (`p-md`, `max-w-reading-width`, `max-w-page-width`). Add the [daisyUI theme](../daisyui/) for components.
+
+`fmind.css` is generated from DESIGN.md; edit the tokens there and run `mise run tokens`. For Tailwind v3, generate a `theme.extend` object with `npx @google/design.md@0.4.0 export --format json-tailwind DESIGN.md`. Tested with Tailwind CSS 4.3.4.

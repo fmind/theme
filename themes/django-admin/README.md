@@ -2,6 +2,8 @@
 
 Fmind theme for [Django Admin](https://docs.djangoproject.com/en/stable/ref/contrib/admin/).
 
+Files: [fmind.css](fmind.css).
+
 Format: [Django admin theming](https://docs.djangoproject.com/en/stable/ref/contrib/admin/#theming-support) · [base.css](https://github.com/django/django/blob/main/django/contrib/admin/static/admin/css/base.css)
 
 ## Installation

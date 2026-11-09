@@ -1,5 +1,0 @@
-# Gitk Fmind light colors
-set bgcolor #ffffff
-set fgcolor #202124
-set selectbgcolor #d2e3fc
-set diffcolors {#a50e0e #0d652d #174ea6}

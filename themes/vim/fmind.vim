@@ -10,11 +10,11 @@ let g:colors_name = "fmind"
 highlight Normal guifg=#202124 guibg=#ffffff gui=NONE cterm=NONE
 highlight NormalNC guifg=#202124 guibg=#ffffff gui=NONE cterm=NONE
 highlight Comment guifg=#595d62 guibg=NONE gui=NONE cterm=NONE
-highlight Constant guifg=#934900 guibg=NONE gui=NONE cterm=NONE
+highlight Constant guifg=#934900 guibg=NONE gui=bold cterm=bold
 highlight String guifg=#0d652d guibg=NONE gui=NONE cterm=NONE
 highlight Character guifg=#0d652d guibg=NONE gui=NONE cterm=NONE
 highlight Number guifg=#934900 guibg=NONE gui=NONE cterm=NONE
-highlight Boolean guifg=#934900 guibg=NONE gui=NONE cterm=NONE
+highlight Boolean guifg=#934900 guibg=NONE gui=bold cterm=bold
 highlight Float guifg=#934900 guibg=NONE gui=NONE cterm=NONE
 highlight Identifier guifg=#202124 guibg=NONE gui=NONE cterm=NONE
 highlight Function guifg=#174ea6 guibg=NONE gui=NONE cterm=NONE

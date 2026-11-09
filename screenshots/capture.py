@@ -5,7 +5,6 @@ Run from any directory: python screenshots/capture.py
 Requires installed vhs, ttyd, ffmpeg, bat, fish, nvim and zellij.
 """
 
-import json
 import os
 import shutil
 import signal
@@ -105,29 +104,7 @@ bat --style=numbers --color=always preview.py
     tab name="Review" { pane command="fish" { args "--no-config"; }; }
 }
 """)
-        fields, slots = {}, {}
-        for line in (ROOT / "themes/ghostty/fmind").read_text().splitlines():
-            key, separator, value = line.partition("=")
-            if not separator or key.lstrip().startswith("#"):
-                continue
-            key, value = key.strip(), value.strip()
-            if key == "palette":
-                index, color = value.split("=")
-                slots[int(index)] = color
-            else:
-                fields[key] = value
-        names = ["black", "red", "green", "yellow", "blue", "magenta", "cyan", "white"]
-        names += ["bright" + name.title() for name in names]
-        theme = dict(zip(names, (slots[i] for i in range(16)), strict=True))
-        theme.update(
-            name="fmind",
-            background=fields["background"],
-            foreground=fields["foreground"],
-            cursor=fields["cursor-color"],
-            cursorAccent=fields["cursor-text"],
-            selection=fields["selection-background"],
-        )
-        (work / "theme.tape").write_text("Set Theme " + json.dumps(theme) + "\n")
+        shutil.copyfile(ROOT / "themes/vhs/fmind.tape", work / "theme.tape")
         env = {
             "FMIND_THEME_ROOT": str(ROOT),
             "HOME": str(home),

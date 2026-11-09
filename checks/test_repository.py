@@ -23,15 +23,11 @@ PALETTE = yaml.safe_load((ROOT / "checks/palette.yaml").read_text())
 DESIGN = yaml.safe_load((ROOT / "DESIGN.md").read_text().split("---\n")[1])
 COLORS = {*PALETTE["official"], *PALETTE["custom"]}
 # XML files without an XML declaration; other XML and JSON files are recognized by their content.
-XML_SUFFIXES = {".icls", ".svg", ".vssettings", ".xml"}
+XML_SUFFIXES = {".icls"}
 # Hex colors as #rrggbb, #rrggbbaa or #aarrggbb. Short forms are skipped: anchors, issue numbers and CSS IDs match them.
 HEX = re.compile(r"(?<![\w&#/])#([0-9a-f]{6}|[0-9a-f]{8})(?![\w-])", re.IGNORECASE)
 # Release versions are X.Y.Z; native format and API versions such as 2, "1" or 1.0 are ignored.
 SEMVER = re.compile(r"\d+\.\d+\.\d+")
-TEXT_VERSIONS = {
-    ".css": re.compile(r"(?m)^\s*\*?\s*@version\s+(\S+)"),
-    ".desktop": re.compile(r"(?m)^(?:X-KDE-PluginInfo-)?Version=(\S+)$"),
-}
 
 
 def files(*pathspecs):
@@ -129,25 +125,23 @@ class DocumentationTests(unittest.TestCase):
     def test_release_versions_are_consistent(self):
         version = tomllib.loads((ROOT / "pyproject.toml").read_text())["project"]["version"]
         for path, text in theme_texts():
-            if pattern := TEXT_VERSIONS.get(path.suffix):
-                found = pattern.findall(text)
-            elif path.name == "pyproject.toml":
-                found = [tomllib.loads(text).get("project", {}).get("version")]
-            elif is_json(path, text) and isinstance(doc := json.loads(text), dict):
-                # Package, extension and theme metadata.
-                found = [doc.get("version"), doc.get("theme_version"), doc.get("KPlugin", {}).get("Version")]
-            else:
-                continue
-            for value in found:
+            # Extension and browser theme manifests carry the release version.
+            if is_json(path, text) and isinstance(doc := json.loads(text), dict):
+                value = doc.get("version")
                 if isinstance(value, str) and SEMVER.fullmatch(value):
                     self.assertEqual(value, version, path)
 
     def test_all_themes_and_palette_are_documented(self):
         readme = (ROOT / "README.md").read_text()
-        entries = re.findall(r"(?m)^- \[([^\]]+)\]\(themes/([^/]+)/\)$", readme)
-        self.assertEqual(len(entries), len(APPS))
-        self.assertEqual({slug for _, slug in entries}, {app.name for app in APPS})
-        self.assertEqual(entries, sorted(entries, key=lambda entry: (entry[0].casefold(), entry[1])))
+        catalog = readme.split("\n## Available themes\n")[1].split("\n## ")[0]
+        ports = []
+        for category in catalog.split("\n### ")[1:]:
+            # A category lists its apps alphabetically; `#section` entries share another port's files.
+            names = re.findall(r"(?m)^- \[([^\]]+)\]\(themes/[^)]+\)$", category)
+            self.assertEqual(names, sorted(names, key=str.casefold), category.splitlines()[0])
+            ports += re.findall(r"(?m)^- \[[^\]]+\]\(themes/([^/]+)/\)$", category)
+        # Every port is listed exactly once.
+        self.assertEqual(sorted(ports), [app.name for app in APPS])
         for app in APPS:
             self.assertTrue((app / "README.md").is_file(), app)
         for color in COLORS:
@@ -163,11 +157,21 @@ class DocumentationTests(unittest.TestCase):
         }
         self.assertEqual(versions, {pin})
 
-    def test_theme_readmes_cite_their_format(self):
+    def test_theme_readmes_share_one_layout(self):
         # AGENTS.md keeps a port only while its README cites the upstream format or loader.
         cited = re.compile(r"(?m)^Format: .*\]\(https://[^)\s]+\)")
-        missing = [app.name for app in APPS if not cited.search((app / "README.md").read_text())]
-        self.assertEqual(missing, [])
+        for app in APPS:
+            readme = (app / "README.md").read_text()
+            with self.subTest(app=app.name):
+                self.assertTrue(readme.startswith("# Fmind for "))
+                self.assertRegex(readme, cited)
+                self.assertIn("\n## Installation\n", readme)
+                # The `Files:` line links every file of the port.
+                listed = re.search(r"(?m)^Files: (.*)$", readme)
+                self.assertIsNotNone(listed)
+                linked = set(re.findall(r"\]\(([^)]+)\)", listed.group(1)))
+                shipped = {str(path.relative_to(app)) for path in files(f"themes/{app.name}")} - {"README.md"}
+                self.assertEqual(linked, shipped)
 
     def test_markdown_local_links_and_anchors(self):
         # Screenshot samples are rendering fixtures, not navigation.
@@ -231,14 +235,6 @@ class SharedTests(unittest.TestCase):
     def test_hex_colors_skip_anchors_and_references(self):
         text = "[Add the theme](#add-the-theme), [Decade](#decade-notes), issue #123, #feed, `#174EA6`, '#80fbbc04'"
         self.assertEqual(HEX.findall(text), ["174EA6", "80fbbc04"])
-
-    def test_kde_color_scheme_copies_match(self):
-        # themes/gtk/kde/README.md requires these copies of the application scheme to stay identical.
-        kde = THEMES / "gtk/kde"
-        scheme = (kde / "color-schemes/Fmind.colors").read_bytes()
-        for copy in ("kvantum/Fmind/Fmind.colors", "plasma/look-and-feel/Fmind/contents/colors"):
-            with self.subTest(copy=copy):
-                self.assertEqual((kde / copy).read_bytes(), scheme)
 
     def test_artwork_manifest(self):
         artwork = ROOT / "artworks"

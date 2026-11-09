@@ -2,6 +2,8 @@
 
 Light theme configuration for [ripgrep](https://github.com/BurntSushi/ripgrep).
 
+Files: [fmind.ripgreprc](fmind.ripgreprc).
+
 Format: [ripgrep configuration file](https://github.com/BurntSushi/ripgrep/blob/master/GUIDE.md#configuration-file) · [ripgrep --colors](https://github.com/BurntSushi/ripgrep/blob/master/crates/core/flags/defs.rs)
 
 ## Installation

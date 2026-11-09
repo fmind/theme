@@ -1,8 +1,12 @@
 # Fmind for JupyterLab and Notebook 7
 
+Files: [LICENSE](LICENSE), [custom.css](custom.css).
+
 Format: [JupyterLab custom CSS](https://jupyterlab.readthedocs.io/en/stable/user/custom_css.html) · [Notebook custom CSS](https://jupyter-notebook.readthedocs.io/en/stable/custom_css.html) · [JupyterLab CSS variables](https://jupyterlab.readthedocs.io/en/stable/developer/css.html#css-variables)
 
 A user stylesheet that restyles the built-in JupyterLab Light theme. It needs no extension, package or build. Tested with JupyterLab 4.6.6 and Notebook 7.6.5.
+
+## Installation
 
 1. Copy `custom.css` to `custom/custom.css` in your Jupyter configuration directory (normally `~/.jupyter/`; run `jupyter --config-dir` to locate it). Preserve any existing custom CSS by combining the files, with Fmind's rules last.
 2. JupyterLab loads custom CSS only when asked: start it with `jupyter lab --custom-css`, or add `c.LabApp.custom_css = True` to `jupyter_lab_config.py`. Notebook 7 loads it by default.

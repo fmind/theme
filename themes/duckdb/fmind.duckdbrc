@@ -1,0 +1,65 @@
+-- Fmind light theme for the DuckDB CLI: https://duckdb.org/docs/stable/clients/cli/syntax_highlighting
+-- Colors are ANSI names, so the terminal theme supplies the Fmind palette.
+.highlight_mode light
+
+-- Query syntax
+.highlight_colors keyword blue bold
+.highlight_colors string_constant green
+.highlight_colors numeric_constant yellow
+.highlight_colors comment gray
+.highlight_colors bracket magenta bold
+.highlight_colors error red bold
+.highlight_colors error_emphasis red bold_underline
+.highlight_colors error_suggestion green
+.highlight_colors line_indicator gray
+.highlight_colors continuation gray
+.highlight_colors continuation_selected blue
+
+-- Prompt and startup
+.highlight_colors prompt blue bold
+.highlight_colors prompt_connect gray
+.highlight_colors database_name magenta
+.highlight_colors schema_name magenta
+.highlight_colors table_name blue
+.highlight_colors startup_text gray
+.highlight_colors startup_version blue
+
+-- Results
+.highlight_colors column_name blue bold
+.highlight_colors column_type gray
+.highlight_colors primary_key_column blue bold_underline
+.highlight_colors null_value gray
+.highlight_colors layout gray
+.highlight_colors table_layout gray
+.highlight_colors view_layout gray
+.highlight_colors footer gray
+
+-- Completion
+.highlight_colors suggestion_catalog_name magenta
+.highlight_colors suggestion_schema_name magenta
+.highlight_colors suggestion_table_name blue
+.highlight_colors suggestion_function_name blue
+.highlight_colors suggestion_setting_name cyan
+.highlight_colors suggestion_file_name green
+.highlight_colors suggestion_directory_name green
+
+-- Logs
+.highlight_colors log_trace gray
+.highlight_colors log_debug gray
+.highlight_colors log_info cyan
+.highlight_colors log_warning yellow
+
+-- Query plans
+.highlight_colors explain_layout gray
+.highlight_colors explain_header blue bold
+.highlight_colors explain_operator blue bold
+.highlight_colors explain_operator_scan green bold
+.highlight_colors explain_operator_join cyan bold
+.highlight_colors explain_operator_aggregate magenta bold
+.highlight_colors explain_operator_order yellow bold
+.highlight_colors explain_rows yellow
+.highlight_colors explain_detail_key gray
+.highlight_colors explain_timing_critical red bold
+.highlight_colors explain_timing_high red
+.highlight_colors explain_timing_moderate yellow
+.highlight_colors explain_timing_low green

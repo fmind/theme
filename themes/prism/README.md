@@ -2,6 +2,8 @@
 
 Fmind syntax highlighting theme for [Prism](https://prismjs.com/).
 
+Files: [prism-fmind.css](prism-fmind.css).
+
 Format: [Prism default theme](https://github.com/PrismJS/prism/blob/v1.30.0/themes/prism.css)
 
 ## Installation

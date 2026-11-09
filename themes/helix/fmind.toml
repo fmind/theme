@@ -2,7 +2,9 @@
 "attribute" = "purple"
 "type" = "purple"
 "constructor" = "purple"
-"constant" = "orange"
+"constant" = { fg = "orange", modifiers = ["bold"] }
+"constant.numeric" = "orange"
+"constant.character" = "green"
 "constant.character.escape" = "blue"
 "string" = "green"
 "comment" = "muted"

@@ -1,6 +1,6 @@
 # fmind/theme
 
-A light theme for code, terminals and apps, and the Fmind design system. Native files live in one folder per app under `themes/`; [DESIGN.md](DESIGN.md) describes the design for agents and design tools.
+The Fmind design system and light theme: one palette for terminals, editors, coding agents, sites, charts and diagrams. [DESIGN.md](DESIGN.md) describes the design for agents and design tools; native files live in one folder per tool under `themes/`.
 
 [Previews](#previews) · [Design system](#design-system) · [Palette](#palette) · [Themes](#available-themes) · [Contribute](#contribute)
 
@@ -18,20 +18,21 @@ Synthetic terminal captures made with VHS. Download [wallpapers](wallpapers/READ
 
 ## Design system
 
-[DESIGN.md](DESIGN.md) is the single source for Fmind's visual identity: color roles, typography, layout, shapes, diagram components and do's and don'ts. It follows the [DESIGN.md format](https://github.com/google-labs-code/design.md) (alpha): YAML design tokens followed by prose rationale. Edit it here; consumers read it or export it instead of copying values.
+[DESIGN.md](DESIGN.md) is the single source for Fmind's visual identity: color roles, typography, layout, shapes, components, charts and do's and don'ts. It follows the [DESIGN.md format](https://github.com/google-labs-code/design.md) (alpha): YAML design tokens followed by prose rationale. Edit it here; consumers read it or use a ready-made file instead of copying values.
 
-| Consumer                                                                    | How it uses DESIGN.md                                                                                                                                       |
-| --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Coding agents (Antigravity, Claude Code, Copilot, OpenCode)                 | [fmind/dot](https://github.com/fmind/dot) deploys a checksummed copy to `~/.agents/DESIGN.md`, and its shared `AGENTS.md` persona points every agent to it. |
-| A project repository                                                        | Copy DESIGN.md to the project root, where design-aware agents look for it, or link to `~/.agents/DESIGN.md` from the project's `AGENTS.md`.                 |
-| [Google Stitch](https://stitch.withgoogle.com/docs/design-md/specification) | Provide DESIGN.md as the design system for generated UI; the format originates from Stitch.                                                                 |
-| Tailwind CSS v4 or v3                                                       | `npx @google/design.md@0.4.0 export --format css-tailwind DESIGN.md` emits an `@theme` block; `--format json-tailwind` emits v3 `theme.extend` JSON.        |
-| Figma variables, Style Dictionary, Tokens Studio                            | `npx @google/design.md@0.4.0 export --format dtcg DESIGN.md` emits [W3C Design Tokens](https://www.designtokens.org/) JSON.                                 |
-| Plain CSS (Zensical, static sites)                                          | `npx @google/design.md@0.4.0 export --format css-vars --prefix fmind DESIGN.md` emits custom properties.                                                    |
-| Diagrams, decks, illustrations and demos                                    | The `fmind-visuals` and `diagrams-as-code` skills in fmind/dot adapt the tokens to D2, Mermaid, SVG, Typst and VHS.                                         |
-| Terminals, editors and apps                                                 | Use the native files under `themes/`; [palette.yaml](checks/palette.yaml) maps the same colors to syntax and ANSI roles.                                    |
+| For                           | Use                                                                                                                                                       |
+| ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| A coding agent                | DESIGN.md itself. [fmind/dot](https://github.com/fmind/dot) deploys a checksummed copy to `~/.agents/DESIGN.md`, and its shared `AGENTS.md` points to it. |
+| A web page or rendered HTML   | [CSS custom properties](themes/css/), or the [Tailwind CSS](themes/tailwind/) and [daisyUI](themes/daisyui/) themes.                                      |
+| A documentation site          | The [Zensical](themes/zensical/) stylesheet, which also fits Material for MkDocs.                                                                         |
+| Highlighted code on a page    | [Pygments](themes/pygments/), [highlight.js](themes/highlightjs/) or [Prism](themes/prism/).                                                              |
+| A diagram                     | The [D2](themes/d2/) import or the [Mermaid](themes/mermaid/) configuration.                                                                              |
+| A chart                       | The [Matplotlib](themes/matplotlib/) style sheet or the [Streamlit](themes/streamlit/) theme.                                                             |
+| A terminal recording          | The [VHS](themes/vhs/) theme tape.                                                                                                                        |
+| Figma variables, other tokens | `npx @google/design.md@0.4.0 export --format dtcg DESIGN.md` emits [W3C Design Tokens](https://www.designtokens.org/) JSON.                               |
+| Logos, banners, wallpapers    | The approved [artwork](artworks/README.md), [social banners](banners/README.md) and [wallpapers](wallpapers/README.md), copied unchanged.                 |
 
-Validate changes with `mise run check:design`, which fails on any lint warning, and compare revisions with `npx @google/design.md@0.4.0 diff old.md DESIGN.md`.
+The CSS and Tailwind files are generated from DESIGN.md with `mise run tokens`. Validate a design change with `mise run check:design`, which fails on any lint warning or stale generated file, and compare revisions with `npx @google/design.md@0.4.0 diff old.md DESIGN.md`.
 
 ## Palette
 
@@ -64,168 +65,105 @@ The palette uses the 15 [Google News hex colors](https://partnermarketinghub.wit
 
 ## Available themes
 
-Choose a tool for installation instructions and theme files. Each tool's README cites the upstream format its files follow. Some ports are partial, and inclusion here does not certify native application support.
+Choose a tool for installation instructions and theme files. Each README cites the upstream format its files follow. The catalog covers the tools [fmind/dot](https://github.com/fmind/dot) deploys, the renderers Fmind projects publish with, and leading alternatives for developers on Linux and macOS.
+
+### Terminals
 
 - [Alacritty](themes/alacritty/)
-- [Alfred](themes/alfred/)
+- [Ghostty](themes/ghostty/)
+- [iTerm2](themes/iterm2/)
+- [Kitty](themes/kitty/)
+- [Prompt](themes/iterm2/#prompt)
+- [Terminal.app](themes/terminal-app/)
+- [Termux](themes/termux/)
+- [tmux](themes/tmux/)
+- [Warp](themes/warp/)
+- [WezTerm](themes/wezterm/)
+- [Zellij](themes/zellij/)
+
+### Shell and command-line tools
+
 - [Atuin](themes/atuin/)
-- [Base16](themes/base16/)
 - [bat](themes/bat/)
-- [Beamer](themes/beamer/)
-- [BetterDiscord](themes/betterdiscord/)
-- [Blender](themes/blender/)
 - [btop](themes/btop/)
-- [Chrome](themes/chrome/)
-- [Claude Code](themes/claude-code/)
-- [Cmder](themes/conemu/#cmder)
-- [ColorSlurp](themes/gimp/#colorslurp)
-- [ConEmu](themes/conemu/)
-- [Cursor](themes/vscode/#cursor)
 - [delta](themes/delta/)
 - [dircolors](themes/dircolors/)
-- [Django Admin](themes/django-admin/)
-- [DuckDuckGo](themes/duckduckgo/)
-- [Dunst](themes/dunst/)
-- [Eclipse](themes/eclipse/)
-- [Emacs](themes/emacs/)
+- [DuckDB](themes/duckdb/)
 - [eza](themes/eza/)
 - [Fastfetch](themes/fastfetch/)
-- [Figma](themes/figma/)
-- [Firefox](themes/firefox/)
 - [Fish](themes/fish/)
-- [foot](themes/foot/)
 - [fzf](themes/fzf/)
-- [GameMaker Studio](themes/gamemaker-studio/)
-- [ggplot2](themes/ggplot2/)
-- [Ghostty](themes/ghostty/)
-- [GIMP](themes/gimp/)
 - [Git](themes/git/)
-- [GitHub](themes/github/)
-- [GitHub Pages](themes/gh-pages/)
-- [Gitk](themes/gitk/)
-- [GitLab](themes/gitlab/)
-- [GNOME Terminal](themes/gnome-terminal/)
+- [GitHub CLI](themes/glamour/#github-cli)
+- [Glamour](themes/glamour/)
 - [GNU grep](themes/grep/)
-- [Godot](themes/godot/)
-- [Google Search](themes/google-search/)
-- [GRUB](themes/grub/)
-- [GTK](themes/gtk/)
-- [GtkSourceView](themes/gtksourceview/)
-- [Helix](themes/helix/)
-- [Hermes Agent](themes/hermes-agent/)
-- [highlight.js](themes/highlightjs/)
-- [Home Assistant](themes/home-assistant/)
-- [Hyprland](themes/hyprland/)
-- [i3](themes/i3/)
-- [IDLE](themes/idle/)
-- [Inkscape](themes/gimp/#inkscape)
-- [Insomnia](themes/insomnia/)
-- [iTerm2](themes/iterm2/)
-- [JDownloader 2](themes/jdownloader2/)
-- [Jellyfin](themes/jellyfin/)
-- [JetBrains](themes/jetbrains/)
-- [Joplin](themes/joplin/)
-- [JupyterLab](themes/jupyterlab/)
 - [k9s](themes/k9s/)
-- [Kate](themes/kate/)
-- [Kitty](themes/kitty/)
-- [Konsole](themes/konsole/)
-- [Krita](themes/gtk/kde/#krita)
-- [LabPlot](themes/gtk/kde/#labplot)
-- [LaTeX](themes/latex/)
 - [Lazydocker](themes/lazydocker/)
 - [LazyGit](themes/lazygit/)
-- [LibreOffice](themes/libreoffice/)
-- [Logseq](themes/logseq/)
 - [lsd](themes/lsd/)
-- [lualine](themes/lualine/)
 - [man pages](themes/man-pages/)
-- [Marp](themes/marp/)
-- [MATLAB](themes/matlab/)
-- [Matplotlib](themes/matplotlib/)
-- [Micro](themes/micro/)
-- [Microsoft Edge](themes/chrome/#microsoft-edge)
-- [Midnight Commander](themes/midnight-commander/)
-- [Mintty](themes/mintty/)
-- [MkDocs](themes/mkdocs/)
-- [MySQL Workbench](themes/mysql-workbench/)
-- [Neovim](themes/nvim/)
-- [Nextcloud](themes/nextcloud/)
-- [nnn](themes/nnn/)
-- [Notepad++](themes/notepad-plus-plus/)
-- [Obsidian](themes/obsidian/)
-- [Oh My Posh](themes/oh-my-posh/)
-- [Omarchy](themes/omarchy/)
-- [OpenCode](themes/opencode/)
-- [Pandoc](themes/pandoc/)
-- [Pi Coding Agent](themes/pi-coding-agent/)
-- [Polybar](themes/polybar/)
-- [Powerlevel10k](themes/powerlevel10k/)
-- [PowerShell](themes/powershell/)
-- [Prism](themes/prism/)
-- [Prompt](themes/iterm2/#prompt)
-- [Pygments](themes/pygments/)
-- [Qt Creator](themes/qtcreator/)
-- [Qt5 / Qt6](themes/qt5/)
-- [ranger](themes/ranger/)
-- [Raycast](themes/raycast/)
-- [Rio](themes/rio/)
+- [pgcli](themes/pgcli/)
 - [ripgrep](themes/ripgrep/)
-- [Rofi](themes/rofi/)
-- [RStudio](themes/rstudio/)
-- [Slack](themes/slack/)
-- [Spacemacs](themes/emacs/#spacemacs)
-- [Spicetify](themes/spicetify/)
-- [Spyder](themes/spyder/)
-- [Stack Overflow](themes/stackoverflow/)
-- [Starlight](themes/astro-starlight/)
 - [Starship](themes/starship/)
-- [Steam](themes/steam/)
-- [Streamlit](themes/streamlit/)
-- [Sublime Text](themes/sublime-text/)
-- [T3 Code](themes/t3code/)
-- [Tailwind](themes/tailwind/)
-- [Telegram](themes/telegram/)
-- [Telegram Android](themes/telegram-android/)
-- [Terminal.app](themes/terminal-app/)
-- [Terminator](themes/terminator/)
-- [Termux](themes/termux/)
-- [Textual](themes/textual/)
-- [Thunderbird](themes/thunderbird/)
-- [tig](themes/tig/)
-- [Tilix](themes/tilix/)
-- [tmux](themes/tmux/)
-- [Typora](themes/typora/)
-- [Unreal Engine](themes/unreal-engine/)
-- [Vesktop Discord](themes/vesktop-discord/)
-- [Vim](themes/vim/)
-- [Vimium](themes/vimium/)
-- [Visual Studio](themes/visual-studio/)
-- [Vivaldi](themes/chrome/#vivaldi)
-- [VS Code](themes/vscode/)
-- [Wallpaper](wallpapers/README.md)
-- [Warp](themes/warp/)
-- [Waybar](themes/waybar/)
-- [WezTerm](themes/wezterm/)
-- [Windows Terminal](themes/windows-terminal/)
-- [Wofi](themes/wofi/)
-- [WordPress](themes/wordpress/)
-- [Xfce4 Terminal](themes/xfce4-terminal/)
-- [Xresources](themes/xresources/)
 - [Yazi](themes/yazi/)
-- [YouTube](themes/youtube/)
-- [Zathura](themes/zathura/)
-- [Zed](themes/zed/)
-- [Zellij](themes/zellij/)
-- [Zsh](themes/zsh/)
 - [zsh-syntax-highlighting](themes/zsh-syntax-highlighting/)
+
+### Editors
+
+- [Cursor](themes/vscode/#cursor)
+- [Helix](themes/helix/)
+- [JetBrains](themes/jetbrains/)
+- [lualine](themes/lualine/)
+- [Neovim](themes/nvim/)
+- [Vim](themes/vim/)
+- [VS Code](themes/vscode/)
+- [Zed](themes/zed/)
+
+### Coding agents
+
+- [Claude Code](themes/claude-code/)
+- [Hermes Agent](themes/hermes-agent/)
+- [OpenCode](themes/opencode/)
+- [Pi Coding Agent](themes/pi-coding-agent/)
+- [T3 Code](themes/t3code/)
+
+### Sites and documentation
+
+- [CSS](themes/css/)
+- [daisyUI](themes/daisyui/)
+- [Django Admin](themes/django-admin/)
+- [highlight.js](themes/highlightjs/)
+- [Material for MkDocs](themes/zensical/#material-for-mkdocs)
+- [Prism](themes/prism/)
+- [Pygments](themes/pygments/)
+- [Starlight](themes/astro-starlight/)
+- [Tailwind CSS](themes/tailwind/)
+- [Zensical](themes/zensical/)
+
+### Data, diagrams and recordings
+
+- [D2](themes/d2/)
+- [JupyterLab](themes/jupyterlab/)
+- [Matplotlib](themes/matplotlib/)
+- [Mermaid](themes/mermaid/)
+- [Streamlit](themes/streamlit/)
+- [VHS](themes/vhs/)
+
+### Browsers and interchange
+
+- [Base16](themes/base16/)
+- [Chrome](themes/chrome/)
+- [Microsoft Edge](themes/chrome/#microsoft-edge)
+- [Vivaldi](themes/chrome/#vivaldi)
+
+For a tool without a port, start from the [Base16](themes/base16/) scheme or the palette above. Ports removed from the catalog remain available in [previous releases](https://github.com/fmind/theme/releases).
 
 ## Contribute
 
-Edit native files under `themes/` directly. New ports target widely used apps or developer, data and AI tools; niche apps, variants of existing ports and ports that need dependencies or build steps are declined. For a new or corrected port, add a `Format:` line to its README that links the upstream format or loader, document installation in that README, add its directory to the alphabetical list above, and test its actual colors and representative states. Report the app version and platform used; distinguish parser checks from native loading and visual testing.
+Edit native files under `themes/` directly. A port is kept or added only when fmind/dot deploys it, a Fmind project renders with it, or it is a leading developer, data or AI tool on Linux or macOS; consumer apps, desktop environments, website userstyles, Windows-only apps, variants of existing ports and ports that need dependencies or build steps are declined. For a new or corrected port, add a `Format:` line to its README that links the upstream format or loader, document installation in that README, add its directory to the matching list above in alphabetical order, and test its actual colors and representative states. Report the app version and platform used; distinguish parser checks from native loading and visual testing.
 
 Use only palette colors and keep text upright. Compute `0x` hex, decimal and Windows BGR color values carefully, because checks read only `#` hex colors. Name palette swatches with the color names above, and state the full installation destination, such as `~/.config/<app>/`, in each README.
 
-Run `mise install` and `mise run install` to install tools and Git hooks, `mise run format` to format, then `mise run all` to validate. Checks cover repository invariants such as palette colors, file syntax and links, not native loading, so verify changed themes manually in their apps. See [maintenance](AGENTS.md#maintenance) for hooks, formatting scope and tasks.
+Run `mise install` and `mise run install` to install tools and Git hooks, `mise run format` to format, then `mise run all` to validate. Checks cover repository invariants such as palette colors, file syntax and links, not native loading, so verify changed themes manually in their apps. See [maintenance](AGENTS.md#maintenance) for hooks, formatting scope and tasks; agents follow the [port procedure](.agents/skills/theme-port/SKILL.md).
 
 Releases use immutable annotated tags and source archives; maintainers follow the [release procedure](.agents/skills/theme-release/SKILL.md). Maintained alongside [fmind/dot](https://github.com/fmind/dot). [MIT license](LICENSE); bundled Google Sans retains its [OFL license](artworks/OFL.txt).

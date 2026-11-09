@@ -262,6 +262,8 @@ Diagram components carry fixed meanings; reinforce each with a label, shape or l
 - **diagram-step:** one numbered stage of a sequence; dark orange stroke.
 - **diagram-terminal:** where a flow starts or stops; solid charcoal box with its label inside.
 
+Charts order categorical series dark blue, teal, dark orange, purple, dark green, dark red: neutral hues come first, so green and red keep their success and error meaning. Past six series, group or facet instead of adding colors. Label series directly or vary dash and marker so color is never the only cue; axes and tick labels are dark gray and gridlines gray.
+
 Flows and arrows use dark blue. Inline code uses dark blue; code blocks sit on light gray. Status badges put white text on the dark shade of their role. Medium blue and medium red never carry text: they mark cursors, focus and error underlines. Current matches and active tabs use yellow, ordinary matches light yellow, and diffs the pale surface of their role.
 
 ## Do's and Don'ts

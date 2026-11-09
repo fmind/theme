@@ -1,0 +1,35 @@
+:root {
+  --fmind-color-canvas: #ffffff;
+  --fmind-color-panel: #f1f3f4;
+  --fmind-color-border: #9aa0a6;
+  --fmind-color-muted: #595d62;
+  --fmind-color-foreground: #202124;
+  --fmind-color-primary: #174ea6;
+  --fmind-color-focus: #4285f4;
+  --fmind-color-selection: #d2e3fc;
+  --fmind-color-error: #a50e0e;
+  --fmind-color-error-accent: #ea4335;
+  --fmind-color-error-surface: #fad2cf;
+  --fmind-color-warning: #934900;
+  --fmind-color-warning-accent: #e37400;
+  --fmind-color-highlight: #fbbc04;
+  --fmind-color-warning-surface: #feefc3;
+  --fmind-color-success: #0d652d;
+  --fmind-color-success-accent: #34a853;
+  --fmind-color-success-surface: #ceead6;
+  --fmind-color-type: #681da8;
+  --fmind-color-information: #00636d;
+  --fmind-spacing-unit: 4px;
+  --fmind-spacing-xs: 4px;
+  --fmind-spacing-sm: 8px;
+  --fmind-spacing-md: 16px;
+  --fmind-spacing-lg: 24px;
+  --fmind-spacing-xl: 32px;
+  --fmind-spacing-reading-width: 768px;
+  --fmind-spacing-page-width: 1152px;
+  --fmind-rounded-md: 8px;
+  --fmind-rounded-lg: 12px;
+  --fmind-rounded-xl: 16px;
+  --fmind-rounded-full: 9999px;
+}
+

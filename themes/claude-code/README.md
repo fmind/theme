@@ -1,6 +1,10 @@
 # Fmind for Claude Code
 
+Files: [config.json](config.json).
+
 Format: [theme setting](https://code.claude.com/docs/en/settings-reference#theme) · [Match the color theme](https://code.claude.com/docs/en/terminal-config#match-the-color-theme)
+
+## Installation
 
 Use a Fmind terminal palette, then run `/theme` in Claude Code and select **Light (ANSI colors only)**. This preserves the terminal’s 16-color palette. Ordinary Light mode can use its own colors.
 

@@ -2,6 +2,8 @@
 
 Fmind theme for [Pi Coding Agent](https://github.com/earendil-works/pi).
 
+Files: [fmind.json](fmind.json).
+
 Format: [Pi themes](https://github.com/earendil-works/pi/blob/main/packages/coding-agent/docs/themes.md) · [theme schema](https://pi.dev/schemas/theme.schema.json)
 
 ## Installation

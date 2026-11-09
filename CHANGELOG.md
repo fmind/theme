@@ -4,23 +4,41 @@
 
 ### Breaking
 
-- Fold duplicate and README-only ports into the port whose files they use; their folders and raw download paths no longer exist. Cursor is now a section of [VS Code](themes/vscode/#cursor) (its theme file was identical), Inkscape of [GIMP](themes/gimp/#inkscape) (identical palette), and Microsoft Edge and Vivaldi of [Chrome](themes/chrome/#microsoft-edge). The theme index still lists every app.
+- Focus the catalog on what Fmind uses: a port stays when fmind/dot deploys it, a Fmind project renders with it, or it is a leading developer, data or AI tool on Linux or macOS. 88 ports for consumer, chat, media and game apps, desktop environments, website userstyles, Windows-only apps and tools outside that stack are removed, and their `themes/<app>/` raw download paths no longer exist; version 8.0.1 keeps them. Removed: `alfred`, `beamer`, `betterdiscord`, `blender`, `conemu`, `duckduckgo`, `dunst`, `eclipse`, `emacs`, `figma`, `firefox`, `foot`, `gamemaker-studio`, `ggplot2`, `gh-pages`, `gimp`, `github`, `gitk`, `gitlab`, `gnome-terminal`, `godot`, `google-search`, `grub`, `gtk`, `gtksourceview`, `home-assistant`, `hyprland`, `i3`, `idle`, `insomnia`, `jdownloader2`, `jellyfin`, `joplin`, `kate`, `konsole`, `latex`, `libreoffice`, `logseq`, `marp`, `matlab`, `micro`, `midnight-commander`, `mintty`, `mysql-workbench`, `nextcloud`, `nnn`, `notepad-plus-plus`, `obsidian`, `oh-my-posh`, `omarchy`, `pandoc`, `polybar`, `powerlevel10k`, `powershell`, `qt5`, `qtcreator`, `ranger`, `raycast`, `rio`, `rofi`, `rstudio`, `slack`, `spicetify`, `spyder`, `stackoverflow`, `steam`, `sublime-text`, `telegram`, `telegram-android`, `terminator`, `textual`, `thunderbird`, `tig`, `tilix`, `typora`, `unreal-engine`, `vesktop-discord`, `vimium`, `visual-studio`, `waybar`, `windows-terminal`, `wofi`, `wordpress`, `xfce4-terminal`, `xresources`, `youtube`, `zathura`, `zsh`. Their README sections for Cmder, ColorSlurp, Inkscape, Krita, LabPlot and Spacemacs go with them.
+- MkDocs is now [Zensical](themes/zensical/): `themes/mkdocs/fmind.css` moves to `themes/zensical/fmind.css`, which also serves [Material for MkDocs](themes/zensical/#material-for-mkdocs). The stylesheet now applies to the `default` (light) scheme only, so set `scheme: default` with `primary: custom` and `accent: custom`.
+- Tailwind: the v3 preset `themes/tailwind/fmind.js` is replaced by `themes/tailwind/fmind.css`, a Tailwind CSS v4 `@theme` file generated from DESIGN.md. Colors use the DESIGN.md token names (`fmind-ground` becomes `canvas`, `fmind-text` becomes `foreground`, `fmind-accent` becomes `focus`), and the file adds the type, radius and spacing tokens.
+- Fold duplicate ports into the port whose files they use; their folders and raw download paths no longer exist. Cursor is now a section of [VS Code](themes/vscode/#cursor) (its theme file was identical), and Microsoft Edge and Vivaldi of [Chrome](themes/chrome/#microsoft-edge).
 - Remove NetBeans and qBittorrent: both needed a build step (`zip`, `rcc`) before the app could load them.
-- GTK: remove the unfinished SDDM login theme (`themes/gtk/kde/sddm/`), the experimental Plasma lock-screen, logout and OSD components of the global theme (Plasma keeps its own session screens), and the HiDPI Xfwm variants (`themes/gtk/variants/`).
+
+### Added
+
+- [D2](themes/d2/): an import that sets theme overrides, a white canvas, dark blue connections and the seven `diagram-*` classes of DESIGN.md, so unclassed shapes use palette colors too.
+- [Mermaid](themes/mermaid/): a configuration file for the `base` theme that covers flowchart, sequence, state, class, entity, Gantt, pie, mindmap, timeline and Git diagrams.
+- [VHS](themes/vhs/): a theme tape with the Ghostty colors, cursor and selection; this repository's screenshots now record with it.
+- [CSS](themes/css/) custom properties and a [daisyUI](themes/daisyui/) 5 theme, next to the Tailwind file. `mise run tokens` regenerates the CSS and Tailwind files from DESIGN.md, and `mise run check:design` fails when they are stale.
+- [DuckDB](themes/duckdb/) CLI highlighting, [pgcli](themes/pgcli/) menus, toolbar and query syntax, and a [Glamour](themes/glamour/) style for Markdown in the [GitHub CLI](themes/glamour/#github-cli).
+- DESIGN.md: the order of categorical chart series (dark blue, teal, dark orange, purple, dark green, dark red) and chart axis rules.
 
 ### Fixed
 
+- Zensical: code blocks use the Fmind syntax colors, and marks, keys, tables and the classic footer use palette colors.
+- Pygments: constants and `True`, `False` and `None` are bold dark orange, tags bold dark blue, and regular expressions and interpolations dark blue, as in Neovim.
+- highlight.js and Prism: regular expressions are dark blue and booleans bold, as in Neovim; highlight.js links are dark blue, and Prism keywords and constants are bold.
+- Matplotlib and Streamlit: chart series follow the DESIGN.md order, so red and green no longer sit next to each other in second and third place.
 - Terminal.app: the cursor is medium blue `#4285F4`, as in the other terminals.
-- Contrast: control borders use dark gray `#595D62` in Django Admin, Streamlit and the Cinnamon scrollbar; gray `#9AA0A6` no longer carries text in Vim (`NonText`, `SpecialKey`), Telegram Desktop (disabled menu items) and JDownloader 2 (disabled labels); Raycast yellow is dark orange `#934900`.
-- Semantics: hint diagnostics are purple in VS Code and Helix; Prism operators are charcoal, CSS strings green and namespaces fully opaque; highlight.js decorators are purple and interpolations charcoal; micro and Notepad++ highlight all search matches in light yellow; Vim conditionals, loops and labels are bold like other keywords, and exceptions are red.
+- Contrast: control borders use dark gray `#595D62` in Django Admin and Streamlit; gray `#9AA0A6` no longer carries text in Vim (`NonText`, `SpecialKey`).
+- Semantics: hint diagnostics are purple in VS Code and Helix; Prism operators are charcoal, CSS strings green and namespaces fully opaque; highlight.js decorators are purple and interpolations charcoal; Vim conditionals, loops and labels are bold like other keywords, and exceptions are red.
+- Vim, Helix and Zed: named constants and booleans are bold dark orange, and Zed tags are bold, as in Neovim, bat and VS Code.
 - lsd and LazyGit use palette hex colors instead of ANSI color names, so they no longer depend on the terminal palette.
 - tmux: drop `pane-border-format`, a layout setting.
-- Installation: Telegram (no `tiled.png`), Visual Studio (the file also sets the editor font), WordPress (registration snippet), Claude Code (settings file), DuckDuckGo (the URL color matches the userstyle), Home Assistant and Xfce4 Terminal (theme name), Lazydocker (path), Raycast (all twelve colors) and Unity (four of the 28 files are links).
+- Installation: Claude Code (settings file) and Lazydocker (path).
 
 ### Maintenance
 
+- README lists the catalog by category and maps each kind of output (page, documentation site, diagram, chart, recording) to its ready-made file.
+- Add the `theme-port` skill for adding, fixing and removing ports; the release skill covers the generated token files.
+- Checks require every port to appear once in its README category, in alphabetical order, and fail when two ports ship a byte-identical theme file; tests that matched no remaining file are removed.
 - Artwork SVGs embed the logo once instead of twice (1.1 MB each instead of 2.2 MB; the PNG exports are byte-identical), and the generator no longer needs Typer and Rich (2 locked packages instead of 10).
-- Checks fail when two ports ship a byte-identical theme file; a test that matched no file is removed.
 - Remove the unused `check:leaks:full` task and the redundant CI install step, format `.github/jactionlint.yaml`, and capture screenshots with the data-only fish theme.
 - Theme READMEs share one title (`Fmind for <app>`) and one `Installation` heading.
 - Python stays at 3.14.10: PyYAML 6.0.3, the latest release, ships no Python 3.15 wheel.
@@ -73,7 +91,7 @@
 
 ### Breaking
 
-- Remove the README-only folders `themes/cmder/`, `themes/color-slurp/`, `themes/krita/`, `themes/labplot/`, `themes/prompt/`, `themes/spacemacs/`, `themes/textastic/` and `themes/wallpaper/`. Their install steps move to a section of the theme they use: [ConEmu](themes/conemu/#cmder), [GIMP](themes/gimp/#colorslurp), [KDE](themes/gtk/kde/#krita), [iTerm2](themes/iterm2/#prompt), [Emacs](themes/emacs/#spacemacs), TextMate (removed in a later release) and [wallpapers](wallpapers/README.md). The theme index still lists every app.
+- Remove the README-only folders `themes/cmder/`, `themes/color-slurp/`, `themes/krita/`, `themes/labplot/`, `themes/prompt/`, `themes/spacemacs/`, `themes/textastic/` and `themes/wallpaper/`. Their install steps move to a section of the theme they use: ConEmu, GIMP, KDE, [iTerm2](themes/iterm2/#prompt), Emacs, TextMate (removed in a later release) and [wallpapers](wallpapers/README.md). The theme index still lists every app.
 - Ghostty: the theme sets `faint-opacity`, so it requires Ghostty 1.2.0 or later.
 
 ### Added
