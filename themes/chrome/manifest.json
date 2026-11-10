@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Fmind",
-  "version": "9.0.0",
+  "version": "10.0.0",
   "description": "Fmind light browser theme.",
   "theme": {
     "colors": {
