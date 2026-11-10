@@ -6,4 +6,4 @@ Format: [bat: adding new themes](https://github.com/sharkdp/bat#adding-new-theme
 
 ## Installation
 
-Copy to the `themes/` directory under `bat --config-dir`; run `bat cache --build`, then select `--theme=fmind`.
+Copy `fmind.tmTheme` to `$(bat --config-dir)/themes/fmind.tmTheme` (typically `~/.config/bat/themes/fmind.tmTheme`), run `bat cache --build`, and set `--theme=fmind` in `~/.config/bat/config`.

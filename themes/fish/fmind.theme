@@ -14,7 +14,7 @@ fish_color_quote 0d652d
 fish_color_escape 174ea6
 fish_color_redirection 681da8
 fish_color_operator 202124
-fish_color_end 934900 --bold
+fish_color_end 202124
 fish_color_error a50e0e --bold
 fish_color_comment 595d62
 fish_color_autosuggestion 595d62
@@ -24,11 +24,10 @@ fish_color_cwd_root a50e0e --bold
 fish_color_user 202124
 fish_color_host 681da8
 fish_color_host_remote 934900
-fish_color_selection --background=d2e3fc
-fish_color_search_match --background=d2e3fc
+fish_color_selection 202124 --background=d2e3fc
+fish_color_search_match 202124 --background=feefc3
 fish_color_valid_path --underline
-# Choosing a theme clears colors it omits; these restore the fish defaults that fmind.fish leaves in place.
-fish_color_status red
+fish_color_status a50e0e
 fish_color_history_current --bold
 
 # Completion pager

@@ -48,9 +48,12 @@
 "ui.statusline" = { fg = "text", bg = "panel" }
 "ui.statusline.inactive" = { fg = "muted", bg = "panel" }
 "ui.statusline.normal" = { fg = "text", bg = "cursor", modifiers = ["bold"] }
-"ui.statusline.insert" = { fg = "text", bg = "added", modifiers = ["bold"] }
+"ui.statusline.insert" = { fg = "text", bg = "mode", modifiers = ["bold"] }
 "ui.statusline.select" = { fg = "text", bg = "yellow", modifiers = ["bold"] }
 "ui.statusline.separator" = "border"
+"ui.bufferline" = { fg = "muted", bg = "panel" }
+"ui.bufferline.active" = { fg = "text", bg = "yellow", modifiers = ["bold"] }
+"ui.bufferline.background" = { bg = "panel" }
 "ui.popup" = { fg = "text", bg = "panel" }
 "ui.popup.info" = { fg = "text", bg = "panel" }
 "ui.window" = "border"
@@ -69,8 +72,8 @@
 "error" = "red"
 "info" = "teal"
 "hint" = "purple"
-"diagnostic.warning" = { underline = { color = "orange", style = "curl" } }
-"diagnostic.error" = { underline = { color = "red", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "warning_accent", style = "curl" } }
+"diagnostic.error" = { underline = { color = "error_accent", style = "curl" } }
 "diagnostic.info" = { underline = { color = "teal", style = "curl" } }
 "diagnostic.hint" = { underline = { color = "purple", style = "curl" } }
 "diagnostic.unnecessary" = { fg = "muted" }
@@ -88,6 +91,9 @@ orange = "#934900"
 purple = "#681da8"
 teal = "#00636d"
 cursor = "#4285f4"
+mode = "#34a853"
+warning_accent = "#e37400"
+error_accent = "#ea4335"
 yellow = "#fbbc04"
 panel = "#f1f3f4"
 selection = "#d2e3fc"

@@ -14,7 +14,7 @@ Edge loads the same theme manifest. Open `edge://extensions`, enable Developer m
 
 ## Vivaldi
 
-Vivaldi has its own themes ([Vivaldi Themes](https://help.vivaldi.com/desktop/appearance-customization/themes/)). Its **Open Theme** expects a theme ZIP file, so create the theme in the editor:
+Vivaldi has its own themes ([Vivaldi Themes](https://help.vivaldi.com/desktop/appearance-customization/browser-themes/)). Its **Open Theme** expects a theme ZIP file, so create the theme in the editor:
 
 1. Open **Settings** → **Themes** and click **New Theme** after the existing themes.
 2. Name it `Fmind`.

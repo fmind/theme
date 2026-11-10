@@ -8,8 +8,8 @@ Format: [less(1) LESS_TERMCAP_xx](https://man7.org/linux/man-pages/man1/less.1.h
 
 ## Installation
 
-Source [fmind.sh](fmind.sh) in your `~/.bashrc` or `~/.zshrc`:
+Copy [fmind.sh](fmind.sh) to `~/.config/man-pages/fmind.sh` and source it in `~/.bashrc` or `~/.zshrc`:
 
 ```sh
-source /path/to/man-pages/fmind.sh
+. "$HOME/.config/man-pages/fmind.sh"
 ```

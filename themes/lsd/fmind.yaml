@@ -9,6 +9,14 @@ permission:
   exec: "#0d652d"
   exec-sticky: "#681da8"
   no-access: "#595d62"
+  octal: "#681da8"
+  acl: "#00636d"
+  context: "#00636d"
+attributes:
+  archive: "#934900"
+  read: "#0d652d"
+  hidden: "#595d62"
+  system: "#681da8"
 date:
   hour-old: "#00636d"
   day-old: "#0d652d"
@@ -31,6 +39,7 @@ git-status:
   ignored: "#595d62"
   new-in-index: "#0d652d"
   new-in-workdir: "#0d652d"
+  typechange: "#934900"
   deleted: "#a50e0e"
   renamed: "#00636d"
   modified: "#934900"

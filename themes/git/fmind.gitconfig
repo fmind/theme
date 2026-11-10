@@ -4,6 +4,7 @@
 [color]
 	ui = true
 [color "diff"]
+	commit = "#934900"
 	meta = "#595d62"
 	frag = "#174ea6"
 	old = "#a50e0e"
@@ -15,6 +16,7 @@
 	added = "#0d652d"
 	changed = "#934900"
 	untracked = "#174ea6"
+	unmerged = "#a50e0e"
 	branch = "#174ea6"
 	nobranch = "#a50e0e"
 	# Short-format branch line (git status -sb); matches [color "branch"] and decorations.
@@ -30,3 +32,9 @@
 	tag = "#934900"
 	stash = "#595d62"
 	HEAD = "#681da8"
+[color "grep"]
+	filename = "#174ea6 bold"
+	linenumber = "#595d62"
+	column = "#595d62"
+	separator = "#595d62"
+	match = "#202124 #feefc3 bold"

@@ -31,7 +31,7 @@
   --md-code-hl-keyword-color: #174ea6;
   --md-code-hl-function-color: #174ea6;
   --md-code-hl-special-color: #174ea6;
-  --md-code-hl-constant-color: #934900;
+  --md-code-hl-constant-color: #681da8;
   --md-code-hl-string-color: #0d652d;
   --md-code-hl-number-color: #934900;
   --md-code-hl-comment-color: #595d62;
@@ -56,4 +56,37 @@
   /* The classic variant and Material for MkDocs draw a dark footer. */
   --md-footer-bg-color: #202124;
   --md-footer-bg-color--dark: #202124;
+
+  & .md-typeset :not(pre) > code {
+    color: #174ea6;
+  }
+
+  & .md-typeset figcaption,
+  & .md-search-result__terms {
+    font-style: normal;
+  }
+
+  & .highlight :is(.k, .kd, .kn, .kp, .kr, .ow, .nt) {
+    color: #174ea6;
+    font-weight: 700;
+  }
+
+  & .highlight :is(.kc, .no) {
+    color: #934900;
+    font-weight: 700;
+  }
+
+  & .highlight :is(.kt, .nc, .nd, .na) {
+    color: #681da8;
+    font-weight: 400;
+  }
+
+  & .highlight :is(.ne, .gr, .gt, .err) {
+    color: #a50e0e;
+  }
+
+  & .highlight .linenos,
+  & .md-typeset .linenodiv pre {
+    color: #595d62;
+  }
 }

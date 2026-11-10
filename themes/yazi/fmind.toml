@@ -104,21 +104,35 @@ hovered = { fg = "#202124", italic = false, reversed = false, bg = "#d2e3fc", bo
 [icon]
 # Yazi starts from its dark preset when the terminal does not report a light background,
 # and both presets color these fallbacks and folders below 3:1 on white.
-# Orphan and dummy icons sit on the red row that [filetype] gives them.
-prepend_dirs = [
+# Orphan and dummy icons sit on the red row that [filetype] gives them, and switch to
+# dark red when the hovered selection bar (#d2e3fc) paints behind them.
+dirs = [
   { name = ".config", text = "", fg = "#934900" },
+  { name = ".git", text = "", fg = "#00636d" },
   { name = ".github", text = "", fg = "#174ea6" },
   { name = ".npm", text = "", fg = "#174ea6" },
+  { name = "Desktop", text = "", fg = "#00636d" },
+  { name = "Development", text = "", fg = "#00636d" },
+  { name = "Documents", text = "", fg = "#00636d" },
+  { name = "Downloads", text = "", fg = "#00636d" },
+  { name = "Library", text = "", fg = "#00636d" },
+  { name = "Movies", text = "", fg = "#00636d" },
+  { name = "Music", text = "", fg = "#00636d" },
+  { name = "Pictures", text = "", fg = "#00636d" },
+  { name = "Public", text = "", fg = "#00636d" },
+  { name = "Videos", text = "", fg = "#00636d" },
 ]
 conds = [
+  { if = "orphan & hovered", text = "", fg = "#a50e0e" },
   { if = "orphan", text = "", fg = "#ffffff" },
+  { if = "dummy & hovered", text = "", fg = "#a50e0e" },
+  { if = "dummy", text = "", fg = "#ffffff" },
   { if = "link", text = "", fg = "#595d62" },
   { if = "block", text = "", fg = "#934900" },
   { if = "char", text = "", fg = "#934900" },
   { if = "fifo", text = "", fg = "#934900" },
   { if = "sock", text = "", fg = "#934900" },
   { if = "sticky", text = "", fg = "#934900" },
-  { if = "dummy", text = "", fg = "#ffffff" },
   { if = "dir & hovered", text = "", fg = "#174ea6" },
   { if = "dir", text = "", fg = "#174ea6" },
   { if = "exec", text = "", fg = "#0d652d" },

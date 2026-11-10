@@ -6,4 +6,4 @@ Format: [lazygit Config.md color attributes](https://github.com/jesseduffield/la
 
 ## Installation
 
-Merge `gui.colorScheme` and `gui.theme` into `config.yml` in the directory shown by `lazygit --print-config-dir`.
+Merge `gui.colorScheme` and `gui.theme` into `config.yml` in `lazygit --print-config-dir` (`~/.config/lazygit/config.yml` on Linux, `~/Library/Application Support/lazygit/config.yml` on macOS).

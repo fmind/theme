@@ -6,4 +6,4 @@ Format: [WezTerm color scheme files](https://wezterm.org/config/appearance.html#
 
 ## Installation
 
-Copy to `~/.config/wezterm/colors/fmind.toml`; set `config.color_scheme = "fmind"` in `wezterm.lua`.
+Copy to `~/.config/wezterm/colors/fmind.toml`; set `config.color_scheme = "fmind"` in `~/.config/wezterm/wezterm.lua`.

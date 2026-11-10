@@ -26,8 +26,61 @@ COLORS = {*PALETTE["official"], *PALETTE["custom"]}
 XML_SUFFIXES = {".icls"}
 # Hex colors as #rrggbb, #rrggbbaa or #aarrggbb. Short forms are skipped: anchors, issue numbers and CSS IDs match them.
 HEX = re.compile(r"(?<![\w&#/])#([0-9a-f]{6}|[0-9a-f]{8})(?![\w-])", re.IGNORECASE)
+# Truecolor ANSI SGR sequences (38 foreground, 48 background, 58 underline) in semicolon or ISO-8613-6 colon form.
+SGR_RGB = re.compile(r"(?<!\d)(?:38|48|58)(?:;2;|:2::?)(\d{1,3})[;:](\d{1,3})[;:](\d{1,3})(?!\d)")
+# Standard 16-color and attribute SGR parameters valid in .dircolors, LS_COLORS, GREP_COLORS and JQ_COLORS.
+SGR_CODES = {
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    *range(22, 30),
+    *range(30, 38),
+    39,
+    *range(40, 48),
+    49,
+    *range(90, 98),
+    *range(100, 108),
+}
+DIRCOLORS_KEYWORDS = {"COLOR", "COLORTERM", "EIGHTBIT", "OPTIONS", "TERM"}
+SGR_ENV = re.compile(r"\b(LS_COLORS|GREP_COLORS|JQ_COLORS)=['\"]([^'\"]+)['\"]")
 # Release versions are X.Y.Z; native format and API versions such as 2, "1" or 1.0 are ignored.
 SEMVER = re.compile(r"\d+\.\d+\.\d+")
+
+
+def bad_sgr(seq: str) -> list[str]:
+    """Return off-palette RGB triplets or invalid SGR codes (such as bare R;G;B or 38;5;N) in an SGR parameter string."""
+    if not seq:
+        return []
+    parts = seq.split(";")
+    invalid = []
+    index = 0
+    while index < len(parts):
+        if not parts[index].isdigit():
+            return [seq]
+        code = int(parts[index])
+        if (
+            code in (38, 48, 58)
+            and index + 4 < len(parts)
+            and parts[index + 1] == "2"
+            and all(part.isdigit() for part in parts[index + 2 : index + 5])
+        ):
+            channels = tuple(int(part) for part in parts[index + 2 : index + 5])
+            value = f"#{channels[0]:02x}{channels[1]:02x}{channels[2]:02x}"
+            if any(channel > 255 for channel in channels) or value not in COLORS:
+                invalid.append(f"{channels[0]};{channels[1]};{channels[2]}")
+            index += 5
+        elif code in SGR_CODES:
+            index += 1
+        else:
+            invalid.append(seq)
+            break
+    return invalid
 
 
 def files(*pathspecs):
@@ -220,6 +273,22 @@ class SharedTests(unittest.TestCase):
                 # An 8-digit value is #rrggbbaa or #aarrggbb, so either 6-digit part may hold the color.
                 if not {"#" + value[:6].lower(), "#" + value[-6:].lower()} & COLORS:
                     off_palette.append(f"{path.relative_to(ROOT)}: #{value}")
+            for red, green, blue in SGR_RGB.findall(text):
+                channels = (int(red), int(green), int(blue))
+                value = f"#{channels[0]:02x}{channels[1]:02x}{channels[2]:02x}"
+                if any(channel > 255 for channel in channels) or value not in COLORS:
+                    off_palette.append(f"{path.relative_to(ROOT)}: {red};{green};{blue}")
+            if path.name == ".dircolors":
+                for line in text.splitlines():
+                    if line.strip() and not line.lstrip().startswith("#"):
+                        key, sgr = line.split(None, 1)
+                        if key not in DIRCOLORS_KEYWORDS:
+                            off_palette += [f"{path.relative_to(ROOT)}: {item}" for item in bad_sgr(sgr)]
+            for var, raw in SGR_ENV.findall(text):
+                for entry in raw.split(":"):
+                    if entry:
+                        sgr = entry.split("=", 1)[-1] if var != "JQ_COLORS" else entry
+                        off_palette += [f"{path.relative_to(ROOT)}: {item}" for item in bad_sgr(sgr)]
         self.assertEqual(off_palette, [])
 
     def test_ports_do_not_share_identical_files(self):
@@ -235,6 +304,15 @@ class SharedTests(unittest.TestCase):
     def test_hex_colors_skip_anchors_and_references(self):
         text = "[Add the theme](#add-the-theme), [Decade](#decade-notes), issue #123, #feed, `#174EA6`, '#80fbbc04'"
         self.assertEqual(HEX.findall(text), ["174EA6", "80fbbc04"])
+
+    def test_sgr_and_ls_colors_validation(self):
+        sample = "ms=01;38;2;32;33;36;48;2;254;239;195:fn=38:2::23:78:166"
+        self.assertEqual(SGR_RGB.findall(sample), [("32", "33", "36"), ("254", "239", "195"), ("23", "78", "166")])
+        self.assertEqual(bad_sgr("01;04;31"), [])
+        self.assertEqual(bad_sgr("01;38;2;23;78;166;48;2;254;239;195"), [])
+        self.assertEqual(bad_sgr("23;78;166"), ["23;78;166"])
+        self.assertEqual(bad_sgr("38;5;196"), ["38;5;196"])
+        self.assertEqual(bad_sgr("01;38;2;1;2;3"), ["1;2;3"])
 
     def test_artwork_manifest(self):
         artwork = ROOT / "artworks"

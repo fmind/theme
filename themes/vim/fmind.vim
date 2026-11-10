@@ -46,6 +46,7 @@ highlight FoldColumn guifg=#595d62 guibg=#ffffff gui=NONE cterm=NONE
 highlight Folded guifg=#595d62 guibg=#f1f3f4 gui=NONE cterm=NONE
 highlight NonText guifg=#595d62 guibg=NONE gui=NONE cterm=NONE
 highlight SpecialKey guifg=#595d62 guibg=NONE gui=NONE cterm=NONE
+highlight Conceal guifg=#595d62 guibg=NONE gui=NONE cterm=NONE
 highlight EndOfBuffer guifg=#595d62 guibg=#ffffff gui=NONE cterm=NONE
 highlight Visual guifg=NONE guibg=#d2e3fc gui=NONE cterm=NONE
 highlight VisualNOS guifg=NONE guibg=#d2e3fc gui=NONE cterm=NONE
@@ -77,16 +78,16 @@ highlight DiffAdd guifg=NONE guibg=#ceead6 gui=NONE cterm=NONE
 highlight DiffDelete guifg=#a50e0e guibg=#fad2cf gui=NONE cterm=NONE
 highlight DiffChange guifg=NONE guibg=#feefc3 gui=NONE cterm=NONE
 highlight DiffText guifg=#202124 guibg=#fbbc04 gui=NONE cterm=NONE
-highlight SpellBad guifg=NONE guibg=NONE gui=undercurl cterm=undercurl guisp=#a50e0e
-highlight SpellCap guifg=NONE guibg=NONE gui=undercurl cterm=undercurl guisp=#934900
+highlight Added guifg=#0d652d guibg=NONE gui=NONE cterm=NONE
+highlight Changed guifg=#934900 guibg=NONE gui=NONE cterm=NONE
+highlight Removed guifg=#a50e0e guibg=NONE gui=NONE cterm=NONE
+highlight ToolbarLine guifg=#595d62 guibg=#f1f3f4 gui=NONE cterm=NONE
+highlight ToolbarButton guifg=#202124 guibg=#d2e3fc gui=bold cterm=bold
+highlight SpellBad guifg=NONE guibg=NONE gui=undercurl cterm=undercurl guisp=#ea4335
+highlight SpellCap guifg=NONE guibg=NONE gui=undercurl cterm=undercurl guisp=#e37400
 highlight SpellRare guifg=NONE guibg=NONE gui=undercurl cterm=undercurl guisp=#681da8
 highlight SpellLocal guifg=NONE guibg=NONE gui=undercurl cterm=undercurl guisp=#00636d
 highlight debugPC guifg=NONE guibg=#feefc3 gui=NONE cterm=NONE
 highlight debugBreakpoint guifg=#a50e0e guibg=NONE gui=NONE cterm=NONE
 
-let g:terminal_ansi_colors = [
-      \ "#202124", "#a50e0e", "#0d652d", "#934900",
-      \ "#174ea6", "#681da8", "#00636d", "#202124",
-      \ "#595d62", "#a50e0e", "#0d652d", "#934900",
-      \ "#174ea6", "#681da8", "#00636d", "#202124"
-      \ ]
+let g:terminal_ansi_colors = ["#202124", "#a50e0e", "#0d652d", "#934900", "#174ea6", "#681da8", "#00636d", "#202124", "#595d62", "#a50e0e", "#0d652d", "#934900", "#174ea6", "#681da8", "#00636d", "#202124"]

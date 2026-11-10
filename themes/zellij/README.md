@@ -6,4 +6,4 @@ Format: [Zellij themes](https://zellij.dev/documentation/themes) · [Zellij them
 
 ## Installation
 
-Copy to `~/.config/zellij/themes/fmind.kdl`; set `theme "fmind"`. Uses named styles (0.42+).
+Copy to `~/.config/zellij/themes/fmind.kdl`; set `theme "fmind"` in `~/.config/zellij/config.kdl`. Uses named styles (0.42+).

@@ -38,7 +38,8 @@
   },
   "h5": {
     "prefix": "##### ",
-    "color": "#202124"
+    "color": "#202124",
+    "bold": false
   },
   "h6": {
     "prefix": "###### ",
@@ -75,7 +76,7 @@
   },
   "link_text": {
     "color": "#174ea6",
-    "bold": true
+    "bold": false
   },
   "image": {
     "color": "#681da8",
@@ -140,7 +141,7 @@
         "bold": true
       },
       "name_attribute": {
-        "color": "#202124"
+        "color": "#681da8"
       },
       "name_class": {
         "color": "#681da8"

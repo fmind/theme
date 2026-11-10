@@ -28,47 +28,47 @@ typography:
     fontFamily: Google Sans
     fontSize: 48px
     fontWeight: 700
-    lineHeight: 1.25
+    lineHeight: "1.25"
   headline-lg:
     fontFamily: Google Sans
     fontSize: 36px
     fontWeight: 700
-    lineHeight: 1.25
+    lineHeight: "1.25"
   headline-md:
     fontFamily: Google Sans
     fontSize: 24px
     fontWeight: 600
-    lineHeight: 1.375
+    lineHeight: "1.375"
   headline-sm:
     fontFamily: Google Sans
     fontSize: 20px
     fontWeight: 600
-    lineHeight: 1.375
+    lineHeight: "1.375"
   body-lg:
     fontFamily: Google Sans
     fontSize: 18px
     fontWeight: 400
-    lineHeight: 1.625
+    lineHeight: "1.625"
   body-md:
     fontFamily: Google Sans
     fontSize: 16px
     fontWeight: 400
-    lineHeight: 1.625
+    lineHeight: "1.625"
   body-sm:
     fontFamily: Google Sans
     fontSize: 14px
     fontWeight: 400
-    lineHeight: 1.5
+    lineHeight: "1.5"
   label-md:
     fontFamily: Google Sans
     fontSize: 12px
     fontWeight: 600
-    lineHeight: 1.5
+    lineHeight: "1.5"
   code-md:
     fontFamily: Google Sans Code
     fontSize: 14px
     fontWeight: 400
-    lineHeight: 1.6
+    lineHeight: "1.6"
 rounded:
   md: 8px
   lg: 12px

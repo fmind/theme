@@ -2,7 +2,7 @@
 
 Files: [fmind.toml](fmind.toml).
 
-Format: [Starship palettes](https://starship.rs/config/#palettes) · [Starship color parser](https://github.com/starship/starship/blob/master/src/config.rs)
+Format: [Starship palettes](https://starship.rs/config/#prompt) · [Starship color parser](https://github.com/starship/starship/blob/main/src/config.rs)
 
 ## Installation
 

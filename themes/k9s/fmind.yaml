@@ -31,7 +31,7 @@ k9s:
     fgColor: *text
     bgColor: *background
     buttonFgColor: *text
-    buttonBgColor: &blueFill "#4285f4"
+    buttonBgColor: &panel "#f1f3f4"
     buttonFocusFgColor: *text
     buttonFocusBgColor: &yellow "#fbbc04"
     labelFgColor: *purple
@@ -47,7 +47,7 @@ k9s:
       numKeyColor: *amber
     crumbs:
       fgColor: *text
-      bgColor: *blueFill
+      bgColor: &selection "#d2e3fc"
       activeColor: *yellow
     status:
       newColor: *green
@@ -69,7 +69,7 @@ k9s:
       fgColor: *text
       bgColor: *background
       cursorFgColor: *text
-      cursorBgColor: &selection "#d2e3fc"
+      cursorBgColor: *selection
       markColor: *amber
       header:
         fgColor: *blue

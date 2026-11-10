@@ -6,4 +6,4 @@ Format: [k9s skins](https://k9scli.io/topics/skins/) · [k9s skin schema](https:
 
 ## Installation
 
-Copy to the skins directory shown by `k9s info`; select `k9s.ui.skin: fmind` in its config.
+Copy `fmind.yaml` to the skins directory shown by `k9s info` (`~/.config/k9s/skins/fmind.yaml` on Linux, `~/Library/Application Support/k9s/skins/fmind.yaml` on macOS), and set `k9s.ui.skin: fmind` in `config.yaml`.

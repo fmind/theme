@@ -33,6 +33,10 @@ background = "#fbbc04"
 foreground = "#202124"
 background = "#d2e3fc"
 
+[colors.footer_bar]
+foreground = "#202124"
+background = "#f1f3f4"
+
 [colors.normal]
 black = "#202124"
 red = "#a50e0e"

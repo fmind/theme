@@ -267,5 +267,16 @@
 		<key>Blue Component</key>
 		<real>0.6509803921568628</real>
 	</dict>
+	<key>Match Background Color</key>
+	<dict>
+		<key>Color Space</key>
+		<string>sRGB</string>
+		<key>Red Component</key>
+		<real>0.996078431372549</real>
+		<key>Green Component</key>
+		<real>0.9372549019607843</real>
+		<key>Blue Component</key>
+		<real>0.7647058823529411</real>
+	</dict>
 </dict>
 </plist>

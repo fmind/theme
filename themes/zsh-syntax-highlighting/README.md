@@ -6,4 +6,4 @@ Format: [main highlighter styles](https://github.com/zsh-users/zsh-syntax-highli
 
 ## Installation
 
-Source after the plugin in `.zshrc`. Use a truecolor terminal and the matching terminal palette. Does not replace your prompt.
+Copy `fmind.zsh` to `~/.config/zsh/fmind.zsh` and source it after `zsh-syntax-highlighting` in `~/.zshrc`. Use a truecolor terminal and the matching terminal palette. Does not replace your prompt.

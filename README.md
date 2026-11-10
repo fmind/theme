@@ -75,7 +75,6 @@ Choose a tool for installation instructions and theme files. Each README cites t
 - [Kitty](themes/kitty/)
 - [Prompt](themes/iterm2/#prompt)
 - [Terminal.app](themes/terminal-app/)
-- [Termux](themes/termux/)
 - [tmux](themes/tmux/)
 - [Warp](themes/warp/)
 - [WezTerm](themes/wezterm/)
@@ -91,12 +90,14 @@ Choose a tool for installation instructions and theme files. Each README cites t
 - [DuckDB](themes/duckdb/)
 - [eza](themes/eza/)
 - [Fastfetch](themes/fastfetch/)
+- [fd](themes/dircolors/#fd)
 - [Fish](themes/fish/)
 - [fzf](themes/fzf/)
 - [Git](themes/git/)
 - [GitHub CLI](themes/glamour/#github-cli)
 - [Glamour](themes/glamour/)
 - [GNU grep](themes/grep/)
+- [jq](themes/jq/)
 - [k9s](themes/k9s/)
 - [Lazydocker](themes/lazydocker/)
 - [LazyGit](themes/lazygit/)
@@ -121,7 +122,9 @@ Choose a tool for installation instructions and theme files. Each README cites t
 
 ### Coding agents
 
+- [Antigravity](themes/vscode/#antigravity)
 - [Claude Code](themes/claude-code/)
+- [GitHub Copilot CLI](themes/copilot/)
 - [Hermes Agent](themes/hermes-agent/)
 - [OpenCode](themes/opencode/)
 - [Pi Coding Agent](themes/pi-coding-agent/)
@@ -162,7 +165,7 @@ For a tool without a port, start from the [Base16](themes/base16/) scheme or the
 
 Edit native files under `themes/` directly. A port is kept or added only when fmind/dot deploys it, a Fmind project renders with it, or it is a leading developer, data or AI tool on Linux or macOS; consumer apps, desktop environments, website userstyles, Windows-only apps, variants of existing ports and ports that need dependencies or build steps are declined. For a new or corrected port, add a `Format:` line to its README that links the upstream format or loader, document installation in that README, add its directory to the matching list above in alphabetical order, and test its actual colors and representative states. Report the app version and platform used; distinguish parser checks from native loading and visual testing.
 
-Use only palette colors and keep text upright. Compute `0x` hex, decimal and Windows BGR color values carefully, because checks read only `#` hex colors. Name palette swatches with the color names above, and state the full installation destination, such as `~/.config/<app>/`, in each README.
+Use only palette colors and keep text upright. Compute `0x` hex, decimal and Windows BGR color values carefully, because checks read only `#` hex and ANSI RGB colors. Name palette swatches with the color names above, and state the full installation destination, such as `~/.config/<app>/`, in each README.
 
 Run `mise install` and `mise run install` to install tools and Git hooks, `mise run format` to format, then `mise run all` to validate. Checks cover repository invariants such as palette colors, file syntax and links, not native loading, so verify changed themes manually in their apps. See [maintenance](AGENTS.md#maintenance) for hooks, formatting scope and tasks; agents follow the [port procedure](.agents/skills/theme-port/SKILL.md).
 

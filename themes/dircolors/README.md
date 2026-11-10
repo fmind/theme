@@ -8,8 +8,18 @@ Format: [dircolors invocation](https://www.gnu.org/software/coreutils/manual/htm
 
 ## Installation
 
-Copy [.dircolors](.dircolors) to `~/.dircolors`, then add this line to your shell configuration (`~/.bashrc` or `~/.zshrc`):
+Copy [.dircolors](.dircolors) to `~/.dircolors`, then evaluate it in `~/.bashrc` or `~/.zshrc`:
 
 ```sh
 eval "$(dircolors -b ~/.dircolors)"
 ```
+
+In Fish (`~/.config/fish/config.fish`), use the C-shell output format:
+
+```fish
+eval (dircolors -c ~/.dircolors)
+```
+
+## fd
+
+[fd](https://github.com/sharkdp/fd#colorized-output) reads `LS_COLORS` from the environment and highlights matching paths and extensions automatically once `dircolors` is loaded above.

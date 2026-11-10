@@ -20,8 +20,10 @@ html[data-theme="light"],
   --link-fg: #174ea6;
   --link-hover-color: #174ea6;
   --link-selected-fg: #174ea6;
-  --hairline-color: #f1f3f4;
+  --hairline-color: #9aa0a6;
   --border-color: #595d62;
+  --font-family-primary: "Google Sans", sans-serif;
+  --font-family-monospace: "Google Sans Code", monospace;
   --error-fg: #a50e0e;
   --message-debug-bg: #f1f3f4;
   --message-info-bg: #d2e3fc;
@@ -40,4 +42,15 @@ html[data-theme="light"],
   --close-button-hover-bg: #202124;
   --delete-button-bg: #a50e0e;
   --delete-button-hover-bg: #a50e0e;
+}
+
+/* Django's widgets.css pairs --primary/--secondary/--accent fills with --header-link-color or #333. */
+html[data-theme="light"],
+:root {
+  & .selector-chosen-title,
+  & .selector-chosen .list-footer-display,
+  & .calendar caption,
+  & .calendarbox h2 {
+    color: var(--primary-fg);
+  }
 }

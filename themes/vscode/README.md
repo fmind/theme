@@ -11,3 +11,7 @@ Keep this directory in place, for example in a clone of this repository. Run **D
 ## Cursor
 
 [Cursor](https://cursor.com/docs/configuration/extensions) loads VS Code color themes. With Cursor running, copy this `vscode/` directory to `~/.cursor/extensions/fmind-theme` (`%USERPROFILE%\.cursor\extensions\fmind-theme` on Windows); Cursor registers a folder added there only while it runs. Reload the window (**Developer: Reload Window**), then select `fmind` in Preferences: Color Theme.
+
+## Antigravity
+
+Google Antigravity IDE loads VS Code color themes: run **Developer: Install Extension from Location...** from the Command Palette, select this directory, then select `fmind` in Preferences: Color Theme. In the Antigravity CLI (`agy`), keep `"colorScheme": "terminal"` in `~/.gemini/antigravity-cli/settings.json` alongside a Fmind terminal palette.

@@ -8,8 +8,13 @@ vim.opt.laststatus = 2
 vim.opt.showmode = false
 vim.opt.swapfile = false
 vim.opt.shortmess:append("I")
+vim.g.markdown_fenced_languages = { "python", "yaml" }
 vim.cmd("syntax enable")
 vim.cmd("colorscheme fmind")
 vim.opt.conceallevel = 2
 vim.opt.statusline = " %{mode() ==# 'n' ? 'NORMAL' : mode() ==# 'V' ? 'VISUAL LINE' : 'VISUAL'}  %f%=%l:%c  UTF-8 "
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function() vim.bo.syntax = "markdown" end,
+})
 vim.api.nvim_create_autocmd("VimEnter", { callback = function() vim.api.nvim_win_set_cursor(0, { 14, 4 }) end })

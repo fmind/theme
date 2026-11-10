@@ -40,8 +40,8 @@ return {
     c = { bg = ground.panel, fg = "#202124" },
   },
   inactive = {
-    a = { bg = ground.panel, fg = "#202124", gui = 'bold' },
-    b = { bg = ground.panel, fg = "#202124" },
-    c = { bg = ground.panel, fg = "#202124" },
+    a = { bg = ground.panel, fg = "#595d62" },
+    b = { bg = ground.panel, fg = "#595d62" },
+    c = { bg = ground.panel, fg = "#595d62" },
   },
 }

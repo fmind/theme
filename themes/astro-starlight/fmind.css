@@ -1,4 +1,6 @@
 :root[data-theme="light"] {
+  --sl-font: "Google Sans", sans-serif;
+  --sl-font-mono: "Google Sans Code", monospace;
   --sl-color-accent-low: #d2e3fc;
   --sl-color-accent: #174ea6;
   --sl-color-accent-high: #174ea6;
@@ -14,4 +16,14 @@
   --sl-color-gray-7: #f1f3f4;
   --sl-color-black: #ffffff;
   --sl-color-hairline: #9aa0a6;
+
+  & .sl-markdown-content :not(pre) > code {
+    color: #174ea6;
+  }
+
+  & site-search button[data-open-modal],
+  & starlight-theme-select select,
+  & starlight-lang-select select {
+    border-color: #595d62;
+  }
 }

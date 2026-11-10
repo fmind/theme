@@ -13,7 +13,7 @@
     "textLink.foreground": "#174ea6",
     "textLink.activeForeground": "#174ea6",
     "textBlockQuote.background": "#f1f3f4",
-    "textBlockQuote.border": "#0d652d",
+    "textBlockQuote.border": "#9aa0a6",
     "textCodeBlock.background": "#f1f3f4",
     "textPreformat.foreground": "#174ea6",
     "editor.background": "#ffffff",
@@ -35,7 +35,7 @@
     "editor.findMatchHighlightForeground": "#202124",
     "editorBracketMatch.background": "#feefc3",
     "editorBracketMatch.border": "#934900",
-    "editorWhitespace.foreground": "#9aa0a6",
+    "editorWhitespace.foreground": "#595d62",
     "editorIndentGuide.background1": "#f1f3f4",
     "editorIndentGuide.activeBackground1": "#9aa0a6",
     "editorError.foreground": "#a50e0e",
@@ -99,7 +99,7 @@
     "button.background": "#174ea6",
     "button.foreground": "#ffffff",
     "button.hoverBackground": "#174ea6",
-    "button.secondaryBackground": "#d2e3fc",
+    "button.secondaryBackground": "#f1f3f4",
     "button.secondaryForeground": "#202124",
     "button.secondaryHoverBackground": "#d2e3fc",
     "badge.background": "#174ea6",
@@ -141,9 +141,9 @@
     "notifications.foreground": "#202124",
     "notificationLink.foreground": "#174ea6",
     "progressBar.background": "#4285f4",
-    "scrollbarSlider.background": "#595d62",
-    "scrollbarSlider.hoverBackground": "#595d62",
-    "scrollbarSlider.activeBackground": "#595d62",
+    "scrollbarSlider.background": "#595d6280",
+    "scrollbarSlider.hoverBackground": "#595d62b3",
+    "scrollbarSlider.activeBackground": "#174ea6cc",
     "terminal.background": "#ffffff",
     "terminal.foreground": "#202124",
     "terminalCursor.foreground": "#4285f4",
@@ -171,7 +171,8 @@
     {
       "name": "comment",
       "scope": [
-        "comment"
+        "comment",
+        "punctuation.definition.comment"
       ],
       "settings": {
         "foreground": "#595d62",
@@ -204,6 +205,10 @@
       "name": "keyword",
       "scope": [
         "keyword",
+        "keyword.operator.word",
+        "keyword.operator.logical",
+        "keyword.operator.new",
+        "keyword.operator.expression",
         "storage",
         "entity.name.tag"
       ],
@@ -215,7 +220,9 @@
     {
       "name": "function",
       "scope": [
-        "entity.name.function"
+        "entity.name.function",
+        "variable.function",
+        "support.function.any-method"
       ],
       "settings": {
         "foreground": "#174ea6",
@@ -225,7 +232,10 @@
     {
       "name": "builtin",
       "scope": [
-        "support.function"
+        "support.function",
+        "support.constant",
+        "support.macro",
+        "variable.language"
       ],
       "settings": {
         "foreground": "#681da8",
@@ -237,9 +247,26 @@
       "scope": [
         "entity.name.type",
         "entity.name.class",
+        "entity.name.struct",
+        "entity.name.enum",
+        "entity.name.trait",
+        "entity.name.interface",
+        "entity.name.union",
+        "entity.name.impl",
+        "entity.other.inherited-class",
+        "storage.type.primitive",
+        "storage.type.built-in",
+        "storage.type.numeric",
+        "storage.type.boolean",
+        "storage.type.string",
+        "storage.type.byte",
+        "storage.type.error",
+        "storage.type.uintptr",
+        "storage.type.rune",
         "support.type",
         "support.class",
-        "entity.other.attribute-name"
+        "entity.other.attribute-name",
+        "variable.annotation"
       ],
       "settings": {
         "foreground": "#681da8",
@@ -249,7 +276,8 @@
     {
       "name": "string",
       "scope": [
-        "string"
+        "string",
+        "punctuation.definition.string"
       ],
       "settings": {
         "foreground": "#0d652d",
@@ -281,7 +309,8 @@
       "name": "escape",
       "scope": [
         "constant.character.escape",
-        "string.regexp"
+        "string.regexp",
+        "constant.other.placeholder"
       ],
       "settings": {
         "foreground": "#174ea6",
@@ -291,12 +320,22 @@
     {
       "name": "error",
       "scope": [
-        "invalid",
-        "markup.deleted"
+        "invalid"
       ],
       "settings": {
         "foreground": "#a50e0e",
         "fontStyle": "bold"
+      }
+    },
+    {
+      "name": "deleted",
+      "scope": [
+        "markup.deleted",
+        "punctuation.definition.deleted"
+      ],
+      "settings": {
+        "foreground": "#a50e0e",
+        "fontStyle": ""
       }
     },
     {
@@ -310,9 +349,20 @@
       }
     },
     {
+      "name": "changed",
+      "scope": [
+        "markup.changed"
+      ],
+      "settings": {
+        "foreground": "#934900",
+        "fontStyle": ""
+      }
+    },
+    {
       "name": "keyword",
       "scope": [
-        "markup.heading"
+        "markup.heading",
+        "punctuation.definition.heading"
       ],
       "settings": {
         "foreground": "#174ea6",
@@ -320,13 +370,23 @@
       }
     },
     {
-      "name": "keyword",
+      "name": "link",
       "scope": [
         "markup.underline.link"
       ],
       "settings": {
         "foreground": "#174ea6",
-        "fontStyle": "bold"
+        "fontStyle": "underline"
+      }
+    },
+    {
+      "name": "link label",
+      "scope": [
+        "string.other.link"
+      ],
+      "settings": {
+        "foreground": "#174ea6",
+        "fontStyle": ""
       }
     },
     {
@@ -352,7 +412,8 @@
     {
       "name": "escape",
       "scope": [
-        "markup.raw.inline"
+        "markup.raw.inline",
+        "markup.inline.raw"
       ],
       "settings": {
         "foreground": "#174ea6",
@@ -375,10 +436,15 @@
         "entity.name.tag.yaml",
         "meta.mapping.key.yaml",
         "meta.mapping.key.yaml string",
+        "meta.mapping.key.yaml punctuation.definition.string",
+        "support.type.property-name.json",
+        "support.type.property-name.json punctuation.definition.string",
         "meta.mapping.key.json string",
+        "meta.mapping.key.json punctuation.definition.string",
         "entity.name.tag.toml",
         "meta.tag.key.toml",
-        "meta.tag.key.toml string"
+        "meta.tag.key.toml string",
+        "meta.tag.key.toml punctuation.definition.string"
       ],
       "settings": {
         "foreground": "#174ea6",

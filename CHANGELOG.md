@@ -2,19 +2,33 @@
 
 ## Unreleased
 
+### Breaking
+
+- Remove Termux (`themes/termux/colors.properties`): Termux is Android-only, outside the Linux and macOS catalog scope; version 9.0.0 keeps it.
+- OpenCode: migrate [OpenCode](themes/opencode/) (`themes/opencode/fmind.json`) to the OpenCode 2.x V2 theme format (`base` and `light` palettes, configured in `~/.config/opencode/cli.json`); OpenCode 1.x is no longer supported.
+
+### Added
+
+- [GitHub Copilot CLI](themes/copilot/) (`"theme": "default"` terminal inheritance) and [Antigravity](themes/vscode/#antigravity) IDE and CLI instructions.
+- [jq](themes/jq/) truecolor `JQ_COLORS` snippet matching the syntax roles, and [fd](themes/dircolors/#fd) `LS_COLORS` instructions under [dircolors](themes/dircolors/).
+
 ### Fixed
 
-- T3 Code and pgcli: input borders and scrollbar thumbs use dark gray `#595D62`, which meets 3:1 on white, and pgcli current completions and selections disable `prompt_toolkit` reverse video.
-- Django Admin: theme buttons, messages, errors and secondary surfaces with palette colors instead of inheriting the stock teal and red variables.
-- Hermes Agent: set `voice_status_bg` to light gray `#F1F3F4` instead of inheriting the dark default skin.
-- Starlight: set `--sl-color-gray-1` to charcoal `#202124` and `--sl-color-black` to white `#FFFFFF`, preserving the light-mode contrast order.
-- Zensical: code constants (`--md-code-hl-constant-color`) use dark orange `#934900`, matching Pygments and Neovim.
-- Syntax roles: regular expressions are dark blue `#174EA6` in VS Code and Zed; tags are bold in Helix, JetBrains, highlight.js and Vim; constants are bold in JetBrains and VS Code semantic tokens; highlight.js types are regular weight and attributes are purple `#681DA8`; Helix `special` is dark blue `#174EA6` and `markup.quote` is charcoal `#202124`.
-- fzf: state the `~/.config/fzf/fmind.conf` destination path in the README.
+- DESIGN.md and generated CSS/Tailwind tokens: quote `lineHeight` values so `@google/design.md` exports all nine `--leading-*` variables, and document `@theme` font, border and `max-w-*` precedence details in the CSS and Tailwind READMEs.
+- pgcli: replace `noreverse` (rejected by Pygments' color parser) with `noinherit` on current completions and selections, and set `scrollbar.background` and `scrollbar.button` next to dark gray `#595D62` thumbs.
+- Django Admin: theme buttons, messages, errors and secondary surfaces with palette colors, set `--hairline-color` to `#9AA0A6` so borders stay visible on `#F1F3F4`, set the Google Sans font variables, and keep `.selector-chosen` and `.calendar` headers white on `#174EA6`.
+- Zensical: map `--md-code-hl-constant-color` (used by Material's highlight stylesheet for Python builtins and `self`) to purple `#681DA8`, bold literal constants `.kc` and `.no` in `#934900`, bold keywords and tags in `#174EA6`, and keep inline code `#174EA6` and captions upright.
+- Hermes Agent: set `voice_status_bg`, `shell_dollar` and all seven `status_bar_*` foreground keys so dark-skin yellow and silver defaults never appear on `#F1F3F4`.
+- Starlight, JupyterLab and Streamlit: keep Starlight light-mode contrast order, Google Sans fonts, `#174EA6` inline code and `#595D62` control borders; remove black drop shadows and fix cell borders, code blocks and collaborator series order in JupyterLab; add fonts, radii, dataframe borders and semantic status colors in Streamlit.
+- Mermaid and D2: set Mermaid's `dagre` layout, white flowchart nodes on `#F1F3F4` clusters, green `diagram-actor` fills, charcoal state terminals, ER zebra rows and `xyChart` categorical series; set 1px strokes on D2 `group`, `component`, `external` and `step` classes to match DESIGN.md.
+- Shell and CLI tools: complete `eza` `multi_link_file`, group permissions, git and non-dimmed metadata; replace `yazi` `prepend_dirs` with all 14 preset `dirs` and add hovered `orphan`/`dummy` icon rules; align `fish` `fmind.fish` and `fmind.theme` twins; convert `grep` `GREP_COLORS` to palette truecolor SGR; complete `btop`, `delta`, `fzf`, `git`, `glamour`, `k9s`, `lsd`, `starship` and `zsh-syntax-highlighting` role colors.
+- Editors and terminals: align Markdown headings (`H1`–`H3` dark blue, `H1`–`H6` bold), blue links, fenced code blocks and `@module` in Neovim; refine TextMate scopes and semi-transparent scrollbars in `bat` and VS Code; override inherited low-contrast and italic `Default` attributes in JetBrains; add Helix bufferline and bright diagnostic curls, Zed 6-player categorical colors and semi-transparent active search match, `lualine` muted inactive segments, Vim 9 highlight groups, Alacritty `footer_bar`, iTerm2 `Match Background Color`, tmux copy-mode and menu styles, WezTerm copy-mode and quick-select colors, and Zellij categorical player order.
+- Documentation: update Pi Coding Agent, Chrome (Vivaldi URL), fzf, bat, k9s, LazyGit, Lazydocker, man-pages, Alacritty, tmux, Warp, WezTerm, Vim and Zellij READMEs with explicit paths and current links.
 
 ### Maintenance
 
-- Update `markdown` 3.11.3, the dprint JSON 0.26.0, Markdown 0.29.0 and TOML 0.10.0 plugins, and `jdx/mise-action` to mise 2026.11.5.
+- Guard truecolor ANSI SGR sequences (`38`, `48` and `58` RGB) and `.dircolors`, `LS_COLORS`, `GREP_COLORS` and `JQ_COLORS` SGR parameters against off-palette or malformed codes in `checks/test_repository.py`, enable fenced code highlighting in `screenshots/editor.lua` and refresh the terminal screenshots.
+- Update `markdown` 3.11.3, the dprint JSON 0.26.0, Markdown 0.29.0 and TOML 0.10.0 plugins, and `jdx/mise-action` to mise 2026.11.6.
 
 ## 9.0.0 — 2026-11-09
 

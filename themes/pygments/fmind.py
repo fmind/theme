@@ -9,10 +9,10 @@ from pygments.token import Comment, Error, Generic, Keyword, Literal, Name, Numb
 
 class FmindStyle(Style):
     name = "Fmind"
-    background_color = "#ffffff"
+    background_color = "#f1f3f4"
     highlight_color = "#d2e3fc"
     line_number_color = "#595d62"
-    line_number_background_color = "#ffffff"
+    line_number_background_color = "#f1f3f4"
     line_number_special_color = "#202124"
     line_number_special_background_color = "#d2e3fc"
     styles: ClassVar[dict[tuple[str, ...], str]] = {
@@ -24,6 +24,7 @@ class FmindStyle(Style):
         Keyword.Constant: "bold #934900",
         Keyword.Type: "#681da8",
         Name: "#202124",
+        Name.Attribute: "#681da8",
         Name.Builtin: "#681da8",
         Name.Class: "#681da8",
         Name.Namespace: "#681da8",

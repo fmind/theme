@@ -115,15 +115,15 @@ themes {
         }
         multiplayer_user_colors {
             player_1 "#174ea6"
-            player_2 "#0d652d"
-            player_3 "#681da8"
-            player_4 "#934900"
-            player_5 "#00636d"
+            player_2 "#00636d"
+            player_3 "#934900"
+            player_4 "#681da8"
+            player_5 "#0d652d"
             player_6 "#a50e0e"
             player_7 "#595d62"
             player_8 "#202124"
             player_9 "#174ea6"
-            player_10 "#0d652d"
+            player_10 "#00636d"
         }
     }
 }

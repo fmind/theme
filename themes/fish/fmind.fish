@@ -9,7 +9,7 @@ set -g fish_color_quote 0d652d  # string
 set -g fish_color_escape 174ea6  # escape
 set -g fish_color_redirection 681da8  # type
 set -g fish_color_operator 202124  # property
-set -g fish_color_end 934900 --bold  # constant
+set -g fish_color_end 202124  # punctuation
 set -g fish_color_error a50e0e --bold  # error
 set -g fish_color_comment 595d62  # comment
 set -g fish_color_autosuggestion 595d62  # comment
@@ -19,9 +19,11 @@ set -g fish_color_cwd_root a50e0e --bold  # error
 set -g fish_color_user 202124  # property
 set -g fish_color_host 681da8  # type
 set -g fish_color_host_remote 934900  # number
-set -g fish_color_selection --background=d2e3fc
-set -g fish_color_search_match --background=d2e3fc
+set -g fish_color_selection 202124 --background=d2e3fc
+set -g fish_color_search_match 202124 --background=feefc3
 set -g fish_color_valid_path --underline
+set -g fish_color_status a50e0e
+set -g fish_color_history_current --bold
 
 # Completion pager
 set -g fish_pager_color_progress 595d62
