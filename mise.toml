@@ -18,7 +18,7 @@ neovim = "0.12.6"
 # Node.js runs the design.md linter; mise locks its npm dependencies under .mise/locks/.
 node = "26.13.0"
 "npm:@google/design.md" = "0.4.0"
-# Held below 3.15: PyYAML 6.0.3, the latest release, ships no cp315 wheel (checked 2026-11-09).
+# Held below 3.15: PyYAML 6.0.3, the latest release, ships no cp315 wheel (checked 2026-11-10).
 python = "3.14.10"
 ruff = "0.17.4"
 shellcheck = "0.11.0"
