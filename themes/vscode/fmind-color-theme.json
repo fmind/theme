@@ -280,7 +280,8 @@
     {
       "name": "escape",
       "scope": [
-        "constant.character.escape"
+        "constant.character.escape",
+        "string.regexp"
       ],
       "settings": {
         "foreground": "#174ea6",
@@ -460,7 +461,7 @@
       "italic": false
     },
     "regexp": {
-      "foreground": "#0d652d",
+      "foreground": "#174ea6",
       "italic": false
     },
     "operator": {
@@ -469,10 +470,12 @@
     },
     "keyword": {
       "foreground": "#174ea6",
+      "bold": true,
       "italic": false
     },
     "variable.readonly": {
       "foreground": "#934900",
+      "bold": true,
       "italic": false
     },
     "*.defaultLibrary": {

@@ -40,8 +40,7 @@ code.hljs {
 }
 
 .hljs-variable,
-.hljs-template-variable,
-.hljs-tag .hljs-attr {
+.hljs-template-variable {
   color: #202124;
 }
 
@@ -59,15 +58,16 @@ code.hljs {
 
 .hljs-type,
 .hljs-title.class_,
-.hljs-class .hljs-title {
+.hljs-class .hljs-title,
+.hljs-attribute,
+.hljs-tag .hljs-attr {
   color: #681da8;
-  font-weight: bold;
 }
 
 .hljs-tag,
-.hljs-name,
-.hljs-attribute {
+.hljs-name {
   color: #174ea6;
+  font-weight: bold;
 }
 
 .hljs-regexp,

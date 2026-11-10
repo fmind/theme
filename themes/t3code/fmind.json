@@ -18,7 +18,7 @@
     "text": "#202124",
     "textMuted": "#595d62",
     "border": "#9aa0a6",
-    "input": "#9aa0a6",
+    "input": "#595d62",
     "focus": "#4285f4",
     "accent": "#174ea6",
     "accentForeground": "#ffffff",
@@ -63,7 +63,7 @@
     "terminalForeground": "#202124",
     "terminalCursor": "#4285f4",
     "terminalSelection": "#d2e3fc",
-    "terminalScrollbar": "#9aa0a6",
+    "terminalScrollbar": "#595d62",
     "terminalScrollbarHover": "#595d62"
   }
 }

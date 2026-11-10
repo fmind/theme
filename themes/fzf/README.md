@@ -6,4 +6,4 @@ Format: [fzf man page](https://github.com/junegunn/fzf/blob/master/man/man1/fzf.
 
 ## Installation
 
-Set `FZF_DEFAULT_OPTS_FILE` to this file’s absolute path.
+Copy to `~/.config/fzf/fmind.conf` and set `FZF_DEFAULT_OPTS_FILE="$HOME/.config/fzf/fmind.conf"`.

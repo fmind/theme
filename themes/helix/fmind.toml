@@ -16,9 +16,9 @@
 "operator" = "text"
 "function" = "blue"
 "function.builtin" = "purple"
-"tag" = "blue"
+"tag" = { fg = "blue", modifiers = ["bold"] }
 "namespace" = "purple"
-"special" = "teal"
+"special" = "blue"
 "markup.heading" = { fg = "blue", modifiers = ["bold"] }
 "markup.list" = "blue"
 "markup.bold" = { fg = "text", modifiers = ["bold"] }
@@ -26,7 +26,7 @@
 "markup.strikethrough" = { fg = "muted", modifiers = ["crossed_out"] }
 "markup.link" = "blue"
 "markup.link.url" = { fg = "blue", modifiers = ["underlined"] }
-"markup.quote" = "green"
+"markup.quote" = "text"
 "markup.raw" = "blue"
 "diff.plus" = { fg = "green", bg = "added" }
 "diff.minus" = { fg = "red", bg = "deleted" }

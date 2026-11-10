@@ -138,7 +138,7 @@
     <option name="DEFAULT_TAG">
       <value>
         <option name="FOREGROUND" value="174ea6" />
-        <option name="FONT_TYPE" value="0" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_ENTITY">
@@ -186,7 +186,7 @@
     <option name="DEFAULT_CONSTANT">
       <value>
         <option name="FOREGROUND" value="934900" />
-        <option name="FONT_TYPE" value="0" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="DEFAULT_NUMBER">

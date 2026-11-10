@@ -28,6 +28,7 @@ highlight Exception guifg=#a50e0e guibg=NONE gui=bold cterm=bold
 highlight PreProc guifg=#681da8 guibg=NONE gui=NONE cterm=NONE
 highlight Type guifg=#681da8 guibg=NONE gui=NONE cterm=NONE
 highlight Special guifg=#174ea6 guibg=NONE gui=NONE cterm=NONE
+highlight Tag guifg=#174ea6 guibg=NONE gui=bold cterm=bold
 highlight Delimiter guifg=#202124 guibg=NONE gui=NONE cterm=NONE
 highlight Underlined guifg=#174ea6 guibg=NONE gui=underline cterm=underline
 highlight Ignore guifg=#595d62 guibg=NONE gui=NONE cterm=NONE
@@ -76,16 +77,12 @@ highlight DiffAdd guifg=NONE guibg=#ceead6 gui=NONE cterm=NONE
 highlight DiffDelete guifg=#a50e0e guibg=#fad2cf gui=NONE cterm=NONE
 highlight DiffChange guifg=NONE guibg=#feefc3 gui=NONE cterm=NONE
 highlight DiffText guifg=#202124 guibg=#fbbc04 gui=NONE cterm=NONE
-highlight SpellBad guifg=NONE guibg=NONE gui=undercurl cterm=undercurl
-highlight SpellCap guifg=NONE guibg=NONE gui=undercurl cterm=undercurl
-highlight SpellRare guifg=NONE guibg=NONE gui=undercurl cterm=undercurl
-highlight SpellLocal guifg=NONE guibg=NONE gui=undercurl cterm=undercurl
+highlight SpellBad guifg=NONE guibg=NONE gui=undercurl cterm=undercurl guisp=#a50e0e
+highlight SpellCap guifg=NONE guibg=NONE gui=undercurl cterm=undercurl guisp=#934900
+highlight SpellRare guifg=NONE guibg=NONE gui=undercurl cterm=undercurl guisp=#681da8
+highlight SpellLocal guifg=NONE guibg=NONE gui=undercurl cterm=undercurl guisp=#00636d
 highlight debugPC guifg=NONE guibg=#feefc3 gui=NONE cterm=NONE
 highlight debugBreakpoint guifg=#a50e0e guibg=NONE gui=NONE cterm=NONE
-highlight SpellBad guisp=#a50e0e
-highlight SpellCap guisp=#934900
-highlight SpellRare guisp=#681da8
-highlight SpellLocal guisp=#00636d
 
 let g:terminal_ansi_colors = [
       \ "#202124", "#a50e0e", "#0d652d", "#934900",

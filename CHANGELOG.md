@@ -1,5 +1,21 @@
 # Changelog
 
+## Unreleased
+
+### Fixed
+
+- T3 Code and pgcli: input borders and scrollbar thumbs use dark gray `#595D62`, which meets 3:1 on white, and pgcli current completions and selections disable `prompt_toolkit` reverse video.
+- Django Admin: theme buttons, messages, errors and secondary surfaces with palette colors instead of inheriting the stock teal and red variables.
+- Hermes Agent: set `voice_status_bg` to light gray `#F1F3F4` instead of inheriting the dark default skin.
+- Starlight: set `--sl-color-gray-1` to charcoal `#202124` and `--sl-color-black` to white `#FFFFFF`, preserving the light-mode contrast order.
+- Zensical: code constants (`--md-code-hl-constant-color`) use dark orange `#934900`, matching Pygments and Neovim.
+- Syntax roles: regular expressions are dark blue `#174EA6` in VS Code and Zed; tags are bold in Helix, JetBrains, highlight.js and Vim; constants are bold in JetBrains and VS Code semantic tokens; highlight.js types are regular weight and attributes are purple `#681DA8`; Helix `special` is dark blue `#174EA6` and `markup.quote` is charcoal `#202124`.
+- fzf: state the `~/.config/fzf/fmind.conf` destination path in the README.
+
+### Maintenance
+
+- Update `markdown` 3.11.3, the dprint JSON 0.26.0, Markdown 0.29.0 and TOML 0.10.0 plugins, and `jdx/mise-action` to mise 2026.11.5.
+
 ## 9.0.0 — 2026-11-09
 
 ### Breaking

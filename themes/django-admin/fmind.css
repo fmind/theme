@@ -8,8 +8,10 @@ html[data-theme="light"],
   --body-fg: #202124;
   --body-bg: #ffffff;
   --body-quiet-color: #595d62;
+  --body-medium-color: #202124;
   --body-loud-color: #202124;
   --header-color: #202124;
+  --header-branding-color: #174ea6;
   --header-bg: #f1f3f4;
   --header-link-color: #174ea6;
   --breadcrumbs-fg: #595d62;
@@ -20,6 +22,22 @@ html[data-theme="light"],
   --link-selected-fg: #174ea6;
   --hairline-color: #f1f3f4;
   --border-color: #595d62;
+  --error-fg: #a50e0e;
+  --message-debug-bg: #f1f3f4;
+  --message-info-bg: #d2e3fc;
+  --message-success-bg: #ceead6;
+  --message-warning-bg: #feefc3;
+  --message-error-bg: #fad2cf;
+  --darkened-bg: #f1f3f4;
   --selected-row: #d2e3fc;
   --selected-bg: #d2e3fc;
+  --button-fg: #ffffff;
+  --button-bg: #174ea6;
+  --button-hover-bg: #174ea6;
+  --default-button-bg: #174ea6;
+  --default-button-hover-bg: #174ea6;
+  --close-button-bg: #595d62;
+  --close-button-hover-bg: #202124;
+  --delete-button-bg: #a50e0e;
+  --delete-button-hover-bg: #a50e0e;
 }

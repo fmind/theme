@@ -311,12 +311,12 @@
             "font_weight": 400
           },
           "string.regex": {
-            "color": "#0d652d",
+            "color": "#174ea6",
             "font_style": "normal",
             "font_weight": 400
           },
           "string.special": {
-            "color": "#0d652d",
+            "color": "#174ea6",
             "font_style": "normal",
             "font_weight": 400
           },
