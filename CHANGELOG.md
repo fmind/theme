@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Maintenance
+
+- Compress `AGENTS.md` around repository invariants and remove stale `ghostty` from the `mise run screenshots` trigger list in `AGENTS.md` and `theme-port`.
+
 ## 10.0.0 — 2026-11-10
 
 ### Breaking
