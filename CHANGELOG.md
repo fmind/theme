@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 10.0.1 — 2026-11-11
 
 ### Maintenance
 
