@@ -26,7 +26,7 @@ Synthetic terminal captures made with VHS. Download [wallpapers](wallpapers/READ
 | A web page or rendered HTML   | [CSS custom properties](themes/css/), or the [Tailwind CSS](themes/tailwind/) and [daisyUI](themes/daisyui/) themes.                                      |
 | A documentation site          | The [Zensical](themes/zensical/) stylesheet, which also fits Material for MkDocs.                                                                         |
 | Highlighted code on a page    | [Pygments](themes/pygments/), [highlight.js](themes/highlightjs/) or [Prism](themes/prism/).                                                              |
-| A diagram                     | The [D2](themes/d2/) import or the [Mermaid](themes/mermaid/) configuration.                                                                              |
+| A diagram                     | The [D2](themes/d2/) import, the [Typst](themes/typst/) module or the [Mermaid](themes/mermaid/) configuration.                                           |
 | A chart                       | The [Matplotlib](themes/matplotlib/) style sheet or the [Streamlit](themes/streamlit/) theme.                                                             |
 | A terminal recording          | The [VHS](themes/vhs/) theme tape.                                                                                                                        |
 | Figma variables, other tokens | `npx @google/design.md@0.4.0 export --format dtcg DESIGN.md` emits [W3C Design Tokens](https://www.designtokens.org/) JSON.                               |
@@ -150,6 +150,7 @@ Choose a tool for installation instructions and theme files. Each README cites t
 - [Matplotlib](themes/matplotlib/)
 - [Mermaid](themes/mermaid/)
 - [Streamlit](themes/streamlit/)
+- [Typst](themes/typst/)
 - [VHS](themes/vhs/)
 
 ### Browsers and interchange
