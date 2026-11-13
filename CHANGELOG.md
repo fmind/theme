@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+### Added
+
+- [Typst](themes/typst/): a standard-library module with the palette tokens, chart series, `fmind-doc` and `fmind-diagram` show rules, the seven `diagram-*` components and composed flow helpers.
+
 ## 10.0.1 — 2026-11-11
 
 ### Maintenance
