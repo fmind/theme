@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 11.0.0 - 2026-11-22
 
 ### Breaking
 
