@@ -2,17 +2,33 @@
 
 ## Unreleased
 
+### Breaking
+
+- Social banners: consolidate the three byte-identical 1500 × 500 banners (`banners/x`, `banners/bluesky`, and `banners/mastodon` PNG and SVG) into `banners/social-1500x500.png` and `banners/social-1500x500.svg` ([banners/README.md](banners/README.md), [artworks/README.md](artworks/README.md)). The six legacy paths no longer exist; version 10.0.1 keeps them.
+
 ### Added
 
 - [Typst](themes/typst/): a standard-library module with the palette tokens, chart series, `fmind-doc` and `fmind-diagram` show rules, the seven `diagram-*` components and composed flow helpers.
 
-## 10.0.1 — 2026-11-11
+### Fixed
+
+- Mermaid README: align the inline GitHub frontmatter (`primaryColor: "#ffffff"`) and prose with `themes/mermaid/fmind.json` (white nodes on light-gray clusters and `xyChart` support).
+- Theme READMEs: fix Hermes Agent YAML, split Glamour shell snippets, set the VHS fence language to `text`, name `~/.config/ghostty/config`, add Astro Starlight imports and `title`, and pass `encoding="utf-8"` in Pygments.
+- Docs: mark `White (custom)` in the README palette table, add CI/Release/License badges, use explicit `README.md#<section>` links, and tighten prose in `DESIGN.md` and `CHANGELOG.md`.
+
+### Maintenance
+
+- Split local-only artwork and Linux screenshot tools into `artworks/mise.toml` and `screenshots/mise.toml`, trimming root `mise.lock` to the 9 validation tools for cross-platform locked installs.
+- Harden CI, hooks and checks: add weekly full-history `.github/workflows/security.yml`, PR commit secret scanning, `.betterleaks.toml`, `ty` type checking, `validate-pyproject`, `checks/design.py`, Fish twin-sync and root-Markdown tests, and stricter Python/script hardening (`checks/`, `artworks/generate.py`, `screenshots/capture.py`).
+- Upgrade Python to 3.15.2 (with `PyYAML 6.0.4`), validation tools (`betterleaks`, `dprint`, `jactionlint`, `node`, `uv`, `zellij`), `jdx/mise-action` v5.3.0, and CI `mise` 2026.11.12; refresh `.agents/skills/` metadata and release guardrails.
+
+## 10.0.1 - 2026-11-11
 
 ### Maintenance
 
 - Compress `AGENTS.md` around repository invariants and remove stale `ghostty` from the `mise run screenshots` trigger list in `AGENTS.md` and `theme-port`.
 
-## 10.0.0 — 2026-11-10
+## 10.0.0 - 2026-11-10
 
 ### Breaking
 
@@ -21,8 +37,8 @@
 
 ### Added
 
-- [GitHub Copilot CLI](themes/copilot/) (`"theme": "default"` terminal inheritance) and [Antigravity](themes/vscode/#antigravity) IDE and CLI instructions.
-- [jq](themes/jq/) truecolor `JQ_COLORS` snippet matching the syntax roles, and [fd](themes/dircolors/#fd) `LS_COLORS` instructions under [dircolors](themes/dircolors/).
+- [GitHub Copilot CLI](themes/copilot/) (`"theme": "default"` terminal inheritance) and [Antigravity](themes/vscode/README.md#antigravity) IDE and CLI instructions.
+- [jq](themes/jq/) truecolor `JQ_COLORS` snippet matching the syntax roles, and [fd](themes/dircolors/README.md#fd) `LS_COLORS` instructions under [dircolors](themes/dircolors/).
 
 ### Fixed
 
@@ -42,14 +58,14 @@
 - Guard truecolor ANSI SGR sequences (`38`, `48` and `58` RGB) and `.dircolors`, `LS_COLORS`, `GREP_COLORS` and `JQ_COLORS` SGR parameters against off-palette or malformed codes in `checks/test_repository.py`, enable fenced code highlighting in `screenshots/editor.lua` and refresh the terminal screenshots.
 - Update `markdown` 3.11.3, the dprint JSON 0.26.0, Markdown 0.29.0 and TOML 0.10.0 plugins, and `jdx/mise-action` to mise 2026.11.6.
 
-## 9.0.0 — 2026-11-09
+## 9.0.0 - 2026-11-09
 
 ### Breaking
 
 - Focus the catalog on what Fmind uses: a port stays when fmind/dot deploys it, a Fmind project renders with it, or it is a leading developer, data or AI tool on Linux or macOS. 88 ports for consumer, chat, media and game apps, desktop environments, website userstyles, Windows-only apps and tools outside that stack are removed, and their `themes/<app>/` raw download paths no longer exist; version 8.0.1 keeps them. Removed: `alfred`, `beamer`, `betterdiscord`, `blender`, `conemu`, `duckduckgo`, `dunst`, `eclipse`, `emacs`, `figma`, `firefox`, `foot`, `gamemaker-studio`, `ggplot2`, `gh-pages`, `gimp`, `github`, `gitk`, `gitlab`, `gnome-terminal`, `godot`, `google-search`, `grub`, `gtk`, `gtksourceview`, `home-assistant`, `hyprland`, `i3`, `idle`, `insomnia`, `jdownloader2`, `jellyfin`, `joplin`, `kate`, `konsole`, `latex`, `libreoffice`, `logseq`, `marp`, `matlab`, `micro`, `midnight-commander`, `mintty`, `mysql-workbench`, `nextcloud`, `nnn`, `notepad-plus-plus`, `obsidian`, `oh-my-posh`, `omarchy`, `pandoc`, `polybar`, `powerlevel10k`, `powershell`, `qt5`, `qtcreator`, `ranger`, `raycast`, `rio`, `rofi`, `rstudio`, `slack`, `spicetify`, `spyder`, `stackoverflow`, `steam`, `sublime-text`, `telegram`, `telegram-android`, `terminator`, `textual`, `thunderbird`, `tig`, `tilix`, `typora`, `unreal-engine`, `vesktop-discord`, `vimium`, `visual-studio`, `waybar`, `windows-terminal`, `wofi`, `wordpress`, `xfce4-terminal`, `xresources`, `youtube`, `zathura`, `zsh`. Their README sections for Cmder, ColorSlurp, Inkscape, Krita, LabPlot and Spacemacs go with them.
-- MkDocs is now [Zensical](themes/zensical/): `themes/mkdocs/fmind.css` moves to `themes/zensical/fmind.css`, which also serves [Material for MkDocs](themes/zensical/#material-for-mkdocs). The stylesheet now applies to the `default` (light) scheme only, so set `scheme: default` with `primary: custom` and `accent: custom`.
+- MkDocs is now [Zensical](themes/zensical/): `themes/mkdocs/fmind.css` moves to `themes/zensical/fmind.css`, which also serves [Material for MkDocs](themes/zensical/README.md#material-for-mkdocs). The stylesheet now applies to the `default` (light) scheme only, so set `scheme: default` with `primary: custom` and `accent: custom`.
 - Tailwind: the v3 preset `themes/tailwind/fmind.js` is replaced by `themes/tailwind/fmind.css`, a Tailwind CSS v4 `@theme` file generated from DESIGN.md. Colors use the DESIGN.md token names (`fmind-ground` becomes `canvas`, `fmind-text` becomes `foreground`, `fmind-accent` becomes `focus`), and the file adds the type, radius and spacing tokens.
-- Fold duplicate ports into the port whose files they use; their folders and raw download paths no longer exist. Cursor is now a section of [VS Code](themes/vscode/#cursor) (its theme file was identical), and Microsoft Edge and Vivaldi of [Chrome](themes/chrome/#microsoft-edge).
+- Fold duplicate ports into the port whose files they use; their folders and raw download paths no longer exist. Cursor is now a section of [VS Code](themes/vscode/README.md#cursor) (its theme file was identical), and Microsoft Edge and Vivaldi of [Chrome](themes/chrome/README.md#microsoft-edge).
 - Remove NetBeans and qBittorrent: both needed a build step (`zip`, `rcc`) before the app could load them.
 
 ### Added
@@ -58,7 +74,7 @@
 - [Mermaid](themes/mermaid/): a configuration file for the `base` theme that covers flowchart, sequence, state, class, entity, Gantt, pie, mindmap, timeline and Git diagrams.
 - [VHS](themes/vhs/): a theme tape with the Ghostty colors, cursor and selection; this repository's screenshots now record with it.
 - [CSS](themes/css/) custom properties and a [daisyUI](themes/daisyui/) 5 theme, next to the Tailwind file. `mise run tokens` regenerates the CSS and Tailwind files from DESIGN.md, and `mise run check:design` fails when they are stale.
-- [DuckDB](themes/duckdb/) CLI highlighting, [pgcli](themes/pgcli/) menus, toolbar and query syntax, and a [Glamour](themes/glamour/) style for Markdown in the [GitHub CLI](themes/glamour/#github-cli).
+- [DuckDB](themes/duckdb/) CLI highlighting, [pgcli](themes/pgcli/) menus, toolbar and query syntax, and a [Glamour](themes/glamour/) style for Markdown in the [GitHub CLI](themes/glamour/README.md#github-cli).
 - DESIGN.md: the order of categorical chart series (dark blue, teal, dark orange, purple, dark green, dark red) and chart axis rules.
 
 ### Fixed
@@ -85,13 +101,13 @@
 - Theme READMEs share one title (`Fmind for <app>`) and one `Installation` heading.
 - Python stays at 3.14.10: PyYAML 6.0.3, the latest release, ships no Python 3.15 wheel.
 
-## 8.0.1 — 2026-11-07
+## 8.0.1 - 2026-11-07
 
 ### Maintenance
 
 - Enable cosign and GitHub attestation verification in `mise.toml` `[settings]`, matching CI's defaults, so a full `mise lock` works on machines that turn them off globally.
 
-## 8.0.0 — 2026-11-07
+## 8.0.0 - 2026-11-07
 
 ### Breaking
 
@@ -102,14 +118,14 @@
 
 - Lint DESIGN.md in `mise run check` (pre-commit and CI) with design.md 0.4.0 pinned in mise and its npm dependencies locked under `.mise/locks/`; any lint warning, such as low contrast, now fails the gate. Node.js, previously used only for the removed JupyterLab build, now runs the linter.
 
-## 7.0.0 — 2026-11-07
+## 7.0.0 - 2026-11-07
 
 ### Breaking
 
 - JupyterLab: the theme is now `themes/jupyterlab/custom.css`, a user stylesheet that restyles JupyterLab Light in JupyterLab (started with `--custom-css`) and Notebook 7, without an extension or build. The `jupyterlab-fmind` extension package, its npm lockfile and its build files are removed. Uninstall the extension with `python -m pip uninstall jupyterlab-fmind` and choose JupyterLab Light in Settings → Theme.
 - Remove Hyper: its upstream repository, vercel/hyper, is archived, and its last release is 3.4.1 from January 2023. `themes/hyper/` and its raw download paths no longer exist.
 
-## 6.0.2 — 2026-11-07
+## 6.0.2 - 2026-11-07
 
 ### Fixed
 
@@ -121,7 +137,7 @@
 - Semantics: Prism tags are blue and attribute values green; NetBeans XML and Tomcat errors use pale red; Qt Creator output pane toggles and flashes follow the palette; MySQL Workbench variables use the text color; WindTerm session color tags are distinct again; CotEditor invisibles and Newsboat backgrounds no longer inherit off-palette defaults.
 - Installation: complete paths or steps for Chatterino, delta, GRUB (PF2 font), lnav, Nilesoft Shell, NeoMutt, Rime, sioyek, Starship, Tridactyl and Visual Studio, and note truecolor or Nerd Font needs for Zsh and the Starship powerline preset. The Anytype loader citation points to its current source.
 
-## 6.0.1 — 2026-11-07
+## 6.0.1 - 2026-11-07
 
 ### Fixed
 
@@ -129,11 +145,11 @@
 - Git: `git status -sb` shows the local branch in blue and the remote in green, like the other branch views.
 - OpenCode: hovered dialog items use pale blue, distinct from the panel, and `$schema` points to the current schema; the previous URL returned 404.
 
-## 6.0.0 — 2026-11-07
+## 6.0.0 - 2026-11-07
 
 ### Breaking
 
-- Remove the README-only folders `themes/cmder/`, `themes/color-slurp/`, `themes/krita/`, `themes/labplot/`, `themes/prompt/`, `themes/spacemacs/`, `themes/textastic/` and `themes/wallpaper/`. Their install steps move to a section of the theme they use: ConEmu, GIMP, KDE, [iTerm2](themes/iterm2/#prompt), Emacs, TextMate (removed in a later release) and [wallpapers](wallpapers/README.md). The theme index still lists every app.
+- Remove the README-only folders `themes/cmder/`, `themes/color-slurp/`, `themes/krita/`, `themes/labplot/`, `themes/prompt/`, `themes/spacemacs/`, `themes/textastic/` and `themes/wallpaper/`. Their install steps move to a section of the theme they use: ConEmu, GIMP, KDE, [iTerm2](themes/iterm2/README.md#prompt), Emacs, TextMate (removed in a later release) and [wallpapers](wallpapers/README.md). The theme index still lists every app.
 - Ghostty: the theme sets `faint-opacity`, so it requires Ghostty 1.2.0 or later.
 
 ### Added
@@ -155,7 +171,7 @@
 - LazyGit: set `gui.colorScheme: light`, so a terminal that does not report its background no longer gets dark defaults, and style the selected line in unfocused views.
 - Yazi: fallback icons use Fmind colors that stay readable on white, and broken symlinks get a red row again.
 
-## 5.0.0 — 2026-10-31
+## 5.0.0 - 2026-10-31
 
 ### Breaking
 
@@ -192,7 +208,7 @@
 - Add `gitleaks` secret scanning of recent commits and the working tree (`check:leaks`) to `mise run check` and CI, pin `jdx/mise-action` to mise 2026.10.21 with a weekly schedule and 100-commit checkout depth, and override `glob` to 14.0.3 in the JupyterLab lockfile.
 - Ignore the Thonny, NetBeans and qBittorrent build outputs, format only Python with Ruff, match `.python-version` to Python 3.14.10, and list every versioned file in the release skill.
 
-## 4.0.0 — 2026-10-29
+## 4.0.0 - 2026-10-29
 
 ### Breaking
 
@@ -220,7 +236,7 @@
 - Restore GNOME Shell calendar event markers and close-button focus colors, and use a Qt 6 date format on the SDDM login screen.
 - Correct installation steps for Home Assistant, LDoc, Monkeytype, Omarchy, Rio, Spacemacs and the apps above; remove a generic "merge fragments" note that contradicted whole-file installs.
 
-## 3.0.2 — 2026-10-06
+## 3.0.2 - 2026-10-06
 
 ### Fixed
 
@@ -244,7 +260,7 @@
 - Update dprint and its JSON, Markdown and TOML plugins, FFmpeg, Lefthook, Node.js, Python, Ruff, uv, jdx/mise-action 5.1.1, Python dependencies and the JupyterLab build lock; migrate `mise.lock` to lockfile version 3.
 - Remove the obsolete GitHub Pages site and repository homepage left from 2.x.
 
-## 3.0.1 — 2026-09-25
+## 3.0.1 - 2026-09-25
 
 ### Fixed
 
@@ -261,7 +277,7 @@
 - Update Ruff, uv, VHS, the dprint JSON plugin and artwork dependencies; pin Node.js for npm audits.
 - Pin FFmpeg for screenshot capture and refresh the synthetic terminal screenshots.
 
-## 3.0.0 — 2026-09-15
+## 3.0.0 - 2026-09-15
 
 ### Breaking
 

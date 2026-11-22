@@ -6,7 +6,7 @@ Format: [Typst styling](https://typst.app/docs/reference/styling/) · [modules](
 
 ## Installation
 
-Keep the master copy at `~/.agents/themes/typst/fmind.typ` (deployed by [fmind/dot](https://github.com/fmind/dot)), copy `fmind.typ` next to your `.typ` sources so Typst resolves it inside the project root, and import it with zero external packages:
+Copy `fmind.typ` next to your `.typ` sources so Typst resolves it inside the project root, and import it with zero external packages ([fmind/dot](https://github.com/fmind/dot) keeps a master copy at `~/.agents/themes/typst/fmind.typ`):
 
 ```typst
 #import "fmind.typ": *
@@ -36,4 +36,6 @@ typst compile --format svg diagram.typ diagram.svg
 
 For paged reports and handouts, apply `#show: fmind-doc` instead of `#show: fmind-diagram`. Fenced `raw` code blocks default to monochrome charcoal `#202124` on light gray `#F1F3F4` so Typst's stock theme never introduces off-palette colors; copy [fmind.tmTheme](../bat/fmind.tmTheme) beside the document and pass `#show: fmind-doc.with(code-theme: "fmind.tmTheme")` for full Fmind syntax highlighting.
 
-`fmind.typ` uses only the Typst standard library: it exports `colors` (all 20 tokens), `chart-series`, `sans-font` and `mono-fonts`, `fmind-doc` and `fmind-diagram`, the seven `diagram-*` components of [DESIGN.md](../../DESIGN.md#components) (`diagram-group`, `diagram-container`, `diagram-component`, `diagram-actor`, `diagram-external`, `diagram-step` and `diagram-terminal`), plus `frame`, `chip`, `tile`, `status-badge`, `step-badge`, `flow-arrow` and `loop-back`. Tested with Typst 0.15.1 on macOS (`arm64`), verifying `fmind-diagram` (PNG and SVG) and `fmind-doc` (PDF and PNG, with and without `fmind.tmTheme`) in an isolated environment.
+`fmind.typ` uses only the Typst standard library: it exports `colors` (all 20 tokens), `chart-series`, `sans-font`, `mono-fonts`, `fmind-doc`, `fmind-diagram`, the seven `diagram-*` components of [DESIGN.md](../../DESIGN.md#components), and helpers (`muted`, `mono`, `section-label`, `frame`, `chip`, `tile`, `status-badge`, `step-badge`, `flow-arrow`, `loop-back`).
+
+Tested with Typst 0.15.1 on Linux (`arm64`) and macOS (`arm64`), verifying `fmind-diagram` (PNG and SVG) and `fmind-doc` (PDF and PNG, with and without `fmind.tmTheme`) in an isolated environment.

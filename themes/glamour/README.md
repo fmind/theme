@@ -13,8 +13,14 @@ Format: [Glamour styles](https://github.com/charmbracelet/glamour/tree/master/st
 `gh` renders issues, pull requests, releases and READMEs with Glamour:
 
 ```sh
-export GLAMOUR_STYLE="$HOME/.config/glamour/fmind.json"  # bash and zsh
-set -gx GLAMOUR_STYLE ~/.config/glamour/fmind.json       # fish
+export GLAMOUR_STYLE="$HOME/.config/glamour/fmind.json"
+gh repo view fmind/theme
+```
+
+For Fish:
+
+```fish
+set -gx GLAMOUR_STYLE ~/.config/glamour/fmind.json
 gh repo view fmind/theme
 ```
 

@@ -1,12 +1,12 @@
 # fmind/theme
 
-The Fmind design system and light theme: one palette for terminals, editors, coding agents, sites, charts and diagrams. [DESIGN.md](DESIGN.md) describes the design for agents and design tools; native files live in one folder per tool under `themes/`.
-
-[Previews](#previews) · [Design system](#design-system) · [Palette](#palette) · [Themes](#available-themes) · [Contribute](#contribute)
-
-[Changelog](CHANGELOG.md) · [Previous releases](https://github.com/fmind/theme/releases)
+[![CI](https://github.com/fmind/theme/actions/workflows/ci.yml/badge.svg)](https://github.com/fmind/theme/actions/workflows/ci.yml) [![Release](https://img.shields.io/github/v/release/fmind/theme)](https://github.com/fmind/theme/releases) [![License: MIT](https://img.shields.io/badge/license-MIT-174EA6)](LICENSE)
 
 <img src="artworks/logo.png" alt="Fmind theme logo" width="120" height="120">
+
+Light-only design system and native theme catalog for Linux and macOS terminals, editors, coding agents, sites, charts and diagrams. Copy any native file under `themes/` with zero build steps or dependencies, or drop [fmind.css](themes/css/fmind.css) or [DESIGN.md](DESIGN.md) into a project.
+
+[Previews](#previews) · [Design system](#design-system) · [Palette](#palette) · [Themes](#available-themes) · [Contribute](#contribute) · [Changelog](CHANGELOG.md)
 
 ## Previews
 
@@ -42,7 +42,7 @@ The palette uses the 15 [Google News hex colors](https://partnermarketinghub.wit
 
 | Color                | Hex       | Syntax and text                             | Interface and backgrounds                                         |
 | -------------------- | --------- | ------------------------------------------- | ----------------------------------------------------------------- |
-| White                | `#FFFFFF` | Label text on dark fills                    | Main background                                                   |
+| White (custom)       | `#FFFFFF` | Label text on dark fills                    | Main background                                                   |
 | Light gray           | `#F1F3F4` | —                                           | Panels, cursor line and neutral diffs                             |
 | Gray                 | `#9AA0A6` | —                                           | Decorative borders and separators                                 |
 | Dark gray (custom)   | `#595D62` | Comments, gutter numbers and secondary text | Essential control borders and scrollbar thumbs; ANSI bright black |
@@ -73,7 +73,7 @@ Choose a tool for installation instructions and theme files. Each README cites t
 - [Ghostty](themes/ghostty/)
 - [iTerm2](themes/iterm2/)
 - [Kitty](themes/kitty/)
-- [Prompt](themes/iterm2/#prompt)
+- [Prompt](themes/iterm2/README.md#prompt)
 - [Terminal.app](themes/terminal-app/)
 - [tmux](themes/tmux/)
 - [Warp](themes/warp/)
@@ -90,11 +90,11 @@ Choose a tool for installation instructions and theme files. Each README cites t
 - [DuckDB](themes/duckdb/)
 - [eza](themes/eza/)
 - [Fastfetch](themes/fastfetch/)
-- [fd](themes/dircolors/#fd)
+- [fd](themes/dircolors/README.md#fd)
 - [Fish](themes/fish/)
 - [fzf](themes/fzf/)
 - [Git](themes/git/)
-- [GitHub CLI](themes/glamour/#github-cli)
+- [GitHub CLI](themes/glamour/README.md#github-cli)
 - [Glamour](themes/glamour/)
 - [GNU grep](themes/grep/)
 - [jq](themes/jq/)
@@ -111,7 +111,7 @@ Choose a tool for installation instructions and theme files. Each README cites t
 
 ### Editors
 
-- [Cursor](themes/vscode/#cursor)
+- [Cursor](themes/vscode/README.md#cursor)
 - [Helix](themes/helix/)
 - [JetBrains](themes/jetbrains/)
 - [lualine](themes/lualine/)
@@ -122,7 +122,7 @@ Choose a tool for installation instructions and theme files. Each README cites t
 
 ### Coding agents
 
-- [Antigravity](themes/vscode/#antigravity)
+- [Antigravity](themes/vscode/README.md#antigravity)
 - [Claude Code](themes/claude-code/)
 - [GitHub Copilot CLI](themes/copilot/)
 - [Hermes Agent](themes/hermes-agent/)
@@ -136,7 +136,7 @@ Choose a tool for installation instructions and theme files. Each README cites t
 - [daisyUI](themes/daisyui/)
 - [Django Admin](themes/django-admin/)
 - [highlight.js](themes/highlightjs/)
-- [Material for MkDocs](themes/zensical/#material-for-mkdocs)
+- [Material for MkDocs](themes/zensical/README.md#material-for-mkdocs)
 - [Prism](themes/prism/)
 - [Pygments](themes/pygments/)
 - [Starlight](themes/astro-starlight/)
@@ -157,17 +157,17 @@ Choose a tool for installation instructions and theme files. Each README cites t
 
 - [Base16](themes/base16/)
 - [Chrome](themes/chrome/)
-- [Microsoft Edge](themes/chrome/#microsoft-edge)
-- [Vivaldi](themes/chrome/#vivaldi)
+- [Microsoft Edge](themes/chrome/README.md#microsoft-edge)
+- [Vivaldi](themes/chrome/README.md#vivaldi)
 
 For a tool without a port, start from the [Base16](themes/base16/) scheme or the palette above. Ports removed from the catalog remain available in [previous releases](https://github.com/fmind/theme/releases).
 
 ## Contribute
 
-Edit native files under `themes/` directly. A port is kept or added only when fmind/dot deploys it, a Fmind project renders with it, or it is a leading developer, data or AI tool on Linux or macOS; consumer apps, desktop environments, website userstyles, Windows-only apps, variants of existing ports and ports that need dependencies or build steps are declined. For a new or corrected port, add a `Format:` line to its README that links the upstream format or loader, document installation in that README, add its directory to the matching list above in alphabetical order, and test its actual colors and representative states. Report the app version and platform used; distinguish parser checks from native loading and visual testing.
+Edit native files under `themes/` directly using only palette colors and upright text. Ports are accepted when [fmind/dot](https://github.com/fmind/dot) deploys them, a Fmind project renders with them, or they serve leading Linux/macOS developer, data or AI tools with zero dependencies or build steps.
 
-Use only palette colors and keep text upright. Compute `0x` hex, decimal and Windows BGR color values carefully, because checks read only `#` hex and ANSI RGB colors. Name palette swatches with the color names above, and state the full installation destination, such as `~/.config/<app>/`, in each README.
+Run `mise install && mise run install`, format with `mise run format`, and validate with `mise run all`. Automated checks cover `#` hex, ANSI SGR, syntax and links, not native app rendering or non-`#` color encodings; test changed ports in the real tool.
 
-Run `mise install` and `mise run install` to install tools and Git hooks, `mise run format` to format, then `mise run all` to validate. Checks cover repository invariants such as palette colors, file syntax and links, not native loading, so verify changed themes manually in their apps. See [maintenance](AGENTS.md#maintenance) for hooks, formatting scope and tasks; agents follow the [port procedure](.agents/skills/theme-port/SKILL.md).
+See [AGENTS.md](AGENTS.md) for invariants and tasks, the [port workflow](.agents/skills/theme-port/SKILL.md) for adding or fixing ports, and the [release procedure](.agents/skills/theme-release/SKILL.md) for immutable releases.
 
-Releases use immutable annotated tags and source archives; maintainers follow the [release procedure](.agents/skills/theme-release/SKILL.md). Maintained alongside [fmind/dot](https://github.com/fmind/dot). [MIT license](LICENSE); bundled Google Sans retains its [OFL license](artworks/OFL.txt).
+Maintained alongside [fmind/dot](https://github.com/fmind/dot). [MIT license](LICENSE); bundled Google Sans retains its [OFL license](artworks/OFL.txt). Report security issues via the [security policy](https://github.com/fmind/theme/security/policy).

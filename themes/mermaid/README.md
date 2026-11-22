@@ -19,7 +19,7 @@ In a page, pass the same object to `mermaid.initialize()`. In Markdown that rend
 config:
   theme: base
   themeVariables:
-    primaryColor: "#f1f3f4"
+    primaryColor: "#ffffff"
     primaryTextColor: "#202124"
     primaryBorderColor: "#174ea6"
     lineColor: "#174ea6"
@@ -28,6 +28,6 @@ flowchart LR
   Evidence --> Decision --> Outcome
 ```
 
-The file customizes Mermaid's `base` theme, the only one that accepts `themeVariables`. Nodes are light gray with a dark blue border, flows are dark blue, notes are light yellow, and pie, mindmap, timeline and Git series follow the chart order of [DESIGN.md](../../DESIGN.md#components). Load Google Sans before rendering, or Mermaid falls back to a system sans-serif.
+The file customizes Mermaid's `base` theme, the only one that accepts `themeVariables`. Nodes are white with a dark blue border on light-gray clusters, flows are dark blue, notes are light yellow, and pie, mindmap, timeline, Git and `xyChart` series follow the chart order of [DESIGN.md](../../DESIGN.md#components). Load Google Sans before rendering, or Mermaid falls back to a system sans-serif.
 
 User journey actors and faces keep Mermaid's built-in colors, and timeline events use tints that Mermaid derives. Tested with Mermaid 12.3.0 and Mermaid CLI 12.2.0 on flowchart, sequence, state, class, entity, Gantt, pie, mindmap, timeline and Git diagrams.

@@ -1,0 +1,42 @@
+# Docs: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax
+name: Security
+# Push CI scans only the working tree, so a secret committed earlier and later
+# removed would never be seen again. This is the full-history counterpart.
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: security
+  cancel-in-progress: true
+defaults:
+  run:
+    shell: bash
+jobs:
+  scan:
+    name: Full-history scan
+    runs-on: ubuntu-26.04
+    timeout-minutes: 30
+    env:
+      MISE_LOCKED: "1"
+    steps:
+      - name: Checkout complete history
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Install tools
+        uses: jdx/mise-action@924e7c586e33d7d4bae9c14e26c5d22e2beb6e78 # v5.3.0
+        with:
+          version: 2026.11.12 # pinned mise; keep equal to mise.toml min_version
+          cache: true
+      - name: Scan complete Git history
+        run: mise run check:leaks:full
+      - name: Audit locked dependencies
+        run: mise run check:network
+      - name: Audit workflows online
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: mise run check:actions:online

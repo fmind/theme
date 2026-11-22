@@ -18,7 +18,7 @@ from pygments import highlight
 from pygments.formatters import HtmlFormatter
 from pygments.lexers import PythonLexer
 
-source = Path("example.py").read_text()
+source = Path("example.py").read_text(encoding="utf-8")
 html = highlight(source, PythonLexer(), HtmlFormatter(style=FmindStyle, full=True))
-Path("example.html").write_text(html)
+Path("example.html").write_text(html, encoding="utf-8")
 ```

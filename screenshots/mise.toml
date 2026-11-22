@@ -1,0 +1,19 @@
+# :schema https://mise.jdx.dev/schema/mise.json
+# Docs: https://mise.jdx.dev/configuration.html
+# Linux-only terminal screenshot capture dependencies (not needed by `mise run all` or CI).
+
+[settings]
+aqua.cosign = true
+github_attestations = true
+lockfile = true
+lockfile_platforms = ["linux-arm64", "linux-x64"]
+minimum_release_age = "0d"
+
+[tools]
+bat = "0.26.1"
+ffmpeg = "9.0.2"
+fish = "4.9.3"
+neovim = "0.12.6"
+ttyd = "1.7.7"
+vhs = "0.12.1"
+zellij = "0.46.0"

@@ -1,20 +1,34 @@
 ---
 name: theme-port
-description: Add, fix or remove a Fmind theme port under themes/<app>/, map palette roles to the native format, and verify the result in the real tool.
+description: "Add, fix, or remove a Fmind theme port under themes/<app>/, map palette roles to the native format, and verify in the real tool."
+license: MIT
+metadata:
+  kind: task
+  author: Médéric HURIER (Fmind)
+  source: github.com/fmind/theme/tree/main/.agents/skills/theme-port
+  created: "2026-11-09"
+  updated: "2026-11-22"
 ---
 
-# Theme port
+# Theme Port
 
-1. **Decide the scope.** Apply "Keep the catalog focused" in `AGENTS.md`. An app that loads an existing port's file becomes a section of that port's README, not a new folder.
-1. **Read the upstream format.** Open the primary documentation or the loader source, and check the installed version of the tool. Do not write keys from memory. The README `Format:` line links the pages you read.
-1. **Map roles, not colors.** Take syntax, ANSI and surface roles from `checks/palette.yaml`, and interface roles, components and the chart series order from `DESIGN.md`. Reference ports: `themes/nvim/colors/fmind.lua` for syntax, `themes/ghostty/fmind` for the 16 ANSI slots, `themes/pygments/fmind.py` for token highlighters. Dark shades carry text. Medium blue, medium red, yellow and the other bright shades are fills, cursors and markers only. Gray `#9AA0A6` never carries text. Text stays upright; bold marks keywords, tags, headings and named constants (`True`, `None`), while numbers stay regular. When a tool accepts only ANSI color names, use them so the terminal theme supplies the palette, as `themes/duckdb/` does.
-1. **Write native files only.** No dependencies, lockfiles or build steps. `themes/<app>/README.md` has the title `Fmind for <App>`, a `Files:` line, a `Format:` line, an `## Installation` section with the full destination path, and the tool version you tested. Add the app to its README category in alphabetical order, and an entry under `## Unreleased` in `CHANGELOG.md`.
-1. **Verify in the real tool, with an isolated configuration.** Load the file with the tool and inspect what it draws: render diagrams and pages and look at the image; run terminal tools in a pseudo-terminal and confirm that each emitted color is a palette value or an intended ANSI slot. Never run mise with `HOME` overridden, because it reinstalls every tool there: resolve the binary with `mise which <tool>`, then run it with `env -i HOME=<scratch>`. Say in the README and in your report what the tool loaded and what was only parsed.
-1. **Refresh derived files.** After a change to the nvim, fish, bat, zellij or vhs themes, run `mise run screenshots`. After a change to `DESIGN.md` tokens, run `mise run tokens`.
-1. **Run the gate.** `mise run format`, then `mise run all`.
+Add, fix, rename, or remove native ports under `themes/<app>/` while keeping palette roles, README structure, and isolated tool verification aligned with `AGENTS.md`.
 
-## Remove or rename a port
+## Workflow
 
-Delete or move the folder, update its README category, and record the old path under Breaking in `CHANGELOG.md`. Replace links to a removed folder in older changelog entries with plain text; `git grep -n "themes/<app>"` finds them and any use in `screenshots/capture.py`.
+1. **Decide scope**: apply "Keep the catalog focused" in `AGENTS.md`. An app that loads an existing port's file becomes a section of that port's README, not a new folder.
+1. **Read the upstream format**: open primary documentation or loader source and check the installed tool version; never write keys from memory. Link the pages read on the README `Format:` line.
+1. **Map roles, not colors**: take syntax and ANSI text roles from `checks/palette.yaml` and canonical colors, surfaces, components, and chart series order from `DESIGN.md`. Reference ports: `themes/nvim/colors/fmind.lua` (syntax), `themes/ghostty/fmind` (16 ANSI slots), and `themes/pygments/fmind.py` (token highlighters). Dark shades carry text; bright shades (`#4285F4`, `#EA4335`, `#FBBC04`, `#34A853`, `#E37400`) are fills, cursors, and markers only; `#9AA0A6` never carries text. Keep text upright; bold marks keywords, tags, headings, and named constants (`True`, `None`), while numbers stay regular. When a tool accepts only ANSI names, delegate to the terminal palette (as in `themes/duckdb/`).
+1. **Write native files only**: ship zero dependencies, lockfiles, or build steps. `themes/<app>/README.md` starts with `# Fmind for <App>`, includes `Files:` (linking every shipped file), `Format:` (upstream docs URL), and `## Installation` with the full destination path. For every added or edited port, record the tested tool version and what the tool loaded vs only parsed. Add the app alphabetically to its category in `README.md` and log an entry under `## Unreleased` in `CHANGELOG.md`.
+1. **Verify in an isolated config**: load the file in the real tool and inspect rendered output (images for diagrams/pages; PTY color checks for terminal tools). Never run `mise` with `HOME` overridden (it reinstalls every tool there): resolve the binary with `mise which <tool>`, then run with `env -i HOME=<scratch>`.
+1. **Refresh derived files & gate**: run `mise -C screenshots install && mise run screenshots` (Linux) after `nvim`, `fish`, `bat`, `zellij`, or `vhs` theme edits; run `mise run tokens` after `DESIGN.md` token edits; finish with `mise run format && mise run all`.
 
-fmind/dot pins the theme files it deploys by commit and checksum, in its `.chezmoiexternal.toml.tmpl` and `dot/dot_tasks/theme_pin.py`. Do not remove or rename one of those paths without telling the owner, who updates fmind/dot in the same effort.
+## Remove or Rename a Port
+
+1. Delete or move `themes/<app>/`, update its `README.md` category, and record the old path under `Breaking` in `CHANGELOG.md`.
+1. Replace links to removed folders in older changelog entries with plain text; find references via `git grep -n "themes/<app>"` (including `screenshots/capture.py`).
+
+## Gotchas
+
+- **`fmind/dot` pins paths by commit and SHA-256**: `.chezmoiexternal.toml.tmpl` and `dot/dot_tasks/theme_pin.py` pin deployed theme files; tell the owner before removing or renaming any pinned path so `fmind/dot` updates together.
+- **Keep native files unformatted**: `dprint` and `ruff` intentionally exclude `themes/`; format edits manually to match the upstream tool's style.

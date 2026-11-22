@@ -1,4 +1,4 @@
-# https://docs.astral.sh/uv/concepts/projects/config/
+# Docs: https://docs.astral.sh/uv/concepts/projects/config/
 [project]
 name = "fmind-theme"
 version = "10.0.1"
@@ -6,8 +6,11 @@ requires-python = ">=3.14"
 
 [dependency-groups]
 dev = [
-  "pyyaml>=6.0.3",
-  "markdown>=3.10.3",
+  "markdown>=3.11.3",
+  "pyyaml>=6.0.4",
+  "ruff>=0.17.6",
+  "ty>=0.0.107,<0.1", # pre-1.0: pin a compatible range until it stabilizes
+  "validate-pyproject[all]>=0.27",
 ]
 
 [tool.uv]
@@ -15,6 +18,61 @@ package = false
 
 [tool.ruff]
 line-length = 120
-target-version = "py314"
-# Ruff formats Python code blocks in Markdown by default; dprint owns Markdown, and theme READMEs and fixtures stay native.
-extend-exclude = ["*.md"]
+# dprint owns Markdown; native theme files and screenshot samples stay untouched per AGENTS.md.
+extend-exclude = ["*.md", "screenshots/samples", "themes"]
+
+[tool.ruff.format]
+docstring-code-format = true
+line-ending = "lf"
+
+[tool.ruff.lint]
+select = [
+  "A",
+  "ARG",
+  "ASYNC",
+  "B",
+  "BLE",
+  "C4",
+  "DTZ",
+  "E",
+  "ERA",
+  "F",
+  "FURB",
+  "I",
+  "ISC",
+  "LOG",
+  "N",
+  "PERF",
+  "PGH",
+  "PIE",
+  "PLE",
+  "PLW",
+  "PT",
+  "PTH",
+  "Q",
+  "RET",
+  "RSE",
+  "RUF",
+  "S",
+  "SIM",
+  "SLF",
+  "T10",
+  "T20",
+  "TID",
+  "UP",
+  "W",
+]
+ignore = [
+  "E501", # line length allowed for long inline strings/templates
+  "PLW2901", # redefined-loop-name: deliberate rebinding
+]
+
+[tool.ruff.lint.per-file-ignores]
+"artworks/generate.py" = ["S603", "S607", "T201"]
+"checks/design.py" = ["S603", "S607", "T201"]
+"checks/test_repository.py" = ["PT009", "PT027", "S314", "S603", "S607"]
+"screenshots/capture.py" = ["S603", "S607", "T201"]
+
+# Fix diagnostics at their source; never add blanket [tool.ty.rules] ignores.
+[tool.ty.rules]
+blanket-ignore-comment = "error"

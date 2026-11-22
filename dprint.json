@@ -2,6 +2,7 @@
   "$schema": "https://dprint.dev/schemas/v0.json",
   "lineWidth": 120,
   "includes": [
+    "/.betterleaks.toml",
     "/*.json",
     "/*.md",
     "/*.toml",
@@ -9,8 +10,10 @@
     "/.agents/**/*.md",
     "/.github/**/*.{yaml,yml}",
     "/artworks/README.md",
+    "/artworks/mise.toml",
     "/banners/README.md",
     "/checks/*.yaml",
+    "/screenshots/mise.toml",
     "/wallpapers/README.md"
   ],
   "markdown": {

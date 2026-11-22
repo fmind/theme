@@ -13,8 +13,4 @@ Six light wallpapers as exact-size PNGs with generated SVGs.
 
 Select the PNG matching your display and use Fit to preserve the complete design. Portrait versions retain generous blank space above and below the horizontal logo and text.
 
-The circular FΦ mark is the byte-identical original logo asset. The logo stays on the left of `fmind.dev` and `AI Agents, MLOps & Security` inside the rounded blue panel border. Dark blue `#174EA6` and dark slate `#353B4E` sit on near-white `#FDFDFD`; the text uses shaped Google Sans Bold outlines.
-
-## Editing and export
-
-Run `mise run artwork` from the repository root to regenerate every SVG, PNG, preview and manifest using locked dependencies and the bundled logo and Google Sans font. Edit the shared generator instead of individual generated SVGs; see [artwork sources and fidelity notes](../artworks/README.md). [Preview all twelve variants](../artworks/previews/all-variants.png).
+For fidelity notes and regeneration, see [artwork sources and regeneration](../artworks/README.md#regenerate) or [preview all artwork](../artworks/previews/all-variants.png).

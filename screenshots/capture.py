@@ -1,23 +1,31 @@
 #!/usr/bin/env python3
 """Capture real local terminals with VHS, a clean home and synthetic fixtures.
 
-Run from any directory: python screenshots/capture.py
-Requires installed vhs, ttyd, ffmpeg, bat, fish, nvim and zellij.
+Run from the repository root: mise run screenshots
+Requires Linux, Fontconfig, Chromium, GoogleSansCode Nerd Font Mono, and the
+tools pinned in screenshots/mise.toml.
 """
 
 import os
 import shutil
 import signal
 import subprocess
+from collections.abc import Mapping, Sequence
 from contextlib import suppress
 from pathlib import Path
-from tempfile import TemporaryDirectory
+from tempfile import NamedTemporaryFile, TemporaryDirectory
 
 ROOT = Path(__file__).resolve().parents[1]
 
 
-def run(command: list[str], env: dict[str, str], cwd: Path, timeout: int = 90) -> None:
-    with subprocess.Popen(command, env=env, cwd=cwd, start_new_session=True) as process:
+def run(command: Sequence[str], env: Mapping[str, str], cwd: Path, timeout: int = 90) -> None:
+    with subprocess.Popen(
+        command,
+        env=env,
+        cwd=cwd,
+        stdin=subprocess.DEVNULL,
+        start_new_session=True,
+    ) as process:
         try:
             code = process.wait(timeout=timeout)
         finally:
@@ -27,26 +35,70 @@ def run(command: list[str], env: dict[str, str], cwd: Path, timeout: int = 90) -
             raise RuntimeError(f"{command[0]} failed with exit {code}")
 
 
+def chromium_revision(path: Path) -> int:
+    name = path.parent.parent.name.removeprefix("chromium-")
+    return int(name) if name.isdigit() else -1
+
+
+def atomic_copy(source: Path, target: Path) -> None:
+    mode = target.stat().st_mode & 0o777 if target.exists() else 0o644
+    with NamedTemporaryFile(dir=target.parent, prefix=f".{target.name}.", delete=False) as temp:
+        temp_path = Path(temp.name)
+        try:
+            with source.open("rb") as src:
+                shutil.copyfileobj(src, temp)
+            temp.flush()
+            os.fsync(temp.fileno())
+            temp_path.chmod(mode)
+        except BaseException:
+            temp_path.unlink(missing_ok=True)
+            raise
+    try:
+        temp_path.replace(target)
+    except BaseException:
+        temp_path.unlink(missing_ok=True)
+        raise
+
+
 def main() -> None:
     tools = ["vhs", "ttyd", "ffmpeg", "bat", "fish", "nvim", "zellij"]
-    binaries = {}
+    binaries: dict[str, str] = {}
     for tool in tools:
-        # Task-specific tool pins are already first on PATH. `mise which` recalculates
-        # project/global configuration and can silently select a different version.
+        # `screenshots/mise.toml` tools are already first on PATH via `mise exec`.
         path = shutil.which(tool)
         if path and Path(path).parent.name == "shims":
             # Resolve shims before switching to the isolated HOME below.
-            resolved = subprocess.run(["mise", "which", tool], capture_output=True, text=True, check=False)
+            resolved = subprocess.run(
+                ["mise", "which", tool],
+                cwd=ROOT / "screenshots",
+                capture_output=True,
+                text=True,
+                encoding="utf-8",
+                stdin=subprocess.DEVNULL,
+                timeout=15,
+                check=False,
+            )
             path = resolved.stdout.strip() if resolved.returncode == 0 else None
         if not path:
-            raise RuntimeError(f"Install {tool} before recording")
+            raise RuntimeError(f"Install {tool} before recording (run `mise -C screenshots install`)")
         binaries[tool] = path
-    font = Path(subprocess.check_output(["fc-match", "-f", "%{file}", "GoogleSansCode Nerd Font Mono"], text=True))
+    font = Path(
+        subprocess.check_output(
+            ["fc-match", "-f", "%{file}", "GoogleSansCode Nerd Font Mono"],
+            text=True,
+            encoding="utf-8",
+            stdin=subprocess.DEVNULL,
+            timeout=15,
+        )
+    )
     if "GoogleSansCode" not in font.name:
         raise RuntimeError("Install GoogleSansCode Nerd Font Mono before recording")
     browser = os.environ.get("VHS_CHROME_PATH")
     if not browser:
-        browsers = sorted((Path.home() / ".cache/ms-playwright").glob("chromium-*/chrome-linux*/chrome"))
+        browsers = sorted(
+            (Path.home() / ".cache/ms-playwright").glob("chromium-*/chrome-linux*/chrome"),
+            key=chromium_revision,
+        )
         browser = str(browsers[-1]) if browsers else None
     if not browser or not Path(browser).is_file():
         raise RuntimeError("Set VHS_CHROME_PATH to Chromium or install Playwright Chromium before recording")
@@ -56,9 +108,9 @@ def main() -> None:
         config = home / ".config"
         for dest, source in {
             "nvim/colors/fmind.lua": "nvim/colors/fmind.lua",
-            "fish/themes/fmind.theme": "fish/fmind.theme",
-            "bat/themes/fmind.tmTheme": "bat/fmind.tmTheme",
-            "zellij/themes/fmind.kdl": "zellij/fmind.kdl",
+            "fish/themes/fmind.theme": "fish/themes/fmind.theme",
+            "bat/themes/fmind.tmTheme": "bat/themes/fmind.tmTheme",
+            "zellij/themes/fmind.kdl": "zellij/themes/fmind.kdl",
         }.items():
             target = config / dest
             target.parent.mkdir(parents=True, exist_ok=True)
@@ -71,10 +123,14 @@ def main() -> None:
             shutil.copyfile(ROOT / "screenshots" / source, work / source)
         for source in (ROOT / "screenshots/samples").glob("sample.*"):
             shutil.copyfile(source, work / source.name)
-        (config / "bat/config").write_text('--theme="fmind"\n--paging=never\n')
-        (work / "preview.py").write_text("# Numbered preview\ncount = 42\nmessage = 'Ready'\nprint(message)\n")
-        (work / "config.kdl").write_text('theme "fmind"\npane_frames true\ndefault_shell "fish"\n')
-        (work / "shell.fish").write_text("""fish_config theme choose fmind
+        (config / "bat/config").write_text('--theme="fmind"\n--paging=never\n', encoding="utf-8")
+        (work / "preview.py").write_text(
+            "# Numbered preview\ncount = 42\nmessage = 'Ready'\nprint(message)\n",
+            encoding="utf-8",
+        )
+        (work / "config.kdl").write_text('theme "fmind"\npane_frames true\ndefault_shell "fish"\n', encoding="utf-8")
+        (work / "shell.fish").write_text(
+            """fish_config theme choose fmind
 function fish_prompt
     set_color green
     printf '> '
@@ -88,8 +144,11 @@ printf '✓ Readable selections\\n✓ Visible pane frames\\n✓ Google-inspired 
 set_color normal
 printf '\\nSynthetic local demonstration\\n'
 bat --style=numbers --color=always preview.py
-""")
-        (work / "layout.kdl").write_text("""layout {
+""",
+            encoding="utf-8",
+        )
+        (work / "layout.kdl").write_text(
+            """layout {
     default_tab_template {
         pane size=1 borderless=true { plugin location="zellij:tab-bar"; }
         children
@@ -103,7 +162,9 @@ bat --style=numbers --color=always preview.py
     }
     tab name="Review" { pane command="fish" { args "--no-config"; }; }
 }
-""")
+""",
+            encoding="utf-8",
+        )
         shutil.copyfile(ROOT / "themes/vhs/fmind.tape", work / "theme.tape")
         env = {
             "FMIND_THEME_ROOT": str(ROOT),
@@ -136,6 +197,7 @@ bat --style=numbers --color=always preview.py
                 env=env,
                 cwd=work,
                 capture_output=True,
+                stdin=subprocess.DEVNULL,
                 timeout=10,
                 check=False,
             )
@@ -143,9 +205,9 @@ bat --style=numbers --color=always preview.py
             source = work / name
             if not source.is_file():
                 raise RuntimeError(f"VHS did not produce {name}")
-        # Validate both outputs before replacing either retained screenshot.
+        # Validate both outputs before atomically replacing either retained screenshot.
         for name in ("zellij.png", "markdown.png"):
-            shutil.copyfile(work / name, ROOT / "screenshots" / name)
+            atomic_copy(work / name, ROOT / "screenshots" / name)
         print("Captured code with search/selection, and Markdown")
 
 

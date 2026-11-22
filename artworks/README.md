@@ -2,21 +2,24 @@
 
 The approved design uses the original FΦ logo, actual Google Sans Bold, `fmind.dev`, and `AI Agents, MLOps & Security` within the reference's rounded blue frame. Download the finished [wallpapers](../wallpapers/README.md) or [social banners](../banners/README.md).
 
-[All twelve variants](previews/all-variants.png) · [Reference above / adaptation below](previews/reference-comparison.png) · [Shared composition](composition.svg)
+[All ten variants](previews/all-variants.png) · [Reference above / adaptation below](previews/reference-comparison.png) · [Shared composition](composition.svg)
 
 ## Regenerate
 
 ```sh
+mise -C artworks install
 mise run artwork
 ```
 
-The task runs [generate.py](generate.py) with its dependency lockfile and ImageMagick. Edit this shared generator to change the design or canvas layouts. It recreates the twelve self-contained SVGs and RGB PNGs, composition, contact sheet, crop previews and [hash manifest](manifest.json). Per-platform SVGs are generated outputs; direct edits are replaced on regeneration. The bundled logo, reference banner and font make regeneration independent of external brand files or installed fonts; uv and mise supply the rendering tools.
+The task runs [generate.py](generate.py) with its dependency lockfile and ImageMagick (pinned in [artworks/mise.toml](mise.toml)). Edit this shared generator to change the design or canvas layouts; it recreates the ten self-contained SVGs and RGB PNGs (six wallpapers and four banners, with X, Bluesky and Mastodon sharing `banners/social-1500x500`), composition, contact sheet, crop previews and [hash manifest](manifest.json).
+
+Per-platform SVGs are generated outputs; direct edits are replaced on regeneration. The bundled logo, reference banner and font make regeneration independent of external brand files or installed fonts; uv and mise supply the rendering tools.
 
 ## Fidelity
 
 `logo.png` and `reference-banner.png` are unchanged copies of the supplied originals. The logo is embedded as its original PNG bytes and scaled proportionally, without tracing, recoloring or cropping. HarfBuzz shapes actual `GoogleSans-Bold.ttf` glyphs, including kerning, and fontTools exports their outlines so SVG viewers cannot substitute another font.
 
-The solid frame and wordmark use the theme blue `#174ea6` from [the shared palette](../checks/palette.yaml). The tagline `#353b4e` and near-white `#fdfdfd` were sampled from the reference's nearly opaque interior regions. The reference and original logo retain their supplied colors, texture and partial transparency; generated exports composite the original logo onto the solid near-white background. Both text colors exceed 4.5:1 contrast on that background.
+The solid frame and wordmark use the theme blue `#174ea6` from [DESIGN.md](../DESIGN.md). The tagline `#353b4e` and near-white `#fdfdfd` were sampled from the reference's nearly opaque interior regions. The reference and original logo retain their supplied colors, texture and partial transparency; generated exports composite the original logo onto the solid near-white background. Both text colors exceed 4.5:1 contrast on that background.
 
 The supplied standalone logo differs from the banner's pictured mark in ring thickness and letter placement. Actual Google Sans Bold also differs from the reference raster lettering, particularly its `f` and apparent weight. These authentic supplied assets take priority over redrawing approximations. The longer updated tagline is smaller to fit one line. All variants preserve the internal proportions; only overall scale, placement and surrounding whitespace change.
 

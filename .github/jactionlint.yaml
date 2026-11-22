@@ -2,9 +2,9 @@
 # The pedantic profile keeps the strictness of the former `zizmor --pedantic` audit.
 profile: pedantic
 rules:
+  # No release-age cooldown, as for mise tools: pins move on release day, and online audits fail on warnings.
+  action-release-cooldown: off
   # Dependabot runs security updates only, which ignore cooldowns; version updates are off.
   dependabot-cooldown: off
-ignores:
-  - rule: dependabot-missing-actions-update
-    file: .github/dependabot.yml
-    reason: Dependabot opens security fixes only; action pins and the mise version are upgraded manually (AGENTS.md).
+  # dependabot.yml sets open-pull-requests-limit: 0 for security-updates-only mode; routine bumps are manual.
+  dependabot-missing-actions-update: off

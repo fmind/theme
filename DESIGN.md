@@ -195,9 +195,13 @@ components:
 
 ## Overview
 
-Calm, exact, spacious and technically grounded. Inspired by Google's product design, interfaces focus on the user's immediate task and strip away cognitive load: one clear purpose per view, sensible defaults that work on the first click, and progressive disclosure for complexity. The reader or user is a peer who checks one claim before believing the rest, so every screen and visual carries evidence: crisp geometry, editable diagrams and real labels over decorative imagery or chrome.
+Calm, exact, spacious and technically grounded. Inspired by Google's product design, interfaces focus on the user's immediate task and strip away cognitive load: one clear purpose per view, sensible defaults that work on the first click, and progressive disclosure for complexity.
 
-**Scope.** This is the default design for Médéric Hurier's (Fmind) own work: fmind.dev, applications, articles, talks, courses, open-source repositories, documentation and media. When the work belongs to a customer or employer, use their design system, brand guide, templates, fonts and logo instead. Ask for their guide rather than inferring a palette, and never mix brands in one asset. An existing project's established identity also wins over this default.
+The reader or user is a peer who checks one claim before believing the rest. Every screen and visual carries evidence: crisp geometry, editable diagrams and real labels over decorative imagery or chrome.
+
+**Scope.** This is the default design for Médéric Hurier's (Fmind) own work: fmind.dev, applications, articles, talks, courses, open-source repositories, documentation and media.
+
+When the work belongs to a customer or employer, use their design system, brand guide, templates, fonts and logo instead. Ask for their guide rather than inferring a palette, and never mix brands in one asset. An existing project's established identity also wins over this default.
 
 The design is light only. Terminal and editor themes in this repository apply the same palette to syntax and ANSI roles.
 
@@ -205,19 +209,19 @@ The design is light only. Terminal and editor themes in this repository apply th
 
 The palette is the 15 Google News colors plus five custom shades (white, dark gray, dark orange, purple and teal). Each hue has three jobs: dark shades carry text, bright shades mark active states and accents, and pale shades provide surfaces.
 
-- **White (#FFFFFF) — canvas:** the main background and label text on dark fills.
-- **Light gray (#F1F3F4) — panel:** groups, panels, code blocks and neutral surfaces.
-- **Gray (#9AA0A6) — border:** decorative boundaries and separators; never small text.
-- **Dark gray (#595D62) — muted:** secondary text, comments and essential control borders.
-- **Charcoal (#202124) — foreground:** body text, variables and punctuation.
-- **Dark blue (#174EA6) — primary:** headings, links, keywords, calls and the logo frame. The single brand accent.
-- **Medium blue (#4285F4) — focus:** cursors, active controls and focus rings.
-- **Light blue (#D2E3FC) — selection:** selected rows and primary containers.
-- **Dark red (#A50E0E), medium red (#EA4335), light red (#FAD2CF) — error:** error text, markers and underlines, removed or failed regions.
-- **Dark orange (#934900), orange (#E37400), yellow (#FBBC04), light yellow (#FEEFC3) — warning:** warning text, numbers and constants; attention fills; active tabs and current matches; changed or caution regions.
-- **Dark green (#0D652D), medium green (#34A853), light green (#CEEAD6) — success:** strings, success text and additions; success markers; added regions and actor nodes.
-- **Purple (#681DA8) — type:** types, builtins, hint diagnostics and secondary emphasis.
-- **Teal (#00636D) — information:** informational text and diagnostics.
+- **White (#FFFFFF, canvas):** the main background and label text on dark fills.
+- **Light gray (#F1F3F4, panel):** groups, panels, code blocks and neutral surfaces.
+- **Gray (#9AA0A6, border):** decorative boundaries and separators; never small text.
+- **Dark gray (#595D62, muted):** secondary text, comments and essential control borders.
+- **Charcoal (#202124, foreground):** body text, variables and punctuation.
+- **Dark blue (#174EA6, primary):** headings, links, keywords, calls and the logo frame. The single brand accent.
+- **Medium blue (#4285F4, focus):** cursors, active controls and focus rings.
+- **Light blue (#D2E3FC, selection):** selected rows and primary containers.
+- **Error (dark red #A50E0E, medium red #EA4335, light red #FAD2CF):** error text, markers and underlines, removed or failed regions.
+- **Warning (dark orange #934900, orange #E37400, yellow #FBBC04, light yellow #FEEFC3):** warning text, numbers and constants; attention fills; active tabs and current matches; changed or caution regions.
+- **Success (dark green #0D652D, medium green #34A853, light green #CEEAD6):** strings, success text and additions; success markers; added regions and actor nodes.
+- **Purple (#681DA8, type):** types, builtins, hint diagnostics and secondary emphasis.
+- **Teal (#00636D, information):** informational text and diagnostics.
 
 ## Typography
 
@@ -231,8 +235,8 @@ Generous whitespace on a 4px unit, with 8px steps between items and 24–32px ma
 
 Applications follow Google's canonical layouts and progressive disclosure instead of dense dashboards:
 
-- **Single workspace (default):** one centered column (`768px`) with the primary input, action and inline result in a single vertical flow, like Google Search or a document canvas.
-- **List-detail or supporting pane:** split up to `1152px` into at most two panes (a primary content area plus a list or contextual inspector) only when the task compares items or inspects selections; collapse to a single pane on narrow viewports.
+- **Single workspace (default):** one centered column (768px) with the primary input, action and inline result in a single vertical flow, like Google Search or a document canvas.
+- **List-detail or supporting pane:** split up to 1152px into at most two panes (a primary content area plus a list or contextual inspector) only when the task compares items or inspects selections; collapse to a single pane on narrow viewports.
 - **Progressive disclosure:** keep only the 1–3 controls needed for the main run visible; tuck advanced parameters, filters and raw diagnostics behind an expansion panel (`<details>`) or overflow menu until requested.
 
 ## Elevation & Depth
@@ -247,10 +251,10 @@ Softly rounded rectangles: 8px for small controls, 12px for code blocks and tile
 
 Application components keep interaction direct, predictable and low-noise:
 
-- **Buttons and actions:** limit each view to one `button-primary` pill (`#174EA6` fill, white text) for the main action. Subordinate secondary actions with `button-secondary` (`#F1F3F4` fill, charcoal text) or plain text links; never place competing primary buttons side by side.
-- **Inputs and forms:** `input` fields sit on white canvas with a 1px `#595D62` control border, `8px` radius and a 2px `#4285F4` focus ring. Pair every field with a visible label, prefill sensible defaults so the form works immediately, and validate inline (`underline-error` and `#A50E0E` helper text) rather than with popups.
-- **Cards, lists and chips:** `card` containers group related content with `16px` radius and `16–24px` padding; `chip` elements hold compact filters or attributes on `#F1F3F4`. Separate list rows with whitespace or a 1px `#9AA0A6` `divider`.
-- **Inline states (empty, loading, error, result):** render feedback in place within the workspace. Empty states explain what to do next in one muted sentence or starter example; errors state the failure and recovery on `#FAD2CF` with `#A50E0E` text; reserve modal dialogs for destructive confirmations.
+- **Buttons and actions:** limit each view to one primary button pill (dark blue fill, white text) for the main action. Subordinate secondary actions with a secondary button (light gray fill, charcoal text) or plain text links; never place competing primary buttons side by side.
+- **Inputs and forms:** input fields sit on white canvas with a 1px dark gray control border, 8px radius and a 2px medium blue focus ring. Pair every field with a visible label, prefill sensible defaults so the form works immediately, and validate inline (medium red underline and dark red helper text) rather than with popups.
+- **Cards, lists and chips:** card containers group related content with 16px radius and 16–24px padding; chip elements hold compact filters or attributes on light gray. Separate list rows with whitespace or a 1px gray divider.
+- **Inline states (empty, loading, error, result):** render feedback in place within the workspace. Empty states explain what to do next in one muted sentence or starter example; errors state the failure and recovery on light red with dark red text; reserve modal dialogs for destructive confirmations.
 
 Diagram components carry fixed meanings; reinforce each with a label, shape or line style rather than color alone.
 

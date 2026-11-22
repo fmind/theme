@@ -2,6 +2,7 @@
 
 import functools
 import hashlib
+import io
 import json
 import plistlib
 import re
@@ -9,19 +10,26 @@ import subprocess
 import tomllib
 import unittest
 import xml.etree.ElementTree as ET
+from collections.abc import Iterator
+from contextlib import redirect_stderr
 from html.parser import HTMLParser
 from pathlib import Path
+from typing import Any
+from unittest import mock
 from urllib.parse import unquote, urlsplit
 
 import markdown
 import yaml
 
+from checks import design as design_check
+
 ROOT = Path(__file__).resolve().parents[1]
 THEMES = ROOT / "themes"
 APPS = sorted(path for path in THEMES.iterdir() if path.is_dir() and not path.name.startswith((".", "__")))
-PALETTE = yaml.safe_load((ROOT / "checks/palette.yaml").read_text())
-DESIGN = yaml.safe_load((ROOT / "DESIGN.md").read_text().split("---\n")[1])
-COLORS = {*PALETTE["official"], *PALETTE["custom"]}
+PALETTE: dict[str, Any] = yaml.safe_load((ROOT / "checks/palette.yaml").read_text(encoding="utf-8"))
+DESIGN: dict[str, Any] = yaml.safe_load((ROOT / "DESIGN.md").read_text(encoding="utf-8").split("---\n")[1])
+COLORS: set[str] = {value.lower() for value in DESIGN["colors"].values()}
+ROOT_MARKDOWN_FILES = {"AGENTS.md", "CHANGELOG.md", "DESIGN.md", "README.md"}
 # XML files without an XML declaration; other XML and JSON files are recognized by their content.
 XML_SUFFIXES = {".icls"}
 # Hex colors as #rrggbb, #rrggbbaa or #aarrggbb. Short forms are skipped: anchors, issue numbers and CSS IDs match them.
@@ -58,7 +66,7 @@ def bad_sgr(seq: str) -> list[str]:
     if not seq:
         return []
     parts = seq.split(";")
-    invalid = []
+    invalid: list[str] = []
     index = 0
     while index < len(parts):
         if not parts[index].isdigit():
@@ -83,20 +91,23 @@ def bad_sgr(seq: str) -> list[str]:
     return invalid
 
 
-def files(*pathspecs):
+def files(*pathspecs: str) -> list[Path]:
     """Return tracked and untracked files, honoring ignored build directories and pending deletions."""
     names = subprocess.check_output(
         ["git", "ls-files", "--cached", "--others", "--exclude-standard", "-z", "--", *pathspecs],
         cwd=ROOT,
         text=True,
+        encoding="utf-8",
+        stdin=subprocess.DEVNULL,
+        timeout=15,
     ).split("\0")
     return [path for name in sorted(set(names) - {""}) if (path := ROOT / name).is_file()]
 
 
 @functools.cache
-def theme_texts():
+def theme_texts() -> tuple[tuple[Path, str], ...]:
     """Return (path, text) for every UTF-8 file under themes/, skipping binary assets."""
-    texts = []
+    texts: list[tuple[Path, str]] = []
     for path in files("themes"):
         try:
             texts.append((path, path.read_text(encoding="utf-8")))
@@ -105,7 +116,7 @@ def theme_texts():
     return tuple(texts)
 
 
-def is_json(path, text):
+def is_json(path: Path, text: str) -> bool:
     """Recognize JSON by suffix or, for app-specific suffixes, by a top-level object."""
     suffix = path.suffix.lower()
     # JSONC may legitimately hold comments, and YAML flow mappings also start with a brace.
@@ -114,7 +125,7 @@ def is_json(path, text):
     return suffix == ".json" or (text.lstrip().startswith("{") and text.rstrip().endswith("}"))
 
 
-def parse(path, text):
+def parse(path: Path, text: str) -> Any:
     """Parse a structured file by suffix or unambiguous content; return None for other formats."""
     suffix = path.suffix.lower()
     if suffix == ".toml":
@@ -130,7 +141,7 @@ def parse(path, text):
     return None
 
 
-def strings(node):
+def strings(node: Any) -> Iterator[str]:
     """Yield every string in a parsed YAML tree."""
     if isinstance(node, str):
         yield node
@@ -140,7 +151,7 @@ def strings(node):
 
 
 def contrast(a: str, b: str) -> float:
-    def luminance(value):
+    def luminance(value: str) -> float:
         channels = [int(value[i : i + 2], 16) / 255 for i in (1, 3, 5)]
         linear = [c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4 for c in channels]
         return sum(c * weight for c, weight in zip(linear, (0.2126, 0.7152, 0.0722), strict=True))
@@ -150,33 +161,56 @@ def contrast(a: str, b: str) -> float:
 
 
 class Links(HTMLParser):
-    def __init__(self):
+    def __init__(self) -> None:
         super().__init__()
-        self.links = []
-        self.images = []
-        self.ids = set()
+        self.links: list[str] = []
+        self.images: list[str] = []
+        self.ids: set[str] = set()
 
-    def handle_starttag(self, tag, attrs):
-        attrs = dict(attrs)
-        if "id" in attrs:
-            self.ids.add(attrs["id"])
-        if tag == "a":
-            self.links.append(attrs.get("href", ""))
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        attr_map = dict(attrs)
+        if elem_id := attr_map.get("id"):
+            self.ids.add(elem_id)
+        if tag == "a" and (href := attr_map.get("href")) is not None:
+            self.links.append(href)
         if tag == "img":
-            self.images.append(attrs["src"])
+            self.images.append(attr_map.get("src") or "")
 
 
 @functools.cache
-def links(path):
+def links(path: Path) -> Links:
     """Return the links, images and anchors of a rendered Markdown file."""
     parser = Links()
-    parser.feed(markdown.markdown(path.read_text(), extensions=["fenced_code", "tables", "toc"]))
+    parser.feed(markdown.markdown(path.read_text(encoding="utf-8"), extensions=["fenced_code", "tables", "toc"]))
+    parser.close()
     return parser
 
 
+def fish_color_entries(text: str, *, script: bool) -> dict[str, str]:
+    """Parse fish color variable assignments from fmind.theme or fmind.fish."""
+    entries: dict[str, str] = {}
+    for raw in text.splitlines():
+        line = re.sub(r"(?:^|\s)#.*$", "", raw).strip()
+        if not line:
+            continue
+        if script:
+            if not line.startswith("set -g "):
+                raise AssertionError(f"Unexpected fmind.fish line: {raw!r}")
+            line = line.removeprefix("set -g ").strip()
+        name, value = line.split(None, 1)
+        if name in entries:
+            raise AssertionError(f"Duplicate fish color variable: {name}")
+        entries[name] = value
+    return entries
+
+
 class DocumentationTests(unittest.TestCase):
-    def test_release_versions_are_consistent(self):
-        version = tomllib.loads((ROOT / "pyproject.toml").read_text())["project"]["version"]
+    def test_root_markdown_files(self) -> None:
+        root_md = {path.name for path in files("*.md") if path.parent == ROOT}
+        self.assertEqual(root_md, ROOT_MARKDOWN_FILES)
+
+    def test_release_versions_are_consistent(self) -> None:
+        version = tomllib.loads((ROOT / "pyproject.toml").read_text(encoding="utf-8"))["project"]["version"]
         for path, text in theme_texts():
             # Extension and browser theme manifests carry the release version.
             if is_json(path, text) and isinstance(doc := json.loads(text), dict):
@@ -184,10 +218,10 @@ class DocumentationTests(unittest.TestCase):
                 if isinstance(value, str) and SEMVER.fullmatch(value):
                     self.assertEqual(value, version, path)
 
-    def test_all_themes_and_palette_are_documented(self):
-        readme = (ROOT / "README.md").read_text()
+    def test_all_themes_and_palette_are_documented(self) -> None:
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
         catalog = readme.split("\n## Available themes\n")[1].split("\n## ")[0]
-        ports = []
+        ports: list[str] = []
         for category in catalog.split("\n### ")[1:]:
             # A category lists its apps alphabetically; `#section` entries share another port's files.
             names = re.findall(r"(?m)^- \[([^\]]+)\]\(themes/[^)]+\)$", category)
@@ -200,33 +234,34 @@ class DocumentationTests(unittest.TestCase):
         for color in COLORS:
             self.assertIn(color.lower(), readme.lower())
 
-    def test_design_md_commands_use_the_pinned_version(self):
+    def test_design_md_commands_use_the_pinned_version(self) -> None:
         # Consumers run design.md through npx; maintainers run the version mise.toml pins.
-        pin = tomllib.loads((ROOT / "mise.toml").read_text())["tools"]["npm:@google/design.md"]
+        pin = tomllib.loads((ROOT / "mise.toml").read_text(encoding="utf-8"))["tools"]["npm:@google/design.md"]
         versions = {
             version
             for path in files("*.md")
-            for version in re.findall(r"@google/design\.md@([\w.-]+)", path.read_text())
+            for version in re.findall(r"@google/design\.md@([\w.-]+)", path.read_text(encoding="utf-8"))
         }
         self.assertEqual(versions, {pin})
 
-    def test_theme_readmes_share_one_layout(self):
+    def test_theme_readmes_share_one_layout(self) -> None:
         # AGENTS.md keeps a port only while its README cites the upstream format or loader.
         cited = re.compile(r"(?m)^Format: .*\]\(https://[^)\s]+\)")
         for app in APPS:
-            readme = (app / "README.md").read_text()
+            readme = (app / "README.md").read_text(encoding="utf-8")
             with self.subTest(app=app.name):
                 self.assertTrue(readme.startswith("# Fmind for "))
                 self.assertRegex(readme, cited)
                 self.assertIn("\n## Installation\n", readme)
                 # The `Files:` line links every file of the port.
                 listed = re.search(r"(?m)^Files: (.*)$", readme)
-                self.assertIsNotNone(listed)
+                if listed is None:
+                    self.fail("Missing `Files:` line")
                 linked = set(re.findall(r"\]\(([^)]+)\)", listed.group(1)))
                 shipped = {str(path.relative_to(app)) for path in files(f"themes/{app.name}")} - {"README.md"}
                 self.assertEqual(linked, shipped)
 
-    def test_markdown_local_links_and_anchors(self):
+    def test_markdown_local_links_and_anchors(self) -> None:
         # Screenshot samples are rendering fixtures, not navigation.
         for path in files("*.md", ":!screenshots/samples"):
             document = links(path)
@@ -235,7 +270,9 @@ class DocumentationTests(unittest.TestCase):
                 if url.scheme or url.netloc:
                     continue
                 with self.subTest(document=str(path.relative_to(ROOT)), target=target):
+                    self.assertTrue(url.path or url.fragment)
                     resolved = (path.parent / unquote(url.path)).resolve() if url.path else path
+                    self.assertTrue(resolved.is_relative_to(ROOT))
                     self.assertTrue(resolved.exists())
                     # A directory link opens its README on GitHub, so its anchors come from there.
                     anchors = resolved / "README.md" if resolved.is_dir() else resolved
@@ -244,8 +281,11 @@ class DocumentationTests(unittest.TestCase):
 
 
 class SharedTests(unittest.TestCase):
-    def test_palette_contrast_and_preview(self):
-        preview = (ROOT / "screenshots/palette.svg").read_text().lower()
+    def test_palette_contrast_and_preview(self) -> None:
+        colors = [value.lower() for value in DESIGN["colors"].values()]
+        self.assertEqual(len(colors), 20)
+        self.assertEqual(len(colors), len(set(colors)))
+        preview = (ROOT / "screenshots/palette.svg").read_text(encoding="utf-8").lower()
         for color in COLORS:
             self.assertIn(color, preview)
         listed = {value.lower() for value in strings(PALETTE) if re.fullmatch(r"#[0-9a-fA-F]{6}", value)}
@@ -254,25 +294,70 @@ class SharedTests(unittest.TestCase):
             with self.subTest(color=color):
                 self.assertGreaterEqual(contrast(color, PALETTE["ground"]), 4.5)
 
-    def test_design_tokens_match_palette(self):
-        # `mise run check:design` lints token references and component contrast.
-        colors = [value.lower() for value in DESIGN["colors"].values()]
-        self.assertEqual(set(colors), COLORS)
-        self.assertEqual(len(colors), len(set(colors)))
-
-    def test_structured_theme_files(self):
+    def test_structured_theme_files(self) -> None:
         for path, text in theme_texts():
             with self.subTest(path=str(path.relative_to(ROOT))):
                 parse(path, text)
 
-    def test_theme_colors_are_palette_colors(self):
+    def test_fish_theme_twins_stay_in_sync(self) -> None:
+        theme_map = fish_color_entries((THEMES / "fish/fmind.theme").read_text(encoding="utf-8"), script=False)
+        script_map = fish_color_entries((THEMES / "fish/fmind.fish").read_text(encoding="utf-8"), script=True)
+        self.assertEqual(script_map, theme_map)
+
+    def test_fish_color_entries_validation(self) -> None:
+        sample = "# comment\nfish_color_normal 202124 # inline\nfish_color_search_match --background=#feefc3\n"
+        self.assertEqual(
+            fish_color_entries(sample, script=False),
+            {"fish_color_normal": "202124", "fish_color_search_match": "--background=#feefc3"},
+        )
+        with self.assertRaises(AssertionError):
+            fish_color_entries("fish_color_normal 202124\n", script=True)
+        with self.assertRaises(AssertionError):
+            fish_color_entries("fish_color_normal 202124\nfish_color_normal 174ea6\n", script=False)
+
+    def test_design_check_failure_paths(self) -> None:
+        lint_warn = json.dumps({"findings": [{"severity": "warning", "rule": "contrast", "message": "low"}]})
+        lint_ok = json.dumps({"findings": [{"severity": "info", "rule": "summary", "message": "ok"}]})
+        with (
+            mock.patch.object(
+                design_check,
+                "run_design_md",
+                side_effect=[
+                    lint_warn,
+                    (ROOT / "themes/css/fmind.css").read_text(encoding="utf-8"),
+                    (ROOT / "themes/tailwind/fmind.css").read_text(encoding="utf-8"),
+                ],
+            ),
+            redirect_stderr(io.StringIO()) as err,
+        ):
+            self.assertEqual(design_check.main(), 1)
+        self.assertIn("DESIGN.md warning [contrast]: low", err.getvalue())
+
+        with (
+            mock.patch.object(
+                design_check,
+                "run_design_md",
+                side_effect=[
+                    lint_ok,
+                    "/* stale css */\n",
+                    (ROOT / "themes/tailwind/fmind.css").read_text(encoding="utf-8"),
+                ],
+            ),
+            redirect_stderr(io.StringIO()) as err,
+        ):
+            self.assertEqual(design_check.main(), 1)
+        self.assertIn("themes/css/fmind.css is out of date", err.getvalue())
+
+    def test_theme_colors_are_palette_colors(self) -> None:
         # 0x, decimal and Windows BGR color encodings are not checked.
-        off_palette = []
+        off_palette: list[str] = []
         for path, text in theme_texts():
-            for value in HEX.findall(text):
+            off_palette.extend(
+                f"{path.relative_to(ROOT)}: #{value}"
+                for value in HEX.findall(text)
                 # An 8-digit value is #rrggbbaa or #aarrggbb, so either 6-digit part may hold the color.
-                if not {"#" + value[:6].lower(), "#" + value[-6:].lower()} & COLORS:
-                    off_palette.append(f"{path.relative_to(ROOT)}: #{value}")
+                if not {"#" + value[:6].lower(), "#" + value[-6:].lower()} & COLORS
+            )
             for red, green, blue in SGR_RGB.findall(text):
                 channels = (int(red), int(green), int(blue))
                 value = f"#{channels[0]:02x}{channels[1]:02x}{channels[2]:02x}"
@@ -291,9 +376,9 @@ class SharedTests(unittest.TestCase):
                         off_palette += [f"{path.relative_to(ROOT)}: {item}" for item in bad_sgr(sgr)]
         self.assertEqual(off_palette, [])
 
-    def test_ports_do_not_share_identical_files(self):
+    def test_ports_do_not_share_identical_files(self) -> None:
         # An identical theme file in two ports is a variant: keep one port and add the other app to its README.
-        ports = {}
+        ports: dict[str, set[str]] = {}
         for path in files("themes"):
             if path.name != "LICENSE":
                 ports.setdefault(hashlib.sha256(path.read_bytes()).hexdigest(), set()).add(
@@ -301,11 +386,11 @@ class SharedTests(unittest.TestCase):
                 )
         self.assertEqual([sorted(shared) for shared in ports.values() if len(shared) > 1], [])
 
-    def test_hex_colors_skip_anchors_and_references(self):
+    def test_hex_colors_skip_anchors_and_references(self) -> None:
         text = "[Add the theme](#add-the-theme), [Decade](#decade-notes), issue #123, #feed, `#174EA6`, '#80fbbc04'"
         self.assertEqual(HEX.findall(text), ["174EA6", "80fbbc04"])
 
-    def test_sgr_and_ls_colors_validation(self):
+    def test_sgr_and_ls_colors_validation(self) -> None:
         sample = "ms=01;38;2;32;33;36;48;2;254;239;195:fn=38:2::23:78:166"
         self.assertEqual(SGR_RGB.findall(sample), [("32", "33", "36"), ("254", "239", "195"), ("23", "78", "166")])
         self.assertEqual(bad_sgr("01;04;31"), [])
@@ -314,9 +399,9 @@ class SharedTests(unittest.TestCase):
         self.assertEqual(bad_sgr("38;5;196"), ["38;5;196"])
         self.assertEqual(bad_sgr("01;38;2;1;2;3"), ["1;2;3"])
 
-    def test_artwork_manifest(self):
+    def test_artwork_manifest(self) -> None:
         artwork = ROOT / "artworks"
-        manifest = json.loads((artwork / "manifest.json").read_text())
+        manifest = json.loads((artwork / "manifest.json").read_text(encoding="utf-8"))
         self.assertTrue((artwork / "OFL.txt").is_file())
         for name, digest in manifest["inputs"].items():
             with self.subTest(source=name):

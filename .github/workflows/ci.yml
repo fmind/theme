@@ -5,9 +5,6 @@ on:
     branches:
       - main
   pull_request:
-  # Weekly run: new advisories can fail the gate without a commit.
-  schedule:
-    - cron: "17 3 * * 1"
   workflow_dispatch:
 permissions:
   contents: read
@@ -20,17 +17,34 @@ defaults:
 jobs:
   ci:
     name: CI
-    runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    runs-on: ubuntu-26.04
+    timeout-minutes: 20
+    env:
+      MISE_LOCKED: "1"
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          fetch-depth: 100 # check:leaks scans the last 100 commits; a shallower clone hides them
+          fetch-depth: ${{ github.event_name != 'pull_request' && 1 || 0 }}
           persist-credentials: false
       - name: Install tools
-        uses: jdx/mise-action@b44d12e7d0d8ee7461bb893e1b1993500433185b # v5.2.7
+        uses: jdx/mise-action@924e7c586e33d7d4bae9c14e26c5d22e2beb6e78 # v5.3.0
         with:
-          version: 2026.11.6 # pinned mise; bump deliberately with mise.lock tooling
+          version: 2026.11.12 # pinned mise; keep equal to mise.toml min_version
+          cache: true
+      - name: Sync validation environments
+        env:
+          UV_MALWARE_CHECK: "1"
+        run: |
+          uv sync --locked --preview-features malware-check
+          uv sync --locked --preview-features malware-check --script artworks/generate.py
+      - name: Scan pull request commits for secrets
+        if: ${{ github.event_name == 'pull_request' }}
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: betterleaks git --config .betterleaks.toml --redact=100 --no-banner --log-opts="${BASE_SHA}..${HEAD_SHA}"
       - name: Validate themes, documentation and artwork
         run: mise run all
+      - name: Verify no changes
+        run: git status --short && [ -z "$(git status --porcelain)" ]

@@ -12,9 +12,13 @@ Copy [fmind.css](fmind.css) to `src/styles/fmind.css` in your project, then add 
 
 ```js
 // astro.config.mjs
+import { defineConfig } from 'astro/config';
+import starlight from '@astrojs/starlight';
+
 export default defineConfig({
   integrations: [
     starlight({
+      title: 'My Docs',
       customCss: ['./src/styles/fmind.css'],
     }),
   ],

@@ -8,7 +8,7 @@ Format: [VHS Set Theme](https://github.com/charmbracelet/vhs#set-theme) · [Sour
 
 Copy `fmind.tape` next to your tape and load it before the first command:
 
-```elixir
+```text
 Set FontFamily "GoogleSansCode Nerd Font Mono"
 Source fmind.tape
 ```

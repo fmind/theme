@@ -8,4 +8,9 @@ Format: [Hermes Agent skins](https://hermes-agent.nousresearch.com/docs/user-gui
 
 ## Installation
 
-Copy [fmind.yaml](fmind.yaml) to `~/.hermes/skins/fmind.yaml`, then set `display: skin: fmind` in `~/.hermes/config.yaml` (or run `/skin fmind` for the current session).
+Copy [fmind.yaml](fmind.yaml) to `~/.hermes/skins/fmind.yaml`, then add the skin to `~/.hermes/config.yaml` (or run `/skin fmind` for the current session):
+
+```yaml
+display:
+  skin: fmind
+```
