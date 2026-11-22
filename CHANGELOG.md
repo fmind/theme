@@ -1,5 +1,19 @@
 # Changelog
 
+## 11.0.1 - 2026-11-22
+
+### Fixed
+
+- [GNU grep](themes/grep/): split the mixed Bash/Zsh and Fish `GREP_COLORS` snippet in `themes/grep/README.md` into separate `sh` and `fish` code blocks.
+- [Pygments](themes/pygments/): drop the incompatible `ClassVar[dict[tuple[str, ...], str]]` override annotation on `FmindStyle.styles` so strictly typed consumers using `types-Pygments` inherit `Style.styles` cleanly.
+- Docs and palette preview: mark `#FFFFFF` and `#595D62` as `(custom)` in `screenshots/palette.svg` to match `DESIGN.md` and `README.md`, normalize ordered lists in `themes/chrome/README.md` and `themes/jupyterlab/README.md`, and tighten `.agents/skills/` (`theme-port` and `theme-release`).
+
+### Maintenance
+
+- Lock and align repository tooling with global skill standards: enable `locked = true` in `mise.toml` (inherited by `artworks/mise.toml` and `screenshots/mise.toml`), pin SHA-256 digests on `dprint.json` plugins, enforce `unused-ignore-comment` and `unused-type-ignore-comment` in `pyproject.toml`, set `env.TZ = "UTC"` on `test`, split `check:shell` and `check:tasks` out of `check:lint`, and add `mise run upgrade` covering both `uv.lock` and `artworks/generate.py.lock`.
+- Centralize CI mise setup in `.github/actions/setup-mise/action.yml` (`$/` self-repository syntax, `mise.lock`-only cache key, scoped tool install in `security.yml`) and pass `--verbose` on PR commit secret scans in `ci.yml`.
+- Harden Python checks and generators: add atomic `--write` mode to `checks/design.py` for `mise run tokens`, cache `git ls-files` and add manifest/orphan/pin-parity/Fish-hex/`design.py` tests in `checks/test_repository.py`, add lazy imports, HarfBuzz `Protocol` typing, and atomic staging to `artworks/generate.py`, and load Neovim's isolated config copy in `screenshots/capture.py`/`screenshots/editor.lua`.
+
 ## 11.0.0 - 2026-11-22
 
 ### Breaking
