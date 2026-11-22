@@ -167,7 +167,6 @@ bat --style=numbers --color=always preview.py
         )
         shutil.copyfile(ROOT / "themes/vhs/fmind.tape", work / "theme.tape")
         env = {
-            "FMIND_THEME_ROOT": str(ROOT),
             "HOME": str(home),
             "XDG_CONFIG_HOME": str(config),
             "XDG_CACHE_HOME": str(home / ".cache"),

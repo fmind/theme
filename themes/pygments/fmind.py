@@ -1,8 +1,6 @@
 # https://pygments.org/docs/styles/#creating-own-styles
 """Fmind light Pygments style; load with HtmlFormatter."""
 
-from typing import ClassVar
-
 from pygments.style import Style
 from pygments.token import Comment, Error, Generic, Keyword, Literal, Name, Number, Operator, Punctuation, String, Text
 
@@ -15,7 +13,7 @@ class FmindStyle(Style):
     line_number_background_color = "#f1f3f4"
     line_number_special_color = "#202124"
     line_number_special_background_color = "#d2e3fc"
-    styles: ClassVar[dict[tuple[str, ...], str]] = {
+    styles = {
         Text: "#202124",
         Text.Whitespace: "#595d62",
         Comment: "#595d62",

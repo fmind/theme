@@ -1,5 +1,4 @@
 -- https://neovim.io/doc/user/options.html
-vim.opt.runtimepath:prepend(vim.env.FMIND_THEME_ROOT .. "/themes/nvim")
 vim.opt.number = true
 vim.opt.hlsearch = true
 vim.opt.cursorline = true

@@ -20,7 +20,7 @@
 
 - Split local-only artwork and Linux screenshot tools into `artworks/mise.toml` and `screenshots/mise.toml`, trimming root `mise.lock` to the 9 validation tools for cross-platform locked installs.
 - Harden CI, hooks and checks: add weekly full-history `.github/workflows/security.yml`, PR commit secret scanning, `.betterleaks.toml`, `ty` type checking, `validate-pyproject`, `checks/design.py`, Fish twin-sync and root-Markdown tests, and stricter Python/script hardening (`checks/`, `artworks/generate.py`, `screenshots/capture.py`).
-- Upgrade Python to 3.15.2 (with `PyYAML 6.0.4`), validation tools (`betterleaks`, `dprint`, `jactionlint`, `node`, `uv`, `zellij`), `jdx/mise-action` v5.3.0, and CI `mise` 2026.11.12; refresh `.agents/skills/` metadata and release guardrails.
+- Upgrade Python to 3.15.2 (with `PyYAML 6.0.4`), validation tools (`betterleaks`, `dprint`, `jactionlint`, `node`, `uv`), screenshot tool `zellij`, `jdx/mise-action` v5.3.0, and CI `mise` 2026.11.12; refresh `.agents/skills/` metadata and release guardrails.
 
 ## 10.0.1 - 2026-11-11
 

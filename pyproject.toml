@@ -76,3 +76,5 @@ ignore = [
 # Fix diagnostics at their source; never add blanket [tool.ty.rules] ignores.
 [tool.ty.rules]
 blanket-ignore-comment = "error"
+unused-ignore-comment = "error"
+unused-type-ignore-comment = "error"

@@ -1,13 +1,10 @@
 # :schema https://mise.jdx.dev/schema/mise.json
 # Docs: https://mise.jdx.dev/configuration.html
 # Linux-only terminal screenshot capture dependencies (not needed by `mise run all` or CI).
+# Inherits lockfile and signature verification settings from the root mise.toml.
 
 [settings]
-aqua.cosign = true
-github_attestations = true
-lockfile = true
 lockfile_platforms = ["linux-arm64", "linux-x64"]
-minimum_release_age = "0d"
 
 [tools]
 bat = "0.26.1"

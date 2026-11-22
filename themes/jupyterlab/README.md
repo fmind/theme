@@ -9,8 +9,8 @@ A user stylesheet that restyles the built-in JupyterLab Light theme. It needs no
 ## Installation
 
 1. Copy `custom.css` to `custom/custom.css` in your Jupyter configuration directory (normally `~/.jupyter/`; run `jupyter --config-dir` to locate it). Preserve any existing custom CSS by combining the files, with Fmind's rules last.
-2. JupyterLab loads custom CSS only when asked: start it with `jupyter lab --custom-css`, or add `c.LabApp.custom_css = True` to `jupyter_lab_config.py`. Notebook 7 loads it by default.
-3. Restart Jupyter, refresh the browser and choose Settings → Theme → JupyterLab Light. Dark themes stay unchanged.
+1. JupyterLab loads custom CSS only when asked: start it with `jupyter lab --custom-css`, or add `c.LabApp.custom_css = True` to `jupyter_lab_config.py`. Notebook 7 loads it by default.
+1. Restart Jupyter, refresh the browser and choose Settings → Theme → JupyterLab Light. Dark themes stay unchanged.
 
 The stylesheet covers the native CSS variable API, notebook cells, CodeMirror syntax, output, forms, dialogs, search, completions and UI states. It uses Google Sans for UI/text and Google Sans Code for code, with system fallbacks and no remote font requests. The terminal's inherited canvas follows the theme; xterm's built-in ANSI palette and application-supplied output colors remain outside its control.
 

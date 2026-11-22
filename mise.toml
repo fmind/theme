@@ -1,7 +1,7 @@
 # :schema https://mise.jdx.dev/schema/mise.json
 # Docs: https://mise.jdx.dev/configuration.html
 
-# Fail early on a mise older than the one CI pins (keep equal to the workflow `version:`).
+# Fail early on a mise older than the one CI pins (keep equal to `.github/actions/setup-mise/action.yml` `version:`).
 min_version = "2026.11.12"
 
 # Verify the signatures that mise.lock records (cosign, GitHub attestations), as CI does by
@@ -9,6 +9,7 @@ min_version = "2026.11.12"
 [settings]
 aqua.cosign = true
 github_attestations = true
+locked = true
 lockfile = true
 lockfile_platforms = ["linux-arm64", "linux-x64", "macos-arm64"]
 minimum_release_age = "0d"
@@ -50,7 +51,16 @@ depends = ["check:local", "check:network"]
 
 [tasks."check:local"]
 description = "Run the static checks that need no network (pre-commit)"
-depends = ["check:actions", "check:design", "check:format", "check:leaks", "check:lint", "check:types"]
+depends = [
+  "check:actions",
+  "check:design",
+  "check:format",
+  "check:leaks",
+  "check:lint",
+  "check:shell",
+  "check:tasks",
+  "check:types",
+]
 
 [tasks."check:network"]
 description = "Run the checks that download vulnerability data (pre-push)"
@@ -88,15 +98,18 @@ description = "Scan the complete Git history (weekly in security.yml; needs a fu
 run = "betterleaks git --config .betterleaks.toml --redact=100 --verbose --no-banner"
 
 [tasks."check:lint"]
-description = "Lint Python and shell scripts, and validate Git hooks and mise tasks"
-run = [
-  "uv run --locked ruff check .",
-  # --norc keeps results independent of a personal shellcheckrc. `find` reads the working tree,
-  # so untracked scripts are linted and deleted ones are skipped before they are staged.
-  "find . -name .git -prune -o -name .venv -prune -o -name '*.sh' -exec shellcheck --norc {} +",
-  "lefthook validate",
-  "mise tasks validate",
-]
+description = "Lint Python sources (ruff)"
+run = "uv run --locked ruff check ."
+
+[tasks."check:shell"]
+description = "Lint shell theme scripts (shellcheck)"
+# --norc keeps results independent of a personal shellcheckrc. `find` reads the working tree,
+# so untracked scripts are linted and deleted ones are skipped before they are staged.
+run = "find . \\( -name .git -o -name .venv -o -name .mise \\) -prune -o -name '*.sh' -exec shellcheck --norc {} +"
+
+[tasks."check:tasks"]
+description = "Validate repository task and Git hook definitions"
+run = ["mise tasks validate", "lefthook validate"]
 
 [tasks."check:types"]
 description = "Type-check Python sources (ty)"
@@ -150,12 +163,18 @@ run = "mise exec -- python3 capture.py"
 
 [tasks.tokens]
 description = "Regenerate the CSS and Tailwind token files from DESIGN.md"
-run = [
-  "design.md export --format css-vars --prefix fmind DESIGN.md > themes/css/fmind.css",
-  "design.md export --format css-tailwind DESIGN.md > themes/tailwind/fmind.css",
-]
+run = "uv run --locked python checks/design.py --write"
 
 [tasks.test]
 alias = "t"
 description = "Check the palette, theme syntax, colors, versions and format citations, documentation links and artwork"
+env.TZ = "UTC"
 run = "uv run --locked python -W error -m unittest discover -s checks -q"
+
+[tasks.upgrade]
+alias = "u"
+description = "Upgrade root and artwork Python dependencies within constraints, refusing known malware"
+run = [
+  "UV_MALWARE_CHECK=1 uv sync --upgrade --preview-features malware-check",
+  "UV_MALWARE_CHECK=1 uv sync --upgrade --preview-features malware-check --script artworks/generate.py",
+]

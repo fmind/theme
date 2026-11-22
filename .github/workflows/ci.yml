@@ -19,8 +19,6 @@ jobs:
     name: CI
     runs-on: ubuntu-26.04
     timeout-minutes: 20
-    env:
-      MISE_LOCKED: "1"
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -28,10 +26,7 @@ jobs:
           fetch-depth: ${{ github.event_name != 'pull_request' && 1 || 0 }}
           persist-credentials: false
       - name: Install tools
-        uses: jdx/mise-action@924e7c586e33d7d4bae9c14e26c5d22e2beb6e78 # v5.3.0
-        with:
-          version: 2026.11.12 # pinned mise; keep equal to mise.toml min_version
-          cache: true
+        uses: $/.github/actions/setup-mise
       - name: Sync validation environments
         env:
           UV_MALWARE_CHECK: "1"
@@ -43,7 +38,7 @@ jobs:
         env:
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
-        run: betterleaks git --config .betterleaks.toml --redact=100 --no-banner --log-opts="${BASE_SHA}..${HEAD_SHA}"
+        run: betterleaks git --config .betterleaks.toml --redact=100 --verbose --no-banner --log-opts="${BASE_SHA}..${HEAD_SHA}"
       - name: Validate themes, documentation and artwork
         run: mise run all
       - name: Verify no changes
